@@ -84,44 +84,21 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [ERROR] (wadofstuff-ip) Could not extract data from this package. See below for details.
 "http://wadofstuff.googlecode.com/files/wadofstuff-ip-1.0.0.tar.gz" file could not be downloaded. See below for details.
 Traceback (most recent call last):
-  File "/usr/lib/python3.5/urllib/request.py", line 1254, in do_open
-    h.request(req.get_method(), req.selector, req.data, headers)
-  File "/usr/lib/python3.5/http/client.py", line 1107, in request
-    self._send_request(method, url, body, headers)
-  File "/usr/lib/python3.5/http/client.py", line 1152, in _send_request
-    self.endheaders(body)
-  File "/usr/lib/python3.5/http/client.py", line 1103, in endheaders
-    self._send_output(message_body)
-  File "/usr/lib/python3.5/http/client.py", line 934, in _send_output
-    self.send(msg)
-  File "/usr/lib/python3.5/http/client.py", line 877, in send
-    self.connect()
-  File "/usr/lib/python3.5/http/client.py", line 849, in connect
-    (self.host,self.port), self.timeout, self.source_address)
-  File "/usr/lib/python3.5/socket.py", line 712, in create_connection
-    raise err
-  File "/usr/lib/python3.5/socket.py", line 703, in create_connection
-    sock.connect(sa)
-OSError: [Errno 99] Cannot assign requested address
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
   File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 107, in download_tar
     f.write(urlopen(url=urlesc(pkgurl), timeout=10).read())
   File "/usr/lib/python3.5/urllib/request.py", line 163, in urlopen
     return opener.open(url, data, timeout)
-  File "/usr/lib/python3.5/urllib/request.py", line 466, in open
-    response = self._open(req, data)
-  File "/usr/lib/python3.5/urllib/request.py", line 484, in _open
-    '_open', req)
+  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.5/urllib/request.py", line 510, in error
+    return self._call_chain(*args)
   File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
     result = func(*args)
-  File "/usr/lib/python3.5/urllib/request.py", line 1282, in http_open
-    return self.do_open(http.client.HTTPConnection, req)
-  File "/usr/lib/python3.5/urllib/request.py", line 1256, in do_open
-    raise URLError(err)
-urllib.error.URLError: <urlopen error [Errno 99] Cannot assign requested address>
+  File "/usr/lib/python3.5/urllib/request.py", line 590, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
 
 [INFO] (wadsworth) This package is up to date.
 [INFO] (wadus) This package is up to date.
@@ -150,7 +127,7 @@ urllib.error.URLError: <urlopen error [Errno 99] Cannot assign requested address
 [INFO] (waggle) This package is up to date.
 [INFO] (wagon) This package is up to date.
 [INFO] (wagoner) This package is up to date.
-[INFO] (wagtail) This package is up to date.
+[INFO] (wagtail) Data has been updated for this package.
 [INFO] (wagtail-2fa) This package is up to date.
 [INFO] (wagtail-accessibility) This package is up to date.
 [INFO] (wagtail-app-pages) This package is up to date.
@@ -245,7 +222,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (wagtail-stacks-image) This package is up to date.
 [INFO] (wagtail-streamfieldtools) This package is up to date.
 [INFO] (wagtail-table-block) This package is up to date.
-[INFO] (wagtail-tag-manager) Data has been updated for this package.
+[INFO] (wagtail-tag-manager) This package is up to date.
 [INFO] (wagtail-textract) This package is up to date.
 [INFO] (wagtail-themes) This package is up to date.
 [INFO] (wagtail-treemodeladmin) This package is up to date.
@@ -414,7 +391,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (waldur-digitalocean) This package is up to date.
 [INFO] (waldur-freeipa) This package is up to date.
 [INFO] (waldur-jira) This package is up to date.
-[INFO] (waldur-mastermind) Data has been updated for this package.
+[INFO] (waldur-mastermind) This package is up to date.
 [INFO] (waldur-openstack) This package is up to date.
 [INFO] (waldur-paypal) This package is up to date.
 [INFO] (waldur-slurm) This package is up to date.
@@ -755,7 +732,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (watdarepo) This package is up to date.
 [INFO] (water) This package is up to date.
 [INFO] (water-ebmas) This package is up to date.
-[INFO] (waterbear) This package is up to date.
+[INFO] (waterbear) Data has been updated for this package.
 [INFO] (waterboy) This package is up to date.
 [INFO] (waterf) This package is up to date.
 [INFO] (waterfallcharts) This package is up to date.
@@ -801,7 +778,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 
 [INFO] (watson-db) This package is up to date.
 [INFO] (watson-dev) This package is up to date.
-[INFO] (watson-developer-cloud) This package is up to date.
+[INFO] (watson-developer-cloud) Data has been updated for this package.
 [INFO] (watson-di) This package is up to date.
 [INFO] (watson-events) This package is up to date.
 [INFO] (watson-filesystem) This package is up to date.
@@ -1057,7 +1034,7 @@ This package download URL does not point to a valid file: "http://www.emilas.com
 [INFO] (wdmapper) This package is up to date.
 [INFO] (wdmlservice) This package is up to date.
 [INFO] (wdmmgext) This package is up to date.
-[INFO] (wdmtoolbox) Data has been updated for this package.
+[INFO] (wdmtoolbox) This package is up to date.
 [ERROR] (wdncrunch) Could not get a response from API for this package. See below for details.
 Traceback (most recent call last):
   File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
@@ -1172,7 +1149,7 @@ This package download URL does not point to a valid file: "http://www.pythonweb.
 [INFO] (web2pyrecipe) This package is up to date.
 [INFO] (web2sms) This package is up to date.
 [INFO] (web3) This package is up to date.
-[INFO] (web3-gear) This package is up to date.
+[INFO] (web3-gear) Data has been updated for this package.
 [INFO] (web3utils) This package is up to date.
 [INFO] (webalchemy) This package is up to date.
 [INFO] (webalerts) This package is up to date.
@@ -1258,59 +1235,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (webcam-streamer) This package is up to date.
 [INFO] (webchangestopmotion) This package is up to date.
 [INFO] (webchk) This package is up to date.
-[ERROR] (webchuan) Could not get a response from API for this package. See below for details.
-Traceback (most recent call last):
-  File "/usr/lib/python3.5/urllib/request.py", line 1254, in do_open
-    h.request(req.get_method(), req.selector, req.data, headers)
-  File "/usr/lib/python3.5/http/client.py", line 1107, in request
-    self._send_request(method, url, body, headers)
-  File "/usr/lib/python3.5/http/client.py", line 1152, in _send_request
-    self.endheaders(body)
-  File "/usr/lib/python3.5/http/client.py", line 1103, in endheaders
-    self._send_output(message_body)
-  File "/usr/lib/python3.5/http/client.py", line 934, in _send_output
-    self.send(msg)
-  File "/usr/lib/python3.5/http/client.py", line 877, in send
-    self.connect()
-  File "/usr/lib/python3.5/http/client.py", line 1253, in connect
-    super().connect()
-  File "/usr/lib/python3.5/http/client.py", line 849, in connect
-    (self.host,self.port), self.timeout, self.source_address)
-  File "/usr/lib/python3.5/socket.py", line 712, in create_connection
-    raise err
-  File "/usr/lib/python3.5/socket.py", line 703, in create_connection
-    sock.connect(sa)
-OSError: [Errno 99] Cannot assign requested address
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
-    timeout=10).read()
-  File "/usr/lib/python3.5/urllib/request.py", line 163, in urlopen
-    return opener.open(url, data, timeout)
-  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
-    response = meth(req, response)
-  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
-    'http', request, response, code, msg, hdrs)
-  File "/usr/lib/python3.5/urllib/request.py", line 504, in error
-    result = self._call_chain(*args)
-  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
-    result = func(*args)
-  File "/usr/lib/python3.5/urllib/request.py", line 696, in http_error_302
-    return self.parent.open(new, timeout=req.timeout)
-  File "/usr/lib/python3.5/urllib/request.py", line 466, in open
-    response = self._open(req, data)
-  File "/usr/lib/python3.5/urllib/request.py", line 484, in _open
-    '_open', req)
-  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
-    result = func(*args)
-  File "/usr/lib/python3.5/urllib/request.py", line 1297, in https_open
-    context=self._context, check_hostname=self._check_hostname)
-  File "/usr/lib/python3.5/urllib/request.py", line 1256, in do_open
-    raise URLError(err)
-urllib.error.URLError: <urlopen error [Errno 99] Cannot assign requested address>
-
+[INFO] (webchuan) This package is up to date.
 [INFO] (webcitation) This package is up to date.
 [ERROR] (webcleaner) Could not extract data from this package. See below for details.
 ".php" extension not supported.
@@ -1396,7 +1321,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (webext) This package is up to date.
 [INFO] (webextaware) This package is up to date.
 [INFO] (webf) This package is up to date.
-[INFO] (webfaction-fab2) Data has been updated for this package.
+[INFO] (webfaction-fab2) This package is up to date.
 [INFO] (webfinger) This package is up to date.
 [INFO] (webfinger2) This package is up to date.
 [INFO] (webflash) This package is up to date.
@@ -1433,7 +1358,259 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (webhoseio) This package is up to date.
 [ERROR] (webi-ripple) This package does not have downloadable releases.
 [INFO] (webias) This package is up to date.
-[ERROR] (webid-delegated-auth) Could not get a response from API for this package. See below for details.
+[INFO] (webid-delegated-auth) This package is up to date.
+[INFO] (webifi) This package is up to date.
+[INFO] (webim) This package is up to date.
+[INFO] (webinfo) This package is up to date.
+[INFO] (webinspect) This package is up to date.
+[INFO] (webinspectapi) This package is up to date.
+[ERROR] (webio) This package does not have downloadable releases.
+[INFO] (webit) This package is up to date.
+[INFO] (webium) This package is up to date.
+[INFO] (webkin) This package is up to date.
+[INFO] (webkit-server) This package is up to date.
+[INFO] (webkit2png) This package is up to date.
+[INFO] (weblablib) This package is up to date.
+[INFO] (weblate) This package is up to date.
+[INFO] (weblate-tools) This package is up to date.
+[INFO] (weblayer) This package is up to date.
+[INFO] (weblele) This package is up to date.
+[INFO] (weblib) This package is up to date.
+[INFO] (weblibrary) This package is up to date.
+[INFO] (webloc) This package is up to date.
+[INFO] (webloc-cli) This package is up to date.
+[INFO] (weblocker) This package is up to date.
+[INFO] (weblocust) This package is up to date.
+[INFO] (weblog) This package is up to date.
+[INFO] (weblogger) This package is up to date.
+[ERROR] (weblogic) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.5/urllib/request.py", line 163, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.5/urllib/request.py", line 510, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 590, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+
+[INFO] (weblogo) This package is up to date.
+[INFO] (weblurker) This package is up to date.
+[ERROR] (webly) This package does not have downloadable releases.
+[INFO] (weblyzard-api) This package is up to date.
+[INFO] (webm) This package is up to date.
+[INFO] (webmagic) This package is up to date.
+[INFO] (webmail) This package is up to date.
+[INFO] (webmake) This package is up to date.
+[INFO] (webmark) This package is up to date.
+[INFO] (webmaster) This package is up to date.
+[INFO] (webmc) This package is up to date.
+[INFO] (webmentiontools) This package is up to date.
+[INFO] (webmercator) This package is up to date.
+[INFO] (webmetrics-api-client) This package is up to date.
+[INFO] (webmock) This package is up to date.
+[INFO] (webmocker) This package is up to date.
+[ERROR] (webmocker-deprecated) Could not extract data from this package. See below for details.
+"https://github.com/sheltonpaul89/webmocker/tarball/master" file could not be downloaded. See below for details.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 107, in download_tar
+    f.write(urlopen(url=urlesc(pkgurl), timeout=10).read())
+  File "/usr/lib/python3.5/urllib/request.py", line 163, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.5/urllib/request.py", line 510, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 590, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+
+[INFO] (webmocker3) This package is up to date.
+[INFO] (webmon) This package is up to date.
+[INFO] (webmoney-api) This package is up to date.
+[INFO] (webmonitor) This package is up to date.
+[INFO] (webmpris) This package is up to date.
+[INFO] (webmsx-mkdocs-plugin) This package is up to date.
+[INFO] (webmux) This package is up to date.
+[INFO] (webnsock) This package is up to date.
+[INFO] (webnull) This package is up to date.
+[INFO] (webob) This package is up to date.
+[INFO] (webob-graphql) This package is up to date.
+[INFO] (webob-view) This package is up to date.
+[INFO] (webobentrypoints) This package is up to date.
+[INFO] (webobtoolkit) This package is up to date.
+[INFO] (weboffice365) This package is up to date.
+[INFO] (weboob) This package is up to date.
+[ERROR] (weborg) This package does not have downloadable releases.
+[INFO] (weborganiser) This package is up to date.
+[INFO] (webot) This package is up to date.
+[ERROR] (webout) This package does not have downloadable releases.
+[INFO] (webp) This package is up to date.
+[INFO] (webp-converter) This package is up to date.
+[INFO] (webp3) This package is up to date.
+[INFO] (webpack) This package is up to date.
+[INFO] (webpack-manifest) This package is up to date.
+[INFO] (webpage) This package is up to date.
+[INFO] (webpage2html) This package is up to date.
+[INFO] (webpages) This package is up to date.
+[INFO] (webpageshot) This package is up to date.
+[INFO] (webpagetest) This package is up to date.
+[INFO] (webpagetracker) This package is up to date.
+[INFO] (webpandoc) This package is up to date.
+[ERROR] (webparse) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.5/urllib/request.py", line 163, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.5/urllib/request.py", line 510, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 590, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+
+[INFO] (webparser) This package is up to date.
+[INFO] (webparser-py) This package is up to date.
+[INFO] (webpartners-users) This package is up to date.
+[INFO] (webpattern) This package is up to date.
+[INFO] (webpay) This package is up to date.
+[INFO] (webpfiles) This package is up to date.
+[INFO] (webpigpio) This package is up to date.
+[INFO] (webplotlib) This package is up to date.
+[INFO] (webpocket) This package is up to date.
+[INFO] (webportfolio) This package is up to date.
+[INFO] (webportfolio-extras) This package is up to date.
+[INFO] (webportfolio-rq-worker) This package is up to date.
+[INFO] (webpowerpy) This package is up to date.
+[INFO] (webpreview) This package is up to date.
+[INFO] (webpush-channels) This package is up to date.
+[INFO] (webpy) This package is up to date.
+[INFO] (webpy-celery) This package is up to date.
+[INFO] (webpy-graphql) This package is up to date.
+[INFO] (webpy-jinja2) This package is up to date.
+[INFO] (webpy-mongodb-sessions) This package is up to date.
+[INFO] (webpy3legacysupport) This package is up to date.
+[INFO] (webpype) This package is up to date.
+[INFO] (webpype-django) This package is up to date.
+[ERROR] (webpyte) Could not extract data from this package. See below for details.
+This package download URL does not point to a valid file: "http://code.google.com/p/webpyte/downloads/list"
+[ERROR] (webpython) Could not extract data from this package. See below for details.
+".php" extension not supported.
+[INFO] (webpyutils) This package is up to date.
+[INFO] (webqresp) This package is up to date.
+[INFO] (webracer) This package is up to date.
+[INFO] (webrequest) Data has been updated for this package.
+[INFO] (webreview) This package is up to date.
+[INFO] (webrpc) This package is up to date.
+[INFO] (webrtc-audio-processing) This package is up to date.
+[INFO] (webrtcvad) This package is up to date.
+[INFO] (webrunner) This package is up to date.
+[INFO] (webruntime) This package is up to date.
+[INFO] (webs) This package is up to date.
+[INFO] (websauna) This package is up to date.
+[INFO] (websauna-blog) This package is up to date.
+[INFO] (websauna-j2secret) This package is up to date.
+[INFO] (websauna-magiclogin) This package is up to date.
+[INFO] (websauna-newsletter) This package is up to date.
+[INFO] (websauna-system) This package is up to date.
+[INFO] (websauna-tests) This package is up to date.
+[INFO] (websauna-utils) This package is up to date.
+[INFO] (websauna-viewconfig) This package is up to date.
+[INFO] (webschaber) This package is up to date.
+[ERROR] (webscraper) This package does not have downloadable releases.
+[INFO] (webscraper-core) This package is up to date.
+[INFO] (webscrapetools) This package is up to date.
+[INFO] (webscraping) This package is up to date.
+[INFO] (webscreenshot) Data has been updated for this package.
+[INFO] (websearch) This package is up to date.
+[INFO] (webserverbackup) This package is up to date.
+[INFO] (webservice) This package is up to date.
+[INFO] (webservices) This package is up to date.
+[INFO] (webservices-project3) This package is up to date.
+[INFO] (webservicex-converttemp) This package is up to date.
+[INFO] (webshare) This package is up to date.
+[INFO] (webshare-download-manager) This package is up to date.
+[INFO] (websharecli) This package is up to date.
+[INFO] (webshot) This package is up to date.
+[INFO] (webshrinker) This package is up to date.
+[INFO] (websigning) This package is up to date.
+[INFO] (website) This package is up to date.
+[INFO] (website-monitor) This package is up to date.
+[INFO] (website-poller) This package is up to date.
+[INFO] (website-status) This package is up to date.
+[INFO] (website-up) This package is up to date.
+[INFO] (websitetest) This package is up to date.
+[INFO] (webskewer-http) This package is up to date.
+[INFO] (webskine) This package is up to date.
+[INFO] (websmscomtoolkit) This package is up to date.
+[INFO] (websnake) This package is up to date.
+[INFO] (websnort) This package is up to date.
+[INFO] (websock) This package is up to date.
+[INFO] (websocket) This package is up to date.
+[INFO] (websocket-client) This package is up to date.
+[INFO] (websocket-client-py3) This package is up to date.
+[INFO] (websocket-client2) This package is up to date.
+[INFO] (websocket-redis) This package is up to date.
+[INFO] (websocket-rpc) This package is up to date.
+[INFO] (websocket-server) This package is up to date.
+[INFO] (websocketclient) This package is up to date.
+[INFO] (websocketcommandline) This package is up to date.
+[ERROR] (websocketrpc) This package does not have downloadable releases.
+[INFO] (websockets) This package is up to date.
+[INFO] (websockify) This package is up to date.
+[INFO] (websourcebrowser) This package is up to date.
+[INFO] (webspanner) This package is up to date.
+[ERROR] (webspider) This package does not have downloadable releases.
+[INFO] (webspider-douban) This package is up to date.
+[INFO] (webssh) This package is up to date.
+[INFO] (webstack) This package is up to date.
+[INFO] (webstack-django-endless-pagination) This package is up to date.
+[INFO] (webstack-django-pagination) This package is up to date.
+[INFO] (webstack-django-sorting) This package is up to date.
+[INFO] (webstack-flask-jwt) This package is up to date.
+[INFO] (webstag) This package is up to date.
+[INFO] (webstar) This package is up to date.
+[INFO] (webstarts) This package is up to date.
+[INFO] (webstash) This package is up to date.
+[INFO] (webstemmer) This package is up to date.
+[INFO] (webster) This package is up to date.
+[INFO] (webstoremgr) This package is up to date.
+[INFO] (webstring) This package is up to date.
+[INFO] (webstruct) This package is up to date.
+[INFO] (websubsub) This package is up to date.
+[INFO] (websync) This package is up to date.
+[INFO] (webtail) This package is up to date.
+[INFO] (webtemplate-dbca) This package is up to date.
+[INFO] (webtemplate-dpaw) This package is up to date.
+[INFO] (webtest) This package is up to date.
+[INFO] (webtest-aiohttp) This package is up to date.
+[INFO] (webtest-casperjs) This package is up to date.
+[INFO] (webtest-docgen) This package is up to date.
+[INFO] (webtest-plus) This package is up to date.
+[INFO] (webtest-selenium) This package is up to date.
+[INFO] (webtestrecorder) This package is up to date.
+[INFO] (webtestrunner) This package is up to date.
+[INFO] (webthing) This package is up to date.
+[INFO] (webtimer) This package is up to date.
+[ERROR] (webtk) Could not extract data from this package. See below for details.
+"http://webtk.org/download/webtk-0.alpha1.tgz" file could not be downloaded. See below for details.
 Traceback (most recent call last):
   File "/usr/lib/python3.5/urllib/request.py", line 1254, in do_open
     h.request(req.get_method(), req.selector, req.data, headers)
@@ -1447,21 +1624,19 @@ Traceback (most recent call last):
     self.send(msg)
   File "/usr/lib/python3.5/http/client.py", line 877, in send
     self.connect()
-  File "/usr/lib/python3.5/http/client.py", line 1253, in connect
-    super().connect()
   File "/usr/lib/python3.5/http/client.py", line 849, in connect
     (self.host,self.port), self.timeout, self.source_address)
-  File "/usr/lib/python3.5/socket.py", line 712, in create_connection
-    raise err
-  File "/usr/lib/python3.5/socket.py", line 703, in create_connection
-    sock.connect(sa)
-OSError: [Errno 99] Cannot assign requested address
+  File "/usr/lib/python3.5/socket.py", line 694, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/lib/python3.5/socket.py", line 733, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
-  File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
-    timeout=10).read()
+  File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 107, in download_tar
+    f.write(urlopen(url=urlesc(pkgurl), timeout=10).read())
   File "/usr/lib/python3.5/urllib/request.py", line 163, in urlopen
     return opener.open(url, data, timeout)
   File "/usr/lib/python3.5/urllib/request.py", line 466, in open
@@ -1470,38 +1645,2502 @@ Traceback (most recent call last):
     '_open', req)
   File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
     result = func(*args)
-  File "/usr/lib/python3.5/urllib/request.py", line 1297, in https_open
-    context=self._context, check_hostname=self._check_hostname)
+  File "/usr/lib/python3.5/urllib/request.py", line 1282, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
   File "/usr/lib/python3.5/urllib/request.py", line 1256, in do_open
     raise URLError(err)
-urllib.error.URLError: <urlopen error [Errno 99] Cannot assign requested address>
+urllib.error.URLError: <urlopen error [Errno -2] Name or service not known>
 
-[INFO] (webifi) This package is up to date.
-[INFO] (webim) This package is up to date.
-[INFO] (webinfo) This package is up to date.
-[INFO] (webinspect) This package is up to date.
-[INFO] (webinspectapi) This package is up to date.
-[ERROR] (webio) This package does not have downloadable releases.
-[INFO] (webit) This package is up to date.
-[INFO] (webium) This package is up to date.
-[INFO] (webkin) This package is up to date.
-[INFO] (webkit-server) This package is up to date.
-[INFO] (webkit2png) This package is up to date.
-[WARNING] 
-[WARNING] Processing has taken more than 2100 seconds. Interrupting.
-[WARNING] Processing will continue in next iteration.
-[WARNING] 
+[INFO] (webtoolbox) This package is up to date.
+[INFO] (webtools) This package is up to date.
+[INFO] (webtoons) This package is up to date.
+[INFO] (webtranslate) This package is up to date.
+[INFO] (webtrendsqt) This package is up to date.
+[INFO] (webtul) This package is up to date.
+[INFO] (webui) This package is up to date.
+[INFO] (webuildcity) This package is up to date.
+[INFO] (webundo) This package is up to date.
+[INFO] (webunit) This package is up to date.
+[INFO] (webunit2) This package is up to date.
+[INFO] (webuntis) This package is up to date.
+[INFO] (webuntis-cli) This package is up to date.
+[INFO] (webutils) This package is up to date.
+[INFO] (webval) This package is up to date.
+[INFO] (webveripy) This package is up to date.
+[INFO] (webview) This package is up to date.
+[INFO] (webviewhandler) This package is up to date.
+[INFO] (webvirtmgr) This package is up to date.
+[INFO] (webvtt-py) This package is up to date.
+[ERROR] (webwall) This package does not have downloadable releases.
+[INFO] (webware) This package is up to date.
+[INFO] (webware-for-python) This package is up to date.
+[ERROR] (webway) This package does not have downloadable releases.
+[INFO] (webwhatsapi) This package is up to date.
+[INFO] (webwol) This package is up to date.
+[INFO] (webworlds) This package is up to date.
+[ERROR] (webzero) This package does not have downloadable releases.
+[INFO] (wechat) This package is up to date.
+[INFO] (wechat-auto) This package is up to date.
+[INFO] (wechat-auto-reply2) This package is up to date.
+[INFO] (wechat-enter) This package is up to date.
+[INFO] (wechat-explorer) This package is up to date.
+[INFO] (wechat-oauth2) This package is up to date.
+[INFO] (wechat-pay) This package is up to date.
+[INFO] (wechat-pay-sdk) This package is up to date.
+[INFO] (wechat-python-sdk) This package is up to date.
+[INFO] (wechat-requests) This package is up to date.
+[INFO] (wechat-sdk) This package is up to date.
+[INFO] (wechat-sendall) This package is up to date.
+[INFO] (wechat-sender) This package is up to date.
+[INFO] (wechat-web-auth) This package is up to date.
+[INFO] (wechat2) This package is up to date.
+[INFO] (wechatbot) This package is up to date.
+[INFO] (wechatkit) This package is up to date.
+[INFO] (wechatlib) This package is up to date.
+[INFO] (wechatoauth) This package is up to date.
+[INFO] (wechatpay) This package is up to date.
+[INFO] (wechatpy) This package is up to date.
+[INFO] (wechatpy-pidan) This package is up to date.
+[INFO] (wechatpy-tornado) This package is up to date.
+[INFO] (wechatsogou) This package is up to date.
+[INFO] (wechatspider) This package is up to date.
+[INFO] (wechattool) This package is up to date.
+[INFO] (wechinelearn) This package is up to date.
+[INFO] (wecli) This package is up to date.
+[INFO] (wed) This package is up to date.
+[INFO] (wedeploy) This package is up to date.
+[INFO] (weditor) This package is up to date.
+[ERROR] (wednesday) This package does not have downloadable releases.
+[INFO] (wedo) This package is up to date.
+[INFO] (wedo2) This package is up to date.
+[INFO] (wedoca-hello) This package is up to date.
+[INFO] (wedoistapi) This package is up to date.
+[INFO] (wedutil) This package is up to date.
+[INFO] (wee) This package is up to date.
+[INFO] (weeb-py) This package is up to date.
+[INFO] (weebapi) This package is up to date.
+[INFO] (weebly) This package is up to date.
+[INFO] (weeblycloud) This package is up to date.
+[INFO] (weechat-notifier) This package is up to date.
+[INFO] (weedi) This package is up to date.
+[INFO] (week) This package is up to date.
+[INFO] (weekdays) This package is up to date.
+[ERROR] (weepo) This package does not have downloadable releases.
+[INFO] (weetwit) This package is up to date.
+[INFO] (weewsgi) This package is up to date.
+[INFO] (weewx-orm) This package is up to date.
+[INFO] (wefacts) This package is up to date.
+[INFO] (wefindx) This package is up to date.
+[ERROR] (weft) This package does not have downloadable releases.
+[INFO] (wegene) This package is up to date.
+[INFO] (wegene-weapp-cli) This package is up to date.
+[INFO] (wego) This package is up to date.
+[INFO] (wei-dev) This package is up to date.
+[INFO] (weibo) This package is up to date.
+[INFO] (weibo-api) This package is up to date.
+[INFO] (weibo-scraper) This package is up to date.
+[INFO] (weibo-sofa) This package is up to date.
+[INFO] (weibobash) This package is up to date.
+[INFO] (weibopy) This package is up to date.
+[INFO] (weiborobot) This package is up to date.
+[INFO] (weibospider) This package is up to date.
+[INFO] (weibull) This package is up to date.
+[INFO] (weidao) This package is up to date.
+[INFO] (weidian) This package is up to date.
+[INFO] (weighmail) This package is up to date.
+[INFO] (weighslide) This package is up to date.
+[INFO] (weightanalyser) This package is up to date.
+[INFO] (weightbot) This package is up to date.
+[INFO] (weighted-choice) This package is up to date.
+[INFO] (weighted-levenshtein) This package is up to date.
+[INFO] (weightedcalcs) This package is up to date.
+[INFO] (weightedmarkov) This package is up to date.
+[INFO] (weightedstats) This package is up to date.
+[INFO] (weightless-core) This package is up to date.
+[INFO] (weightreservoir) This package is up to date.
+[INFO] (weighwords) This package is up to date.
+[INFO] (weihnachtsgurke) This package is up to date.
+[INFO] (weir) This package is up to date.
+[INFO] (weirb) This package is up to date.
+[INFO] (weirdict) This package is up to date.
+[INFO] (weixin) This package is up to date.
+[INFO] (weixin-api) This package is up to date.
+[ERROR] (weixin-helper) This package does not have downloadable releases.
+[INFO] (weixin-python) This package is up to date.
+[INFO] (weixin-sdk) This package is up to date.
+[INFO] (weixincli) This package is up to date.
+[INFO] (weixinpay) This package is up to date.
+[INFO] (weixinpy) This package is up to date.
+[INFO] (weixins) This package is up to date.
+[INFO] (weixunsdkcore) This package is up to date.
+[INFO] (weixunsdkfrs) This package is up to date.
+[INFO] (weiyu) This package is up to date.
+[INFO] (weka) This package is up to date.
+[INFO] (weka-easypy) This package is up to date.
+[INFO] (weka-porter) This package is up to date.
+[INFO] (wekapy) This package is up to date.
+[INFO] (wekeypedia) This package is up to date.
+[INFO] (wekit) This package is up to date.
+[INFO] (welcome) This package is up to date.
+[INFO] (welcomepython) This package is up to date.
+[INFO] (weld) This package is up to date.
+[INFO] (welder) This package is up to date.
+[INFO] (weldnumpy) This package is up to date.
+[INFO] (weles) This package is up to date.
+[INFO] (wellapplication) This package is up to date.
+[INFO] (wellaware) This package is up to date.
+[INFO] (wellbehavedpython) This package is up to date.
+[INFO] (wellcome-aws-utils) This package is up to date.
+[INFO] (wellcome-lambda-utils) This package is up to date.
+[INFO] (wellcome-platform-cli) This package is up to date.
+[INFO] (wellcometohello) This package is up to date.
+[INFO] (wellfare) This package is up to date.
+[INFO] (wellknown) This package is up to date.
+[INFO] (wellrng) This package is up to date.
+[INFO] (wells) This package is up to date.
+[INFO] (welly) This package is up to date.
+[INFO] (welut) This package is up to date.
+[INFO] (wemake-python-styleguide) This package is up to date.
+[INFO] (wemo) This package is up to date.
+[INFO] (wemooagent) This package is up to date.
+[INFO] (wempy) This package is up to date.
+[INFO] (wencai) This package is up to date.
+[INFO] (wendelin-core) This package is up to date.
+[INFO] (wendellor) This package is up to date.
+[INFO] (wendy) This package is up to date.
+[INFO] (wenjiaocao) This package is up to date.
+[INFO] (wenlincms) This package is up to date.
+[INFO] (wenna-pypi) This package is up to date.
+[INFO] (wensleydale) This package is up to date.
+[INFO] (went) This package is up to date.
+[INFO] (wenwen) This package is up to date.
+[ERROR] (wenxuan-nester) This package does not have downloadable releases.
+[INFO] (wenyali-console) This package is up to date.
+[INFO] (wenyali-test) This package is up to date.
+[ERROR] (weogeoapi) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.5/urllib/request.py", line 163, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.5/urllib/request.py", line 504, in error
+    result = self._call_chain(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 696, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.5/urllib/request.py", line 510, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 590, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+
+[INFO] (wepana) This package is up to date.
+[INFO] (wepay) This package is up to date.
+[INFO] (wepay-signer) This package is up to date.
+[INFO] (weppy) This package is up to date.
+[INFO] (weppy-assets) This package is up to date.
+[INFO] (weppy-bs3) This package is up to date.
+[INFO] (weppy-fbauth) This package is up to date.
+[INFO] (weppy-haml) This package is up to date.
+[INFO] (weppy-oauth2) This package is up to date.
+[INFO] (weppy-rest) This package is up to date.
+[INFO] (weppy-sentry) This package is up to date.
+[INFO] (wepy) This package is up to date.
+[INFO] (wer) This package is up to date.
+[INFO] (wera2netcdf) This package is up to date.
+[INFO] (wercker) This package is up to date.
+[INFO] (weresync) This package is up to date.
+[INFO] (wereurl) This package is up to date.
+[INFO] (wergzeuk) This package is up to date.
+[INFO] (werk) This package is up to date.
+[INFO] (werkzeug) This package is up to date.
+[ERROR] (werkzeug-asgi) This package does not have downloadable releases.
+[INFO] (werkzeug-encryptedcookie) This package is up to date.
+[INFO] (werkzeug-raw) This package is up to date.
+[INFO] (werkzeug-rfc7xx) This package is up to date.
+[ERROR] (wernher) This package does not have downloadable releases.
+[ERROR] (wernicke) This package does not have downloadable releases.
+[INFO] (werobot) This package is up to date.
+[INFO] (wes) This package is up to date.
+[INFO] (wes-service) Data has been updated for this package.
+[INFO] (wesci) This package is up to date.
+[INFO] (wesgi) This package is up to date.
+[INFO] (wesh) This package is up to date.
+[INFO] (wesky) This package is up to date.
+[INFO] (wesleychang-nester) This package is up to date.
+[INFO] (wespike) This package is up to date.
+[INFO] (west-enrich) This package is up to date.
+[INFO] (west-map) This package is up to date.
+[ERROR] (west-network) This package does not have downloadable releases.
+[INFO] (wester) This package is up to date.
+[ERROR] (wester-caijianmin) This package does not have downloadable releases.
+[INFO] (westera) This package is up to date.
+[INFO] (westergaard-species) This package is up to date.
+[INFO] (western) This package is up to date.
+[INFO] (westeros) This package is up to date.
+[INFO] (westfax) This package is up to date.
+[INFO] (westmont-subdiv) This package is up to date.
+[INFO] (wet) This package is up to date.
+[INFO] (wet-copy) This package is up to date.
+[INFO] (wetb) This package is up to date.
+[INFO] (wethepeople) This package is up to date.
+[INFO] (wethepeopletoolkit) This package is up to date.
+[INFO] (wetransfer-upload) This package is up to date.
+[INFO] (wetransferpy) This package is up to date.
+[INFO] (wetrunner) This package is up to date.
+[INFO] (wex) This package is up to date.
+[INFO] (wex-api) This package is up to date.
+[INFO] (wexapi) This package is up to date.
+[INFO] (wextracto) This package is up to date.
+[INFO] (wextractor) This package is up to date.
+[INFO] (wexy) This package is up to date.
+[INFO] (wf-api-client) This package is up to date.
+[INFO] (wf-manager) This package is up to date.
+[INFO] (wf-pycat) This package is up to date.
+[INFO] (wfapi) This package is up to date.
+[INFO] (wfastcgi) This package is up to date.
+[INFO] (wfc3tools) Data has been updated for this package.
+[INFO] (wfchecker) This package is up to date.
+[INFO] (wfcli) This package is up to date.
+[INFO] (wfdb) This package is up to date.
+[INFO] (wfeng) This package is up to date.
+[ERROR] (wffmpeg) This package does not have downloadable releases.
+[INFO] (wfgfw) This package is up to date.
+[INFO] (wfh) This package is up to date.
+[INFO] (wfl-nester) This package is up to date.
+[INFO] (wfm) This package is up to date.
+[INFO] (wfpc2tools) This package is up to date.
+[INFO] (wfpdf) This package is up to date.
+[INFO] (wfront) This package is up to date.
+[INFO] (wfs-downloader) This package is up to date.
+[INFO] (wfuzz) This package is up to date.
+[ERROR] (wfuzzer) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.5/urllib/request.py", line 163, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.5/urllib/request.py", line 510, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 590, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+
+[INFO] (wfw) This package is up to date.
+[INFO] (wg-gesucht-crawler-cli) This package is up to date.
+[INFO] (wger) This package is up to date.
+[INFO] (wget) This package is up to date.
+[INFO] (wgetdb) This package is up to date.
+[INFO] (wgetplus) This package is up to date.
+[INFO] (wgetter) This package is up to date.
+[INFO] (wgety) This package is up to date.
+[INFO] (wgkits) This package is up to date.
+[INFO] (wgnet) This package is up to date.
+[ERROR] (wgrib-python) Could not extract data from this package. See below for details.
+Unsupported package directory structure.
+[INFO] (wgstatus) This package is up to date.
+[INFO] (wh) This package is up to date.
+[INFO] (whaaaaat) This package is up to date.
+[INFO] (whack) This package is up to date.
+[INFO] (whadup) This package is up to date.
+[INFO] (whale-agent) This package is up to date.
+[INFO] (whale-api) This package is up to date.
+[INFO] (whale-diamond) This package is up to date.
+[INFO] (whale-linter) This package is up to date.
+[INFO] (whale-listprinter) This package is up to date.
+[INFO] (whaledo) This package is up to date.
+[INFO] (whales) This package is up to date.
+[INFO] (whalesong) This package is up to date.
+[INFO] (whampyr) This package is up to date.
+[INFO] (whapy) This package is up to date.
+[INFO] (wharf) This package is up to date.
+[INFO] (wharfee) This package is up to date.
+[INFO] (wharfrat) This package is up to date.
+[INFO] (what) This package is up to date.
+[INFO] (what-the-license) This package is up to date.
+[INFO] (what3words) This package is up to date.
+[INFO] (whata4445re23-nish-ab-i) This package is up to date.
+[INFO] (whatami) This package is up to date.
+[INFO] (whatanime) This package is up to date.
+[ERROR] (whatap) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.5/urllib/request.py", line 163, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.5/urllib/request.py", line 510, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 590, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+
+[INFO] (whatap-python) This package is up to date.
+[INFO] (whatapi) This package is up to date.
+[INFO] (whatcd-cau) This package is up to date.
+[INFO] (whatcolorisx) This package is up to date.
+[INFO] (whatever) This package is up to date.
+[INFO] (whatever-forever) This package is up to date.
+[INFO] (whathammers) This package is up to date.
+[INFO] (whatidid) This package is up to date.
+[ERROR] (whatinstalled) This package does not have downloadable releases.
+[INFO] (whatip) This package is up to date.
+[ERROR] (whatis) This package does not have downloadable releases.
+[INFO] (whatismymovie) This package is up to date.
+[INFO] (whatisthis) This package is up to date.
+[INFO] (whatlang) This package is up to date.
+[INFO] (whatlangid) This package is up to date.
+[INFO] (whatodo) This package is up to date.
+[INFO] (whatportis) This package is up to date.
+[INFO] (whats) This package is up to date.
+[INFO] (whats-my-name) This package is up to date.
+[INFO] (whats-py) This package is up to date.
+[INFO] (whatsapp-cli) This package is up to date.
+[INFO] (whatsapp-parser) This package is up to date.
+[INFO] (whatsappbot) This package is up to date.
+[INFO] (whatshap) This package is up to date.
+[INFO] (whatsmyversion) This package is up to date.
+[INFO] (whatsnew) This package is up to date.
+[INFO] (whatsobservable) This package is up to date.
+[INFO] (whatsonthemenu) This package is up to date.
+[INFO] (whatsthis) This package is up to date.
+[INFO] (whatsup) This package is up to date.
+[INFO] (whatswhere) This package is up to date.
+[INFO] (whatthelang) This package is up to date.
+[INFO] (whatthepatch) This package is up to date.
+[INFO] (whatthepatch-graingert) This package is up to date.
+[INFO] (whatthewhat) This package is up to date.
+[INFO] (whatwhen) This package is up to date.
+[INFO] (wheat-sample-app) This package is up to date.
+[INFO] (wheel) This package is up to date.
+[INFO] (wheel-example) This package is up to date.
+[ERROR] (wheel-jack) This package does not have downloadable releases.
+[INFO] (wheel2conda) This package is up to date.
+[ERROR] (wheelbarrow) This package does not have downloadable releases.
+[ERROR] (wheelbuilder) This package does not have downloadable releases.
+[INFO] (wheelcms) This package is up to date.
+[INFO] (wheelcms-axle) This package is up to date.
+[INFO] (wheelcms-carousel) This package is up to date.
+[INFO] (wheelcms-categories) This package is up to date.
+[INFO] (wheelcms-comments) This package is up to date.
+[INFO] (wheelcms-disqus) This package is up to date.
+[INFO] (wheelcms-project) This package is up to date.
+[ERROR] (wheelcms-rss) This package does not have downloadable releases.
+[INFO] (wheelcms-simplecontact) This package is up to date.
+[INFO] (wheelcms-spokes) This package is up to date.
+[INFO] (wheelcms-theme-bootswatch) This package is up to date.
+[INFO] (wheelcms-valve) This package is up to date.
+[ERROR] (wheelctl) This package does not have downloadable releases.
+[INFO] (wheeler-base-node) This package is up to date.
+[INFO] (wheeler-blink) This package is up to date.
+[INFO] (wheeler-demo-rpc) This package is up to date.
+[INFO] (wheeler-dmf-control-board) This package is up to date.
+[INFO] (wheeler-dmf-control-board-firmware) This package is up to date.
+[INFO] (wheeler-electromagnet-controller) This package is up to date.
+[INFO] (wheeler-hale-2015) This package is up to date.
+[INFO] (wheeler-hv-switching-board) This package is up to date.
+[INFO] (wheeler-motor-control) This package is up to date.
+[INFO] (wheeler-pygtkhelpers) This package is up to date.
+[INFO] (wheeler-signal-generator-board) This package is up to date.
+[INFO] (wheeler-signal-generator-board-rpc) This package is up to date.
+[INFO] (wheelhouse) This package is up to date.
+[INFO] (wheelhouse-uploader) This package is up to date.
+[INFO] (wheelhouseuploader) This package is up to date.
+[INFO] (wheelie) This package is up to date.
+[INFO] (wheelify) This package is up to date.
+[INFO] (wheeljack) This package is up to date.
+[INFO] (wheeljack-repoman) This package is up to date.
+[INFO] (wheellibraryztd) This package is up to date.
+[INFO] (wheelmaker) This package is up to date.
+[INFO] (wheelock) Data has been updated for this package.
+[INFO] (wheelr) This package is up to date.
+[INFO] (wheels2dmg) This package is up to date.
+[INFO] (wheelshop) This package is up to date.
+[INFO] (wheelwright) This package is up to date.
+[INFO] (wheezy-caching) This package is up to date.
+[INFO] (wheezy-captcha) This package is up to date.
+[INFO] (wheezy-core) This package is up to date.
+[INFO] (wheezy-html) This package is up to date.
+[INFO] (wheezy-http) This package is up to date.
+[INFO] (wheezy-routing) This package is up to date.
+[INFO] (wheezy-security) This package is up to date.
+[INFO] (wheezy-template) This package is up to date.
+[INFO] (wheezy-validation) This package is up to date.
+[INFO] (wheezy-web) This package is up to date.
+[INFO] (whelk) This package is up to date.
+[ERROR] (when) Could not extract data from this package. See below for details.
+".py" extension not supported.
+[INFO] (when-changed) This package is up to date.
+[INFO] (when-will-it-end) This package is up to date.
+[INFO] (whenareyou) This package is up to date.
+[INFO] (whenio) This package is up to date.
+[INFO] (whenis) This package is up to date.
+[INFO] (wheniwork) This package is up to date.
+[INFO] (whenpy) This package is up to date.
+[INFO] (where) This package is up to date.
+[INFO] (where2go) This package is up to date.
+[INFO] (whereami) This package is up to date.
+[INFO] (whereampy) This package is up to date.
+[INFO] (wherehouse) This package is up to date.
+[INFO] (whereis) This package is up to date.
+[ERROR] (whereisit) This package does not have downloadable releases.
+[ERROR] (whereiswilliam) This package does not have downloadable releases.
+[INFO] (wheresyourtrash) This package is up to date.
+[INFO] (wherethedjeck) This package is up to date.
+[INFO] (whereto) This package is up to date.
+[ERROR] (which) This package does not have downloadable releases.
+[INFO] (which-slave) This package is up to date.
+[INFO] (whichcraft) This package is up to date.
+[INFO] (whichpkg) This package is up to date.
+[INFO] (whichpy) This package is up to date.
+[INFO] (whiff) This package is up to date.
+[INFO] (whiffle) This package is up to date.
+[INFO] (whileloop) This package is up to date.
+[INFO] (whip) This package is up to date.
+[INFO] (whiplash) This package is up to date.
+[INFO] (whippersnapper) This package is up to date.
+[INFO] (whips) This package is up to date.
+[INFO] (whips2) This package is up to date.
+[INFO] (whiptail) This package is up to date.
+[INFO] (whiptailpy) This package is up to date.
+[INFO] (whirl) This package is up to date.
+[INFO] (whirldata) This package is up to date.
+[INFO] (whirlpool) This package is up to date.
+[INFO] (whirls) This package is up to date.
+[ERROR] (whirlwind) This package does not have downloadable releases.
+[INFO] (whisker) This package is up to date.
+[INFO] (whisker-autonomic-analysis) This package is up to date.
+[INFO] (whisker-serial-order) This package is up to date.
+[INFO] (whiskers) This package is up to date.
+[ERROR] (whiskey) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.5/urllib/request.py", line 163, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.5/urllib/request.py", line 510, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 590, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+
+[INFO] (whisper) This package is up to date.
+[INFO] (whisperctl) This package is up to date.
+[INFO] (whispyr) This package is up to date.
+[INFO] (whistle) This package is up to date.
+[INFO] (whistlepy) This package is up to date.
+[INFO] (whistler) This package is up to date.
+[INFO] (whistletips) This package is up to date.
+[INFO] (white) This package is up to date.
+[INFO] (white-generator) This package is up to date.
+[INFO] (white-noise) This package is up to date.
+[INFO] (white-rabbit) This package is up to date.
+[INFO] (whiteboard) This package is up to date.
+[INFO] (whitebox) This package is up to date.
+[INFO] (whitefly) This package is up to date.
+[INFO] (whitelist) This package is up to date.
+[INFO] (whitenoise) This package is up to date.
+[INFO] (whiteplanes) This package is up to date.
+[INFO] (whitepy) This package is up to date.
+[INFO] (whiterenamer) This package is up to date.
+[INFO] (whitespace) This package is up to date.
+[INFO] (whitespacelint) This package is up to date.
+[INFO] (whitewater) This package is up to date.
+[INFO] (whitey) This package is up to date.
+[INFO] (whither) This package is up to date.
+[INFO] (whizkers) This package is up to date.
+[INFO] (whizzer) This package is up to date.
+[INFO] (whl-setup) This package is up to date.
+[INFO] (who-dev) This package is up to date.
+[INFO] (who-i) This package is up to date.
+[INFO] (who-ldap) This package is up to date.
+[INFO] (who-name) This package is up to date.
+[INFO] (whoapi) This package is up to date.
+[INFO] (whoarder) This package is up to date.
+[INFO] (whocall) This package is up to date.
+[INFO] (whodidwhat) This package is up to date.
+[INFO] (whodunit) This package is up to date.
+[INFO] (whoi) This package is up to date.
+[INFO] (whois) This package is up to date.
+[INFO] (whois-oracle) This package is up to date.
+[INFO] (whois-similarity-distance) This package is up to date.
+[INFO] (whoisclient) This package is up to date.
+[INFO] (whoislookup) This package is up to date.
+[INFO] (whoisp) This package is up to date.
+[INFO] (whoispy) This package is up to date.
+[INFO] (whole-history-rating) This package is up to date.
+[INFO] (wholly) This package is up to date.
+[INFO] (whoops) This package is up to date.
+[INFO] (whoosh) This package is up to date.
+[INFO] (whoosh-igo) This package is up to date.
+[INFO] (whooshalchemy) This package is up to date.
+[INFO] (whooshalchemy3) This package is up to date.
+[INFO] (whooshdoc) This package is up to date.
+[INFO] (whooshstore) This package is up to date.
+[INFO] (whoshere) This package is up to date.
+[INFO] (whoshome) This package is up to date.
+[INFO] (whoswho) This package is up to date.
+[INFO] (whotrackme) This package is up to date.
+[INFO] (whotracksme) This package is up to date.
+[INFO] (whratio) This package is up to date.
+[INFO] (whs-commons-abc) This package is up to date.
+[INFO] (whs-commons-patterns) This package is up to date.
+[INFO] (whs-utils-flask) This package is up to date.
+[INFO] (whs-utils-pyman) This package is up to date.
+[INFO] (whs-utils-rwlock) This package is up to date.
+[INFO] (whtc-recipe-configmanager) This package is up to date.
+[INFO] (whtmacro) This package is up to date.
+[INFO] (whtranscripts) This package is up to date.
+[INFO] (why) This package is up to date.
+[INFO] (why-nester) This package is up to date.
+[INFO] (why-python-v1) This package is up to date.
+[ERROR] (whybase) This package does not have downloadable releases.
+[INFO] (whych) This package is up to date.
+[INFO] (whydtogo) This package is up to date.
+[ERROR] (whyteboard) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.5/urllib/request.py", line 163, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.5/urllib/request.py", line 504, in error
+    result = self._call_chain(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 696, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.5/urllib/request.py", line 510, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 590, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+
+[INFO] (wi) This package is up to date.
+[INFO] (wia) This package is up to date.
+[INFO] (wialon-devtools) This package is up to date.
+[INFO] (wib) This package is up to date.
+[INFO] (wicked) This package is up to date.
+[INFO] (wickedql) This package is up to date.
+[INFO] (wicken) This package is up to date.
+[INFO] (wicomm) This package is up to date.
+[INFO] (widdy) This package is up to date.
+[INFO] (wide-product) This package is up to date.
+[INFO] (widediaper) This package is up to date.
+[ERROR] (wideio) This package does not have downloadable releases.
+[INFO] (wideio-ocean) This package is up to date.
+[INFO] (widely) This package is up to date.
+[ERROR] (widget) This package does not have downloadable releases.
+[INFO] (widget-party) This package is up to date.
+[INFO] (widgetastic-core) This package is up to date.
+[INFO] (widgetastic-patternfly) This package is up to date.
+[ERROR] (widgets) This package does not have downloadable releases.
+[INFO] (widgetslabextension) This package is up to date.
+[INFO] (widgetsnbextension) This package is up to date.
+[ERROR] (widgy-blog) This package does not have downloadable releases.
+[INFO] (wieldymarkup) This package is up to date.
+[INFO] (wife) This package is up to date.
+[INFO] (wifi) This package is up to date.
+[INFO] (wifi-conf) Data has been updated for this package.
+[INFO] (wifi-qrcode-generator) This package is up to date.
+[INFO] (wifi-roboticia) This package is up to date.
+[INFO] (wifi-tools) This package is up to date.
+[INFO] (wificamera) This package is up to date.
+[INFO] (wifiinfo) This package is up to date.
+[INFO] (wifileds) This package is up to date.
+[INFO] (wifindme) This package is up to date.
+[INFO] (wifinetctl) This package is up to date.
+[INFO] (wifipassword) This package is up to date.
+[INFO] (wifiphisher) This package is up to date.
+[INFO] (wifitx) This package is up to date.
+[INFO] (wifizberry) This package is up to date.
+[INFO] (wiggelen) This package is up to date.
+[INFO] (wiggle) This package is up to date.
+[INFO] (wight) This package is up to date.
+[INFO] (wight-cli) This package is up to date.
+[INFO] (wigiki) This package is up to date.
+[INFO] (wigle) This package is up to date.
+[INFO] (wii-py) This package is up to date.
+[ERROR] (wiinux) This package does not have downloadable releases.
+[INFO] (wiiodfs) This package is up to date.
+[ERROR] (wiiuse) This package does not have downloadable releases.
+[INFO] (wikclient) This package is up to date.
+[INFO] (wiki) This package is up to date.
+[INFO] (wiki-440-version-helper) This package is up to date.
+[INFO] (wiki-base) This package is up to date.
+[INFO] (wiki-bot) This package is up to date.
+[INFO] (wiki-cb) This package is up to date.
+[INFO] (wiki-dump-reader) This package is up to date.
+[INFO] (wiki-emailer) This package is up to date.
+[INFO] (wiki-markdown) This package is up to date.
+[INFO] (wiki-ru-wordnet) This package is up to date.
+[INFO] (wiki-template) This package is up to date.
+[INFO] (wiki-terminal) This package is up to date.
+[INFO] (wiki-xmlrpc-extensions) This package is up to date.
+[INFO] (wiki2) This package is up to date.
+[INFO] (wiki2csv) This package is up to date.
+[INFO] (wiki2sphinx) This package is up to date.
+[ERROR] (wiki2vec) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.5/urllib/request.py", line 163, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.5/urllib/request.py", line 510, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 590, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+
+[INFO] (wiki440-sqlite-database) This package is up to date.
+[INFO] (wikia) This package is up to date.
+[INFO] (wikia-common-kibana) This package is up to date.
+[INFO] (wikia-dstk) This package is up to date.
+[INFO] (wikiapi) This package is up to date.
+[ERROR] (wikibasedatamodel) This package does not have downloadable releases.
+[INFO] (wikiciteparser) This package is up to date.
+[INFO] (wikiclass) This package is up to date.
+[INFO] (wikicreator) This package is up to date.
+[INFO] (wikicurses) This package is up to date.
+[INFO] (wikid) This package is up to date.
+[INFO] (wikidata) This package is up to date.
+[INFO] (wikidata-suggest) This package is up to date.
+[INFO] (wikidataintegrator) This package is up to date.
+[INFO] (wikidict) This package is up to date.
+[INFO] (wikidoc) This package is up to date.
+[ERROR] (wikidreamspip) This package does not have downloadable releases.
+[INFO] (wikidump) This package is up to date.
+[ERROR] (wikiedit) This package does not have downloadable releases.
+[INFO] (wikieds) This package is up to date.
+[INFO] (wikiexpand) This package is up to date.
+[INFO] (wikify) This package is up to date.
+[ERROR] (wikigateway) This package does not have downloadable releases.
+[INFO] (wikigloss) This package is up to date.
+[ERROR] (wikihaus) This package does not have downloadable releases.
+[INFO] (wikiid2vec) This package is up to date.
+[INFO] (wikijson) This package is up to date.
+[INFO] (wikilabels) This package is up to date.
+[INFO] (wikilinks) This package is up to date.
+[INFO] (wikimapia-api) This package is up to date.
+[INFO] (wikimarkup) This package is up to date.
+[INFO] (wikimediaci-utils) This package is up to date.
+[INFO] (wikimon) This package is up to date.
+[INFO] (wikimon-bot) This package is up to date.
+[INFO] (wikimonbot) This package is up to date.
+[INFO] (wikiparser) This package is up to date.
+[INFO] (wikipedia) This package is up to date.
+[INFO] (wikipedia-api) This package is up to date.
+[INFO] (wikipedia-cli) This package is up to date.
+[INFO] (wikipedia-ner) This package is up to date.
+[INFO] (wikipedia-parser) This package is up to date.
+[ERROR] (wikipedia-parser-api) Could not extract data from this package. See below for details.
+"https://github.com/feliperuhland/wikipedia-parser/tarball/master" file could not be downloaded. See below for details.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 107, in download_tar
+    f.write(urlopen(url=urlesc(pkgurl), timeout=10).read())
+  File "/usr/lib/python3.5/urllib/request.py", line 163, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.5/urllib/request.py", line 510, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 590, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+
+[INFO] (wikipedia-revisions) This package is up to date.
+[INFO] (wikipedia-template-parser) This package is up to date.
+[INFO] (wikipedia2vec) This package is up to date.
+[INFO] (wikipediabase) This package is up to date.
+[INFO] (wikiphilosophy) This package is up to date.
+[ERROR] (wikipipexample) This package does not have downloadable releases.
+[INFO] (wikipy) This package is up to date.
+[INFO] (wikipydia) This package is up to date.
+[INFO] (wikiquote) This package is up to date.
+[INFO] (wikiquotes) This package is up to date.
+[INFO] (wikir) This package is up to date.
+[INFO] (wikitables) This package is up to date.
+[INFO] (wikitables-for-distll) This package is up to date.
+[INFO] (wikitcms) This package is up to date.
+[INFO] (wikitextparser) This package is up to date.
+[INFO] (wikitoexcel) This package is up to date.
+[INFO] (wikitools) This package is up to date.
+[INFO] (wikitopdf440) This package is up to date.
+[INFO] (wikiup) This package is up to date.
+[INFO] (wikiutils) This package is up to date.
+[INFO] (wikiweb) This package is up to date.
+[INFO] (wikiwiki5-favorites) This package is up to date.
+[INFO] (wikiwords) This package is up to date.
+[INFO] (wikix) This package is up to date.
+[INFO] (wikked) This package is up to date.
+[ERROR] (wikklytext) Could not extract data from this package. See below for details.
+"http://wikklytext.googlecode.com/files/WikklyText-1.6.0.tar.gz" file could not be downloaded. See below for details.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 107, in download_tar
+    f.write(urlopen(url=urlesc(pkgurl), timeout=10).read())
+  File "/usr/lib/python3.5/urllib/request.py", line 163, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.5/urllib/request.py", line 510, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 590, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+
+[INFO] (wiktionaryparser) This package is up to date.
+[INFO] (wild-sphinx-theme) This package is up to date.
+[ERROR] (wildcard) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.5/urllib/request.py", line 163, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.5/urllib/request.py", line 510, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 590, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+
+[INFO] (wildcard-cleanprint) This package is up to date.
+[INFO] (wildcard-cloudflare) This package is up to date.
+[INFO] (wildcard-fixmissing) This package is up to date.
+[INFO] (wildcard-fixpersistentutilities) This package is up to date.
+[INFO] (wildcard-foldercontents) This package is up to date.
+[INFO] (wildcard-level3caching) This package is up to date.
+[INFO] (wildcard-lockdown) This package is up to date.
+[INFO] (wildcard-media) This package is up to date.
+[INFO] (wildcard-notrackingsocial) This package is up to date.
+[INFO] (wildcard-pdfpal) This package is up to date.
+[INFO] (wildcard-pfg-stripe) This package is up to date.
+[INFO] (wildcard-readonly) This package is up to date.
+[INFO] (wildcard-recipe-insertinto) This package is up to date.
+[INFO] (wildcard-templatedviews) This package is up to date.
+[INFO] (wildcard-tinymceplugins-youtube) This package is up to date.
+[INFO] (wildcard-uberoverride) This package is up to date.
+[INFO] (wildcat) This package is up to date.
+[INFO] (wilddog-python) This package is up to date.
+[INFO] (wildfire) This package is up to date.
+[INFO] (wildfly-py) This package is up to date.
+[INFO] (wildhops) This package is up to date.
+[INFO] (wildpath) This package is up to date.
+[INFO] (wildqat) This package is up to date.
+[INFO] (wile) This package is up to date.
+[INFO] (wilfred-say) This package is up to date.
+[INFO] (will) This package is up to date.
+[ERROR] (will-i-am) This package does not have downloadable releases.
+[INFO] (will-markdownify) This package is up to date.
+[INFO] (will-natural) This package is up to date.
+[INFO] (willdo) This package is up to date.
+[INFO] (wille) This package is up to date.
+[ERROR] (william) This package does not have downloadable releases.
+[INFO] (williaml-test-nester) This package is up to date.
+[INFO] (willie) This package is up to date.
+[INFO] (willow) This package is up to date.
+[INFO] (willpy) This package is up to date.
+[INFO] (wilos-cli) This package is up to date.
+[INFO] (wilson) This package is up to date.
+[INFO] (wim) This package is up to date.
+[INFO] (wimlib) This package is up to date.
+[INFO] (wimms) This package is up to date.
+[ERROR] (wimpiggy) Could not extract data from this package. See below for details.
+This package download URL does not point to a valid file: "http://partiwm.org/static/downloads/"
+[INFO] (wimpy) This package is up to date.
+[ERROR] (win) Could not extract data from this package. See below for details.
+"https://github.com/Gallopsled/pwntools/tarball/master" file could not be downloaded. See below for details.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 107, in download_tar
+    f.write(urlopen(url=urlesc(pkgurl), timeout=10).read())
+  File "/usr/lib/python3.5/urllib/request.py", line 163, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.5/urllib/request.py", line 504, in error
+    result = self._call_chain(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 696, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.5/urllib/request.py", line 510, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 590, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+
+[INFO] (win-app-packager) This package is up to date.
+[INFO] (win-cli-launchers) This package is up to date.
+[INFO] (win-create-new) This package is up to date.
+[INFO] (win-devices) This package is up to date.
+[INFO] (win-inet-pton) This package is up to date.
+[INFO] (win-nic) This package is up to date.
+[INFO] (win-unc) This package is up to date.
+[INFO] (win-unicode-console) This package is up to date.
+[INFO] (win10batteryoptimizer) This package is up to date.
+[INFO] (win10toast) This package is up to date.
+[INFO] (win32compat) This package is up to date.
+[INFO] (win32core) This package is up to date.
+[INFO] (win32ext) This package is up to date.
+[INFO] (win32gui) This package is up to date.
+[INFO] (win32wifi) This package is up to date.
+[INFO] (win7ools) This package is up to date.
+[INFO] (winappdbg) This package is up to date.
+[INFO] (winbrew) This package is up to date.
+[INFO] (wincast) This package is up to date.
+[INFO] (wincertstore) This package is up to date.
+[INFO] (winchester) This package is up to date.
+[INFO] (winclip) This package is up to date.
+[INFO] (wincrypto) This package is up to date.
+[INFO] (wincurses) This package is up to date.
+[ERROR] (wind) This package does not have downloadable releases.
+[INFO] (wind-chill-calculator) This package is up to date.
+[INFO] (windadapter) This package is up to date.
+[INFO] (windeft) This package is up to date.
+[INFO] (windflow) This package is up to date.
+[INFO] (windhelper) This package is up to date.
+[ERROR] (windio) This package does not have downloadable releases.
+[INFO] (windirs) This package is up to date.
+[INFO] (windmailer) This package is up to date.
+[INFO] (windmill) This package is up to date.
+[ERROR] (windmills) This package does not have downloadable releases.
+[INFO] (windnd) This package is up to date.
+[INFO] (window) This package is up to date.
+[INFO] (window-slider) This package is up to date.
+[INFO] (window-tracker-x11) This package is up to date.
+[ERROR] (windowgram) Could not extract data from this package. See below for details.
+This package download URL does not point to a valid file: "https://pypi.python.org/pypi/windowgram"
+[INFO] (windownow) This package is up to date.
+[ERROR] (windows) This package does not have downloadable releases.
+[INFO] (windows-curses) This package is up to date.
+[INFO] (windows-gui-automation) This package is up to date.
+[INFO] (windows-rbs-parser) This package is up to date.
+[ERROR] (windowsazure) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.5/urllib/request.py", line 163, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.5/urllib/request.py", line 510, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 590, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+
+[INFO] (windowsha) This package is up to date.
+[INFO] (windowsprefetch) This package is up to date.
+[INFO] (windpowerlib) This package is up to date.
+[INFO] (windrose) This package is up to date.
+[INFO] (windspharm) This package is up to date.
+[INFO] (windtalker) This package is up to date.
+[INFO] (windutil) This package is up to date.
+[INFO] (windutils) This package is up to date.
+[INFO] (windy) This package is up to date.
+[INFO] (windylib) This package is up to date.
+[INFO] (windypie) This package is up to date.
+[ERROR] (wine) This package does not have downloadable releases.
+[INFO] (wine-deamonizer) This package is up to date.
+[INFO] (wine-wrap) This package is up to date.
+[INFO] (winevt) This package is up to date.
+[INFO] (winevtrc) This package is up to date.
+[INFO] (wingcommander) This package is up to date.
+[INFO] (wingdbg) This package is up to date.
+[INFO] (winger) This package is up to date.
+[INFO] (wingmonkey) This package is up to date.
+[ERROR] (wingspan) This package does not have downloadable releases.
+[INFO] (winicode) This package is up to date.
+[INFO] (wininetpton) This package is up to date.
+[INFO] (winiobinary) This package is up to date.
+[INFO] (winjob) This package is up to date.
+[INFO] (winkar-utils) This package is up to date.
+[INFO] (winkerberos) This package is up to date.
+[INFO] (winlogreader) This package is up to date.
+[INFO] (winmltools) Data has been updated for this package.
+[INFO] (winney) This package is up to date.
+[ERROR] (winniepooh) This package does not have downloadable releases.
+[INFO] (winnow) This package is up to date.
+[INFO] (winnow-filters) This package is up to date.
+[ERROR] (winnowing) This package does not have downloadable releases.
+[INFO] (wino) This package is up to date.
+[INFO] (winontop) This package is up to date.
+[INFO] (winpaths) This package is up to date.
+[INFO] (winpcapy) This package is up to date.
+[ERROR] (winpdb) Could not extract data from this package. See below for details.
+"http://winpdb.googlecode.com/files/winpdb-1.4.8.tar.gz" file could not be downloaded. See below for details.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 107, in download_tar
+    f.write(urlopen(url=urlesc(pkgurl), timeout=10).read())
+  File "/usr/lib/python3.5/urllib/request.py", line 163, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.5/urllib/request.py", line 510, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 590, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+
+[INFO] (winpdb-reborn) This package is up to date.
+[INFO] (winpet) This package is up to date.
+[INFO] (winpexpect) This package is up to date.
+[ERROR] (winprefetch) This package does not have downloadable releases.
+[INFO] (winproxy) This package is up to date.
+[INFO] (winpython) This package is up to date.
+[INFO] (winrandom) This package is up to date.
+[INFO] (winrandom-ctypes) This package is up to date.
+[INFO] (winreg-helpers) This package is up to date.
+[INFO] (winreg-unicode) This package is up to date.
+[INFO] (winregal) This package is up to date.
+[INFO] (winregistry) This package is up to date.
+[INFO] (winreglib) This package is up to date.
+[INFO] (winregrc) This package is up to date.
+[INFO] (winremote) This package is up to date.
+[INFO] (winrmlib) This package is up to date.
+[INFO] (winrmmanager) This package is up to date.
+[INFO] (winshell) This package is up to date.
+[INFO] (winsible) This package is up to date.
+[INFO] (winspeech) This package is up to date.
+[INFO] (winspider) This package is up to date.
+[INFO] (winsrv) This package is up to date.
+[INFO] (winstats) This package is up to date.
+[INFO] (winston) This package is up to date.
+[INFO] (winsys-3-x) This package is up to date.
+[INFO] (winsyspath) This package is up to date.
+[INFO] (wint) This package is up to date.
+[INFO] (winterstone) This package is up to date.
+[INFO] (wintunnel) This package is up to date.
+[INFO] (wintx) This package is up to date.
+[INFO] (wintxdriver-mysql) This package is up to date.
+[INFO] (wintxdriver-mysqlfabric) This package is up to date.
+[INFO] (wintximporter-grib) This package is up to date.
+[INFO] (wintxrest) This package is up to date.
+[INFO] (winunicodeconsole) This package is up to date.
+[INFO] (winutils) This package is up to date.
+[INFO] (winvers) This package is up to date.
+[ERROR] (winwallpaper) Could not extract data from this package. See below for details.
+"http://www.techb.zxq.net/Windesktop.zip" file could not be downloaded. See below for details.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 107, in download_tar
+    f.write(urlopen(url=urlesc(pkgurl), timeout=10).read())
+  File "/usr/lib/python3.5/urllib/request.py", line 163, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.5/urllib/request.py", line 510, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 590, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 403: Forbidden
+
+[INFO] (winwifi) This package is up to date.
+[ERROR] (wio) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.5/urllib/request.py", line 163, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.5/urllib/request.py", line 510, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 590, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+
+[INFO] (wio-cli) This package is up to date.
+[ERROR] (wip) This package does not have downloadable releases.
+[INFO] (wip-hello-world) This package is up to date.
+[INFO] (wipac-fc) This package is up to date.
+[INFO] (wiper) This package is up to date.
+[ERROR] (wipy) This package does not have downloadable releases.
+[INFO] (wipy-tools) This package is up to date.
+[ERROR] (wire) This package does not have downloadable releases.
+[ERROR] (wire-bbs) This package does not have downloadable releases.
+[INFO] (wire-encoder) This package is up to date.
+[INFO] (wire-exporter) This package is up to date.
+[INFO] (wire-mafia) This package is up to date.
+[INFO] (wirebin) This package is up to date.
+[INFO] (wirecheckingtool) This package is up to date.
+[INFO] (wirecloud) This package is up to date.
+[INFO] (wirecloud-markdown-github) This package is up to date.
+[INFO] (wirecloud-pubsub) This package is up to date.
+[INFO] (wirecurly) This package is up to date.
+[INFO] (wired) This package is up to date.
+[INFO] (wiredolphin) This package is up to date.
+[INFO] (wiredtiger) This package is up to date.
+[INFO] (wiredtiger-ffi) This package is up to date.
+[INFO] (wireframe2html) This package is up to date.
+[INFO] (wireguard-p2p) This package is up to date.
+[INFO] (wireless) This package is up to date.
+[INFO] (wireless-control) This package is up to date.
+[INFO] (wireless-radar) This package is up to date.
+[INFO] (wirelesstag) This package is up to date.
+[INFO] (wirelesstagpy) This package is up to date.
+[INFO] (wiremock) This package is up to date.
+[INFO] (wirereport) This package is up to date.
+[INFO] (wirerope) This package is up to date.
+[INFO] (wires) This package is up to date.
+[INFO] (wirexfers) This package is up to date.
+[INFO] (wiring) This package is up to date.
+[INFO] (wiring-x86) This package is up to date.
+[INFO] (wiringpi) This package is up to date.
+[INFO] (wiringpi2) This package is up to date.
+[INFO] (wirte-nester) This package is up to date.
+[INFO] (wirte3) This package is up to date.
+[INFO] (wisardpkg) This package is up to date.
+[INFO] (wisbak) This package is up to date.
+[INFO] (wisdom) This package is up to date.
+[INFO] (wisdomhord) This package is up to date.
+[INFO] (wisdomnuggets) This package is up to date.
+[INFO] (wise) This package is up to date.
+[INFO] (wise-dl) This package is up to date.
+[ERROR] (wiseguy) This package does not have downloadable releases.
+[INFO] (wiselib) This package is up to date.
+[INFO] (wiselib2) This package is up to date.
+[INFO] (wisely) This package is up to date.
+[INFO] (wish) This package is up to date.
+[INFO] (wish-api) This package is up to date.
+[INFO] (wish-facebook) This package is up to date.
+[INFO] (wishbone) This package is up to date.
+[INFO] (wishbone-decode-msgpack) This package is up to date.
+[INFO] (wishbone-decode-perfdata) This package is up to date.
+[INFO] (wishbone-encode-flatten) This package is up to date.
+[INFO] (wishbone-encode-graphite) This package is up to date.
+[INFO] (wishbone-encode-influxdb) This package is up to date.
+[INFO] (wishbone-encode-msgpack) This package is up to date.
+[INFO] (wishbone-flow-jq) This package is up to date.
+[INFO] (wishbone-flow-jsonvalidate) This package is up to date.
+[INFO] (wishbone-flow-match) This package is up to date.
+[INFO] (wishbone-function-template) This package is up to date.
+[INFO] (wishbone-function-twitterbookmark) This package is up to date.
+[INFO] (wishbone-input-amqp) This package is up to date.
+[INFO] (wishbone-input-disk) This package is up to date.
+[INFO] (wishbone-input-gearman) This package is up to date.
+[INFO] (wishbone-input-hammer) This package is up to date.
+[INFO] (wishbone-input-httpclient) This package is up to date.
+[INFO] (wishbone-input-httpserver) This package is up to date.
+[INFO] (wishbone-input-irc) This package is up to date.
+[INFO] (wishbone-input-livestatus) This package is up to date.
+[INFO] (wishbone-input-namedpipe) This package is up to date.
+[INFO] (wishbone-input-tcp) This package is up to date.
+[INFO] (wishbone-input-twitter) This package is up to date.
+[INFO] (wishbone-input-udp) This package is up to date.
+[INFO] (wishbone-input-zmqpull) This package is up to date.
+[INFO] (wishbone-input-zmqtopic) This package is up to date.
+[INFO] (wishbone-output-amqp) This package is up to date.
+[INFO] (wishbone-output-disk) This package is up to date.
+[INFO] (wishbone-output-elasticsearch) This package is up to date.
+[INFO] (wishbone-output-email) This package is up to date.
+[INFO] (wishbone-output-file) This package is up to date.
+[INFO] (wishbone-output-http) This package is up to date.
+[INFO] (wishbone-output-sse) This package is up to date.
+[INFO] (wishbone-output-tcp) This package is up to date.
+[INFO] (wishbone-output-udp) This package is up to date.
+[INFO] (wishbone-output-uds) This package is up to date.
+[INFO] (wishbone-output-zmqpush) This package is up to date.
+[INFO] (wishbone-output-zmqtopic) This package is up to date.
+[ERROR] (wishes) This package does not have downloadable releases.
+[INFO] (wishlist) This package is up to date.
+[INFO] (wispr) This package is up to date.
+[INFO] (wispshapes) This package is up to date.
+[ERROR] (wispy) This package does not have downloadable releases.
+[INFO] (wissen) This package is up to date.
+[INFO] (wisync) This package is up to date.
+[INFO] (wit) This package is up to date.
+[INFO] (witch) This package is up to date.
+[INFO] (witchcraft) This package is up to date.
+[INFO] (with) This package is up to date.
+[INFO] (with-aws-config) This package is up to date.
+[INFO] (with-aws-mfa) This package is up to date.
+[INFO] (with-each-user) This package is up to date.
+[INFO] (with-fixture) This package is up to date.
+[INFO] (with-venv) This package is up to date.
+[INFO] (withenv) This package is up to date.
+[INFO] (wither) This package is up to date.
+[INFO] (withhacks) This package is up to date.
+[INFO] (withings) This package is up to date.
+[INFO] (withings-cli) This package is up to date.
+[INFO] (withlog) This package is up to date.
+[INFO] (withref) This package is up to date.
+[INFO] (withrestart) This package is up to date.
+[INFO] (withstopwatch) This package is up to date.
+[INFO] (witica) This package is up to date.
+[INFO] (witkets) This package is up to date.
+[INFO] (witness) This package is up to date.
+[INFO] (witness-thanks) This package is up to date.
+[INFO] (witsub) This package is up to date.
+[ERROR] (witty) This package does not have downloadable releases.
+[INFO] (witty-cli) This package is up to date.
+[INFO] (wiver) This package is up to date.
+[INFO] (wiwi) This package is up to date.
+[INFO] (wixbuild) This package is up to date.
+[INFO] (wixinstance) This package is up to date.
+[INFO] (wixot-auth) This package is up to date.
+[INFO] (wiz) This package is up to date.
+[INFO] (wizard) This package is up to date.
+[INFO] (wizard-interface) This package is up to date.
+[INFO] (wizards) This package is up to date.
+[INFO] (wizdict) This package is up to date.
+[ERROR] (wizeline-flow) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.5/urllib/request.py", line 163, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.5/urllib/request.py", line 504, in error
+    result = self._call_chain(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 696, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.5/urllib/request.py", line 510, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 590, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+
+[INFO] (wizi) This package is up to date.
+[INFO] (wizpym) This package is up to date.
+[INFO] (wjnester) This package is up to date.
+[INFO] (wjnewnester) This package is up to date.
+[INFO] (wjordpress) This package is up to date.
+[INFO] (wjtestprint) This package is up to date.
+[INFO] (wjtst) This package is up to date.
+[INFO] (wkb-raster) This package is up to date.
+[INFO] (wkbheader) This package is up to date.
+[INFO] (wkcuber) This package is up to date.
+[INFO] (wkgnester) This package is up to date.
+[INFO] (wkhtmltopdf) This package is up to date.
+[INFO] (wkhtmltopdf-pack) This package is up to date.
+[INFO] (wkhtmltopdf-pack-ng) This package is up to date.
+[INFO] (wkhtmltopdf-wrapper) This package is up to date.
+[INFO] (wkr) This package is up to date.
+[INFO] (wksort) This package is up to date.
+[INFO] (wkw) This package is up to date.
+[ERROR] (wkz03) This package does not have downloadable releases.
+[ERROR] (wkz032) This package does not have downloadable releases.
+[INFO] (wl) This package is up to date.
+[INFO] (wl-api) This package is up to date.
+[INFO] (wl-parsers) This package is up to date.
+[INFO] (wlab) This package is up to date.
+[INFO] (wladmin) This package is up to date.
+[INFO] (wlauto) This package is up to date.
+[INFO] (wlc) This package is up to date.
+[INFO] (wlcg) This package is up to date.
+[INFO] (wldhx-yadisk-direct) This package is up to date.
+[INFO] (wldyd23) This package is up to date.
+[INFO] (wlfilebrowser) This package is up to date.
+[INFO] (wlgen) This package is up to date.
+[ERROR] (wlister) This package does not have downloadable releases.
+[INFO] (wllvm) This package is up to date.
+[INFO] (wlnm) This package is up to date.
+[INFO] (wlogger) This package is up to date.
+[INFO] (wlreporter) This package is up to date.
+[INFO] (wls-rest-python) This package is up to date.
+[INFO] (wlsqm) This package is up to date.
+[INFO] (wlt) This package is up to date.
+[INFO] (wltp) This package is up to date.
+[INFO] (wltrace) This package is up to date.
+[ERROR] (wlwx) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.5/urllib/request.py", line 163, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.5/urllib/request.py", line 510, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 590, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+
+[INFO] (wlwx-python-sdk) This package is up to date.
+[INFO] (wm-chimpimport) This package is up to date.
+[INFO] (wm-dist) This package is up to date.
+[INFO] (wm-gloeggele) This package is up to date.
+[INFO] (wm-help) This package is up to date.
+[ERROR] (wm-nester) This package does not have downloadable releases.
+[INFO] (wm-sampledata) This package is up to date.
+[INFO] (wm-showhidecolumns) This package is up to date.
+[INFO] (wmachine) This package is up to date.
+[ERROR] (wmainfo-py) Could not extract data from this package. See below for details.
+This package download URL does not point to a valid file: "http://badcomputer.org/unix/code/wmainfo/"
+[ERROR] (wmap) This package does not have downloadable releases.
+[INFO] (wmcore) This package is up to date.
+[INFO] (wmctrl) This package is up to date.
+[INFO] (wmd) This package is up to date.
+[INFO] (wmdlib) This package is up to date.
+[INFO] (wmf) This package is up to date.
+[INFO] (wmf-umapi-client) This package is up to date.
+[INFO] (wmf-user-metrics) This package is up to date.
+[INFO] (wmflabs) This package is up to date.
+[ERROR] (wmgmail) This package does not have downloadable releases.
+[INFO] (wmi) This package is up to date.
+[INFO] (wmi-client-wrapper) This package is up to date.
+[INFO] (wmi-client-wrapper-py3) This package is up to date.
+[INFO] (wmi-query) This package is up to date.
+[INFO] (wmic) This package is up to date.
+[INFO] (wmicq) This package is up to date.
+[INFO] (wmo) This package is up to date.
+[INFO] (wmon) This package is up to date.
+[INFO] (wmowonen-theme) This package is up to date.
+[ERROR] (wmpclean) This package does not have downloadable releases.
+[INFO] (wms-downloader) This package is up to date.
+[INFO] (wmsigner) This package is up to date.
+[INFO] (wmynester) This package is up to date.
+[INFO] (wncc) This package is up to date.
+[INFO] (wnget) This package is up to date.
+[INFO] (wnsresolver) This package is up to date.
+[INFO] (wntr) This package is up to date.
+[INFO] (wnutils) This package is up to date.
+[INFO] (wnyc-backup) This package is up to date.
+[INFO] (wnyc-dns) This package is up to date.
+[INFO] (wnyc-recommender) This package is up to date.
+[INFO] (wnyc-sorl-thumbnail) This package is up to date.
+[INFO] (wobble) This package is up to date.
+[INFO] (wodpy) This package is up to date.
+[INFO] (woe) This package is up to date.
+[INFO] (woeid) This package is up to date.
+[INFO] (woff2otf) This package is up to date.
+[INFO] (wofpy) This package is up to date.
+[INFO] (wofry) This package is up to date.
+[INFO] (wofryshadow) This package is up to date.
+[INFO] (wofrysrw) This package is up to date.
+[INFO] (wofrywise2) This package is up to date.
+[INFO] (woger) This package is up to date.
+[INFO] (wojak) This package is up to date.
+[INFO] (wok) This package is up to date.
+[INFO] (wok-hooks) This package is up to date.
+[ERROR] (wokamoka) This package does not have downloadable releases.
+[INFO] (wokkel) This package is up to date.
+[INFO] (wol) This package is up to date.
+[INFO] (wola-sdk) This package is up to date.
+[ERROR] (wolf) This package does not have downloadable releases.
+[INFO] (wolf-nester) This package is up to date.
+[INFO] (wolfansweroid) This package is up to date.
+[INFO] (wolfcrypt) This package is up to date.
+[INFO] (wolfe) This package is up to date.
+[INFO] (wolfeutils) This package is up to date.
+[INFO] (wolfgang) This package is up to date.
+[ERROR] (wolfinsta) This package does not have downloadable releases.
+[ERROR] (wolfpack) This package does not have downloadable releases.
+[INFO] (wolfram-alpha-api) This package is up to date.
+[INFO] (wolframalpha) This package is up to date.
+[INFO] (wolframalpha-cli) This package is up to date.
+[ERROR] (wolfson) This package does not have downloadable releases.
+[INFO] (wolfssl) This package is up to date.
+[INFO] (wolfssl-with-ed25519) This package is up to date.
+[INFO] (wolk-connect) This package is up to date.
+[INFO] (wolkenbrot) This package is up to date.
+[INFO] (wolo) This package is up to date.
+[INFO] (wolpert) This package is up to date.
+[INFO] (wolphin) This package is up to date.
+[INFO] (wolverine) This package is up to date.
+[INFO] (wom) This package is up to date.
+[INFO] (womack) This package is up to date.
+[INFO] (wombat) This package is up to date.
+[INFO] (wombat-foo) This package is up to date.
+[ERROR] (womp) This package does not have downloadable releases.
+[INFO] (woms) This package is up to date.
+[INFO] (wonambi) Data has been updated for this package.
+[INFO] (wonderful-bing) This package is up to date.
+[INFO] (wonderpy) This package is up to date.
+[INFO] (wonik1) This package is up to date.
+[INFO] (wonikjang) This package is up to date.
+[INFO] (woning-bricks) This package is up to date.
+[INFO] (woning-wattle) This package is up to date.
+[INFO] (wonsub) This package is up to date.
+[ERROR] (wonton) This package does not have downloadable releases.
+[INFO] (woocommerce) This package is up to date.
+[INFO] (woocommerce-subscriptions-check) This package is up to date.
+[INFO] (wood) This package is up to date.
+[INFO] (wood-splinter) This package is up to date.
+[INFO] (woodcut) This package is up to date.
+[INFO] (woodenwaiter) This package is up to date.
+[ERROR] (woodpecker) This package does not have downloadable releases.
+[INFO] (woodstock) This package is up to date.
+[INFO] (woodstove) This package is up to date.
+[ERROR] (woody) This package does not have downloadable releases.
+[INFO] (wooey) This package is up to date.
+[INFO] (woof) This package is up to date.
+[ERROR] (wool) This package does not have downloadable releases.
+[ERROR] (wooly) This package does not have downloadable releases.
+[INFO] (wooper) This package is up to date.
+[INFO] (woopra) This package is up to date.
+[INFO] (woopra-py) This package is up to date.
+[INFO] (woopra-tracker) This package is up to date.
+[INFO] (wooqi) This package is up to date.
+[INFO] (woost) This package is up to date.
+[INFO] (woothee) This package is up to date.
+[INFO] (wootoff) This package is up to date.
+[INFO] (wootz) This package is up to date.
+[INFO] (wopmars) This package is up to date.
+[INFO] (worch) This package is up to date.
+[INFO] (worch-g4lbne) This package is up to date.
+[INFO] (worch-ups) This package is up to date.
+[INFO] (word-count) This package is up to date.
+[INFO] (word-expanding) This package is up to date.
+[INFO] (word-game) This package is up to date.
+[INFO] (word-ladder) This package is up to date.
+[INFO] (word-pattern) This package is up to date.
+[INFO] (word-search) This package is up to date.
+[INFO] (word-tokenizer) This package is up to date.
+[INFO] (word-treasure) This package is up to date.
+[INFO] (word-tree) This package is up to date.
+[INFO] (word-vectors) This package is up to date.
+[INFO] (word2color) This package is up to date.
+[INFO] (word2html) This package is up to date.
+[INFO] (word2keypress) This package is up to date.
+[INFO] (word2number) This package is up to date.
+[INFO] (word2vec) This package is up to date.
+[INFO] (word2vec-wikification-py) This package is up to date.
+[INFO] (word2veckeras) This package is up to date.
+[INFO] (word2wiz) This package is up to date.
+[INFO] (wordabulary) This package is up to date.
+[INFO] (wordai) This package is up to date.
+[INFO] (wordasso) This package is up to date.
+[ERROR] (wordaxe) Could not extract data from this package. See below for details.
+".php" extension not supported.
+[INFO] (wordbag) This package is up to date.
+[INFO] (wordbatch) This package is up to date.
+[INFO] (wordbook) This package is up to date.
+[INFO] (wordbuilder) This package is up to date.
+[ERROR] (wordbyword) This package does not have downloadable releases.
+[INFO] (wordcloud) This package is up to date.
+[INFO] (wordcount) This package is up to date.
+[INFO] (wordcount-file) This package is up to date.
+[INFO] (wordcutpy) This package is up to date.
+[INFO] (wordembeddingloader) This package is up to date.
+[INFO] (wordfencer) This package is up to date.
+[INFO] (wordfilter) This package is up to date.
+[INFO] (wordfish) This package is up to date.
+[INFO] (wordfreq) This package is up to date.
+[INFO] (wordgolf) This package is up to date.
+[INFO] (wordgraph) This package is up to date.
+[INFO] (wordgrapher) This package is up to date.
+[INFO] (wordhop) This package is up to date.
+[INFO] (wordhord) This package is up to date.
+[ERROR] (wordinfo) This package does not have downloadable releases.
+[INFO] (wordinserter) This package is up to date.
+[INFO] (wordiscovery) This package is up to date.
+[INFO] (wordish) This package is up to date.
+[INFO] (wordkit) This package is up to date.
+[INFO] (wordlevelrnn) This package is up to date.
+[ERROR] (wordlevelstatistics) This package does not have downloadable releases.
+[INFO] (wordlist) This package is up to date.
+[INFO] (wordlist-passphrase-generator) This package is up to date.
+[INFO] (wordlisthash) This package is up to date.
+[INFO] (wordmesh) This package is up to date.
+[INFO] (wordnet) This package is up to date.
+[INFO] (wordnet-bn) This package is up to date.
+[INFO] (wordnik) This package is up to date.
+[INFO] (wordnik-py3) This package is up to date.
+[INFO] (wordninja) This package is up to date.
+[INFO] (wordpad) This package is up to date.
+[INFO] (wordplay) This package is up to date.
+[ERROR] (wordpress) This package does not have downloadable releases.
+[INFO] (wordpress-api) This package is up to date.
+[INFO] (wordpress-backup-data) This package is up to date.
+[INFO] (wordpress-cd) This package is up to date.
+[INFO] (wordpress-cd-rancher) Data has been updated for this package.
+[INFO] (wordpress-cd-s3) This package is up to date.
+[INFO] (wordpress-json) This package is up to date.
+[INFO] (wordpress-package-manager) This package is up to date.
+[INFO] (wordpress-process) This package is up to date.
+[ERROR] (wordpress-py-client) This package does not have downloadable releases.
+[ERROR] (wordpress-python-library) Could not extract data from this package. See below for details.
+"http://www.blackbirdblog.it/download/software/wordpresslib.zip" file could not be downloaded. See below for details.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 107, in download_tar
+    f.write(urlopen(url=urlesc(pkgurl), timeout=10).read())
+  File "/usr/lib/python3.5/urllib/request.py", line 163, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.5/urllib/request.py", line 510, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 590, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 403: Forbidden
+
+[INFO] (wordpress-reader) This package is up to date.
+[INFO] (wordpress-to-puput) This package is up to date.
+[INFO] (wordpress2markdown) This package is up to date.
+[INFO] (wordpress2zinnia) This package is up to date.
+[INFO] (wordpresscheckversion) This package is up to date.
+[INFO] (wordpresspy) This package is up to date.
+[INFO] (words) This package is up to date.
+[ERROR] (words-cli) This package does not have downloadable releases.
+[INFO] (words-counter) This package is up to date.
+[INFO] (words2num) This package is up to date.
+[INFO] (wordscrape) This package is up to date.
+[INFO] (wordseek) This package is up to date.
+[INFO] (wordsegment) This package is up to date.
+[INFO] (wordsegmentation) This package is up to date.
+[ERROR] (wordshuriken) This package does not have downloadable releases.
+[INFO] (wordsimilarity) This package is up to date.
+[INFO] (wordsmith) This package is up to date.
+[ERROR] (wordsmith-python-sdk) This package does not have downloadable releases.
+[INFO] (wordsmiths) This package is up to date.
+[INFO] (wordstart) This package is up to date.
+[INFO] (wordster) This package is up to date.
+[INFO] (wordstop) This package is up to date.
+[INFO] (wordstream) This package is up to date.
+[ERROR] (wordtex) This package does not have downloadable releases.
+[INFO] (wordtime) This package is up to date.
+[INFO] (wordtools) This package is up to date.
+[INFO] (wordutils) This package is up to date.
+[INFO] (wordvecspace) This package is up to date.
+[INFO] (worin) This package is up to date.
+[ERROR] (work) This package does not have downloadable releases.
+[INFO] (work-h) This package is up to date.
+[INFO] (workabilly) This package is up to date.
+[INFO] (workalendar) This package is up to date.
+[INFO] (workaround) This package is up to date.
+[INFO] (workbench) This package is up to date.
+[INFO] (workbench-cli) This package is up to date.
+[ERROR] (workbench-web) This package does not have downloadable releases.
+[INFO] (workbenchdata-fastparquet) This package is up to date.
+[INFO] (workbenchdata-pandas) This package is up to date.
+[INFO] (workbook) This package is up to date.
+[INFO] (workbox-cli) This package is up to date.
+[INFO] (workday) This package is up to date.
+[INFO] (workdays) This package is up to date.
+[INFO] (workdir) This package is up to date.
+[INFO] (worker) This package is up to date.
+[INFO] (workerbee) This package is up to date.
+[INFO] (workerpool) This package is up to date.
+[INFO] (workerprocess) This package is up to date.
+[INFO] (workers) This package is up to date.
+[INFO] (workertier) This package is up to date.
+[INFO] (workflow) This package is up to date.
+[INFO] (workflow-manager) This package is up to date.
+[ERROR] (workflowguard) This package does not have downloadable releases.
+[INFO] (workflows) This package is up to date.
+[INFO] (workfront-sdk) This package is up to date.
+[INFO] (workfrontapi-plus) This package is up to date.
+[INFO] (workhours) This package is up to date.
+[INFO] (working) This package is up to date.
+[INFO] (working-calendar) This package is up to date.
+[INFO] (workingday) This package is up to date.
+[INFO] (workingenv-py) This package is up to date.
+[INFO] (workinghours) This package is up to date.
+[INFO] (workload) This package is up to date.
+[INFO] (worklog) This package is up to date.
+[INFO] (worklogclitool) This package is up to date.
+[ERROR] (worklogger) This package does not have downloadable releases.
+[INFO] (worklogmd) This package is up to date.
+[INFO] (workon) This package is up to date.
+[INFO] (workon2) This package is up to date.
+[INFO] (workonflow-bot-client) This package is up to date.
+[ERROR] (workouttimer) This package does not have downloadable releases.
+[INFO] (workq) This package is up to date.
+[INFO] (workqueue) This package is up to date.
+[INFO] (works-4x-to-word-python-converter) This package is up to date.
+[INFO] (workshop) This package is up to date.
+[INFO] (workshop-toolchain) This package is up to date.
+[INFO] (workspace) This package is up to date.
+[ERROR] (workspace-manager) This package does not have downloadable releases.
+[INFO] (workspace-plugins-gvim) This package is up to date.
+[INFO] (workspace-tools) This package is up to date.
+[INFO] (workspacemanager) This package is up to date.
+[INFO] (workthing) This package is up to date.
+[INFO] (worktime) This package is up to date.
+[INFO] (worktime-logger) This package is up to date.
+[INFO] (world) This package is up to date.
+[INFO] (world2d) This package is up to date.
+[INFO] (worldbuild) This package is up to date.
+[INFO] (worldcat) This package is up to date.
+[INFO] (worldcoin) This package is up to date.
+[INFO] (worldcoinindex) This package is up to date.
+[INFO] (worldcookery) This package is up to date.
+[INFO] (worldcup) This package is up to date.
+[INFO] (worldcup18) This package is up to date.
+[INFO] (worldengine) This package is up to date.
+[INFO] (worldmill) This package is up to date.
+[INFO] (worldmkts) This package is up to date.
+[INFO] (worldofproxy) This package is up to date.
+[INFO] (worldpay) This package is up to date.
+[ERROR] (worldshifter) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.5/urllib/request.py", line 163, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.5/urllib/request.py", line 504, in error
+    result = self._call_chain(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 696, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.5/urllib/request.py", line 510, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 590, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+
+[INFO] (worm) This package is up to date.
+[INFO] (worm-dao) This package is up to date.
+[INFO] (wormbase-parasite) This package is up to date.
+[INFO] (wormhole) This package is up to date.
+[INFO] (wormhole-proxy) This package is up to date.
+[INFO] (worms) This package is up to date.
+[INFO] (wormtable) This package is up to date.
+[INFO] (worq) This package is up to date.
+[ERROR] (worrpt) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.5/urllib/request.py", line 163, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.5/urllib/request.py", line 510, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 590, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+
+[INFO] (wort) This package is up to date.
+[INFO] (wortfilter) This package is up to date.
+[INFO] (wos) This package is up to date.
+[INFO] (wosclient) This package is up to date.
+[INFO] (wosplus) This package is up to date.
+[INFO] (wostools) Data has been updated for this package.
+[INFO] (wot) This package is up to date.
+[INFO] (wotconsole) This package is up to date.
+[INFO] (wotever) This package is up to date.
+[INFO] (wotw-highlighter) This package is up to date.
+[INFO] (wotwrapper) This package is up to date.
+[INFO] (woudc-extcsv) This package is up to date.
+[INFO] (woudc-formats) This package is up to date.
+[INFO] (woudc-qa) This package is up to date.
+[ERROR] (wound) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.5/urllib/request.py", line 163, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.5/urllib/request.py", line 510, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 590, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+
+[INFO] (woven) This package is up to date.
+[ERROR] (wow) This package does not have downloadable releases.
+[INFO] (wow-activityapi) This package is up to date.
+[INFO] (wow-armoryapi) This package is up to date.
+[INFO] (wow-nester) This package is up to date.
+[INFO] (wow-realmstatusapi) This package is up to date.
+[INFO] (wowair) This package is up to date.
+[INFO] (wowapi) This package is up to date.
+[ERROR] (wowclp) This package does not have downloadable releases.
+[INFO] (wowlint) This package is up to date.
+[INFO] (wowmetalogs) This package is up to date.
+[INFO] (wowp) This package is up to date.
+[INFO] (wows-api) This package is up to date.
+[INFO] (wowspy) This package is up to date.
+[INFO] (wowza) This package is up to date.
+[INFO] (wp-diveintolist) This package is up to date.
+[INFO] (wp-download) This package is up to date.
+[INFO] (wp-md) This package is up to date.
+[INFO] (wp-version-checker) This package is up to date.
+[INFO] (wp2corpus) This package is up to date.
+[INFO] (wp2github) This package is up to date.
+[INFO] (wpa-config) This package is up to date.
+[INFO] (wpa-supplicant) This package is up to date.
+[INFO] (wpa2slow) This package is up to date.
+[INFO] (wpadmin) This package is up to date.
+[INFO] (wpas) This package is up to date.
+[INFO] (wpasupplicantconf) This package is up to date.
+[INFO] (wpathr) This package is up to date.
+[INFO] (wpbiff) This package is up to date.
+[INFO] (wpca) This package is up to date.
+[INFO] (wpcmd) This package is up to date.
+[INFO] (wpcraft) This package is up to date.
+[INFO] (wpd-countdown) This package is up to date.
+[INFO] (wpd-mmxi-countdown) This package is up to date.
+[ERROR] (wpd-policy) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.5/urllib/request.py", line 163, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.5/urllib/request.py", line 504, in error
+    result = self._call_chain(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 696, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.5/urllib/request.py", line 510, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 590, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+
+[INFO] (wpdb2dict) This package is up to date.
+[INFO] (wpedit) This package is up to date.
+[INFO] (wpexam) This package is up to date.
+[INFO] (wpgtk) This package is up to date.
+[INFO] (wphelper) This package is up to date.
+[ERROR] (wphp) This package does not have downloadable releases.
+[INFO] (wpi) This package is up to date.
+[INFO] (wpiformat) This package is up to date.
+[INFO] (wpilib) This package is up to date.
+[INFO] (wplinks) This package is up to date.
+[INFO] (wplot) This package is up to date.
+[INFO] (wplsync) This package is up to date.
+[INFO] (wpm) This package is up to date.
+[INFO] (wpm-api-client) This package is up to date.
+[INFO] (wpmaker) This package is up to date.
+[INFO] (wpparser) This package is up to date.
+[INFO] (wpppl) This package is up to date.
+[INFO] (wppy) This package is up to date.
+[INFO] (wps-remote) This package is up to date.
+[ERROR] (wpserver) This package does not have downloadable releases.
+[ERROR] (wpstatic) This package does not have downloadable releases.
+[INFO] (wpsync) This package is up to date.
+[INFO] (wptablefinder) This package is up to date.
+[INFO] (wptools) This package is up to date.
+[INFO] (wptranslate) This package is up to date.
+[INFO] (wptrunner) This package is up to date.
+[INFO] (wptserve) This package is up to date.
+[INFO] (wpull) This package is up to date.
+[INFO] (wpupdater) This package is up to date.
+[INFO] (wpx-redis-orm) This package is up to date.
+[INFO] (wpxredisorm) This package is up to date.
+[INFO] (wpy) This package is up to date.
+[INFO] (wq) This package is up to date.
+[INFO] (wq-app) This package is up to date.
+[INFO] (wq-core) This package is up to date.
+[INFO] (wq-db) This package is up to date.
+[INFO] (wq-io) This package is up to date.
+[INFO] (wq-sdk) This package is up to date.
+[INFO] (wq-setup-demo) This package is up to date.
+[INFO] (wq-start) This package is up to date.
+[INFO] (wqio) This package is up to date.
+[INFO] (wqliebiao) This package is up to date.
+[INFO] (wqnmdb123456) This package is up to date.
+[INFO] (wqt) This package is up to date.
+[INFO] (wquantiles) This package is up to date.
+[INFO] (wqwqq) This package is up to date.
+[INFO] (wr) This package is up to date.
+[INFO] (wr-attrs) This package is up to date.
+[INFO] (wr-drf-oidc-auth) This package is up to date.
+[INFO] (wr-profiles) This package is up to date.
+[INFO] (wr-schemas) This package is up to date.
+[INFO] (wracker) This package is up to date.
+[INFO] (wradlib) This package is up to date.
+[INFO] (wrangalytics) This package is up to date.
+[INFO] (wrangle) This package is up to date.
+[INFO] (wrangler) This package is up to date.
+[INFO] (wrap) This package is up to date.
+[INFO] (wrap-amqp) This package is up to date.
+[INFO] (wrap2) This package is up to date.
+[INFO] (wrapanapi) This package is up to date.
+[INFO] (wrapcache) This package is up to date.
+[ERROR] (wrapi) This package does not have downloadable releases.
+[INFO] (wrapit) This package is up to date.
+[INFO] (wrapnumpy3) This package is up to date.
+[INFO] (wrapper) This package is up to date.
+[INFO] (wrappers) This package is up to date.
+[INFO] (wrappydas) This package is up to date.
+[INFO] (wrapt) This package is up to date.
+[ERROR] (wrapt-bootstrap) This package does not have downloadable releases.
+[ERROR] (wrapt-patches) This package does not have downloadable releases.
+[INFO] (wraptitude) This package is up to date.
+[INFO] (wraptools) This package is up to date.
+[INFO] (wraptor) This package is up to date.
+[INFO] (wrath) This package is up to date.
+[INFO] (wrc) This package is up to date.
+[INFO] (wrds) This package is up to date.
+[INFO] (wreader) This package is up to date.
+[INFO] (wren) This package is up to date.
+[INFO] (wrench) This package is up to date.
+[INFO] (wrenet) This package is up to date.
+[INFO] (wrenlab) This package is up to date.
+[INFO] (wres) This package is up to date.
+[INFO] (wrest) This package is up to date.
+[INFO] (wrestful) This package is up to date.
+[ERROR] (wrestle) This package does not have downloadable releases.
+[ERROR] (wretch) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.5/urllib/request.py", line 163, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.5/urllib/request.py", line 510, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 590, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+
+[INFO] (wrf-python) This package is up to date.
+[INFO] (wrf4g) This package is up to date.
+[INFO] (wrfconf) This package is up to date.
+[INFO] (wrfhydropy) This package is up to date.
+[INFO] (wrfy) This package is up to date.
+[INFO] (wright) This package is up to date.
+[INFO] (wrighttools) This package is up to date.
+[INFO] (wrimg) This package is up to date.
+[INFO] (writ) This package is up to date.
+[INFO] (write) This package is up to date.
+[ERROR] (write-about-code) This package does not have downloadable releases.
+[INFO] (write-me) This package is up to date.
+[INFO] (writefile) This package is up to date.
+[INFO] (writefile-run) This package is up to date.
+[INFO] (writefile-wing) This package is up to date.
+[INFO] (writegoodlintbear) This package is up to date.
+[INFO] (writeondiff) This package is up to date.
+[ERROR] (writer) This package does not have downloadable releases.
+[INFO] (writesomelowstotxt-wing) This package is up to date.
+[ERROR] (writeup) This package does not have downloadable releases.
+[INFO] (writeup-tool) This package is up to date.
+[ERROR] (writewiki) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.5/urllib/request.py", line 163, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.5/urllib/request.py", line 510, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 590, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+
+[INFO] (writing-style) This package is up to date.
+[INFO] (wrlc) This package is up to date.
+[INFO] (wrld) This package is up to date.
+[INFO] (wrong) This package is up to date.
+[INFO] (wrun) This package is up to date.
+[INFO] (wryte) This package is up to date.
+[ERROR] (ws) This package does not have downloadable releases.
+[INFO] (ws-amqp) This package is up to date.
+[INFO] (ws-caldavcheck) This package is up to date.
+[INFO] (ws-callbacks) This package is up to date.
+[INFO] (ws-ddns) This package is up to date.
+[INFO] (ws-dependencychecker) This package is up to date.
+[INFO] (ws-docutils) This package is up to date.
+[INFO] (ws-gitpersona) This package is up to date.
+[INFO] (ws-grid-pager) This package is up to date.
+[INFO] (ws-mailcheck) This package is up to date.
+[INFO] (ws-nginxdbauth) This package is up to date.
+[INFO] (ws-plusfeed) This package is up to date.
+[INFO] (ws-prometheus-uptimerobot) This package is up to date.
+[INFO] (ws-proxy) This package is up to date.
+[INFO] (ws-recorder) This package is up to date.
+[INFO] (ws-rsspull) This package is up to date.
+[INFO] (ws-sheets) This package is up to date.
+[INFO] (ws-sheets-server) This package is up to date.
+[INFO] (ws-storage) This package is up to date.
+[INFO] (ws-web-aiohttp) This package is up to date.
+[INFO] (ws-webpasswd) This package is up to date.
+[INFO] (ws2801-rpi) This package is up to date.
+[INFO] (ws2812) This package is up to date.
+[INFO] (ws2s-python) This package is up to date.
+[INFO] (ws4py) This package is up to date.
+[INFO] (wsa-cli) This package is up to date.
+[INFO] (wsaccel) This package is up to date.
+[INFO] (wsapi4plone-client) This package is up to date.
+[INFO] (wsapi4plone-core) This package is up to date.
+[INFO] (wsappy) This package is up to date.
+[INFO] (wsc) This package is up to date.
+[INFO] (wscan) This package is up to date.
+[INFO] (wscelery) This package is up to date.
+[INFO] (wscheck) This package is up to date.
+[INFO] (wsconfig) This package is up to date.
+[INFO] (wscore) This package is up to date.
+[INFO] (wsdiscovery) This package is up to date.
+[INFO] (wsdl2interface) This package is up to date.
+[INFO] (wsdottraffic) This package is up to date.
+[INFO] (wsgi-accelerator) This package is up to date.
+[INFO] (wsgi-aws-unproxy) This package is up to date.
+[INFO] (wsgi-basic-auth) This package is up to date.
+[INFO] (wsgi-basic-auth-isl) This package is up to date.
+[INFO] (wsgi-cache) This package is up to date.
+[INFO] (wsgi-chronometer) This package is up to date.
+[INFO] (wsgi-content-modifier) This package is up to date.
+[INFO] (wsgi-cors-middleware) This package is up to date.
+[ERROR] (wsgi-deflect) This package does not have downloadable releases.
+[ERROR] (wsgi-design) This package does not have downloadable releases.
+[INFO] (wsgi-django-media) This package is up to date.
+[INFO] (wsgi-fileserver) This package is up to date.
+[INFO] (wsgi-graphql) This package is up to date.
+[INFO] (wsgi-harakiri) This package is up to date.
+[INFO] (wsgi-intercept) This package is up to date.
+[INFO] (wsgi-jsonrpc) This package is up to date.
+[INFO] (wsgi-jwt-session) This package is up to date.
+[INFO] (wsgi-kerberos) This package is up to date.
+[ERROR] (wsgi-lag) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.5/urllib/request.py", line 163, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.5/urllib/request.py", line 510, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 590, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+
+[INFO] (wsgi-lineprof) This package is up to date.
+[ERROR] (wsgi-listenme) This package does not have downloadable releases.
+[INFO] (wsgi-lite) This package is up to date.
+[INFO] (wsgi-liveserver) This package is up to date.
+[INFO] (wsgi-middleware) This package is up to date.
+[INFO] (wsgi-mod-rpaf) This package is up to date.
+[INFO] (wsgi-module) This package is up to date.
+[INFO] (wsgi-monitor) This package is up to date.
+[INFO] (wsgi-monitor3) This package is up to date.
+[INFO] (wsgi-oauth2) This package is up to date.
+[INFO] (wsgi-objgraph) This package is up to date.
+[INFO] (wsgi-party) This package is up to date.
+[INFO] (wsgi-pratchett) This package is up to date.
+[INFO] (wsgi-profiler) This package is up to date.
+[ERROR] (wsgi-prometheus) This package does not have downloadable releases.
+[INFO] (wsgi-proxy) This package is up to date.
+[INFO] (wsgi-request-id) This package is up to date.
+[INFO] (wsgi-request-logger) This package is up to date.
+[INFO] (wsgi-seo-iframe) This package is up to date.
+[INFO] (wsgi-seo-js) This package is up to date.
+[INFO] (wsgi-serve) This package is up to date.
+[INFO] (wsgi-sslify) This package is up to date.
+[ERROR] (wsgi-static) This package does not have downloadable releases.
+[INFO] (wsgi-static-middleware) This package is up to date.
+[INFO] (wsgi-statsd) This package is up to date.
+[INFO] (wsgi-status) This package is up to date.
+[INFO] (wsgi-supervisor) This package is up to date.
+[INFO] (wsgi-ua-mapper) This package is up to date.
+[INFO] (wsgi-vmprof) This package is up to date.
+[INFO] (wsgi-wovn) This package is up to date.
+[INFO] (wsgi-xmlrpc) This package is up to date.
+[ERROR] (wsgi18n) This package does not have downloadable releases.
+[INFO] (wsgi2cgi) This package is up to date.
+[INFO] (wsgiakismet) This package is up to date.
+[INFO] (wsgiapptools) This package is up to date.
+[INFO] (wsgiappversion) This package is up to date.
+[INFO] (wsgiauth) This package is up to date.
+[INFO] (wsgiauth0) This package is up to date.
+[INFO] (wsgicli) This package is up to date.
+[INFO] (wsgicors) This package is up to date.
+[INFO] (wsgid) This package is up to date.
+[INFO] (wsgidav) This package is up to date.
+[INFO] (wsgidelegator) This package is up to date.
+[ERROR] (wsgifileserver) Could not extract data from this package. See below for details.
+"http://steidten.de/steffen/website-wsgi.zip" file could not be downloaded. See below for details.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 107, in download_tar
+    f.write(urlopen(url=urlesc(pkgurl), timeout=10).read())
+  File "/usr/lib/python3.5/urllib/request.py", line 163, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.5/urllib/request.py", line 504, in error
+    result = self._call_chain(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 696, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.5/urllib/request.py", line 510, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 590, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+
+[INFO] (wsgifilter) This package is up to date.
+[INFO] (wsgiform) This package is up to date.
+[ERROR] (wsgifront) Could not extract data from this package. See below for details.
+"http://wsgifront.googlecode.com/files/wsgifront-0.9.9.tar.gz" file could not be downloaded. See below for details.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 107, in download_tar
+    f.write(urlopen(url=urlesc(pkgurl), timeout=10).read())
+  File "/usr/lib/python3.5/urllib/request.py", line 163, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.5/urllib/request.py", line 510, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 590, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+
+[ERROR] (wsgifw) This package does not have downloadable releases.
+[INFO] (wsgigo) This package is up to date.
+[INFO] (wsgigzip) This package is up to date.
+[INFO] (wsgihatenaauth) This package is up to date.
+[INFO] (wsgiheaders) This package is up to date.
+[INFO] (wsgiintercept) This package is up to date.
+[INFO] (wsgijson) This package is up to date.
+[INFO] (wsgikit) This package is up to date.
+[INFO] (wsgilite) This package is up to date.
+[INFO] (wsgilog) This package is up to date.
+[INFO] (wsgim-record) This package is up to date.
+[INFO] (wsgim-rip) This package is up to date.
+[INFO] (wsgintegrate) This package is up to date.
+[INFO] (wsgioauth) This package is up to date.
+[INFO] (wsgioauth-zodb) This package is up to date.
+[ERROR] (wsgioverlay) This package does not have downloadable releases.
+[INFO] (wsgipack) This package is up to date.
+[INFO] (wsgipreload) This package is up to date.
+[INFO] (wsgiprof) This package is up to date.
+[INFO] (wsgiprofile) This package is up to date.
+[INFO] (wsgiprox) This package is up to date.
+[INFO] (wsgiproxy) This package is up to date.
+[INFO] (wsgiproxy2) This package is up to date.
+[INFO] (wsgiref) This package is up to date.
+[ERROR] (wsgiremote) This package does not have downloadable releases.
+[INFO] (wsgirequestlogger) This package is up to date.
+[INFO] (wsgirewrite) This package is up to date.
+[INFO] (wsgirouter) This package is up to date.
+[ERROR] (wsgisampleiisapp) This package does not have downloadable releases.
+[INFO] (wsgiserialize) This package is up to date.
+[INFO] (wsgiserve) This package is up to date.
+[INFO] (wsgiserver) This package is up to date.
+[INFO] (wsgiservice) This package is up to date.
+[INFO] (wsgiservlets) This package is up to date.
+[INFO] (wsgisession) This package is up to date.
+[INFO] (wsgissi) This package is up to date.
+[INFO] (wsgissi-skot) This package is up to date.
+[INFO] (wsgissl) This package is up to date.
+[INFO] (wsgistate) This package is up to date.
+[INFO] (wsgistraw) This package is up to date.
+[INFO] (wsgisubdomain) This package is up to date.
+[INFO] (wsgisvc) This package is up to date.
+[INFO] (wsgit) This package is up to date.
+[INFO] (wsgitemplates) This package is up to date.
+[INFO] (wsgitest) This package is up to date.
+[INFO] (wsgitestcase) This package is up to date.
+[INFO] (wsgithumb) This package is up to date.
+[INFO] (wsgitools) This package is up to date.
+[INFO] (wsgitrml2pdf) This package is up to date.
+[INFO] (wsgiunproxy) This package is up to date.
+[INFO] (wsgiutils) This package is up to date.
+[INFO] (wsgiview) This package is up to date.
+[INFO] (wsgiwapi) This package is up to date.
+[INFO] (wsgiwatch) This package is up to date.
+[INFO] (wsgixhtml2html) This package is up to date.
+[INFO] (wsgixml) This package is up to date.
+[INFO] (wsgize) This package is up to date.
+[INFO] (wshubsapi) This package is up to date.
+[INFO] (wsinfo) This package is up to date.
+[INFO] (wsing007-nester) This package is up to date.
+[INFO] (wsisampler) This package is up to date.
+[INFO] (wsjson) This package is up to date.
+[INFO] (wsk) This package is up to date.
+[INFO] (wsk-input-validator) This package is up to date.
+[INFO] (wsl) This package is up to date.
+[INFO] (wsl-path-exe) This package is up to date.
+[INFO] (wslexplorer) This package is up to date.
+[INFO] (wslink) This package is up to date.
+[INFO] (wslogtail) This package is up to date.
+[INFO] (wsman) This package is up to date.
+[INFO] (wsme) This package is up to date.
+[INFO] (wsme-extdirect) This package is up to date.
+[INFO] (wsme-soap) This package is up to date.
+[INFO] (wsme-sqlalchemy) This package is up to date.
+[INFO] (wsnc) This package is up to date.
+[INFO] (wsnotifier) This package is up to date.
+[INFO] (wspaceping) This package is up to date.
+[INFO] (wspg) This package is up to date.
+[INFO] (wspr-server) This package is up to date.
+[INFO] (wsproto) This package is up to date.
+[INFO] (wsps) This package is up to date.
+[INFO] (wspy) This package is up to date.
+[INFO] (wsql) This package is up to date.
+[INFO] (wsql-sdk) This package is up to date.
+[INFO] (wsreload) This package is up to date.
+[INFO] (wsrequests) This package is up to date.
+[INFO] (wsrpc) This package is up to date.
+[INFO] (wsrpc-aiohttp) This package is up to date.
+[INFO] (wsrpc-tornado) This package is up to date.
+[INFO] (wss-plugin) This package is up to date.
+[ERROR] (wsseauth) This package does not have downloadable releases.
+[INFO] (wssh) This package is up to date.
+[INFO] (wssplugin-integration) This package is up to date.
+[INFO] (wsssimpletest) This package is up to date.
+[INFO] (wsstat) This package is up to date.
+[INFO] (wstan) This package is up to date.
+[INFO] (wstool) This package is up to date.
+[INFO] (wstool-cd) This package is up to date.
+[INFO] (wstools) This package is up to date.
+[INFO] (wstools-py3) This package is up to date.
+[INFO] (wstund) This package is up to date.
+[INFO] (wstunnel) This package is up to date.
+[INFO] (wsvg) This package is up to date.
+[INFO] (wswrapper) This package is up to date.
+[INFO] (wsy-captcha) This package is up to date.
+[INFO] (wsync) This package is up to date.
+[INFO] (wszst-yaz0) This package is up to date.
+[INFO] (wt) This package is up to date.
+[INFO] (wtalchemy) This package is up to date.
+[INFO] (wtbox) This package is up to date.
+[ERROR] (wtcrud) This package does not have downloadable releases.
+[INFO] (wtdojo) This package is up to date.
+[INFO] (wtee) This package is up to date.
+[INFO] (wtest) This package is up to date.
+[INFO] (wtf) This package is up to date.
+[INFO] (wtf-otp) This package is up to date.
+[INFO] (wtf-peewee) This package is up to date.
+[INFO] (wtf-server) This package is up to date.
+[INFO] (wtf-tinymce) This package is up to date.
+[INFO] (wtfbot) This package is up to date.
+[INFO] (wtfmongoengine) This package is up to date.
+[INFO] (wtform) This package is up to date.
+[INFO] (wtforms) This package is up to date.
+[INFO] (wtforms-alchemy) This package is up to date.
+[INFO] (wtforms-appengine) This package is up to date.
+[INFO] (wtforms-components) This package is up to date.
+[INFO] (wtforms-django) This package is up to date.
+[INFO] (wtforms-django-alex) This package is up to date.
+[INFO] (wtforms-dynamic-fields) This package is up to date.
+[INFO] (wtforms-extras) This package is up to date.
+[INFO] (wtforms-geo) This package is up to date.
+[INFO] (wtforms-html5) This package is up to date.
+[INFO] (wtforms-json) This package is up to date.
+[INFO] (wtforms-jsonschema) This package is up to date.
+[INFO] (wtforms-jsonschema2) This package is up to date.
+[INFO] (wtforms-ndb) This package is up to date.
+[INFO] (wtforms-parsley) This package is up to date.
+[INFO] (wtforms-parsleyjs) This package is up to date.
+[INFO] (wtforms-polyglot) This package is up to date.
+[INFO] (wtforms-recaptcha) This package is up to date.
+[INFO] (wtforms-sqlalchemy) This package is up to date.
+[INFO] (wtforms-test) This package is up to date.
+[INFO] (wtforms-tornado) This package is up to date.
+[INFO] (wtforms-webwidgets) This package is up to date.
+[INFO] (wtformvalidation) This package is up to date.
+[INFO] (wtfpython) This package is up to date.
+[INFO] (wtframework) This package is up to date.
+[ERROR] (wtfridge) This package does not have downloadable releases.
+[INFO] (wtftz) This package is up to date.
+[INFO] (wtfuzz) This package is up to date.
+[INFO] (wthen) This package is up to date.
+[ERROR] (wthr) This package does not have downloadable releases.
+[ERROR] (wtj) This package does not have downloadable releases.
+[INFO] (wtools) This package is up to date.
+[INFO] (wtop) This package is up to date.
+[INFO] (wtouch) This package is up to date.
+[INFO] (wtp) This package is up to date.
+[INFO] (wtsize) This package is up to date.
+[INFO] (wtss) This package is up to date.
+[INFO] (wtsubspace) This package is up to date.
+[INFO] (wtte) This package is up to date.
+[INFO] (wu-aut-register-script) This package is up to date.
+[INFO] (wuafeing) This package is up to date.
+[INFO] (wubi) This package is up to date.
+[INFO] (wudaodict) This package is up to date.
+[INFO] (wuecampy) This package is up to date.
+[INFO] (wufenglibs) This package is up to date.
+[ERROR] (wugeo) Could not extract data from this package. See below for details.
+This package download URL does not point to a valid file: "http://wubook.net/labs/"
+[INFO] (wuguannan) This package is up to date.
+[INFO] (wujietextproject) This package is up to date.
+[INFO] (wukong) This package is up to date.
+[INFO] (wumappy) This package is up to date.
+[INFO] (wunderclient) This package is up to date.
+[INFO] (wunderlist) This package is up to date.
+[INFO] (wunderpy) This package is up to date.
+[INFO] (wunderpy2) This package is up to date.
+[INFO] (wunderpy2-python-3-fixes) This package is up to date.
+[INFO] (wunderpython) This package is up to date.
+[INFO] (wundertool) This package is up to date.
+[INFO] (wunderweather) This package is up to date.
+[INFO] (wuppercodegen) This package is up to date.
+[INFO] (wuqiwei) This package is up to date.
+[INFO] (wurfapi) This package is up to date.
+[ERROR] (wurfdocs) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.5/urllib/request.py", line 163, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.5/urllib/request.py", line 510, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 590, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+
+[INFO] (wurfl-cloud) This package is up to date.
+[INFO] (wurfl-python) This package is up to date.
+[INFO] (wurlitzer) This package is up to date.
+[INFO] (wurst) This package is up to date.
+[INFO] (wurstball-rss) This package is up to date.
+[INFO] (wuschl) This package is up to date.
+[INFO] (wutang) This package is up to date.
+[INFO] (wutangy) This package is up to date.
+[INFO] (wutianrui) This package is up to date.
+[INFO] (wutil) This package is up to date.
+[INFO] (wutu) This package is up to date.
+[INFO] (wuutils) This package is up to date.
+[INFO] (wuxi) This package is up to date.
+[INFO] (wuy) This package is up to date.
+[INFO] (wuzhengyatest) This package is up to date.
+[INFO] (wva) This package is up to date.
+[INFO] (wvflib) This package is up to date.
+[INFO] (wvfreader) This package is up to date.
+[INFO] (wvggz) This package is up to date.
+[ERROR] (wvianey) Could not extract data from this package. See below for details.
+This package download URL does not point to a valid file: "http://cheeseshop.python.org/pypi/Louie"
+[ERROR] (wvlet) This package does not have downloadable releases.
+[INFO] (ww) This package is up to date.
+[INFO] (wwchartlib) This package is up to date.
+[INFO] (wwdata) This package is up to date.
+[ERROR] (wwg-athletelist) This package does not have downloadable releases.
+[INFO] (wwg-nester) This package is up to date.
+[INFO] (wwitzel-scaffolds) This package is up to date.
+[INFO] (wwp-shopfronts) This package is up to date.
+[INFO] (wwp-staticnav) This package is up to date.
+[INFO] (wwp-theme) This package is up to date.
+[INFO] (wwp-translate) This package is up to date.
+[INFO] (wwp-twitter) This package is up to date.
+[INFO] (wwscraper) This package is up to date.
+[INFO] (wwu-tinker) This package is up to date.
+[ERROR] (www) This package does not have downloadable releases.
+[INFO] (www-authenticate) This package is up to date.
+[ERROR] (www-rottentomatoes) Could not extract data from this package. See below for details.
+".git" extension not supported.
+[INFO] (wwwclient) This package is up to date.
+[INFO] (wwwoman) This package is up to date.
+[INFO] (wwx) This package is up to date.
+[ERROR] (wwyatt) This package does not have downloadable releases.
+[ERROR] (wx) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.5/urllib/request.py", line 163, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.5/urllib/request.py", line 510, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 590, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+
+[INFO] (wx-data-jq) This package is up to date.
+[INFO] (wx-py) This package is up to date.
+[INFO] (wx-sdk) This package is up to date.
+[INFO] (wx-skeleton) This package is up to date.
+[ERROR] (wxaddons) Could not extract data from this package. See below for details.
+".php" extension not supported.
+[INFO] (wxanythread) This package is up to date.
+[INFO] (wxapi) This package is up to date.
+[ERROR] (wxappbar) Could not extract data from this package. See below for details.
+".php" extension not supported.
+[INFO] (wxasync) This package is up to date.
+[INFO] (wxb-fuxi) This package is up to date.
+[INFO] (wxb-nester) This package is up to date.
+[INFO] (wxcast) This package is up to date.
+[INFO] (wxdebug) This package is up to date.
+[INFO] (wxgen) This package is up to date.
+[INFO] (wxgfuntest1) This package is up to date.
+[ERROR] (wxgfuntest3321) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.5/urllib/request.py", line 163, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.5/urllib/request.py", line 510, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 590, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+
+[INFO] (wxgnester) This package is up to date.
+[INFO] (wxgoodies) This package is up to date.
+[ERROR] (wxlinuxprebuild) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.5/urllib/request.py", line 163, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.5/urllib/request.py", line 510, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 590, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+
+[INFO] (wxmplot) This package is up to date.
+[INFO] (wxnatpy) This package is up to date.
+[ERROR] (wxoo) Could not extract data from this package. See below for details.
+".php" extension not supported.
+[INFO] (wxoptparse) This package is up to date.
+[INFO] (wxpay) This package is up to date.
+[INFO] (wxpay-sdk) This package is up to date.
+[ERROR] (wxpropertygrid) Could not extract data from this package. See below for details.
+This package download URL does not point to a valid file: "http://wxpropgrid.sourceforge.net/cgi-bin/index?page=download#wxpython"
+[INFO] (wxpy) This package is up to date.
+[INFO] (wxpygamevideoplayer) This package is up to date.
+[INFO] (wxpython) This package is up to date.
+[ERROR] (wxpython-common) Could not extract data from this package. See below for details.
+".php" extension not supported.
+[INFO] (wxpython-installer) This package is up to date.
+[ERROR] (wxpython-piano-roll) Could not extract data from this package. See below for details.
+".html" extension not supported.
+[ERROR] (wxpython-slider-bank-creator) Could not extract data from this package. See below for details.
+".html" extension not supported.
+[INFO] (wxr-parser) This package is up to date.
+[INFO] (wxreply) This package is up to date.
+[INFO] (wxrobot) This package is up to date.
+[INFO] (wxsendmsg) This package is up to date.
+[INFO] (wxservice) This package is up to date.
+[ERROR] (wxsftp) Could not extract data from this package. See below for details.
+".html" extension not supported.
+[INFO] (wxterminal) This package is up to date.
+[INFO] (wxtestlib) This package is up to date.
+[INFO] (wxtextview) This package is up to date.
+[INFO] (wxunhandledexceptionmanager) This package is up to date.
+[INFO] (wxutils) This package is up to date.
+[INFO] (wxvkmusic) This package is up to date.
+[INFO] (wxwize) This package is up to date.
+[INFO] (wxyalice) This package is up to date.
+[INFO] (wxyellen) This package is up to date.
+[INFO] (wy-nester) This package is up to date.
+[INFO] (wyatt) This package is up to date.
+[INFO] (wycena-pojazdow) This package is up to date.
+[INFO] (wykop-sdk) This package is up to date.
+[INFO] (wyl-test-lib) This package is up to date.
+[INFO] (wylie) This package is up to date.
+[INFO] (wylog) This package is up to date.
+[INFO] (wyltestlib) This package is up to date.
+[INFO] (wymypy) This package is up to date.
+[INFO] (wymypy-ng) This package is up to date.
+[INFO] (wyn) This package is up to date.
+[INFO] (wyn-nester) This package is up to date.
+[INFO] (wyqpy) This package is up to date.
+[INFO] (wyqpython) This package is up to date.
+[INFO] (wyre) This package is up to date.
+[ERROR] (wyrkspace) This package does not have downloadable releases.
+[INFO] (wyrm) This package is up to date.
+[INFO] (wysiweb) This package is up to date.
+[INFO] (wyvern) This package is up to date.
+[INFO] (wyxtest) This package is up to date.
+[INFO] (wzmsgpackrpc) This package is up to date.
+[INFO] (wznpackage) This package is up to date.
+[ERROR] (wznpackage-py) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.5/urllib/request.py", line 163, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.5/urllib/request.py", line 504, in error
+    result = self._call_chain(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 696, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.5/urllib/request.py", line 510, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 590, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+
+[INFO] (wzone) This package is up to date.
+[INFO] (wztnester) This package is up to date.
 [INFO] 
 [INFO] 
 [INFO] Total packages: 3023
-[INFO]     Packages processed: 990
-[INFO]         Packages updated: 4
-[INFO]         Packages up-to-date: 906
-[INFO]         Packages without response: 15
+[INFO]     Packages processed: 3023
+[INFO]         Packages updated: 14
+[INFO]         Packages up-to-date: 2748
+[INFO]         Packages without response: 38
 [INFO]         Packages without urls: 0
-[INFO]         Packages without downloads: 51
-[INFO]         Packages with data errors: 14
-[INFO]     Packages not processed: 2033
+[INFO]         Packages without downloads: 180
+[INFO]         Packages with data errors: 43
+[INFO]     Packages not processed: 0
 [INFO] 
 [INFO] 
 [INFO] Ending execution.
