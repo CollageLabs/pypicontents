@@ -12959,7 +12959,7 @@
             "haveibeenpwned.__about__",
             "haveibeenpwned.status"
         ],
-        "version": "0.0.3"
+        "version": "0.0.5"
     },
     "haven": {
         "cmdline": [],
@@ -15875,6 +15875,7 @@
             "hdx.freshness.database.dbresource",
             "hdx.freshness.database.dbrun",
             "hdx.freshness.datafreshness",
+            "hdx.freshness.ratelimiter",
             "hdx.freshness.retrieval",
             "hdx.freshness.retry",
             "hdx.freshness.testdata",
@@ -15886,7 +15887,7 @@
             "hdx.freshness.testdata.serialize",
             "hdx.freshness.testdata.testbase"
         ],
-        "version": "1.1.7"
+        "version": "1.1.9"
     },
     "hdx-data-freshness-emailer": {
         "cmdline": [],
@@ -15896,7 +15897,7 @@
             "hdx.freshness.emailer",
             "hdx.freshness.emailer.datafreshnessstatus"
         ],
-        "version": "1.0.7"
+        "version": "1.0.9"
     },
     "hdx-python-api": {
         "cmdline": [],
@@ -15917,7 +15918,7 @@
             "hdx.hdx_locations",
             "hdx.hdx_tagscleanup"
         ],
-        "version": "3.1.9"
+        "version": "3.2.0"
     },
     "hdx-python-country": {
         "cmdline": [],
@@ -18290,13 +18291,16 @@
             "helga_koji.actions.get_build",
             "helga_koji.actions.get_package",
             "helga_koji.actions.user_tasks",
+            "helga_koji.colors",
             "helga_koji.signals",
             "helga_koji.signals.build",
             "helga_koji.signals.task",
             "helga_koji.signals.util",
+            "helga_koji.tests",
+            "helga_koji.tests.test_util",
             "helga_koji.util"
         ],
-        "version": "1.2.0"
+        "version": "1.3.0"
     },
     "helga-lingo": {
         "cmdline": [],
@@ -18803,11 +18807,11 @@
             "helium",
             "helium.helium_functions",
             "helium.helium_functions.convert_youtube_url",
-            "helium.helium_functions.open_functions",
             "helium.utility_functions",
-            "helium.utility_functions.decorators"
+            "helium.utility_functions.decorators",
+            "helium.utility_functions.json_functions"
         ],
-        "version": "0.0.4"
+        "version": "0.0.5"
     },
     "helium-client": {
         "cmdline": [],
@@ -21191,6 +21195,28 @@
         ],
         "version": "0.1.2"
     },
+    "hera-librarian": {
+        "cmdline": [
+            "add_librarian_file_event.py",
+            "add_obs_librarian.py",
+            "launch_librarian_copy.py",
+            "librarian_assign_sessions.py",
+            "librarian_delete_files.py",
+            "librarian_initiate_offload.py",
+            "librarian_locate_file.py",
+            "librarian_offload_helper.py",
+            "librarian_set_file_deletion_policy.py",
+            "librarian_stage_files.py",
+            "librarian_stream_file_or_directory.sh",
+            "upload_to_librarian.py"
+        ],
+        "modules": [
+            "hera_librarian",
+            "hera_librarian.store",
+            "hera_librarian.utils"
+        ],
+        "version": "0.1.5"
+    },
     "heracles": {
         "cmdline": [],
         "modules": [
@@ -21558,62 +21584,64 @@
         "version": "1.0.4"
     },
     "heresuperset": {
-        "cmdline": [],
-        "modules": [
-            "heresuperset",
-            "heresuperset.bin",
-            "heresuperset.cache_util",
-            "heresuperset.cli",
-            "heresuperset.config",
-            "heresuperset.connectors",
-            "heresuperset.connectors.base",
-            "heresuperset.connectors.base.models",
-            "heresuperset.connectors.base.views",
-            "heresuperset.connectors.connector_registry",
-            "heresuperset.connectors.druid",
-            "heresuperset.connectors.druid.models",
-            "heresuperset.connectors.druid.views",
-            "heresuperset.connectors.sqla",
-            "heresuperset.connectors.sqla.models",
-            "heresuperset.connectors.sqla.views",
-            "heresuperset.data",
-            "heresuperset.data.countries",
-            "heresuperset.dataframe",
-            "heresuperset.db_engine_specs",
-            "heresuperset.db_engines",
-            "heresuperset.db_engines.hive",
-            "heresuperset.dict_import_export_util",
-            "heresuperset.exceptions",
-            "heresuperset.extract_table_names",
-            "heresuperset.forms",
-            "heresuperset.import_util",
-            "heresuperset.jinja_context",
-            "heresuperset.legacy",
-            "heresuperset.migrations",
-            "heresuperset.migrations.env",
-            "heresuperset.models",
-            "heresuperset.models.annotations",
-            "heresuperset.models.core",
-            "heresuperset.models.helpers",
-            "heresuperset.models.sql_lab",
-            "heresuperset.models.user_attributes",
-            "heresuperset.security",
-            "heresuperset.sql_lab",
-            "heresuperset.sql_parse",
-            "heresuperset.stats_logger",
-            "heresuperset.translations",
-            "heresuperset.translations.utils",
-            "heresuperset.utils",
-            "heresuperset.views",
-            "heresuperset.views.annotations",
-            "heresuperset.views.base",
-            "heresuperset.views.core",
-            "heresuperset.views.datasource",
-            "heresuperset.views.sql_lab",
-            "heresuperset.views.utils",
-            "heresuperset.viz"
+        "cmdline": [
+            "superset"
         ],
-        "version": "0.26.7"
+        "modules": [
+            "superset",
+            "superset.bin",
+            "superset.cache_util",
+            "superset.cli",
+            "superset.config",
+            "superset.connectors",
+            "superset.connectors.base",
+            "superset.connectors.base.models",
+            "superset.connectors.base.views",
+            "superset.connectors.connector_registry",
+            "superset.connectors.druid",
+            "superset.connectors.druid.models",
+            "superset.connectors.druid.views",
+            "superset.connectors.sqla",
+            "superset.connectors.sqla.models",
+            "superset.connectors.sqla.views",
+            "superset.data",
+            "superset.data.countries",
+            "superset.dataframe",
+            "superset.db_engine_specs",
+            "superset.db_engines",
+            "superset.db_engines.hive",
+            "superset.dict_import_export_util",
+            "superset.exceptions",
+            "superset.extract_table_names",
+            "superset.forms",
+            "superset.import_util",
+            "superset.jinja_context",
+            "superset.legacy",
+            "superset.migrations",
+            "superset.migrations.env",
+            "superset.models",
+            "superset.models.annotations",
+            "superset.models.core",
+            "superset.models.helpers",
+            "superset.models.sql_lab",
+            "superset.models.user_attributes",
+            "superset.security",
+            "superset.sql_lab",
+            "superset.sql_parse",
+            "superset.stats_logger",
+            "superset.translations",
+            "superset.translations.utils",
+            "superset.utils",
+            "superset.views",
+            "superset.views.annotations",
+            "superset.views.base",
+            "superset.views.core",
+            "superset.views.datasource",
+            "superset.views.sql_lab",
+            "superset.views.utils",
+            "superset.viz"
+        ],
+        "version": "0.27.4"
     },
     "heretic": {
         "cmdline": [],
@@ -22451,7 +22479,7 @@
             "hetio.readwrite",
             "hetio.stats"
         ],
-        "version": "0.2.8"
+        "version": "0.2.9"
     },
     "hetzner": {
         "cmdline": [
@@ -26026,7 +26054,7 @@
         "modules": [
             "higlass_manage"
         ],
-        "version": "0.1.12"
+        "version": "0.1.13"
     },
     "hihimann": {
         "cmdline": [],
@@ -30945,14 +30973,14 @@
             "holoaverage.filter",
             "holoaverage.grid",
             "holoaverage.hdf5",
-            "holoaverage.jsoncleaner",
+            "holoaverage.json_utils",
             "holoaverage.main",
             "holoaverage.rawalign",
             "holoaverage.reconstruction",
             "holoaverage.series",
             "holoaverage.version"
         ],
-        "version": "1.1.1"
+        "version": "1.1.2"
     },
     "holobook": {
         "cmdline": [],
@@ -47431,7 +47459,7 @@
             "hydra_base.util.permissions",
             "hydra_base.util.time_map"
         ],
-        "version": "0.1.4"
+        "version": "0.1.5"
     },
     "hydra-client-python": {
         "cmdline": [],
@@ -50173,7 +50201,7 @@
             "tests.worker",
             "tests.worker.test_worker"
         ],
-        "version": "0.7.1"
+        "version": "0.8.1"
     },
     "hyperdrive": {
         "cmdline": [],
@@ -52352,7 +52380,7 @@
             "hypothesis.vendor.pretty",
             "hypothesis.version"
         ],
-        "version": "3.67.1"
+        "version": "3.68.0"
     },
     "hypothesis-client": {
         "cmdline": [],
