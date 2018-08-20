@@ -1319,19 +1319,21 @@
         "modules": [
             "iautomate",
             "iautomate.__version__",
+            "iautomate.global_variables",
             "iautomate.helpers",
             "iautomate.helpers.package_helper",
             "iautomate.helpers.shell_helper",
+            "iautomate.helpers.string_helper",
             "iautomate.iautomate",
             "iautomate.resources",
             "iautomate.resources.abstract_resource",
-            "iautomate.resources.directory",
-            "iautomate.resources.execution",
-            "iautomate.resources.file",
-            "iautomate.resources.package",
-            "iautomate.resources.service"
+            "iautomate.resources.directory_resource",
+            "iautomate.resources.execution_resource",
+            "iautomate.resources.file_resource",
+            "iautomate.resources.package_resource",
+            "iautomate.resources.service_resource"
         ],
-        "version": "0.11"
+        "version": "0.36"
     },
     "ib": {
         "cmdline": [],
@@ -10139,6 +10141,13 @@
         ],
         "version": "0.3.7"
     },
+    "ikkuna": {
+        "cmdline": [],
+        "modules": [
+            "ikkuna"
+        ],
+        "version": "0.0.1"
+    },
     "ikp3db": {
         "cmdline": [],
         "modules": [
@@ -11564,7 +11573,7 @@
             "azext_imagecopy.create_target",
             "azext_imagecopy.custom"
         ],
-        "version": "0.0.7"
+        "version": "0.0.8"
     },
     "image-dataset-viz": {
         "cmdline": [],
@@ -11978,7 +11987,7 @@
             "image2text.util.train",
             "image2text.word"
         ],
-        "version": "0.0.5"
+        "version": "0.1.1"
     },
     "image2tfrecords": {
         "cmdline": [],
@@ -13930,7 +13939,7 @@
             "imdbparser.person",
             "imdbparser.searchresult"
         ],
-        "version": "1.0.17"
+        "version": "1.0.18"
     },
     "imdbpie": {
         "cmdline": [],
@@ -18366,7 +18375,7 @@
             "imutils.video.videostream",
             "imutils.video.webcamvideostream"
         ],
-        "version": "0.4.6"
+        "version": "0.5.0"
     },
     "imview": {
         "cmdline": [
@@ -20110,6 +20119,14 @@
             "indentml.parser"
         ],
         "version": "0.2.2"
+    },
+    "indentpy": {
+        "cmdline": [],
+        "modules": [
+            "indentpy",
+            "indentpy.indent"
+        ],
+        "version": "1.0.0"
     },
     "indenttest": {
         "cmdline": [],
@@ -27500,31 +27517,6 @@
         ],
         "version": "1.0"
     },
-    "infeed": {
-        "cmdline": [],
-        "modules": [
-            "infeed",
-            "infeed.lib",
-            "infeed.lib.ApiEnv",
-            "infeed.lib.ContextLogger",
-            "infeed.lib.ExecutionContext",
-            "infeed.lib.Fact",
-            "infeed.lib.Templating",
-            "infeed.lib.api",
-            "infeed.lib.api.RhelApi",
-            "infeed.lib.api.VoidApi",
-            "infeed.lib.api.ssh",
-            "infeed.lib.api.ssh.SftpApi",
-            "infeed.lib.api.ssh.SystemctlRemote",
-            "infeed.lib.api.ssh.YumRemote",
-            "infeed.lib.exceptions",
-            "infeed.lib.shell",
-            "infeed.lib.shell.Shell",
-            "infeed.main",
-            "infeed.result"
-        ],
-        "version": "0.1.0"
-    },
     "infer": {
         "cmdline": [],
         "modules": [
@@ -33752,6 +33744,7 @@
             "ingestors.media.image",
             "ingestors.media.svg",
             "ingestors.media.tiff",
+            "ingestors.media.util",
             "ingestors.media.video",
             "ingestors.packages",
             "ingestors.packages.rar",
@@ -33759,7 +33752,6 @@
             "ingestors.packages.zip",
             "ingestors.result",
             "ingestors.services",
-            "ingestors.services.googlevision",
             "ingestors.services.interfaces",
             "ingestors.services.tesseract",
             "ingestors.services.util",
@@ -33788,28 +33780,9 @@
             "ingestors.tabular.sqlite",
             "ingestors.tabular.xls",
             "ingestors.tabular.xlsx",
-            "ingestors.test_access",
-            "ingestors.test_audio",
-            "ingestors.test_cli",
-            "ingestors.test_csv",
-            "ingestors.test_dbf",
-            "ingestors.test_directory",
-            "ingestors.test_djvu",
-            "ingestors.test_doc",
-            "ingestors.test_html",
-            "ingestors.test_image",
-            "ingestors.test_msg",
-            "ingestors.test_outlookmsg",
-            "ingestors.test_outlookpst",
-            "ingestors.test_packages",
-            "ingestors.test_pdf",
-            "ingestors.test_tabular",
-            "ingestors.test_text",
-            "ingestors.test_tiff",
-            "ingestors.test_video",
             "ingestors.util"
         ],
-        "version": "0.10.10"
+        "version": "0.10.11"
     },
     "inginious": {
         "cmdline": [
@@ -37995,7 +37968,7 @@
     "instalooter": {
         "cmdline": [],
         "modules": [],
-        "version": "2.1.0"
+        "version": "2.2.0"
     },
     "instamedia": {
         "cmdline": [],
@@ -38427,7 +38400,9 @@
         "version": "0.1.6"
     },
     "instax-api": {
-        "cmdline": [],
+        "cmdline": [
+            "instax-print"
+        ],
         "modules": [
             "instax",
             "instax.comms",
@@ -38435,9 +38410,10 @@
             "instax.instaxImage",
             "instax.packet",
             "instax.sp2",
+            "instax.sp3",
             "instax.testServer"
         ],
-        "version": "0.4"
+        "version": "0.5"
     },
     "instayc": {
         "cmdline": [],
@@ -48037,7 +48013,7 @@
             "iprange",
             "iprange.iprange"
         ],
-        "version": "0.0.5"
+        "version": "0.0.6"
     },
     "ip2cc": {
         "cmdline": [],
@@ -50348,6 +50324,19 @@
             "pelix.remote.transport.jabsorb_rpc",
             "pelix.remote.transport.mqtt_rpc",
             "pelix.remote.xml_rpc",
+            "pelix.rsa",
+            "pelix.rsa.edef",
+            "pelix.rsa.endpointdescription",
+            "pelix.rsa.providers",
+            "pelix.rsa.providers.discovery",
+            "pelix.rsa.providers.discovery.discovery_etcd",
+            "pelix.rsa.providers.distribution",
+            "pelix.rsa.providers.distribution.py4j",
+            "pelix.rsa.providers.distribution.xmlrpc",
+            "pelix.rsa.remoteserviceadmin",
+            "pelix.rsa.shell",
+            "pelix.rsa.topologymanagers",
+            "pelix.rsa.topologymanagers.basic",
             "pelix.services",
             "pelix.services.configadmin",
             "pelix.services.eventadmin",
@@ -50374,7 +50363,7 @@
             "pelix.threadpool",
             "pelix.utilities"
         ],
-        "version": "0.7.1"
+        "version": "0.8.0"
     },
     "ipopt": {
         "cmdline": [],
@@ -51090,7 +51079,7 @@
             "ipyaggrid.magics.custom_magics",
             "ipyaggrid.util"
         ],
-        "version": "0.0.5a24"
+        "version": "0.1.0"
     },
     "ipyaladin": {
         "cmdline": [],
@@ -56063,7 +56052,7 @@
             "isc_common.unitest",
             "isc_common.unitest.case"
         ],
-        "version": "0.0.1.dev47"
+        "version": "0.0.1.dev60"
     },
     "iscc": {
         "cmdline": [],
@@ -65379,7 +65368,7 @@
             "isla.VRBPower",
             "isla.Wind"
         ],
-        "version": "1.0.1"
+        "version": "1.0.2"
     },
     "islambda": {
         "cmdline": [],
