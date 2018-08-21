@@ -782,6 +782,7 @@
             "eadapters.models.budy.bd_product",
             "eadapters.models.budy.bd_referral",
             "eadapters.models.budy.bd_return",
+            "eadapters.models.budy.bd_section",
             "eadapters.models.budy.bd_shipping_option",
             "eadapters.models.budy.bd_state",
             "eadapters.models.budy.bd_subscription",
@@ -806,6 +807,7 @@
             "eadapters.models.payment_method",
             "eadapters.models.product",
             "eadapters.models.referral",
+            "eadapters.models.section",
             "eadapters.models.shipping_option",
             "eadapters.models.state",
             "eadapters.models.subscription",
@@ -813,7 +815,7 @@
             "eadapters.models.wishlist",
             "eadapters.models.wishlist_line"
         ],
-        "version": "0.3.7"
+        "version": "0.3.8"
     },
     "eadator": {
         "cmdline": [],
@@ -3620,7 +3622,7 @@
             "easydollar.USD",
             "easydollar.examples"
         ],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     "easyeeg": {
         "cmdline": [],
@@ -4194,6 +4196,13 @@
             "easylogger.test"
         ],
         "version": "2.1.0"
+    },
+    "easylogging": {
+        "cmdline": [],
+        "modules": [
+            "easylogging"
+        ],
+        "version": "1.2.0"
     },
     "easymail": {
         "cmdline": [],
@@ -10770,9 +10779,10 @@
     "ecs-consul-reg": {
         "cmdline": [],
         "modules": [
+            "ecs_consul_reg",
             "ecs_consul_reg.main"
         ],
-        "version": "0.0.1"
+        "version": "0.0.6"
     },
     "ecs-ctl": {
         "cmdline": [
@@ -12915,7 +12925,7 @@
             "edc_prn.urls",
             "edc_prn.wsgi"
         ],
-        "version": "0.1.5"
+        "version": "0.1.6"
     },
     "edc-protocol": {
         "cmdline": [],
@@ -16963,7 +16973,7 @@
             "integrated_channels.xapi.serializers",
             "integrated_channels.xapi.utils"
         ],
-        "version": "0.72.6"
+        "version": "0.72.7"
     },
     "edx-enterprise-data": {
         "cmdline": [],
@@ -19171,15 +19181,13 @@
         "cmdline": [],
         "modules": [
             "eeweather",
-            "eeweather.api",
+            "eeweather.__version__",
             "eeweather.cache",
             "eeweather.cli",
             "eeweather.connections",
             "eeweather.database",
             "eeweather.exceptions",
             "eeweather.geo",
-            "eeweather.mappings",
-            "eeweather.matching",
             "eeweather.mockable",
             "eeweather.ranking",
             "eeweather.resources",
@@ -19188,9 +19196,10 @@
             "eeweather.testing",
             "eeweather.utils",
             "eeweather.validation",
-            "eeweather.visualization"
+            "eeweather.visualization",
+            "eeweather.warnings"
         ],
-        "version": "0.3.3"
+        "version": "0.3.4"
     },
     "efacter": {
         "cmdline": [],
@@ -21767,6 +21776,19 @@
             "compress.versioning.mtime"
         ],
         "version": "1.0.3"
+    },
+    "el-user": {
+        "cmdline": [],
+        "modules": [
+            "datakaryawan",
+            "datakaryawan.admin",
+            "datakaryawan.apps",
+            "datakaryawan.migrations",
+            "datakaryawan.models",
+            "datakaryawan.tests",
+            "datakaryawan.views"
+        ],
+        "version": "0.1"
     },
     "el320-nester": {
         "cmdline": [],
@@ -25230,12 +25252,14 @@
             "elib.downloader",
             "elib.exe_version",
             "elib.hash_",
+            "elib.known_folders",
             "elib.paste",
             "elib.path",
             "elib.pretty",
             "elib.repo",
             "elib.resource_path",
             "elib.run",
+            "elib.sentry",
             "elib.settings",
             "elib.tts",
             "elib.updater",
@@ -25248,6 +25272,7 @@
             "test.test_find_exe",
             "test.test_hash",
             "test.test_imports",
+            "test.test_known_folders",
             "test.test_logging",
             "test.test_paste",
             "test.test_path",
@@ -25255,9 +25280,10 @@
             "test.test_random",
             "test.test_resource_path",
             "test.test_run",
+            "test.test_sentry",
             "test.test_tts"
         ],
-        "version": "0.1.57"
+        "version": "2018.8.20.2"
     },
     "elib-logging": {
         "cmdline": [],
@@ -34142,7 +34168,7 @@
             "enecodhutils.pipeline",
             "enecodhutils.pipeline.dh_kafka"
         ],
-        "version": "2.0.1"
+        "version": "2.0.2"
     },
     "enerdata": {
         "cmdline": [],
@@ -34877,7 +34903,7 @@
             "energycap.sdk.models.workflow_workflow_settings_response_dto",
             "energycap.sdk.version"
         ],
-        "version": "7.2.0.90.post1534519856"
+        "version": "7.2.0.90.post1534784273"
     },
     "energydram": {
         "cmdline": [],
@@ -37895,7 +37921,7 @@
             "entrance.feature.tgt_syslog",
             "entrance.ws_handler"
         ],
-        "version": "0.0.1"
+        "version": "0.0.2"
     },
     "entransit": {
         "cmdline": [],
@@ -39818,12 +39844,19 @@
         "cmdline": [],
         "modules": [
             "eoffcn_ocr",
-            "eoffcn_ocr.image_process",
-            "eoffcn_ocr.segmentation",
-            "eoffcn_ocr.setting",
-            "eoffcn_ocr.third_party_api"
+            "eoffcn_ocr.image",
+            "eoffcn_ocr.image.process",
+            "eoffcn_ocr.image.tool",
+            "eoffcn_ocr.nlp",
+            "eoffcn_ocr.nlp.block",
+            "eoffcn_ocr.nlp.setting",
+            "eoffcn_ocr.ocr_api",
+            "eoffcn_ocr.ocr_api._ocr_base",
+            "eoffcn_ocr.ocr_api.aliyun",
+            "eoffcn_ocr.ocr_api.baidu",
+            "eoffcn_ocr.ocr_api.xunfei"
         ],
-        "version": "0.1.1"
+        "version": "0.2.4"
     },
     "eofs": {
         "cmdline": [],
@@ -40894,7 +40927,7 @@
             "test.test_imports",
             "test.test_main"
         ],
-        "version": "2018.8.19.1"
+        "version": "2018.8.20.1"
     },
     "epages-client": {
         "cmdline": [],
@@ -43250,15 +43283,12 @@
     },
     "eqcorrscan": {
         "cmdline": [
-            "MAD_stability_test.py",
             "__init__.py",
-            "eqcorrscan_base.py",
             "lag_calc.py",
             "match_filter.py",
-            "setup_eqcorrscan.py",
             "subspace.py",
             "template_creation.py",
-            "test_big_match.py"
+            "test_eqcorrscan.py"
         ],
         "modules": [
             "eqcorrscan",
@@ -43268,6 +43298,29 @@
             "eqcorrscan.core.match_filter",
             "eqcorrscan.core.subspace",
             "eqcorrscan.core.template_gen",
+            "eqcorrscan.tests",
+            "eqcorrscan.tests.brightness_test",
+            "eqcorrscan.tests.catalog_to_dd_test",
+            "eqcorrscan.tests.catalog_utils_test",
+            "eqcorrscan.tests.clustering_test",
+            "eqcorrscan.tests.correlate_test",
+            "eqcorrscan.tests.despike_test",
+            "eqcorrscan.tests.find_peaks_test",
+            "eqcorrscan.tests.install_test",
+            "eqcorrscan.tests.lag_calc_test",
+            "eqcorrscan.tests.log_read_test",
+            "eqcorrscan.tests.mag_calc_test",
+            "eqcorrscan.tests.match_filter_test",
+            "eqcorrscan.tests.parameter_test",
+            "eqcorrscan.tests.picker_test",
+            "eqcorrscan.tests.plotting_test",
+            "eqcorrscan.tests.pre_processing_test",
+            "eqcorrscan.tests.stacking_test",
+            "eqcorrscan.tests.subspace_test",
+            "eqcorrscan.tests.synth_seis_test",
+            "eqcorrscan.tests.template_gen_test",
+            "eqcorrscan.tests.trigger_test",
+            "eqcorrscan.tests.tutorials_test",
             "eqcorrscan.tutorials",
             "eqcorrscan.tutorials.lag_calc",
             "eqcorrscan.tutorials.match_filter",
@@ -43296,7 +43349,7 @@
             "eqcorrscan.utils.timer",
             "eqcorrscan.utils.trigger"
         ],
-        "version": "0.3.1"
+        "version": "0.3.2"
     },
     "eqdes": {
         "cmdline": [],
@@ -43510,7 +43563,7 @@
     "equi7grid": {
         "cmdline": [],
         "modules": [],
-        "version": "0.0.3"
+        "version": "0.0.4"
     },
     "equibel": {
         "cmdline": [],
@@ -50549,7 +50602,7 @@
             "ethereum_dasm.utils.data",
             "ethereum_dasm.utils.signatures"
         ],
-        "version": "0.1.1"
+        "version": "0.1.2"
     },
     "ethereum-helpers": {
         "cmdline": [],
@@ -55203,7 +55256,7 @@
             "eventeditor.search_bar",
             "eventeditor.util"
         ],
-        "version": "1.1.1.post1"
+        "version": "1.1.2"
     },
     "eventedpy": {
         "cmdline": [],
@@ -58222,7 +58275,7 @@
             "ews_cli.rules",
             "ews_cli.util"
         ],
-        "version": "0.1.0.6"
+        "version": "0.1.0.7"
     },
     "ewscal": {
         "cmdline": [],
@@ -59801,6 +59854,13 @@
         ],
         "version": "0.0.1"
     },
+    "example-pkg-muzx": {
+        "cmdline": [],
+        "modules": [
+            "example_pkg_muzx"
+        ],
+        "version": "0.0.1"
+    },
     "example-pkg-papertiger": {
         "cmdline": [],
         "modules": [
@@ -59829,6 +59889,54 @@
         "cmdline": [],
         "modules": [],
         "version": "0.0.1"
+    },
+    "example-pkg-yanama": {
+        "cmdline": [],
+        "modules": [
+            "ONBFactory",
+            "ONBFactory.config",
+            "ONBFactory.config.common",
+            "ONBFactory.config.local",
+            "ONBFactory.config.production",
+            "ONBFactory.urls",
+            "ONBFactory.wsgi",
+            "backup",
+            "backup.admin",
+            "backup.apps",
+            "backup.migrations",
+            "backup.models",
+            "backup.tests",
+            "backup.views",
+            "common",
+            "common.admin",
+            "common.apps",
+            "common.tests",
+            "iaas",
+            "iaas.admin",
+            "iaas.apps",
+            "iaas.chpapi",
+            "iaas.common",
+            "iaas.common.constants",
+            "iaas.common.functions",
+            "iaas.iaas",
+            "iaas.iaas_client_factory",
+            "iaas.networker",
+            "iaas.tests",
+            "iaas.vec",
+            "iaas.xstream",
+            "onboarding",
+            "onboarding.admin",
+            "onboarding.apps",
+            "onboarding.migrations",
+            "onboarding.models",
+            "onboarding.tests",
+            "onboarding.views",
+            "saltmanager",
+            "saltmanager.admin",
+            "saltmanager.apps",
+            "saltmanager.tests"
+        ],
+        "version": "0.0.4"
     },
     "example-pkg02031997": {
         "cmdline": [],
@@ -61005,7 +61113,7 @@
             "execsql.py"
         ],
         "modules": [],
-        "version": "1.27.3.3"
+        "version": "1.28.0.0"
     },
     "exectree": {
         "cmdline": [],
