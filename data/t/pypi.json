@@ -7789,7 +7789,7 @@
             "tap_postgres.sync_strategies.incremental",
             "tap_postgres.sync_strategies.logical_replication"
         ],
-        "version": "0.0.26"
+        "version": "0.0.27"
     },
     "tap-purecloud": {
         "cmdline": [],
@@ -8021,7 +8021,7 @@
             "tap_xero.streams",
             "tap_xero.transform"
         ],
-        "version": "0.1.30"
+        "version": "0.2.1"
     },
     "tap-yotpo": {
         "cmdline": [],
@@ -12889,7 +12889,7 @@
             "tensorboard.util",
             "tensorboard.version"
         ],
-        "version": "1.11.0a20180820"
+        "version": "1.11.0a20180821"
     },
     "tba-api-v3client": {
         "cmdline": [],
@@ -15771,8 +15771,11 @@
     },
     "tdm-loader": {
         "cmdline": [],
-        "modules": [],
-        "version": "1.1.13"
+        "modules": [
+            "tdm_loader",
+            "tdm_loader.tdm_loader"
+        ],
+        "version": "1.1.14"
     },
     "tdns": {
         "cmdline": [],
@@ -17465,9 +17468,7 @@
         "cmdline": [],
         "modules": [
             "tedana",
-            "tedana.cli",
-            "tedana.cli.run_t2smap",
-            "tedana.cli.run_tedana",
+            "tedana._version",
             "tedana.decomposition",
             "tedana.decomposition._utils",
             "tedana.decomposition.eigendecomp",
@@ -17481,7 +17482,14 @@
             "tedana.selection._utils",
             "tedana.selection.select_comps",
             "tedana.tests",
+            "tedana.tests.test_decomposition__utils",
+            "tedana.tests.test_model_combine",
+            "tedana.tests.test_model_fit_computefeats2",
+            "tedana.tests.test_model_fit_fitmodels_direct",
+            "tedana.tests.test_model_fit_get_coeffs",
+            "tedana.tests.test_model_fit_gscontrol_raw",
             "tedana.tests.test_model_monoexponential",
+            "tedana.tests.test_t2smap",
             "tedana.tests.test_tedana",
             "tedana.tests.test_utils",
             "tedana.tests.utils",
@@ -17489,10 +17497,11 @@
             "tedana.utils.io",
             "tedana.utils.utils",
             "tedana.workflows",
+            "tedana.workflows.parser_utils",
             "tedana.workflows.t2smap",
             "tedana.workflows.tedana"
         ],
-        "version": "0.0.3"
+        "version": "0.0.4"
     },
     "tedt": {
         "cmdline": [],
@@ -20373,6 +20382,15 @@
             "tellsticknet.test_protocols"
         ],
         "version": "0.1.1"
+    },
+    "tellter": {
+        "cmdline": [],
+        "modules": [
+            "tellter",
+            "tellter.TNS",
+            "tellter.safechat"
+        ],
+        "version": "0.0.10"
     },
     "telltg": {
         "cmdline": [
@@ -30323,7 +30341,7 @@
             "teradatasql",
             "teradatasql.vernumber"
         ],
-        "version": "16.20.0.17"
+        "version": "16.20.0.18"
     },
     "teraffic": {
         "cmdline": [],
@@ -32951,6 +32969,75 @@
         "cmdline": [],
         "modules": [],
         "version": "0.0.2"
+    },
+    "test-baseplate": {
+        "cmdline": [],
+        "modules": [
+            "baseplate",
+            "baseplate._compat",
+            "baseplate._utils",
+            "baseplate.config",
+            "baseplate.context",
+            "baseplate.context.cassandra",
+            "baseplate.context.hvac",
+            "baseplate.context.kombu",
+            "baseplate.context.memcache",
+            "baseplate.context.memcache.lib",
+            "baseplate.context.redis",
+            "baseplate.context.sqlalchemy",
+            "baseplate.context.thrift",
+            "baseplate.core",
+            "baseplate.crypto",
+            "baseplate.diagnostics",
+            "baseplate.diagnostics.logging",
+            "baseplate.diagnostics.metrics",
+            "baseplate.diagnostics.sentry",
+            "baseplate.diagnostics.tracing",
+            "baseplate.diagnostics.tracing.publisher",
+            "baseplate.events",
+            "baseplate.events.publisher",
+            "baseplate.events.queue",
+            "baseplate.experiments",
+            "baseplate.experiments.providers",
+            "baseplate.experiments.providers.base",
+            "baseplate.experiments.providers.feature_flag",
+            "baseplate.experiments.providers.forced_variant",
+            "baseplate.experiments.providers.r2",
+            "baseplate.experiments.providers.simple_experiment",
+            "baseplate.experiments.variant_sets",
+            "baseplate.experiments.variant_sets.base",
+            "baseplate.experiments.variant_sets.multi_variant_set",
+            "baseplate.experiments.variant_sets.rollout_variant_set",
+            "baseplate.experiments.variant_sets.single_variant_set",
+            "baseplate.file_watcher",
+            "baseplate.integration",
+            "baseplate.integration.pyramid",
+            "baseplate.integration.thrift",
+            "baseplate.integration.thrift.command",
+            "baseplate.integration.wrapped_context",
+            "baseplate.live_data",
+            "baseplate.live_data.watcher",
+            "baseplate.live_data.writer",
+            "baseplate.live_data.zookeeper",
+            "baseplate.message_queue",
+            "baseplate.metrics",
+            "baseplate.queue_consumer",
+            "baseplate.random",
+            "baseplate.requests",
+            "baseplate.retry",
+            "baseplate.secrets",
+            "baseplate.secrets.fetcher",
+            "baseplate.secrets.store",
+            "baseplate.server",
+            "baseplate.server.einhorn",
+            "baseplate.server.healthcheck",
+            "baseplate.server.reloader",
+            "baseplate.server.thrift",
+            "baseplate.server.wsgi",
+            "baseplate.service_discovery",
+            "baseplate.thrift_pool"
+        ],
+        "version": "0.27.0a0"
     },
     "test-by-ibobwong": {
         "cmdline": [],
@@ -40377,20 +40464,32 @@
         ],
         "version": "1.1.1"
     },
+    "tf-mdp": {
+        "cmdline": [
+            "tfmdp"
+        ],
+        "modules": [
+            "tests",
+            "tests.test_optimizer",
+            "tests.test_policy",
+            "tfmdp"
+        ],
+        "version": "0.1.1"
+    },
     "tf-nightly": {
         "cmdline": [],
         "modules": [],
-        "version": "1.11.0.dev20180820"
+        "version": "1.11.0.dev20180821"
     },
     "tf-nightly-gpu": {
         "cmdline": [],
         "modules": [],
-        "version": "1.11.0.dev20180820"
+        "version": "1.11.0.dev20180821"
     },
     "tf-nightly-xla-gpu": {
         "cmdline": [],
         "modules": [],
-        "version": "1.11.0.dev20180820"
+        "version": "1.11.0.dev20180821"
     },
     "tf-onnx": {
         "cmdline": [],
@@ -41770,7 +41869,7 @@
             "tensorflow_probability.python.vi",
             "tensorflow_probability.python.vi.csiszar_divergence"
         ],
-        "version": "0.4.0.dev20180820"
+        "version": "0.4.0.dev20180821"
     },
     "tfp-nightly-gpu": {
         "cmdline": [],
@@ -41925,7 +42024,7 @@
             "tensorflow_probability.python.vi",
             "tensorflow_probability.python.vi.csiszar_divergence"
         ],
-        "version": "0.4.0.dev20180820"
+        "version": "0.4.0.dev20180821"
     },
     "tfpromote": {
         "cmdline": [],
@@ -42172,6 +42271,14 @@
             "tfstate.utils"
         ],
         "version": "0.3.1"
+    },
+    "tfstatlookup": {
+        "cmdline": [],
+        "modules": [
+            "tfstatlookup",
+            "tfstatlookup.tests"
+        ],
+        "version": "1.0.0"
     },
     "tfswinlib": {
         "cmdline": [],
@@ -48230,6 +48337,11 @@
         ],
         "version": "0.4.2"
     },
+    "this": {
+        "cmdline": [],
+        "modules": [],
+        "version": "1534770457.523934"
+    },
     "this-cli": {
         "cmdline": [],
         "modules": [
@@ -52379,6 +52491,16 @@
         "modules": [],
         "version": "0.2"
     },
+    "thycotic-sdk-python-package": {
+        "cmdline": [],
+        "modules": [
+            "secret_server",
+            "secret_server.commands",
+            "secret_server.config",
+            "secret_server.sdk_client"
+        ],
+        "version": "0.0.4"
+    },
     "thymus-timeseries": {
         "cmdline": [],
         "modules": [
@@ -52410,11 +52532,10 @@
     "ti-me": {
         "cmdline": [],
         "modules": [
-            "timecli",
             "timelib",
             "timelib.singleuser"
         ],
-        "version": "0.2.1"
+        "version": "0.0.1"
     },
     "ti83f": {
         "cmdline": [],
@@ -53037,13 +53158,11 @@
         "version": "0.1"
     },
     "tickerbar": {
-        "cmdline": [
-            "tickerbar"
-        ],
+        "cmdline": [],
         "modules": [
             "tickerbar"
         ],
-        "version": "0.6"
+        "version": "0.7"
     },
     "ticket-auth": {
         "cmdline": [],
@@ -54613,7 +54732,7 @@
         "modules": [
             "tidycmd"
         ],
-        "version": "1.0.1"
+        "version": "1.1.0"
     },
     "tidyextractors": {
         "cmdline": [],
@@ -54681,11 +54800,10 @@
         "cmdline": [],
         "modules": [
             "tidynamics",
-            "tidynamics.core",
-            "tidynamics.correlation",
-            "tidynamics.version"
+            "tidynamics._correlation",
+            "tidynamics.core"
         ],
-        "version": "0.1.1"
+        "version": "1.0.0"
     },
     "tidypy": {
         "cmdline": [],
@@ -56658,6 +56776,14 @@
         ],
         "version": "1.1"
     },
+    "timeddict": {
+        "cmdline": [],
+        "modules": [
+            "TimedDict",
+            "TimedDict.timeddict"
+        ],
+        "version": "0.1.0"
+    },
     "timedelta": {
         "cmdline": [],
         "modules": [],
@@ -56757,7 +56883,7 @@
             "timefhuman.tokenize",
             "timefhuman.tree"
         ],
-        "version": "0.0.2"
+        "version": "0.0.3"
     },
     "timeflow": {
         "cmdline": [],
@@ -57289,7 +57415,7 @@
             "timeseries_toolkit.preprocessing",
             "timeseries_toolkit.transformations"
         ],
-        "version": "0.1.6.dev0"
+        "version": "0.1.7.dev0"
     },
     "timeseriesgen": {
         "cmdline": [],
@@ -63100,9 +63226,10 @@
     "tlds": {
         "cmdline": [],
         "modules": [
-            "tlds"
+            "tlds",
+            "tlds._data"
         ],
-        "version": "2018081900"
+        "version": "2018082101"
     },
     "tldtosms": {
         "cmdline": [],
@@ -63914,7 +64041,7 @@
             "tmatplot.utils",
             "tmatplot.waves"
         ],
-        "version": "0.1.3"
+        "version": "0.1.4"
     },
     "tmblr": {
         "cmdline": [],
@@ -69492,6 +69619,14 @@
         "modules": [],
         "version": "0.1"
     },
+    "tol": {
+        "cmdline": [],
+        "modules": [
+            "tol",
+            "tol.postgres"
+        ],
+        "version": "0.0.1"
+    },
     "toledger": {
         "cmdline": [
             "toledger.py"
@@ -70610,10 +70745,13 @@
     "toodledo": {
         "cmdline": [],
         "modules": [
+            "tests",
+            "tests.test_read",
+            "tests.test_read_and_write",
             "toodledo",
             "toodledo.toodledo"
         ],
-        "version": "0.4"
+        "version": "0.5"
     },
     "toodlepip": {
         "cmdline": [],
@@ -74055,7 +74193,7 @@
             "torchabc.types",
             "torchabc.unit"
         ],
-        "version": "0.1.18"
+        "version": "0.1.20"
     },
     "torchbearer": {
         "cmdline": [],
@@ -74078,14 +74216,17 @@
             "tests.metrics",
             "tests.metrics.test_aggregators",
             "tests.metrics.test_decorators",
+            "tests.metrics.test_default",
             "tests.metrics.test_metrics",
             "tests.metrics.test_primitives",
             "tests.metrics.test_roc_auc_score",
             "tests.metrics.test_timer",
             "tests.metrics.test_wrappers",
             "tests.test_cv_utils",
+            "tests.test_end_to_end",
             "tests.test_state",
             "tests.test_torchbearer",
+            "tests.test_trial",
             "torchbearer",
             "torchbearer.callbacks",
             "torchbearer.callbacks.aggregate_predictions",
@@ -74105,6 +74246,7 @@
             "torchbearer.metrics",
             "torchbearer.metrics.aggregators",
             "torchbearer.metrics.decorators",
+            "torchbearer.metrics.default",
             "torchbearer.metrics.metrics",
             "torchbearer.metrics.primitives",
             "torchbearer.metrics.roc_auc_score",
@@ -74112,9 +74254,10 @@
             "torchbearer.metrics.wrappers",
             "torchbearer.state",
             "torchbearer.torchbearer",
+            "torchbearer.trial",
             "torchbearer.version"
         ],
-        "version": "0.1.7"
+        "version": "0.2.0"
     },
     "torchdv": {
         "cmdline": [],
@@ -75252,7 +75395,7 @@
             "tormysql.pool",
             "tormysql.util"
         ],
-        "version": "0.3.9"
+        "version": "0.4.0"
     },
     "torn": {
         "cmdline": [],
@@ -77312,6 +77455,16 @@
             "toro-element"
         ],
         "version": "1.2"
+    },
+    "toro-mkdocs-kbd": {
+        "cmdline": [],
+        "modules": [],
+        "version": "1.0.0"
+    },
+    "toro-mkdocs-togglers": {
+        "cmdline": [],
+        "modules": [],
+        "version": "1.0.1"
     },
     "toro-shortcuts": {
         "cmdline": [],
@@ -82585,7 +82738,7 @@
             "trackanimation.tracking",
             "trackanimation.utils"
         ],
-        "version": "1.0.3"
+        "version": "1.0.4"
     },
     "trackclip": {
         "cmdline": [],
@@ -82803,13 +82956,14 @@
             "trackma.tracker.win32",
             "trackma.ui",
             "trackma.ui.cli",
+            "trackma.ui.cli-single",
             "trackma.ui.curses",
             "trackma.ui.gtkui",
             "trackma.ui.qt4ui",
             "trackma.ui.qtui",
             "trackma.utils"
         ],
-        "version": "0.7.4"
+        "version": "0.7.5"
     },
     "trackmac": {
         "cmdline": [],
@@ -83341,7 +83495,7 @@
             "privatetickets",
             "privatetickets.policy"
         ],
-        "version": "2.2.0"
+        "version": "2.3.0"
     },
     "tracprojectmenu": {
         "cmdline": [],
@@ -84052,7 +84206,7 @@
             "trading_api_wrappers.sfox.models",
             "trading_api_wrappers.surbtc"
         ],
-        "version": "0.14.1"
+        "version": "0.15.2"
     },
     "trading-bots": {
         "cmdline": [],
@@ -84069,7 +84223,6 @@
             "example_bots.technical_analysis",
             "example_bots.technical_analysis.bot",
             "trading_bots",
-            "trading_bots.__version__",
             "trading_bots.bots",
             "trading_bots.bots.base",
             "trading_bots.bots.logging",
@@ -84100,7 +84253,7 @@
             "trading_bots.core.utils",
             "trading_bots.utils"
         ],
-        "version": "0.2.9"
+        "version": "0.3.0"
     },
     "trading-calendars": {
         "cmdline": [],
@@ -92224,7 +92377,7 @@
             "treys.evaluator",
             "treys.lookup"
         ],
-        "version": "0.1"
+        "version": "0.1.3"
     },
     "trezor": {
         "cmdline": [
@@ -95917,6 +96070,13 @@
         "modules": [],
         "version": "1.0.1"
     },
+    "trizio2sce": {
+        "cmdline": [
+            "trizio2sce.py"
+        ],
+        "modules": [],
+        "version": "1.0"
+    },
     "trkr": {
         "cmdline": [],
         "modules": [
@@ -98271,6 +98431,11 @@
         "cmdline": [],
         "modules": [],
         "version": ""
+    },
+    "trustlines-contracts-bin": {
+        "cmdline": [],
+        "modules": [],
+        "version": "0.1.2"
     },
     "trustlines-watch": {
         "cmdline": [],
@@ -102644,7 +102809,7 @@
             "tsne",
             "tsne._version"
         ],
-        "version": "0.1.12"
+        "version": "0.1.13"
     },
     "tsnecuda": {
         "cmdline": [],
@@ -103654,6 +103819,7 @@
             "tsuruclient.base",
             "tsuruclient.client",
             "tsuruclient.containers",
+            "tsuruclient.deploys",
             "tsuruclient.events",
             "tsuruclient.healings",
             "tsuruclient.machines",
@@ -103663,7 +103829,7 @@
             "tsuruclient.templates",
             "tsuruclient.users"
         ],
-        "version": "0.3.14"
+        "version": "0.4.0"
     },
     "tsutil": {
         "cmdline": [],
@@ -104175,7 +104341,7 @@
             "ttlab.xps.XPS_data_reader",
             "ttlab.xps.XPS_functions"
         ],
-        "version": "0.44.52"
+        "version": "0.44.53"
     },
     "ttldict": {
         "cmdline": [],
@@ -104317,6 +104483,11 @@
     "ttoolly": {
         "cmdline": [],
         "modules": [
+            "test_app",
+            "test_app.apps",
+            "test_app.forms",
+            "test_app.models",
+            "test_app.views",
             "ttoolly",
             "ttoolly.html_report",
             "ttoolly.html_report.report",
@@ -104330,7 +104501,7 @@
             "ttoolly.runner",
             "ttoolly.utils"
         ],
-        "version": "0.26.12"
+        "version": "0.26.14"
     },
     "ttooongli-nester": {
         "cmdline": [],
@@ -104702,8 +104873,16 @@
     },
     "ttr-aws-utils-s3": {
         "cmdline": [],
-        "modules": [],
-        "version": "0.5.0"
+        "modules": [
+            "s3",
+            "s3.cli",
+            "s3.cli.getvers",
+            "s3.cli.lsvers",
+            "s3.cli.tmpgen",
+            "s3.saver",
+            "s3.utils"
+        ],
+        "version": "0.5.1"
     },
     "ttr-rdsutils": {
         "cmdline": [],
@@ -105277,7 +105456,7 @@
             "tuijam"
         ],
         "modules": [],
-        "version": "0.2.9"
+        "version": "0.2.11"
     },
     "tuile": {
         "cmdline": [],
@@ -105531,7 +105710,7 @@
             "tulips.resource.statefullset",
             "tulips.tulip"
         ],
-        "version": "1.1.17"
+        "version": "1.1.20"
     },
     "tulipy": {
         "cmdline": [],
