@@ -787,6 +787,7 @@
             "eadapters.models.budy.bd_product",
             "eadapters.models.budy.bd_referral",
             "eadapters.models.budy.bd_return",
+            "eadapters.models.budy.bd_season",
             "eadapters.models.budy.bd_section",
             "eadapters.models.budy.bd_shipping_option",
             "eadapters.models.budy.bd_state",
@@ -812,6 +813,7 @@
             "eadapters.models.payment_method",
             "eadapters.models.product",
             "eadapters.models.referral",
+            "eadapters.models.season",
             "eadapters.models.section",
             "eadapters.models.shipping_option",
             "eadapters.models.state",
@@ -820,7 +822,7 @@
             "eadapters.models.wishlist",
             "eadapters.models.wishlist_line"
         ],
-        "version": "0.3.8"
+        "version": "0.3.11"
     },
     "eadator": {
         "cmdline": [],
@@ -2418,7 +2420,7 @@
             "easy_net_tf.utility.tf",
             "easy_net_tf.utility.variable"
         ],
-        "version": "0.0.65"
+        "version": "0.0.67"
     },
     "easy-notifier": {
         "cmdline": [],
@@ -3651,7 +3653,7 @@
             "easydollar.USD",
             "easydollar.examples"
         ],
-        "version": "1.0.1"
+        "version": "1.0.2"
     },
     "easyeeg": {
         "cmdline": [],
@@ -17096,20 +17098,117 @@
         "cmdline": [],
         "modules": [
             "consent",
+            "consent.admin",
+            "consent.api",
+            "consent.api.permissions",
+            "consent.api.urls",
+            "consent.api.v1",
+            "consent.api.v1.urls",
+            "consent.api.v1.views",
             "consent.apps",
             "consent.errors",
             "consent.helpers",
+            "consent.migrations",
+            "consent.migrations.0001_initial",
+            "consent.migrations.0002_migrate_to_new_data_sharing_consent",
+            "consent.migrations.0003_historicaldatasharingconsent_history_change_reason",
+            "consent.migrations.0004_datasharingconsenttextoverrides",
             "consent.mixins",
             "consent.models",
             "consent.urls",
             "enterprise",
+            "enterprise.admin",
+            "enterprise.admin.actions",
+            "enterprise.admin.forms",
+            "enterprise.admin.paginator",
+            "enterprise.admin.utils",
+            "enterprise.admin.views",
+            "enterprise.api",
+            "enterprise.api.filters",
+            "enterprise.api.pagination",
+            "enterprise.api.throttles",
+            "enterprise.api.urls",
+            "enterprise.api.utils",
+            "enterprise.api.v1",
+            "enterprise.api.v1.decorators",
+            "enterprise.api.v1.mixins",
+            "enterprise.api.v1.permissions",
+            "enterprise.api.v1.serializers",
+            "enterprise.api.v1.urls",
+            "enterprise.api.v1.views",
+            "enterprise.api_client",
+            "enterprise.api_client.discovery",
+            "enterprise.api_client.ecommerce",
+            "enterprise.api_client.enterprise",
+            "enterprise.api_client.lms",
             "enterprise.apps",
             "enterprise.constants",
             "enterprise.decorators",
             "enterprise.django_compatibility",
+            "enterprise.management",
+            "enterprise.management.commands",
+            "enterprise.management.commands.create_enterprise_course_enrollments",
+            "enterprise.management.commands.save_enterprise_customer_users",
             "enterprise.messages",
+            "enterprise.migrations",
+            "enterprise.migrations.0001_initial",
+            "enterprise.migrations.0002_enterprisecustomerbrandingconfiguration",
+            "enterprise.migrations.0003_auto_20161104_0937",
+            "enterprise.migrations.0004_auto_20161114_0434",
+            "enterprise.migrations.0005_pendingenterprisecustomeruser",
+            "enterprise.migrations.0006_auto_20161121_0241",
+            "enterprise.migrations.0007_auto_20161109_1511",
+            "enterprise.migrations.0008_auto_20161124_2355",
+            "enterprise.migrations.0009_auto_20161130_1651",
+            "enterprise.migrations.0010_auto_20161222_1212",
+            "enterprise.migrations.0011_enterprisecustomerentitlement_historicalenterprisecustomerentitlement",
+            "enterprise.migrations.0012_auto_20170125_1033",
+            "enterprise.migrations.0013_auto_20170125_1157",
+            "enterprise.migrations.0014_enrollmentnotificationemailtemplate_historicalenrollmentnotificationemailtemplate",
+            "enterprise.migrations.0015_auto_20170130_0003",
+            "enterprise.migrations.0016_auto_20170405_0647",
+            "enterprise.migrations.0017_auto_20170508_1341",
+            "enterprise.migrations.0018_auto_20170511_1357",
+            "enterprise.migrations.0019_auto_20170606_1853",
+            "enterprise.migrations.0020_auto_20170624_2316",
+            "enterprise.migrations.0021_auto_20170711_0712",
+            "enterprise.migrations.0022_auto_20170720_1543",
+            "enterprise.migrations.0023_audit_data_reporting_flag",
+            "enterprise.migrations.0024_enterprisecustomercatalog_historicalenterprisecustomercatalog",
+            "enterprise.migrations.0025_auto_20170828_1412",
+            "enterprise.migrations.0026_make_require_account_level_consent_nullable",
+            "enterprise.migrations.0027_remove_account_level_consent",
+            "enterprise.migrations.0028_link_enterprise_to_enrollment_template",
+            "enterprise.migrations.0029_auto_20170925_1909",
+            "enterprise.migrations.0030_auto_20171005_1600",
+            "enterprise.migrations.0031_auto_20171012_1249",
+            "enterprise.migrations.0032_reporting_model",
+            "enterprise.migrations.0033_add_history_change_reason_field",
+            "enterprise.migrations.0034_auto_20171023_0727",
+            "enterprise.migrations.0035_auto_20171212_1129",
+            "enterprise.migrations.0036_sftp_reporting_support",
+            "enterprise.migrations.0037_auto_20180110_0450",
+            "enterprise.migrations.0038_auto_20180122_1427",
+            "enterprise.migrations.0039_auto_20180129_1034",
+            "enterprise.migrations.0040_auto_20180129_1428",
+            "enterprise.migrations.0041_auto_20180212_1507",
+            "enterprise.migrations.0042_replace_sensitive_sso_username",
+            "enterprise.migrations.0043_auto_20180507_0138",
+            "enterprise.migrations.0044_reporting_config_multiple_types",
+            "enterprise.migrations.0045_report_type_json",
+            "enterprise.migrations.0046_remove_unique_constraints",
+            "enterprise.migrations.0047_auto_20180517_0457",
+            "enterprise.migrations.0048_enterprisecustomeruser_active",
+            "enterprise.migrations.0049_auto_20180531_0321",
+            "enterprise.migrations.0050_progress_v2",
+            "enterprise.migrations.0051_add_enterprise_slug",
+            "enterprise.migrations.0052_create_unique_slugs",
             "enterprise.models",
+            "enterprise.settings",
+            "enterprise.settings.test",
             "enterprise.signals",
+            "enterprise.templatetags",
+            "enterprise.templatetags.enterprise",
             "enterprise.tpa_pipeline",
             "enterprise.urls",
             "enterprise.utils",
@@ -17117,30 +17216,97 @@
             "enterprise.views",
             "integrated_channels",
             "integrated_channels.degreed",
+            "integrated_channels.degreed.admin",
             "integrated_channels.degreed.apps",
             "integrated_channels.degreed.client",
+            "integrated_channels.degreed.exporters",
+            "integrated_channels.degreed.exporters.content_metadata",
+            "integrated_channels.degreed.exporters.learner_data",
+            "integrated_channels.degreed.migrations",
+            "integrated_channels.degreed.migrations.0001_initial",
+            "integrated_channels.degreed.migrations.0002_auto_20180104_0103",
+            "integrated_channels.degreed.migrations.0003_auto_20180109_0712",
+            "integrated_channels.degreed.migrations.0004_auto_20180306_1251",
+            "integrated_channels.degreed.migrations.0005_auto_20180807_1302",
             "integrated_channels.degreed.models",
+            "integrated_channels.degreed.transmitters",
+            "integrated_channels.degreed.transmitters.content_metadata",
+            "integrated_channels.degreed.transmitters.learner_data",
             "integrated_channels.exceptions",
             "integrated_channels.integrated_channel",
             "integrated_channels.integrated_channel.apps",
             "integrated_channels.integrated_channel.client",
+            "integrated_channels.integrated_channel.exporters",
+            "integrated_channels.integrated_channel.exporters.content_metadata",
+            "integrated_channels.integrated_channel.exporters.learner_data",
+            "integrated_channels.integrated_channel.management",
+            "integrated_channels.integrated_channel.management.commands",
+            "integrated_channels.integrated_channel.management.commands.transmit_content_metadata",
+            "integrated_channels.integrated_channel.management.commands.transmit_learner_data",
+            "integrated_channels.integrated_channel.migrations",
+            "integrated_channels.integrated_channel.migrations.0001_initial",
+            "integrated_channels.integrated_channel.migrations.0002_delete_enterpriseintegratedchannel",
+            "integrated_channels.integrated_channel.migrations.0003_catalogtransmissionaudit_learnerdatatransmissionaudit",
+            "integrated_channels.integrated_channel.migrations.0004_catalogtransmissionaudit_channel",
+            "integrated_channels.integrated_channel.migrations.0005_auto_20180306_1251",
+            "integrated_channels.integrated_channel.migrations.0006_delete_catalogtransmissionaudit",
             "integrated_channels.integrated_channel.models",
             "integrated_channels.integrated_channel.tasks",
+            "integrated_channels.integrated_channel.transmitters",
+            "integrated_channels.integrated_channel.transmitters.content_metadata",
+            "integrated_channels.integrated_channel.transmitters.learner_data",
             "integrated_channels.sap_success_factors",
+            "integrated_channels.sap_success_factors.admin",
             "integrated_channels.sap_success_factors.apps",
             "integrated_channels.sap_success_factors.client",
             "integrated_channels.sap_success_factors.constants",
+            "integrated_channels.sap_success_factors.exporters",
+            "integrated_channels.sap_success_factors.exporters.content_metadata",
+            "integrated_channels.sap_success_factors.exporters.learner_data",
+            "integrated_channels.sap_success_factors.exporters.utils",
+            "integrated_channels.sap_success_factors.migrations",
+            "integrated_channels.sap_success_factors.migrations.0001_initial",
+            "integrated_channels.sap_success_factors.migrations.0002_auto_20170224_1545",
+            "integrated_channels.sap_success_factors.migrations.0003_auto_20170317_1402",
+            "integrated_channels.sap_success_factors.migrations.0004_catalogtransmissionaudit_audit_summary",
+            "integrated_channels.sap_success_factors.migrations.0005_historicalsapsuccessfactorsenterprisecustomerconfiguration_history_change_reason",
+            "integrated_channels.sap_success_factors.migrations.0006_sapsuccessfactors_use_enterprise_enrollment_page_waffle_flag",
+            "integrated_channels.sap_success_factors.migrations.0007_remove_historicalsapsuccessfactorsenterprisecustomerconfiguration_history_change_reason",
+            "integrated_channels.sap_success_factors.migrations.0008_historicalsapsuccessfactorsenterprisecustomerconfiguration_history_change_reason",
+            "integrated_channels.sap_success_factors.migrations.0009_sapsuccessfactors_remove_enterprise_enrollment_page_waffle_flag",
+            "integrated_channels.sap_success_factors.migrations.0010_move_audit_tables_to_base_integrated_channel",
+            "integrated_channels.sap_success_factors.migrations.0011_auto_20180104_0103",
+            "integrated_channels.sap_success_factors.migrations.0012_auto_20180109_0712",
+            "integrated_channels.sap_success_factors.migrations.0013_auto_20180306_1251",
+            "integrated_channels.sap_success_factors.migrations.0014_drop_historical_table",
+            "integrated_channels.sap_success_factors.migrations.0015_auto_20180510_1259",
+            "integrated_channels.sap_success_factors.migrations.0016_sapsuccessfactorsenterprisecustomerconfiguration_additional_locales",
             "integrated_channels.sap_success_factors.models",
+            "integrated_channels.sap_success_factors.transmitters",
+            "integrated_channels.sap_success_factors.transmitters.content_metadata",
+            "integrated_channels.sap_success_factors.transmitters.learner_data",
             "integrated_channels.utils",
             "integrated_channels.xapi",
+            "integrated_channels.xapi.admin",
             "integrated_channels.xapi.apps",
             "integrated_channels.xapi.client",
             "integrated_channels.xapi.constants",
+            "integrated_channels.xapi.management",
+            "integrated_channels.xapi.management.commands",
+            "integrated_channels.xapi.management.commands.send_course_completions",
+            "integrated_channels.xapi.management.commands.send_course_enrollments",
+            "integrated_channels.xapi.migrations",
+            "integrated_channels.xapi.migrations.0001_initial",
+            "integrated_channels.xapi.migrations.0002_auto_20180726_0142",
             "integrated_channels.xapi.models",
             "integrated_channels.xapi.serializers",
+            "integrated_channels.xapi.statements",
+            "integrated_channels.xapi.statements.base",
+            "integrated_channels.xapi.statements.learner_course_completion",
+            "integrated_channels.xapi.statements.learner_course_enrollment",
             "integrated_channels.xapi.utils"
         ],
-        "version": "0.72.7"
+        "version": "0.73.0"
     },
     "edx-enterprise-data": {
         "cmdline": [],
@@ -17922,7 +18088,7 @@
             "eea.converter.utils",
             "eea.converter.watermark"
         ],
-        "version": "12.2"
+        "version": "12.3"
     },
     "eea-daviz": {
         "cmdline": [],
@@ -21826,7 +21992,7 @@
             "eks_switcher.aws_eks",
             "eks_switcher.kube_config"
         ],
-        "version": "0.5"
+        "version": "0.6"
     },
     "ekscli": {
         "cmdline": [],
@@ -30282,6 +30448,14 @@
         ],
         "version": "1.2.8"
     },
+    "empdist": {
+        "cmdline": [],
+        "modules": [
+            "empdist",
+            "empdist.empirical_distribution"
+        ],
+        "version": "0.0.2"
+    },
     "emperor": {
         "cmdline": [
             "make_emperor.py"
@@ -35139,7 +35313,7 @@
             "energycap.sdk.models.workflow_workflow_settings_response_dto",
             "energycap.sdk.version"
         ],
-        "version": "7.2.0.90.post1535035146"
+        "version": "7.2.0.90.post1535129381"
     },
     "energydram": {
         "cmdline": [],
@@ -40238,6 +40412,7 @@
         "cmdline": [],
         "modules": [
             "eoffcn_ai",
+            "eoffcn_ai.explain",
             "eoffcn_ai.image",
             "eoffcn_ai.image.process",
             "eoffcn_ai.image.tool",
@@ -40250,7 +40425,7 @@
             "eoffcn_ai.ocr_api.baidu",
             "eoffcn_ai.ocr_api.xunfei"
         ],
-        "version": "0.1.0"
+        "version": "0.1.1"
     },
     "eofs": {
         "cmdline": [],
@@ -41884,7 +42059,7 @@
             "sumolib.tar",
             "sumolib.utils"
         ],
-        "version": "3.4.1"
+        "version": "3.5"
     },
     "epicscorelibs": {
         "cmdline": [],
@@ -45216,7 +45391,7 @@
             "ergo.misc",
             "ergo.simple"
         ],
-        "version": "0.4.2"
+        "version": "0.4.4"
     },
     "ergo-pytorch": {
         "cmdline": [],
@@ -45311,6 +45486,9 @@
             "eri.bootstrap",
             "eri.cache",
             "eri.clean",
+            "eri.colors",
+            "eri.dash",
+            "eri.dash.bootstrap",
             "eri.decorators",
             "eri.graph",
             "eri.html",
@@ -45325,7 +45503,7 @@
             "eri.visualization.words",
             "eri.weighted_bootstrap_sampling"
         ],
-        "version": "0.1.4"
+        "version": "0.1.5"
     },
     "eric-printlist": {
         "cmdline": [],
@@ -47065,7 +47243,6 @@
         "cmdline": [],
         "modules": [
             "esda",
-            "esda.api",
             "esda.gamma",
             "esda.geary",
             "esda.getisord",
@@ -47073,9 +47250,17 @@
             "esda.mixture_smoothing",
             "esda.moran",
             "esda.smoothing",
-            "esda.tabular"
+            "esda.tabular",
+            "esda.tests",
+            "esda.tests.test_gamma",
+            "esda.tests.test_geary",
+            "esda.tests.test_getisord",
+            "esda.tests.test_join_counts",
+            "esda.tests.test_mixture_smoothing",
+            "esda.tests.test_moran",
+            "esda.tests.test_smoothing"
         ],
-        "version": "1.0.1.dev0"
+        "version": "2.0.0"
     },
     "esdc-api": {
         "cmdline": [],
@@ -48445,7 +48630,7 @@
             "esprima.visitor",
             "esprima.xhtml_entities"
         ],
-        "version": "4.0.0"
+        "version": "4.0.1"
     },
     "esptool": {
         "cmdline": [
@@ -56276,7 +56461,7 @@
             "eventregistry.Trends",
             "eventregistry._version"
         ],
-        "version": "8.3.0"
+        "version": "8.4.0"
     },
     "events": {
         "cmdline": [],
@@ -58698,7 +58883,7 @@
             "ews_cli.rules",
             "ews_cli.util"
         ],
-        "version": "0.1.0.7"
+        "version": "0.1.0.9"
     },
     "ewscal": {
         "cmdline": [],
@@ -60411,6 +60596,13 @@
             "example.rtsubsites_theme.tests"
         ],
         "version": "0.1.0"
+    },
+    "example-sheko-j": {
+        "cmdline": [],
+        "modules": [
+            "example_sheko_j"
+        ],
+        "version": "0.0.1"
     },
     "example1": {
         "cmdline": [],
