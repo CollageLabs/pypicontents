@@ -19,7 +19,7 @@ Traceback (most recent call last):
     raise HTTPError(req.full_url, code, msg, hdrs, fp)
 urllib.error.HTTPError: HTTP Error 404: Not Found
 
-[INFO] (e-drone) Data has been updated for this package.
+[INFO] (e-drone) This package is up to date.
 [INFO] (e-lti) This package is up to date.
 [INFO] (e-s-p-hadouken) This package is up to date.
 [INFO] (e13tools) This package is up to date.
@@ -112,17 +112,25 @@ Traceback (most recent call last):
     f.write(urlopen(url=urlesc(pkgurl), timeout=10).read())
   File "/usr/lib/python3.5/urllib/request.py", line 163, in urlopen
     return opener.open(url, data, timeout)
-  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
-    response = meth(req, response)
-  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
-    'http', request, response, code, msg, hdrs)
-  File "/usr/lib/python3.5/urllib/request.py", line 510, in error
-    return self._call_chain(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 466, in open
+    response = self._open(req, data)
+  File "/usr/lib/python3.5/urllib/request.py", line 484, in _open
+    '_open', req)
   File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
     result = func(*args)
-  File "/usr/lib/python3.5/urllib/request.py", line 590, in http_error_default
-    raise HTTPError(req.full_url, code, msg, hdrs, fp)
-urllib.error.HTTPError: HTTP Error 404: Not Found
+  File "/usr/lib/python3.5/urllib/request.py", line 1282, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "/usr/lib/python3.5/urllib/request.py", line 1257, in do_open
+    r = h.getresponse()
+  File "/usr/lib/python3.5/http/client.py", line 1198, in getresponse
+    response.begin()
+  File "/usr/lib/python3.5/http/client.py", line 297, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.5/http/client.py", line 258, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.5/socket.py", line 576, in readinto
+    return self._sock.recv_into(b)
+socket.timeout: timed out
 
 [INFO] (earthchem) This package is up to date.
 [INFO] (earthengine-api) This package is up to date.
@@ -502,7 +510,44 @@ Unsupported package directory structure.
 [INFO] (easyspc) This package is up to date.
 [INFO] (easyspider) This package is up to date.
 [INFO] (easystate) This package is up to date.
-[INFO] (easysteem) This package is up to date.
+[ERROR] (easysteem) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.5/urllib/request.py", line 163, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.5/urllib/request.py", line 504, in error
+    result = self._call_chain(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 696, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.5/urllib/request.py", line 504, in error
+    result = self._call_chain(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 696, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.5/urllib/request.py", line 510, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 590, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+
 [INFO] (easystore) This package is up to date.
 [INFO] (easysvg) This package is up to date.
 [ERROR] (easytable) This package does not have downloadable releases.
@@ -690,7 +735,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (ec2-tag-conditional) This package is up to date.
 [INFO] (ec2-task) This package is up to date.
 [INFO] (ec2ansible) This package is up to date.
-[INFO] (ec2api-tempest-plugin) Data has been updated for this package.
+[INFO] (ec2api-tempest-plugin) This package is up to date.
 [INFO] (ec2audit) This package is up to date.
 [INFO] (ec2cluster) This package is up to date.
 [INFO] (ec2deprecateimg) This package is up to date.
@@ -711,7 +756,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (ec2stack) This package is up to date.
 [INFO] (ec2stash) This package is up to date.
 [INFO] (ec2tagread) This package is up to date.
-[INFO] (ec2tools) This package is up to date.
+[INFO] (ec2tools) Data has been updated for this package.
 [INFO] (ec2uploadimg) This package is up to date.
 [INFO] (ec2util) This package is up to date.
 [INFO] (ec2utilsbase) This package is up to date.
@@ -863,7 +908,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (ecoxipy) This package is up to date.
 [INFO] (ecp) This package is up to date.
 [INFO] (ecpay-invoice) This package is up to date.
-[INFO] (ecpay-invoice3) Data has been updated for this package.
+[INFO] (ecpay-invoice3) This package is up to date.
 [INFO] (ecpy) This package is up to date.
 [INFO] (ecr-cleanup) This package is up to date.
 [INFO] (ecr-cli) This package is up to date.
@@ -877,7 +922,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (ecs) This package is up to date.
 [INFO] (ecs-auditor) This package is up to date.
 [INFO] (ecs-cart) This package is up to date.
-[INFO] (ecs-compose) Data has been updated for this package.
+[INFO] (ecs-compose) This package is up to date.
 [INFO] (ecs-consul-reg) This package is up to date.
 [INFO] (ecs-ctl) This package is up to date.
 [INFO] (ecs-demo) This package is up to date.
@@ -1242,7 +1287,7 @@ This package download URL does not point to a valid file: "http://oodt.jpl.nasa.
 [INFO] (edx-django-oauth2-provider) This package is up to date.
 [INFO] (edx-django-release-util) This package is up to date.
 [INFO] (edx-django-sites-extensions) This package is up to date.
-[INFO] (edx-django-utils) This package is up to date.
+[INFO] (edx-django-utils) Data has been updated for this package.
 [INFO] (edx-dl) This package is up to date.
 [INFO] (edx-drf-extensions) This package is up to date.
 [INFO] (edx-ecommerce-api-client) This package is up to date.
@@ -1833,8 +1878,9 @@ This package download URL does not point to a valid file: "http://effbot.org/dow
 [INFO] (elgato-lib) This package is up to date.
 [INFO] (eli5) This package is up to date.
 [INFO] (elib) This package is up to date.
-[INFO] (elib-config) Data has been updated for this package.
+[INFO] (elib-config) This package is up to date.
 [INFO] (elib-logging) This package is up to date.
+[INFO] (elib-run) Data has been updated for this package.
 [INFO] (elibom) This package is up to date.
 [INFO] (elicit) This package is up to date.
 [ERROR] (elide) This package does not have downloadable releases.
@@ -2023,6 +2069,26 @@ Traceback (most recent call last):
     response = meth(req, response)
   File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
     'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.5/urllib/request.py", line 504, in error
+    result = self._call_chain(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 696, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.5/urllib/request.py", line 504, in error
+    result = self._call_chain(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 696, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
+    'http', request, response, code, msg, hdrs)
   File "/usr/lib/python3.5/urllib/request.py", line 510, in error
     return self._call_chain(*args)
   File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
@@ -2139,7 +2205,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (embed-python) This package is up to date.
 [ERROR] (embedc) Could not extract data from this package. See below for details.
 This package download URL does not point to a valid file: "https://sourceforge.net/projects/pyembedc/files/latest/download"
-[INFO] (embedded-jubatus) Data has been updated for this package.
+[INFO] (embedded-jubatus) This package is up to date.
 [INFO] (embeddify) This package is up to date.
 [INFO] (embeddings) This package is up to date.
 [INFO] (embeder) This package is up to date.
@@ -2369,7 +2435,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (empath) This package is up to date.
 [ERROR] (empathy) This package does not have downloadable releases.
 [INFO] (empathy-machines) This package is up to date.
-[INFO] (empatie-python) This package is up to date.
+[INFO] (empatie-python) Data has been updated for this package.
 [INFO] (empdist) This package is up to date.
 [INFO] (emperor) This package is up to date.
 [INFO] (empiar-depositor) This package is up to date.
@@ -2573,7 +2639,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (engcoolprop) This package is up to date.
 [INFO] (engel) This package is up to date.
 [INFO] (engfmt) This package is up to date.
-[INFO] (engformat) This package is up to date.
+[INFO] (engformat) Data has been updated for this package.
 [ERROR] (engine) Could not extract data from this package. See below for details.
 This package download URL does not point to a valid file: "http://www.pythonweb.org/engine/release/"
 [INFO] (engineer) This package is up to date.
@@ -2961,7 +3027,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (eodclient) This package is up to date.
 [INFO] (eoddata-client) This package is up to date.
 [INFO] (eoe) This package is up to date.
-[INFO] (eoffcn-ai) Data has been updated for this package.
+[INFO] (eoffcn-ai) This package is up to date.
 [INFO] (eofs) This package is up to date.
 [INFO] (eol) This package is up to date.
 [INFO] (eolas) This package is up to date.
@@ -3076,7 +3142,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (epicode) This package is up to date.
 [INFO] (epics-ca) This package is up to date.
 [INFO] (epics-sumo) This package is up to date.
-[INFO] (epicscorelibs) Data has been updated for this package.
+[INFO] (epicscorelibs) This package is up to date.
 [INFO] (epicserver) This package is up to date.
 [INFO] (epicurus) This package is up to date.
 [INFO] (epicycler) This package is up to date.
@@ -3214,7 +3280,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (eqcorrscan) This package is up to date.
 [INFO] (eqdes) This package is up to date.
 [INFO] (eqi-analysis) This package is up to date.
-[INFO] (eqi-utils) Data has been updated for this package.
+[INFO] (eqi-utils) This package is up to date.
 [INFO] (eqjson) This package is up to date.
 [ERROR] (eqpy) This package does not have downloadable releases.
 [INFO] (eqsig) This package is up to date.
@@ -3577,7 +3643,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (espandas) This package is up to date.
 [INFO] (espatools) This package is up to date.
 [ERROR] (espeed) This package does not have downloadable releases.
-[INFO] (espei) This package is up to date.
+[INFO] (espei) Data has been updated for this package.
 [INFO] (esper) This package is up to date.
 [INFO] (esper-tool) This package is up to date.
 [INFO] (esper-wave) This package is up to date.
@@ -3749,7 +3815,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (etesync-dav) This package is up to date.
 [INFO] (etgen) This package is up to date.
 [INFO] (eth) This package is up to date.
-[INFO] (eth-abi) This package is up to date.
+[INFO] (eth-abi) Data has been updated for this package.
 [INFO] (eth-account) This package is up to date.
 [INFO] (eth-bloom) This package is up to date.
 [INFO] (eth-channel) This package is up to date.
@@ -3764,7 +3830,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (eth-tester) This package is up to date.
 [INFO] (eth-tester-rpc) This package is up to date.
 [INFO] (eth-testrpc) This package is up to date.
-[INFO] (eth-typing) Data has been updated for this package.
+[INFO] (eth-typing) This package is up to date.
 [INFO] (eth-utils) This package is up to date.
 [INFO] (eth-validation) This package is up to date.
 [ERROR] (eth-vyper) Could not get a response from API for this package. See below for details.
@@ -4129,12 +4195,12 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (eval-scrubber) This package is up to date.
 [INFO] (eval7) This package is up to date.
 [INFO] (evalai) This package is up to date.
-[INFO] (evalcache) This package is up to date.
+[INFO] (evalcache) Data has been updated for this package.
 [INFO] (evalexpr) This package is up to date.
 [INFO] (evalidate) This package is up to date.
 [INFO] (evalidator) This package is up to date.
 [INFO] (evalkit-api-client) This package is up to date.
-[INFO] (evalmate) Data has been updated for this package.
+[INFO] (evalmate) This package is up to date.
 [INFO] (evalutils) This package is up to date.
 [INFO] (evalys) This package is up to date.
 [INFO] (evarify) This package is up to date.
@@ -4147,10 +4213,10 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (evax-bitten-tools) This package is up to date.
 [INFO] (evbus) This package is up to date.
 [INFO] (evcouplings) This package is up to date.
-[INFO] (evdev) Data has been updated for this package.
+[INFO] (evdev) This package is up to date.
 [INFO] (eve) This package is up to date.
 [INFO] (eve-api-client) This package is up to date.
-[INFO] (eve-arango) Data has been updated for this package.
+[INFO] (eve-arango) This package is up to date.
 [INFO] (eve-auth-jwt) This package is up to date.
 [INFO] (eve-cli) This package is up to date.
 [INFO] (eve-cli-client) This package is up to date.
@@ -4243,12 +4309,12 @@ Traceback (most recent call last):
     raise HTTPError(req.full_url, code, msg, hdrs, fp)
 urllib.error.HTTPError: HTTP Error 404: Not Found
 
-[INFO] (eventcore) Data has been updated for this package.
+[INFO] (eventcore) This package is up to date.
 [INFO] (eventcore-kafka) This package is up to date.
 [INFO] (eventcore-sqs) This package is up to date.
 [INFO] (eventdetector) This package is up to date.
 [INFO] (eventdispatcher) This package is up to date.
-[INFO] (eventeditor) Data has been updated for this package.
+[INFO] (eventeditor) This package is up to date.
 [INFO] (eventedpy) This package is up to date.
 [INFO] (eventemitter) This package is up to date.
 [INFO] (eventer) This package is up to date.
@@ -4342,7 +4408,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (evernode) This package is up to date.
 [INFO] (evernote) This package is up to date.
 [INFO] (evernote-moment) This package is up to date.
-[INFO] (evernote-oauth-sample) Data has been updated for this package.
+[INFO] (evernote-oauth-sample) This package is up to date.
 [INFO] (evernote3) This package is up to date.
 [INFO] (evernym-state) This package is up to date.
 [INFO] (evernym-state-rocksdb) This package is up to date.
@@ -4445,7 +4511,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (evtxtract) This package is up to date.
 [INFO] (evv4esm) This package is up to date.
 [INFO] (evzookeeper) This package is up to date.
-[INFO] (ew-link-bond) Data has been updated for this package.
+[INFO] (ew-link-bond) This package is up to date.
 [INFO] (ewa) This package is up to date.
 [INFO] (ewave) This package is up to date.
 [INFO] (eway-rapid-python) This package is up to date.
@@ -4670,7 +4736,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (execmode) This package is up to date.
 [INFO] (execnet) This package is up to date.
 [INFO] (execo) This package is up to date.
-[INFO] (execsql) Data has been updated for this package.
+[INFO] (execsql) This package is up to date.
 [INFO] (exectree) This package is up to date.
 [INFO] (execute) This package is up to date.
 [INFO] (executecmd) This package is up to date.
@@ -4701,7 +4767,7 @@ This package download URL does not point to a valid file: "http://effbot.org/dow
 [INFO] (exguard) This package is up to date.
 [INFO] (exgutils) This package is up to date.
 [INFO] (exhale) This package is up to date.
-[INFO] (exhibition) Data has been updated for this package.
+[INFO] (exhibition) This package is up to date.
 [ERROR] (exhibitionist) This package does not have downloadable releases.
 [INFO] (exhibitor2dns) This package is up to date.
 [INFO] (exhmp) This package is up to date.
@@ -4770,7 +4836,7 @@ This package download URL does not point to a valid file: "http://effbot.org/dow
 [INFO] (exp-list) This package is up to date.
 [INFO] (exp-sdk) This package is up to date.
 [INFO] (exp100) This package is up to date.
-[INFO] (exp10it) Data has been updated for this package.
+[INFO] (exp10it) This package is up to date.
 [INFO] (expak) This package is up to date.
 [INFO] (expan) This package is up to date.
 [INFO] (expanalysis) This package is up to date.
@@ -4949,7 +5015,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (exreporter) This package is up to date.
 [INFO] (exrex) This package is up to date.
 [INFO] (exscript) This package is up to date.
-[INFO] (exsim) Data has been updated for this package.
+[INFO] (exsim) This package is up to date.
 [INFO] (exsort) This package is up to date.
 [ERROR] (ext) This package does not have downloadable releases.
 [INFO] (ext-auth) This package is up to date.
@@ -4963,7 +5029,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (extasy-wrappers) This package is up to date.
 [INFO] (extasycoco) This package is up to date.
 [INFO] (extbrightness) This package is up to date.
-[INFO] (extcats) Data has been updated for this package.
+[INFO] (extcats) This package is up to date.
 [INFO] (extcmd) This package is up to date.
 [INFO] (extcolors) This package is up to date.
 [INFO] (extdbg) This package is up to date.
@@ -5068,7 +5134,7 @@ urllib.error.URLError: <urlopen error timed out>
 [INFO] (extractcontent3) This package is up to date.
 [INFO] (extractemail) This package is up to date.
 [INFO] (extractfq) This package is up to date.
-[INFO] (extractini) Data has been updated for this package.
+[INFO] (extractini) This package is up to date.
 [INFO] (extraction) This package is up to date.
 [INFO] (extraction-network) This package is up to date.
 [INFO] (extractiontool) This package is up to date.
@@ -5091,7 +5157,7 @@ urllib.error.URLError: <urlopen error timed out>
 [INFO] (extscrape) This package is up to date.
 [INFO] (extypes) This package is up to date.
 [INFO] (exurl) This package is up to date.
-[INFO] (exutil) Data has been updated for this package.
+[INFO] (exutil) This package is up to date.
 [INFO] (exvar) This package is up to date.
 [INFO] (exverify) This package is up to date.
 [INFO] (exvocabulary) This package is up to date.
@@ -5254,11 +5320,11 @@ This package download URL does not point to a valid file: "http://www.billbaxter
 [INFO] (ezzybot) This package is up to date.
 [INFO] 
 [INFO] 
-[INFO] Total packages: 3842
-[INFO]     Packages processed: 3842
-[INFO]         Packages updated: 35
-[INFO]         Packages up-to-date: 3525
-[INFO]         Packages without response: 49
+[INFO] Total packages: 3843
+[INFO]     Packages processed: 3843
+[INFO]         Packages updated: 19
+[INFO]         Packages up-to-date: 3541
+[INFO]         Packages without response: 50
 [INFO]         Packages without urls: 0
 [INFO]         Packages without downloads: 185
 [INFO]         Packages with data errors: 48
