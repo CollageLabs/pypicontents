@@ -1151,7 +1151,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (rayle) This package is up to date.
 [INFO] (rayleigh) This package is up to date.
 [INFO] (rayleigh-module) This package is up to date.
-[INFO] (raylib-py) Data has been updated for this package.
+[INFO] (raylib-py) This package is up to date.
 [INFO] (raynbow) This package is up to date.
 [INFO] (raynet) This package is up to date.
 [INFO] (rayopt) This package is up to date.
@@ -1247,9 +1247,10 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (rc) This package is up to date.
 [INFO] (rc-cli) This package is up to date.
 [INFO] (rc-demo) This package is up to date.
-[INFO] (rc-django-celery-results) Data has been updated for this package.
+[INFO] (rc-django-celery-results) This package is up to date.
 [INFO] (rc-docs) This package is up to date.
 [INFO] (rc-policy) This package is up to date.
+[INFO] (rc-ssl-logtools) Data has been updated for this package.
 [INFO] (rc-theme) This package is up to date.
 [INFO] (rc-types) This package is up to date.
 [INFO] (rc2) This package is up to date.
@@ -1260,6 +1261,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (rcctl) This package is up to date.
 [INFO] (rcfast) This package is up to date.
 [INFO] (rcfc) Data has been updated for this package.
+[INFO] (rcfdtdpy) Data has been updated for this package.
 [INFO] (rcfile) This package is up to date.
 [INFO] (rcgrep) This package is up to date.
 [INFO] (rchain) This package is up to date.
@@ -1295,6 +1297,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (rcsdk) This package is up to date.
 [INFO] (rcsh) This package is up to date.
 [INFO] (rcsprint) This package is up to date.
+[INFO] (rcssl) Data has been updated for this package.
 [INFO] (rcssmin) This package is up to date.
 [INFO] (rd) This package is up to date.
 [INFO] (rd-api) This package is up to date.
@@ -1915,6 +1918,8 @@ This package download URL does not point to a valid file: "https://bitbucket.org
 [INFO] (reda) This package is up to date.
 [INFO] (redact) This package is up to date.
 [INFO] (redalert) This package is up to date.
+[INFO] (redart) Data has been updated for this package.
+[INFO] (redash-api-client) Data has been updated for this package.
 [INFO] (redash-client) This package is up to date.
 [INFO] (redash-dynamic-query) This package is up to date.
 [INFO] (redash-stmo) This package is up to date.
@@ -1977,38 +1982,46 @@ This package download URL does not point to a valid file: "https://bitbucket.org
 [INFO] (redflyingbaron) This package is up to date.
 [INFO] (redfocus) This package is up to date.
 [ERROR] (redfoot) Could not extract data from this package. See below for details.
-Could not extract tarball. See below for details.
+"http://redfoot.net/redfoot-2.7.0.tar.gz" file could not be downloaded. See below for details.
 Traceback (most recent call last):
-  File "/usr/lib/python3.5/tarfile.py", line 1631, in gzopen
-    t = cls.taropen(name, mode, fileobj, **kwargs)
-  File "/usr/lib/python3.5/tarfile.py", line 1607, in taropen
-    return cls(name, mode, fileobj, **kwargs)
-  File "/usr/lib/python3.5/tarfile.py", line 1470, in __init__
-    self.firstmember = self.next()
-  File "/usr/lib/python3.5/tarfile.py", line 2281, in next
-    tarinfo = self.tarinfo.fromtarfile(self)
-  File "/usr/lib/python3.5/tarfile.py", line 1082, in fromtarfile
-    buf = tarfile.fileobj.read(BLOCKSIZE)
-  File "/usr/lib/python3.5/gzip.py", line 274, in read
-    return self._buffer.read(size)
-  File "/usr/lib/python3.5/_compression.py", line 68, in readinto
-    data = self.read(len(byte_view))
-  File "/usr/lib/python3.5/gzip.py", line 461, in read
-    if not self._read_gzip_header():
-  File "/usr/lib/python3.5/gzip.py", line 409, in _read_gzip_header
-    raise OSError('Not a gzipped file (%r)' % magic)
-OSError: Not a gzipped file (b'<!')
+  File "/usr/lib/python3.5/urllib/request.py", line 1254, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers)
+  File "/usr/lib/python3.5/http/client.py", line 1107, in request
+    self._send_request(method, url, body, headers)
+  File "/usr/lib/python3.5/http/client.py", line 1152, in _send_request
+    self.endheaders(body)
+  File "/usr/lib/python3.5/http/client.py", line 1103, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python3.5/http/client.py", line 934, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.5/http/client.py", line 877, in send
+    self.connect()
+  File "/usr/lib/python3.5/http/client.py", line 849, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "/usr/lib/python3.5/socket.py", line 694, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/lib/python3.5/socket.py", line 733, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -5] No address associated with hostname
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
-  File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 131, in get_tar_topdir
-    with closing(compressed(tarpath, tarmode)) as tar:
-  File "/usr/lib/python3.5/tarfile.py", line 1577, in open
-    return func(name, filemode, fileobj, **kwargs)
-  File "/usr/lib/python3.5/tarfile.py", line 1635, in gzopen
-    raise ReadError("not a gzip file")
-tarfile.ReadError: not a gzip file
+  File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 107, in download_tar
+    f.write(urlopen(url=urlesc(pkgurl), timeout=10).read())
+  File "/usr/lib/python3.5/urllib/request.py", line 163, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.5/urllib/request.py", line 466, in open
+    response = self._open(req, data)
+  File "/usr/lib/python3.5/urllib/request.py", line 484, in _open
+    '_open', req)
+  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 1282, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "/usr/lib/python3.5/urllib/request.py", line 1256, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno -5] No address associated with hostname>
 
 [INFO] (redfox) This package is up to date.
 [INFO] (redgettext) This package is up to date.
@@ -2420,7 +2433,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (ref-index) This package is up to date.
 [INFO] (ref-resolver) This package is up to date.
 [INFO] (refaction) This package is up to date.
-[INFO] (refactor) Data has been updated for this package.
+[INFO] (refactor) This package is up to date.
 [INFO] (refactordoc) This package is up to date.
 [INFO] (refactorlib) This package is up to date.
 [ERROR] (refbinder) This package does not have downloadable releases.
@@ -3003,7 +3016,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (remotecv-aws) This package is up to date.
 [ERROR] (remoted) Could not extract data from this package. See below for details.
 ".php" extension not supported.
-[INFO] (remotedev) Data has been updated for this package.
+[INFO] (remotedev) This package is up to date.
 [INFO] (remotediff) This package is up to date.
 [INFO] (remoteexec) This package is up to date.
 [INFO] (remotefreebox) This package is up to date.
@@ -3184,6 +3197,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (repofs) This package is up to date.
 [INFO] (repograph) This package is up to date.
 [INFO] (repokid) This package is up to date.
+[INFO] (repomaker) Data has been updated for this package.
 [INFO] (repoman) This package is up to date.
 [INFO] (repoman-client) This package is up to date.
 [INFO] (repoman-scm) This package is up to date.
@@ -3805,7 +3819,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (resolve) This package is up to date.
 [INFO] (resolve-link) This package is up to date.
 [INFO] (resolve-march-native) This package is up to date.
-[INFO] (resolvelib) This package is up to date.
+[INFO] (resolvelib) Data has been updated for this package.
 [INFO] (resolver) This package is up to date.
 [INFO] (resolver-deco) This package is up to date.
 [INFO] (resolwe) This package is up to date.
@@ -3894,7 +3908,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (rest-framework-custom-viewsets) This package is up to date.
 [INFO] (rest-framework-dyn-serializer) This package is up to date.
 [INFO] (rest-framework-ember) This package is up to date.
-[INFO] (rest-framework-generic-relations) This package is up to date.
+[INFO] (rest-framework-generic-relations) Data has been updated for this package.
 [INFO] (rest-framework-latex) This package is up to date.
 [ERROR] (rest-framework-nested) This package does not have downloadable releases.
 [INFO] (rest-framework-push-notifications) This package is up to date.
@@ -3971,7 +3985,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (restfulengine) This package is up to date.
 [INFO] (restfulgrok) This package is up to date.
 [INFO] (restfulie) This package is up to date.
-[INFO] (restfulpy) Data has been updated for this package.
+[INFO] (restfulpy) This package is up to date.
 [INFO] (restgate) This package is up to date.
 [INFO] (restguardian) This package is up to date.
 [INFO] (resthelperzachariah) This package is up to date.
@@ -4284,7 +4298,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (revolver) This package is up to date.
 [INFO] (revotool) This package is up to date.
 [INFO] (revpimodio) This package is up to date.
-[INFO] (revpimodio2) Data has been updated for this package.
+[INFO] (revpimodio2) This package is up to date.
 [INFO] (revpy) This package is up to date.
 [INFO] (revrand) This package is up to date.
 [INFO] (revscoring) This package is up to date.
@@ -4897,7 +4911,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (ritremixerator) This package is up to date.
 [INFO] (rituals) This package is up to date.
 [INFO] (ritzfizz) This package is up to date.
-[INFO] (rivalcfg) This package is up to date.
+[INFO] (rivalcfg) Data has been updated for this package.
 [ERROR] (rivamap) This package does not have downloadable releases.
 [ERROR] (river) This package does not have downloadable releases.
 [INFO] (riverpy) This package is up to date.
@@ -5994,6 +6008,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (rom) This package is up to date.
 [ERROR] (roma) Could not extract data from this package. See below for details.
 ".py" extension not supported.
+[INFO] (romajitable) Data has been updated for this package.
 [INFO] (roman) This package is up to date.
 [INFO] (roman-count) This package is up to date.
 [INFO] (roman-numerals) This package is up to date.
@@ -7075,7 +7090,7 @@ This package download URL does not point to a valid file: "https://bitbucket.org
 [INFO] (runwith) This package is up to date.
 [INFO] (runwsgi) This package is up to date.
 [INFO] (rup) This package is up to date.
-[INFO] (rupdater) Data has been updated for this package.
+[INFO] (rupdater) This package is up to date.
 [INFO] (rupee) This package is up to date.
 [INFO] (ruper-detector) This package is up to date.
 [INFO] (rupnester) This package is up to date.
@@ -7115,7 +7130,7 @@ This package download URL does not point to a valid file: "https://bitbucket.org
 [INFO] (rust-playground) This package is up to date.
 [INFO] (rust-pypi-example) This package is up to date.
 [INFO] (rustcfg) This package is up to date.
-[INFO] (rustcsv) Data has been updated for this package.
+[INFO] (rustcsv) This package is up to date.
 [INFO] (rusted) This package is up to date.
 [INFO] (rustenv) This package is up to date.
 [INFO] (rustface) This package is up to date.
@@ -7237,10 +7252,10 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (rzl-dash-material-design) This package is up to date.
 [INFO] 
 [INFO] 
-[INFO] Total packages: 5530
-[INFO]     Packages processed: 5530
-[INFO]         Packages updated: 10
-[INFO]         Packages up-to-date: 5150
+[INFO] Total packages: 5537
+[INFO]     Packages processed: 5537
+[INFO]         Packages updated: 12
+[INFO]         Packages up-to-date: 5155
 [INFO]         Packages without response: 61
 [INFO]         Packages without urls: 0
 [INFO]         Packages without downloads: 252
