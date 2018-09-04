@@ -9248,7 +9248,7 @@
             "targetDB.utils.tabcompleter",
             "targetDB.utils.targetDB_init"
         ],
-        "version": "1.1.0"
+        "version": "1.1.1"
     },
     "targeter": {
         "cmdline": [],
@@ -10369,7 +10369,7 @@
             "tasklogger.utils",
             "tasklogger.version"
         ],
-        "version": "0.2"
+        "version": "0.2.1"
     },
     "taskman": {
         "cmdline": [],
@@ -12976,7 +12976,7 @@
             "tensorboard.util",
             "tensorboard.version"
         ],
-        "version": "1.11.0a20180902"
+        "version": "1.11.0a20180903"
     },
     "tba-api-v3client": {
         "cmdline": [],
@@ -13215,6 +13215,15 @@
             "tbe_logging"
         ],
         "version": "0.1.0"
+    },
+    "tbe-mcs-app": {
+        "cmdline": [],
+        "modules": [
+            "tbe_mcs_app",
+            "tbe_mcs_app.settings",
+            "tbe_mcs_app.structs"
+        ],
+        "version": "0.1.3"
     },
     "tbe-middlewares": {
         "cmdline": [],
@@ -15715,7 +15724,7 @@
         "modules": [
             "tdexApi"
         ],
-        "version": "0.1.2"
+        "version": "0.1.5"
     },
     "tdf-extensionuploadcenter": {
         "cmdline": [],
@@ -15752,7 +15761,7 @@
             "tdf.templateuploadcenter.tupreleaselink",
             "tdf.templateuploadcenter.upgrades"
         ],
-        "version": "0.18"
+        "version": "0.19"
     },
     "tdi": {
         "cmdline": [],
@@ -16173,11 +16182,13 @@
         "cmdline": [],
         "modules": [
             "tdutils",
+            "tdutils._arguments",
             "tdutils.agolutil",
             "tdutils.argutil",
             "tdutils.cctvutil",
             "tdutils.datautil",
             "tdutils.emailutil",
+            "tdutils.external",
             "tdutils.fulcutil",
             "tdutils.jobutil",
             "tdutils.kitsutil",
@@ -16186,7 +16197,7 @@
             "tdutils.pgrestutil",
             "tdutils.socratautil"
         ],
-        "version": "0.0.3"
+        "version": "0.0.5"
     },
     "tdwrapper": {
         "cmdline": [],
@@ -21012,6 +21023,7 @@
             "temboardui.handlers.settings.instance",
             "temboardui.handlers.settings.user",
             "temboardui.handlers.user",
+            "temboardui.json_encoder",
             "temboardui.logger",
             "temboardui.model",
             "temboardui.model.orm",
@@ -21021,19 +21033,32 @@
             "temboardui.plugins.activity",
             "temboardui.plugins.dashboard",
             "temboardui.plugins.monitoring",
+            "temboardui.plugins.monitoring.alerting",
             "temboardui.plugins.monitoring.chartdata",
+            "temboardui.plugins.monitoring.handlers",
+            "temboardui.plugins.monitoring.handlers.alerting",
+            "temboardui.plugins.monitoring.handlers.monitoring",
             "temboardui.plugins.monitoring.model",
             "temboardui.plugins.monitoring.model.orm",
             "temboardui.plugins.monitoring.model.tables",
             "temboardui.plugins.monitoring.pivot",
+            "temboardui.plugins.monitoring.tools",
             "temboardui.plugins.pgconf",
             "temboardui.pluginsmgmt",
-            "temboardui.taskmanager",
+            "temboardui.scheduler",
+            "temboardui.scheduler.app",
+            "temboardui.scheduler.configuration",
+            "temboardui.scheduler.errors",
+            "temboardui.scheduler.log",
+            "temboardui.scheduler.proctitle",
+            "temboardui.scheduler.taskmanager",
+            "temboardui.scheduler.utils",
+            "temboardui.scheduler.validators",
             "temboardui.temboardclient",
             "temboardui.utils",
             "temboardui.version"
         ],
-        "version": "1.2.1"
+        "version": "2.0"
     },
     "temboard-agent": {
         "cmdline": [
@@ -21045,43 +21070,33 @@
         "modules": [
             "temboardagent",
             "temboardagent.api",
-            "temboardagent.api_wrapper",
-            "temboardagent.async",
             "temboardagent.cli",
             "temboardagent.command",
-            "temboardagent.configuration",
             "temboardagent.daemon",
             "temboardagent.errors",
             "temboardagent.httpd",
             "temboardagent.httpsclient",
             "temboardagent.inventory",
-            "temboardagent.log",
             "temboardagent.notification",
             "temboardagent.plugins",
             "temboardagent.plugins.activity",
-            "temboardagent.plugins.activity.compat",
             "temboardagent.plugins.activity.functions",
             "temboardagent.plugins.activity.process",
             "temboardagent.plugins.administration",
-            "temboardagent.plugins.administration.compat",
             "temboardagent.plugins.administration.functions",
             "temboardagent.plugins.administration.types",
             "temboardagent.plugins.dashboard",
-            "temboardagent.plugins.dashboard.compat",
             "temboardagent.plugins.dashboard.metrics",
-            "temboardagent.plugins.hello",
             "temboardagent.plugins.monitoring",
-            "temboardagent.plugins.monitoring.compat",
             "temboardagent.plugins.monitoring.inventory",
             "temboardagent.plugins.monitoring.output",
             "temboardagent.plugins.monitoring.probes",
             "temboardagent.plugins.pgconf",
-            "temboardagent.plugins.pgconf.compat",
             "temboardagent.plugins.pgconf.filemgmt",
             "temboardagent.plugins.pgconf.functions",
             "temboardagent.plugins.pgconf.hba",
             "temboardagent.plugins.pgconf.types",
-            "temboardagent.pluginsmgmt",
+            "temboardagent.postgres",
             "temboardagent.queue",
             "temboardagent.routing",
             "temboardagent.scripts",
@@ -21089,17 +21104,24 @@
             "temboardagent.scripts.agent",
             "temboardagent.scripts.password",
             "temboardagent.scripts.register",
+            "temboardagent.services",
             "temboardagent.sharedmemory",
             "temboardagent.spc",
+            "temboardagent.toolkit",
+            "temboardagent.toolkit.app",
+            "temboardagent.toolkit.configuration",
+            "temboardagent.toolkit.errors",
+            "temboardagent.toolkit.log",
+            "temboardagent.toolkit.proctitle",
+            "temboardagent.toolkit.taskmanager",
+            "temboardagent.toolkit.utils",
+            "temboardagent.toolkit.validators",
             "temboardagent.tools",
             "temboardagent.types",
             "temboardagent.usermgmt",
-            "temboardagent.utils",
-            "temboardagent.validators",
-            "temboardagent.version",
-            "temboardagent.workers"
+            "temboardagent.version"
         ],
-        "version": "1.2"
+        "version": "2.0"
     },
     "temboard-sched": {
         "cmdline": [],
@@ -26972,6 +26994,15 @@
         ],
         "version": "1.10.0"
     },
+    "tensorflow-exercise-hx": {
+        "cmdline": [],
+        "modules": [
+            "exercise",
+            "exercise.cali_house",
+            "exercise.iris"
+        ],
+        "version": "1.0.1"
+    },
     "tensorflow-extenteten": {
         "cmdline": [],
         "modules": [],
@@ -29876,9 +29907,7 @@
         "version": "0.0.0"
     },
     "tensorlayer": {
-        "cmdline": [
-            "tl"
-        ],
+        "cmdline": [],
         "modules": [
             "tensorlayer",
             "tensorlayer.activation",
@@ -29891,7 +29920,6 @@
             "tensorlayer.decorators.deprecated",
             "tensorlayer.decorators.deprecated_alias",
             "tensorlayer.decorators.method_decorator",
-            "tensorlayer.decorators.utils",
             "tensorlayer.distributed",
             "tensorlayer.files",
             "tensorlayer.files.dataset_loaders",
@@ -29924,8 +29952,6 @@
             "tensorlayer.layers.convolution.expert_conv",
             "tensorlayer.layers.convolution.expert_deconv",
             "tensorlayer.layers.convolution.group_conv",
-            "tensorlayer.layers.convolution.quan_conv",
-            "tensorlayer.layers.convolution.quan_conv_bn",
             "tensorlayer.layers.convolution.separable_conv",
             "tensorlayer.layers.convolution.simplified_conv",
             "tensorlayer.layers.convolution.simplified_deconv",
@@ -29937,8 +29963,6 @@
             "tensorlayer.layers.dense.binary_dense",
             "tensorlayer.layers.dense.dorefa_dense",
             "tensorlayer.layers.dense.dropconnect",
-            "tensorlayer.layers.dense.quan_dense",
-            "tensorlayer.layers.dense.quan_dense_bn",
             "tensorlayer.layers.dense.ternary_dense",
             "tensorlayer.layers.dropout",
             "tensorlayer.layers.extend",
@@ -29963,27 +29987,22 @@
             "tensorlayer.layers.time_distribution",
             "tensorlayer.layers.utils",
             "tensorlayer.lazy_imports",
-            "tensorlayer.logging",
-            "tensorlayer.logging.contrib",
-            "tensorlayer.logging.contrib.hyperdash",
-            "tensorlayer.logging.tl_logging",
             "tensorlayer.models",
             "tensorlayer.models.imagenet_classes",
             "tensorlayer.models.mobilenetv1",
             "tensorlayer.models.squeezenetv1",
             "tensorlayer.models.vgg16",
-            "tensorlayer.models.vgg19",
             "tensorlayer.nlp",
             "tensorlayer.optimizers",
             "tensorlayer.optimizers.amsgrad",
-            "tensorlayer.package_info",
             "tensorlayer.prepro",
             "tensorlayer.rein",
             "tensorlayer.third_party",
+            "tensorlayer.tl_logging",
             "tensorlayer.utils",
             "tensorlayer.visualize"
         ],
-        "version": "1.10.0"
+        "version": "1.9.1"
     },
     "tensorlm": {
         "cmdline": [],
@@ -41109,17 +41128,17 @@
     "tf-nightly": {
         "cmdline": [],
         "modules": [],
-        "version": "1.11.0.dev20180902"
+        "version": "1.11.0.dev20180903"
     },
     "tf-nightly-gpu": {
         "cmdline": [],
         "modules": [],
-        "version": "1.11.0.dev20180902"
+        "version": "1.11.0.dev20180903"
     },
     "tf-nightly-xla-gpu": {
         "cmdline": [],
         "modules": [],
-        "version": "1.11.0.dev20180902"
+        "version": "1.11.0.dev20180903"
     },
     "tf-onnx": {
         "cmdline": [],
@@ -42513,7 +42532,7 @@
             "tensorflow_probability.python.vi",
             "tensorflow_probability.python.vi.csiszar_divergence"
         ],
-        "version": "0.4.0.dev20180902"
+        "version": "0.4.0.dev20180903"
     },
     "tfp-nightly-gpu": {
         "cmdline": [],
@@ -42675,7 +42694,7 @@
             "tensorflow_probability.python.vi",
             "tensorflow_probability.python.vi.csiszar_divergence"
         ],
-        "version": "0.4.0.dev20180902"
+        "version": "0.4.0.dev20180903"
     },
     "tfpromote": {
         "cmdline": [],
@@ -47728,9 +47747,12 @@
             "thermohw.extract_attachments",
             "thermohw.filters",
             "thermohw.preprocessors",
-            "thermohw.pymarkdown"
+            "thermohw.pymarkdown",
+            "thermohw.test",
+            "thermohw.test.test_convert_thermo_hw",
+            "thermohw.test.test_extract_attachments"
         ],
-        "version": "0.4.1"
+        "version": "0.4.2"
     },
     "thermometer": {
         "cmdline": [],
@@ -49945,14 +49967,14 @@
     "thoth-common": {
         "cmdline": [],
         "modules": [
-            "thoth.common",
-            "thoth.common.exceptions",
-            "thoth.common.helpers",
-            "thoth.common.json",
-            "thoth.common.logging",
-            "thoth.common.openshift"
+            "common",
+            "common.exceptions",
+            "common.helpers",
+            "common.json",
+            "common.logging",
+            "common.openshift"
         ],
-        "version": "0.2.5"
+        "version": "0.2.7"
     },
     "thoth-dispatcher": {
         "cmdline": [],
@@ -50015,11 +50037,12 @@
             "storages.graph.models",
             "storages.graph.models_base",
             "storages.graph.utils",
+            "storages.provenance",
             "storages.result_base",
             "storages.result_schema",
             "storages.solvers"
         ],
-        "version": "0.5.1"
+        "version": "0.5.2"
     },
     "thoth-tasks": {
         "cmdline": [],
@@ -55794,6 +55817,7 @@
             "tiflash.core.core",
             "tiflash.utils",
             "tiflash.utils.ccs",
+            "tiflash.utils.ccsfinder",
             "tiflash.utils.ccxml",
             "tiflash.utils.connections",
             "tiflash.utils.cpus",
@@ -55806,7 +55830,7 @@
             "tiflash.utils.xmlhelper",
             "tiflash.version"
         ],
-        "version": "0.9.9"
+        "version": "0.9.10"
     },
     "tig": {
         "cmdline": [],
@@ -60074,7 +60098,7 @@
             "tinode_grpc.model_pb2",
             "tinode_grpc.model_pb2_grpc"
         ],
-        "version": "0.15.5rc8"
+        "version": "0.15.5"
     },
     "tinp": {
         "cmdline": [],
@@ -64025,9 +64049,10 @@
     "tlds": {
         "cmdline": [],
         "modules": [
-            "tlds"
+            "tlds",
+            "tlds._data"
         ],
-        "version": "2018090100"
+        "version": "2018090300"
     },
     "tldtosms": {
         "cmdline": [],
@@ -66404,7 +66429,7 @@
             "toad",
             "toad.detector"
         ],
-        "version": "0.0.3"
+        "version": "0.0.5"
     },
     "toadie": {
         "cmdline": [],
@@ -70724,8 +70749,6 @@
             "tomato.http",
             "tomato.http.http_client",
             "tomato.http.http_server",
-            "tomato.http.request",
-            "tomato.http.response",
             "tomato.http.routes",
             "tomato.store",
             "tomato.store.mongo_client",
@@ -70736,7 +70759,7 @@
             "tomato.utils.singleton",
             "tomato.utils.util"
         ],
-        "version": "0.2.0"
+        "version": "0.2.2"
     },
     "tomaty": {
         "cmdline": [],
@@ -72796,8 +72819,13 @@
     },
     "topican": {
         "cmdline": [],
-        "modules": [],
-        "version": ""
+        "modules": [
+            "topican",
+            "topican.tests",
+            "topican.tests.topican_test_usage",
+            "topican.topican_by_nouns"
+        ],
+        "version": "0.0.17"
     },
     "topiceval": {
         "cmdline": [],
@@ -75182,7 +75210,7 @@
             "torchfun",
             "torchfun.torchfun"
         ],
-        "version": "0.0.22"
+        "version": "0.0.24"
     },
     "torchfusion": {
         "cmdline": [],
@@ -75729,7 +75757,7 @@
             "torchzoo.rnn",
             "torchzoo.simple"
         ],
-        "version": "0.2"
+        "version": "0.24"
     },
     "torcms": {
         "cmdline": [],
@@ -80185,6 +80213,8 @@
             "toucan_connectors.google_cloud_mysql.google_cloud_mysql_connector",
             "toucan_connectors.google_spreadsheet",
             "toucan_connectors.google_spreadsheet.google_spreadsheet_connector",
+            "toucan_connectors.hive",
+            "toucan_connectors.hive.hive_connector",
             "toucan_connectors.micro_strategy",
             "toucan_connectors.micro_strategy.client",
             "toucan_connectors.micro_strategy.data",
@@ -80207,7 +80237,7 @@
             "toucan_connectors.toucan_toco",
             "toucan_connectors.toucan_toco.toucan_toco_connector"
         ],
-        "version": "0.2.1"
+        "version": "0.3.0"
     },
     "toucan-data-sdk": {
         "cmdline": [],
@@ -82413,7 +82443,7 @@
             "tqsdk.tools",
             "tqsdk.tools.downloader"
         ],
-        "version": "0.8.5"
+        "version": "0.8.6"
     },
     "tqttt": {
         "cmdline": [],
@@ -83244,8 +83274,11 @@
     },
     "tracebackturbo": {
         "cmdline": [],
-        "modules": [],
-        "version": "0.1.2"
+        "modules": [
+            "tracebackturbo",
+            "tracebackturbo.tracebackturbo"
+        ],
+        "version": "0.2"
     },
     "tracefront": {
         "cmdline": [],
@@ -94763,7 +94796,7 @@
             "trimesh.visual",
             "trimesh.voxel"
         ],
-        "version": "2.33.7"
+        "version": "2.33.15"
     },
     "trimeter": {
         "cmdline": [],
@@ -94896,6 +94929,7 @@
             "trio._socket",
             "trio._ssl",
             "trio._subprocess",
+            "trio._subprocess.unix_pipes",
             "trio._sync",
             "trio._threads",
             "trio._timeouts",
@@ -94918,6 +94952,8 @@
             "trio.tests",
             "trio.tests.conftest",
             "trio.tests.module_with_deprecations",
+            "trio.tests.subprocess",
+            "trio.tests.subprocess.test_unix_pipes",
             "trio.tests.test_abc",
             "trio.tests.test_deprecate",
             "trio.tests.test_exports",
@@ -94940,7 +94976,7 @@
             "trio.tests.test_util",
             "trio.tests.test_wait_for_object"
         ],
-        "version": "0.6.0"
+        "version": "0.7.0"
     },
     "trio-aiohttp": {
         "cmdline": [],
@@ -99618,7 +99654,7 @@
             "trustpilot_authenticated_encryption",
             "trustpilot_authenticated_encryption.encryption"
         ],
-        "version": "1.0.2"
+        "version": "1.1.0"
     },
     "trustymail": {
         "cmdline": [
@@ -103621,6 +103657,21 @@
         "modules": [
             "tsgettoolbox",
             "tsgettoolbox.appdirs",
+            "tsgettoolbox.functions",
+            "tsgettoolbox.functions.cdec",
+            "tsgettoolbox.functions.coops",
+            "tsgettoolbox.functions.cpc",
+            "tsgettoolbox.functions.darksky",
+            "tsgettoolbox.functions.daymet",
+            "tsgettoolbox.functions.lcra",
+            "tsgettoolbox.functions.ldas",
+            "tsgettoolbox.functions.modis",
+            "tsgettoolbox.functions.ncdc",
+            "tsgettoolbox.functions.ndbc",
+            "tsgettoolbox.functions.nwis",
+            "tsgettoolbox.functions.twc",
+            "tsgettoolbox.functions.unavco",
+            "tsgettoolbox.functions.usgs_eddn",
             "tsgettoolbox.services",
             "tsgettoolbox.services.cdec",
             "tsgettoolbox.services.coops",
@@ -103647,7 +103698,7 @@
             "tsgettoolbox.tsgettoolbox",
             "tsgettoolbox.utils"
         ],
-        "version": "16.27.6.16"
+        "version": "16.29.6.16"
     },
     "tsheets": {
         "cmdline": [],
@@ -104517,7 +104568,7 @@
             "tstoolbox.tstoolbox",
             "tstoolbox.tsutils"
         ],
-        "version": "25.60.30.21"
+        "version": "25.61.30.21"
     },
     "tstore": {
         "cmdline": [],
@@ -109145,9 +109196,13 @@
             "turingarena_cli.new",
             "turingarena_cli.pack",
             "turingarena_cli.remote",
-            "turingarena_cli.ssh"
+            "turingarena_cli.ssh",
+            "turingarena_common",
+            "turingarena_common.commands",
+            "turingarena_common.git_common",
+            "turingarena_common.submission"
         ],
-        "version": "0.0.1.dev1512"
+        "version": "0.0.1.dev1513"
     },
     "turingmarkov": {
         "cmdline": [],
@@ -124109,7 +124164,7 @@
             "type2nc",
             "type2nc.type2nc"
         ],
-        "version": "0.3.3"
+        "version": "0.4.1"
     },
     "typeannotations": {
         "cmdline": [],
