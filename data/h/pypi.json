@@ -7303,6 +7303,13 @@
         ],
         "version": "0.7"
     },
+    "handybelt": {
+        "cmdline": [],
+        "modules": [
+            "handybelt"
+        ],
+        "version": "0.0.1"
+    },
     "handyman": {
         "cmdline": [],
         "modules": [
@@ -9791,7 +9798,7 @@
             "harvesters.test.test_harvester_core",
             "harvesters.test.test_tutorials"
         ],
-        "version": "0.post0.dev536"
+        "version": "0.post0.dev554"
     },
     "harvestingkit": {
         "cmdline": [],
@@ -14480,6 +14487,15 @@
         ],
         "version": "1.1.3"
     },
+    "hc-varoperhelper": {
+        "cmdline": [],
+        "modules": [
+            "VarOperHelper",
+            "VarOperHelper.datamodel",
+            "VarOperHelper.operHelper"
+        ],
+        "version": "1.0.2"
+    },
     "hca": {
         "cmdline": [],
         "modules": [
@@ -14516,27 +14532,39 @@
             "hca.util.compat",
             "hca.util.exceptions",
             "hca.util.fs_helper",
+            "hca.util.pool",
             "hca.version",
-            "upload",
-            "upload.cli",
-            "upload.cli.test_creds",
-            "upload.cli.test_forget",
-            "upload.cli.test_list_area",
-            "upload.cli.test_list_areas",
-            "upload.cli.test_select",
-            "upload.cli.test_upload",
-            "upload.python_bindings",
-            "upload.python_bindings.test_forget_area",
-            "upload.python_bindings.test_get_credentials",
-            "upload.python_bindings.test_list_area",
-            "upload.python_bindings.test_list_areas",
-            "upload.python_bindings.test_select_area",
-            "upload.python_bindings.test_upload_file",
-            "upload.test_api_client",
-            "upload.test_credentials_manager",
-            "upload.test_media_type"
+            "integration",
+            "integration.dss",
+            "integration.dss.test_dss_api",
+            "integration.dss.test_dss_api_retry",
+            "integration.dss.test_dss_cli",
+            "integration.upload",
+            "integration.upload.cli",
+            "integration.upload.cli.test_creds",
+            "integration.upload.cli.test_forget",
+            "integration.upload.cli.test_list_area",
+            "integration.upload.cli.test_list_areas",
+            "integration.upload.cli.test_select",
+            "integration.upload.cli.test_upload",
+            "integration.upload.python_bindings",
+            "integration.upload.python_bindings.test_forget_area",
+            "integration.upload.python_bindings.test_get_credentials",
+            "integration.upload.python_bindings.test_list_area",
+            "integration.upload.python_bindings.test_list_areas",
+            "integration.upload.python_bindings.test_select_area",
+            "integration.upload.python_bindings.test_upload_file",
+            "integration.upload.test_api_client",
+            "integration.upload.test_credentials_manager",
+            "integration.upload.test_media_type",
+            "integration.util",
+            "integration.util.test_swagger_client",
+            "unit",
+            "unit.util",
+            "unit.util.test_fs_helper",
+            "unit.util.test_get_swagger_spec"
         ],
-        "version": "4.1.4"
+        "version": "4.3.3"
     },
     "hca-bundle-jsonld": {
         "cmdline": [],
@@ -16002,7 +16030,7 @@
             "hdx.freshness.testdata.serialize",
             "hdx.freshness.testdata.testbase"
         ],
-        "version": "1.2.1"
+        "version": "1.2.2"
     },
     "hdx-data-freshness-emailer": {
         "cmdline": [],
@@ -16012,7 +16040,7 @@
             "hdx.freshness.emailer",
             "hdx.freshness.emailer.datafreshnessstatus"
         ],
-        "version": "1.1.0"
+        "version": "1.1.1"
     },
     "hdx-python-api": {
         "cmdline": [],
@@ -23723,6 +23751,130 @@
         "modules": [],
         "version": ""
     },
+    "hfc-py": {
+        "cmdline": [],
+        "modules": [
+            "hfc",
+            "hfc.fabric",
+            "hfc.fabric.block_decoder",
+            "hfc.fabric.channel",
+            "hfc.fabric.channel.channel",
+            "hfc.fabric.channel.channel_configuration",
+            "hfc.fabric.channel.instantiation",
+            "hfc.fabric.channel.invocation",
+            "hfc.fabric.client",
+            "hfc.fabric.config",
+            "hfc.fabric.config.default",
+            "hfc.fabric.eventhub",
+            "hfc.fabric.msp",
+            "hfc.fabric.orderer",
+            "hfc.fabric.organization",
+            "hfc.fabric.peer",
+            "hfc.fabric.transaction",
+            "hfc.fabric.transaction.tx_context",
+            "hfc.fabric.transaction.tx_proposal_request",
+            "hfc.fabric.user",
+            "hfc.fabric_ca",
+            "hfc.fabric_ca.caservice",
+            "hfc.protos",
+            "hfc.protos.common",
+            "hfc.protos.common.common_pb2",
+            "hfc.protos.common.common_pb2_grpc",
+            "hfc.protos.common.configtx_pb2",
+            "hfc.protos.common.configtx_pb2_grpc",
+            "hfc.protos.common.configuration_pb2",
+            "hfc.protos.common.configuration_pb2_grpc",
+            "hfc.protos.common.ledger_pb2",
+            "hfc.protos.common.ledger_pb2_grpc",
+            "hfc.protos.common.policies_pb2",
+            "hfc.protos.common.policies_pb2_grpc",
+            "hfc.protos.ledger",
+            "hfc.protos.ledger.queryresult",
+            "hfc.protos.ledger.queryresult.kv_query_result_pb2",
+            "hfc.protos.ledger.queryresult.kv_query_result_pb2_grpc",
+            "hfc.protos.ledger.rwset",
+            "hfc.protos.ledger.rwset.kvrwset",
+            "hfc.protos.ledger.rwset.kvrwset.kv_rwset_pb2",
+            "hfc.protos.ledger.rwset.kvrwset.kv_rwset_pb2_grpc",
+            "hfc.protos.ledger.rwset.rwset_pb2",
+            "hfc.protos.ledger.rwset.rwset_pb2_grpc",
+            "hfc.protos.msp",
+            "hfc.protos.msp.identities_pb2",
+            "hfc.protos.msp.identities_pb2_grpc",
+            "hfc.protos.msp.msp_principal_pb2",
+            "hfc.protos.msp.msp_principal_pb2_grpc",
+            "hfc.protos.msp.mspconfig_pb2",
+            "hfc.protos.msp.mspconfig_pb2_grpc",
+            "hfc.protos.orderer",
+            "hfc.protos.orderer.ab_pb2",
+            "hfc.protos.orderer.ab_pb2_grpc",
+            "hfc.protos.orderer.configuration_pb2",
+            "hfc.protos.orderer.configuration_pb2_grpc",
+            "hfc.protos.peer",
+            "hfc.protos.peer.admin_pb2",
+            "hfc.protos.peer.admin_pb2_grpc",
+            "hfc.protos.peer.chaincode_event_pb2",
+            "hfc.protos.peer.chaincode_event_pb2_grpc",
+            "hfc.protos.peer.chaincode_pb2",
+            "hfc.protos.peer.chaincode_pb2_grpc",
+            "hfc.protos.peer.chaincodeevent_pb2",
+            "hfc.protos.peer.chaincodeevent_pb2_grpc",
+            "hfc.protos.peer.configuration_pb2",
+            "hfc.protos.peer.configuration_pb2_grpc",
+            "hfc.protos.peer.events_pb2",
+            "hfc.protos.peer.events_pb2_grpc",
+            "hfc.protos.peer.peer_pb2",
+            "hfc.protos.peer.peer_pb2_grpc",
+            "hfc.protos.peer.proposal_pb2",
+            "hfc.protos.peer.proposal_pb2_grpc",
+            "hfc.protos.peer.proposal_response_pb2",
+            "hfc.protos.peer.proposal_response_pb2_grpc",
+            "hfc.protos.peer.query_pb2",
+            "hfc.protos.peer.query_pb2_grpc",
+            "hfc.protos.peer.transaction_pb2",
+            "hfc.protos.peer.transaction_pb2_grpc",
+            "hfc.protos.utils",
+            "hfc.util",
+            "hfc.util.channel",
+            "hfc.util.crypto",
+            "hfc.util.crypto.crypto",
+            "hfc.util.keyvaluestore",
+            "hfc.util.utils",
+            "hfc.version",
+            "test",
+            "test.integration",
+            "test.integration.ca_test",
+            "test.integration.chaincode_instantiate_test",
+            "test.integration.chaincode_invoke_test",
+            "test.integration.config",
+            "test.integration.e2e_test",
+            "test.integration.e2e_utils",
+            "test.integration.query_block",
+            "test.integration.query_chain_info",
+            "test.integration.query_test",
+            "test.integration.query_transaction_test",
+            "test.integration.user_test",
+            "test.integration.utils",
+            "test.integration.utils_test",
+            "test.unit",
+            "test.unit.block_decoder_test",
+            "test.unit.ca_test",
+            "test.unit.channel",
+            "test.unit.channel.channel_configuration_test",
+            "test.unit.channel.channel_test",
+            "test.unit.channel.instantiation_test",
+            "test.unit.channel.invocation_test",
+            "test.unit.client_test",
+            "test.unit.crypto_test",
+            "test.unit.eventhub_test",
+            "test.unit.keyvaluestore_test",
+            "test.unit.msp",
+            "test.unit.orderer_test",
+            "test.unit.peer_test",
+            "test.unit.user_test"
+        ],
+        "version": "0.7.0"
+    },
     "hfcca": {
         "cmdline": [],
         "modules": [
@@ -24967,45 +25119,8 @@
     },
     "hgvs": {
         "cmdline": [],
-        "modules": [
-            "hgvs",
-            "hgvs.alignmentmapper",
-            "hgvs.assemblymapper",
-            "hgvs.config",
-            "hgvs.dataproviders",
-            "hgvs.dataproviders.interface",
-            "hgvs.dataproviders.ncbi",
-            "hgvs.dataproviders.seqfetcher",
-            "hgvs.dataproviders.uta",
-            "hgvs.decorators",
-            "hgvs.decorators.deprecated",
-            "hgvs.decorators.lru_cache",
-            "hgvs.edit",
-            "hgvs.enums",
-            "hgvs.exceptions",
-            "hgvs.hgvsposition",
-            "hgvs.intervalmapper",
-            "hgvs.location",
-            "hgvs.normalizer",
-            "hgvs.parser",
-            "hgvs.posedit",
-            "hgvs.projector",
-            "hgvs.sequencevariant",
-            "hgvs.shell",
-            "hgvs.transcriptmapper",
-            "hgvs.utils",
-            "hgvs.utils.PersistentDict",
-            "hgvs.utils.altseq_to_hgvsp",
-            "hgvs.utils.altseqbuilder",
-            "hgvs.utils.context",
-            "hgvs.utils.norm",
-            "hgvs.utils.orderedenum",
-            "hgvs.utils.reftranscriptdata",
-            "hgvs.utils.validation",
-            "hgvs.validator",
-            "hgvs.variantmapper"
-        ],
-        "version": "1.2.2"
+        "modules": [],
+        "version": "1.2.3"
     },
     "hgvs-lexicon": {
         "cmdline": [],
@@ -25957,9 +26072,10 @@
             "hifiberrydsp.parser.xmlprofile",
             "hifiberrydsp.server",
             "hifiberrydsp.server.constants",
-            "hifiberrydsp.server.sigmatcp"
+            "hifiberrydsp.server.sigmatcp",
+            "hifiberrydsp.test"
         ],
-        "version": "0.12.1"
+        "version": "0.12.2"
     },
     "hifive": {
         "cmdline": [],
@@ -27686,7 +27802,7 @@
             "histcensusgis.text.standardize",
             "histcensusgis.text.stevemorse"
         ],
-        "version": "1.0.0a122"
+        "version": "1.0.0a123"
     },
     "histimator": {
         "cmdline": [],
@@ -27864,7 +27980,7 @@
             "historical.vpc.models",
             "historical.vpc.poller"
         ],
-        "version": "0.3.18"
+        "version": "0.3.20"
     },
     "historical-ciphers": {
         "cmdline": [],
@@ -29216,6 +29332,26 @@
         "cmdline": [],
         "modules": [],
         "version": "0.0.3"
+    },
+    "hkibg-qcloud-cos-keeper": {
+        "cmdline": [],
+        "modules": [
+            "hkibg-qcloud-cos-keeper",
+            "hkibg-qcloud-cos-keeper.args_util",
+            "hkibg-qcloud-cos-keeper.config_util",
+            "hkibg-qcloud-cos-keeper.cos_util",
+            "hkibg-qcloud-cos-keeper.date_util",
+            "hkibg-qcloud-cos-keeper.decorator",
+            "hkibg-qcloud-cos-keeper.generic_util",
+            "hkibg_qcloud_cos_keeper",
+            "hkibg_qcloud_cos_keeper.args_util",
+            "hkibg_qcloud_cos_keeper.config_util",
+            "hkibg_qcloud_cos_keeper.cos_util",
+            "hkibg_qcloud_cos_keeper.date_util",
+            "hkibg_qcloud_cos_keeper.decorator",
+            "hkibg_qcloud_cos_keeper.generic_util"
+        ],
+        "version": "0.0.1"
     },
     "hkj": {
         "cmdline": [],
@@ -33370,6 +33506,14 @@
         "cmdline": [],
         "modules": [],
         "version": ""
+    },
+    "homevision-netio-controller": {
+        "cmdline": [],
+        "modules": [
+            "homevision_netio_controller",
+            "homevision_netio_controller.controller"
+        ],
+        "version": "0.1.1"
     },
     "homewatcher": {
         "cmdline": [
@@ -38670,7 +38814,7 @@
             "htdp_pt_br.list",
             "htdp_pt_br.universe"
         ],
-        "version": "0.0.8"
+        "version": "0.0.9"
     },
     "htg": {
         "cmdline": [],
