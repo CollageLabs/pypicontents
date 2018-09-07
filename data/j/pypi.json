@@ -3453,11 +3453,12 @@
     "jaraco-services": {
         "cmdline": [],
         "modules": [
-            "services",
-            "services.envs",
-            "services.paths"
+            "jaraco",
+            "jaraco.services",
+            "jaraco.services.envs",
+            "jaraco.services.paths"
         ],
-        "version": "1.6.1"
+        "version": "1.7"
     },
     "jaraco-site": {
         "cmdline": [],
@@ -6361,6 +6362,7 @@
             "jdcloud_cli.controllers.services.baseanti",
             "jdcloud_cli.controllers.services.clouddnsservice",
             "jdcloud_cli.controllers.services.cps",
+            "jdcloud_cli.controllers.services.cr",
             "jdcloud_cli.controllers.services.datastar",
             "jdcloud_cli.controllers.services.disk",
             "jdcloud_cli.controllers.services.iam",
@@ -6399,7 +6401,7 @@
             "testcases.config_test",
             "testcases.nc_test"
         ],
-        "version": "0.6.0"
+        "version": "0.7.0"
     },
     "jdcloud-sdk": {
         "cmdline": [],
@@ -6519,10 +6521,26 @@
             "jdcloud_sdk.services.cps.models.ReinstallInstanceSpec",
             "jdcloud_sdk.services.cps.models.Software",
             "jdcloud_sdk.services.cps.models.Subnet",
+            "jdcloud_sdk.services.cr",
+            "jdcloud_sdk.services.cr.apis",
+            "jdcloud_sdk.services.cr.apis.CreateRegistryRequest",
+            "jdcloud_sdk.services.cr.apis.CreateRepositoryRequest",
+            "jdcloud_sdk.services.cr.apis.DescribeImagesRequest",
+            "jdcloud_sdk.services.cr.apis.DescribeQuotasRequest",
+            "jdcloud_sdk.services.cr.apis.GetAuthorizationTokenRequest",
+            "jdcloud_sdk.services.cr.client",
+            "jdcloud_sdk.services.cr.client.CrClient",
+            "jdcloud_sdk.services.cr.models",
+            "jdcloud_sdk.services.cr.models.AuthorizationData",
+            "jdcloud_sdk.services.cr.models.ImageDetail",
+            "jdcloud_sdk.services.cr.models.Quota",
+            "jdcloud_sdk.services.cr.models.Registry",
+            "jdcloud_sdk.services.cr.models.Repository",
+            "jdcloud_sdk.services.cr.models.RepositoryShort",
             "jdcloud_sdk.services.datastar",
             "jdcloud_sdk.services.datastar.apis",
             "jdcloud_sdk.services.datastar.apis.GetPackageIdRequest",
-            "jdcloud_sdk.services.datastar.apis.TestWelcomeRequest",
+            "jdcloud_sdk.services.datastar.apis.GetProfileRequest",
             "jdcloud_sdk.services.datastar.client",
             "jdcloud_sdk.services.datastar.client.DatastarClient",
             "jdcloud_sdk.services.datastar.models",
@@ -6901,6 +6919,8 @@
             "jdcloud_sdk.services.rds.apis.CreateAuditRequest",
             "jdcloud_sdk.services.rds.apis.CreateBackupRequest",
             "jdcloud_sdk.services.rds.apis.CreateDatabaseRequest",
+            "jdcloud_sdk.services.rds.apis.CreateInstanceByTimeRequest",
+            "jdcloud_sdk.services.rds.apis.CreateInstanceFromBackupRequest",
             "jdcloud_sdk.services.rds.apis.CreateInstanceRequest",
             "jdcloud_sdk.services.rds.apis.DeleteAccountRequest",
             "jdcloud_sdk.services.rds.apis.DeleteAuditRequest",
@@ -6929,12 +6949,16 @@
             "jdcloud_sdk.services.rds.apis.GetUploadKeyRequest",
             "jdcloud_sdk.services.rds.apis.GrantPrivilegeRequest",
             "jdcloud_sdk.services.rds.apis.ModifyAuditRequest",
+            "jdcloud_sdk.services.rds.apis.ModifyInstanceSpecRequest",
+            "jdcloud_sdk.services.rds.apis.ModifyWhiteListRequest",
             "jdcloud_sdk.services.rds.apis.RebootInstanceRequest",
             "jdcloud_sdk.services.rds.apis.ResetPasswordRequest",
             "jdcloud_sdk.services.rds.apis.RestoreDatabaseFromBackupRequest",
             "jdcloud_sdk.services.rds.apis.RestoreDatabaseFromFileRequest",
             "jdcloud_sdk.services.rds.apis.RestoreDatabaseFromOSSRequest",
             "jdcloud_sdk.services.rds.apis.RestoreInstanceRequest",
+            "jdcloud_sdk.services.rds.apis.RevokePrivilegeRequest",
+            "jdcloud_sdk.services.rds.apis.SetBackupPolicyRequest",
             "jdcloud_sdk.services.rds.apis.SetImportFileSharedRequest",
             "jdcloud_sdk.services.rds.apis.SetInstanceNameRequest",
             "jdcloud_sdk.services.rds.client",
@@ -6955,6 +6979,7 @@
             "jdcloud_sdk.services.rds.models.File",
             "jdcloud_sdk.services.rds.models.FileDownloadURL",
             "jdcloud_sdk.services.rds.models.ImportFile",
+            "jdcloud_sdk.services.rds.models.RestoredNewDBInstanceSpec",
             "jdcloud_sdk.services.rds.models.WhiteList",
             "jdcloud_sdk.services.redis",
             "jdcloud_sdk.services.redis.apis",
@@ -7045,6 +7070,7 @@
             "jdcloud_sdk.services.vm.apis.DescribeImageMembersRequest",
             "jdcloud_sdk.services.vm.apis.DescribeImageRequest",
             "jdcloud_sdk.services.vm.apis.DescribeImagesRequest",
+            "jdcloud_sdk.services.vm.apis.DescribeInstancePrivateIpAddressRequest",
             "jdcloud_sdk.services.vm.apis.DescribeInstanceRequest",
             "jdcloud_sdk.services.vm.apis.DescribeInstanceStatusRequest",
             "jdcloud_sdk.services.vm.apis.DescribeInstanceTypesRequest",
@@ -7082,6 +7108,7 @@
             "jdcloud_sdk.services.vm.models.InstanceNetworkInterface",
             "jdcloud_sdk.services.vm.models.InstanceNetworkInterfaceAttachment",
             "jdcloud_sdk.services.vm.models.InstanceNetworkInterfaceAttachmentSpec",
+            "jdcloud_sdk.services.vm.models.InstancePrivateIpAddress",
             "jdcloud_sdk.services.vm.models.InstanceSpec",
             "jdcloud_sdk.services.vm.models.InstanceStatus",
             "jdcloud_sdk.services.vm.models.InstanceTemplate",
@@ -7097,31 +7124,47 @@
             "jdcloud_sdk.services.vm.models.InstanceTemplateSpec",
             "jdcloud_sdk.services.vm.models.InstanceType",
             "jdcloud_sdk.services.vm.models.InstanceTypeState",
+            "jdcloud_sdk.services.vm.models.Keypair",
             "jdcloud_sdk.services.vm.models.LocalDisk",
             "jdcloud_sdk.services.vm.models.Quota",
             "jdcloud_sdk.services.vm.models.SecurityGroupSimple",
             "jdcloud_sdk.services.vm.models.TagFilter",
             "jdcloud_sdk.services.vpc",
             "jdcloud_sdk.services.vpc.apis",
+            "jdcloud_sdk.services.vpc.apis.AddNetworkAclRulesRequest",
             "jdcloud_sdk.services.vpc.apis.AddNetworkSecurityGroupRulesRequest",
+            "jdcloud_sdk.services.vpc.apis.AddRouteTableRulesRequest",
             "jdcloud_sdk.services.vpc.apis.AssignSecondaryIpsRequest",
             "jdcloud_sdk.services.vpc.apis.AssociateElasticIpRequest",
+            "jdcloud_sdk.services.vpc.apis.AssociateNetworkAclRequest",
+            "jdcloud_sdk.services.vpc.apis.AssociateRouteTableRequest",
             "jdcloud_sdk.services.vpc.apis.CreateElasticIpsRequest",
+            "jdcloud_sdk.services.vpc.apis.CreateNetworkAclRequest",
             "jdcloud_sdk.services.vpc.apis.CreateNetworkInterfaceRequest",
             "jdcloud_sdk.services.vpc.apis.CreateNetworkSecurityGroupRequest",
+            "jdcloud_sdk.services.vpc.apis.CreateRouteTableRequest",
+            "jdcloud_sdk.services.vpc.apis.CreateSubnetRequest",
             "jdcloud_sdk.services.vpc.apis.CreateVpcPeeringRequest",
             "jdcloud_sdk.services.vpc.apis.CreateVpcRequest",
             "jdcloud_sdk.services.vpc.apis.DeleteElasticIpRequest",
+            "jdcloud_sdk.services.vpc.apis.DeleteNetworkAclRequest",
             "jdcloud_sdk.services.vpc.apis.DeleteNetworkInterfaceRequest",
             "jdcloud_sdk.services.vpc.apis.DeleteNetworkSecurityGroupRequest",
+            "jdcloud_sdk.services.vpc.apis.DeleteRouteTableRequest",
+            "jdcloud_sdk.services.vpc.apis.DeleteSubnetRequest",
             "jdcloud_sdk.services.vpc.apis.DeleteVpcPeeringRequest",
             "jdcloud_sdk.services.vpc.apis.DeleteVpcRequest",
             "jdcloud_sdk.services.vpc.apis.DescribeElasticIpRequest",
             "jdcloud_sdk.services.vpc.apis.DescribeElasticIpsRequest",
+            "jdcloud_sdk.services.vpc.apis.DescribeNetworkAclRequest",
+            "jdcloud_sdk.services.vpc.apis.DescribeNetworkAclsRequest",
             "jdcloud_sdk.services.vpc.apis.DescribeNetworkInterfaceRequest",
             "jdcloud_sdk.services.vpc.apis.DescribeNetworkInterfacesRequest",
             "jdcloud_sdk.services.vpc.apis.DescribeNetworkSecurityGroupRequest",
             "jdcloud_sdk.services.vpc.apis.DescribeNetworkSecurityGroupsRequest",
+            "jdcloud_sdk.services.vpc.apis.DescribeQuotaRequest",
+            "jdcloud_sdk.services.vpc.apis.DescribeRouteTableRequest",
+            "jdcloud_sdk.services.vpc.apis.DescribeRouteTablesRequest",
             "jdcloud_sdk.services.vpc.apis.DescribeSubnetRequest",
             "jdcloud_sdk.services.vpc.apis.DescribeSubnetsRequest",
             "jdcloud_sdk.services.vpc.apis.DescribeVpcPeeringRequest",
@@ -7129,12 +7172,21 @@
             "jdcloud_sdk.services.vpc.apis.DescribeVpcRequest",
             "jdcloud_sdk.services.vpc.apis.DescribeVpcsRequest",
             "jdcloud_sdk.services.vpc.apis.DisassociateElasticIpRequest",
+            "jdcloud_sdk.services.vpc.apis.DisassociateNetworkAclRequest",
             "jdcloud_sdk.services.vpc.apis.DisassociateRouteTableRequest",
+            "jdcloud_sdk.services.vpc.apis.ModifyNetworkAclRequest",
+            "jdcloud_sdk.services.vpc.apis.ModifyNetworkAclRulesRequest",
             "jdcloud_sdk.services.vpc.apis.ModifyNetworkInterfaceRequest",
             "jdcloud_sdk.services.vpc.apis.ModifyNetworkSecurityGroupRequest",
             "jdcloud_sdk.services.vpc.apis.ModifyNetworkSecurityGroupRulesRequest",
+            "jdcloud_sdk.services.vpc.apis.ModifyRouteTableRequest",
+            "jdcloud_sdk.services.vpc.apis.ModifyRouteTableRulesRequest",
+            "jdcloud_sdk.services.vpc.apis.ModifySubnetRequest",
             "jdcloud_sdk.services.vpc.apis.ModifyVpcPeeringRequest",
+            "jdcloud_sdk.services.vpc.apis.ModifyVpcRequest",
+            "jdcloud_sdk.services.vpc.apis.RemoveNetworkAclRulesRequest",
             "jdcloud_sdk.services.vpc.apis.RemoveNetworkSecurityGroupRulesRequest",
+            "jdcloud_sdk.services.vpc.apis.RemoveRouteTableRulesRequest",
             "jdcloud_sdk.services.vpc.apis.UnassignSecondaryIpsRequest",
             "jdcloud_sdk.services.vpc.client",
             "jdcloud_sdk.services.vpc.client.VpcClient",
@@ -7157,6 +7209,7 @@
             "jdcloud_sdk.services.vpc.models.ModifyElasticIpSpec",
             "jdcloud_sdk.services.vpc.models.ModifyNetworkAclRuleSpec",
             "jdcloud_sdk.services.vpc.models.ModifyNetworkAclRuleSpecs",
+            "jdcloud_sdk.services.vpc.models.ModifyNetworkAclRulesSpec",
             "jdcloud_sdk.services.vpc.models.ModifyNetworkAclSpec",
             "jdcloud_sdk.services.vpc.models.ModifyNetworkInterfaceSpec",
             "jdcloud_sdk.services.vpc.models.ModifyNetworkSecurityGroupSpec",
@@ -7221,7 +7274,7 @@
             "jdcloud_sdk.services.xdata.models.DwTableDesc",
             "jdcloud_sdk.services.xdata.models.DwTableRow"
         ],
-        "version": "1.2.12"
+        "version": "1.2.13"
     },
     "jdcloud-sdk-core": {
         "cmdline": [],
@@ -8022,6 +8075,11 @@
             "jelinekstat.tools"
         ],
         "version": "0.1.1"
+    },
+    "jelleprebenlol": {
+        "cmdline": [],
+        "modules": [],
+        "version": "1.0.5"
     },
     "jelly": {
         "cmdline": [],
@@ -9452,7 +9510,7 @@
             "jet_django.views.view_settings",
             "jet_django.views.widget"
         ],
-        "version": "0.0.7"
+        "version": "0.0.8"
     },
     "jetconf": {
         "cmdline": [],
@@ -11371,7 +11429,7 @@
             "jiggle_version.utils",
             "jiggle_version.version_lint"
         ],
-        "version": "1.0.54"
+        "version": "1.0.59"
     },
     "jigna": {
         "cmdline": [],
@@ -11695,7 +11753,7 @@
             "jimmysh_stock_api.alphavantage",
             "jimmysh_stock_api.google_finance"
         ],
-        "version": "0.0.2"
+        "version": "0.0.3"
     },
     "jimnester": {
         "cmdline": [],
@@ -12902,7 +12960,7 @@
             "jira_agile_metrics.webapp",
             "jira_agile_metrics.webapp.app"
         ],
-        "version": "0.9"
+        "version": "0.10"
     },
     "jira-bot": {
         "cmdline": [],
@@ -19735,8 +19793,16 @@
     },
     "jr": {
         "cmdline": [],
-        "modules": [],
-        "version": ""
+        "modules": [
+            "jr",
+            "jr.common",
+            "jr.extension",
+            "jr.filter",
+            "jr.grammar_parse",
+            "jr.parser",
+            "jr.render"
+        ],
+        "version": "0.1.0"
     },
     "jr-data-science": {
         "cmdline": [],
@@ -20577,7 +20643,7 @@
     "js-invoke": {
         "cmdline": [],
         "modules": [],
-        "version": "1.2.0"
+        "version": "1.3.2"
     },
     "js-jasny-bootstrap": {
         "cmdline": [],
@@ -28264,7 +28330,7 @@
             "jtracker.execution.scheduler.local",
             "jtracker.execution.worker"
         ],
-        "version": "0.2.0a17"
+        "version": "0.2.0a18"
     },
     "jtrans": {
         "cmdline": [],
@@ -33227,7 +33293,7 @@
             "tests.test_unicode",
             "tests.utils"
         ],
-        "version": "0.6.2"
+        "version": "0.6.3"
     },
     "jupytils": {
         "cmdline": [],
