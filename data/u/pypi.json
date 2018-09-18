@@ -4196,6 +4196,15 @@
         ],
         "version": "0.2.0"
     },
+    "ufo-filter": {
+        "cmdline": [
+            "filter.py"
+        ],
+        "modules": [
+            "ufo_filter"
+        ],
+        "version": "1.0"
+    },
     "ufo2ft": {
         "cmdline": [],
         "modules": [
@@ -5996,6 +6005,14 @@
         ],
         "version": "1.0.0"
     },
+    "ulib": {
+        "cmdline": [],
+        "modules": [
+            "ulib",
+            "ulib.talib"
+        ],
+        "version": "1.0.0"
+    },
     "ulid": {
         "cmdline": [],
         "modules": [],
@@ -6553,7 +6570,7 @@
             "ulp.widgets.listbox",
             "ulp.widgets.popup"
         ],
-        "version": "1.2.0"
+        "version": "1.3.0"
     },
     "ult": {
         "cmdline": [],
@@ -8426,8 +8443,18 @@
         "cmdline": [],
         "modules": [
             "test",
+            "test.config",
+            "test.config.test_config_yml",
+            "test.file",
+            "test.file.test_file",
+            "test.handler",
+            "test.helper",
+            "test.helper.test_data_helper",
+            "test.helper.test_string_helper",
+            "test.helper.test_url_helper",
             "und_microservice",
             "und_microservice.adapter",
+            "und_microservice.adapter.exception",
             "und_microservice.adapter.sqlalchemy",
             "und_microservice.api",
             "und_microservice.api.falcon_api",
@@ -8456,7 +8483,7 @@
             "und_microservice.response",
             "und_microservice.response.orbis"
         ],
-        "version": "0.0.5"
+        "version": "0.0.7"
     },
     "undaqtools": {
         "cmdline": [
@@ -10647,6 +10674,16 @@
         ],
         "version": "0.4.2"
     },
+    "unified-range": {
+        "cmdline": [],
+        "modules": [
+            "unified_range",
+            "unified_range.api",
+            "unified_range.models",
+            "unified_range.utils"
+        ],
+        "version": "0.0.3"
+    },
     "unified2": {
         "cmdline": [],
         "modules": [
@@ -11951,6 +11988,22 @@
             "unisos.marme.noBxoVer.marmeTrackingLib"
         ],
         "version": "0.20"
+    },
+    "unisos-mmwsicm": {
+        "cmdline": [
+            "bearerTokenProc.py",
+            "mmwsBaseManage.py",
+            "rinvoker.py",
+            "wsInvokerIcmExamples.py"
+        ],
+        "modules": [
+            "unisos",
+            "unisos.mmwsIcm",
+            "unisos.mmwsIcm.bearerToken",
+            "unisos.mmwsIcm.mmwsBases",
+            "unisos.mmwsIcm.wsInvokerIcm"
+        ],
+        "version": "0.1"
     },
     "unisos-ucf": {
         "cmdline": [],
@@ -13458,9 +13511,10 @@
             "unpythonic.misc",
             "unpythonic.rc",
             "unpythonic.seq",
-            "unpythonic.tco"
+            "unpythonic.tco",
+            "unpythonic.tco_exc"
         ],
-        "version": "0.8.1"
+        "version": "0.8.2"
     },
     "unqlite": {
         "cmdline": [],
@@ -15932,15 +15986,34 @@
     "uperations-base": {
         "cmdline": [],
         "modules": [
-            "kernel",
-            "kernel.documentable",
-            "kernel.event",
-            "kernel.library",
-            "kernel.operation",
             "operation_types",
-            "operations"
+            "operation_types.command_operation",
+            "operation_types.docker_operation",
+            "operation_types.json_operation",
+            "operation_types.yml_config_operation",
+            "operations",
+            "operations.base",
+            "operations.base.command",
+            "operations.base.dockerfile",
+            "operations.base.hello_name",
+            "operations.base.helloworld",
+            "operations.base.list_operation",
+            "operations.base.make_event",
+            "operations.base.make_library",
+            "operations.base.make_operation",
+            "operations.base.make_operationtype",
+            "operations.base.make_operationtype.resources",
+            "operations.base.make_operationtype.resources.template",
+            "operations.base.publish",
+            "operations.base.utils",
+            "operations.base.utils._test_utils",
+            "operations.base.utils.templates",
+            "operations.base.utils.templates.make_event",
+            "operations.base.utils.templates.make_library",
+            "operations.base.utils.templates.make_operation",
+            "operations.base.yaml_to_json"
         ],
-        "version": "0.0.1"
+        "version": "0.0.2"
     },
     "uperations-kernel": {
         "cmdline": [],
@@ -15951,7 +16024,7 @@
             "uperations.library",
             "uperations.operation"
         ],
-        "version": "0.0.1"
+        "version": "0.0.4"
     },
     "upersetter": {
         "cmdline": [],
@@ -21315,20 +21388,42 @@
         "cmdline": [],
         "modules": [
             "uszipcode",
-            "uszipcode.data",
-            "uszipcode.packages",
-            "uszipcode.packages.fuzzywuzzy",
-            "uszipcode.packages.fuzzywuzzy.StringMatcher",
-            "uszipcode.packages.fuzzywuzzy.fuzz",
-            "uszipcode.packages.fuzzywuzzy.process",
-            "uszipcode.packages.fuzzywuzzy.string_processing",
-            "uszipcode.packages.fuzzywuzzy.utils",
-            "uszipcode.packages.haversine",
-            "uszipcode.packages.six",
-            "uszipcode.searchengine",
-            "uszipcode.zzz_manual_install"
+            "uszipcode.db",
+            "uszipcode.model",
+            "uszipcode.pkg",
+            "uszipcode.pkg.atomicwrites",
+            "uszipcode.pkg.compressed_json_type",
+            "uszipcode.pkg.fuzzywuzzy",
+            "uszipcode.pkg.fuzzywuzzy.fuzz",
+            "uszipcode.pkg.fuzzywuzzy.process",
+            "uszipcode.pkg.fuzzywuzzy.string_matcher",
+            "uszipcode.pkg.fuzzywuzzy.string_processing",
+            "uszipcode.pkg.fuzzywuzzy.utils",
+            "uszipcode.pkg.haversine",
+            "uszipcode.pkg.six",
+            "uszipcode.pkg.sqlalchemy_mate",
+            "uszipcode.pkg.sqlalchemy_mate.crud",
+            "uszipcode.pkg.sqlalchemy_mate.crud.inserting",
+            "uszipcode.pkg.sqlalchemy_mate.crud.selecting",
+            "uszipcode.pkg.sqlalchemy_mate.crud.updating",
+            "uszipcode.pkg.sqlalchemy_mate.engine_creator",
+            "uszipcode.pkg.sqlalchemy_mate.io",
+            "uszipcode.pkg.sqlalchemy_mate.orm",
+            "uszipcode.pkg.sqlalchemy_mate.orm.extended_declarative_base",
+            "uszipcode.pkg.sqlalchemy_mate.pkg",
+            "uszipcode.pkg.sqlalchemy_mate.pkg.prettytable",
+            "uszipcode.pkg.sqlalchemy_mate.pkg.prettytable._compact",
+            "uszipcode.pkg.sqlalchemy_mate.pkg.prettytable.cli",
+            "uszipcode.pkg.sqlalchemy_mate.pkg.prettytable.factory",
+            "uszipcode.pkg.sqlalchemy_mate.pkg.prettytable.prettytable",
+            "uszipcode.pkg.sqlalchemy_mate.pkg.sixmini",
+            "uszipcode.pkg.sqlalchemy_mate.pt",
+            "uszipcode.pkg.sqlalchemy_mate.tests",
+            "uszipcode.pkg.sqlalchemy_mate.utils",
+            "uszipcode.search",
+            "uszipcode.state_abbr"
         ],
-        "version": "0.1.3"
+        "version": "0.2.0"
     },
     "ut-nester": {
         "cmdline": [],
@@ -22137,7 +22232,7 @@
             "utils_gao",
             "utils_gao.utils_gao"
         ],
-        "version": "0.0.7"
+        "version": "0.0.8"
     },
     "utils-nimbus": {
         "cmdline": [],
@@ -22493,6 +22588,50 @@
             "utool.util_win32"
         ],
         "version": "1.8.1"
+    },
+    "utoolbox": {
+        "cmdline": [],
+        "modules": [
+            "utoolbox",
+            "utoolbox.analysis",
+            "utoolbox.analysis.calcium",
+            "utoolbox.analysis.metrics",
+            "utoolbox.analysis.roi",
+            "utoolbox.apps",
+            "utoolbox.apps.enqueuer",
+            "utoolbox.apps.enqueuer.frames",
+            "utoolbox.apps.enqueuer.mainwindow",
+            "utoolbox.apps.enqueuer.models",
+            "utoolbox.apps.widgets",
+            "utoolbox.apps.widgets.table",
+            "utoolbox.cli",
+            "utoolbox.cli.zpatch",
+            "utoolbox.configs",
+            "utoolbox.configs.spim",
+            "utoolbox.container",
+            "utoolbox.container.attrdict",
+            "utoolbox.container.datastore",
+            "utoolbox.container.types",
+            "utoolbox.deconvolve",
+            "utoolbox.deconvolve.richardson_lucy",
+            "utoolbox.parallel",
+            "utoolbox.parallel.opencl",
+            "utoolbox.segmentation",
+            "utoolbox.segmentation.chan_vese",
+            "utoolbox.segmentation.slic",
+            "utoolbox.simulate",
+            "utoolbox.simulate.psf",
+            "utoolbox.simulate.psf.base",
+            "utoolbox.simulate.psf.gibson_lanni",
+            "utoolbox.simulate.psf.sheared_psf",
+            "utoolbox.transform",
+            "utoolbox.transform.deskew",
+            "utoolbox.viewers",
+            "utoolbox.viewers.image",
+            "utoolbox.viewers.orthoview",
+            "utoolbox.viewers.volume"
+        ],
+        "version": "0.0.5.dev0"
     },
     "utools": {
         "cmdline": [],
