@@ -34,6 +34,11 @@
         ],
         "version": "1.4.2"
     },
+    "h10k-client": {
+        "cmdline": [],
+        "modules": [],
+        "version": "0.0.1"
+    },
     "h10n": {
         "cmdline": [],
         "modules": [
@@ -175,6 +180,8 @@
             "h2o.transforms.decomposition",
             "h2o.transforms.preprocessing",
             "h2o.transforms.transform_base",
+            "h2o.tree",
+            "h2o.tree.tree",
             "h2o.two_dim_table",
             "h2o.utils",
             "h2o.utils.backward_compatibility",
@@ -185,7 +192,7 @@
             "h2o.utils.shared_utils",
             "h2o.utils.typechecks"
         ],
-        "version": "3.20.0.7"
+        "version": "3.20.0.8"
     },
     "h2o-kernel": {
         "cmdline": [],
@@ -5171,12 +5178,11 @@
             "hal.plotlygraph",
             "hal.plotting",
             "hal.purify",
-            "hal.test",
             "hal.tree",
             "hal.tupledict",
             "hal.utility"
         ],
-        "version": "0.991"
+        "version": "0.992"
     },
     "halb": {
         "cmdline": [
@@ -7788,6 +7794,17 @@
         ],
         "version": "2.0.0"
     },
+    "hanlp": {
+        "cmdline": [],
+        "modules": [
+            "hanlp",
+            "hanlp.main",
+            "hanlp.server",
+            "hanlp.static",
+            "hanlp.util"
+        ],
+        "version": "5.0.0"
+    },
     "hanlp-wrapper": {
         "cmdline": [],
         "modules": [
@@ -8454,9 +8471,11 @@
         "modules": [
             "hapiclient",
             "hapiclient.hapi",
-            "hapiclient.hapiplot"
+            "hapiclient.hapiplot",
+            "hapiclient.util",
+            "hapiclient.util.datetick"
         ],
-        "version": "0.0.3"
+        "version": "0.0.4"
     },
     "hapipy": {
         "cmdline": [],
@@ -9102,6 +9121,16 @@
             "hardDecisions.x-decisiontree"
         ],
         "version": "0.0.2"
+    },
+    "harder": {
+        "cmdline": [],
+        "modules": [
+            "harder",
+            "harder.gym",
+            "harder.policy",
+            "harder.q"
+        ],
+        "version": "0.0.6"
     },
     "hardlink": {
         "cmdline": [],
@@ -9824,44 +9853,61 @@
         "cmdline": [],
         "modules": [
             "harvesters",
-            "harvesters._helper",
             "harvesters._private",
             "harvesters._private.core",
             "harvesters._private.core.command",
             "harvesters._private.core.helper",
-            "harvesters._private.core.helper.logging",
             "harvesters._private.core.helper.profiler",
             "harvesters._private.core.helper.system",
             "harvesters._private.core.observer",
             "harvesters._private.core.port",
             "harvesters._private.core.statistics",
             "harvesters._private.core.subject",
-            "harvesters._private.frontend",
-            "harvesters._private.frontend.canvas",
-            "harvesters._private.frontend.helper",
-            "harvesters._private.frontend.image",
-            "harvesters._private.frontend.image.background",
-            "harvesters._private.frontend.image.icon",
-            "harvesters._private.frontend.pyqt5",
-            "harvesters._private.frontend.pyqt5.about",
-            "harvesters._private.frontend.pyqt5.action",
-            "harvesters._private.frontend.pyqt5.attribute_controller",
-            "harvesters._private.frontend.pyqt5.device_list",
-            "harvesters._private.frontend.pyqt5.feature_tree",
-            "harvesters._private.frontend.pyqt5.helper",
-            "harvesters._private.frontend.pyqt5.icon",
-            "harvesters._private.frontend.pyqt5.thread",
             "harvesters._version",
             "harvesters.core",
-            "harvesters.frontend",
-            "harvesters.frontend.pyqt5",
-            "harvesters.pfnc",
             "harvesters.test",
             "harvesters.test.base_harvester",
             "harvesters.test.test_harvester_core",
             "harvesters.test.test_tutorials"
         ],
-        "version": "0.post0.dev588"
+        "version": "0.post0.dev602"
+    },
+    "harvesters-gui": {
+        "cmdline": [],
+        "modules": [
+            "harvesters_gui",
+            "harvesters_gui._helper",
+            "harvesters_gui._private",
+            "harvesters_gui._private.frontend",
+            "harvesters_gui._private.frontend.canvas",
+            "harvesters_gui._private.frontend.helper",
+            "harvesters_gui._private.frontend.image",
+            "harvesters_gui._private.frontend.image.background",
+            "harvesters_gui._private.frontend.image.icon",
+            "harvesters_gui._private.frontend.pyqt5",
+            "harvesters_gui._private.frontend.pyqt5.about",
+            "harvesters_gui._private.frontend.pyqt5.action",
+            "harvesters_gui._private.frontend.pyqt5.attribute_controller",
+            "harvesters_gui._private.frontend.pyqt5.device_list",
+            "harvesters_gui._private.frontend.pyqt5.feature_tree",
+            "harvesters_gui._private.frontend.pyqt5.helper",
+            "harvesters_gui._private.frontend.pyqt5.icon",
+            "harvesters_gui._private.frontend.pyqt5.thread",
+            "harvesters_gui._version",
+            "harvesters_gui.frontend",
+            "harvesters_gui.frontend.pyqt5"
+        ],
+        "version": "0.post0.dev4"
+    },
+    "harvesters-util": {
+        "cmdline": [],
+        "modules": [
+            "harvesters_util",
+            "harvesters_util._version",
+            "harvesters_util.logging",
+            "harvesters_util.pfnc"
+        ],
+        "version": "0.post0.dev5"
     },
     "harvestingkit": {
         "cmdline": [],
@@ -19862,6 +19908,13 @@
         ],
         "version": "0.1"
     },
+    "helloworld-serhii73": {
+        "cmdline": [],
+        "modules": [
+            "helloworld"
+        ],
+        "version": "0.0.1"
+    },
     "helloworld-test": {
         "cmdline": [],
         "modules": [
@@ -20962,6 +21015,21 @@
             "Henosis.utils"
         ],
         "version": "0.0.11"
+    },
+    "henrietta": {
+        "cmdline": [],
+        "modules": [
+            "henrietta",
+            "henrietta.lightcurves",
+            "henrietta.modeling",
+            "henrietta.statistics",
+            "henrietta.tests",
+            "henrietta.tests.test_lightcurves",
+            "henrietta.tests.test_models",
+            "henrietta.tests.test_statistics",
+            "henrietta.tools"
+        ],
+        "version": "0.0.4"
     },
     "henrio": {
         "cmdline": [],
@@ -25001,7 +25069,7 @@
             "hgtiles.time_interval",
             "hgtiles.utils"
         ],
-        "version": "0.2.10"
+        "version": "0.2.13"
     },
     "hgtk": {
         "cmdline": [],
@@ -27791,7 +27859,7 @@
             "histcensusgis.text.standardize",
             "histcensusgis.text.stevemorse"
         ],
-        "version": "1.0.0a127"
+        "version": "1.0.0a129"
     },
     "histimator": {
         "cmdline": [],
@@ -33123,7 +33191,7 @@
             "homeassistant.util.unit_system",
             "homeassistant.util.yaml"
         ],
-        "version": "0.78.1"
+        "version": "0.78.2"
     },
     "homeassistantfrontend": {
         "cmdline": [],
@@ -33550,7 +33618,7 @@
             "homoglyphs",
             "homoglyphs.core"
         ],
-        "version": "1.3.0"
+        "version": "1.3.1"
     },
     "homography": {
         "cmdline": [],
@@ -33752,6 +33820,7 @@
         "cmdline": [],
         "modules": [
             "beeline",
+            "beeline.internal",
             "beeline.middleware",
             "beeline.middleware.awslambda",
             "beeline.middleware.awslambda.test_awslambda",
@@ -33765,7 +33834,7 @@
             "beeline.trace",
             "beeline.version"
         ],
-        "version": "1.3.1"
+        "version": "1.4.0"
     },
     "honeycomb-framework": {
         "cmdline": [],
@@ -36218,7 +36287,7 @@
             "hotot.async_client",
             "hotot.client"
         ],
-        "version": "0.4.1"
+        "version": "0.5.0"
     },
     "hotpie": {
         "cmdline": [],
@@ -36993,6 +37062,109 @@
         "cmdline": [],
         "modules": [],
         "version": ""
+    },
+    "hpc-acm": {
+        "cmdline": [],
+        "modules": [
+            "hpc_acm",
+            "hpc_acm.api",
+            "hpc_acm.api.default_api",
+            "hpc_acm.api_client",
+            "hpc_acm.configuration",
+            "hpc_acm.models",
+            "hpc_acm.models.diagnotic_test",
+            "hpc_acm.models.event",
+            "hpc_acm.models.ip_v4",
+            "hpc_acm.models.ip_v6",
+            "hpc_acm.models.job",
+            "hpc_acm.models.job_state",
+            "hpc_acm.models.job_summary",
+            "hpc_acm.models.job_type",
+            "hpc_acm.models.job_update",
+            "hpc_acm.models.mac_address",
+            "hpc_acm.models.metrics",
+            "hpc_acm.models.metrics_values",
+            "hpc_acm.models.node",
+            "hpc_acm.models.node_gpu",
+            "hpc_acm.models.node_job",
+            "hpc_acm.models.node_metadata",
+            "hpc_acm.models.node_metadata_compute",
+            "hpc_acm.models.node_metadata_network",
+            "hpc_acm.models.node_metadata_network_interface",
+            "hpc_acm.models.node_metadata_network_ipv4",
+            "hpc_acm.models.node_metadata_network_ipv4_ip_address",
+            "hpc_acm.models.node_metadata_network_ipv4_subnet",
+            "hpc_acm.models.node_metadata_network_ipv6",
+            "hpc_acm.models.node_metrics",
+            "hpc_acm.models.node_metrics_data",
+            "hpc_acm.models.node_metrics_metric_items",
+            "hpc_acm.models.node_network",
+            "hpc_acm.models.node_registration",
+            "hpc_acm.models.node_summary",
+            "hpc_acm.models.scheduled_event",
+            "hpc_acm.models.scheduled_events",
+            "hpc_acm.models.task",
+            "hpc_acm.models.task_output",
+            "hpc_acm.models.task_result",
+            "hpc_acm.models.task_state",
+            "hpc_acm.rest",
+            "test",
+            "test.test_default_api",
+            "test.test_diagnotic_test",
+            "test.test_event",
+            "test.test_ip_v4",
+            "test.test_ip_v6",
+            "test.test_job",
+            "test.test_job_state",
+            "test.test_job_summary",
+            "test.test_job_type",
+            "test.test_job_update",
+            "test.test_mac_address",
+            "test.test_metrics",
+            "test.test_metrics_values",
+            "test.test_node",
+            "test.test_node_gpu",
+            "test.test_node_job",
+            "test.test_node_metadata",
+            "test.test_node_metadata_compute",
+            "test.test_node_metadata_network",
+            "test.test_node_metadata_network_interface",
+            "test.test_node_metadata_network_ipv4",
+            "test.test_node_metadata_network_ipv4_ip_address",
+            "test.test_node_metadata_network_ipv4_subnet",
+            "test.test_node_metadata_network_ipv6",
+            "test.test_node_metrics",
+            "test.test_node_metrics_data",
+            "test.test_node_metrics_metric_items",
+            "test.test_node_network",
+            "test.test_node_registration",
+            "test.test_node_summary",
+            "test.test_scheduled_event",
+            "test.test_scheduled_events",
+            "test.test_task",
+            "test.test_task_output",
+            "test.test_task_result",
+            "test.test_task_state"
+        ],
+        "version": "1.0.6"
+    },
+    "hpc-acm-cli": {
+        "cmdline": [],
+        "modules": [
+            "hpc_acm_cli",
+            "hpc_acm_cli.arguments",
+            "hpc_acm_cli.async_op",
+            "hpc_acm_cli.clus",
+            "hpc_acm_cli.command",
+            "hpc_acm_cli.diag",
+            "hpc_acm_cli.easy_config",
+            "hpc_acm_cli.main",
+            "hpc_acm_cli.main_async",
+            "hpc_acm_cli.node",
+            "hpc_acm_cli.parser_builder",
+            "hpc_acm_cli.utils"
+        ],
+        "version": "2.7.14"
     },
     "hpc-deploy": {
         "cmdline": [],
@@ -38118,25 +38290,23 @@
         "modules": [
             "hydroserving",
             "hydroserving.cli",
-            "hydroserving.cli.application",
+            "hydroserving.cli.cluster",
             "hydroserving.cli.dev",
             "hydroserving.cli.dev.dev_group",
             "hydroserving.cli.dev.kafka",
-            "hydroserving.cli.dev.local_deploy",
             "hydroserving.cli.hs",
             "hydroserving.cli.model",
             "hydroserving.cli.profile",
             "hydroserving.cli.utils",
             "hydroserving.constants",
             "hydroserving.constants.click",
+            "hydroserving.constants.config",
             "hydroserving.constants.deployment",
             "hydroserving.constants.help",
             "hydroserving.constants.package",
             "hydroserving.helpers",
-            "hydroserving.helpers.assembly",
             "hydroserving.helpers.contract",
-            "hydroserving.helpers.deployment",
-            "hydroserving.helpers.docker",
+            "hydroserving.helpers.file",
             "hydroserving.helpers.kafka_helper",
             "hydroserving.helpers.package",
             "hydroserving.helpers.proto",
@@ -38144,7 +38314,9 @@
             "hydroserving.httpclient",
             "hydroserving.httpclient.api",
             "hydroserving.httpclient.api.application",
+            "hydroserving.httpclient.api.environment",
             "hydroserving.httpclient.api.model",
+            "hydroserving.httpclient.api.monitoring",
             "hydroserving.httpclient.api.profiles",
             "hydroserving.httpclient.api.runtime",
             "hydroserving.httpclient.api.source",
@@ -38152,20 +38324,36 @@
             "hydroserving.httpclient.errors",
             "hydroserving.httpclient.remote_connection",
             "hydroserving.models",
-            "hydroserving.models.application",
             "hydroserving.models.context_object",
-            "hydroserving.models.deployment",
-            "hydroserving.models.folder_metadata",
+            "hydroserving.models.definitions",
+            "hydroserving.models.definitions.application",
+            "hydroserving.models.definitions.config",
+            "hydroserving.models.definitions.environment",
+            "hydroserving.models.definitions.model",
+            "hydroserving.models.definitions.runtime",
             "hydroserving.models.kafka_params",
-            "hydroserving.models.model_definition",
-            "hydroserving.models.model_metadata",
-            "hydroserving.models.runtime",
+            "hydroserving.parsers",
+            "hydroserving.parsers.abstract",
+            "hydroserving.parsers.application",
+            "hydroserving.parsers.config",
+            "hydroserving.parsers.environment",
+            "hydroserving.parsers.generic",
+            "hydroserving.parsers.model",
+            "hydroserving.parsers.runtime",
+            "hydroserving.services",
+            "hydroserving.services.apply",
+            "hydroserving.services.client",
+            "hydroserving.services.config",
             "tests",
+            "tests.helpers",
+            "tests.helpers.test_contract",
+            "tests.helpers.test_helpers",
+            "tests.parsers",
+            "tests.parsers.test_application",
             "tests.test_cli",
-            "tests.test_helpers",
             "tests.utils"
         ],
-        "version": "0.0.11"
+        "version": "0.1.0"
     },
     "hs-dbus-signature": {
         "cmdline": [],
@@ -38754,7 +38942,7 @@
             "htchirp",
             "htchirp.htchirp"
         ],
-        "version": "0.2"
+        "version": "1.0"
     },
     "htcondor": {
         "cmdline": [],
@@ -43527,6 +43715,20 @@
         ],
         "version": "0.1"
     },
+    "hubspot-python": {
+        "cmdline": [],
+        "modules": [
+            "hubspot",
+            "hubspot.client",
+            "hubspot.companies",
+            "hubspot.contacts",
+            "hubspot.deals",
+            "hubspot.enumerator",
+            "hubspot.exception",
+            "hubspot.fields"
+        ],
+        "version": "0.1.0"
+    },
     "hubspot3": {
         "cmdline": [],
         "modules": [
@@ -45576,7 +45778,7 @@
             "hundo.hundo",
             "hundo.unite_classifier"
         ],
-        "version": "1.1.21"
+        "version": "1.2.1"
     },
     "hunester": {
         "cmdline": [],
@@ -45732,7 +45934,7 @@
             "huobitrade.service",
             "huobitrade.utils"
         ],
-        "version": "0.4.6"
+        "version": "0.4.7"
     },
     "huotaihe-nester": {
         "cmdline": [],
@@ -46499,15 +46701,15 @@
             "hutils",
             "hutils.classes",
             "hutils.data_types",
+            "hutils.decorators",
             "hutils.django",
             "hutils.django.apis",
             "hutils.django.databases",
             "hutils.schemas",
             "hutils.shortcuts",
-            "hutils.storages",
             "hutils.validators"
         ],
-        "version": "0.3.3"
+        "version": "0.3.4"
     },
     "hutools": {
         "cmdline": [],
