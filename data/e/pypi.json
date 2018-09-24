@@ -4126,7 +4126,7 @@
             "easyimages.logger",
             "easyimages.utils"
         ],
-        "version": "0.7.6"
+        "version": "0.7.7"
     },
     "easyimap": {
         "cmdline": [],
@@ -8480,10 +8480,12 @@
         "cmdline": [],
         "modules": [
             "ecal",
+            "ecal.abstract_cache",
             "ecal.abstract_fetcher",
-            "ecal.http_fetcher"
+            "ecal.ecn_fetcher",
+            "ecal.runtime_cache"
         ],
-        "version": "0.0.3"
+        "version": "0.0.4"
     },
     "ecapy": {
         "cmdline": [],
@@ -12462,7 +12464,7 @@
             "edc_action_item.view_mixins.action_item_view_mixin",
             "edc_action_item.wsgi"
         ],
-        "version": "0.1.11"
+        "version": "0.1.12"
     },
     "edc-appointment": {
         "cmdline": [],
@@ -12528,7 +12530,7 @@
             "edc_appointment.views.unscheduled_appointment_view",
             "edc_appointment.wsgi"
         ],
-        "version": "0.2.19"
+        "version": "0.2.20"
     },
     "edc-auth": {
         "cmdline": [],
@@ -12636,7 +12638,7 @@
             "edc_base.views.home_view",
             "edc_base.wsgi"
         ],
-        "version": "0.2.30"
+        "version": "0.2.31"
     },
     "edc-consent": {
         "cmdline": [],
@@ -12747,7 +12749,7 @@
             "edc_dashboard.views.listboard_view",
             "edc_dashboard.wsgi"
         ],
-        "version": "0.2.15"
+        "version": "0.2.16"
     },
     "edc-device": {
         "cmdline": [],
@@ -12780,6 +12782,8 @@
         "modules": [
             "edc_export",
             "edc_export.admin",
+            "edc_export.admin.data_request_admin",
+            "edc_export.admin.data_request_history_admin",
             "edc_export.admin.export_receipt_admin",
             "edc_export.admin.file_history_admin",
             "edc_export.admin.object_history_admin",
@@ -12787,8 +12791,14 @@
             "edc_export.admin.upload_export_receipt_file_admin",
             "edc_export.admin_site",
             "edc_export.apps",
+            "edc_export.archive_exporter",
+            "edc_export.choices",
             "edc_export.constants",
+            "edc_export.exportables",
+            "edc_export.files_archiver",
+            "edc_export.files_emailer",
             "edc_export.forms",
+            "edc_export.forms.data_request_form",
             "edc_export.management",
             "edc_export.management.commands",
             "edc_export.management.commands.export_object_history",
@@ -12796,6 +12806,7 @@
             "edc_export.managers",
             "edc_export.migrations",
             "edc_export.migrations.0001_initial",
+            "edc_export.migrations.0002_auto_20180922_1843",
             "edc_export.model_exporter",
             "edc_export.model_exporter.file_history_updater",
             "edc_export.model_exporter.model_exporter",
@@ -12805,23 +12816,34 @@
             "edc_export.model_mixins.export_tracking_fields_model_mixin",
             "edc_export.model_mixins.notification_model_mixin",
             "edc_export.model_mixins.notification_plan_model_mixin",
+            "edc_export.model_options",
             "edc_export.models",
+            "edc_export.models.data_request",
+            "edc_export.models.data_request_history",
             "edc_export.models.export_receipt",
             "edc_export.models.file_history",
             "edc_export.models.object_history",
             "edc_export.models.plan",
             "edc_export.models.upload_export_receipt_file",
+            "edc_export.navbars",
             "edc_export.offline_models",
             "edc_export.settings",
             "edc_export.signals",
             "edc_export.tests",
+            "edc_export.tests.helper",
             "edc_export.tests.models",
+            "edc_export.tests.test_archive_exporter",
             "edc_export.tests.test_export_model",
+            "edc_export.tests.test_exportable",
+            "edc_export.tests.test_model_exporter",
             "edc_export.tests.test_plan",
             "edc_export.urls",
+            "edc_export.views",
+            "edc_export.views.export_models_view",
+            "edc_export.views.home_view",
             "edc_export.wsgi"
         ],
-        "version": "0.2.1"
+        "version": "0.2.7"
     },
     "edc-fabric": {
         "cmdline": [],
@@ -13132,7 +13154,7 @@
             "edc_lab.urls",
             "edc_lab.wsgi"
         ],
-        "version": "0.2.25"
+        "version": "0.2.26"
     },
     "edc-lab-dashboard": {
         "cmdline": [],
@@ -13290,7 +13312,7 @@
             "edc_locator.view_mixins",
             "edc_locator.wsgi"
         ],
-        "version": "0.2.10"
+        "version": "0.2.11"
     },
     "edc-metadata": {
         "cmdline": [],
@@ -13372,7 +13394,7 @@
             "edc_metadata.views.home_view",
             "edc_metadata.wsgi"
         ],
-        "version": "0.2.17"
+        "version": "0.2.18"
     },
     "edc-metadata-rules": {
         "cmdline": [],
@@ -13638,7 +13660,7 @@
             "edc_pdutils.utils.undash",
             "edc_pdutils.wsgi"
         ],
-        "version": "0.1.4"
+        "version": "0.1.6"
     },
     "edc-permissions": {
         "cmdline": [],
@@ -13879,7 +13901,7 @@
             "edc_registration.urls",
             "edc_registration.wsgi"
         ],
-        "version": "0.2.15"
+        "version": "0.2.16"
     },
     "edc-reportable": {
         "cmdline": [],
@@ -17793,7 +17815,25 @@
     "edx-drf-extensions": {
         "cmdline": [],
         "modules": [
+            "docs",
+            "docs.conf",
             "edx_rest_framework_extensions",
+            "edx_rest_framework_extensions.auth",
+            "edx_rest_framework_extensions.auth.bearer",
+            "edx_rest_framework_extensions.auth.bearer.authentication",
+            "edx_rest_framework_extensions.auth.bearer.tests",
+            "edx_rest_framework_extensions.auth.bearer.tests.test_authentication",
+            "edx_rest_framework_extensions.auth.jwt",
+            "edx_rest_framework_extensions.auth.jwt.authentication",
+            "edx_rest_framework_extensions.auth.jwt.constants",
+            "edx_rest_framework_extensions.auth.jwt.cookies",
+            "edx_rest_framework_extensions.auth.jwt.decoder",
+            "edx_rest_framework_extensions.auth.jwt.middleware",
+            "edx_rest_framework_extensions.auth.jwt.tests",
+            "edx_rest_framework_extensions.auth.jwt.tests.test_authentication",
+            "edx_rest_framework_extensions.auth.jwt.tests.test_cookies",
+            "edx_rest_framework_extensions.auth.jwt.tests.test_decoder",
+            "edx_rest_framework_extensions.auth.jwt.tests.test_middleware",
             "edx_rest_framework_extensions.authentication",
             "edx_rest_framework_extensions.config",
             "edx_rest_framework_extensions.exceptions",
@@ -17802,9 +17842,15 @@
             "edx_rest_framework_extensions.paginators",
             "edx_rest_framework_extensions.permissions",
             "edx_rest_framework_extensions.settings",
+            "edx_rest_framework_extensions.tests",
+            "edx_rest_framework_extensions.tests.factories",
+            "edx_rest_framework_extensions.tests.test_middleware",
+            "edx_rest_framework_extensions.tests.test_paginators",
+            "edx_rest_framework_extensions.tests.test_permissions",
+            "edx_rest_framework_extensions.tests.test_settings",
             "edx_rest_framework_extensions.utils"
         ],
-        "version": "1.8.0"
+        "version": "1.9.0"
     },
     "edx-ecommerce-api-client": {
         "cmdline": [],
@@ -21185,7 +21231,7 @@
             "egegsignals.hfart",
             "egegsignals.parameters"
         ],
-        "version": "1.0.2"
+        "version": "1.0.5"
     },
     "egenix-mx-base": {
         "cmdline": [],
@@ -26413,7 +26459,9 @@
         "version": "1.2"
     },
     "elicit": {
-        "cmdline": [],
+        "cmdline": [
+            "eldb"
+        ],
         "modules": [
             "elicit",
             "elicit.all",
@@ -26435,7 +26483,7 @@
             "elicit.util",
             "elicit.widgets"
         ],
-        "version": "1.5.1"
+        "version": "1.5.2"
     },
     "elide": {
         "cmdline": [],
@@ -33789,7 +33837,7 @@
             "enamlnativecli",
             "enamlnativecli.main"
         ],
-        "version": "2.2.17"
+        "version": "2.2.18"
     },
     "enaml-native-icons": {
         "cmdline": [],
@@ -35201,11 +35249,14 @@
             "endermite.cli.main",
             "endermite.cli.utils",
             "endermite.cli.watch",
+            "endermite.command",
+            "endermite.command.basic",
+            "endermite.command.mixin",
             "endermite.component",
+            "endermite.component_method",
             "endermite.decorators",
             "endermite.error",
             "endermite.function",
-            "endermite.mixins",
             "endermite.project",
             "endermite.resource",
             "endermite.utils",
@@ -35214,7 +35265,7 @@
             "tests.test_cli",
             "tests.test_endermite"
         ],
-        "version": "0.0.3"
+        "version": "0.0.5"
     },
     "endesive": {
         "cmdline": [],
@@ -39482,6 +39533,25 @@
             "entropy.web"
         ],
         "version": "16.1.0"
+    },
+    "entropytriangle": {
+        "cmdline": [],
+        "modules": [
+            "entropytriangle",
+            "entropytriangle.auxfunc",
+            "entropytriangle.coordsentropic",
+            "entropytriangle.entropytriangle",
+            "entropytriangle.jentropies",
+            "entropytriangle.sentropies",
+            "entropytriangle.ternary",
+            "entropytriangle.ternary.colormapping",
+            "entropytriangle.ternary.heatmapping",
+            "entropytriangle.ternary.helpers",
+            "entropytriangle.ternary.lines",
+            "entropytriangle.ternary.plotting",
+            "entropytriangle.ternary.ternary_axes_subplot"
+        ],
+        "version": "0.0.4"
     },
     "entry": {
         "cmdline": [],
@@ -49518,7 +49588,7 @@
             "espatools.raster",
             "espatools.read"
         ],
-        "version": "0.0.3"
+        "version": "0.0.4"
     },
     "espeed": {
         "cmdline": [],
@@ -51944,17 +52014,19 @@
         "modules": [
             "eth_tester_rpc",
             "eth_tester_rpc.cli",
+            "eth_tester_rpc.formatter",
             "eth_tester_rpc.rpc",
             "eth_tester_rpc.server",
             "eth_tester_rpc.utils",
             "eth_tester_rpc.utils.compat_threading",
             "eth_tester_rpc.utils.compat_threading.compat_gevent",
             "eth_tester_rpc.utils.compat_threading.compat_stdlib",
+            "eth_tester_rpc.utils.conversion",
             "eth_tester_rpc.utils.formatters",
             "eth_tester_rpc.utils.toolz",
             "eth_tester_rpc.utils.toolz.curried"
         ],
-        "version": "0.1.0a0"
+        "version": "0.1.0b1"
     },
     "eth-testrpc": {
         "cmdline": [],
@@ -53750,7 +53822,7 @@
             "etmTk.version",
             "etmTk.view"
         ],
-        "version": "3.2.36"
+        "version": "3.2.37"
     },
     "etna": {
         "cmdline": [],
@@ -62883,6 +62955,11 @@
         "cmdline": [],
         "modules": [],
         "version": "0.0.1"
+    },
+    "exchangesapi": {
+        "cmdline": [],
+        "modules": [],
+        "version": ""
     },
     "exchequer": {
         "cmdline": [],
