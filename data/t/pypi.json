@@ -2000,10 +2000,13 @@
         "cmdline": [],
         "modules": [
             "tabula",
+            "tabula.errors",
+            "tabula.file_util",
+            "tabula.template",
             "tabula.util",
             "tabula.wrapper"
         ],
-        "version": "1.2.0"
+        "version": "1.3.0"
     },
     "tabular": {
         "cmdline": [],
@@ -3702,7 +3705,7 @@
         "modules": [
             "taguette"
         ],
-        "version": "0.0"
+        "version": "0.0.1"
     },
     "tagword": {
         "cmdline": [],
@@ -7088,6 +7091,14 @@
         ],
         "version": "0.2"
     },
+    "tanktools": {
+        "cmdline": [],
+        "modules": [
+            "tanktools",
+            "tanktools.phout"
+        ],
+        "version": "1.0.2"
+    },
     "tantan": {
         "cmdline": [],
         "modules": [
@@ -7609,7 +7620,7 @@
             "tap_clubspeed.streams",
             "tap_clubspeed.sync"
         ],
-        "version": "0.2.2"
+        "version": "0.2.3"
     },
     "tap-codat": {
         "cmdline": [],
@@ -10385,8 +10396,173 @@
     },
     "taskflow": {
         "cmdline": [],
-        "modules": [],
-        "version": "3.2.0"
+        "modules": [
+            "taskflow",
+            "taskflow.atom",
+            "taskflow.conductors",
+            "taskflow.conductors.backends",
+            "taskflow.conductors.backends.impl_blocking",
+            "taskflow.conductors.backends.impl_executor",
+            "taskflow.conductors.backends.impl_nonblocking",
+            "taskflow.conductors.base",
+            "taskflow.contrib",
+            "taskflow.deciders",
+            "taskflow.engines",
+            "taskflow.engines.action_engine",
+            "taskflow.engines.action_engine.actions",
+            "taskflow.engines.action_engine.actions.base",
+            "taskflow.engines.action_engine.actions.retry",
+            "taskflow.engines.action_engine.actions.task",
+            "taskflow.engines.action_engine.builder",
+            "taskflow.engines.action_engine.compiler",
+            "taskflow.engines.action_engine.completer",
+            "taskflow.engines.action_engine.deciders",
+            "taskflow.engines.action_engine.engine",
+            "taskflow.engines.action_engine.executor",
+            "taskflow.engines.action_engine.process_executor",
+            "taskflow.engines.action_engine.runtime",
+            "taskflow.engines.action_engine.scheduler",
+            "taskflow.engines.action_engine.scopes",
+            "taskflow.engines.action_engine.selector",
+            "taskflow.engines.action_engine.traversal",
+            "taskflow.engines.base",
+            "taskflow.engines.helpers",
+            "taskflow.engines.worker_based",
+            "taskflow.engines.worker_based.dispatcher",
+            "taskflow.engines.worker_based.endpoint",
+            "taskflow.engines.worker_based.engine",
+            "taskflow.engines.worker_based.executor",
+            "taskflow.engines.worker_based.protocol",
+            "taskflow.engines.worker_based.proxy",
+            "taskflow.engines.worker_based.server",
+            "taskflow.engines.worker_based.types",
+            "taskflow.engines.worker_based.worker",
+            "taskflow.exceptions",
+            "taskflow.flow",
+            "taskflow.formatters",
+            "taskflow.jobs",
+            "taskflow.jobs.backends",
+            "taskflow.jobs.backends.impl_redis",
+            "taskflow.jobs.backends.impl_zookeeper",
+            "taskflow.jobs.base",
+            "taskflow.listeners",
+            "taskflow.listeners.base",
+            "taskflow.listeners.capturing",
+            "taskflow.listeners.claims",
+            "taskflow.listeners.logging",
+            "taskflow.listeners.printing",
+            "taskflow.listeners.timing",
+            "taskflow.logging",
+            "taskflow.patterns",
+            "taskflow.patterns.graph_flow",
+            "taskflow.patterns.linear_flow",
+            "taskflow.patterns.unordered_flow",
+            "taskflow.persistence",
+            "taskflow.persistence.backends",
+            "taskflow.persistence.backends.impl_dir",
+            "taskflow.persistence.backends.impl_memory",
+            "taskflow.persistence.backends.impl_sqlalchemy",
+            "taskflow.persistence.backends.impl_zookeeper",
+            "taskflow.persistence.backends.sqlalchemy",
+            "taskflow.persistence.backends.sqlalchemy.migration",
+            "taskflow.persistence.backends.sqlalchemy.tables",
+            "taskflow.persistence.base",
+            "taskflow.persistence.models",
+            "taskflow.persistence.path_based",
+            "taskflow.retry",
+            "taskflow.states",
+            "taskflow.storage",
+            "taskflow.task",
+            "taskflow.test",
+            "taskflow.tests",
+            "taskflow.tests.test_examples",
+            "taskflow.tests.unit",
+            "taskflow.tests.unit.action_engine",
+            "taskflow.tests.unit.action_engine.test_builder",
+            "taskflow.tests.unit.action_engine.test_compile",
+            "taskflow.tests.unit.action_engine.test_creation",
+            "taskflow.tests.unit.action_engine.test_process_executor",
+            "taskflow.tests.unit.action_engine.test_scoping",
+            "taskflow.tests.unit.jobs",
+            "taskflow.tests.unit.jobs.base",
+            "taskflow.tests.unit.jobs.test_entrypoint",
+            "taskflow.tests.unit.jobs.test_redis_job",
+            "taskflow.tests.unit.jobs.test_zk_job",
+            "taskflow.tests.unit.patterns",
+            "taskflow.tests.unit.patterns.test_graph_flow",
+            "taskflow.tests.unit.patterns.test_linear_flow",
+            "taskflow.tests.unit.patterns.test_unordered_flow",
+            "taskflow.tests.unit.persistence",
+            "taskflow.tests.unit.persistence.base",
+            "taskflow.tests.unit.persistence.test_dir_persistence",
+            "taskflow.tests.unit.persistence.test_memory_persistence",
+            "taskflow.tests.unit.persistence.test_sql_persistence",
+            "taskflow.tests.unit.persistence.test_zk_persistence",
+            "taskflow.tests.unit.test_arguments_passing",
+            "taskflow.tests.unit.test_check_transition",
+            "taskflow.tests.unit.test_conductors",
+            "taskflow.tests.unit.test_deciders",
+            "taskflow.tests.unit.test_engine_helpers",
+            "taskflow.tests.unit.test_engines",
+            "taskflow.tests.unit.test_exceptions",
+            "taskflow.tests.unit.test_failure",
+            "taskflow.tests.unit.test_flow_dependencies",
+            "taskflow.tests.unit.test_formatters",
+            "taskflow.tests.unit.test_functor_task",
+            "taskflow.tests.unit.test_listeners",
+            "taskflow.tests.unit.test_mapfunctor_task",
+            "taskflow.tests.unit.test_notifier",
+            "taskflow.tests.unit.test_progress",
+            "taskflow.tests.unit.test_reducefunctor_task",
+            "taskflow.tests.unit.test_retries",
+            "taskflow.tests.unit.test_states",
+            "taskflow.tests.unit.test_storage",
+            "taskflow.tests.unit.test_suspend",
+            "taskflow.tests.unit.test_task",
+            "taskflow.tests.unit.test_types",
+            "taskflow.tests.unit.test_utils",
+            "taskflow.tests.unit.test_utils_async_utils",
+            "taskflow.tests.unit.test_utils_binary",
+            "taskflow.tests.unit.test_utils_iter_utils",
+            "taskflow.tests.unit.test_utils_threading_utils",
+            "taskflow.tests.unit.worker_based",
+            "taskflow.tests.unit.worker_based.test_creation",
+            "taskflow.tests.unit.worker_based.test_dispatcher",
+            "taskflow.tests.unit.worker_based.test_endpoint",
+            "taskflow.tests.unit.worker_based.test_executor",
+            "taskflow.tests.unit.worker_based.test_message_pump",
+            "taskflow.tests.unit.worker_based.test_pipeline",
+            "taskflow.tests.unit.worker_based.test_protocol",
+            "taskflow.tests.unit.worker_based.test_proxy",
+            "taskflow.tests.unit.worker_based.test_server",
+            "taskflow.tests.unit.worker_based.test_types",
+            "taskflow.tests.unit.worker_based.test_worker",
+            "taskflow.tests.utils",
+            "taskflow.types",
+            "taskflow.types.entity",
+            "taskflow.types.failure",
+            "taskflow.types.graph",
+            "taskflow.types.latch",
+            "taskflow.types.notifier",
+            "taskflow.types.sets",
+            "taskflow.types.timing",
+            "taskflow.types.tree",
+            "taskflow.utils",
+            "taskflow.utils.async_utils",
+            "taskflow.utils.banner",
+            "taskflow.utils.eventlet_utils",
+            "taskflow.utils.iter_utils",
+            "taskflow.utils.kazoo_utils",
+            "taskflow.utils.kombu_utils",
+            "taskflow.utils.misc",
+            "taskflow.utils.mixins",
+            "taskflow.utils.persistence_utils",
+            "taskflow.utils.redis_utils",
+            "taskflow.utils.schema_utils",
+            "taskflow.utils.threading_utils",
+            "taskflow.version"
+        ],
+        "version": "3.3.0"
     },
     "taskforce": {
         "cmdline": [
@@ -13248,7 +13424,7 @@
             "tensorboard.util",
             "tensorboard.version"
         ],
-        "version": "1.11.0a20180923"
+        "version": "1.11.0a20180924"
     },
     "tba-api-v3client": {
         "cmdline": [],
@@ -25338,7 +25514,7 @@
             "tensor4.trace_parser",
             "tensor4.var_table"
         ],
-        "version": "0.0.2"
+        "version": "0.0.3"
     },
     "tensorbase": {
         "cmdline": [],
@@ -25412,9 +25588,36 @@
             "tensorboard._vendor.html5lib.trie.datrie",
             "tensorboard._vendor.html5lib.trie.py",
             "tensorboard._vendor.html5lib.utils",
+            "tensorboard._vendor.tensorflow_serving",
+            "tensorboard._vendor.tensorflow_serving.apis",
+            "tensorboard._vendor.tensorflow_serving.apis.classification_pb2",
+            "tensorboard._vendor.tensorflow_serving.apis.get_model_metadata_pb2",
+            "tensorboard._vendor.tensorflow_serving.apis.get_model_status_pb2",
+            "tensorboard._vendor.tensorflow_serving.apis.inference_pb2",
+            "tensorboard._vendor.tensorflow_serving.apis.input_pb2",
+            "tensorboard._vendor.tensorflow_serving.apis.model_management_pb2",
+            "tensorboard._vendor.tensorflow_serving.apis.model_pb2",
+            "tensorboard._vendor.tensorflow_serving.apis.model_service_pb2",
+            "tensorboard._vendor.tensorflow_serving.apis.model_service_pb2_grpc",
+            "tensorboard._vendor.tensorflow_serving.apis.predict_pb2",
+            "tensorboard._vendor.tensorflow_serving.apis.prediction_log_pb2",
+            "tensorboard._vendor.tensorflow_serving.apis.prediction_service_pb2",
+            "tensorboard._vendor.tensorflow_serving.apis.prediction_service_pb2_grpc",
+            "tensorboard._vendor.tensorflow_serving.apis.regression_pb2",
+            "tensorboard._vendor.tensorflow_serving.apis.session_service_pb2",
+            "tensorboard._vendor.tensorflow_serving.config",
+            "tensorboard._vendor.tensorflow_serving.config.log_collector_config_pb2",
+            "tensorboard._vendor.tensorflow_serving.config.logging_config_pb2",
+            "tensorboard._vendor.tensorflow_serving.config.model_server_config_pb2",
+            "tensorboard._vendor.tensorflow_serving.sources",
+            "tensorboard._vendor.tensorflow_serving.sources.storage_path",
+            "tensorboard._vendor.tensorflow_serving.sources.storage_path.file_system_storage_path_source_pb2",
+            "tensorboard._vendor.tensorflow_serving.util",
+            "tensorboard._vendor.tensorflow_serving.util.status_pb2",
             "tensorboard.backend",
             "tensorboard.backend.application",
             "tensorboard.backend.event_processing",
+            "tensorboard.backend.event_processing.db_import_multiplexer",
             "tensorboard.backend.event_processing.directory_watcher",
             "tensorboard.backend.event_processing.event_accumulator",
             "tensorboard.backend.event_processing.event_file_inspector",
@@ -25486,6 +25689,12 @@
             "tensorboard.plugins.image.metadata",
             "tensorboard.plugins.image.plugin_data_pb2",
             "tensorboard.plugins.image.summary",
+            "tensorboard.plugins.interactive_inference",
+            "tensorboard.plugins.interactive_inference.interactive_inference_plugin",
+            "tensorboard.plugins.interactive_inference.utils",
+            "tensorboard.plugins.interactive_inference.utils.common_utils",
+            "tensorboard.plugins.interactive_inference.utils.inference_utils",
+            "tensorboard.plugins.interactive_inference.utils.platform_utils",
             "tensorboard.plugins.pr_curve",
             "tensorboard.plugins.pr_curve.metadata",
             "tensorboard.plugins.pr_curve.plugin_data_pb2",
@@ -25513,7 +25722,7 @@
             "tensorboard.util",
             "tensorboard.version"
         ],
-        "version": "1.10.0"
+        "version": "1.11.0"
     },
     "tensorboard-chainer": {
         "cmdline": [],
@@ -25792,11 +26001,15 @@
         "version": "0.2.3"
     },
     "tensordash": {
-        "cmdline": [],
-        "modules": [
-            "tensordash"
+        "cmdline": [
+            "main.py"
         ],
-        "version": "0.0.1"
+        "modules": [
+            "tensordash",
+            "tensordash.gqlOperations",
+            "tensordash.main"
+        ],
+        "version": "0.0.4"
     },
     "tensorflow": {
         "cmdline": [],
@@ -29909,7 +30122,7 @@
             "teradatasqlalchemy.types",
             "teradatasqlalchemy.vernumber"
         ],
-        "version": "16.20.0.2"
+        "version": "16.20.0.3"
     },
     "teraffic": {
         "cmdline": [],
@@ -30617,6 +30830,7 @@
             "terminalone.models.agency",
             "terminalone.models.atomiccreative",
             "terminalone.models.audiencesegment",
+            "terminalone.models.budgetflight",
             "terminalone.models.campaign",
             "terminalone.models.concept",
             "terminalone.models.contact",
@@ -30671,7 +30885,7 @@
             "terminalone.vendor.six",
             "terminalone.xmlparser"
         ],
-        "version": "1.8.4"
+        "version": "1.9.0"
     },
     "terminaloverflow": {
         "cmdline": [],
@@ -39955,17 +40169,17 @@
     "tf-nightly": {
         "cmdline": [],
         "modules": [],
-        "version": "1.12.0.dev20180923"
+        "version": "1.12.0.dev20180924"
     },
     "tf-nightly-gpu": {
         "cmdline": [],
         "modules": [],
-        "version": "1.12.0.dev20180923"
+        "version": "1.12.0.dev20180924"
     },
     "tf-nightly-xla-gpu": {
         "cmdline": [],
         "modules": [],
-        "version": "1.12.0.dev20180923"
+        "version": "1.12.0.dev20180924"
     },
     "tf-onnx": {
         "cmdline": [],
@@ -41409,7 +41623,7 @@
             "tensorflow_probability.python.vi",
             "tensorflow_probability.python.vi.csiszar_divergence"
         ],
-        "version": "0.4.0.dev20180923"
+        "version": "0.4.0.dev20180924"
     },
     "tfp-nightly-gpu": {
         "cmdline": [],
@@ -41578,7 +41792,7 @@
             "tensorflow_probability.python.vi",
             "tensorflow_probability.python.vi.csiszar_divergence"
         ],
-        "version": "0.4.0.dev20180923"
+        "version": "0.4.0.dev20180924"
     },
     "tfpromote": {
         "cmdline": [],
@@ -44777,7 +44991,7 @@
             "theano.updates",
             "theano.version"
         ],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     "theano-bpr": {
         "cmdline": [],
@@ -48697,7 +48911,7 @@
         "modules": [
             "thoth"
         ],
-        "version": "0.0.0"
+        "version": "0.0.1"
     },
     "thoth-adviser": {
         "cmdline": [],
@@ -49542,13 +49756,12 @@
     "threatplaybook": {
         "cmdline": [],
         "modules": [
-            "ThreatPlaybook",
-            "models",
-            "test_threatPlaybook",
             "threat_playbook",
-            "utils"
+            "threat_playbook.ThreatPlaybook",
+            "threat_playbook.models",
+            "threat_playbook.utils"
         ],
-        "version": "1.0.5"
+        "version": "1.0.6"
     },
     "threatrecon": {
         "cmdline": [],
@@ -50839,6 +51052,7 @@
             "tests.Logging.modules.test_ExploitGraph",
             "tests.Logging.modules.test_JSON",
             "tests.Logging.modules.test_Mapper",
+            "tests.Logging.modules.test_MongoDB",
             "tests.Logging.modules.test_compatibility",
             "tests.Logging.test_BaseLogging",
             "tests.Logging.test_LoggingModules",
@@ -51166,7 +51380,7 @@
             "thug.WebTracking.WebTracking",
             "thug.thug"
         ],
-        "version": "0.9.32"
+        "version": "0.9.33"
     },
     "thug-lyf": {
         "cmdline": [],
@@ -55372,7 +55586,7 @@
             "tilecloud_chain.timedtilestore",
             "tilecloud_chain.views"
         ],
-        "version": "1.8.0"
+        "version": "1.8.1"
     },
     "tilecontrol": {
         "cmdline": [],
@@ -55698,7 +55912,7 @@
             "TileStache.Vector.Arc",
             "TileStache.py3_compat"
         ],
-        "version": "1.51.12"
+        "version": "1.51.13"
     },
     "tilestitcher": {
         "cmdline": [],
@@ -61860,8 +62074,17 @@
     },
     "tkfilebrowser": {
         "cmdline": [],
-        "modules": [],
-        "version": "2.2.4"
+        "modules": [
+            "tkfilebrowser",
+            "tkfilebrowser.autoscrollbar",
+            "tkfilebrowser.constants",
+            "tkfilebrowser.filebrowser",
+            "tkfilebrowser.functions",
+            "tkfilebrowser.path_button",
+            "tkfilebrowser.recent_files",
+            "tkfilebrowser.tooltip"
+        ],
+        "version": "2.2.5"
     },
     "tkfilterlist": {
         "cmdline": [],
@@ -63043,10 +63266,9 @@
     "tlds": {
         "cmdline": [],
         "modules": [
-            "tlds",
-            "tlds._data"
+            "tlds"
         ],
-        "version": "2018092201"
+        "version": "2018092400"
     },
     "tldtosms": {
         "cmdline": [],
@@ -67277,7 +67499,7 @@
             "todd.taskui.main_ui",
             "todd.taskui.taskitem"
         ],
-        "version": "0.0.5"
+        "version": "0.0.6"
     },
     "todo": {
         "cmdline": [
@@ -67398,7 +67620,7 @@
             "todo_sync.node",
             "todo_sync.source"
         ],
-        "version": "0.3.0"
+        "version": "0.3.1"
     },
     "todo-tools": {
         "cmdline": [
@@ -70517,7 +70739,7 @@
             "tomso.mesa",
             "tomso.stars"
         ],
-        "version": "0.0.8"
+        "version": "0.0.9"
     },
     "tomthumb": {
         "cmdline": [],
@@ -74368,11 +74590,12 @@
         "cmdline": [],
         "modules": [
             "torchfun",
+            "torchfun.datasets",
             "torchfun.nn",
             "torchfun.torchfun",
             "torchfun.transforms"
         ],
-        "version": "0.0.75"
+        "version": "0.0.84"
     },
     "torchfusion": {
         "cmdline": [],
@@ -79460,7 +79683,7 @@
             "toucan_connectors.toucan_toco",
             "toucan_connectors.toucan_toco.toucan_toco_connector"
         ],
-        "version": "0.5.1"
+        "version": "0.5.2"
     },
     "toucan-data-sdk": {
         "cmdline": [],
@@ -87443,7 +87666,7 @@
             "transip_stack.stack",
             "transip_stack.users"
         ],
-        "version": "1.1.0"
+        "version": "1.1.1"
     },
     "transit": {
         "cmdline": [],
@@ -94965,7 +95188,7 @@
     "tripleo-heat-templates": {
         "cmdline": [],
         "modules": [],
-        "version": "8.0.5"
+        "version": "8.0.6"
     },
     "tripleo-helper": {
         "cmdline": [],
@@ -115072,16 +115295,18 @@
             "twine._installed",
             "twine.cli",
             "twine.commands",
+            "twine.commands.check",
             "twine.commands.register",
             "twine.commands.upload",
             "twine.exceptions",
             "twine.package",
             "twine.repository",
+            "twine.settings",
             "twine.utils",
             "twine.wheel",
             "twine.wininst"
         ],
-        "version": "1.11.0"
+        "version": "1.12.1"
     },
     "twine-lab10": {
         "cmdline": [],
@@ -121010,19 +121235,6 @@
         ],
         "version": "0.1.0"
     },
-    "txctools": {
-        "cmdline": [
-            "txc_hotspot",
-            "txc_json"
-        ],
-        "modules": [
-            "txctools",
-            "txctools.reports",
-            "txctools.reports.hotspot",
-            "txctools.tools"
-        ],
-        "version": "0.1.0"
-    },
     "txcurrentcost": {
         "cmdline": [],
         "modules": [
@@ -121208,7 +121420,7 @@
             "txffpAssistant.logger",
             "txffpAssistant.pdf"
         ],
-        "version": "1.0.4"
+        "version": "1.1.0"
     },
     "txfixtures": {
         "cmdline": [],
@@ -121645,7 +121857,7 @@
             "txkoji.task",
             "txkoji.task_states"
         ],
-        "version": "0.7.0"
+        "version": "0.8.0"
     },
     "txkube": {
         "cmdline": [],
@@ -124460,6 +124672,7 @@
         "cmdline": [],
         "modules": [
             "typepy",
+            "typepy.__version__",
             "typepy._const",
             "typepy._function",
             "typepy._typecode",
@@ -124507,7 +124720,7 @@
             "typepy.type._realnumber",
             "typepy.type._string"
         ],
-        "version": "0.2.2"
+        "version": "0.2.3"
     },
     "typequery": {
         "cmdline": [],
