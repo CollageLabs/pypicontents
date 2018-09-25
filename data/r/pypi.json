@@ -1163,7 +1163,7 @@
             "tests.test_waf",
             "tests.test_web_app"
         ],
-        "version": "0.8.3"
+        "version": "0.8.4"
     },
     "raccoontest": {
         "cmdline": [],
@@ -1935,6 +1935,11 @@
         ],
         "version": "0.2.14"
     },
+    "radar5": {
+        "cmdline": [],
+        "modules": [],
+        "version": "0.1"
+    },
     "radare2-ctypes": {
         "cmdline": [],
         "modules": [
@@ -2048,7 +2053,7 @@
             "radcalnet.file_handle",
             "radcalnet.site_measurements"
         ],
-        "version": "0.1.1"
+        "version": "0.1.2"
     },
     "radd": {
         "cmdline": [],
@@ -4794,7 +4799,6 @@
             "raiden.encoding.messages",
             "raiden.exceptions",
             "raiden.log_config",
-            "raiden.main",
             "raiden.message_handler",
             "raiden.messages",
             "raiden.network",
@@ -4827,6 +4831,7 @@
             "raiden.routing",
             "raiden.settings",
             "raiden.storage",
+            "raiden.storage.restore",
             "raiden.storage.serialize",
             "raiden.storage.sqlite",
             "raiden.storage.utils",
@@ -4845,6 +4850,7 @@
             "raiden.tests.integration.api.test_pythonapi",
             "raiden.tests.integration.api.test_pythonapi_regression",
             "raiden.tests.integration.api.test_restapi",
+            "raiden.tests.integration.api.utils",
             "raiden.tests.integration.conftest",
             "raiden.tests.integration.contracts",
             "raiden.tests.integration.contracts.conftest",
@@ -4864,16 +4870,19 @@
             "raiden.tests.integration.long_running.test_token_networks",
             "raiden.tests.integration.rpc",
             "raiden.tests.integration.rpc.test_assumptions",
+            "raiden.tests.integration.test_balance_proof_check",
             "raiden.tests.integration.test_blockchainservice",
             "raiden.tests.integration.test_echo_node",
             "raiden.tests.integration.test_endpointregistry",
             "raiden.tests.integration.test_integration_events",
+            "raiden.tests.integration.test_matrix_transport",
             "raiden.tests.integration.test_pythonapi",
             "raiden.tests.integration.test_recovery",
             "raiden.tests.integration.test_regression",
             "raiden.tests.integration.test_send_queued_messages",
             "raiden.tests.integration.test_service",
             "raiden.tests.integration.test_settlement",
+            "raiden.tests.integration.test_stress",
             "raiden.tests.integration.transfer",
             "raiden.tests.integration.transfer.test_directransfer",
             "raiden.tests.integration.transfer.test_directransfer_events",
@@ -4895,7 +4904,6 @@
             "raiden.tests.unit.test_cli",
             "raiden.tests.unit.test_dict_encoding",
             "raiden.tests.unit.test_logging",
-            "raiden.tests.unit.test_matrix_transport",
             "raiden.tests.unit.test_messages",
             "raiden.tests.unit.test_mock",
             "raiden.tests.unit.test_mtree",
@@ -4916,6 +4924,7 @@
             "raiden.tests.unit.transfer.mediated_transfer.test_mediatorstate_regression",
             "raiden.tests.unit.transfer.mediated_transfer.test_targetstate",
             "raiden.tests.unit.transfer.test_channel",
+            "raiden.tests.unit.transfer.test_node",
             "raiden.tests.unit.transfer.test_utils",
             "raiden.tests.utils",
             "raiden.tests.utils.client",
@@ -4969,7 +4978,7 @@
             "raiden.utils.typing",
             "raiden.waiting"
         ],
-        "version": "0.8.0"
+        "version": "0.10.0"
     },
     "raiden-contracts": {
         "cmdline": [],
@@ -6395,8 +6404,130 @@
     },
     "rally": {
         "cmdline": [],
-        "modules": [],
-        "version": "1.1.0"
+        "modules": [
+            "rally",
+            "rally.aas",
+            "rally.api",
+            "rally.cli",
+            "rally.cli.cliutils",
+            "rally.cli.commands",
+            "rally.cli.commands.db",
+            "rally.cli.commands.deployment",
+            "rally.cli.commands.env",
+            "rally.cli.commands.plugin",
+            "rally.cli.commands.task",
+            "rally.cli.commands.verify",
+            "rally.cli.envutils",
+            "rally.cli.main",
+            "rally.cli.manage",
+            "rally.common",
+            "rally.common.broker",
+            "rally.common.cfg",
+            "rally.common.db",
+            "rally.common.db.api",
+            "rally.common.db.migrations",
+            "rally.common.db.migrations.env",
+            "rally.common.db.models",
+            "rally.common.db.sa_types",
+            "rally.common.db.schema",
+            "rally.common.fileutils",
+            "rally.common.i18n",
+            "rally.common.io",
+            "rally.common.io.junit",
+            "rally.common.io.subunit_v2",
+            "rally.common.logging",
+            "rally.common.objects",
+            "rally.common.objects.deploy",
+            "rally.common.objects.task",
+            "rally.common.objects.verification",
+            "rally.common.objects.verifier",
+            "rally.common.opts",
+            "rally.common.plugin",
+            "rally.common.plugin.discover",
+            "rally.common.plugin.info",
+            "rally.common.plugin.meta",
+            "rally.common.plugin.plugin",
+            "rally.common.sshutils",
+            "rally.common.streaming_algorithms",
+            "rally.common.utils",
+            "rally.common.validation",
+            "rally.common.version",
+            "rally.common.yamlutils",
+            "rally.consts",
+            "rally.env",
+            "rally.env.env_mgr",
+            "rally.env.platform",
+            "rally.exceptions",
+            "rally.plugins",
+            "rally.plugins.common",
+            "rally.plugins.common.contexts",
+            "rally.plugins.common.contexts.dummy",
+            "rally.plugins.common.exporters",
+            "rally.plugins.common.exporters.elastic",
+            "rally.plugins.common.exporters.elastic.client",
+            "rally.plugins.common.exporters.elastic.exporter",
+            "rally.plugins.common.exporters.html",
+            "rally.plugins.common.exporters.json_exporter",
+            "rally.plugins.common.exporters.junit",
+            "rally.plugins.common.hook",
+            "rally.plugins.common.hook.sys_call",
+            "rally.plugins.common.hook.triggers",
+            "rally.plugins.common.hook.triggers.event",
+            "rally.plugins.common.hook.triggers.periodic",
+            "rally.plugins.common.runners",
+            "rally.plugins.common.runners.constant",
+            "rally.plugins.common.runners.rps",
+            "rally.plugins.common.runners.serial",
+            "rally.plugins.common.scenarios",
+            "rally.plugins.common.scenarios.dummy",
+            "rally.plugins.common.scenarios.dummy.dummy",
+            "rally.plugins.common.scenarios.requests",
+            "rally.plugins.common.scenarios.requests.http_requests",
+            "rally.plugins.common.scenarios.requests.utils",
+            "rally.plugins.common.sla",
+            "rally.plugins.common.sla.failure_rate",
+            "rally.plugins.common.sla.iteration_time",
+            "rally.plugins.common.sla.max_average_duration",
+            "rally.plugins.common.sla.max_average_duration_per_atomic",
+            "rally.plugins.common.sla.outliers",
+            "rally.plugins.common.sla.performance_degradation",
+            "rally.plugins.common.types",
+            "rally.plugins.common.validators",
+            "rally.plugins.common.verification",
+            "rally.plugins.common.verification.reporters",
+            "rally.plugins.common.verification.testr",
+            "rally.task",
+            "rally.task.atomic",
+            "rally.task.context",
+            "rally.task.engine",
+            "rally.task.exporter",
+            "rally.task.functional",
+            "rally.task.hook",
+            "rally.task.processing",
+            "rally.task.processing.charts",
+            "rally.task.processing.plot",
+            "rally.task.processing.utils",
+            "rally.task.runner",
+            "rally.task.scenario",
+            "rally.task.service",
+            "rally.task.sla",
+            "rally.task.task_cfg",
+            "rally.task.trigger",
+            "rally.task.types",
+            "rally.task.utils",
+            "rally.task.validation",
+            "rally.ui",
+            "rally.ui.utils",
+            "rally.utils",
+            "rally.utils.encodeutils",
+            "rally.utils.strutils",
+            "rally.verification",
+            "rally.verification.context",
+            "rally.verification.manager",
+            "rally.verification.reporter",
+            "rally.verification.utils"
+        ],
+        "version": "1.2.0"
     },
     "rally-ci": {
         "cmdline": [],
@@ -13520,7 +13651,7 @@
             "rasa_core_sdk.utils",
             "rasa_core_sdk.version"
         ],
-        "version": "0.11.4"
+        "version": "0.11.5"
     },
     "rasa-dialogflow-interpreter": {
         "cmdline": [],
@@ -14607,7 +14738,7 @@
             "tests.test_windows_mixins",
             "tests.test_write"
         ],
-        "version": "1.0.5"
+        "version": "1.0.6"
     },
     "rasterio-code-analyzer": {
         "cmdline": [],
@@ -18793,7 +18924,7 @@
             "tests.test_fluentscope",
             "tests.test_fluentshape"
         ],
-        "version": "0.3.0"
+        "version": "0.3.1"
     },
     "rddlgym": {
         "cmdline": [
@@ -20614,7 +20745,7 @@
             "react_render.settings",
             "react_render.utils"
         ],
-        "version": "1.5.2"
+        "version": "1.5.3"
     },
     "react-render-client": {
         "cmdline": [],
@@ -33560,7 +33691,7 @@
             "regularized_glm.core",
             "regularized_glm.stats"
         ],
-        "version": "0.0.5.dev0"
+        "version": "0.0.6.dev0"
     },
     "regulations": {
         "cmdline": [],
@@ -34884,7 +35015,7 @@
             "relatively",
             "relatively.relatively"
         ],
-        "version": "1.0.1"
+        "version": "1.0.4"
     },
     "relatorio": {
         "cmdline": [],
@@ -35200,6 +35331,19 @@
             "release_me.client"
         ],
         "version": "0.3.1"
+    },
+    "release-name-generator": {
+        "cmdline": [],
+        "modules": [
+            "release_name_generator",
+            "release_name_generator.common",
+            "release_name_generator.common.utils",
+            "release_name_generator.config",
+            "release_name_generator.main",
+            "release_name_generator.names_generator",
+            "release_name_generator.tasks"
+        ],
+        "version": "0.0.1"
     },
     "release-notes-generator": {
         "cmdline": [],
@@ -37091,6 +37235,22 @@
         ],
         "version": "0.6"
     },
+    "remote-sensors": {
+        "cmdline": [],
+        "modules": [
+            "remote_sensors",
+            "remote_sensors.app",
+            "remote_sensors.datatypes",
+            "remote_sensors.exc",
+            "remote_sensors.log",
+            "remote_sensors.models",
+            "remote_sensors.models.request",
+            "remote_sensors.models.response",
+            "remote_sensors.registration",
+            "remote_sensors.xbee"
+        ],
+        "version": "0.1.1"
+    },
     "remote-sge": {
         "cmdline": [],
         "modules": [
@@ -37795,6 +37955,23 @@
             "rencode.t"
         ],
         "version": "1.0.5"
+    },
+    "rendascii": {
+        "cmdline": [],
+        "modules": [
+            "rendascii",
+            "rendascii.geometry",
+            "rendascii.geometry.matrix",
+            "rendascii.geometry.polygon",
+            "rendascii.geometry.vector",
+            "rendascii.interface",
+            "rendascii.pipeline",
+            "rendascii.pipeline.shader",
+            "rendascii.pipeline.stage",
+            "rendascii.resource",
+            "rendascii.utility"
+        ],
+        "version": "1.0.0a2.post0"
     },
     "render": {
         "cmdline": [],
@@ -38852,7 +39029,7 @@
             "replay_identification.speed_likelhood",
             "replay_identification.spiking_likelihood"
         ],
-        "version": "0.1.7.dev0"
+        "version": "0.1.8.dev0"
     },
     "replayenhancer": {
         "cmdline": [],
@@ -43000,7 +43177,7 @@
             "requests_credssp.exceptions",
             "requests_credssp.spnego"
         ],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     "requests-crtauth": {
         "cmdline": [],
@@ -44838,7 +45015,7 @@
             "rerobots.api",
             "rerobots.cli"
         ],
-        "version": "0.4.0"
+        "version": "0.5.0"
     },
     "rerpy": {
         "cmdline": [],
@@ -44993,24 +45170,9 @@
             "rescape_graphene.schema_models.snapshots",
             "rescape_graphene.schema_models.snapshots.snap_user_schema_test",
             "rescape_graphene.schema_models.user_schema",
-            "rescape_graphene.schema_models.user_schema_test",
-            "sample_webapp",
-            "sample_webapp.admin",
-            "sample_webapp.apps",
-            "sample_webapp.migrations",
-            "sample_webapp.migrations.0001_initial",
-            "sample_webapp.migrations.0002_foo_geo_collection",
-            "sample_webapp.models",
-            "sample_webapp.sample_schema",
-            "sample_webapp.snapshots",
-            "sample_webapp.snapshots.snap_test_schema",
-            "sample_webapp.snapshots.snap_test_schema_helpers",
-            "sample_webapp.test_schema",
-            "sample_webapp.test_schema_helpers",
-            "sample_webapp.testcases",
-            "sample_webapp.urls"
+            "rescape_graphene.schema_models.user_schema_test"
         ],
-        "version": "0.2.39"
+        "version": "0.2.43"
     },
     "rescape-python-helpers": {
         "cmdline": [],
@@ -45023,7 +45185,7 @@
             "rescape_python_helpers.geospatial.geometry_helpers",
             "rescape_python_helpers.geospatial.geometry_helpers_test"
         ],
-        "version": "0.0.13"
+        "version": "0.0.14"
     },
     "rescape-region": {
         "cmdline": [],
@@ -45039,10 +45201,11 @@
             "rescape_region.migrations.0005_auto_20180916_1420",
             "rescape_region.migrations.0006_auto_20180921_1305",
             "rescape_region.migrations.0007_auto_20180921_1348",
+            "rescape_region.migrations.0008_auto_20180924_0918",
+            "rescape_region.migrations.0009_region_deleted",
+            "rescape_region.migrations.0010_auto_20180924_1545",
             "rescape_region.model_helpers",
             "rescape_region.models",
-            "rescape_region.models.deleted",
-            "rescape_region.models.feature",
             "rescape_region.models.feature_collection",
             "rescape_region.models.group_state",
             "rescape_region.models.region",
@@ -45050,7 +45213,6 @@
             "rescape_region.models.user_state",
             "rescape_region.schema_models",
             "rescape_region.schema_models.feature_collection_schema",
-            "rescape_region.schema_models.feature_schema",
             "rescape_region.schema_models.group_state_data_schema",
             "rescape_region.schema_models.group_state_schema",
             "rescape_region.schema_models.region_data_schema",
@@ -45058,6 +45220,8 @@
             "rescape_region.schema_models.region_schema",
             "rescape_region.schema_models.region_schema_test",
             "rescape_region.schema_models.schema",
+            "rescape_region.schema_models.snapshots",
+            "rescape_region.schema_models.snapshots.snap_region_schema_test",
             "rescape_region.schema_models.user_sample",
             "rescape_region.schema_models.user_state_data_schema",
             "rescape_region.schema_models.user_state_sample",
@@ -45065,11 +45229,10 @@
             "rescape_region.schema_models.user_state_schema_test",
             "rescape_region.snapshots",
             "rescape_region.snapshots.snap_test_schema_helpers",
-            "rescape_region.test_schema_helpers",
             "rescape_region.testcases",
             "rescape_region.urls"
         ],
-        "version": "0.0.29"
+        "version": "0.0.30"
     },
     "resched": {
         "cmdline": [],
@@ -53122,7 +53285,7 @@
             "rfx.tabulate",
             "rfx.test"
         ],
-        "version": "1807.8.1"
+        "version": "1807.8.2"
     },
     "rfxcmd": {
         "cmdline": [],
@@ -53132,7 +53295,7 @@
             "rfxcmd.setup_basic",
             "rfxcmd.setup_demo"
         ],
-        "version": "1807.8.1"
+        "version": "1807.8.2"
     },
     "rfxcom": {
         "cmdline": [],
@@ -53168,7 +53331,7 @@
             "rfxengine.server.cherry",
             "rfxengine.server.endpoints"
         ],
-        "version": "1807.8.1"
+        "version": "1807.8.2"
     },
     "rfxtrx": {
         "cmdline": [],
@@ -58812,7 +58975,7 @@
             "rivers2stratigraphy.utils",
             "rivers2stratigraphy.widgets"
         ],
-        "version": "0.2.6"
+        "version": "0.2.7"
     },
     "riverstone-cli": {
         "cmdline": [
@@ -62640,41 +62803,6 @@
             "rnn"
         ],
         "version": "0.0.0"
-    },
-    "rnnlab": {
-        "cmdline": [],
-        "modules": [
-            "analysis",
-            "analysis.analyze_cat_clustering",
-            "analysis.analyze_context_overlap",
-            "analysis.analyze_corr_mat_as_net",
-            "analysis.analyze_density",
-            "analysis.analyze_lateness",
-            "analysis.analyze_loc_asymmetry",
-            "analysis.analyze_ngrams",
-            "analysis.analyze_novel_ngrams",
-            "analysis.analyze_order_rho",
-            "analysis.analyze_syntactic_compl",
-            "analysis.analyze_term_distributions",
-            "rnnlab",
-            "rnnlab.apputils",
-            "rnnlab.configs",
-            "rnnlab.directgraph",
-            "rnnlab.figutils",
-            "rnnlab.graphutils",
-            "rnnlab.group_figs",
-            "rnnlab.hub",
-            "rnnlab.logger",
-            "rnnlab.model",
-            "rnnlab.model_figs",
-            "rnnlab.probestore",
-            "rnnlab.saver",
-            "rnnlab.starter",
-            "rnnlab.task",
-            "rnnlab.termstore",
-            "rnnlab.trainer"
-        ],
-        "version": "6.0.0"
     },
     "rnnlm-python": {
         "cmdline": [],
@@ -67374,12 +67502,8 @@
     },
     "robotkernel": {
         "cmdline": [],
-        "modules": [
-            "robotkernel",
-            "robotkernel.install",
-            "robotkernel.kernel"
-        ],
-        "version": "0.3.0"
+        "modules": [],
+        "version": "0.3.1"
     },
     "robotlogger": {
         "cmdline": [],
@@ -82898,7 +83022,7 @@
             "rtwo.test.test_openstack",
             "rtwo.version"
         ],
-        "version": "0.5.23"
+        "version": "0.5.24"
     },
     "rtyaml": {
         "cmdline": [],
@@ -85475,6 +85599,11 @@
         "modules": [],
         "version": ""
     },
+    "runez": {
+        "cmdline": [],
+        "modules": [],
+        "version": "1.0.4"
+    },
     "runfbtests": {
         "cmdline": [],
         "modules": [
@@ -86064,13 +86193,14 @@
             "runway.hooks.staticsite.upload_staticsite",
             "runway.hooks.staticsite.util",
             "runway.module",
+            "runway.module.cdk",
             "runway.module.cloudformation",
             "runway.module.serverless",
             "runway.module.staticsite",
             "runway.module.terraform",
             "runway.util"
         ],
-        "version": "0.29.5"
+        "version": "0.29.6"
     },
     "runwith": {
         "cmdline": [],
@@ -87063,7 +87193,7 @@
             "awsume.test_autoawsume",
             "awsume.test_awsumepy"
         ],
-        "version": "3.2.8.4"
+        "version": "3.2.8.6"
     },
     "rvt-detector": {
         "cmdline": [],
@@ -87247,7 +87377,7 @@
     "rwt": {
         "cmdline": [],
         "modules": [],
-        "version": "4.1"
+        "version": "4.4.1"
     },
     "rwtfoms": {
         "cmdline": [],
