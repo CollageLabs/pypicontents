@@ -76,9 +76,12 @@
         "modules": [
             "k_util",
             "k_util.core",
-            "k_util.region"
+            "k_util.logger",
+            "k_util.pather",
+            "k_util.region",
+            "k_util.serializable"
         ],
-        "version": "0.1.9"
+        "version": "0.1.10"
     },
     "k2-compose": {
         "cmdline": [],
@@ -14585,6 +14588,16 @@
     "keepercommander": {
         "cmdline": [],
         "modules": [
+            "adpasswd",
+            "adpasswd.adpasswd",
+            "awskey",
+            "awskey.aws_accesskey",
+            "csv",
+            "csv.csv",
+            "json",
+            "json.json",
+            "keepass",
+            "keepass.keepass",
             "keepercommander",
             "keepercommander.api",
             "keepercommander.autocomplete",
@@ -14600,45 +14613,34 @@
             "keepercommander.error",
             "keepercommander.generator",
             "keepercommander.imp_exp",
-            "keepercommander.importer.csv",
-            "keepercommander.importer.csv.csv",
-            "keepercommander.importer.importer",
-            "keepercommander.importer.json",
-            "keepercommander.importer.json.json",
-            "keepercommander.importer.keepass",
-            "keepercommander.importer.keepass.keepass",
             "keepercommander.params",
             "keepercommander.plugin_manager",
-            "keepercommander.plugins.adpasswd",
-            "keepercommander.plugins.adpasswd.adpasswd",
-            "keepercommander.plugins.awskey",
-            "keepercommander.plugins.awskey.aws_accesskey",
-            "keepercommander.plugins.mssql",
-            "keepercommander.plugins.mssql.mssql",
-            "keepercommander.plugins.mysql",
-            "keepercommander.plugins.mysql.mysql",
-            "keepercommander.plugins.oracle",
-            "keepercommander.plugins.oracle.oracle",
-            "keepercommander.plugins.postgresql",
-            "keepercommander.plugins.postgresql.postgresql",
-            "keepercommander.plugins.pspasswd",
-            "keepercommander.plugins.pspasswd.pspasswd",
-            "keepercommander.plugins.ssh",
-            "keepercommander.plugins.ssh.ssh",
-            "keepercommander.plugins.sshkey",
-            "keepercommander.plugins.sshkey.sshkey",
-            "keepercommander.plugins.unixpasswd",
-            "keepercommander.plugins.unixpasswd.unixpasswd",
-            "keepercommander.plugins.windows",
-            "keepercommander.plugins.windows.windows",
             "keepercommander.record",
             "keepercommander.shared_folder",
             "keepercommander.subfolder",
             "keepercommander.team",
             "keepercommander.yubikey",
-            "keepercommander.yubikey.yubikey"
+            "keepercommander.yubikey.yubikey",
+            "mssql",
+            "mssql.mssql",
+            "mysql",
+            "mysql.mysql",
+            "oracle",
+            "oracle.oracle",
+            "postgresql",
+            "postgresql.postgresql",
+            "pspasswd",
+            "pspasswd.pspasswd",
+            "ssh",
+            "ssh.ssh",
+            "sshkey",
+            "sshkey.sshkey",
+            "unixpasswd",
+            "unixpasswd.unixpasswd",
+            "windows",
+            "windows.windows"
         ],
-        "version": "2.0"
+        "version": "2.1"
     },
     "keepify-py": {
         "cmdline": [],
@@ -16696,7 +16698,7 @@
             "keras_perturbation.constraint",
             "keras_perturbation.perturbation"
         ],
-        "version": "0.2"
+        "version": "0.3"
     },
     "keras-pickle-wrapper": {
         "cmdline": [],
@@ -17114,7 +17116,7 @@
             "keras_wc_embd.word_char_embd",
             "keras_wc_embd.wrapper"
         ],
-        "version": "0.13"
+        "version": "0.15"
     },
     "keras-wrn": {
         "cmdline": [],
@@ -17165,10 +17167,11 @@
             "kerascv.models.resnext",
             "kerascv.models.senet",
             "kerascv.models.shufflenet",
+            "kerascv.models.shufflenetv2",
             "kerascv.models.squeezenet",
             "kerascv.models.squeezenext"
         ],
-        "version": "0.0.1"
+        "version": "0.0.2"
     },
     "kerasglove": {
         "cmdline": [],
@@ -17723,7 +17726,7 @@
             "kervi/zmq_spine.named_lists",
             "kervi/zmq_spine.zmqbus"
         ],
-        "version": "0.15.69"
+        "version": "0.15.72"
     },
     "kervi-cli": {
         "cmdline": [],
@@ -17757,7 +17760,7 @@
             "kervi_cli/templates.system_controller_tmpl",
             "kervi_cli/templates.system_sensors_tmpl"
         ],
-        "version": "0.15.69"
+        "version": "0.15.72"
     },
     "kervi-component-library": {
         "cmdline": [],
@@ -17802,7 +17805,7 @@
             "kervi/values.kervi_value",
             "kervi/values.value_list"
         ],
-        "version": "0.15.69"
+        "version": "0.15.72"
     },
     "kervi-device-library": {
         "cmdline": [],
@@ -17843,7 +17846,7 @@
             "kervi/devices/sensors.VL6180X",
             "kervi/devices/sensors.dummy_sensor"
         ],
-        "version": "0.15.69"
+        "version": "0.15.72"
     },
     "kervi-hal-generic": {
         "cmdline": [],
@@ -17854,7 +17857,7 @@
             "kervi/platforms/generic.i2c",
             "kervi/platforms/generic.version"
         ],
-        "version": "0.15.69"
+        "version": "0.15.72"
     },
     "kervi-hal-rpi": {
         "cmdline": [],
@@ -17869,7 +17872,7 @@
             "kervi.platforms.raspberry.service",
             "kervi.platforms.raspberry.version"
         ],
-        "version": "0.15.69"
+        "version": "0.15.72"
     },
     "kervi-ui": {
         "cmdline": [],
@@ -17878,7 +17881,7 @@
             "kervi.ui.version",
             "kervi.ui.webserver"
         ],
-        "version": "0.15.69"
+        "version": "0.15.72"
     },
     "keryx": {
         "cmdline": [],
@@ -22290,6 +22293,11 @@
         ],
         "version": "0.5.2"
     },
+    "kill": {
+        "cmdline": [],
+        "modules": [],
+        "version": "0.0.0"
+    },
     "kill-all-ssh-sessions": {
         "cmdline": [],
         "modules": [
@@ -22712,7 +22720,7 @@
             "kiner",
             "kiner.producer"
         ],
-        "version": "0.6.2"
+        "version": "0.7.0"
     },
     "kinesis-logs-reader": {
         "cmdline": [],
@@ -26537,7 +26545,7 @@
             "kiwi.xml_parse",
             "kiwi.xml_state"
         ],
-        "version": "9.16.14"
+        "version": "9.16.18"
     },
     "kiwi-cache": {
         "cmdline": [],
@@ -27556,7 +27564,7 @@
             "klefki.types.structure",
             "klefki.utils"
         ],
-        "version": "0.0.4.0"
+        "version": "0.0.4.2"
     },
     "klein": {
         "cmdline": [],
@@ -29942,7 +29950,7 @@
             "tests.test_tags",
             "tests.test_webeditorposts"
         ],
-        "version": "0.8.1"
+        "version": "0.8.3"
     },
     "knowledgelab": {
         "cmdline": [],
@@ -30818,7 +30826,7 @@
             "kobold.tests.test_hash_functions",
             "kobold.tests.test_swap"
         ],
-        "version": "11.6.0"
+        "version": "11.7.0"
     },
     "koboldfs": {
         "cmdline": [],
@@ -34735,6 +34743,14 @@
         ],
         "version": "0.0.5"
     },
+    "komori": {
+        "cmdline": [],
+        "modules": [
+            "komori",
+            "komori.komori"
+        ],
+        "version": "0.20"
+    },
     "komparse": {
         "cmdline": [],
         "modules": [],
@@ -37271,16 +37287,21 @@
         "modules": [
             "kpc_connector_utils",
             "kpc_connector_utils.common",
+            "kpc_connector_utils.common.base64",
             "kpc_connector_utils.common.base_config",
             "kpc_connector_utils.common.context_wrapper",
             "kpc_connector_utils.common.pusher",
             "kpc_connector_utils.common.singleton",
             "kpc_connector_utils.common.types",
             "kpc_connector_utils.common.zip",
+            "kpc_connector_utils.connector_mssql",
+            "kpc_connector_utils.connector_mssql.config",
             "kpc_connector_utils.pusher_s3",
-            "kpc_connector_utils.pusher_s3.config"
+            "kpc_connector_utils.pusher_s3.base",
+            "kpc_connector_utils.pusher_s3.config",
+            "kpc_connector_utils.pusher_s3.data_type"
         ],
-        "version": "0.1.12"
+        "version": "0.1.19"
     },
     "kpconsole": {
         "cmdline": [],
@@ -38412,6 +38433,16 @@
             "kroissan"
         ],
         "version": "0.2.2"
+    },
+    "krok": {
+        "cmdline": [],
+        "modules": [
+            "krok",
+            "krok.kubectl",
+            "krok.ssh",
+            "krok.utils"
+        ],
+        "version": "1.0.0"
     },
     "kroman": {
         "cmdline": [],
@@ -40440,7 +40471,7 @@
             "tests",
             "tests.test_sample"
         ],
-        "version": "0.1.0"
+        "version": "0.1.1"
     },
     "ktorrent": {
         "cmdline": [],
@@ -44486,9 +44517,10 @@
             "kvm48.config",
             "kvm48.koudai",
             "kvm48.kvm48",
+            "kvm48.peek",
             "kvm48.version"
         ],
-        "version": "0.1.6"
+        "version": "0.2"
     },
     "kvmd": {
         "cmdline": [],
