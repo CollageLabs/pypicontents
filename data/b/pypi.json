@@ -2286,15 +2286,18 @@
     "backend-ai-agent": {
         "cmdline": [],
         "modules": [
-            "ai.backend.agent",
-            "ai.backend.agent.files",
-            "ai.backend.agent.gpu",
-            "ai.backend.agent.kernel",
-            "ai.backend.agent.resources",
-            "ai.backend.agent.server",
-            "ai.backend.agent.stats"
+            "agent",
+            "agent.accelerator",
+            "agent.files",
+            "agent.kernel",
+            "agent.resources",
+            "agent.server",
+            "agent.stats",
+            "agent.utils",
+            "agent.vendor",
+            "agent.vendor.linux"
         ],
-        "version": "1.3.7"
+        "version": "1.4.0"
     },
     "backend-ai-client": {
         "cmdline": [],
@@ -2424,7 +2427,7 @@
             "manager.models.vfolder",
             "manager.registry"
         ],
-        "version": "1.3.11"
+        "version": "1.4.0"
     },
     "background": {
         "cmdline": [],
@@ -4937,7 +4940,7 @@
         "modules": [
             "baidu_trans_cli"
         ],
-        "version": "0.1.3"
+        "version": "0.1.4"
     },
     "baidu-tts": {
         "cmdline": [],
@@ -6047,6 +6050,7 @@
             "balebot.models.client_requests.group.get_group_api_struct",
             "balebot.models.client_requests.group.invite_user",
             "balebot.models.client_requests.messaging",
+            "balebot.models.client_requests.messaging.edit_message",
             "balebot.models.client_requests.messaging.send_message",
             "balebot.models.client_requests.sequence",
             "balebot.models.client_requests.sequence.get_difference",
@@ -6102,6 +6106,7 @@
             "balebot.models.server_responses.group.get_group_api_response",
             "balebot.models.server_responses.group.response_create_group",
             "balebot.models.server_responses.messaging",
+            "balebot.models.server_responses.messaging.message_edited",
             "balebot.models.server_responses.messaging.message_sent",
             "balebot.models.server_responses.sequence",
             "balebot.models.server_responses.sequence.difference_update",
@@ -6115,9 +6120,18 @@
             "balebot.updater",
             "balebot.utils",
             "balebot.utils.logger",
-            "balebot.utils.util_functions"
+            "balebot.utils.util_functions",
+            "test_bale_bot",
+            "test_bale_bot.test_bot",
+            "test_bale_bot.test_models",
+            "test_bale_bot.test_models.test_client_requests",
+            "test_bale_bot.test_models.test_client_requests.test_messaging",
+            "test_bale_bot.test_models.test_client_requests.test_messaging.test_edit_message",
+            "test_bale_bot.test_models.test_resver_responses",
+            "test_bale_bot.test_models.test_resver_responses.test_messaging",
+            "test_bale_bot.test_models.test_resver_responses.test_messaging.test_message_edited"
         ],
-        "version": "1.2.5"
+        "version": "1.2.8"
     },
     "baleen": {
         "cmdline": [],
@@ -8946,7 +8960,7 @@
             "banklog.banklog",
             "banklog.errors"
         ],
-        "version": "0.200"
+        "version": "0.201"
     },
     "banknumber": {
         "cmdline": [],
@@ -15071,7 +15085,9 @@
             "baybars",
             "baybars.azure_blob",
             "baybars.azure_queue",
+            "baybars.azure_table",
             "baybars.constants",
+            "baybars.consul_values",
             "baybars.data_types",
             "baybars.docdb",
             "baybars.era",
@@ -15087,7 +15103,7 @@
             "baybars.timber",
             "baybars.vault"
         ],
-        "version": "0.0.1"
+        "version": "0.0.2"
     },
     "baycomp": {
         "cmdline": [],
@@ -15320,6 +15336,15 @@
             "bayes_opt.target_space"
         ],
         "version": "0.6.0"
+    },
+    "bayesian-sgm": {
+        "cmdline": [],
+        "modules": [
+            "bayesian_sgm",
+            "bayesian_sgm.normalize",
+            "bayesian_sgm.segmentator"
+        ],
+        "version": "1.0.0"
     },
     "bayesianbozo": {
         "cmdline": [],
@@ -23165,7 +23190,7 @@
             "bee_django_mission.utils",
             "bee_django_mission.views"
         ],
-        "version": "0.0.24"
+        "version": "0.0.28"
     },
     "bee-django-referral": {
         "cmdline": [],
@@ -23220,7 +23245,7 @@
             "bee_django_social_feed.utils",
             "bee_django_social_feed.views"
         ],
-        "version": "0.0.20"
+        "version": "0.0.21"
     },
     "bee-django-track": {
         "cmdline": [],
@@ -23255,7 +23280,7 @@
             "bee_django_user.utils",
             "bee_django_user.views"
         ],
-        "version": "0.0.16"
+        "version": "0.0.17"
     },
     "beebotte": {
         "cmdline": [],
@@ -23555,7 +23580,7 @@
             "beemgraphenebase.types",
             "beemgraphenebase.version"
         ],
-        "version": "0.20.3"
+        "version": "0.20.5"
     },
     "beeminder-sync": {
         "cmdline": [],
@@ -36186,7 +36211,7 @@
     "bincopy": {
         "cmdline": [],
         "modules": [],
-        "version": "14.4.0"
+        "version": "14.5.1"
     },
     "bincrafters-envy": {
         "cmdline": [],
@@ -44285,9 +44310,10 @@
         "cmdline": [],
         "modules": [
             "bites",
+            "bites._bs",
             "bites.bs"
         ],
-        "version": "0.0.4"
+        "version": "0.0.7"
     },
     "bitevery": {
         "cmdline": [],
@@ -60188,7 +60214,7 @@
             "bomail.util.unpack_attach",
             "bomail.util.util"
         ],
-        "version": "0.9.0.9"
+        "version": "0.9.0.10"
     },
     "bomb": {
         "cmdline": [
@@ -69676,27 +69702,25 @@
             "botty_mcbotface.botty.db",
             "botty_mcbotface.botty.db.models",
             "botty_mcbotface.botty.db.models.base",
-            "botty_mcbotface.botty.db.models.remind",
             "botty_mcbotface.botty.db.routines",
             "botty_mcbotface.botty.db.routines.routine_populate_db",
-            "botty_mcbotface.botty.db.routines.routine_test",
             "botty_mcbotface.plugins",
             "botty_mcbotface.plugins.arise",
+            "botty_mcbotface.plugins.calendar",
             "botty_mcbotface.plugins.cheers",
             "botty_mcbotface.plugins.eightball",
             "botty_mcbotface.plugins.flipper",
             "botty_mcbotface.plugins.help",
-            "botty_mcbotface.plugins.remind",
             "botty_mcbotface.plugins.searches",
             "botty_mcbotface.plugins.seen",
             "botty_mcbotface.plugins.today",
             "botty_mcbotface.plugins.weather",
-            "botty_mcbotface.tasq_runner",
+            "botty_mcbotface.task_runner",
             "botty_mcbotface.utils",
             "botty_mcbotface.utils.formatting",
             "botty_mcbotface.utils.tools"
         ],
-        "version": "1.3.9"
+        "version": "1.4.1"
     },
     "botux": {
         "cmdline": [],
@@ -69729,7 +69753,7 @@
             "botwfstools.botw_overlayfs",
             "botwfstools.botw_patcher"
         ],
-        "version": "1.3.0"
+        "version": "1.4.0"
     },
     "botworks": {
         "cmdline": [],
@@ -70300,7 +70324,7 @@
             "boussole.compiler",
             "boussole.conf",
             "boussole.conf.base_backend",
-            "boussole.conf.discover",
+            "boussole.conf.discovery",
             "boussole.conf.json_backend",
             "boussole.conf.model",
             "boussole.conf.post_processor",
@@ -70314,7 +70338,7 @@
             "boussole.resolver",
             "boussole.watcher"
         ],
-        "version": "1.2.3"
+        "version": "1.4.0"
     },
     "bout": {
         "cmdline": [],
@@ -79274,43 +79298,78 @@
         "cmdline": [],
         "modules": [
             "broqer",
-            "broqer.core",
+            "broqer.default_error_handler",
+            "broqer.disposable",
             "broqer.hub",
+            "broqer.hub.hub",
+            "broqer.hub.utils",
+            "broqer.hub.utils.datatype_check",
+            "broqer.hub.utils.topic_mapper",
             "broqer.op",
-            "broqer.op._operator",
             "broqer.op.accumulate",
             "broqer.op.cache",
             "broqer.op.catch_exception",
             "broqer.op.combine_latest",
             "broqer.op.debounce",
             "broqer.op.delay",
-            "broqer.op.distinct",
-            "broqer.op.filter",
-            "broqer.op.from_iterable",
-            "broqer.op.from_polling",
-            "broqer.op.just",
-            "broqer.op.map",
+            "broqer.op.filter_",
+            "broqer.op.map_",
             "broqer.op.map_async",
             "broqer.op.map_threaded",
             "broqer.op.merge",
-            "broqer.op.pack",
+            "broqer.op.operator",
+            "broqer.op.operator_overloading",
             "broqer.op.partition",
-            "broqer.op.pluck",
+            "broqer.op.publishers",
+            "broqer.op.publishers.from_polling",
             "broqer.op.reduce",
+            "broqer.op.replace",
             "broqer.op.sample",
-            "broqer.op.sink",
             "broqer.op.sliding_window",
+            "broqer.op.subscribers",
+            "broqer.op.subscribers.on_emit_future",
+            "broqer.op.subscribers.sink",
+            "broqer.op.subscribers.trace",
             "broqer.op.switch",
             "broqer.op.throttle",
-            "broqer.op.to_future",
-            "broqer.op.unpack",
+            "broqer.publisher",
             "broqer.subject",
+            "broqer.subscriber",
+            "broqer.types",
             "test",
-            "test.test_op_distinct",
+            "test.eventloop",
+            "test.helper",
+            "test.test_core_disposable",
+            "test.test_core_publisher",
+            "test.test_core_publisher_operators",
+            "test.test_default_error_handler",
+            "test.test_hub",
+            "test.test_op_accumulate",
+            "test.test_op_cache",
+            "test.test_op_catch_exception",
+            "test.test_op_combine_latest",
+            "test.test_op_debounce",
+            "test.test_op_delay",
+            "test.test_op_filter",
+            "test.test_op_from_polling",
+            "test.test_op_map",
+            "test.test_op_map_async",
+            "test.test_op_map_threaded",
+            "test.test_op_merge",
+            "test.test_op_on_emit_future",
+            "test.test_op_partition",
+            "test.test_op_reduce",
+            "test.test_op_replace",
+            "test.test_op_sample",
             "test.test_op_sink",
-            "test.test_publisher"
+            "test.test_op_sliding_window",
+            "test.test_op_switch",
+            "test.test_op_throttle",
+            "test.test_op_topic_mapper",
+            "test.test_op_trace",
+            "test.test_utils_datatype_check"
         ],
-        "version": "0.2.0"
+        "version": "0.9.0"
     },
     "broshelp": {
         "cmdline": [],
@@ -81867,9 +81926,17 @@
             "bted.arg_process",
             "bted.definitions",
             "bted.interpreter",
+            "bted.main",
+            "bted.tests",
+            "bted.tests.test_append",
+            "bted.tests.test_clear",
+            "bted.tests.test_delete",
+            "bted.tests.test_prepend",
+            "bted.tests.test_select",
+            "bted.tests.test_wrap",
             "bted.token_tree"
         ],
-        "version": "0.0.9"
+        "version": "0.1.0"
     },
     "btedb": {
         "cmdline": [],
@@ -83829,6 +83896,11 @@
         ],
         "version": "0.1"
     },
+    "bugdata": {
+        "cmdline": [],
+        "modules": [],
+        "version": "0.0.1"
+    },
     "bugfreepy": {
         "cmdline": [],
         "modules": [
@@ -85413,25 +85485,31 @@
         "modules": [
             "buildlib",
             "buildlib.buildmisc",
+            "buildlib.buildmisc.lib",
             "buildlib.buildmisc.prompt",
             "buildlib.git",
+            "buildlib.git.lib",
             "buildlib.git.prompt",
             "buildlib.git.seq",
             "buildlib.module",
             "buildlib.npm",
+            "buildlib.npm.lib",
             "buildlib.npm.prompt",
             "buildlib.pip",
             "buildlib.pipenv",
             "buildlib.project",
+            "buildlib.project.lib",
             "buildlib.project.prompt",
             "buildlib.semver",
+            "buildlib.semver.lib",
             "buildlib.semver.prompt",
             "buildlib.util",
             "buildlib.wheel",
+            "buildlib.wheel.lib",
             "buildlib.wheel.prompt",
             "buildlib.yaml"
         ],
-        "version": "2.0.1"
+        "version": "2.0.4"
     },
     "buildmatrix": {
         "cmdline": [],
@@ -86751,6 +86829,26 @@
         ],
         "version": "1.3.3"
     },
+    "buject": {
+        "cmdline": [],
+        "modules": [
+            "buject"
+        ],
+        "version": "0.0.1"
+    },
+    "buject-relaywirenboard": {
+        "cmdline": [],
+        "modules": [
+            "RelayWirenBoard",
+            "RelayWirenBoard.RelayWirenBoard"
+        ],
+        "version": "0.0.1"
+    },
+    "bujectrelaywirenboard": {
+        "cmdline": [],
+        "modules": [],
+        "version": ""
+    },
     "buku": {
         "cmdline": [],
         "modules": [
@@ -87555,7 +87653,7 @@
             "bundesliga_tippspiel.utils.recaptcha",
             "bundesliga_tippspiel.utils.routes"
         ],
-        "version": "0.16.2"
+        "version": "0.16.3"
     },
     "bundle": {
         "cmdline": [],
@@ -89061,7 +89159,7 @@
             "buslane.events",
             "buslane.utils"
         ],
-        "version": "0.0.2"
+        "version": "0.0.5"
     },
     "buslib": {
         "cmdline": [],
