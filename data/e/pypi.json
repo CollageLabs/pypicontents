@@ -2422,7 +2422,7 @@
             "easy_net_tf.utility.tf",
             "easy_net_tf.utility.variable"
         ],
-        "version": "0.0.101"
+        "version": "0.0.102"
     },
     "easy-notifier": {
         "cmdline": [],
@@ -8216,36 +8216,58 @@
         "cmdline": [],
         "modules": [
             "ec2mc",
-            "ec2mc.command_template",
             "ec2mc.commands",
-            "ec2mc.commands.aws_setup",
+            "ec2mc.commands.address_cmds",
+            "ec2mc.commands.address_sub",
+            "ec2mc.commands.address_sub.associate_cmd",
+            "ec2mc.commands.address_sub.disassociate_cmd",
+            "ec2mc.commands.address_sub.list_cmd",
+            "ec2mc.commands.address_sub.release_cmd",
+            "ec2mc.commands.address_sub.request_cmd",
+            "ec2mc.commands.aws_setup_cmd",
             "ec2mc.commands.aws_setup_sub",
-            "ec2mc.commands.aws_setup_sub.iam_setup",
-            "ec2mc.commands.configure",
-            "ec2mc.commands.create_server",
-            "ec2mc.commands.get_backup",
-            "ec2mc.commands.server",
+            "ec2mc.commands.aws_setup_sub.iam_groups",
+            "ec2mc.commands.aws_setup_sub.iam_policies",
+            "ec2mc.commands.aws_setup_sub.ssh_key_pairs",
+            "ec2mc.commands.aws_setup_sub.vpcs",
+            "ec2mc.commands.configure_cmd",
+            "ec2mc.commands.server_cmds",
             "ec2mc.commands.server_sub",
-            "ec2mc.commands.server_sub.check",
-            "ec2mc.commands.server_sub.ssh",
-            "ec2mc.commands.server_sub.start",
-            "ec2mc.commands.server_sub.stop",
-            "ec2mc.commands.update_mods",
-            "ec2mc.config",
-            "ec2mc.stuff",
-            "ec2mc.stuff.aws",
-            "ec2mc.stuff.manage_titles",
-            "ec2mc.stuff.quit_out",
-            "ec2mc.stuff.send_bash",
-            "ec2mc.stuff.simulate_policy",
-            "ec2mc.stuff.threader",
-            "ec2mc.update_template",
-            "ec2mc.verify",
-            "ec2mc.verify.verify_aws",
-            "ec2mc.verify.verify_config",
-            "ec2mc.verify.verify_instances"
+            "ec2mc.commands.server_sub.create_cmd",
+            "ec2mc.commands.server_sub.delete_cmd",
+            "ec2mc.commands.server_sub.ssh_cmd",
+            "ec2mc.commands.servers_cmds",
+            "ec2mc.commands.servers_sub",
+            "ec2mc.commands.servers_sub.check_cmd",
+            "ec2mc.commands.servers_sub.start_cmd",
+            "ec2mc.commands.servers_sub.stop_cmd",
+            "ec2mc.commands.user_cmds",
+            "ec2mc.commands.user_sub",
+            "ec2mc.commands.user_sub.be_cmd",
+            "ec2mc.commands.user_sub.create_cmd",
+            "ec2mc.commands.user_sub.delete_cmd",
+            "ec2mc.commands.user_sub.list_cmd",
+            "ec2mc.commands.user_sub.rotate_key_cmd",
+            "ec2mc.commands.user_sub.set_group_cmd",
+            "ec2mc.consts",
+            "ec2mc.utils",
+            "ec2mc.utils.aws",
+            "ec2mc.utils.base_classes",
+            "ec2mc.utils.find",
+            "ec2mc.utils.find.find_addresses",
+            "ec2mc.utils.find.find_closest_region",
+            "ec2mc.utils.find.find_instances",
+            "ec2mc.utils.halt",
+            "ec2mc.utils.handle_ip",
+            "ec2mc.utils.os2",
+            "ec2mc.utils.pem",
+            "ec2mc.utils.threader",
+            "ec2mc.validate",
+            "ec2mc.validate.validate_config",
+            "ec2mc.validate.validate_perms",
+            "ec2mc.validate.validate_setup"
         ],
-        "version": "0.1.3"
+        "version": "0.2.0"
     },
     "ec2metadata": {
         "cmdline": [
@@ -15007,7 +15029,7 @@
             "edflib.sandbox",
             "edflib.testint16"
         ],
-        "version": "0.77"
+        "version": "0.76"
     },
     "edgar": {
         "cmdline": [],
@@ -36355,7 +36377,7 @@
             "energycap.sdk.models.workflow_workflow_settings_response_dto",
             "energycap.sdk.version"
         ],
-        "version": "7.2.0.90.post1538207560"
+        "version": "7.2.0.90.post1538337535"
     },
     "energydram": {
         "cmdline": [],
@@ -41224,7 +41246,7 @@
             "envoy_reader",
             "envoy_reader.envoy_reader"
         ],
-        "version": "0.2"
+        "version": "0.3"
     },
     "envparse": {
         "cmdline": [],
@@ -44552,6 +44574,45 @@
             "eps_entropy.utils"
         ],
         "version": "0.0.2"
+    },
+    "epsagon": {
+        "cmdline": [],
+        "modules": [
+            "epsagon",
+            "epsagon.common",
+            "epsagon.constants",
+            "epsagon.event",
+            "epsagon.events",
+            "epsagon.events.botocore",
+            "epsagon.events.dbapi",
+            "epsagon.events.grpc",
+            "epsagon.events.pymongo",
+            "epsagon.events.requests",
+            "epsagon.modules",
+            "epsagon.modules.botocore",
+            "epsagon.modules.general_wrapper",
+            "epsagon.modules.grpc",
+            "epsagon.modules.psycopg2",
+            "epsagon.modules.pymongo",
+            "epsagon.modules.requests",
+            "epsagon.patcher",
+            "epsagon.runners",
+            "epsagon.runners.aws_lambda",
+            "epsagon.runners.azure_function",
+            "epsagon.runners.flask",
+            "epsagon.runners.python_function",
+            "epsagon.trace",
+            "epsagon.triggers",
+            "epsagon.triggers.aws_lambda",
+            "epsagon.triggers.http",
+            "epsagon.utils",
+            "epsagon.wrappers",
+            "epsagon.wrappers.aws_lambda",
+            "epsagon.wrappers.azure_function",
+            "epsagon.wrappers.flask",
+            "epsagon.wrappers.python_function"
+        ],
+        "version": "1.0.2"
     },
     "epsg-ident": {
         "cmdline": [],
@@ -57534,16 +57595,17 @@
             "eventcore.producer",
             "eventcore.registry"
         ],
-        "version": "0.3.2"
+        "version": "0.3.3"
     },
     "eventcore-kafka": {
         "cmdline": [],
         "modules": [
             "eventcore_kafka",
             "eventcore_kafka.consumer",
+            "eventcore_kafka.header",
             "eventcore_kafka.producer"
         ],
-        "version": "0.3.1"
+        "version": "0.3.2"
     },
     "eventcore-sqs": {
         "cmdline": [],
@@ -58217,6 +58279,15 @@
             "events.tests.tests"
         ],
         "version": "0.3"
+    },
+    "events-py": {
+        "cmdline": [],
+        "modules": [
+            "events",
+            "events.emitter",
+            "events.errors"
+        ],
+        "version": "1.0.0a0"
     },
     "eventsender": {
         "cmdline": [],
@@ -64148,6 +64219,11 @@
         ],
         "version": "0.0.2"
     },
+    "exit": {
+        "cmdline": [],
+        "modules": [],
+        "version": "0.0.2"
+    },
     "exit-codes": {
         "cmdline": [],
         "modules": [
@@ -68442,7 +68518,7 @@
             "extractfq",
             "extractfq.extractfq"
         ],
-        "version": "0.0.1"
+        "version": "0.0.2"
     },
     "extractini": {
         "cmdline": [],
