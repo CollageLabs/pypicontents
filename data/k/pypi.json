@@ -5188,6 +5188,7 @@
             "dev_studio",
             "dev_studio.cli",
             "dev_studio.flow",
+            "dev_studio.flow.custom_home",
             "dev_studio.flow.demo_project",
             "dev_studio.flow.demo_project.maya_startup",
             "dev_studio.flow.demo_project.maya_startup.userSetup",
@@ -5209,6 +5210,10 @@
             "kabaret.app.actors",
             "kabaret.app.actors.cluster",
             "kabaret.app.actors.flow",
+            "kabaret.app.actors.flow.actor",
+            "kabaret.app.actors.flow.generic_home_flow",
+            "kabaret.app.actors.flow.utils",
+            "kabaret.app.actors.flow.value_store",
             "kabaret.app.resources",
             "kabaret.app.session",
             "kabaret.app.ui",
@@ -5271,7 +5276,7 @@
             "kabaret.flow2.value_store",
             "kabaret.flow2.values"
         ],
-        "version": "2.0.0b7"
+        "version": "2.0.0b9"
     },
     "kabaret-naming": {
         "cmdline": [],
@@ -5291,6 +5296,21 @@
             "kabaret.naming.path"
         ],
         "version": "0.1.0b1"
+    },
+    "kabaret-script-view": {
+        "cmdline": [],
+        "modules": [
+            "kabaret",
+            "kabaret.script_view",
+            "kabaret.script_view.debugarea",
+            "kabaret.script_view.linenumberarea",
+            "kabaret.script_view.pythoneditor",
+            "kabaret.script_view.script_view",
+            "kabaret.script_view.syntax",
+            "kabaret.script_view.syntaxstyles",
+            "kabaret.script_view.test"
+        ],
+        "version": "1.0.0"
     },
     "kabob": {
         "cmdline": [],
@@ -13245,7 +13265,7 @@
     "kconfiglib": {
         "cmdline": [],
         "modules": [],
-        "version": "10.8.1"
+        "version": "10.9.2"
     },
     "kconmd": {
         "cmdline": [],
@@ -14862,7 +14882,6 @@
         "cmdline": [],
         "modules": [
             "kefir",
-            "kefir.case",
             "kefir.functional",
             "kefir.phonology",
             "kefir.predication",
@@ -14870,7 +14889,7 @@
             "kefir.subject",
             "kefir.suffix"
         ],
-        "version": "0.1.0"
+        "version": "0.1.1"
     },
     "keg": {
         "cmdline": [],
@@ -16181,6 +16200,7 @@
             "keras.applications.inception_resnet_v2",
             "keras.applications.inception_v3",
             "keras.applications.mobilenet",
+            "keras.applications.mobilenet_v2",
             "keras.applications.mobilenetv2",
             "keras.applications.nasnet",
             "keras.applications.resnet50",
@@ -16232,6 +16252,7 @@
             "keras.legacy",
             "keras.legacy.interfaces",
             "keras.legacy.layers",
+            "keras.legacy.models",
             "keras.losses",
             "keras.metrics",
             "keras.models",
@@ -16251,11 +16272,12 @@
             "keras.utils.multi_gpu_utils",
             "keras.utils.np_utils",
             "keras.utils.test_utils",
+            "keras.utils.training_utils",
             "keras.utils.vis_utils",
             "keras.wrappers",
             "keras.wrappers.scikit_learn"
         ],
-        "version": "2.2.2"
+        "version": "2.2.3"
     },
     "keras-adversarial": {
         "cmdline": [],
@@ -22341,8 +22363,10 @@
     },
     "kill": {
         "cmdline": [],
-        "modules": [],
-        "version": "0.0.0"
+        "modules": [
+            "kill"
+        ],
+        "version": "0.0.4"
     },
     "kill-all-ssh-sessions": {
         "cmdline": [],
@@ -23592,7 +23616,7 @@
     "kinto-dist": {
         "cmdline": [],
         "modules": [],
-        "version": "9.0.1"
+        "version": "10.0.0"
     },
     "kinto-elasticsearch": {
         "cmdline": [],
@@ -26949,15 +26973,13 @@
             "kiwipy.rmq.communicator",
             "kiwipy.rmq.configure",
             "kiwipy.rmq.defaults",
-            "kiwipy.rmq.loops",
             "kiwipy.rmq.messages",
-            "kiwipy.rmq.pubsub",
             "kiwipy.rmq.tasks",
             "kiwipy.rmq.utils",
             "kiwipy.utils",
             "kiwipy.version"
         ],
-        "version": "0.2.1"
+        "version": "0.3.1"
     },
     "kiwis-pie": {
         "cmdline": [],
@@ -38461,8 +38483,17 @@
     },
     "krllint": {
         "cmdline": [],
-        "modules": [],
-        "version": "0.1.2"
+        "modules": [
+            "krllint",
+            "krllint.config",
+            "krllint.krllint",
+            "krllint.linter",
+            "krllint.parameters",
+            "krllint.reporter",
+            "krllint.rules",
+            "krllint.tools"
+        ],
+        "version": "0.1.3"
     },
     "krnet": {
         "cmdline": [],
@@ -39745,7 +39776,7 @@
             "kser.tracing.proxy",
             "kser.tracing.task"
         ],
-        "version": "0.8.13"
+        "version": "0.8.14"
     },
     "kser-crypto": {
         "cmdline": [],
@@ -40545,7 +40576,7 @@
             "tests",
             "tests.test_sample"
         ],
-        "version": "0.1.1"
+        "version": "0.1.2"
     },
     "ktorrent": {
         "cmdline": [],
@@ -42873,9 +42904,28 @@
     "kubetest": {
         "cmdline": [],
         "modules": [
-            "kubetest"
+            "kubetest",
+            "kubetest.client",
+            "kubetest.condition",
+            "kubetest.manager",
+            "kubetest.manifest",
+            "kubetest.markers",
+            "kubetest.objects",
+            "kubetest.objects.api_object",
+            "kubetest.objects.clusterrolebinding",
+            "kubetest.objects.configmap",
+            "kubetest.objects.container",
+            "kubetest.objects.deployment",
+            "kubetest.objects.namespace",
+            "kubetest.objects.node",
+            "kubetest.objects.pod",
+            "kubetest.objects.rolebinding",
+            "kubetest.objects.secret",
+            "kubetest.objects.service",
+            "kubetest.plugin",
+            "kubetest.utils"
         ],
-        "version": "0.0.1.dev0"
+        "version": "0.0.1"
     },
     "kubetop": {
         "cmdline": [],
