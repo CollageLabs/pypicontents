@@ -1032,7 +1032,7 @@
     "fab-addon-geoalchemy": {
         "cmdline": [],
         "modules": [],
-        "version": "0.2.0"
+        "version": "0.2.4"
     },
     "fab-classic": {
         "cmdline": [],
@@ -10285,11 +10285,13 @@
         "cmdline": [],
         "modules": [
             "fantail",
-            "fantail.core",
-            "fantail.stack",
-            "fantail.util"
+            "fantail.cli",
+            "fantail.conf",
+            "fantail.conf.core",
+            "fantail.conf.stack",
+            "fantail.conf.util"
         ],
-        "version": "0.2.5"
+        "version": "0.6.1"
     },
     "fantastico": {
         "cmdline": [
@@ -10948,8 +10950,8 @@
             "farbox_bucket.client.project",
             "farbox_bucket.console",
             "farbox_bucket.deploy",
-            "farbox_bucket.deploy.backend_jobs",
             "farbox_bucket.deploy.configs",
+            "farbox_bucket.deploy.configs.backend_jobs",
             "farbox_bucket.deploy.configs.gunicorn.conf",
             "farbox_bucket.deploy.files",
             "farbox_bucket.server",
@@ -10966,7 +10968,6 @@
             "farbox_bucket.server.template_system.namespace.request",
             "farbox_bucket.server.template_system.utils",
             "farbox_bucket.server.utils",
-            "farbox_bucket.server.utils.bucket",
             "farbox_bucket.server.utils.domain",
             "farbox_bucket.server.utils.message",
             "farbox_bucket.server.utils.record",
@@ -10996,6 +10997,7 @@
             "farbox_bucket.utils.gevent_run",
             "farbox_bucket.utils.gzip_content",
             "farbox_bucket.utils.key_encrypt",
+            "farbox_bucket.utils.logger",
             "farbox_bucket.utils.mime",
             "farbox_bucket.utils.monkey",
             "farbox_bucket.utils.monkey.flask_frame",
@@ -11017,7 +11019,7 @@
             "tests.ssdb",
             "tests.sync"
         ],
-        "version": "0.131"
+        "version": "0.145"
     },
     "farcy": {
         "cmdline": [],
@@ -11890,7 +11892,7 @@
             "fast5_research.fast5_bulk",
             "fast5_research.util"
         ],
-        "version": "1.2.6"
+        "version": "1.2.7"
     },
     "fast5seek": {
         "cmdline": [],
@@ -12013,7 +12015,7 @@
             "fastai.vision.models.wrn",
             "fastai.vision.transform"
         ],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     "fastaindex": {
         "cmdline": [],
@@ -13200,7 +13202,7 @@
             "fastprogress",
             "fastprogress.fastprogress"
         ],
-        "version": "0.1.8"
+        "version": "0.1.9"
     },
     "fastproject": {
         "cmdline": [],
@@ -19407,7 +19409,7 @@
             "fecfile",
             "fecfile.fecparser"
         ],
-        "version": "0.3.9"
+        "version": "0.4.0"
     },
     "fechter": {
         "cmdline": [],
@@ -21558,12 +21560,10 @@
             "feincms_banners.migrations",
             "feincms_banners.migrations.0001_initial",
             "feincms_banners.models",
-            "feincms_banners.south_migrations",
-            "feincms_banners.south_migrations.0001_initial",
             "feincms_banners.urls",
             "feincms_banners.views"
         ],
-        "version": "1.2.1"
+        "version": "1.3.0"
     },
     "feincms-blogs": {
         "cmdline": [],
@@ -21883,7 +21883,7 @@
             "feincms3.templatetags.feincms3_renderer",
             "feincms3.utils"
         ],
-        "version": "0.25.0"
+        "version": "0.25.1"
     },
     "feincms3-downloads": {
         "cmdline": [],
@@ -21924,7 +21924,7 @@
             "feincms3_sites.migrations.0003_site_default_language",
             "feincms3_sites.models"
         ],
-        "version": "0.4.1"
+        "version": "0.5.1"
     },
     "feing-core": {
         "cmdline": [],
@@ -27324,11 +27324,6 @@
         ],
         "version": "1.0.1"
     },
-    "fifi": {
-        "cmdline": [],
-        "modules": [],
-        "version": "3.0.0"
-    },
     "fifo": {
         "cmdline": [],
         "modules": [
@@ -28928,10 +28923,8 @@
     },
     "filelock": {
         "cmdline": [],
-        "modules": [
-            "filelock"
-        ],
-        "version": "3.0.8"
+        "modules": [],
+        "version": "3.0.9"
     },
     "filelock-git": {
         "cmdline": [],
@@ -32838,7 +32831,7 @@
             "finplatform.urls",
             "finplatform.views"
         ],
-        "version": "1.0.26"
+        "version": "1.0.28"
     },
     "finpy": {
         "cmdline": [
@@ -39160,11 +39153,8 @@
     },
     "flake8-django": {
         "cmdline": [],
-        "modules": [
-            "flake8_django",
-            "issues"
-        ],
-        "version": "0.0.1"
+        "modules": [],
+        "version": "0.0.2"
     },
     "flake8-docstrings": {
         "cmdline": [],
@@ -40383,6 +40373,123 @@
             "flarecast.utils.rest_exception"
         ],
         "version": "1.4.1.174"
+    },
+    "flarestack": {
+        "cmdline": [],
+        "modules": [
+            "analyses",
+            "analyses.general",
+            "analyses.general.compare_brute_seed",
+            "analyses.general.compare_negative_n_s_dec",
+            "analyses.general.compare_negative_n_s_time",
+            "analyses.general.energy_decade_sensitivity",
+            "analyses.general.improved_point_source_sensitivity",
+            "analyses.general.study_timePDF_misalignment",
+            "analyses.general.study_timePDF_scaling",
+            "analyses.tde",
+            "analyses.tde.calculate_DaiFang_neutrino_numbers",
+            "analyses.tde.compare_cluster_search_to_time_integration",
+            "analyses.tde.compare_fitting_weights",
+            "analyses.tde.compare_spectral_indices",
+            "analyses.tde.compare_spectral_indices_individual",
+            "analyses.tde.shared_TDE",
+            "analyses.tde.unblind_individual_tdes",
+            "cluster",
+            "cluster.run_desy_cluster",
+            "core",
+            "core.astro",
+            "core.energy_PDFs",
+            "core.injector",
+            "core.llh",
+            "core.minimisation",
+            "core.results",
+            "core.time_PDFs",
+            "core.ts_distributions",
+            "core.unblinding",
+            "data",
+            "data.icecube",
+            "data.icecube.gfu",
+            "data.icecube.gfu.gfu_v002_p01",
+            "data.icecube.gfu.gfu_v002_p02",
+            "data.icecube.northern_tracks",
+            "data.icecube.northern_tracks.nt_v002_p01",
+            "data.icecube.ps_tracks",
+            "data.icecube.ps_tracks.ps_v002_p01",
+            "flarestack",
+            "flarestack.analyses",
+            "flarestack.analyses.fermi",
+            "flarestack.analyses.fermi.gb6_fermi_blazar_flare_search",
+            "flarestack.analyses.general",
+            "flarestack.analyses.general.compare_brute_seed",
+            "flarestack.analyses.general.compare_negative_n_s_dec",
+            "flarestack.analyses.general.compare_negative_n_s_time",
+            "flarestack.analyses.general.energy_decade_sensitivity",
+            "flarestack.analyses.general.improved_point_source_sensitivity",
+            "flarestack.analyses.general.study_timePDF_misalignment",
+            "flarestack.analyses.general.study_timePDF_scaling",
+            "flarestack.analyses.tde",
+            "flarestack.analyses.tde.calculate_DaiFang_neutrino_numbers",
+            "flarestack.analyses.tde.compare_cluster_search_to_time_integration",
+            "flarestack.analyses.tde.compare_fitting_weights",
+            "flarestack.analyses.tde.compare_spectral_indices",
+            "flarestack.analyses.tde.compare_spectral_indices_individual",
+            "flarestack.analyses.tde.shared_TDE",
+            "flarestack.analyses.tde.unblind_individual_tdes",
+            "flarestack.build",
+            "flarestack.cluster",
+            "flarestack.cluster.run_desy_cluster",
+            "flarestack.config",
+            "flarestack.core",
+            "flarestack.core.astro",
+            "flarestack.core.energy_PDFs",
+            "flarestack.core.injector",
+            "flarestack.core.llh",
+            "flarestack.core.minimisation",
+            "flarestack.core.results",
+            "flarestack.core.time_PDFs",
+            "flarestack.core.ts_distributions",
+            "flarestack.core.unblinding",
+            "flarestack.data",
+            "flarestack.data.icecube",
+            "flarestack.data.icecube.gfu",
+            "flarestack.data.icecube.gfu.gfu_v002_p01",
+            "flarestack.data.icecube.gfu.gfu_v002_p02",
+            "flarestack.data.icecube.northern_tracks",
+            "flarestack.data.icecube.northern_tracks.nt_v002_p01",
+            "flarestack.data.icecube.ps_tracks",
+            "flarestack.data.icecube.ps_tracks.ps_v002_p01",
+            "flarestack.misc",
+            "flarestack.misc.flare_llh_plots",
+            "flarestack.misc.negative_ns_plots",
+            "flarestack.misc.plot_data_rate",
+            "flarestack.misc.plots_azimuth_asymmetry",
+            "flarestack.shared",
+            "flarestack.tests",
+            "flarestack.tests.benchmark_blazar_flare_search",
+            "flarestack.tests.benchmark_point_source_sensitivity",
+            "flarestack.utils",
+            "flarestack.utils.create_acceptance_functions",
+            "flarestack.utils.custom_seasons",
+            "flarestack.utils.dataset_loader",
+            "flarestack.utils.import_good_run_list",
+            "flarestack.utils.make_SoB_splines",
+            "flarestack.utils.neutrino_astronomy",
+            "flarestack.utils.prepare_catalogue",
+            "flarestack.utils.reference_sensitivity",
+            "tests",
+            "tests.benchmark_blazar_flare_search",
+            "tests.benchmark_point_source_sensitivity",
+            "utils",
+            "utils.create_acceptance_functions",
+            "utils.custom_seasons",
+            "utils.dataset_loader",
+            "utils.import_good_run_list",
+            "utils.make_SoB_splines",
+            "utils.neutrino_astronomy",
+            "utils.prepare_catalogue",
+            "utils.reference_sensitivity"
+        ],
+        "version": "0.1.10"
     },
     "flarmnet": {
         "cmdline": [
@@ -44430,9 +44537,15 @@
     "flask-executor": {
         "cmdline": [],
         "modules": [
-            "flask_executor"
+            "flask_executor",
+            "flask_executor.executor",
+            "flask_executor.futures",
+            "tests",
+            "tests.conftest",
+            "tests.test_executor",
+            "tests.test_futures"
         ],
-        "version": "0.5.0"
+        "version": "0.6.0"
     },
     "flask-expects-json": {
         "cmdline": [],
@@ -56358,7 +56471,7 @@
             "flatpak_module_tools.module_locator",
             "flatpak_module_tools.utils"
         ],
-        "version": "0.8.2"
+        "version": "0.8.3"
     },
     "flatpakdev": {
         "cmdline": [],
@@ -58153,7 +58266,7 @@
             "flexxamples.testers.tricky_events",
             "flexxamples.testers.ws_speed"
         ],
-        "version": "0.5.0"
+        "version": "0.6.0"
     },
     "flfl": {
         "cmdline": [
@@ -62503,7 +62616,7 @@
             "fluidasserts.utils.decorators",
             "fluidasserts.utils.tracking"
         ],
-        "version": "18.10.929"
+        "version": "18.10.2303"
     },
     "fluiddata": {
         "cmdline": [],
@@ -66863,7 +66976,7 @@
         "modules": [
             "foliant.preprocessors.replace"
         ],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     "foliantcontrib-runcommands": {
         "cmdline": [],
@@ -70550,7 +70663,7 @@
             "formica.stack_waiter",
             "formica.yaml_tags"
         ],
-        "version": "0.8.6"
+        "version": "0.8.7"
     },
     "formiko": {
         "cmdline": [],
@@ -71459,7 +71572,7 @@
             "fortls.objects",
             "fortls.parse_fortran"
         ],
-        "version": "0.8.4"
+        "version": "0.9.0"
     },
     "fortran-linter": {
         "cmdline": [],
@@ -72586,7 +72699,7 @@
             "FoxDot.lib.Workspace.Prompt",
             "FoxDot.lib.Workspace.TextBox"
         ],
-        "version": "0.7.9"
+        "version": "0.7.10"
     },
     "foxglove": {
         "cmdline": [],
@@ -78858,7 +78971,7 @@
             "frida_tools.repl",
             "frida_tools.tracer"
         ],
-        "version": "1.2.1"
+        "version": "1.2.2"
     },
     "friday": {
         "cmdline": [],
@@ -85543,11 +85656,13 @@
             "ftw.labels.tests.test_labeling_management_view",
             "ftw.labels.tests.test_labeling_viewlet",
             "ftw.labels.tests.test_uninstall",
+            "ftw.labels.upgrades",
+            "ftw.labels.upgrades.upgrade_to_2001",
             "ftw.labels.utils",
             "ftw.labels.viewlets",
             "ftw.labels.viewlets.labeling"
         ],
-        "version": "1.3.0"
+        "version": "1.3.1"
     },
     "ftw-lawgiver": {
         "cmdline": [],
@@ -86355,7 +86470,7 @@
             "ftw.publisher.sender.workflows.sl",
             "ftw.publisher.sender.workflows.subscribers"
         ],
-        "version": "2.8.1"
+        "version": "2.8.2"
     },
     "ftw-quota": {
         "cmdline": [],
@@ -89034,8 +89149,10 @@
     },
     "fullpath": {
         "cmdline": [],
-        "modules": [],
-        "version": "1.0.3"
+        "modules": [
+            "fullpath"
+        ],
+        "version": "1.0.5"
     },
     "fullqualname": {
         "cmdline": [],
@@ -91372,7 +91489,7 @@
             "furl.furl",
             "furl.omdict1D"
         ],
-        "version": "1.2.1"
+        "version": "2.0.0"
     },
     "furnace": {
         "cmdline": [],
