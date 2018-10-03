@@ -6143,18 +6143,30 @@
             "napari_gui.elements.image_container",
             "napari_gui.elements.image_widget",
             "napari_gui.elements.image_window",
+            "napari_gui.elements.layouts",
+            "napari_gui.elements.layouts.base_layout",
+            "napari_gui.elements.layouts.linear_layout",
+            "napari_gui.elements.layouts.stacked_layout",
             "napari_gui.elements.panzoom",
             "napari_gui.napari_application",
+            "napari_gui.scene",
+            "napari_gui.scene.visuals",
             "napari_gui.util",
             "napari_gui.util.async_utils",
             "napari_gui.util.example_data_utils",
             "napari_gui.util.interpolation",
             "napari_gui.util.misc",
             "napari_gui.visuals",
-            "napari_gui.visuals.napari_image",
-            "napari_gui.visuals.napari_volume"
+            "napari_gui.visuals.filters",
+            "napari_gui.visuals.filters.base_filter",
+            "napari_gui.visuals.filters.clipper",
+            "napari_gui.visuals.filters.color",
+            "napari_gui.visuals.filters.material",
+            "napari_gui.visuals.filters.picking",
+            "napari_gui.visuals.image",
+            "napari_gui.visuals.volume"
         ],
-        "version": "0.0.2"
+        "version": "0.0.3.1"
     },
     "napi": {
         "cmdline": [],
@@ -6587,7 +6599,7 @@
             "nashi.tasks",
             "nashi.views"
         ],
-        "version": "0.0.21"
+        "version": "0.0.23"
     },
     "nashit": {
         "cmdline": [],
@@ -8089,7 +8101,7 @@
             "navio.aws.shared",
             "navio.meta_aws"
         ],
-        "version": "0.1.46"
+        "version": "0.1.55"
     },
     "navio-builder": {
         "cmdline": [],
@@ -11202,18 +11214,16 @@
     "ncephes": {
         "cmdline": [],
         "modules": [
-            "api",
-            "api.errors",
-            "api.merge",
-            "api.pypi",
-            "api.stats",
-            "api.stdlib",
-            "core",
-            "core.logger",
-            "core.patches",
-            "core.utils"
+            "ncephes",
+            "ncephes._testit",
+            "ncephes.test",
+            "ncephes.test.test_bessel",
+            "ncephes.test.test_cprob",
+            "ncephes.test.test_ellf",
+            "ncephes.test.test_misc",
+            "ncephes.test.test_numba"
         ],
-        "version": "1.0.40"
+        "version": "1.1.0"
     },
     "ncexplorer": {
         "cmdline": [],
@@ -17839,7 +17849,7 @@
             "neocore.bin",
             "neocore.bin.cli"
         ],
-        "version": "0.5.2"
+        "version": "0.5.3"
     },
     "neodjango": {
         "cmdline": [],
@@ -18665,9 +18675,10 @@
             "neotime",
             "neotime.arithmetic",
             "neotime.clock_implementations",
+            "neotime.meta",
             "neotime.metaclasses"
         ],
-        "version": "1.0.0"
+        "version": "1.7.0"
     },
     "neovim": {
         "cmdline": [],
@@ -18713,7 +18724,7 @@
             "nvr",
             "nvr.nvr"
         ],
-        "version": "2.0.10"
+        "version": "2.1.0"
     },
     "neowebdriver": {
         "cmdline": [],
@@ -32732,7 +32743,7 @@
             "networking_ansible.tests.unit.test_ansible_networking",
             "networking_ansible.tests.unit.test_config"
         ],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     "networking-arista": {
         "cmdline": [],
@@ -32838,8 +32849,81 @@
     },
     "networking-bigswitch": {
         "cmdline": [],
-        "modules": [],
-        "version": "13.0.0"
+        "modules": [
+            "networking_bigswitch",
+            "networking_bigswitch.bsnlldp",
+            "networking_bigswitch.bsnlldp.bsnlldp",
+            "networking_bigswitch.bsnlldp.rhlib",
+            "networking_bigswitch.bsnlldp.send_lldp",
+            "networking_bigswitch.hooks",
+            "networking_bigswitch.plugins",
+            "networking_bigswitch.plugins.bigswitch",
+            "networking_bigswitch.plugins.bigswitch.agent",
+            "networking_bigswitch.plugins.bigswitch.agent.restproxy_agent",
+            "networking_bigswitch.plugins.bigswitch.bsn_service_plugin",
+            "networking_bigswitch.plugins.bigswitch.config",
+            "networking_bigswitch.plugins.bigswitch.constants",
+            "networking_bigswitch.plugins.bigswitch.db",
+            "networking_bigswitch.plugins.bigswitch.db.consistency_db",
+            "networking_bigswitch.plugins.bigswitch.db.migration",
+            "networking_bigswitch.plugins.bigswitch.db.migration.alembic_migrations",
+            "networking_bigswitch.plugins.bigswitch.db.migration.alembic_migrations.env",
+            "networking_bigswitch.plugins.bigswitch.db.models",
+            "networking_bigswitch.plugins.bigswitch.db.models.head",
+            "networking_bigswitch.plugins.bigswitch.db.network_template_db",
+            "networking_bigswitch.plugins.bigswitch.db.porttracker_db",
+            "networking_bigswitch.plugins.bigswitch.db.reachability_test_db",
+            "networking_bigswitch.plugins.bigswitch.db.tenant_policy_db",
+            "networking_bigswitch.plugins.bigswitch.dhcp_driver",
+            "networking_bigswitch.plugins.bigswitch.extensions",
+            "networking_bigswitch.plugins.bigswitch.extensions.bsnserviceextension",
+            "networking_bigswitch.plugins.bigswitch.i18n",
+            "networking_bigswitch.plugins.bigswitch.l3_router_plugin",
+            "networking_bigswitch.plugins.bigswitch.neutronclient",
+            "networking_bigswitch.plugins.bigswitch.neutronclient.v2_0",
+            "networking_bigswitch.plugins.bigswitch.neutronclient.v2_0._bsn_plugin_client",
+            "networking_bigswitch.plugins.bigswitch.plugin",
+            "networking_bigswitch.plugins.bigswitch.servermanager",
+            "networking_bigswitch.plugins.bigswitch.tests",
+            "networking_bigswitch.plugins.bigswitch.tests.test_server",
+            "networking_bigswitch.plugins.bigswitch.utils",
+            "networking_bigswitch.plugins.bigswitch.vcsversion",
+            "networking_bigswitch.plugins.bigswitch.version",
+            "networking_bigswitch.plugins.ml2",
+            "networking_bigswitch.plugins.ml2.drivers",
+            "networking_bigswitch.plugins.ml2.drivers.mech_bigswitch",
+            "networking_bigswitch.plugins.ml2.drivers.mech_bigswitch.driver",
+            "networking_bigswitch.services",
+            "networking_bigswitch.services.taas",
+            "networking_bigswitch.services.taas.service_drivers",
+            "networking_bigswitch.services.taas.service_drivers.taas_bsn",
+            "networking_bigswitch.tests",
+            "networking_bigswitch.tests.functional",
+            "networking_bigswitch.tests.functional.db",
+            "networking_bigswitch.tests.functional.db.test_migrations",
+            "networking_bigswitch.tests.unit",
+            "networking_bigswitch.tests.unit.bigswitch",
+            "networking_bigswitch.tests.unit.bigswitch.fake_server",
+            "networking_bigswitch.tests.unit.bigswitch.test_agent_scheduler",
+            "networking_bigswitch.tests.unit.bigswitch.test_base",
+            "networking_bigswitch.tests.unit.bigswitch.test_capabilities",
+            "networking_bigswitch.tests.unit.bigswitch.test_networktemplate_db",
+            "networking_bigswitch.tests.unit.bigswitch.test_networktemplateassignment_db",
+            "networking_bigswitch.tests.unit.bigswitch.test_reachabilityquicktest_db",
+            "networking_bigswitch.tests.unit.bigswitch.test_reachabilitytest_db",
+            "networking_bigswitch.tests.unit.bigswitch.test_restproxy_agent",
+            "networking_bigswitch.tests.unit.bigswitch.test_restproxy_plugin",
+            "networking_bigswitch.tests.unit.bigswitch.test_router_db",
+            "networking_bigswitch.tests.unit.bigswitch.test_security_groups",
+            "networking_bigswitch.tests.unit.bigswitch.test_servermanager",
+            "networking_bigswitch.tests.unit.bigswitch.test_ssl",
+            "networking_bigswitch.tests.unit.ml2",
+            "networking_bigswitch.tests.unit.ml2.drivers",
+            "networking_bigswitch.tests.unit.ml2.drivers.test_bigswitch_mech",
+            "networking_bigswitch.tests.unit.test_import",
+            "networking_bigswitch.tests.unit.test_taas_bsn"
+        ],
+        "version": "13.0.2"
     },
     "networking-bigswitch-l3-pe": {
         "cmdline": [],
@@ -45055,7 +45139,16 @@
             "nglview.widget",
             "nglview.widget_box"
         ],
-        "version": "1.1.6"
+        "version": "1.1.7"
+    },
+    "ngmaster": {
+        "cmdline": [],
+        "modules": [
+            "ngmaster",
+            "ngmaster.run_ngmaster",
+            "ngmaster.utils"
+        ],
+        "version": "0.5.5"
     },
     "ngmeli": {
         "cmdline": [],
@@ -55120,24 +55213,30 @@
             "njupt.base",
             "njupt.card",
             "njupt.exceptions",
+            "njupt.library",
             "njupt.utils",
-            "njupt.utils.aolan",
-            "njupt.utils.aolan.aolan_captcha",
-            "njupt.utils.aolan.get_sample_set",
-            "njupt.utils.aolan.train",
-            "njupt.utils.card",
-            "njupt.utils.card.captcha_getter",
-            "njupt.utils.card.card_captcha",
-            "njupt.utils.card.train",
-            "njupt.utils.zhengfang",
-            "njupt.utils.zhengfang.captcha_getter",
-            "njupt.utils.zhengfang.train",
-            "njupt.utils.zhengfang.train_svm",
-            "njupt.utils.zhengfang.zhengfang_captcha",
-            "njupt.utils.zhengfang.zhengfang_captcha_svm",
-            "njupt.zhengfang"
+            "njupt.utils.captchas",
+            "njupt.utils.captchas.aolan",
+            "njupt.utils.captchas.aolan.aolan_captcha",
+            "njupt.utils.captchas.aolan.get_sample_set",
+            "njupt.utils.captchas.aolan.train",
+            "njupt.utils.captchas.card",
+            "njupt.utils.captchas.card.captcha_getter",
+            "njupt.utils.captchas.card.card_captcha",
+            "njupt.utils.captchas.card.gen_image_data",
+            "njupt.utils.captchas.library",
+            "njupt.utils.captchas.library.gen_image_data",
+            "njupt.utils.captchas.library.libray_captcha",
+            "njupt.utils.captchas.zhengfang",
+            "njupt.utils.captchas.zhengfang.captcha_getter",
+            "njupt.utils.captchas.zhengfang.gen_image_data",
+            "njupt.utils.captchas.zhengfang.zhengfang_captcha",
+            "njupt.zhengfang",
+            "test_zhengfang",
+            "test_zhengfang.conftest",
+            "test_zhengfang.zhengfang_test"
         ],
-        "version": "0.1.4.1"
+        "version": "0.1.5.1"
     },
     "njuseg": {
         "cmdline": [],
@@ -56682,7 +56781,7 @@
             "nmoscommon.webapi",
             "nmoscommon.zmqserver"
         ],
-        "version": "0.6.8"
+        "version": "0.6.9"
     },
     "nmrglue": {
         "cmdline": [],
@@ -75745,7 +75844,7 @@
             "schema.tests.test_vocabulary",
             "schema.vocabulary"
         ],
-        "version": "1.8.0"
+        "version": "1.9.0"
     },
     "nti-site": {
         "cmdline": [],
@@ -76675,6 +76774,25 @@
             "nuclei.nuclei"
         ],
         "version": "0.1.0"
+    },
+    "nuclei-discovery": {
+        "cmdline": [],
+        "modules": [
+            "nuclei_discovery",
+            "nuclei_discovery.ckpt",
+            "nuclei_discovery.config",
+            "nuclei_discovery.crop",
+            "nuclei_discovery.dataset",
+            "nuclei_discovery.distribution",
+            "nuclei_discovery.helper",
+            "nuclei_discovery.loss",
+            "nuclei_discovery.model",
+            "nuclei_discovery.split",
+            "nuclei_discovery.stitch_patch",
+            "nuclei_discovery.train",
+            "nuclei_discovery.valid"
+        ],
+        "version": "1.0"
     },
     "nucleo": {
         "cmdline": [],
@@ -80503,9 +80621,10 @@
             "quaternion.calculus",
             "quaternion.means",
             "quaternion.numba_wrapper",
-            "quaternion.quaternion_time_series"
+            "quaternion.quaternion_time_series",
+            "quaternion.setup"
         ],
-        "version": "2018.10.1.21.10.14"
+        "version": "2018.10.1.22.5.32"
     },
     "numpy-ringbuffer": {
         "cmdline": [],
@@ -83519,7 +83638,7 @@
             "nxstart.utils.strings",
             "nxstart.version"
         ],
-        "version": "1.1.0"
+        "version": "1.1.2"
     },
     "nxsugarpy": {
         "cmdline": [],
