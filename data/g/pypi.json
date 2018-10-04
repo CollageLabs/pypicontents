@@ -373,7 +373,7 @@
             "ga2.gaUtils.AgentClass",
             "ga2.gaUtils.gaDeamon"
         ],
-        "version": "0.2.8"
+        "version": "0.2.9"
     },
     "ga4gh": {
         "cmdline": [],
@@ -3914,6 +3914,7 @@
             "parsec.commands.libraries.upload_file_from_server",
             "parsec.commands.libraries.upload_file_from_url",
             "parsec.commands.libraries.upload_from_galaxy_filesystem",
+            "parsec.commands.libraries.wait_for_dataset",
             "parsec.commands.quotas",
             "parsec.commands.quotas.create_quota",
             "parsec.commands.quotas.delete_quota",
@@ -3922,6 +3923,7 @@
             "parsec.commands.quotas.undelete_quota",
             "parsec.commands.quotas.update_quota",
             "parsec.commands.roles",
+            "parsec.commands.roles.create_role",
             "parsec.commands.roles.get_roles",
             "parsec.commands.roles.show_role",
             "parsec.commands.tool",
@@ -3974,6 +3976,7 @@
             "parsec.commands.users.show_user",
             "parsec.commands.utils",
             "parsec.commands.utils.cmp",
+            "parsec.commands.utils.library_recurse",
             "parsec.commands.utils.wait_on_invocation",
             "parsec.commands.utils.xunit_xargs",
             "parsec.commands.visual",
@@ -4003,7 +4006,7 @@
             "parsec.galaxy",
             "parsec.io"
         ],
-        "version": "1.0.4"
+        "version": "1.0.5"
     },
     "galaxy-sdk-python": {
         "cmdline": [],
@@ -15938,7 +15941,7 @@
         "modules": [
             "geatpy"
         ],
-        "version": "1.0.6"
+        "version": "1.0.7"
     },
     "geats": {
         "cmdline": [],
@@ -17499,7 +17502,7 @@
             "zds_client.log",
             "zds_client.schema"
         ],
-        "version": "0.4.1"
+        "version": "0.4.2"
     },
     "gemmi": {
         "cmdline": [],
@@ -18085,7 +18088,7 @@
             "gene_graph_lib.draw_graph",
             "gene_graph_lib.generate_subgraph"
         ],
-        "version": "0.0.10"
+        "version": "0.1.0"
     },
     "gene-map": {
         "cmdline": [],
@@ -18870,6 +18873,17 @@
             "generic_report_generator.ResultDownloadStrategy"
         ],
         "version": "0.0.7"
+    },
+    "generic-report-generator-psql": {
+        "cmdline": [],
+        "modules": [
+            "generic_report_generator_psql",
+            "generic_report_generator_psql.PSQLDropTempTableStrategy",
+            "generic_report_generator_psql.PSQLPersistenceStrategy",
+            "generic_report_generator_psql.PSQLReportGeneratorFactory",
+            "generic_report_generator_psql.PSQLResultDownloadStrategy"
+        ],
+        "version": "0.0.4"
     },
     "generic-report-generator-redshift": {
         "cmdline": [],
@@ -27122,7 +27136,7 @@
     "georinex": {
         "cmdline": [],
         "modules": [],
-        "version": "1.6.7.2"
+        "version": "1.6.7.3"
     },
     "georipe": {
         "cmdline": [
@@ -44191,7 +44205,7 @@
     "gitutils": {
         "cmdline": [],
         "modules": [],
-        "version": "1.1.4"
+        "version": "1.1.5"
     },
     "gitver": {
         "cmdline": [
@@ -46378,7 +46392,7 @@
     "glimix-core": {
         "cmdline": [],
         "modules": [],
-        "version": "2.0.0"
+        "version": "2.0.1"
     },
     "glimpse": {
         "cmdline": [],
@@ -60089,7 +60103,7 @@
             "bigquery.schema",
             "bigquery.table"
         ],
-        "version": "1.5.1"
+        "version": "1.6.0"
     },
     "google-cloud-bigquery-datatransfer": {
         "cmdline": [],
@@ -62740,6 +62754,16 @@
             "googleimagesearch"
         ],
         "version": "1.0.2"
+    },
+    "googlemail": {
+        "cmdline": [],
+        "modules": [
+            "googlemail",
+            "googlemail.config",
+            "googlemail.gmail",
+            "googlemail.login"
+        ],
+        "version": "0.1.0"
     },
     "googlemaps": {
         "cmdline": [],
@@ -69498,6 +69522,194 @@
         ],
         "version": "1.2.1"
     },
+    "gpytorch": {
+        "cmdline": [],
+        "modules": [
+            "gpytorch",
+            "gpytorch.beta_features",
+            "gpytorch.distributions",
+            "gpytorch.distributions.distribution",
+            "gpytorch.distributions.multitask_multivariate_normal",
+            "gpytorch.distributions.multivariate_normal",
+            "gpytorch.functions",
+            "gpytorch.functions._dsmm",
+            "gpytorch.functions._inv_matmul",
+            "gpytorch.functions._inv_quad_log_det",
+            "gpytorch.functions._log_normal_cdf",
+            "gpytorch.functions._matmul",
+            "gpytorch.functions._normal_cdf",
+            "gpytorch.functions._root_decomposition",
+            "gpytorch.functions.matmul",
+            "gpytorch.kernels",
+            "gpytorch.kernels.additive_structure_kernel",
+            "gpytorch.kernels.cosine_kernel",
+            "gpytorch.kernels.grid_interpolation_kernel",
+            "gpytorch.kernels.grid_kernel",
+            "gpytorch.kernels.index_kernel",
+            "gpytorch.kernels.inducing_point_kernel",
+            "gpytorch.kernels.kernel",
+            "gpytorch.kernels.lcm_kernel",
+            "gpytorch.kernels.linear_kernel",
+            "gpytorch.kernels.matern_kernel",
+            "gpytorch.kernels.multitask_kernel",
+            "gpytorch.kernels.periodic_kernel",
+            "gpytorch.kernels.product_structure_kernel",
+            "gpytorch.kernels.rbf_kernel",
+            "gpytorch.kernels.scale_kernel",
+            "gpytorch.kernels.spectral_mixture_kernel",
+            "gpytorch.kernels.white_noise_kernel",
+            "gpytorch.lazy",
+            "gpytorch.lazy.added_diag_lazy_tensor",
+            "gpytorch.lazy.block_diag_lazy_tensor",
+            "gpytorch.lazy.block_lazy_tensor",
+            "gpytorch.lazy.chol_lazy_tensor",
+            "gpytorch.lazy.constant_mul_lazy_tensor",
+            "gpytorch.lazy.diag_lazy_tensor",
+            "gpytorch.lazy.interpolated_lazy_tensor",
+            "gpytorch.lazy.kronecker_product_lazy_tensor",
+            "gpytorch.lazy.lazy_evaluated_kernel_tensor",
+            "gpytorch.lazy.lazy_tensor",
+            "gpytorch.lazy.lazy_tensor_representation_tree",
+            "gpytorch.lazy.matmul_lazy_tensor",
+            "gpytorch.lazy.mul_lazy_tensor",
+            "gpytorch.lazy.non_lazy_tensor",
+            "gpytorch.lazy.psd_sum_lazy_tensor",
+            "gpytorch.lazy.root_lazy_tensor",
+            "gpytorch.lazy.sum_batch_lazy_tensor",
+            "gpytorch.lazy.sum_lazy_tensor",
+            "gpytorch.lazy.toeplitz_lazy_tensor",
+            "gpytorch.lazy.zero_lazy_tensor",
+            "gpytorch.likelihoods",
+            "gpytorch.likelihoods.bernoulli_likelihood",
+            "gpytorch.likelihoods.gaussian_likelihood",
+            "gpytorch.likelihoods.likelihood",
+            "gpytorch.likelihoods.multitask_gaussian_likelihood",
+            "gpytorch.likelihoods.softmax_likelihood",
+            "gpytorch.means",
+            "gpytorch.means.constant_mean",
+            "gpytorch.means.mean",
+            "gpytorch.means.multitask_mean",
+            "gpytorch.means.zero_mean",
+            "gpytorch.mlls",
+            "gpytorch.mlls.exact_marginal_log_likelihood",
+            "gpytorch.mlls.marginal_log_likelihood",
+            "gpytorch.mlls.variational_marginal_log_likelihood",
+            "gpytorch.models",
+            "gpytorch.models.abstract_variational_gp",
+            "gpytorch.models.additive_grid_inducing_variational_gp",
+            "gpytorch.models.exact_gp",
+            "gpytorch.models.gp",
+            "gpytorch.models.grid_inducing_variational_gp",
+            "gpytorch.models.variational_gp",
+            "gpytorch.module",
+            "gpytorch.priors",
+            "gpytorch.priors.lkj_prior",
+            "gpytorch.priors.prior",
+            "gpytorch.priors.smoothed_box_prior",
+            "gpytorch.priors.torch_priors",
+            "gpytorch.priors.utils",
+            "gpytorch.priors.wishart_prior",
+            "gpytorch.settings",
+            "gpytorch.utils",
+            "gpytorch.utils.cholesky",
+            "gpytorch.utils.eig",
+            "gpytorch.utils.fft",
+            "gpytorch.utils.grid",
+            "gpytorch.utils.interpolation",
+            "gpytorch.utils.lanczos",
+            "gpytorch.utils.linear_cg",
+            "gpytorch.utils.pivoted_cholesky",
+            "gpytorch.utils.sparse",
+            "gpytorch.utils.stochastic_lq",
+            "gpytorch.utils.toeplitz",
+            "gpytorch.variational",
+            "gpytorch.variational.mvn_variational_strategy",
+            "gpytorch.variational.variational_strategy",
+            "test",
+            "test._utils",
+            "test.distributions",
+            "test.distributions.test_multitask_multivariate_normal",
+            "test.distributions.test_multivariate_normal",
+            "test.examples",
+            "test.examples.test_batch_gp_regression",
+            "test.examples.test_batch_multitask_gp_regression",
+            "test.examples.test_hadamard_multitask_gp_regression",
+            "test.examples.test_kissgp_additive_classification",
+            "test.examples.test_kissgp_additive_regression",
+            "test.examples.test_kissgp_dkl_regression",
+            "test.examples.test_kissgp_gp_classification",
+            "test.examples.test_kissgp_gp_regression",
+            "test.examples.test_kissgp_kronecker_product_classification",
+            "test.examples.test_kissgp_kronecker_product_regression",
+            "test.examples.test_kissgp_multiplicative_regression",
+            "test.examples.test_kissgp_variational_regression",
+            "test.examples.test_kissgp_white_noise_regression",
+            "test.examples.test_kronecker_multitask_gp_regression",
+            "test.examples.test_kronecker_multitask_ski_gp_regression",
+            "test.examples.test_lcm_kernel_regression",
+            "test.examples.test_sgpr_regression",
+            "test.examples.test_simple_gp_classification",
+            "test.examples.test_simple_gp_regression",
+            "test.examples.test_spectral_mixture_gp_regression",
+            "test.examples.test_white_noise_regression",
+            "test.functions",
+            "test.functions.test_dsmm",
+            "test.functions.test_inv_matmul",
+            "test.functions.test_inv_quad_log_det",
+            "test.functions.test_log_normal_cdf",
+            "test.functions.test_matmul",
+            "test.functions.test_root_decomposition",
+            "test.kernels",
+            "test.kernels.test_additive_kernel",
+            "test.kernels.test_cosine_kernel",
+            "test.kernels.test_linear_kernel",
+            "test.kernels.test_matern_kernel",
+            "test.kernels.test_periodic_kernel",
+            "test.kernels.test_rbf_kernel",
+            "test.kernels.test_scale_kernel",
+            "test.kernels.test_spectral_mixture_kernel",
+            "test.kernels.test_white_noise_kernel",
+            "test.lazy",
+            "test.lazy._lazy_tensor_test_case",
+            "test.lazy.test_added_diag_lazy_tensor",
+            "test.lazy.test_block_diag_lazy_tensor",
+            "test.lazy.test_chol_lazy_tensor",
+            "test.lazy.test_constant_mul_lazy_tensor",
+            "test.lazy.test_diag_lazy_tensor",
+            "test.lazy.test_interpolated_lazy_tensor",
+            "test.lazy.test_kronecker_product_lazy_tensor",
+            "test.lazy.test_matmul_lazy_tensor",
+            "test.lazy.test_mul_lazy_tensor",
+            "test.lazy.test_non_lazy_tensor",
+            "test.lazy.test_psd_sum_lazy_tensor",
+            "test.lazy.test_root_lazy_tensor",
+            "test.lazy.test_sum_batch_lazy_tensor",
+            "test.lazy.test_sum_lazy_tensor",
+            "test.lazy.test_toeplitz_lazy_tensor",
+            "test.lazy.test_zero_lazy_tensor",
+            "test.means",
+            "test.means.test_constant_mean",
+            "test.means.test_multitask_mean",
+            "test.means.test_zero_mean",
+            "test.priors",
+            "test.priors.test_gamma_prior",
+            "test.priors.test_lkj_prior",
+            "test.priors.test_multivariate_normal_prior",
+            "test.priors.test_normal_prior",
+            "test.priors.test_smoothed_box_prior",
+            "test.utils",
+            "test.utils.test_cholesky",
+            "test.utils.test_fft",
+            "test.utils.test_grid",
+            "test.utils.test_interpolation",
+            "test.utils.test_lanczos",
+            "test.utils.test_linear_cg",
+            "test.utils.test_pivoted_cholesky",
+            "test.utils.test_sparse",
+            "test.utils.test_toeplitz"
+        ],
+        "version": "0.1.0rc1"
+    },
     "gq": {
         "cmdline": [],
         "modules": [
@@ -70390,7 +70602,7 @@
             "grafana_api.grafana_api",
             "grafana_api.grafana_face"
         ],
-        "version": "0.2.2"
+        "version": "0.2.9"
     },
     "grafana-api-client": {
         "cmdline": [],
@@ -70974,7 +71186,7 @@
             "gramex.transforms.twitterstream",
             "gramex.winservice"
         ],
-        "version": "1.42.0"
+        "version": "1.43.0"
     },
     "gramfuzz": {
         "cmdline": [],
@@ -72421,7 +72633,7 @@
             "graphene_django_optimizer.resolver",
             "graphene_django_optimizer.utils"
         ],
-        "version": "0.3.4"
+        "version": "0.3.5"
     },
     "graphene-django-subscriptions": {
         "cmdline": [],
@@ -72821,7 +73033,7 @@
             "grapher.aws",
             "grapher.aws.driver"
         ],
-        "version": "2.1.2"
+        "version": "2.1.3"
     },
     "grapher-core": {
         "cmdline": [],
@@ -72832,7 +73044,7 @@
             "grapher.core.errors",
             "grapher.core.server"
         ],
-        "version": "2.0.7"
+        "version": "2.0.8"
     },
     "graphflow": {
         "cmdline": [],
@@ -90379,7 +90591,7 @@
             "measures.timezones",
             "measures.transction_strategies"
         ],
-        "version": "4.2.7"
+        "version": "4.2.8"
     },
     "guillotina-amqp": {
         "cmdline": [],
@@ -91533,6 +91745,15 @@
         ],
         "version": "1.3.7"
     },
+    "gus": {
+        "cmdline": [
+            "gus"
+        ],
+        "modules": [
+            "gus"
+        ],
+        "version": "1.0.8"
+    },
     "gus-client": {
         "cmdline": [],
         "modules": [
@@ -91724,6 +91945,11 @@
         ],
         "version": "0.0.3"
     },
+    "gutils": {
+        "cmdline": [],
+        "modules": [],
+        "version": ""
+    },
     "guts": {
         "cmdline": [
             "xmlschema-to-guts"
@@ -91903,7 +92129,7 @@
             "gvar.powerseries",
             "gvar.root"
         ],
-        "version": "9.0.2"
+        "version": "9.0.3"
     },
     "gvcf2bed": {
         "cmdline": [],
