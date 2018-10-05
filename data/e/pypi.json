@@ -1293,7 +1293,7 @@
             "ee.serializer",
             "ee.terrain"
         ],
-        "version": "0.1.150"
+        "version": "0.1.151"
     },
     "earthgecko-skyline": {
         "cmdline": [],
@@ -2915,21 +2915,21 @@
             "easyaccess.eaparser",
             "easyaccess.easyaccess",
             "easyaccess.eautils",
+            "easyaccess.eautils.cli_utils",
             "easyaccess.eautils.db_api",
+            "easyaccess.eautils.db_utils",
             "easyaccess.eautils.des_logo",
+            "easyaccess.eautils.des_utils",
             "easyaccess.eautils.dircache",
             "easyaccess.eautils.dtypes",
             "easyaccess.eautils.ea_utils",
             "easyaccess.eautils.fileio",
             "easyaccess.eautils.fun_utils",
             "easyaccess.eautils.import_utils",
-            "easyaccess.testhp",
-            "easyaccess.update_cache",
-            "easyaccess.update_metadata",
-            "easyaccess.version",
-            "easyaccess.wrapped"
+            "easyaccess.eautils.python_api",
+            "easyaccess.version"
         ],
-        "version": "1.4.4"
+        "version": "1.4.5"
     },
     "easyad": {
         "cmdline": [],
@@ -3805,6 +3805,14 @@
             "EasyEuler.types"
         ],
         "version": "1.2.1"
+    },
+    "easyexcel": {
+        "cmdline": [],
+        "modules": [
+            "EasyExcel",
+            "EasyExcel.converter"
+        ],
+        "version": "1.0.4"
     },
     "easyexps": {
         "cmdline": [],
@@ -6742,7 +6750,7 @@
             "ebi.ols.api.exceptions",
             "ebi.ols.api.helpers"
         ],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     "ebics": {
         "cmdline": [],
@@ -7666,7 +7674,7 @@
             "ebuildtester.parse",
             "ebuildtester.utils"
         ],
-        "version": "0.1.12"
+        "version": "0.1.13"
     },
     "ebusdpy": {
         "cmdline": [],
@@ -8538,6 +8546,19 @@
             "ecal.abstract_fetcher",
             "ecal.ecn_fetcher",
             "ecal.runtime_cache"
+        ],
+        "version": "0.0.4"
+    },
+    "ecanallousagetools": {
+        "cmdline": [],
+        "modules": [
+            "allotools",
+            "allotools.allocation_ts",
+            "allotools.filters",
+            "allotools.parameters",
+            "allotools.tests",
+            "allotools.tests.test_allo_ts",
+            "allotools.util"
         ],
         "version": "0.0.4"
     },
@@ -12358,13 +12379,14 @@
             "edam.viewer.app",
             "edam.viewer.app.InvalidUsage",
             "edam.viewer.app.OGC_SOS",
+            "edam.viewer.app.TargetTemplate",
             "edam.viewer.app.manage",
             "edam.viewer.app.utilities",
             "edam.viewer.app.views",
             "edam.viewer.config",
             "edam.viewer.run"
         ],
-        "version": "1.0.15"
+        "version": "1.0.16"
     },
     "edamam-api": {
         "cmdline": [],
@@ -17994,20 +18016,120 @@
         "cmdline": [],
         "modules": [
             "consent",
+            "consent.admin",
+            "consent.api",
+            "consent.api.permissions",
+            "consent.api.urls",
+            "consent.api.v1",
+            "consent.api.v1.urls",
+            "consent.api.v1.views",
             "consent.apps",
             "consent.errors",
             "consent.helpers",
+            "consent.migrations",
+            "consent.migrations.0001_initial",
+            "consent.migrations.0002_migrate_to_new_data_sharing_consent",
+            "consent.migrations.0003_historicaldatasharingconsent_history_change_reason",
+            "consent.migrations.0004_datasharingconsenttextoverrides",
             "consent.mixins",
             "consent.models",
             "consent.urls",
             "enterprise",
+            "enterprise.admin",
+            "enterprise.admin.actions",
+            "enterprise.admin.forms",
+            "enterprise.admin.paginator",
+            "enterprise.admin.utils",
+            "enterprise.admin.views",
+            "enterprise.api",
+            "enterprise.api.filters",
+            "enterprise.api.pagination",
+            "enterprise.api.throttles",
+            "enterprise.api.urls",
+            "enterprise.api.utils",
+            "enterprise.api.v1",
+            "enterprise.api.v1.decorators",
+            "enterprise.api.v1.mixins",
+            "enterprise.api.v1.permissions",
+            "enterprise.api.v1.serializers",
+            "enterprise.api.v1.urls",
+            "enterprise.api.v1.views",
+            "enterprise.api_client",
+            "enterprise.api_client.discovery",
+            "enterprise.api_client.ecommerce",
+            "enterprise.api_client.enterprise",
+            "enterprise.api_client.lms",
             "enterprise.apps",
             "enterprise.constants",
             "enterprise.decorators",
             "enterprise.django_compatibility",
+            "enterprise.management",
+            "enterprise.management.commands",
+            "enterprise.management.commands.create_enterprise_course_enrollments",
+            "enterprise.management.commands.save_enterprise_customer_users",
             "enterprise.messages",
+            "enterprise.migrations",
+            "enterprise.migrations.0001_initial",
+            "enterprise.migrations.0002_enterprisecustomerbrandingconfiguration",
+            "enterprise.migrations.0003_auto_20161104_0937",
+            "enterprise.migrations.0004_auto_20161114_0434",
+            "enterprise.migrations.0005_pendingenterprisecustomeruser",
+            "enterprise.migrations.0006_auto_20161121_0241",
+            "enterprise.migrations.0007_auto_20161109_1511",
+            "enterprise.migrations.0008_auto_20161124_2355",
+            "enterprise.migrations.0009_auto_20161130_1651",
+            "enterprise.migrations.0010_auto_20161222_1212",
+            "enterprise.migrations.0011_enterprisecustomerentitlement_historicalenterprisecustomerentitlement",
+            "enterprise.migrations.0012_auto_20170125_1033",
+            "enterprise.migrations.0013_auto_20170125_1157",
+            "enterprise.migrations.0014_enrollmentnotificationemailtemplate_historicalenrollmentnotificationemailtemplate",
+            "enterprise.migrations.0015_auto_20170130_0003",
+            "enterprise.migrations.0016_auto_20170405_0647",
+            "enterprise.migrations.0017_auto_20170508_1341",
+            "enterprise.migrations.0018_auto_20170511_1357",
+            "enterprise.migrations.0019_auto_20170606_1853",
+            "enterprise.migrations.0020_auto_20170624_2316",
+            "enterprise.migrations.0021_auto_20170711_0712",
+            "enterprise.migrations.0022_auto_20170720_1543",
+            "enterprise.migrations.0023_audit_data_reporting_flag",
+            "enterprise.migrations.0024_enterprisecustomercatalog_historicalenterprisecustomercatalog",
+            "enterprise.migrations.0025_auto_20170828_1412",
+            "enterprise.migrations.0026_make_require_account_level_consent_nullable",
+            "enterprise.migrations.0027_remove_account_level_consent",
+            "enterprise.migrations.0028_link_enterprise_to_enrollment_template",
+            "enterprise.migrations.0029_auto_20170925_1909",
+            "enterprise.migrations.0030_auto_20171005_1600",
+            "enterprise.migrations.0031_auto_20171012_1249",
+            "enterprise.migrations.0032_reporting_model",
+            "enterprise.migrations.0033_add_history_change_reason_field",
+            "enterprise.migrations.0034_auto_20171023_0727",
+            "enterprise.migrations.0035_auto_20171212_1129",
+            "enterprise.migrations.0036_sftp_reporting_support",
+            "enterprise.migrations.0037_auto_20180110_0450",
+            "enterprise.migrations.0038_auto_20180122_1427",
+            "enterprise.migrations.0039_auto_20180129_1034",
+            "enterprise.migrations.0040_auto_20180129_1428",
+            "enterprise.migrations.0041_auto_20180212_1507",
+            "enterprise.migrations.0042_replace_sensitive_sso_username",
+            "enterprise.migrations.0043_auto_20180507_0138",
+            "enterprise.migrations.0044_reporting_config_multiple_types",
+            "enterprise.migrations.0045_report_type_json",
+            "enterprise.migrations.0046_remove_unique_constraints",
+            "enterprise.migrations.0047_auto_20180517_0457",
+            "enterprise.migrations.0048_enterprisecustomeruser_active",
+            "enterprise.migrations.0049_auto_20180531_0321",
+            "enterprise.migrations.0050_progress_v2",
+            "enterprise.migrations.0051_add_enterprise_slug",
+            "enterprise.migrations.0052_create_unique_slugs",
+            "enterprise.migrations.0053_auto_20180911_0811",
+            "enterprise.migrations.0053_pendingenrollment_cohort_name",
+            "enterprise.migrations.0054_merge_20180914_1511",
             "enterprise.models",
+            "enterprise.settings",
+            "enterprise.settings.test",
             "enterprise.signals",
+            "enterprise.templatetags",
+            "enterprise.templatetags.enterprise",
             "enterprise.tpa_pipeline",
             "enterprise.urls",
             "enterprise.utils",
@@ -18015,30 +18137,97 @@
             "enterprise.views",
             "integrated_channels",
             "integrated_channels.degreed",
+            "integrated_channels.degreed.admin",
             "integrated_channels.degreed.apps",
             "integrated_channels.degreed.client",
+            "integrated_channels.degreed.exporters",
+            "integrated_channels.degreed.exporters.content_metadata",
+            "integrated_channels.degreed.exporters.learner_data",
+            "integrated_channels.degreed.migrations",
+            "integrated_channels.degreed.migrations.0001_initial",
+            "integrated_channels.degreed.migrations.0002_auto_20180104_0103",
+            "integrated_channels.degreed.migrations.0003_auto_20180109_0712",
+            "integrated_channels.degreed.migrations.0004_auto_20180306_1251",
+            "integrated_channels.degreed.migrations.0005_auto_20180807_1302",
             "integrated_channels.degreed.models",
+            "integrated_channels.degreed.transmitters",
+            "integrated_channels.degreed.transmitters.content_metadata",
+            "integrated_channels.degreed.transmitters.learner_data",
             "integrated_channels.exceptions",
             "integrated_channels.integrated_channel",
             "integrated_channels.integrated_channel.apps",
             "integrated_channels.integrated_channel.client",
+            "integrated_channels.integrated_channel.exporters",
+            "integrated_channels.integrated_channel.exporters.content_metadata",
+            "integrated_channels.integrated_channel.exporters.learner_data",
+            "integrated_channels.integrated_channel.management",
+            "integrated_channels.integrated_channel.management.commands",
+            "integrated_channels.integrated_channel.management.commands.transmit_content_metadata",
+            "integrated_channels.integrated_channel.management.commands.transmit_learner_data",
+            "integrated_channels.integrated_channel.migrations",
+            "integrated_channels.integrated_channel.migrations.0001_initial",
+            "integrated_channels.integrated_channel.migrations.0002_delete_enterpriseintegratedchannel",
+            "integrated_channels.integrated_channel.migrations.0003_catalogtransmissionaudit_learnerdatatransmissionaudit",
+            "integrated_channels.integrated_channel.migrations.0004_catalogtransmissionaudit_channel",
+            "integrated_channels.integrated_channel.migrations.0005_auto_20180306_1251",
+            "integrated_channels.integrated_channel.migrations.0006_delete_catalogtransmissionaudit",
             "integrated_channels.integrated_channel.models",
             "integrated_channels.integrated_channel.tasks",
+            "integrated_channels.integrated_channel.transmitters",
+            "integrated_channels.integrated_channel.transmitters.content_metadata",
+            "integrated_channels.integrated_channel.transmitters.learner_data",
             "integrated_channels.sap_success_factors",
+            "integrated_channels.sap_success_factors.admin",
             "integrated_channels.sap_success_factors.apps",
             "integrated_channels.sap_success_factors.client",
             "integrated_channels.sap_success_factors.constants",
+            "integrated_channels.sap_success_factors.exporters",
+            "integrated_channels.sap_success_factors.exporters.content_metadata",
+            "integrated_channels.sap_success_factors.exporters.learner_data",
+            "integrated_channels.sap_success_factors.exporters.utils",
+            "integrated_channels.sap_success_factors.migrations",
+            "integrated_channels.sap_success_factors.migrations.0001_initial",
+            "integrated_channels.sap_success_factors.migrations.0002_auto_20170224_1545",
+            "integrated_channels.sap_success_factors.migrations.0003_auto_20170317_1402",
+            "integrated_channels.sap_success_factors.migrations.0004_catalogtransmissionaudit_audit_summary",
+            "integrated_channels.sap_success_factors.migrations.0005_historicalsapsuccessfactorsenterprisecustomerconfiguration_history_change_reason",
+            "integrated_channels.sap_success_factors.migrations.0006_sapsuccessfactors_use_enterprise_enrollment_page_waffle_flag",
+            "integrated_channels.sap_success_factors.migrations.0007_remove_historicalsapsuccessfactorsenterprisecustomerconfiguration_history_change_reason",
+            "integrated_channels.sap_success_factors.migrations.0008_historicalsapsuccessfactorsenterprisecustomerconfiguration_history_change_reason",
+            "integrated_channels.sap_success_factors.migrations.0009_sapsuccessfactors_remove_enterprise_enrollment_page_waffle_flag",
+            "integrated_channels.sap_success_factors.migrations.0010_move_audit_tables_to_base_integrated_channel",
+            "integrated_channels.sap_success_factors.migrations.0011_auto_20180104_0103",
+            "integrated_channels.sap_success_factors.migrations.0012_auto_20180109_0712",
+            "integrated_channels.sap_success_factors.migrations.0013_auto_20180306_1251",
+            "integrated_channels.sap_success_factors.migrations.0014_drop_historical_table",
+            "integrated_channels.sap_success_factors.migrations.0015_auto_20180510_1259",
+            "integrated_channels.sap_success_factors.migrations.0016_sapsuccessfactorsenterprisecustomerconfiguration_additional_locales",
             "integrated_channels.sap_success_factors.models",
+            "integrated_channels.sap_success_factors.transmitters",
+            "integrated_channels.sap_success_factors.transmitters.content_metadata",
+            "integrated_channels.sap_success_factors.transmitters.learner_data",
             "integrated_channels.utils",
             "integrated_channels.xapi",
+            "integrated_channels.xapi.admin",
             "integrated_channels.xapi.apps",
             "integrated_channels.xapi.client",
             "integrated_channels.xapi.constants",
+            "integrated_channels.xapi.management",
+            "integrated_channels.xapi.management.commands",
+            "integrated_channels.xapi.management.commands.send_course_completions",
+            "integrated_channels.xapi.management.commands.send_course_enrollments",
+            "integrated_channels.xapi.migrations",
+            "integrated_channels.xapi.migrations.0001_initial",
+            "integrated_channels.xapi.migrations.0002_auto_20180726_0142",
             "integrated_channels.xapi.models",
             "integrated_channels.xapi.serializers",
+            "integrated_channels.xapi.statements",
+            "integrated_channels.xapi.statements.base",
+            "integrated_channels.xapi.statements.learner_course_completion",
+            "integrated_channels.xapi.statements.learner_course_enrollment",
             "integrated_channels.xapi.utils"
         ],
-        "version": "0.73.5"
+        "version": "0.73.6"
     },
     "edx-enterprise-data": {
         "cmdline": [],
@@ -20433,6 +20622,33 @@
             "eeweather.warnings"
         ],
         "version": "0.3.8"
+    },
+    "ef-open": {
+        "cmdline": [],
+        "modules": [
+            "efopen",
+            "efopen.demo_templateresolver",
+            "efopen.ef_app_config_reader",
+            "efopen.ef_aws_resolver",
+            "efopen.ef_cf",
+            "efopen.ef_check_config",
+            "efopen.ef_config",
+            "efopen.ef_config_resolver",
+            "efopen.ef_context",
+            "efopen.ef_generate",
+            "efopen.ef_instanceinit",
+            "efopen.ef_instanceinit_config_reader",
+            "efopen.ef_password",
+            "efopen.ef_plugin",
+            "efopen.ef_resolve_config",
+            "efopen.ef_service_registry",
+            "efopen.ef_site_config",
+            "efopen.ef_template_resolver",
+            "efopen.ef_utils",
+            "efopen.ef_version",
+            "efopen.ef_version_resolver"
+        ],
+        "version": "0.1.1"
     },
     "efacter": {
         "cmdline": [],
@@ -29453,13 +29669,18 @@
             "emannotationschemas",
             "emannotationschemas.base",
             "emannotationschemas.bouton_shape",
+            "emannotationschemas.cell_type_local",
+            "emannotationschemas.contact",
             "emannotationschemas.errors",
             "emannotationschemas.flatten",
+            "emannotationschemas.functional_coregistration",
             "emannotationschemas.models",
+            "emannotationschemas.postsynaptic_compartment",
+            "emannotationschemas.presynaptic_bouton_type",
             "emannotationschemas.synapse",
             "emannotationschemas.utils"
         ],
-        "version": "0.2.0"
+        "version": "0.2.17"
     },
     "emantools": {
         "cmdline": [],
@@ -30444,6 +30665,11 @@
         ],
         "version": "0.4"
     },
+    "emencia-jinja-secretkey": {
+        "cmdline": [],
+        "modules": [],
+        "version": "0.1.0"
+    },
     "emencia-paste-django": {
         "cmdline": [],
         "modules": [
@@ -31087,7 +31313,7 @@
         "modules": [
             "flag"
         ],
-        "version": "0.0.1"
+        "version": "1.0.0"
     },
     "emoji-data-python": {
         "cmdline": [],
@@ -31633,6 +31859,25 @@
             "tests"
         ],
         "version": "1.2.9"
+    },
+    "empcar-1zlab": {
+        "cmdline": [],
+        "modules": [
+            "empcar.battery_voltage",
+            "empcar.button",
+            "empcar.car",
+            "empcar.car_config",
+            "empcar.cloud_platform",
+            "empcar.led",
+            "empcar.main",
+            "empcar.motor",
+            "empcar.mqtt_control_mode",
+            "empcar.pca9685",
+            "empcar.test_car",
+            "empcar.test_motor",
+            "empcar.user_button"
+        ],
+        "version": "1.2"
     },
     "empdist": {
         "cmdline": [],
@@ -35877,7 +36122,7 @@
     "energy-demand": {
         "cmdline": [],
         "modules": [],
-        "version": "0.5.3"
+        "version": "0.6.2"
     },
     "energy-shaper": {
         "cmdline": [],
@@ -37783,6 +38028,13 @@
         ],
         "version": "0.0.1"
     },
+    "enlight": {
+        "cmdline": [],
+        "modules": [
+            "enlight"
+        ],
+        "version": "0.0.0"
+    },
     "enlighten": {
         "cmdline": [],
         "modules": [
@@ -39537,18 +39789,20 @@
             "entente",
             "entente.cgal_search",
             "entente.cli",
+            "entente.composite",
             "entente.equality",
             "entente.geometry",
             "entente.landmarks",
             "entente.restore_correspondence",
             "entente.shuffle",
+            "entente.test_composite",
             "entente.test_equality",
             "entente.test_restore_correspondence",
             "entente.test_shuffle",
             "entente.testing",
             "entente.validation"
         ],
-        "version": "0.3.0"
+        "version": "0.4.0"
     },
     "enter-leave": {
         "cmdline": [],
@@ -40377,7 +40631,7 @@
             "envars.tests",
             "envars.tests.test_envars"
         ],
-        "version": "0.2.1"
+        "version": "0.2.5"
     },
     "envassert": {
         "cmdline": [],
@@ -40680,15 +40934,8 @@
     },
     "envinfo": {
         "cmdline": [],
-        "modules": [
-            "envinfo",
-            "envinfo._version",
-            "envinfo.drives",
-            "envinfo.format",
-            "envinfo.package",
-            "envinfo.system"
-        ],
-        "version": "1.3.4"
+        "modules": [],
+        "version": "1.5.2"
     },
     "envio": {
         "cmdline": [],
@@ -41871,7 +42118,7 @@
             "eodag.utils.logging",
             "eodag.utils.metadata_mapping"
         ],
-        "version": "0.6.2"
+        "version": "0.6.3"
     },
     "eodag-sentinelsat": {
         "cmdline": [],
@@ -42040,6 +42287,13 @@
         "cmdline": [],
         "modules": [
             "eona"
+        ],
+        "version": "0.0.0"
+    },
+    "eonalabs": {
+        "cmdline": [],
+        "modules": [
+            "eonalabs"
         ],
         "version": "0.0.0"
     },
@@ -43624,7 +43878,7 @@
             "epicscorelibs.test.test_load",
             "epicscorelibs.version"
         ],
-        "version": "7.0.1.99.13.1a1"
+        "version": "7.0.1.99.13.4a1"
     },
     "epicserver": {
         "cmdline": [],
@@ -44333,7 +44587,7 @@
             "epltoolset",
             "epltoolset.pdConnection"
         ],
-        "version": "0.3.1"
+        "version": "0.3.2"
     },
     "eplus": {
         "cmdline": [],
@@ -44732,7 +44986,7 @@
             "eppy.useful_scripts.renamecolon",
             "eppy.walk_hvac"
         ],
-        "version": "0.5.47"
+        "version": "0.5.48"
     },
     "epquery": {
         "cmdline": [],
@@ -52613,6 +52867,7 @@
             "eth_tester",
             "eth_tester.backends",
             "eth_tester.backends.base",
+            "eth_tester.backends.common",
             "eth_tester.backends.mock",
             "eth_tester.backends.mock.factory",
             "eth_tester.backends.mock.main",
@@ -52652,7 +52907,7 @@
             "eth_tester.validation.inbound",
             "eth_tester.validation.outbound"
         ],
-        "version": "0.1.0b32"
+        "version": "0.1.0b33"
     },
     "eth-tester-rpc": {
         "cmdline": [],
@@ -56586,7 +56841,7 @@
         "modules": [
             "evalidate"
         ],
-        "version": "0.7.5"
+        "version": "0.7.6"
     },
     "evalidator": {
         "cmdline": [],
@@ -57024,7 +57279,7 @@
             "eve.validation",
             "eve.versioning"
         ],
-        "version": "0.8"
+        "version": "0.8.1"
     },
     "eve-api-client": {
         "cmdline": [],
@@ -70359,7 +70614,7 @@
             "ezdashboard.tab",
             "ezdashboard.title"
         ],
-        "version": "0.3.5"
+        "version": "0.3.6"
     },
     "ezdatapipe": {
         "cmdline": [],
@@ -70580,10 +70835,8 @@
     },
     "ezenv": {
         "cmdline": [],
-        "modules": [
-            "env"
-        ],
-        "version": "0.84"
+        "modules": [],
+        "version": "0.85"
     },
     "ezex": {
         "cmdline": [],
@@ -70942,7 +71195,7 @@
             "ezmomi.params",
             "ezmomi.version"
         ],
-        "version": "6.4.0"
+        "version": "6.5.0"
     },
     "ezo": {
         "cmdline": [],
