@@ -2828,8 +2828,11 @@
     },
     "backports-datetime-fromisoformat": {
         "cmdline": [],
-        "modules": [],
-        "version": "0.0.1"
+        "modules": [
+            "backports",
+            "backports.datetime_fromisoformat"
+        ],
+        "version": "0.0.2"
     },
     "backports-datetime-timestamp": {
         "cmdline": [],
@@ -11936,7 +11939,7 @@
             "BaseMountRetrieve.basemountretrieve",
             "BaseMountRetrieve.test_basemountretrieve"
         ],
-        "version": "0.3.5"
+        "version": "0.3.6"
     },
     "basen": {
         "cmdline": [],
@@ -13159,6 +13162,7 @@
             "basis_set_exchange.curate.printing",
             "basis_set_exchange.curate.readers",
             "basis_set_exchange.curate.readers.g94",
+            "basis_set_exchange.curate.readers.gbasis",
             "basis_set_exchange.curate.readers.nwchem",
             "basis_set_exchange.curate.readers.read",
             "basis_set_exchange.curate.readers.turbomole",
@@ -13166,7 +13170,6 @@
             "basis_set_exchange.data.ahlrichs",
             "basis_set_exchange.data.crenb",
             "basis_set_exchange.data.dunning",
-            "basis_set_exchange.data.dunning_fit",
             "basis_set_exchange.data.huzinaga",
             "basis_set_exchange.data.jorge",
             "basis_set_exchange.data.lanl",
@@ -13190,17 +13193,20 @@
             "basis_set_exchange.tests.deprecated_test_v0.bse",
             "basis_set_exchange.tests.test_api",
             "basis_set_exchange.tests.test_api_slow",
+            "basis_set_exchange.tests.test_aux_sanity",
             "basis_set_exchange.tests.test_bib",
             "basis_set_exchange.tests.test_converters",
             "basis_set_exchange.tests.test_curate",
+            "basis_set_exchange.tests.test_curate_roundtrip",
             "basis_set_exchange.tests.test_io",
             "basis_set_exchange.tests.test_lut",
             "basis_set_exchange.tests.test_metadata",
             "basis_set_exchange.tests.test_references",
+            "basis_set_exchange.tests.test_roles",
             "basis_set_exchange.tests.test_valid",
             "basis_set_exchange.validator"
         ],
-        "version": "0.5.1"
+        "version": "0.5.3"
     },
     "basitapi": {
         "cmdline": [],
@@ -20748,6 +20754,7 @@
             "beancount.ingest.importers.regexp",
             "beancount.ingest.importers.regexp_test",
             "beancount.ingest.regression",
+            "beancount.ingest.regression_pytest",
             "beancount.ingest.regression_test",
             "beancount.ingest.scripts_utils",
             "beancount.ingest.scripts_utils_test",
@@ -20802,16 +20809,22 @@
             "beancount.plugins.auto_test",
             "beancount.plugins.book_conversions",
             "beancount.plugins.book_conversions_test",
+            "beancount.plugins.check_average_cost",
+            "beancount.plugins.check_average_cost_test",
             "beancount.plugins.check_closing",
             "beancount.plugins.check_closing_test",
             "beancount.plugins.check_commodity",
             "beancount.plugins.check_commodity_test",
             "beancount.plugins.coherent_cost",
             "beancount.plugins.coherent_cost_test",
+            "beancount.plugins.commodity_attr",
+            "beancount.plugins.commodity_attr_test",
             "beancount.plugins.divert_expenses",
             "beancount.plugins.divert_expenses_test",
             "beancount.plugins.exclude_tag",
             "beancount.plugins.exclude_tag_test",
+            "beancount.plugins.fill_account",
+            "beancount.plugins.fill_account_test",
             "beancount.plugins.fix_payees",
             "beancount.plugins.fix_payees_test",
             "beancount.plugins.forecast",
@@ -20950,6 +20963,8 @@
             "beancount.utils.file_type_test",
             "beancount.utils.file_utils",
             "beancount.utils.file_utils_test",
+            "beancount.utils.import_utils",
+            "beancount.utils.import_utils_test",
             "beancount.utils.invariants",
             "beancount.utils.invariants_test",
             "beancount.utils.memo",
@@ -20980,7 +20995,7 @@
             "beancount.web.web",
             "beancount.web.web_test"
         ],
-        "version": "2.1.2"
+        "version": "2.1.3"
     },
     "beancount-commerzbank": {
         "cmdline": [],
@@ -21070,7 +21085,7 @@
             "beancount_import.unbook",
             "beancount_import.webserver"
         ],
-        "version": "1.0.2"
+        "version": "1.0.4"
     },
     "beancount-ing-diba": {
         "cmdline": [],
@@ -40544,10 +40559,11 @@
             "biosamples_v4.exceptions",
             "biosamples_v4.filters",
             "biosamples_v4.models",
+            "biosamples_v4.sampletab",
             "biosamples_v4.traverson",
             "biosamples_v4.utilities"
         ],
-        "version": "0.0.1a1"
+        "version": "0.0.2"
     },
     "bioscons": {
         "cmdline": [],
@@ -64237,9 +64253,40 @@
             "borgmatic.tests.unit.config.test_legacy",
             "borgmatic.tests.unit.config.test_validate",
             "borgmatic.tests.unit.test_verbosity",
-            "borgmatic.verbosity"
+            "borgmatic.verbosity",
+            "tests",
+            "tests.end-to-end",
+            "tests.end-to-end.test_borgmatic",
+            "tests.integration",
+            "tests.integration.commands",
+            "tests.integration.commands.test_borgmatic",
+            "tests.integration.commands.test_convert_config",
+            "tests.integration.commands.test_generate_config",
+            "tests.integration.config",
+            "tests.integration.config.test_generate",
+            "tests.integration.config.test_legacy",
+            "tests.integration.config.test_validate",
+            "tests.integration.test_version",
+            "tests.unit",
+            "tests.unit.borg",
+            "tests.unit.borg.test_check",
+            "tests.unit.borg.test_create",
+            "tests.unit.borg.test_extract",
+            "tests.unit.borg.test_hook",
+            "tests.unit.borg.test_info",
+            "tests.unit.borg.test_list",
+            "tests.unit.borg.test_prune",
+            "tests.unit.commands",
+            "tests.unit.commands.test_borgmatic",
+            "tests.unit.config",
+            "tests.unit.config.test_collect",
+            "tests.unit.config.test_convert",
+            "tests.unit.config.test_generate",
+            "tests.unit.config.test_legacy",
+            "tests.unit.config.test_validate",
+            "tests.unit.test_verbosity"
         ],
-        "version": "1.2.6"
+        "version": "1.2.7"
     },
     "borgqueen": {
         "cmdline": [],
@@ -64514,7 +64561,7 @@
             "bos_mint.widgets",
             "bos_mint.wrapper"
         ],
-        "version": "0.2.0"
+        "version": "0.2.1"
     },
     "bos-python-sdk": {
         "cmdline": [],
@@ -65041,7 +65088,7 @@
             "botbond.plugins.hipchat",
             "botbond.plugins.slack"
         ],
-        "version": "0.14"
+        "version": "0.15"
     },
     "botbot": {
         "cmdline": [],
@@ -67428,7 +67475,7 @@
             "boto3.session",
             "boto3.utils"
         ],
-        "version": "1.9.17"
+        "version": "1.9.18"
     },
     "boto3-batch-utils": {
         "cmdline": [],
@@ -67701,7 +67748,7 @@
             "botocore.vendored.six",
             "botocore.waiter"
         ],
-        "version": "1.12.17"
+        "version": "1.12.18"
     },
     "botocore-callback": {
         "cmdline": [],
@@ -70525,7 +70572,7 @@
         "modules": [
             "bounds"
         ],
-        "version": "0.0.3"
+        "version": "0.0.4"
     },
     "bounter": {
         "cmdline": [],
@@ -81049,7 +81096,7 @@
             "bsdf",
             "bsdf_cli"
         ],
-        "version": "2.2.0"
+        "version": "2.2.1"
     },
     "bsdgames": {
         "cmdline": [],
@@ -83836,6 +83883,7 @@
             "buda.entities.payment_schedule_pb2",
             "buda.entities.payment_terms_pb2",
             "buda.entities.payment_type_pb2",
+            "buda.entities.product_pb2",
             "buda.entities.signup_pb2",
             "buda.entities.subscription_cancelled_pb2",
             "buda.entities.subscription_created_pb2",
@@ -83847,7 +83895,7 @@
             "buda.services.events_collector_service_pb2",
             "buda.services.events_collector_service_pb2_grpc"
         ],
-        "version": "0.5.3"
+        "version": "0.6.0"
     },
     "buffer-ops": {
         "cmdline": [],
@@ -87941,7 +87989,7 @@
             "bundesliga_tippspiel.utils.recaptcha",
             "bundesliga_tippspiel.utils.routes"
         ],
-        "version": "0.16.3"
+        "version": "0.16.4"
     },
     "bundle": {
         "cmdline": [],
@@ -88319,7 +88367,7 @@
             "bunq.sdk.security",
             "bunq.sdk.util"
         ],
-        "version": "1.0.0"
+        "version": "1.1.0"
     },
     "bunqclient": {
         "cmdline": [],
