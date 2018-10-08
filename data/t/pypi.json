@@ -106,6 +106,18 @@
         ],
         "version": "0.1"
     },
+    "t-rex": {
+        "cmdline": [],
+        "modules": [
+            "t_rex",
+            "t_rex.completer",
+            "t_rex.executor",
+            "t_rex.keybindings",
+            "t_rex.layout",
+            "t_rex.main"
+        ],
+        "version": "0.0.2"
+    },
     "t-sne-bhcuda": {
         "cmdline": [],
         "modules": [
@@ -12431,9 +12443,10 @@
             "tavern.util.exceptions",
             "tavern.util.general",
             "tavern.util.loader",
-            "tavern.util.python_2_util"
+            "tavern.util.python_2_util",
+            "tavern.util.retry"
         ],
-        "version": "0.18.3"
+        "version": "0.19.0"
     },
     "tavern-extended": {
         "cmdline": [],
@@ -13016,7 +13029,7 @@
             "taxonomy_ranks",
             "taxonomy_ranks.get_taxonomy_rank_with_ete3_with_super_and_sub"
         ],
-        "version": "0.0.4"
+        "version": "0.0.7"
     },
     "taxonomylite": {
         "cmdline": [],
@@ -13393,7 +13406,7 @@
             "tensorboard.util",
             "tensorboard.version"
         ],
-        "version": "1.12.0a20181006"
+        "version": "1.12.0a20181007"
     },
     "tba-api-v3client": {
         "cmdline": [],
@@ -31900,6 +31913,158 @@
         ],
         "version": "0.1.1"
     },
+    "terraform-validator": {
+        "cmdline": [],
+        "modules": [
+            "terraform_model",
+            "terraform_model.model",
+            "terraform_model.model.CfnModel",
+            "terraform_model.model.EC2Instance",
+            "terraform_model.model.EC2NetworkInterface",
+            "terraform_model.model.EC2SecurityGroup",
+            "terraform_model.model.EC2SecurityGroupEgress",
+            "terraform_model.model.EC2SecurityGroupIngress",
+            "terraform_model.model.ElasticLoadBalancingLoadBalancer",
+            "terraform_model.model.ElasticLoadBalancingV2LoadBalancer",
+            "terraform_model.model.IAMGroup",
+            "terraform_model.model.IAMManagedPolicy",
+            "terraform_model.model.IAMPolicy",
+            "terraform_model.model.IAMRole",
+            "terraform_model.model.IAMUser",
+            "terraform_model.model.LambdaPrincipal",
+            "terraform_model.model.ModelElement",
+            "terraform_model.model.Parameter",
+            "terraform_model.model.Policy",
+            "terraform_model.model.PolicyDocument",
+            "terraform_model.model.Principal",
+            "terraform_model.model.References",
+            "terraform_model.model.S3BucketPolicy",
+            "terraform_model.model.SNSTopicPolicy",
+            "terraform_model.model.SQSQueuePolicy",
+            "terraform_model.model.Statement",
+            "terraform_model.parser",
+            "terraform_model.parser.CfnParser",
+            "terraform_model.parser.Ec2InstanceParser",
+            "terraform_model.parser.Ec2NetworkInterfaceParser",
+            "terraform_model.parser.Error",
+            "terraform_model.parser.IamGroupParser",
+            "terraform_model.parser.IamRoleParser",
+            "terraform_model.parser.IamUserParser",
+            "terraform_model.parser.LoadBalancerParser",
+            "terraform_model.parser.LoadBalancerV2Parser",
+            "terraform_model.parser.ParserError",
+            "terraform_model.parser.ParserRegistry",
+            "terraform_model.parser.PolicyDocumentParser",
+            "terraform_model.parser.SecurityGroupParser",
+            "terraform_model.parser.TransformRegistry",
+            "terraform_model.parser.WithPolicyDocumentParser",
+            "terraform_model.schema",
+            "terraform_model.transforms",
+            "terraform_model.transforms.Serverless",
+            "terraform_model.validator",
+            "terraform_model.validator.CloudformationValidator",
+            "terraform_model.validator.ReferenceValidator",
+            "terraform_model.validator.ResourceTypeValidator",
+            "terraform_model.validator.SchemaGenerator",
+            "terraform_validator",
+            "terraform_validator.CustomRuleLoader",
+            "terraform_validator.IpAddr",
+            "terraform_validator.Profile",
+            "terraform_validator.ProfileLoader",
+            "terraform_validator.RuleDefinition",
+            "terraform_validator.RuleDumper",
+            "terraform_validator.RuleRegistry",
+            "terraform_validator.TemplateDiscovery",
+            "terraform_validator.ValidateUtility",
+            "terraform_validator.Violation",
+            "terraform_validator.additional_custom_rules",
+            "terraform_validator.additional_custom_rules.EbsCustomTagsRule",
+            "terraform_validator.additional_custom_rules.Ec2CustomTagsRule",
+            "terraform_validator.additional_custom_rules.RdsCustomTagsRule",
+            "terraform_validator.additional_custom_rules.S3CustomTagsRule",
+            "terraform_validator.command",
+            "terraform_validator.custom_rules",
+            "terraform_validator.custom_rules.BaseRule",
+            "terraform_validator.custom_rules.CloudFormationAuthenticationRule",
+            "terraform_validator.custom_rules.CloudFrontDistributionAccessLoggingRule",
+            "terraform_validator.custom_rules.EbsVolumeHasSseRule",
+            "terraform_validator.custom_rules.ElasticLoadBalancerAccessLoggingRule",
+            "terraform_validator.custom_rules.IamManagedPolicyNotActionRule",
+            "terraform_validator.custom_rules.IamManagedPolicyNotResourceRule",
+            "terraform_validator.custom_rules.IamManagedPolicyWildcardActionRule",
+            "terraform_validator.custom_rules.IamManagedPolicyWildcardResourceRule",
+            "terraform_validator.custom_rules.IamPolicyNotActionRule",
+            "terraform_validator.custom_rules.IamPolicyNotResourceRule",
+            "terraform_validator.custom_rules.IamPolicyWildcardActionRule",
+            "terraform_validator.custom_rules.IamPolicyWildcardResourceRule",
+            "terraform_validator.custom_rules.IamRoleNotActionOnPermissionsPolicyRule",
+            "terraform_validator.custom_rules.IamRoleNotActionOnTrustPolicyRule",
+            "terraform_validator.custom_rules.IamRoleNotPrincipalOnTrustPolicyRule",
+            "terraform_validator.custom_rules.IamRoleNotResourceOnPermissionsPolicyRule",
+            "terraform_validator.custom_rules.IamRoleWildcardActionOnPermissionsPolicyRule",
+            "terraform_validator.custom_rules.IamRoleWildcardActionOnTrustPolicyRule",
+            "terraform_validator.custom_rules.IamRoleWildcardResourceOnPermissionsPolicyRule",
+            "terraform_validator.custom_rules.LambdaPermissionInvokeFunctionActionRule",
+            "terraform_validator.custom_rules.LambdaPermissionWildcardPrincipalRule",
+            "terraform_validator.custom_rules.ManagedPolicyOnUserRule",
+            "terraform_validator.custom_rules.PolicyOnUserRule",
+            "terraform_validator.custom_rules.RDSInstanceMasterUserPasswordRule",
+            "terraform_validator.custom_rules.RDSInstanceMasterUsernameRule",
+            "terraform_validator.custom_rules.RDSInstancePubliclyAccessibleRule",
+            "terraform_validator.custom_rules.S3BucketPolicyNotActionRule",
+            "terraform_validator.custom_rules.S3BucketPolicyNotPrincipalRule",
+            "terraform_validator.custom_rules.S3BucketPolicyWildcardActionRule",
+            "terraform_validator.custom_rules.S3BucketPolicyWildcardPrincipalRule",
+            "terraform_validator.custom_rules.S3BucketPublicReadAclRule",
+            "terraform_validator.custom_rules.S3BucketPublicReadWriteAclRule",
+            "terraform_validator.custom_rules.SecurityGroupEgressOpenToWorldRule",
+            "terraform_validator.custom_rules.SecurityGroupEgressPortRangeRule",
+            "terraform_validator.custom_rules.SecurityGroupIngressCidrNon32Rule",
+            "terraform_validator.custom_rules.SecurityGroupIngressOpenToWorldRule",
+            "terraform_validator.custom_rules.SecurityGroupIngressPortRangeRule",
+            "terraform_validator.custom_rules.SecurityGroupMissingEgressRule",
+            "terraform_validator.custom_rules.SnsTopicPolicyNotActionRule",
+            "terraform_validator.custom_rules.SnsTopicPolicyNotPrincipalRule",
+            "terraform_validator.custom_rules.SnsTopicPolicyWildcardPrincipalRule",
+            "terraform_validator.custom_rules.SqsQueuePolicyNotActionRule",
+            "terraform_validator.custom_rules.SqsQueuePolicyNotPrincipalRule",
+            "terraform_validator.custom_rules.SqsQueuePolicyWildcardActionRule",
+            "terraform_validator.custom_rules.SqsQueuePolicyWildcardPrincipalRule",
+            "terraform_validator.custom_rules.UserHasInlinePolicyRule",
+            "terraform_validator.custom_rules.UserMissingGroupRule",
+            "terraform_validator.custom_rules.WafWebAclDefaultActionRule",
+            "terraform_validator.result_views",
+            "terraform_validator.result_views.JsonResults",
+            "terraform_validator.result_views.RulesView",
+            "terraform_validator.result_views.SimpleStdoutResults",
+            "test",
+            "test.test_cloudfront_distribution",
+            "test.test_command",
+            "test.test_ebs_custom_tags",
+            "test.test_ec2_instance",
+            "test.test_ec2_instance_custom_tags",
+            "test.test_ec2_volume",
+            "test.test_ec2networkinterface_model",
+            "test.test_elasticloadbalancing_loadbalancer",
+            "test.test_iam_user",
+            "test.test_invalid_template",
+            "test.test_ipaddr",
+            "test.test_lambda_permission",
+            "test.test_rds_custom_tags",
+            "test.test_rds_instance",
+            "test.test_references_model",
+            "test.test_rulesview",
+            "test.test_s3_bucket",
+            "test.test_s3_bucket_policy",
+            "test.test_s3_custom_tags",
+            "test.test_security_group",
+            "test.test_securitygroup_egress_model",
+            "test.test_skip_tests_rds_instance",
+            "test.test_sns_policy",
+            "test.test_sqs_policy"
+        ],
+        "version": "0.6.38"
+    },
     "terraformlintingcli": {
         "cmdline": [],
         "modules": [
@@ -33228,6 +33393,19 @@
             "tests.test"
         ],
         "version": "0.3"
+    },
+    "test-junkie": {
+        "cmdline": [],
+        "modules": [
+            "test_junkie",
+            "test_junkie.debugjunkie",
+            "test_junkie.decorators",
+            "test_junkie.statsjunkie",
+            "test_junkie.suitebuilder",
+            "test_junkie.suiterunner",
+            "test_junkie.testlistener"
+        ],
+        "version": "0.0a2"
     },
     "test-kclient": {
         "cmdline": [],
@@ -38067,7 +38245,7 @@
             "tf.timestamp",
             "tf.transcription"
         ],
-        "version": "6.0.1"
+        "version": "6.0.2"
     },
     "text-generator": {
         "cmdline": [],
@@ -39237,6 +39415,14 @@
             "textmining.stemmer"
         ],
         "version": "1.0"
+    },
+    "textmining3": {
+        "cmdline": [],
+        "modules": [
+            "textmining",
+            "textmining.stemmer"
+        ],
+        "version": "0.1"
     },
     "textmodel": {
         "cmdline": [],
@@ -40545,12 +40731,12 @@
     "tf-nightly": {
         "cmdline": [],
         "modules": [],
-        "version": "1.12.0.dev20181006"
+        "version": "1.12.0.dev20181007"
     },
     "tf-nightly-gpu": {
         "cmdline": [],
         "modules": [],
-        "version": "1.12.0.dev20181006"
+        "version": "1.12.0.dev20181007"
     },
     "tf-nightly-xla-gpu": {
         "cmdline": [],
@@ -41065,10 +41251,11 @@
         "modules": [
             "tfe_backup.__Init__",
             "tfe_backup.team_access",
+            "tfe_backup.tfe_session",
             "tfe_backup.workspace",
             "tfe_backup.workspace_variables"
         ],
-        "version": "10.0.2"
+        "version": "10.0.42"
     },
     "tfeature": {
         "cmdline": [],
@@ -42025,7 +42212,7 @@
             "tensorflow_probability.python.vi",
             "tensorflow_probability.python.vi.csiszar_divergence"
         ],
-        "version": "0.5.0.dev20181006"
+        "version": "0.5.0.dev20181007"
     },
     "tfp-nightly-gpu": {
         "cmdline": [],
@@ -42207,7 +42394,7 @@
             "tensorflow_probability.python.vi",
             "tensorflow_probability.python.vi.csiszar_divergence"
         ],
-        "version": "0.5.0.dev20181006"
+        "version": "0.5.0.dev20181007"
     },
     "tfpromote": {
         "cmdline": [],
@@ -50798,6 +50985,19 @@
         ],
         "version": "0.23"
     },
+    "thrift-explorer": {
+        "cmdline": [],
+        "modules": [
+            "thrift_explorer",
+            "thrift_explorer.communication_models",
+            "thrift_explorer.server",
+            "thrift_explorer.thrift_manager",
+            "thrift_explorer.thrift_models",
+            "thrift_explorer.thrift_parser",
+            "thrift_explorer.wsgi"
+        ],
+        "version": "0.6"
+    },
     "thrift-hive-metastore": {
         "cmdline": [],
         "modules": [
@@ -50979,19 +51179,6 @@
             "thriftdomain.multisource"
         ],
         "version": "1.2.0"
-    },
-    "thriftexplorer": {
-        "cmdline": [],
-        "modules": [
-            "thrift_explorer",
-            "thrift_explorer.communication_models",
-            "thrift_explorer.server",
-            "thrift_explorer.thrift_manager",
-            "thrift_explorer.thrift_models",
-            "thrift_explorer.thrift_parser",
-            "thrift_explorer.wsgi"
-        ],
-        "version": "0.4"
     },
     "thriftipy": {
         "cmdline": [],
@@ -59829,11 +60016,6 @@
         ],
         "version": "1.1"
     },
-    "tiny-suffix-array": {
-        "cmdline": [],
-        "modules": [],
-        "version": "0.1.0"
-    },
     "tiny-thingy": {
         "cmdline": [],
         "modules": [
@@ -60961,6 +61143,14 @@
             "tinys3.util"
         ],
         "version": "0.1.12"
+    },
+    "tinysa": {
+        "cmdline": [],
+        "modules": [
+            "tinysa",
+            "tinysa.tinysa"
+        ],
+        "version": "0.1.0"
     },
     "tinyschachtler": {
         "cmdline": [],
@@ -63919,7 +64109,7 @@
         "modules": [
             "tlds"
         ],
-        "version": "2018100600"
+        "version": "2018100700"
     },
     "tldtosms": {
         "cmdline": [],
@@ -70181,8 +70371,10 @@
     },
     "tokenize-rt": {
         "cmdline": [],
-        "modules": [],
-        "version": "2.0.1"
+        "modules": [
+            "tokenize_rt"
+        ],
+        "version": "2.1.0"
     },
     "tokenize-uk": {
         "cmdline": [],
@@ -75449,7 +75641,7 @@
             "torchfun.torchfun",
             "torchfun.transforms"
         ],
-        "version": "0.0.90"
+        "version": "0.0.92"
     },
     "torchfusion": {
         "cmdline": [],
@@ -93064,7 +93256,7 @@
             "treeswift.Node",
             "treeswift.Tree"
         ],
-        "version": "1.0.96"
+        "version": "1.0.97"
     },
     "treetagger-xml": {
         "cmdline": [],
@@ -95400,6 +95592,7 @@
             "trimesh.io.wavefront",
             "trimesh.io.xml_based",
             "trimesh.nsphere",
+            "trimesh.parent",
             "trimesh.path",
             "trimesh.path.arc",
             "trimesh.path.creation",
@@ -95448,7 +95641,7 @@
             "trimesh.visual",
             "trimesh.voxel"
         ],
-        "version": "2.34.16"
+        "version": "2.35.1"
     },
     "trimeter": {
         "cmdline": [],
@@ -104867,7 +105060,7 @@
             "tsplib95.parser",
             "tsplib95.utils"
         ],
-        "version": "0.3.1"
+        "version": "0.3.2"
     },
     "tspsolve": {
         "cmdline": [],
@@ -124941,7 +125134,6 @@
             "tympeg.converter",
             "tympeg.mediaobject",
             "tympeg.queue",
-            "tympeg.sandbox",
             "tympeg.scripts",
             "tympeg.scripts.conversion_counter",
             "tympeg.scripts.conversion_counter_UI",
@@ -124954,7 +125146,7 @@
             "tympeg.tools",
             "tympeg.util"
         ],
-        "version": "0.2.7"
+        "version": "0.2.9"
     },
     "tyo-mq-client": {
         "cmdline": [],
@@ -125893,7 +126085,7 @@
             "typepy.type._realnumber",
             "typepy.type._string"
         ],
-        "version": "0.2.3"
+        "version": "0.2.4"
     },
     "typequery": {
         "cmdline": [],
