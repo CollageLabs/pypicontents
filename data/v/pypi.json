@@ -6001,7 +6001,7 @@
     "vbuild": {
         "cmdline": [],
         "modules": [],
-        "version": "0.6.0"
+        "version": "0.6.1"
     },
     "vbx-tree": {
         "cmdline": [],
@@ -9007,6 +9007,13 @@
     "vel": {
         "cmdline": [],
         "modules": [
+            "secret",
+            "secret.secret_acer_setup",
+            "secret.secret_acer_setup.acer_model_proxy",
+            "secret.secret_acer_setup.acer_train",
+            "secret.secret_acer_setup.buffer",
+            "secret.secret_acer_setup.run_secret_acer_setup",
+            "secret.secret_acer_setup.runner",
             "vel",
             "vel.api",
             "vel.api.base",
@@ -9055,9 +9062,12 @@
             "vel.commands.vis_store_command",
             "vel.exceptions",
             "vel.internals",
-            "vel.internals.project_config",
+            "vel.internals.parser",
             "vel.internals.provider",
             "vel.launcher",
+            "vel.math",
+            "vel.math.functions",
+            "vel.math.processes",
             "vel.metrics",
             "vel.metrics.accuracy",
             "vel.metrics.loss_metric",
@@ -9070,9 +9080,6 @@
             "vel.models.classic.mnist_cnn_01",
             "vel.models.imagenet",
             "vel.models.imagenet.resnet34",
-            "vel.models.rl",
-            "vel.models.rl.double_nature_cnn",
-            "vel.models.rl.nature_cnn",
             "vel.modules",
             "vel.modules.layers",
             "vel.modules.resnet_v1",
@@ -9087,6 +9094,7 @@
             "vel.openai.baselines.bench.monitor",
             "vel.openai.baselines.common",
             "vel.openai.baselines.common.atari_wrappers",
+            "vel.openai.baselines.common.retro_wrappers",
             "vel.openai.baselines.common.running_mean_std",
             "vel.openai.baselines.common.tile_images",
             "vel.openai.baselines.common.vec_env",
@@ -9107,40 +9115,70 @@
             "vel.phase.generic",
             "vel.phase.unfreeze",
             "vel.rl",
+            "vel.rl.algo",
+            "vel.rl.algo.dqn",
+            "vel.rl.algo.policy_gradient",
+            "vel.rl.algo.policy_gradient.a2c",
+            "vel.rl.algo.policy_gradient.acer",
+            "vel.rl.algo.policy_gradient.ddpg",
+            "vel.rl.algo.policy_gradient.ppo",
+            "vel.rl.algo.policy_gradient.trpo",
             "vel.rl.api",
             "vel.rl.api.base",
+            "vel.rl.api.base.algo_base",
             "vel.rl.api.base.env_base",
+            "vel.rl.api.base.env_roller",
             "vel.rl.api.base.reinforcer_base",
+            "vel.rl.buffers",
+            "vel.rl.buffers.deque_backend",
+            "vel.rl.buffers.deque_multi_env_buffer_backend",
+            "vel.rl.buffers.prioritized_backend",
             "vel.rl.commands",
+            "vel.rl.commands.evaluate_env_command",
             "vel.rl.commands.record_movie_command",
             "vel.rl.commands.rl_train_command",
             "vel.rl.env",
-            "vel.rl.env.atari",
-            "vel.rl.env.atari.classic_atari",
+            "vel.rl.env.classic_atari",
+            "vel.rl.env.mujoco",
             "vel.rl.env.wrappers",
             "vel.rl.env.wrappers.clip_episode_length",
+            "vel.rl.env.wrappers.env_normalize",
             "vel.rl.env_roller",
-            "vel.rl.env_roller.step_env_roller",
+            "vel.rl.env_roller.single",
+            "vel.rl.env_roller.single.deque_replay_roller_epsgreedy",
+            "vel.rl.env_roller.single.deque_replay_roller_ou_noise",
+            "vel.rl.env_roller.single.prioritized_replay_roller_epsgreedy",
+            "vel.rl.env_roller.vec",
+            "vel.rl.env_roller.vec.replay_q_env_roller",
+            "vel.rl.env_roller.vec.step_env_roller",
             "vel.rl.metrics",
+            "vel.rl.models",
+            "vel.rl.models.backbone",
+            "vel.rl.models.backbone.double_nature_cnn",
+            "vel.rl.models.backbone.mlp",
+            "vel.rl.models.backbone.nature_cnn",
+            "vel.rl.models.backbone.nature_cnn_small",
+            "vel.rl.models.deterministic_policy_model",
+            "vel.rl.models.policy_gradient_model",
+            "vel.rl.models.policy_gradient_model_separate",
+            "vel.rl.models.q_dueling_model",
+            "vel.rl.models.q_model",
+            "vel.rl.models.q_policy_gradient_model",
             "vel.rl.modules",
             "vel.rl.modules.action_head",
-            "vel.rl.modules.double_q_head",
+            "vel.rl.modules.deterministic_action_head",
+            "vel.rl.modules.deterministic_critic_head",
+            "vel.rl.modules.dueling_q_head",
             "vel.rl.modules.q_head",
+            "vel.rl.modules.test",
+            "vel.rl.modules.test.test_action_head",
             "vel.rl.modules.value_head",
             "vel.rl.reinforcers",
-            "vel.rl.reinforcers.dqn",
-            "vel.rl.reinforcers.dqn.buffers",
-            "vel.rl.reinforcers.dqn.buffers.deque_buffer",
-            "vel.rl.reinforcers.dqn.buffers.prioritized_replay_buffer",
-            "vel.rl.reinforcers.dqn.dqn_dueling_model",
-            "vel.rl.reinforcers.dqn.dqn_model",
-            "vel.rl.reinforcers.dqn.dqn_reinforcer",
-            "vel.rl.reinforcers.policy_gradient",
-            "vel.rl.reinforcers.policy_gradient.a2c",
-            "vel.rl.reinforcers.policy_gradient.policy_gradient_model",
-            "vel.rl.reinforcers.policy_gradient.policy_gradient_reinforcer",
-            "vel.rl.reinforcers.policy_gradient.ppo",
+            "vel.rl.reinforcers.buffered_mixed_policy_iteration_reinforcer",
+            "vel.rl.reinforcers.buffered_single_off_policy_iteration_reinforcer",
+            "vel.rl.reinforcers.on_policy_iteration_reinforcer",
             "vel.rl.vecenv",
+            "vel.rl.vecenv.dummy",
             "vel.rl.vecenv.subproc",
             "vel.scheduler",
             "vel.scheduler.ladder",
@@ -9148,6 +9186,7 @@
             "vel.scheduler.multi_step",
             "vel.scheduler.reduce_lr_on_plateau",
             "vel.schedules",
+            "vel.schedules.constant",
             "vel.schedules.linear",
             "vel.schedules.linear_and_constant",
             "vel.sources",
@@ -9157,6 +9196,7 @@
             "vel.sources.img_dir_source",
             "vel.storage",
             "vel.storage.backend",
+            "vel.storage.backend.dummy",
             "vel.storage.backend.mongodb",
             "vel.storage.classic",
             "vel.storage.strategy",
@@ -9171,11 +9211,12 @@
             "vel.util.math",
             "vel.util.module_util",
             "vel.util.network",
+            "vel.util.random",
             "vel.util.summary",
             "vel.util.tensor_util",
             "vel.util.visdom"
         ],
-        "version": "0.1.1"
+        "version": "0.2.0"
     },
     "velbot": {
         "cmdline": [],
@@ -15255,7 +15296,7 @@
             "vidl.dl",
             "vidl.md"
         ],
-        "version": "3.0.3"
+        "version": "3.0.4"
     },
     "vidmaster": {
         "cmdline": [],
@@ -25109,6 +25150,14 @@
         ],
         "version": "0.1.0"
     },
+    "vmlib": {
+        "cmdline": [],
+        "modules": [
+            "vmlib",
+            "vmlib.vmlib"
+        ],
+        "version": "0.1.0"
+    },
     "vmm-alerts": {
         "cmdline": [],
         "modules": [],
@@ -27142,6 +27191,14 @@
         "modules": [
             "vntree",
             "vntree.node"
+        ],
+        "version": "0.1.0"
+    },
+    "vnu-validator": {
+        "cmdline": [],
+        "modules": [
+            "vnu_validator",
+            "vnu_validator.cli"
         ],
         "version": "0.1.0"
     },
@@ -29952,7 +30009,7 @@
             "vpython.vpython",
             "vpython.with_notebook"
         ],
-        "version": "7.4.6"
+        "version": "7.4.7"
     },
     "vq": {
         "cmdline": [],
