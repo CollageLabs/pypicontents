@@ -11512,6 +11512,7 @@
         ],
         "modules": [
             "katdal",
+            "katdal.applycal",
             "katdal.averager",
             "katdal.categorical",
             "katdal.chunkstore",
@@ -11530,17 +11531,20 @@
             "katdal.ms_extra",
             "katdal.sensordata",
             "katdal.test",
+            "katdal.test.test_applycal",
             "katdal.test.test_categorical",
             "katdal.test.test_chunkstore",
             "katdal.test.test_chunkstore_dict",
             "katdal.test.test_chunkstore_npy",
             "katdal.test.test_chunkstore_rados",
             "katdal.test.test_chunkstore_s3",
+            "katdal.test.test_dataset",
             "katdal.test.test_datasources",
             "katdal.test.test_lazy_indexer",
+            "katdal.test.test_sensordata",
             "katdal.visdatav4"
         ],
-        "version": "0.10.1"
+        "version": "0.11"
     },
     "kate": {
         "cmdline": [],
@@ -13205,10 +13209,12 @@
         "modules": [
             "kcfconvoy",
             "kcfconvoy.Compound",
+            "kcfconvoy.KCFmat",
+            "kcfconvoy.KCFvec",
             "kcfconvoy.Library",
-            "kcfconvoy.converter"
+            "kcfconvoy.util"
         ],
-        "version": "0.0.3"
+        "version": "0.0.4"
     },
     "kck": {
         "cmdline": [],
@@ -13369,7 +13375,7 @@
             "kconMD/kconMD",
             "kconMD/server"
         ],
-        "version": "1.0.13"
+        "version": "1.0.15"
     },
     "kcorrect-python": {
         "cmdline": [],
@@ -13962,7 +13968,7 @@
             "keas.kmi.tests",
             "keas.kmi.wsgi"
         ],
-        "version": "3.2.0"
+        "version": "3.2.1"
     },
     "keas-pbpersist": {
         "cmdline": [],
@@ -16732,7 +16738,7 @@
             "keras.wrappers",
             "keras.wrappers.scikit_learn"
         ],
-        "version": "2.2.4"
+        "version": "2.2.4.1"
     },
     "keras-mxnet-skm": {
         "cmdline": [],
@@ -17169,7 +17175,7 @@
             "keras_trainer.run",
             "keras_trainer.trainer"
         ],
-        "version": "0.0.30"
+        "version": "0.0.31"
     },
     "keras-utilities": {
         "cmdline": [],
@@ -17893,7 +17899,7 @@
             "kervi/zmq_spine.named_lists",
             "kervi/zmq_spine.zmqbus"
         ],
-        "version": "0.15.102"
+        "version": "0.15.106"
     },
     "kervi-cli": {
         "cmdline": [],
@@ -17927,7 +17933,7 @@
             "kervi_cli/templates.system_controller_tmpl",
             "kervi_cli/templates.system_sensors_tmpl"
         ],
-        "version": "0.15.102"
+        "version": "0.15.106"
     },
     "kervi-component-library": {
         "cmdline": [],
@@ -17943,7 +17949,7 @@
             "kervi/config",
             "kervi/config.configuration",
             "kervi/controllers",
-            "kervi/controllers.controller",
+            "kervi/controllers.controllerx",
             "kervi/controllers.steering",
             "kervi/controllers.tasks",
             "kervi/core/authentication",
@@ -17973,7 +17979,7 @@
             "kervi/values.kervi_value",
             "kervi/values.value_list"
         ],
-        "version": "0.15.102"
+        "version": "0.15.106"
     },
     "kervi-device-library": {
         "cmdline": [],
@@ -17996,13 +18002,6 @@
             "kervi/devices/motors.adafruit_i2c_motor_hat",
             "kervi/devices/motors.dummy_motor_driver",
             "kervi/devices/motors.grove_i2c_motor_driver",
-            "kervi/devices/platforms",
-            "kervi/devices/platforms/common",
-            "kervi/devices/platforms/common/sensors",
-            "kervi/devices/platforms/common/sensors.cpu_temp",
-            "kervi/devices/platforms/common/sensors.cpu_use",
-            "kervi/devices/platforms/common/sensors.disk_use",
-            "kervi/devices/platforms/common/sensors.memory_use",
             "kervi/devices/pwm",
             "kervi/devices/pwm.PCA9685",
             "kervi/devices/sensors",
@@ -18013,9 +18012,10 @@
             "kervi/devices/sensors.TCS34725",
             "kervi/devices/sensors.TSL2561",
             "kervi/devices/sensors.VL6180X",
-            "kervi/devices/sensors.dummy_sensor"
+            "kervi/devices/sensors.dummy_sensor",
+            "kervi/devices/sensors.system"
         ],
-        "version": "0.15.102"
+        "version": "0.15.106"
     },
     "kervi-hal-generic": {
         "cmdline": [],
@@ -18026,7 +18026,7 @@
             "kervi/platforms/generic.i2c",
             "kervi/platforms/generic.version"
         ],
-        "version": "0.15.102"
+        "version": "0.15.106"
     },
     "kervi-hal-rpi": {
         "cmdline": [],
@@ -18041,7 +18041,7 @@
             "kervi.platforms.raspberry.service",
             "kervi.platforms.raspberry.version"
         ],
-        "version": "0.15.102"
+        "version": "0.15.106"
     },
     "kervi-hal-win": {
         "cmdline": [],
@@ -18053,7 +18053,7 @@
             "kervi/platforms/windows.service",
             "kervi/platforms/windows.version"
         ],
-        "version": "0.15.102"
+        "version": "0.15.106"
     },
     "kervi-ui": {
         "cmdline": [],
@@ -18062,7 +18062,7 @@
             "kervi.ui.version",
             "kervi.ui.webserver"
         ],
-        "version": "0.15.102"
+        "version": "0.15.106"
     },
     "keryx": {
         "cmdline": [],
@@ -22615,6 +22615,14 @@
         "modules": [],
         "version": "1.1.0"
     },
+    "kim2014convolutional": {
+        "cmdline": [],
+        "modules": [
+            "kim2014convolutional",
+            "kim2014convolutional.model"
+        ],
+        "version": "0.1.0"
+    },
     "kimai-cli": {
         "cmdline": [],
         "modules": [
@@ -23737,7 +23745,7 @@
             "kinto_changes.utils",
             "kinto_changes.views"
         ],
-        "version": "1.2.1"
+        "version": "1.3.0"
     },
     "kinto-client": {
         "cmdline": [],
@@ -23871,7 +23879,7 @@
             "kinto_http.tests.test_utils",
             "kinto_http.utils"
         ],
-        "version": "9.1.2"
+        "version": "10.0.0"
     },
     "kinto-jwt": {
         "cmdline": [],
@@ -26785,7 +26793,7 @@
             "kiwi.xml_parse",
             "kiwi.xml_state"
         ],
-        "version": "9.16.22"
+        "version": "9.16.23"
     },
     "kiwi-cache": {
         "cmdline": [],
@@ -27149,7 +27157,7 @@
             "kiwipy.utils",
             "kiwipy.version"
         ],
-        "version": "0.3.7"
+        "version": "0.3.8"
     },
     "kiwis-pie": {
         "cmdline": [],
@@ -29879,8 +29887,11 @@
     },
     "knobs": {
         "cmdline": [],
-        "modules": [],
-        "version": "2.0.0"
+        "modules": [
+            "environment",
+            "knobs"
+        ],
+        "version": "2.0.1"
     },
     "knock": {
         "cmdline": [],
@@ -31104,7 +31115,7 @@
             "kobold.tests.test_hash_functions",
             "kobold.tests.test_swap"
         ],
-        "version": "11.7.0"
+        "version": "11.8.0"
     },
     "koboldfs": {
         "cmdline": [],
@@ -41116,6 +41127,18 @@
         ],
         "version": "0.0.6"
     },
+    "kubeasy": {
+        "cmdline": [],
+        "modules": [
+            "config",
+            "config._cmds",
+            "config._config",
+            "core",
+            "core.configurator",
+            "kubeasy"
+        ],
+        "version": "0.3"
+    },
     "kubecd": {
         "cmdline": [],
         "modules": [
@@ -44576,7 +44599,7 @@
             "kutana.plugin",
             "kutana.structures"
         ],
-        "version": "0.5.0"
+        "version": "1.0.0"
     },
     "kutils": {
         "cmdline": [],
@@ -44799,7 +44822,7 @@
             "kvfile.kvfile",
             "kvfile.serializer"
         ],
-        "version": "0.0.3"
+        "version": "0.0.4"
     },
     "kvhosting": {
         "cmdline": [],
