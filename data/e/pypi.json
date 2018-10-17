@@ -646,8 +646,11 @@
     },
     "ea-psu-controller": {
         "cmdline": [],
-        "modules": [],
-        "version": "1.0.0"
+        "modules": [
+            "ea_psu_controller",
+            "ea_psu_controller.psu_ea"
+        ],
+        "version": "1.1.0"
     },
     "eaas-tools": {
         "cmdline": [
@@ -7564,7 +7567,7 @@
             "ebscopy.tests.long_search_test",
             "ebscopy.tests.mit_session_failure"
         ],
-        "version": "0.1.18"
+        "version": "0.1.19"
     },
     "ebsear": {
         "cmdline": [],
@@ -8455,7 +8458,7 @@
             "ec2tools.logd",
             "ec2tools.statics"
         ],
-        "version": "0.6.11"
+        "version": "0.6.12"
     },
     "ec2uploadimg": {
         "cmdline": [
@@ -8533,6 +8536,20 @@
             "ec3.version"
         ],
         "version": "0.9.2"
+    },
+    "ec3-cli": {
+        "cmdline": [
+            "ec3"
+        ],
+        "modules": [
+            "IM2",
+            "IM2.auth",
+            "IM2.radl",
+            "IM2.radl.radl",
+            "IM2.radl.radl_json",
+            "IM2.radl.radl_parse"
+        ],
+        "version": "2.0.0"
     },
     "ec3k": {
         "cmdline": [
@@ -12595,9 +12612,6 @@
         "modules": [
             "edc_action_item",
             "edc_action_item.action",
-            "edc_action_item.action.action",
-            "edc_action_item.action.action_item_getter",
-            "edc_action_item.action.utils",
             "edc_action_item.admin",
             "edc_action_item.admin.action_item_admin",
             "edc_action_item.admin.action_item_update_admin",
@@ -12609,6 +12623,8 @@
             "edc_action_item.constants",
             "edc_action_item.create_action_item",
             "edc_action_item.create_or_update_action_type",
+            "edc_action_item.data_fixers",
+            "edc_action_item.delete_action_item",
             "edc_action_item.fieldsets",
             "edc_action_item.forms",
             "edc_action_item.forms.action_item_form",
@@ -12628,14 +12644,9 @@
             "edc_action_item.migrations.0007_auto_20180707_1715",
             "edc_action_item.migrations.0008_auto_20180809_0303",
             "edc_action_item.migrations.0009_auto_20180927_0306",
-            "edc_action_item.migrations.0010_auto_20181001_2103",
-            "edc_action_item.migrations.0011_auto_20181001_2111",
-            "edc_action_item.migrations.0012_auto_20181001_2256",
-            "edc_action_item.migrations.0013_auto_20181002_0411",
-            "edc_action_item.migrations.0014_auto_20181003_0614",
-            "edc_action_item.migrations.0015_auto_20181004_0409",
-            "edc_action_item.migrations.0016_auto_20181004_0608",
-            "edc_action_item.migrations.0017_auto_20181004_0620",
+            "edc_action_item.migrations.0010_auto_20181009_0445",
+            "edc_action_item.migrations.0011_auto_20181009_2236",
+            "edc_action_item.migrations.0012_auto_20181010_2348",
             "edc_action_item.model_wrappers",
             "edc_action_item.model_wrappers.action_item_model_wrapper",
             "edc_action_item.models",
@@ -12658,7 +12669,7 @@
             "edc_action_item.tests.mommy_recipes",
             "edc_action_item.tests.test_action",
             "edc_action_item.tests.test_action_item",
-            "edc_action_item.tests.test_action_item_getter",
+            "edc_action_item.tests.test_data_fixers",
             "edc_action_item.tests.test_delete_action",
             "edc_action_item.tests.test_helpers",
             "edc_action_item.tests.test_natural_keys",
@@ -12670,7 +12681,7 @@
             "edc_action_item.view_mixins.action_item_view_mixin",
             "edc_action_item.wsgi"
         ],
-        "version": "0.1.15"
+        "version": "0.1.16"
     },
     "edc-appointment": {
         "cmdline": [],
@@ -13500,11 +13511,11 @@
             "edc_locator.migrations.0008_auto_20180409_1009",
             "edc_locator.migrations.0009_auto_20180708_1954",
             "edc_locator.migrations.0010_auto_20180809_0301",
-            "edc_locator.migrations.0011_auto_20181001_2103",
-            "edc_locator.migrations.0012_auto_20181002_0047",
-            "edc_locator.migrations.0013_auto_20181002_2113",
-            "edc_locator.migrations.0014_auto_20181002_0411",
-            "edc_locator.migrations.0015_auto_20181004_0409",
+            "edc_locator.migrations.0011_auto_20181007_0053",
+            "edc_locator.migrations.0012_auto_20181010_2121",
+            "edc_locator.migrations.0013_auto_20181007_0054",
+            "edc_locator.migrations.0014_auto_20181009_0545",
+            "edc_locator.migrations.0015_auto_20181010_2125",
             "edc_locator.model_mixins",
             "edc_locator.model_mixins.locator_methods_model_mixin",
             "edc_locator.model_mixins.locator_model_mixin",
@@ -13523,7 +13534,7 @@
             "edc_locator.view_mixins",
             "edc_locator.wsgi"
         ],
-        "version": "0.2.12"
+        "version": "0.2.13"
     },
     "edc-metadata": {
         "cmdline": [],
@@ -13895,7 +13906,7 @@
             "edc_permissions.urls",
             "edc_permissions.wsgi"
         ],
-        "version": "0.1.8"
+        "version": "0.1.9"
     },
     "edc-pharmacy": {
         "cmdline": [],
@@ -14100,6 +14111,7 @@
             "edc_registration.migrations.0012_auto_20180116_1528",
             "edc_registration.migrations.0013_auto_20180813_1614",
             "edc_registration.migrations.0014_auto_20180814_2017",
+            "edc_registration.migrations.0015_auto_20181006_2257",
             "edc_registration.model_mixins",
             "edc_registration.model_mixins.updates_or_creates_registered_subject_model_mixin",
             "edc_registration.models",
@@ -14112,7 +14124,7 @@
             "edc_registration.urls",
             "edc_registration.wsgi"
         ],
-        "version": "0.2.16"
+        "version": "0.2.17"
     },
     "edc-reportable": {
         "cmdline": [],
@@ -14412,7 +14424,7 @@
             "edc_visit_tracking.visit_sequence",
             "edc_visit_tracking.wsgi"
         ],
-        "version": "0.2.14"
+        "version": "0.2.15"
     },
     "edd": {
         "cmdline": [],
@@ -18042,7 +18054,7 @@
             "completion.utilities",
             "completion.waffle"
         ],
-        "version": "0.1.14"
+        "version": "1.0.0"
     },
     "edx-django-oauth2-provider": {
         "cmdline": [],
@@ -18443,7 +18455,7 @@
             "integrated_channels.xapi.statements.learner_course_enrollment",
             "integrated_channels.xapi.utils"
         ],
-        "version": "0.74.0"
+        "version": "1.0.0"
     },
     "edx-enterprise-data": {
         "cmdline": [],
@@ -18672,7 +18684,7 @@
             "organizations.v0.views",
             "organizations.validators"
         ],
-        "version": "0.5.1"
+        "version": "1.0.0"
     },
     "edx-proctoring": {
         "cmdline": [],
@@ -21926,7 +21938,7 @@
             "ege_django_theme/templatetags",
             "ege_django_theme/templatetags.common_utils"
         ],
-        "version": "0.3.3"
+        "version": "0.3.6"
     },
     "egegrouper": {
         "cmdline": [],
@@ -31522,7 +31534,7 @@
             "tests.test_info",
             "tests.test_rcio"
         ],
-        "version": "1.0.7"
+        "version": "1.0.8"
     },
     "emloop": {
         "cmdline": [],
@@ -32259,12 +32271,12 @@
         "cmdline": [],
         "modules": [
             "emp_boot",
-            "emp_dev",
+            "emp_ide",
             "emp_utils",
             "emp_webrepl",
             "emp_wifi"
         ],
-        "version": "0.1.13"
+        "version": "0.1.16"
     },
     "emp-mos-api": {
         "cmdline": [],
@@ -37286,7 +37298,7 @@
             "energycap.sdk.models.workflow_workflow_settings_response_dto",
             "energycap.sdk.version"
         ],
-        "version": "7.2.0.90.post1539619789"
+        "version": "7.2.0.90.post1539707504"
     },
     "energydram": {
         "cmdline": [],
@@ -38732,7 +38744,7 @@
             "enos.utils.extra",
             "enos.utils.network_constraints"
         ],
-        "version": "4.2.0"
+        "version": "4.2.1"
     },
     "enos-kubernetes": {
         "cmdline": [],
@@ -38783,7 +38795,7 @@
             "enoslib.tests.unit.test_utils",
             "enoslib.utils"
         ],
-        "version": "1.12.0"
+        "version": "1.12.1"
     },
     "enot": {
         "cmdline": [],
@@ -42830,11 +42842,11 @@
     "eoriver": {
         "cmdline": [],
         "modules": [
-            "eo_river",
-            "eo_river.algorithms",
-            "eo_river.cli"
+            "eoriver",
+            "eoriver.algorithms",
+            "eoriver.cli"
         ],
-        "version": "0.1.4"
+        "version": "0.1.6"
     },
     "eos": {
         "cmdline": [],
@@ -43979,7 +43991,7 @@
             "epd.tcm.tcm312",
             "epd.tcm.tcm74"
         ],
-        "version": "2.2.8"
+        "version": "2.2.9"
     },
     "epd2in13": {
         "cmdline": [],
@@ -48206,6 +48218,11 @@
             "eroepub.utils"
         ],
         "version": "0.3"
+    },
+    "eros": {
+        "cmdline": [],
+        "modules": [],
+        "version": "0.0.0"
     },
     "erosanji-nester": {
         "cmdline": [],
@@ -53224,7 +53241,7 @@
             "eth_abi.utils.padding",
             "eth_abi.utils.parsing"
         ],
-        "version": "1.2.0"
+        "version": "1.2.1"
     },
     "eth-account": {
         "cmdline": [],
@@ -57483,16 +57500,20 @@
         "cmdline": [],
         "modules": [
             "evalutils",
-            "evalutils.__version__",
             "evalutils.annotations",
             "evalutils.cli",
             "evalutils.evalutils",
             "evalutils.exceptions",
             "evalutils.io",
+            "evalutils.roc",
             "evalutils.scorers",
-            "evalutils.validators"
+            "evalutils.stats",
+            "evalutils.validators",
+            "hooks",
+            "hooks.post_gen_project",
+            "hooks.pre_gen_project"
         ],
-        "version": "0.1.13"
+        "version": "0.1.14"
     },
     "evalys": {
         "cmdline": [],
@@ -63814,6 +63835,14 @@
         ],
         "version": "6.0.0"
     },
+    "exasoldatabaseconnector": {
+        "cmdline": [],
+        "modules": [
+            "ExasolDatabaseConnector",
+            "ExasolDatabaseConnector.ExaWebSockets"
+        ],
+        "version": "0.0.3"
+    },
     "exassist": {
         "cmdline": [],
         "modules": [
@@ -67911,7 +67940,7 @@
     "export-elements": {
         "cmdline": [],
         "modules": [],
-        "version": "0.19.2"
+        "version": "0.22.0"
     },
     "export-file": {
         "cmdline": [],
