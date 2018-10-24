@@ -672,6 +672,11 @@
         ],
         "version": "0.1"
     },
+    "eac-logchecker": {
+        "cmdline": [],
+        "modules": [],
+        "version": "0.6.1"
+    },
     "eac-toolbelt": {
         "cmdline": [],
         "modules": [],
@@ -2639,10 +2644,11 @@
             "easy_sklearn",
             "easy_sklearn.easy_base",
             "easy_sklearn.easy_c",
+            "easy_sklearn.easy_k",
             "easy_sklearn.easy_r",
             "easy_sklearn.utils"
         ],
-        "version": "0.1.4"
+        "version": "0.1.5"
     },
     "easy-sqlalchemy": {
         "cmdline": [],
@@ -3698,7 +3704,7 @@
             "easyeasy",
             "easyeasy.client"
         ],
-        "version": "1.0.1"
+        "version": "1.0.2"
     },
     "easyeeg": {
         "cmdline": [],
@@ -3813,7 +3819,7 @@
             "easyesn.optimizers.GridSearchOptimizer",
             "easyesn.optimizers.Pipeline"
         ],
-        "version": "0.1.5.0"
+        "version": "0.1.5.5"
     },
     "easyeuler": {
         "cmdline": [],
@@ -5906,7 +5912,7 @@
             "tests",
             "tests.test_base"
         ],
-        "version": "0.3.9"
+        "version": "0.3.10"
     },
     "easyxml": {
         "cmdline": [],
@@ -12273,6 +12279,7 @@
             "edc_auth.migrations.0003_auto_20180803_0532",
             "edc_auth.migrations.0004_auto_20180804_2041",
             "edc_auth.migrations.0005_userprofile_job_title",
+            "edc_auth.migrations.0006_userprofile_notifications",
             "edc_auth.models",
             "edc_auth.passwd",
             "edc_auth.passwd.mkpassword",
@@ -12288,7 +12295,7 @@
             "edc_auth.views.logout_view",
             "edc_auth.wsgi"
         ],
-        "version": "0.1.10"
+        "version": "0.1.12"
     },
     "edc-base": {
         "cmdline": [],
@@ -12365,7 +12372,7 @@
             "edc_base.views.home_view",
             "edc_base.wsgi"
         ],
-        "version": "0.2.33"
+        "version": "0.2.34"
     },
     "edc-consent": {
         "cmdline": [],
@@ -12570,7 +12577,7 @@
             "edc_export.views.home_view",
             "edc_export.wsgi"
         ],
-        "version": "0.2.8"
+        "version": "0.2.9"
     },
     "edc-fabric": {
         "cmdline": [],
@@ -12743,7 +12750,7 @@
             "edc_identifier.views",
             "edc_identifier.wsgi"
         ],
-        "version": "0.2.16"
+        "version": "0.2.17"
     },
     "edc-lab": {
         "cmdline": [],
@@ -12882,7 +12889,7 @@
             "edc_lab.urls",
             "edc_lab.wsgi"
         ],
-        "version": "0.2.27"
+        "version": "0.2.28"
     },
     "edc-lab-dashboard": {
         "cmdline": [],
@@ -13127,7 +13134,7 @@
             "edc_metadata.views.home_view",
             "edc_metadata.wsgi"
         ],
-        "version": "0.2.19"
+        "version": "0.2.20"
     },
     "edc-metadata-rules": {
         "cmdline": [],
@@ -13286,6 +13293,41 @@
         ],
         "version": "0.1.8"
     },
+    "edc-notification": {
+        "cmdline": [],
+        "modules": [
+            "edc_notification",
+            "edc_notification.admin",
+            "edc_notification.admin_site",
+            "edc_notification.apps",
+            "edc_notification.constants",
+            "edc_notification.decorators",
+            "edc_notification.mail",
+            "edc_notification.mail.email_message",
+            "edc_notification.mail.mailing_list_manager",
+            "edc_notification.migrations",
+            "edc_notification.migrations.0001_initial",
+            "edc_notification.migrations.0002_update_notifications",
+            "edc_notification.model_mixins",
+            "edc_notification.model_mixins.notification_user_profile_model_mixin",
+            "edc_notification.models",
+            "edc_notification.notification",
+            "edc_notification.notification.graded_event_notification",
+            "edc_notification.notification.model_notification",
+            "edc_notification.notification.new_model_notification",
+            "edc_notification.notification.notification",
+            "edc_notification.notification.updated_model_notification",
+            "edc_notification.settings",
+            "edc_notification.signals",
+            "edc_notification.site_notifications",
+            "edc_notification.tests",
+            "edc_notification.tests.models",
+            "edc_notification.tests.test_notification",
+            "edc_notification.urls",
+            "edc_notification.wsgi"
+        ],
+        "version": "0.1.3"
+    },
     "edc-offstudy": {
         "cmdline": [],
         "modules": [
@@ -13417,7 +13459,7 @@
             "edc_permissions.urls",
             "edc_permissions.wsgi"
         ],
-        "version": "0.1.11"
+        "version": "0.1.12"
     },
     "edc-pharmacy": {
         "cmdline": [],
@@ -13755,9 +13797,10 @@
             "edc_subject_dashboard.views",
             "edc_subject_dashboard.views.requisition_print_actions_view",
             "edc_subject_dashboard.views.requisition_verify_actions_view",
+            "edc_subject_dashboard.views.subject_review_listboard",
             "edc_subject_dashboard.wsgi"
         ],
-        "version": "0.1.16"
+        "version": "0.1.17"
     },
     "edc-sync": {
         "cmdline": [],
@@ -17572,7 +17615,7 @@
             "completion.utilities",
             "completion.waffle"
         ],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     "edx-django-oauth2-provider": {
         "cmdline": [],
@@ -17979,20 +18022,53 @@
         "cmdline": [],
         "modules": [
             "enterprise_data",
+            "enterprise_data.api",
+            "enterprise_data.api.urls",
+            "enterprise_data.api.v0",
+            "enterprise_data.api.v0.serializers",
+            "enterprise_data.api.v0.urls",
+            "enterprise_data.api.v0.views",
             "enterprise_data.apps",
             "enterprise_data.clients",
             "enterprise_data.filters",
+            "enterprise_data.management",
+            "enterprise_data.management.commands",
+            "enterprise_data.migrations",
+            "enterprise_data.migrations.0001_initial",
+            "enterprise_data.migrations.0002_auto_20180430_1358",
+            "enterprise_data.migrations.0003_auto_20180501_0603",
+            "enterprise_data.migrations.0004_auto_20180501_0928",
+            "enterprise_data.migrations.0004_auto_20180508_1652",
+            "enterprise_data.migrations.0005_auto_20180524_2204",
+            "enterprise_data.migrations.0006_auto_20180612_0336",
+            "enterprise_data.migrations.0007_auto_20180612_0534",
+            "enterprise_data.migrations.0008_auto_20180614_0108",
+            "enterprise_data.migrations.0009_auto_20180628_1152",
+            "enterprise_data.migrations.0010_enterpriseenrollment_created",
+            "enterprise_data.migrations.0011_enterpriseuser",
+            "enterprise_data.migrations.0012_auto_20180831_1930",
+            "enterprise_data.migrations.0013_auto_20180831_1931",
+            "enterprise_data.migrations.0014_enterpriseuser_created",
+            "enterprise_data.migrations.0015_auto_20180907_1757",
+            "enterprise_data.migrations.0016_auto_20180924_2138",
             "enterprise_data.models",
             "enterprise_data.permissions",
+            "enterprise_data.settings",
+            "enterprise_data.settings.test",
             "enterprise_data.urls",
             "enterprise_reporting",
+            "enterprise_reporting.clients",
+            "enterprise_reporting.clients.enterprise",
+            "enterprise_reporting.clients.vertica",
             "enterprise_reporting.delivery_method",
             "enterprise_reporting.export_edxapp_data",
             "enterprise_reporting.reporter",
             "enterprise_reporting.send_enterprise_reports",
+            "enterprise_reporting.tests",
+            "enterprise_reporting.tests.test_utils",
             "enterprise_reporting.utils"
         ],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     "edx-grades-api": {
         "cmdline": [],
@@ -18196,12 +18272,11 @@
         "cmdline": [],
         "modules": [
             "edx_rest_api_client",
-            "edx_rest_api_client.__version__",
             "edx_rest_api_client.auth",
             "edx_rest_api_client.client",
             "edx_rest_api_client.exceptions"
         ],
-        "version": "1.8.2"
+        "version": "1.9"
     },
     "edx-search": {
         "cmdline": [],
@@ -20769,7 +20844,7 @@
             "efile",
             "efile.efile"
         ],
-        "version": "0.0.3"
+        "version": "1.0.1"
     },
     "efilter": {
         "cmdline": [],
@@ -28610,7 +28685,7 @@
             "tests",
             "tests.test_notebooks"
         ],
-        "version": "0.0.30"
+        "version": "0.0.31"
     },
     "em-keyboard": {
         "cmdline": [],
@@ -29563,7 +29638,7 @@
             "emannotationschemas.synapse",
             "emannotationschemas.utils"
         ],
-        "version": "0.3.3"
+        "version": "0.3.5"
     },
     "emantools": {
         "cmdline": [],
@@ -31951,12 +32026,13 @@
             "tests",
             "tests.test_aspera_upload",
             "tests.test_create_new_deposition",
+            "tests.test_globus_upload",
             "tests.test_redeposit",
-            "tests.test_requests",
             "tests.test_submit_deposition",
-            "tests.test_thumbnail_upload"
+            "tests.test_thumbnail_upload",
+            "tests.testutils"
         ],
-        "version": "1.6b5"
+        "version": "1.6b7"
     },
     "empide-1zlab": {
         "cmdline": [],
@@ -42049,7 +42125,7 @@
     "eo-learn": {
         "cmdline": [],
         "modules": [],
-        "version": "0.3.2"
+        "version": "0.3.3"
     },
     "eo-learn-core": {
         "cmdline": [],
@@ -42092,7 +42168,7 @@
             "eolearn.features.local_binary_pattern",
             "eolearn.features.temporal_features"
         ],
-        "version": "0.3.2"
+        "version": "0.3.3"
     },
     "eo-learn-geometry": {
         "cmdline": [],
@@ -42102,7 +42178,7 @@
             "eolearn.geometry.sampling",
             "eolearn.geometry.utilities"
         ],
-        "version": "0.3.2"
+        "version": "0.3.3"
     },
     "eo-learn-io": {
         "cmdline": [],
@@ -42113,7 +42189,7 @@
             "eolearn.io.local_io",
             "eolearn.io.sentinelhub_service"
         ],
-        "version": "0.3.2"
+        "version": "0.3.3"
     },
     "eo-learn-mask": {
         "cmdline": [],
@@ -43368,7 +43444,7 @@
             "test.test_imports",
             "test.test_main"
         ],
-        "version": "2018.10.22.1"
+        "version": "2018.10.23.8"
     },
     "epages-client": {
         "cmdline": [],
@@ -43419,9 +43495,10 @@
             "tests.test_dataobject_product_create",
             "tests.test_dataobject_product_line_item_create",
             "tests.test_dataobject_product_line_item_update",
-            "tests.test_dataobject_product_update"
+            "tests.test_dataobject_product_update",
+            "tests.test_dataobject_tag_create"
         ],
-        "version": "0.1.5"
+        "version": "0.1.9"
     },
     "epages-provisioning": {
         "cmdline": [],
@@ -47058,6 +47135,30 @@
         ],
         "version": "0.1.8"
     },
+    "erc20token-python": {
+        "cmdline": [],
+        "modules": [
+            "erc20token",
+            "erc20token.exceptions",
+            "erc20token.provider",
+            "erc20token.sdk",
+            "erc20token.utils",
+            "erc20token.version"
+        ],
+        "version": "0.1.10"
+    },
+    "erc20tokensdk": {
+        "cmdline": [],
+        "modules": [
+            "erc20tokensdk",
+            "erc20tokensdk.exceptions",
+            "erc20tokensdk.provider",
+            "erc20tokensdk.sdk",
+            "erc20tokensdk.utils",
+            "erc20tokensdk.version"
+        ],
+        "version": "0.1.12"
+    },
     "ercs": {
         "cmdline": [],
         "modules": [
@@ -49508,7 +49609,7 @@
             "esdt.sdt",
             "esdt.utils"
         ],
-        "version": "31.2"
+        "version": "37.5"
     },
     "ese": {
         "cmdline": [],
@@ -51542,7 +51643,7 @@
             "test.conftest",
             "test.test_imports"
         ],
-        "version": "2018.10.21.1"
+        "version": "2018.10.23.2"
     },
     "essun-test": {
         "cmdline": [],
@@ -53950,7 +54051,7 @@
     "ethics": {
         "cmdline": [],
         "modules": [],
-        "version": "0.9.4.7"
+        "version": "0.9.4.8"
     },
     "ethiopian-date": {
         "cmdline": [],
@@ -54587,7 +54688,7 @@
             "etk.unit_tests.test_tokenizer",
             "etk.utilities"
         ],
-        "version": "2.1.1"
+        "version": "2.1.2"
     },
     "etk-docking": {
         "cmdline": [],
@@ -63097,6 +63198,13 @@
         "modules": [],
         "version": "2.0.0"
     },
+    "example-jackie": {
+        "cmdline": [],
+        "modules": [
+            "example_pkg"
+        ],
+        "version": "0.0.1"
+    },
     "example-jpromero-2017": {
         "cmdline": [],
         "modules": [
@@ -63179,6 +63287,13 @@
         ],
         "version": "0.0.1"
     },
+    "example-pkg-jackie": {
+        "cmdline": [],
+        "modules": [
+            "example_pkg_maxalan"
+        ],
+        "version": "0.0.5"
+    },
     "example-pkg-kris": {
         "cmdline": [],
         "modules": [
@@ -63199,7 +63314,7 @@
         "modules": [
             "example_pkg_maxalan"
         ],
-        "version": "0.0.2"
+        "version": "0.0.5"
     },
     "example-pkg-muzx": {
         "cmdline": [],
@@ -63219,6 +63334,13 @@
         "cmdline": [],
         "modules": [],
         "version": ""
+    },
+    "example-pkg-ray": {
+        "cmdline": [],
+        "modules": [
+            "example_pkg_maxalan"
+        ],
+        "version": "0.0.5"
     },
     "example-pkg-riturajjtest": {
         "cmdline": [],
@@ -64425,8 +64547,20 @@
     },
     "exec-helpers": {
         "cmdline": [],
-        "modules": [],
-        "version": "2.1.1"
+        "modules": [
+            "exec_helpers",
+            "exec_helpers._log_templates",
+            "exec_helpers._ssh_client_base",
+            "exec_helpers.api",
+            "exec_helpers.constants",
+            "exec_helpers.exceptions",
+            "exec_helpers.exec_result",
+            "exec_helpers.proc_enums",
+            "exec_helpers.ssh_auth",
+            "exec_helpers.ssh_client",
+            "exec_helpers.subprocess_runner"
+        ],
+        "version": "2.1.3"
     },
     "exec-proxy": {
         "cmdline": [],
