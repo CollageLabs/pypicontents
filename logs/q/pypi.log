@@ -58,7 +58,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (qatestlink) This package is up to date.
 [INFO] (qautils) This package is up to date.
 [INFO] (qav) This package is up to date.
-[INFO] (qaviton) This package is up to date.
+[INFO] (qaviton) Data has been updated for this package.
 [INFO] (qball) This package is up to date.
 [ERROR] (qbar) This package does not have downloadable releases.
 [INFO] (qbase) This package is up to date.
@@ -105,7 +105,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (qcmaskingcode) This package is up to date.
 [INFO] (qcobj) This package is up to date.
 [INFO] (qcodes) This package is up to date.
-[INFO] (qcomputing) Data has been updated for this package.
+[INFO] (qcomputing) This package is up to date.
 [INFO] (qcon) This package is up to date.
 [INFO] (qconcurrency) This package is up to date.
 [INFO] (qcore) This package is up to date.
@@ -117,23 +117,38 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (qcri) This package is up to date.
 [INFO] (qcsv) This package is up to date.
 [ERROR] (qct) Could not extract data from this package. See below for details.
-"http://qct.sourceforce.net/qct-1.5.tar.gz" file could not be downloaded. See below for details.
+Could not extract tarball. See below for details.
 Traceback (most recent call last):
-  File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 107, in download_tar
-    f.write(urlopen(url=urlesc(pkgurl), timeout=10).read())
-  File "/usr/lib/python3.5/urllib/request.py", line 163, in urlopen
-    return opener.open(url, data, timeout)
-  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
-    response = meth(req, response)
-  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
-    'http', request, response, code, msg, hdrs)
-  File "/usr/lib/python3.5/urllib/request.py", line 510, in error
-    return self._call_chain(*args)
-  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
-    result = func(*args)
-  File "/usr/lib/python3.5/urllib/request.py", line 590, in http_error_default
-    raise HTTPError(req.full_url, code, msg, hdrs, fp)
-urllib.error.HTTPError: HTTP Error 403: Forbidden
+  File "/usr/lib/python3.5/tarfile.py", line 1631, in gzopen
+    t = cls.taropen(name, mode, fileobj, **kwargs)
+  File "/usr/lib/python3.5/tarfile.py", line 1607, in taropen
+    return cls(name, mode, fileobj, **kwargs)
+  File "/usr/lib/python3.5/tarfile.py", line 1470, in __init__
+    self.firstmember = self.next()
+  File "/usr/lib/python3.5/tarfile.py", line 2281, in next
+    tarinfo = self.tarinfo.fromtarfile(self)
+  File "/usr/lib/python3.5/tarfile.py", line 1082, in fromtarfile
+    buf = tarfile.fileobj.read(BLOCKSIZE)
+  File "/usr/lib/python3.5/gzip.py", line 274, in read
+    return self._buffer.read(size)
+  File "/usr/lib/python3.5/_compression.py", line 68, in readinto
+    data = self.read(len(byte_view))
+  File "/usr/lib/python3.5/gzip.py", line 461, in read
+    if not self._read_gzip_header():
+  File "/usr/lib/python3.5/gzip.py", line 409, in _read_gzip_header
+    raise OSError('Not a gzipped file (%r)' % magic)
+OSError: Not a gzipped file (b'<h')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 131, in get_tar_topdir
+    with closing(compressed(tarpath, tarmode)) as tar:
+  File "/usr/lib/python3.5/tarfile.py", line 1577, in open
+    return func(name, filemode, fileobj, **kwargs)
+  File "/usr/lib/python3.5/tarfile.py", line 1635, in gzopen
+    raise ReadError("not a gzip file")
+tarfile.ReadError: not a gzip file
 
 [INFO] (qctoolkit) This package is up to date.
 [INFO] (qctrl) This package is up to date.
@@ -200,7 +215,7 @@ This package download URL does not point to a valid file: "http://danse.cacr.cal
 [INFO] (qgeneration) This package is up to date.
 [INFO] (qgis-plugins) This package is up to date.
 [INFO] (qgis2to3) This package is up to date.
-[INFO] (qgiscommons) This package is up to date.
+[INFO] (qgiscommons) Data has been updated for this package.
 [INFO] (qgispluginreleaser) This package is up to date.
 [INFO] (qgl) This package is up to date.
 [INFO] (qgmap) This package is up to date.
@@ -430,7 +445,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [ERROR] (qombinatorics) This package does not have downloadable releases.
 [INFO] (qonda) This package is up to date.
 [INFO] (qonos) This package is up to date.
-[INFO] (qoob) This package is up to date.
+[INFO] (qoob) Data has been updated for this package.
 [INFO] (qooxdoocherrypyjsonrpc) This package is up to date.
 [INFO] (qopen) This package is up to date.
 [INFO] (qopenvpn) This package is up to date.
@@ -438,7 +453,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [ERROR] (qp) This package does not have downloadable releases.
 [INFO] (qpack) This package is up to date.
 [INFO] (qpage) This package is up to date.
-[INFO] (qpagent) Data has been updated for this package.
+[INFO] (qpagent) This package is up to date.
 [INFO] (qpass) This package is up to date.
 [INFO] (qpformat) This package is up to date.
 [INFO] (qpic) This package is up to date.
@@ -653,24 +668,6 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 
 [INFO] (qt-backport) This package is up to date.
 [INFO] (qt-binder) This package is up to date.
-[ERROR] (qt-cef) Could not get a response from API for this package. See below for details.
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
-    timeout=10).read()
-  File "/usr/lib/python3.5/urllib/request.py", line 163, in urlopen
-    return opener.open(url, data, timeout)
-  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
-    response = meth(req, response)
-  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
-    'http', request, response, code, msg, hdrs)
-  File "/usr/lib/python3.5/urllib/request.py", line 510, in error
-    return self._call_chain(*args)
-  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
-    result = func(*args)
-  File "/usr/lib/python3.5/urllib/request.py", line 590, in http_error_default
-    raise HTTPError(req.full_url, code, msg, hdrs, fp)
-urllib.error.HTTPError: HTTP Error 404: Not Found
-
 [ERROR] (qt-dataflow) This package does not have downloadable releases.
 [INFO] (qt-graph-helpers) This package is up to date.
 [INFO] (qt-ledwidget) This package is up to date.
@@ -701,7 +698,7 @@ Traceback (most recent call last):
     raise HTTPError(req.full_url, code, msg, hdrs, fp)
 urllib.error.HTTPError: HTTP Error 404: Not Found
 
-[INFO] (qt5-cef) This package is up to date.
+[INFO] (qt5-cef) Data has been updated for this package.
 [INFO] (qt5-py) This package is up to date.
 [INFO] (qt5reactor) This package is up to date.
 [INFO] (qt5reactor-fork) This package is up to date.
@@ -870,7 +867,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (qualipy) This package is up to date.
 [INFO] (qualisys) This package is up to date.
 [ERROR] (quality) This package does not have downloadable releases.
-[INFO] (quality-report) This package is up to date.
+[INFO] (quality-report) Data has been updated for this package.
 [INFO] (qualname) This package is up to date.
 [INFO] (qualpay) This package is up to date.
 [INFO] (qualpy) This package is up to date.
@@ -880,7 +877,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (qualysutils) This package is up to date.
 [INFO] (quamash) This package is up to date.
 [INFO] (quamotion) This package is up to date.
-[INFO] (quandl) Data has been updated for this package.
+[INFO] (quandl) This package is up to date.
 [INFO] (quandl-fund-xlsx) This package is up to date.
 [INFO] (quandlpy) This package is up to date.
 [INFO] (quanfima) This package is up to date.
@@ -889,9 +886,10 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [ERROR] (quanta) This package does not have downloadable releases.
 [INFO] (quantan) This package is up to date.
 [INFO] (quantapp) This package is up to date.
-[INFO] (quantarhei) Data has been updated for this package.
+[INFO] (quantarhei) This package is up to date.
 [INFO] (quantasf) This package is up to date.
 [INFO] (quantaxis) This package is up to date.
+[INFO] (quantaxis-run) Data has been updated for this package.
 [INFO] (quantaxisbackend) This package is up to date.
 [INFO] (quantclient) This package is up to date.
 [ERROR] (quantcloud) This package does not have downloadable releases.
@@ -939,6 +937,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (quantsbin) This package is up to date.
 [ERROR] (quantstack) This package does not have downloadable releases.
 [INFO] (quantstamp) This package is up to date.
+[INFO] (quantstudio) Data has been updated for this package.
 [INFO] (quanttus-api) This package is up to date.
 [INFO] (quantulum) This package is up to date.
 [INFO] (quantulum3) This package is up to date.
@@ -962,7 +961,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (quarantine) This package is up to date.
 [INFO] (quarc) This package is up to date.
 [INFO] (quarc-gateway) This package is up to date.
-[INFO] (quarchpy) Data has been updated for this package.
+[INFO] (quarchpy) This package is up to date.
 [INFO] (quarg) This package is up to date.
 [INFO] (quark) This package is up to date.
 [INFO] (quark-hash) This package is up to date.
@@ -989,7 +988,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (quasi) This package is up to date.
 [INFO] (quasiquotes) This package is up to date.
 [INFO] (quasselconf) This package is up to date.
-[INFO] (quast) Data has been updated for this package.
+[INFO] (quast) This package is up to date.
 [INFO] (quaternion) This package is up to date.
 [INFO] (quaternion-algebra) This package is up to date.
 [INFO] (quaternionarray) This package is up to date.
@@ -1077,8 +1076,8 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (queryfilter) This package is up to date.
 [INFO] (querylist) This package is up to date.
 [INFO] (queryoem) This package is up to date.
-[INFO] (queryparser-python2) This package is up to date.
-[INFO] (queryparser-python3) This package is up to date.
+[INFO] (queryparser-python2) Data has been updated for this package.
+[INFO] (queryparser-python3) Data has been updated for this package.
 [INFO] (querysetlimitor) This package is up to date.
 [INFO] (querystream) This package is up to date.
 [INFO] (querystring) This package is up to date.
@@ -1156,7 +1155,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (quick2wire-api) This package is up to date.
 [INFO] (quick2wire-peque) This package is up to date.
 [INFO] (quickapi) This package is up to date.
-[INFO] (quickapp) Data has been updated for this package.
+[INFO] (quickapp) This package is up to date.
 [INFO] (quickargs) This package is up to date.
 [INFO] (quickavro) This package is up to date.
 [INFO] (quickbase2) This package is up to date.
@@ -1400,7 +1399,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (qulab) This package is up to date.
 [INFO] (qulacs) This package is up to date.
 [INFO] (quma) This package is up to date.
-[INFO] (qumulo-api) Data has been updated for this package.
+[INFO] (qumulo-api) This package is up to date.
 [INFO] (qumulobench) This package is up to date.
 [INFO] (qunitsuite) This package is up to date.
 [ERROR] (quodlibet) Could not get a response from API for this package. See below for details.
@@ -1509,11 +1508,11 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (qzonesecret) This package is up to date.
 [INFO] 
 [INFO] 
-[INFO] Total packages: 1089
-[INFO]     Packages processed: 1089
-[INFO]         Packages updated: 9
-[INFO]         Packages up-to-date: 1001
-[INFO]         Packages without response: 18
+[INFO] Total packages: 1090
+[INFO]     Packages processed: 1090
+[INFO]         Packages updated: 10
+[INFO]         Packages up-to-date: 1002
+[INFO]         Packages without response: 17
 [INFO]         Packages without urls: 0
 [INFO]         Packages without downloads: 53
 [INFO]         Packages with data errors: 8
