@@ -2407,7 +2407,7 @@
             "client.session",
             "client.vfolder"
         ],
-        "version": "1.4.0"
+        "version": "1.4.1"
     },
     "backend-ai-common": {
         "cmdline": [],
@@ -4666,10 +4666,14 @@
         "cmdline": [],
         "modules": [
             "docker_command_tool",
+            "docker_command_tool.build",
+            "docker_command_tool.cli",
             "docker_command_tool.commands_docker",
-            "docker_command_tool.dct"
+            "docker_command_tool.constants",
+            "docker_command_tool.dct",
+            "docker_command_tool.utils"
         ],
-        "version": "0.0.2"
+        "version": "0.0.3"
     },
     "bagit": {
         "cmdline": [
@@ -4703,30 +4707,46 @@
         "cmdline": [],
         "modules": [
             "bagpipes",
-            "bagpipes.catalogue_fit",
-            "bagpipes.check_priors",
-            "bagpipes.chemical_enrichment_history",
+            "bagpipes.catalogue",
+            "bagpipes.catalogue.fit_catalogue",
+            "bagpipes.catalogue.merge_catalogue",
             "bagpipes.config",
             "bagpipes.filters",
             "bagpipes.filters.filter_set",
-            "bagpipes.fit",
-            "bagpipes.galaxy",
-            "bagpipes.igm_inoue2014",
-            "bagpipes.make_cloudy_models",
-            "bagpipes.model_galaxy",
+            "bagpipes.fitting",
+            "bagpipes.fitting.check_priors",
+            "bagpipes.fitting.fit",
+            "bagpipes.fitting.fitted_model",
+            "bagpipes.fitting.posterior",
+            "bagpipes.fitting.prior",
+            "bagpipes.input",
+            "bagpipes.input.galaxy",
             "bagpipes.models",
+            "bagpipes.models.chemical_enrichment_history",
             "bagpipes.models.dust_attenuation_model",
             "bagpipes.models.dust_emission_model",
             "bagpipes.models.igm_model",
+            "bagpipes.models.making",
+            "bagpipes.models.making.igm_inoue2014",
+            "bagpipes.models.making.make_cloudy_models",
+            "bagpipes.models.model_galaxy",
             "bagpipes.models.nebular_model",
+            "bagpipes.models.star_formation_history",
             "bagpipes.models.stellar_model",
             "bagpipes.plotting",
-            "bagpipes.plotting_priors_paper",
-            "bagpipes.priors",
-            "bagpipes.star_formation_history",
+            "bagpipes.plotting.general",
+            "bagpipes.plotting.plot_1d_posterior",
+            "bagpipes.plotting.plot_corner",
+            "bagpipes.plotting.plot_galaxy",
+            "bagpipes.plotting.plot_model_galaxy",
+            "bagpipes.plotting.plot_polynomial",
+            "bagpipes.plotting.plot_sfh",
+            "bagpipes.plotting.plot_sfh_posterior",
+            "bagpipes.plotting.plot_spectrum",
+            "bagpipes.plotting.plot_spectrum_posterior",
             "bagpipes.utils"
         ],
-        "version": "0.6.1"
+        "version": "0.7.0"
     },
     "bagua": {
         "cmdline": [
@@ -8624,15 +8644,21 @@
         "modules": [
             "bandersnatch",
             "bandersnatch.buildout",
+            "bandersnatch.configuration",
+            "bandersnatch.filter",
             "bandersnatch.log",
             "bandersnatch.main",
             "bandersnatch.master",
             "bandersnatch.mirror",
             "bandersnatch.package",
             "bandersnatch.release",
-            "bandersnatch.utils"
+            "bandersnatch.utils",
+            "bandersnatch.verify",
+            "bandersnatch_filter_plugins",
+            "bandersnatch_filter_plugins.blacklist_name",
+            "bandersnatch_filter_plugins.whitelist_name"
         ],
-        "version": "2.2.1"
+        "version": "3.0.1"
     },
     "bandicoot": {
         "cmdline": [],
@@ -14708,9 +14734,29 @@
     "batlab": {
         "cmdline": [],
         "modules": [
-            "batlab"
+            "batlab",
+            "batlab.batlabclass",
+            "batlab.batlabclass.BatlabClass",
+            "batlab.batlabutil",
+            "batlab.batlabutil.batlabutil",
+            "batlab.batpool",
+            "batlab.batpool.Batpool",
+            "batlab.channel",
+            "batlab.channel.Channel",
+            "batlab.constants",
+            "batlab.constants.constants",
+            "batlab.encoder",
+            "batlab.encoder.Encoder",
+            "batlab.func",
+            "batlab.func.func",
+            "batlab.logger",
+            "batlab.logger.Logger",
+            "batlab.packet",
+            "batlab.packet.Packet",
+            "batlab.settings",
+            "batlab.settings.Settings"
         ],
-        "version": "0.5.27"
+        "version": "0.5.29"
     },
     "batman": {
         "cmdline": [],
@@ -19619,6 +19665,17 @@
         ],
         "version": "0.2.2"
     },
+    "bdc": {
+        "cmdline": [],
+        "modules": [
+            "bdc",
+            "bdc.bootableDiskCreator",
+            "bdc.dependencyChecker",
+            "bdc.gui",
+            "bdc.tests"
+        ],
+        "version": "1.0.2"
+    },
     "bdcli": {
         "cmdline": [],
         "modules": [
@@ -23825,7 +23882,7 @@
             "bee_django_user.utils",
             "bee_django_user.views"
         ],
-        "version": "0.0.23"
+        "version": "0.0.24"
     },
     "beebotte": {
         "cmdline": [],
@@ -28938,6 +28995,14 @@
         "modules": [],
         "version": "0.1.6"
     },
+    "betapy": {
+        "cmdline": [],
+        "modules": [
+            "betapy",
+            "betapy.betapy"
+        ],
+        "version": "0.1.0"
+    },
     "betatest": {
         "cmdline": [],
         "modules": [
@@ -30802,7 +30867,7 @@
             "bfit.gui.set_ppm_reference_popup",
             "bfit.gui.zahersCalculator"
         ],
-        "version": "1.1.2"
+        "version": "1.2.0"
     },
     "bflmpsvz": {
         "cmdline": [],
@@ -33870,7 +33935,7 @@
             "tests.test_base",
             "tests.test_connection"
         ],
-        "version": "0.19.0"
+        "version": "0.19.1"
     },
     "bigcommerce-api": {
         "cmdline": [],
@@ -34006,7 +34071,7 @@
             "bigfile.tests.test_bigfile",
             "bigfile.version"
         ],
-        "version": "0.1.43"
+        "version": "0.1.44"
     },
     "bigfiveinventory": {
         "cmdline": [],
@@ -39185,7 +39250,7 @@
             "biobb_model.structure_manager.structure_manager",
             "biobb_model.test"
         ],
-        "version": "0.0.6"
+        "version": "0.0.10"
     },
     "biobeam": {
         "cmdline": [],
@@ -40832,20 +40897,6 @@
             "bioodo.xls"
         ],
         "version": "0.1.0"
-    },
-    "biop": {
-        "cmdline": [],
-        "modules": [
-            "biop",
-            "biop.biopitertools",
-            "biop.ds",
-            "biop.jsonio",
-            "biop.mixin",
-            "biop.pdocument",
-            "biop.utils",
-            "biop.validator"
-        ],
-        "version": "0.1.dev2"
     },
     "biopandas": {
         "cmdline": [],
@@ -47986,7 +48037,7 @@
             "blackarrow.test",
             "blackarrow.test.test_indexing"
         ],
-        "version": "1.0.6"
+        "version": "1.0.7"
     },
     "blackbeard": {
         "cmdline": [],
@@ -50364,7 +50415,7 @@
             "blinkpy.helpers.util",
             "blinkpy.sync_module"
         ],
-        "version": "0.10.1"
+        "version": "0.10.2"
     },
     "blinkstick": {
         "cmdline": [
@@ -51699,7 +51750,7 @@
             "blockchain.neo.ingest",
             "blockchain.neo.switcheo"
         ],
-        "version": "0.0.14"
+        "version": "0.0.15"
     },
     "blockchain-parser": {
         "cmdline": [],
@@ -60118,11 +60169,12 @@
             "bobtemplates.plone.theme",
             "bobtemplates.plone.theme_barceloneta",
             "bobtemplates.plone.theme_package",
+            "bobtemplates.plone.utils",
             "bobtemplates.plone.view",
             "bobtemplates.plone.viewlet",
             "bobtemplates.plone.vocabulary"
         ],
-        "version": "3.5.1"
+        "version": "3.5.2"
     },
     "bobtemplates-pypbr": {
         "cmdline": [],
@@ -60600,13 +60652,15 @@
         "cmdline": [],
         "modules": [
             "boiga",
+            "boiga.compose",
             "boiga.either",
             "boiga.functor",
             "boiga.maybe",
             "boiga.monad",
+            "boiga.partial",
             "boiga.util"
         ],
-        "version": "0.1.0"
+        "version": "0.2.0"
     },
     "boil": {
         "cmdline": [],
@@ -61586,7 +61640,7 @@
             "bold_identification",
             "bold_identification.BOLDv4_identification_selenium"
         ],
-        "version": "0.0.19"
+        "version": "0.0.20"
     },
     "bold-retriever": {
         "cmdline": [],
@@ -61685,7 +61739,7 @@
             "bolib.optimization_methods.sequential_optimization",
             "bolib.optimization_methods.util"
         ],
-        "version": "0.20.1"
+        "version": "0.20.2"
     },
     "bolos": {
         "cmdline": [],
@@ -62589,7 +62643,7 @@
             "bonsai_ai.version",
             "bonsai_ai.writer"
         ],
-        "version": "2.0.16"
+        "version": "2.0.17"
     },
     "bonsai-cli": {
         "cmdline": [],
@@ -62605,7 +62659,7 @@
             "bonsai_cli.test_projfile",
             "bonsai_cli.utils"
         ],
-        "version": "0.8.30"
+        "version": "0.8.31"
     },
     "bonsai-code": {
         "cmdline": [],
@@ -68966,7 +69020,7 @@
             "boto3.session",
             "boto3.utils"
         ],
-        "version": "1.9.33"
+        "version": "1.9.34"
     },
     "boto3-batch-utils": {
         "cmdline": [],
@@ -69239,7 +69293,7 @@
             "botocore.vendored.six",
             "botocore.waiter"
         ],
-        "version": "1.12.33"
+        "version": "1.12.34"
     },
     "botocore-callback": {
         "cmdline": [],
@@ -70447,7 +70501,7 @@
             "botspot.featureLists",
             "botspot.utils"
         ],
-        "version": "0.1.1"
+        "version": "0.1.2"
     },
     "botstat": {
         "cmdline": [],
@@ -76920,6 +76974,7 @@
             "braumeister.actions.candidate",
             "braumeister.actions.cleanup",
             "braumeister.actions.finalize",
+            "braumeister.actions.nightly",
             "braumeister.actions.release",
             "braumeister.braumeister",
             "braumeister.builder",
@@ -76930,7 +76985,7 @@
             "braumeister.setup",
             "braumeister.state"
         ],
-        "version": "0.2.3"
+        "version": "0.3.4"
     },
     "bravado": {
         "cmdline": [],
@@ -78888,7 +78943,7 @@
             "brewblox_service.scheduler",
             "brewblox_service.service"
         ],
-        "version": "0.12.2"
+        "version": "0.12.3"
     },
     "brewblox-tools": {
         "cmdline": [],
@@ -83552,7 +83607,7 @@
             "bson.py3compat",
             "bson.tz_util"
         ],
-        "version": "0.5.6"
+        "version": "0.5.7"
     },
     "bson-lazy": {
         "cmdline": [],
@@ -85410,7 +85465,7 @@
             "libbucket.lurl",
             "libbucket.version"
         ],
-        "version": "0.20181025"
+        "version": "0.20181030"
     },
     "bucket-command-wrapper": {
         "cmdline": [],
@@ -88920,7 +88975,7 @@
             "buildpy.vx.exception",
             "buildpy.vx.resource"
         ],
-        "version": "6.0.0"
+        "version": "6.0.1"
     },
     "buildpy-server": {
         "cmdline": [],
@@ -90347,7 +90402,7 @@
             "bumpytrack",
             "bumpytrack.bumpytrack"
         ],
-        "version": "0.2.1"
+        "version": "0.3.0"
     },
     "bunch": {
         "cmdline": [],
@@ -93756,18 +93811,19 @@
         "cmdline": [],
         "modules": [
             "rabbitmq",
+            "rabbitmq.handler",
             "rabbitmq.server"
         ],
-        "version": "0.0.3"
+        "version": "0.1.0"
     },
     "bx-sql": {
         "cmdline": [],
         "modules": [
-            "bx.sql",
-            "bx.sql.connectors",
-            "bx.sql.database"
+            "sql",
+            "sql.connectors",
+            "sql.database"
         ],
-        "version": "0.0.9"
+        "version": "0.1.0"
     },
     "bx-utility": {
         "cmdline": [],
