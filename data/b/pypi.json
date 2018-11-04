@@ -2026,7 +2026,7 @@
             "babtest",
             "babtest.babtest"
         ],
-        "version": "1.0.3"
+        "version": "1.0.4"
     },
     "babtools-example": {
         "cmdline": [
@@ -3580,16 +3580,20 @@
             "backup_utils.Notifier",
             "backup_utils.Task",
             "backup_utils.databases",
-            "backup_utils.databases.MysqlTask",
+            "backup_utils.databases.MysqlDb",
+            "backup_utils.databases.SqliteDb",
             "backup_utils.notifiers",
             "backup_utils.notifiers.EmailNotifier",
+            "backup_utils.notifiers.PrintNotifier",
             "backup_utils.syncs",
             "backup_utils.syncs.RcloneSync",
+            "backup_utils.syncs.RsyncSync",
             "backup_utils.tasks",
             "backup_utils.tasks.BorgTask",
+            "backup_utils.tasks.TarTask",
             "backup_utils.utils"
         ],
-        "version": "0.7.0"
+        "version": "1.0.0"
     },
     "backup2": {
         "cmdline": [],
@@ -9693,6 +9697,108 @@
         ],
         "version": "0.0.5"
     },
+    "bapsflib": {
+        "cmdline": [],
+        "modules": [
+            "bapsflib",
+            "bapsflib._hdf",
+            "bapsflib._hdf.maps",
+            "bapsflib._hdf.maps.controls",
+            "bapsflib._hdf.maps.controls.clparse",
+            "bapsflib._hdf.maps.controls.contype",
+            "bapsflib._hdf.maps.controls.map_controls",
+            "bapsflib._hdf.maps.controls.n5700ps",
+            "bapsflib._hdf.maps.controls.sixk",
+            "bapsflib._hdf.maps.controls.templates",
+            "bapsflib._hdf.maps.controls.tests",
+            "bapsflib._hdf.maps.controls.tests.common",
+            "bapsflib._hdf.maps.controls.tests.fauxn5700ps",
+            "bapsflib._hdf.maps.controls.tests.fauxsixk",
+            "bapsflib._hdf.maps.controls.tests.fauxwaveform",
+            "bapsflib._hdf.maps.controls.tests.test_clparse",
+            "bapsflib._hdf.maps.controls.tests.test_map_controls",
+            "bapsflib._hdf.maps.controls.tests.test_n5700ps",
+            "bapsflib._hdf.maps.controls.tests.test_sixk",
+            "bapsflib._hdf.maps.controls.tests.test_templates",
+            "bapsflib._hdf.maps.controls.tests.test_waveform",
+            "bapsflib._hdf.maps.controls.waveform",
+            "bapsflib._hdf.maps.digitizers",
+            "bapsflib._hdf.maps.digitizers.map_digis",
+            "bapsflib._hdf.maps.digitizers.sis3301",
+            "bapsflib._hdf.maps.digitizers.siscrate",
+            "bapsflib._hdf.maps.digitizers.templates",
+            "bapsflib._hdf.maps.digitizers.tests",
+            "bapsflib._hdf.maps.digitizers.tests.common",
+            "bapsflib._hdf.maps.digitizers.tests.fauxsis3301",
+            "bapsflib._hdf.maps.digitizers.tests.fauxsiscrate",
+            "bapsflib._hdf.maps.digitizers.tests.test_map_digis",
+            "bapsflib._hdf.maps.digitizers.tests.test_sis3301",
+            "bapsflib._hdf.maps.digitizers.tests.test_siscrate",
+            "bapsflib._hdf.maps.digitizers.tests.test_templates",
+            "bapsflib._hdf.maps.hdfmap",
+            "bapsflib._hdf.maps.msi",
+            "bapsflib._hdf.maps.msi.discharge",
+            "bapsflib._hdf.maps.msi.gaspressure",
+            "bapsflib._hdf.maps.msi.heater",
+            "bapsflib._hdf.maps.msi.interferometerarray",
+            "bapsflib._hdf.maps.msi.magneticfield",
+            "bapsflib._hdf.maps.msi.map_msi",
+            "bapsflib._hdf.maps.msi.templates",
+            "bapsflib._hdf.maps.msi.tests",
+            "bapsflib._hdf.maps.msi.tests.common",
+            "bapsflib._hdf.maps.msi.tests.fauxdischarge",
+            "bapsflib._hdf.maps.msi.tests.fauxgaspressure",
+            "bapsflib._hdf.maps.msi.tests.fauxheater",
+            "bapsflib._hdf.maps.msi.tests.fauxinterarr",
+            "bapsflib._hdf.maps.msi.tests.fauxmagneticfield",
+            "bapsflib._hdf.maps.msi.tests.test_discharge",
+            "bapsflib._hdf.maps.msi.tests.test_gaspressure",
+            "bapsflib._hdf.maps.msi.tests.test_heater",
+            "bapsflib._hdf.maps.msi.tests.test_interferometerarray",
+            "bapsflib._hdf.maps.msi.tests.test_magneticfield",
+            "bapsflib._hdf.maps.msi.tests.test_map_msi",
+            "bapsflib._hdf.maps.tests",
+            "bapsflib._hdf.maps.tests.fauxhdfbuilder",
+            "bapsflib._hdf.maps.tests.test_hdfmap",
+            "bapsflib._hdf.utils",
+            "bapsflib._hdf.utils.file",
+            "bapsflib._hdf.utils.hdfoverview",
+            "bapsflib._hdf.utils.hdfreadcontrol",
+            "bapsflib._hdf.utils.hdfreaddata",
+            "bapsflib._hdf.utils.hdfreadmsi",
+            "bapsflib._hdf.utils.helpers",
+            "bapsflib._hdf.utils.tests",
+            "bapsflib._hdf.utils.tests.test_file",
+            "bapsflib._hdf.utils.tests.test_hdfoverview",
+            "bapsflib._hdf.utils.tests.test_hdfreadcontrol",
+            "bapsflib._hdf.utils.tests.test_hdfreaddata",
+            "bapsflib._hdf.utils.tests.test_hdfreadmsi",
+            "bapsflib._hdf.utils.tests.test_helpers",
+            "bapsflib.lapd",
+            "bapsflib.lapd._hdf",
+            "bapsflib.lapd._hdf.file",
+            "bapsflib.lapd._hdf.lapdmap",
+            "bapsflib.lapd._hdf.lapdoverview",
+            "bapsflib.lapd._hdf.tests",
+            "bapsflib.lapd._hdf.tests.test_file",
+            "bapsflib.lapd._hdf.tests.test_lapdmap",
+            "bapsflib.lapd._hdf.tests.test_lapdoverview",
+            "bapsflib.lapd.constants",
+            "bapsflib.lapd.constants.constants",
+            "bapsflib.lapd.constants.tests",
+            "bapsflib.lapd.constants.tests.test_constants",
+            "bapsflib.lapd.tools",
+            "bapsflib.lapd.tools.tests",
+            "bapsflib.lapd.tools.tests.test_tools",
+            "bapsflib.lapd.tools.tools",
+            "bapsflib.plasma",
+            "bapsflib.plasma.core",
+            "bapsflib.utils",
+            "bapsflib.utils.errors",
+            "bapsflib.utils.warnings"
+        ],
+        "version": "1.0.0"
+    },
     "bapt": {
         "cmdline": [],
         "modules": [
@@ -13351,7 +13457,7 @@
             "basil.utils.sim.utils",
             "basil.utils.utils"
         ],
-        "version": "2.4.12"
+        "version": "2.4.13"
     },
     "basil-django": {
         "cmdline": [],
@@ -24921,7 +25027,7 @@
             "beewa.cli",
             "beewa.hive"
         ],
-        "version": "0.4.4"
+        "version": "0.4.5"
     },
     "beeware": {
         "cmdline": [],
@@ -26468,7 +26574,7 @@
             "ben_cogs.misc",
             "ben_cogs.stats"
         ],
-        "version": "0.3.1"
+        "version": "0.3.2"
     },
     "bench": {
         "cmdline": [
@@ -26773,6 +26879,13 @@
             "benchlingapi.convert"
         ],
         "version": "1.0"
+    },
+    "benchlog": {
+        "cmdline": [],
+        "modules": [
+            "benchlog"
+        ],
+        "version": "0.1"
     },
     "benchmark": {
         "cmdline": [],
@@ -29017,6 +29130,15 @@
         ],
         "version": "0.4.1"
     },
+    "betaincder": {
+        "cmdline": [],
+        "modules": [
+            "betaincder",
+            "betaincder.c",
+            "betaincder.tests"
+        ],
+        "version": "0.1.1"
+    },
     "betamax": {
         "cmdline": [],
         "modules": [
@@ -30950,7 +31072,7 @@
             "bfit.gui.set_ppm_reference_popup",
             "bfit.gui.zahersCalculator"
         ],
-        "version": "1.3.3"
+        "version": "1.3.5"
     },
     "bflmpsvz": {
         "cmdline": [],
@@ -32753,7 +32875,7 @@
             "BiblioPixelAnimations.strip.WhiteTwinkle",
             "BiblioPixelAnimations.strip.hexclock"
         ],
-        "version": "3.20181023.145130"
+        "version": "3.20181103.185007"
     },
     "bibliopixelneosegment": {
         "cmdline": [],
@@ -33914,7 +34036,7 @@
             "bigchaindb_driver.transport",
             "bigchaindb_driver.utils"
         ],
-        "version": "0.6.1"
+        "version": "0.6.2"
     },
     "bigchaindb-shared": {
         "cmdline": [],
@@ -39252,6 +39374,14 @@
         ],
         "version": "2.2.1"
     },
+    "biobankread2": {
+        "cmdline": [],
+        "modules": [
+            "BiobankRead2",
+            "BiobankRead2.BiobankRead2"
+        ],
+        "version": "3.0.1"
+    },
     "biobb-common": {
         "cmdline": [],
         "modules": [
@@ -40565,7 +40695,7 @@
             "metamodel.utils.typereferences",
             "metamodel.utils.yamlutils"
         ],
-        "version": "0.2.0"
+        "version": "0.2.1"
     },
     "biolite": {
         "cmdline": [
@@ -43749,7 +43879,7 @@
     "biscuits": {
         "cmdline": [],
         "modules": [],
-        "version": "0.1.1"
+        "version": "0.2.1"
     },
     "bise-biodiversityfactsheet": {
         "cmdline": [],
@@ -45653,10 +45783,9 @@
         "cmdline": [],
         "modules": [
             "bites",
-            "bites._bs",
-            "bites.bs"
+            "bites._bs"
         ],
-        "version": "0.0.9"
+        "version": "0.0.10"
     },
     "bitevery": {
         "cmdline": [],
@@ -56197,7 +56326,7 @@
             "bmstu_schedule.logger",
             "bmstu_schedule.schedule"
         ],
-        "version": "1.2"
+        "version": "1.2.1"
     },
     "bmt-tools": {
         "cmdline": [],
@@ -64177,6 +64306,11 @@
         ],
         "version": "2.5"
     },
+    "boop": {
+        "cmdline": [],
+        "modules": [],
+        "version": "3.0.1"
+    },
     "boopyboop": {
         "cmdline": [],
         "modules": [
@@ -64922,7 +65056,7 @@
         "modules": [
             "bootsrapyy"
         ],
-        "version": "3.6"
+        "version": "4.6"
     },
     "bootsrapzz": {
         "cmdline": [],
@@ -65075,7 +65209,7 @@
             "bootstrap_py.update",
             "bootstrap_py.vcs"
         ],
-        "version": "0.6.1"
+        "version": "0.7.0"
     },
     "bootstrap-pytorch": {
         "cmdline": [],
@@ -71277,6 +71411,15 @@
         "modules": [],
         "version": "0.9"
     },
+    "bottle-sitemap": {
+        "cmdline": [],
+        "modules": [
+            "bottle_sitemap",
+            "bottle_sitemap.error",
+            "bottle_sitemap.plugin"
+        ],
+        "version": "0.2.0"
+    },
     "bottle-smart-filters": {
         "cmdline": [],
         "modules": [
@@ -74621,17 +74764,6 @@
             "tests.test_yaml_load"
         ],
         "version": "0.7.0"
-    },
-    "bpre-build-tools": {
-        "cmdline": [],
-        "modules": [
-            "build",
-            "build2",
-            "insert",
-            "insert2",
-            "insert3"
-        ],
-        "version": "1.0.3"
     },
     "bprint": {
         "cmdline": [],
@@ -78029,9 +78161,10 @@
             "breezeblocks.sql.param_store",
             "breezeblocks.sql.query",
             "breezeblocks.sql.query_components",
+            "breezeblocks.sql.statement",
             "breezeblocks.sql.table"
         ],
-        "version": "0.3.1"
+        "version": "0.3.2"
     },
     "breezedb": {
         "cmdline": [],
@@ -80448,7 +80581,7 @@
             "briefed_people_utils",
             "briefed_people_utils.briefed_people_utils"
         ],
-        "version": "0.6.3"
+        "version": "0.6.4"
     },
     "briefkasten": {
         "cmdline": [],
@@ -89242,7 +89375,7 @@
             "buildpy.vx.exception",
             "buildpy.vx.resource"
         ],
-        "version": "6.0.3"
+        "version": "6.2.1"
     },
     "buildpy-server": {
         "cmdline": [],
