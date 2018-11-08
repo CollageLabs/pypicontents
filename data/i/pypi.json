@@ -387,6 +387,15 @@
         ],
         "version": "0.2"
     },
+    "i3-workspace-groups": {
+        "cmdline": [],
+        "modules": [
+            "i3wsgroups",
+            "i3wsgroups.i3_workspace_groups",
+            "i3wsgroups.i3_workspace_groups_tool"
+        ],
+        "version": "0.1.7"
+    },
     "i3-workspace-names": {
         "cmdline": [],
         "modules": [
@@ -1230,7 +1239,7 @@
             "iapsync.validate",
             "iapsync.validate.validate"
         ],
-        "version": "2.0.1"
+        "version": "2.0.2"
     },
     "iapws": {
         "cmdline": [],
@@ -2302,6 +2311,12 @@
             "ibm_ai_openscale.clients_manager",
             "ibm_ai_openscale.data_mart",
             "ibm_ai_openscale.engines",
+            "ibm_ai_openscale.engines.custom_machine_learning",
+            "ibm_ai_openscale.engines.custom_machine_learning.asset",
+            "ibm_ai_openscale.engines.custom_machine_learning.consts",
+            "ibm_ai_openscale.engines.custom_machine_learning.custom_client",
+            "ibm_ai_openscale.engines.custom_machine_learning.deployment",
+            "ibm_ai_openscale.engines.custom_machine_learning.instance",
             "ibm_ai_openscale.engines.generic_machine_learning",
             "ibm_ai_openscale.engines.generic_machine_learning.generic_asset",
             "ibm_ai_openscale.engines.generic_machine_learning.generic_client",
@@ -2316,6 +2331,7 @@
             "ibm_ai_openscale.supporting_classes",
             "ibm_ai_openscale.supporting_classes.enums",
             "ibm_ai_openscale.supporting_classes.feature",
+            "ibm_ai_openscale.supporting_classes.payload_record",
             "ibm_ai_openscale.supporting_classes.storage_reference",
             "ibm_ai_openscale.utils",
             "ibm_ai_openscale.utils.client_errors",
@@ -2345,16 +2361,23 @@
             "tests.artifacts.tf_hpo_light.input_data_softmax",
             "tests.artifacts.tf_hpo_light.tensorflow_mnist_softmax",
             "tests.csv_to_payload",
+            "tests.datasets_classes",
             "tests.install_requirements",
             "tests.models",
+            "tests.models.AbstractModel",
             "tests.models.KerasVGG16",
             "tests.models.SPSSCustomerSatisfaction",
             "tests.models.Scikit",
+            "tests.models.SparkBestHeartDrug",
             "tests.models.SparkMlibRegression",
+            "tests.models.Tensorflow",
             "tests.models.XGboost",
             "tests.models_preparation",
             "tests.preparation_and_cleaning",
             "tests.svt",
+            "tests.svt.test_custom_deployment_structured_payload_logging",
+            "tests.svt.test_custom_deployment_unstructured_image_payload_logging",
+            "tests.svt.test_custom_standalone_deployment_structured_payload_logging",
             "tests.svt.test_generic_model_basic_operations",
             "tests.svt.test_generic_model_payload_logging",
             "tests.svt.test_generic_model_update_deployments",
@@ -2367,26 +2390,32 @@
             "tests.svt.test_wml_model_keras_payload_logging",
             "tests.svt.test_wml_model_keras_performance",
             "tests.svt.test_wml_model_keras_quality_monitoring_with_feedback",
+            "tests.svt.test_wml_model_scikit_payload_logging",
             "tests.svt.test_wml_model_scikit_performance",
             "tests.svt.test_wml_model_spark_explainability",
             "tests.svt.test_wml_model_spark_fairness_monitoring",
+            "tests.svt.test_wml_model_spark_fairness_monitoring_best_drug",
             "tests.svt.test_wml_model_spark_payload_logging",
             "tests.svt.test_wml_model_spark_performance_monitoring",
+            "tests.svt.test_wml_model_spark_quality_interval",
             "tests.svt.test_wml_model_spark_quality_monitoring_with_feedback",
             "tests.svt.test_wml_model_spark_quality_monitoring_with_learning_system_and_feedback",
             "tests.svt.test_wml_model_spark_regression_explainability",
             "tests.svt.test_wml_model_spark_regression_payload_logging",
             "tests.svt.test_wml_model_spark_regression_performance_monitoring",
             "tests.svt.test_wml_model_spark_update_deployments",
+            "tests.svt.test_wml_model_spss_payload_logging",
             "tests.svt.test_wml_model_spss_performance",
             "tests.svt.test_wml_model_tensorflow_payload_logging",
             "tests.svt.test_wml_model_tensorflow_performance_monitoring",
+            "tests.svt.test_wml_model_xgboost_payload_logging",
             "tests.svt.test_wml_model_xgboost_performance",
+            "tests.test_base",
             "tests.test_runner",
             "tests.unittests",
             "tests.unittests.test_table"
         ],
-        "version": "1.0.53"
+        "version": "1.0.71"
     },
     "ibm-analytics-engine-python": {
         "cmdline": [],
@@ -6247,6 +6276,11 @@
             "icsemantic.thesaurus.vocabularies"
         ],
         "version": "1.0-dev-r371"
+    },
+    "icsservo": {
+        "cmdline": [],
+        "modules": [],
+        "version": "0.1"
     },
     "icssplit": {
         "cmdline": [],
@@ -10457,13 +10491,11 @@
         "version": "1.0.0"
     },
     "ihan": {
-        "cmdline": [
-            "ihan"
-        ],
+        "cmdline": [],
         "modules": [
             "ihan"
         ],
-        "version": "0.3.14"
+        "version": "0.3.20"
     },
     "ihatemoney": {
         "cmdline": [],
@@ -11797,7 +11829,7 @@
             "ilds.time",
             "ilds.util"
         ],
-        "version": "0.1.17"
+        "version": "0.1.18"
     },
     "ilhasoft-carriers": {
         "cmdline": [],
@@ -12249,6 +12281,22 @@
             "ilrt.migrationtool.tests.test_migrationtool"
         ],
         "version": "0.4"
+    },
+    "ilua": {
+        "cmdline": [],
+        "modules": [
+            "ilua",
+            "ilua._unixfifo",
+            "ilua._win32namedpipe",
+            "ilua.app",
+            "ilua.consoleapp",
+            "ilua.inspector",
+            "ilua.kernel",
+            "ilua.namedpipe",
+            "ilua.proto",
+            "ilua.version"
+        ],
+        "version": "0.1.0"
     },
     "ilv": {
         "cmdline": [],
@@ -15484,9 +15532,12 @@
             "ielearn.extract.extract",
             "ielearn.extract.xmp",
             "ielearn.predict",
-            "ielearn.predict.train"
+            "ielearn.predict.feature_selection",
+            "ielearn.predict.predict",
+            "ielearn.predict.train",
+            "ielearn.util"
         ],
-        "version": "0.4"
+        "version": "0.5"
     },
     "img-percent-diff": {
         "cmdline": [],
@@ -16355,7 +16406,7 @@
             "tests.test_image_ids_and_extensions",
             "tests.test_imgurdownloader"
         ],
-        "version": "0.1.9"
+        "version": "0.2.0"
     },
     "imgur-scraper": {
         "cmdline": [],
@@ -17264,7 +17315,7 @@
             "imod.tec",
             "imod.util"
         ],
-        "version": "0.4.0"
+        "version": "0.4.1"
     },
     "imodb": {
         "cmdline": [],
@@ -19825,7 +19876,7 @@
             "imtools.vesseltree_export",
             "imtools.viewer"
         ],
-        "version": "1.4.1"
+        "version": "1.4.4"
     },
     "imutil": {
         "cmdline": [],
@@ -21099,10 +21150,9 @@
     "incremental-counter": {
         "cmdline": [],
         "modules": [
-            "incremental_counter",
-            "incremental_counter.counter"
+            "incremental_counter"
         ],
-        "version": "0.1.2"
+        "version": "0.1.3"
     },
     "incubator": {
         "cmdline": [],
@@ -25377,7 +25427,7 @@
             "indy_node.utils.node_runner",
             "sample"
         ],
-        "version": "1.6.656"
+        "version": "1.6.662"
     },
     "indy-node-new-names": {
         "cmdline": [],
@@ -27638,6 +27688,7 @@
             "plenum.server.suspicion_codes",
             "plenum.server.validator_info_tool",
             "plenum.server.view_change",
+            "plenum.server.view_change.pre_view_change_strategies",
             "plenum.server.view_change.view_change_msg_filter",
             "plenum.server.view_change.view_changer",
             "plenum.test",
@@ -28101,6 +28152,7 @@
             "plenum.test.replica.test_bitmask_apply",
             "plenum.test.replica.test_buffers_cleaning",
             "plenum.test.replica.test_get_last_timestamp_from_state",
+            "plenum.test.replica.test_instance_faulty_processor",
             "plenum.test.replica.test_primary_marked_suspicious_for_sending_prepare",
             "plenum.test.replica.test_replica_clear_collections_after_view_change",
             "plenum.test.replica.test_replica_reject_same_pre_prepare",
@@ -28178,9 +28230,11 @@
             "plenum.test.view_change.helper",
             "plenum.test.view_change.test_3pc_msgs_during_view_change",
             "plenum.test.view_change.test_6th_node_join_after_view_change_by_primary_restart",
+            "plenum.test.view_change.test_add_vc_start_msg_during_start_view_change",
             "plenum.test.view_change.test_api",
             "plenum.test.view_change.test_checkPerformance",
             "plenum.test.view_change.test_client_req_during_view_change",
+            "plenum.test.view_change.test_complete_with_delayed_view_change",
             "plenum.test.view_change.test_current_state_building",
             "plenum.test.view_change.test_diconnected_node_reconnects_after_view_change",
             "plenum.test.view_change.test_disable_view_change",
@@ -28203,6 +28257,8 @@
             "plenum.test.view_change.test_no_view_change_while_catchup",
             "plenum.test.view_change.test_node_detecting_lag_from_view_change_messages",
             "plenum.test.view_change.test_pp_seq_no_starts_from_1",
+            "plenum.test.view_change.test_pre_vc_strategy_3PC_msgs",
+            "plenum.test.view_change.test_prepare_in_queue_before_vc",
             "plenum.test.view_change.test_queueing_req_from_future_view",
             "plenum.test.view_change.test_resend_instance_change_messages",
             "plenum.test.view_change.test_reset_monitor_after_view_change",
@@ -28211,6 +28267,7 @@
             "plenum.test.view_change.test_select_primary_after_removed_backup",
             "plenum.test.view_change.test_start_view_change_ts_set",
             "plenum.test.view_change.test_that_domain_ledger_the_same_after_restart_for_all_nodes",
+            "plenum.test.view_change.test_vc_start_msg_strategy",
             "plenum.test.view_change.test_view_change",
             "plenum.test.view_change.test_view_change_after_back_to_quorum_with_disconnected_primary",
             "plenum.test.view_change.test_view_change_by_current_state",
@@ -28385,7 +28442,7 @@
             "stp_zmq.util",
             "stp_zmq.zstack"
         ],
-        "version": "1.6.580"
+        "version": "1.6.583"
     },
     "indy-plenum-new-names": {
         "cmdline": [],
@@ -34629,7 +34686,7 @@
             "inforcehub.colors",
             "inforcehub.inforcehub"
         ],
-        "version": "0.2.0"
+        "version": "0.2.2"
     },
     "inform": {
         "cmdline": [],
@@ -36675,6 +36732,7 @@
             "inlineplz.linters.ansiblelint",
             "inlineplz.linters.bandit",
             "inlineplz.linters.base",
+            "inlineplz.linters.black",
             "inlineplz.linters.coala",
             "inlineplz.linters.codenarc",
             "inlineplz.linters.detectsecrets",
@@ -36682,6 +36740,7 @@
             "inlineplz.linters.eclint",
             "inlineplz.linters.eslint",
             "inlineplz.linters.gherkinlint",
+            "inlineplz.linters.gofmt",
             "inlineplz.linters.gometalinter",
             "inlineplz.linters.hadolint",
             "inlineplz.linters.htmlhint",
@@ -36691,6 +36750,7 @@
             "inlineplz.linters.markdownlint",
             "inlineplz.linters.megacheck",
             "inlineplz.linters.pmd",
+            "inlineplz.linters.prettier",
             "inlineplz.linters.proselint",
             "inlineplz.linters.prospector",
             "inlineplz.linters.rflint",
@@ -36710,7 +36770,7 @@
             "inlineplz.util.git",
             "inlineplz.util.system"
         ],
-        "version": "0.44.0"
+        "version": "0.45.1"
     },
     "inlines": {
         "cmdline": [],
@@ -37104,7 +37164,7 @@
             "inoon_lora_packet.v3.parser",
             "inoon_lora_packet.v3.report"
         ],
-        "version": "3.3.2"
+        "version": "4.0.0"
     },
     "inoon-mgi-lib": {
         "cmdline": [],
@@ -40612,7 +40672,7 @@
             "integracio.poni",
             "integracio.utils"
         ],
-        "version": "2018.10.16"
+        "version": "2018.11.7"
     },
     "integrapy": {
         "cmdline": [],
@@ -44707,6 +44767,7 @@
         "modules": [
             "invenio_oauth2server",
             "invenio_oauth2server.admin",
+            "invenio_oauth2server.cli",
             "invenio_oauth2server.config",
             "invenio_oauth2server.decorators",
             "invenio_oauth2server.errors",
@@ -44723,7 +44784,7 @@
             "invenio_oauth2server.views.server",
             "invenio_oauth2server.views.settings"
         ],
-        "version": "1.0.1"
+        "version": "1.0.2"
     },
     "invenio-oauthclient": {
         "cmdline": [],
@@ -45989,7 +46050,7 @@
             "invoke_release.tasks",
             "invoke_release.version"
         ],
-        "version": "4.0.4"
+        "version": "4.0.5"
     },
     "invoke-sonar": {
         "cmdline": [],
@@ -48703,7 +48764,7 @@
             "iotdeviceprovisioner",
             "iotdeviceprovisioner.Bootstrap"
         ],
-        "version": "1.1.6"
+        "version": "1.1.7"
     },
     "iotedgedev": {
         "cmdline": [],
@@ -51334,10 +51395,9 @@
             "ipdb.district",
             "ipdb.exceptions",
             "ipdb.idc",
-            "ipdb.tempCodeRunnerFile",
             "ipdb.util"
         ],
-        "version": "0.5.0"
+        "version": "1.0.0"
     },
     "ipipe": {
         "cmdline": [],
@@ -68024,6 +68084,20 @@
         ],
         "version": "0.6.0"
     },
+    "isodatetime": {
+        "cmdline": [],
+        "modules": [
+            "isodatetime",
+            "isodatetime.data",
+            "isodatetime.dumpers",
+            "isodatetime.parser_spec",
+            "isodatetime.parsers",
+            "isodatetime.tests",
+            "isodatetime.timezone",
+            "isodatetime.util"
+        ],
+        "version": "2018.11.0"
+    },
     "isodatetimehandler": {
         "cmdline": [],
         "modules": [
@@ -68308,9 +68382,11 @@
             "IsoSpecPy",
             "IsoSpecPy.IsoSpecPy",
             "IsoSpecPy.PeriodicTbl",
+            "IsoSpecPy.confs_passthrough",
+            "IsoSpecPy.isoFFI",
             "IsoSpecPy.kahan"
         ],
-        "version": "1.0.7"
+        "version": "1.9.0"
     },
     "isosplit5": {
         "cmdline": [],
