@@ -2285,6 +2285,7 @@
             "ibm_ai_openscale.base_classes.assets",
             "ibm_ai_openscale.base_classes.assets.asset",
             "ibm_ai_openscale.base_classes.assets.known_service_asset",
+            "ibm_ai_openscale.base_classes.assets.properties",
             "ibm_ai_openscale.base_classes.clients",
             "ibm_ai_openscale.base_classes.clients.client",
             "ibm_ai_openscale.base_classes.clients.known_service_client",
@@ -2315,7 +2316,6 @@
             "ibm_ai_openscale.engines.custom_machine_learning.asset",
             "ibm_ai_openscale.engines.custom_machine_learning.consts",
             "ibm_ai_openscale.engines.custom_machine_learning.custom_client",
-            "ibm_ai_openscale.engines.custom_machine_learning.deployment",
             "ibm_ai_openscale.engines.custom_machine_learning.instance",
             "ibm_ai_openscale.engines.generic_machine_learning",
             "ibm_ai_openscale.engines.generic_machine_learning.generic_asset",
@@ -2365,9 +2365,11 @@
             "tests.install_requirements",
             "tests.models",
             "tests.models.AbstractModel",
+            "tests.models.Keras",
             "tests.models.KerasVGG16",
-            "tests.models.SPSSCustomerSatisfaction",
+            "tests.models.SPSS",
             "tests.models.Scikit",
+            "tests.models.Spark",
             "tests.models.SparkBestHeartDrug",
             "tests.models.SparkMlibRegression",
             "tests.models.Tensorflow",
@@ -2377,14 +2379,17 @@
             "tests.svt",
             "tests.svt.test_custom_deployment_structured_payload_logging",
             "tests.svt.test_custom_deployment_unstructured_image_payload_logging",
-            "tests.svt.test_custom_standalone_deployment_structured_payload_logging",
+            "tests.svt.test_datamart_operations",
             "tests.svt.test_generic_model_basic_operations",
             "tests.svt.test_generic_model_payload_logging",
+            "tests.svt.test_generic_model_performance_monitoring",
             "tests.svt.test_generic_model_update_deployments",
+            "tests.svt.test_generic_standalone_deployment_structured_payload_logging",
             "tests.svt.test_wml_function_basic_operations",
             "tests.svt.test_wml_function_payload_logging",
             "tests.svt.test_wml_function_performance_monitoring",
             "tests.svt.test_wml_model_basic_operations",
+            "tests.svt.test_wml_model_basic_operations_with_internal_db",
             "tests.svt.test_wml_model_basic_operations_with_specifing_deployments",
             "tests.svt.test_wml_model_keras_classification_performance",
             "tests.svt.test_wml_model_keras_payload_logging",
@@ -2397,7 +2402,6 @@
             "tests.svt.test_wml_model_spark_fairness_monitoring_best_drug",
             "tests.svt.test_wml_model_spark_payload_logging",
             "tests.svt.test_wml_model_spark_performance_monitoring",
-            "tests.svt.test_wml_model_spark_quality_interval",
             "tests.svt.test_wml_model_spark_quality_monitoring_with_feedback",
             "tests.svt.test_wml_model_spark_quality_monitoring_with_learning_system_and_feedback",
             "tests.svt.test_wml_model_spark_regression_explainability",
@@ -2410,12 +2414,10 @@
             "tests.svt.test_wml_model_tensorflow_performance_monitoring",
             "tests.svt.test_wml_model_xgboost_payload_logging",
             "tests.svt.test_wml_model_xgboost_performance",
-            "tests.test_base",
-            "tests.test_runner",
             "tests.unittests",
             "tests.unittests.test_table"
         ],
-        "version": "1.0.71"
+        "version": "1.0.92"
     },
     "ibm-analytics-engine-python": {
         "cmdline": [],
@@ -3556,7 +3558,7 @@
             "icalevents.icalevents",
             "icalevents.icalparser"
         ],
-        "version": "0.1.13"
+        "version": "0.1.14"
     },
     "icall": {
         "cmdline": [],
@@ -8110,6 +8112,11 @@
             "ido.utils"
         ],
         "version": "0.5"
+    },
+    "idodaniel": {
+        "cmdline": [],
+        "modules": [],
+        "version": "1.0.3"
     },
     "idoggo": {
         "cmdline": [],
@@ -13548,6 +13555,14 @@
         ],
         "version": "0.0.3"
     },
+    "imagefourier": {
+        "cmdline": [],
+        "modules": [
+            "imagefourier",
+            "imagefourier.imagefourier"
+        ],
+        "version": "0.1.3"
+    },
     "imagefy": {
         "cmdline": [],
         "modules": [
@@ -15608,6 +15623,19 @@
             "img_utils.images.image"
         ],
         "version": "0.0.13"
+    },
+    "img2gb": {
+        "cmdline": [],
+        "modules": [
+            "img2gb",
+            "img2gb.cli",
+            "img2gb.export",
+            "img2gb.gbtile",
+            "img2gb.gbtilemap",
+            "img2gb.gbtileset",
+            "img2gb.helpers"
+        ],
+        "version": "0.9.1"
     },
     "img2gif": {
         "cmdline": [],
@@ -19656,7 +19684,7 @@
             "imreadeval",
             "imreadeval.imread"
         ],
-        "version": "0.2.0"
+        "version": "0.2.2"
     },
     "imreg-dft": {
         "cmdline": [],
@@ -20073,7 +20101,7 @@
             "inapppy.errors",
             "inapppy.googleplay"
         ],
-        "version": "0.8"
+        "version": "0.9"
     },
     "inappropriate-notifications": {
         "cmdline": [],
@@ -25197,12 +25225,6 @@
             "indy_client.test.constants",
             "indy_client.test.helper",
             "indy_client.test.scripts",
-            "indy_client.test.state_proof",
-            "indy_client.test.state_proof.helper",
-            "indy_client.test.state_proof.test_asking_one_node",
-            "indy_client.test.state_proof.test_state_proof_for_get_requests",
-            "indy_client.test.state_proof.test_state_proof_for_missing_data",
-            "indy_client.test.test_nym_attrib",
             "indy_client.test.training",
             "indy_client.test.training.getting_started",
             "indy_client.test.training.getting_started_future",
@@ -25317,6 +25339,7 @@
             "indy_node.test.attrib_txn",
             "indy_node.test.attrib_txn.test_attrib_txn_digest",
             "indy_node.test.attrib_txn.test_n_minus_f_pool_processes_attrib",
+            "indy_node.test.attrib_txn.test_nym_attrib",
             "indy_node.test.catchup",
             "indy_node.test.catchup.conftest",
             "indy_node.test.catchup.test_batch_rejected_and_later_ordered_on_catchup",
@@ -25333,6 +25356,7 @@
             "indy_node.test.memory_debugging",
             "indy_node.test.memory_debugging.test_memory_debugging",
             "indy_node.test.nym_txn",
+            "indy_node.test.nym_txn.test_nym",
             "indy_node.test.nym_txn.test_nym_resend",
             "indy_node.test.persistence",
             "indy_node.test.persistence.test_idr_cache",
@@ -25358,7 +25382,11 @@
             "indy_node.test.request_propagates",
             "indy_node.test.request_propagates.test_request_propagates",
             "indy_node.test.state_proof",
-            "indy_node.test.state_proof.test_state_proofs_for_get_requests",
+            "indy_node.test.state_proof.helper",
+            "indy_node.test.state_proof.test_asking_one_node",
+            "indy_node.test.state_proof.test_state_multi_proofs_for_get_requests",
+            "indy_node.test.state_proof.test_state_proof_for_get_requests",
+            "indy_node.test.state_proof.test_state_proof_for_missing_data",
             "indy_node.test.suspension",
             "indy_node.test.suspension.helper",
             "indy_node.test.suspension.test_suspension",
@@ -25429,7 +25457,7 @@
             "indy_node.utils.node_runner",
             "sample"
         ],
-        "version": "1.6.676"
+        "version": "1.6.679"
     },
     "indy-node-new-names": {
         "cmdline": [],
@@ -28444,7 +28472,7 @@
             "stp_zmq.util",
             "stp_zmq.zstack"
         ],
-        "version": "1.6.588"
+        "version": "1.6.589"
     },
     "indy-plenum-new-names": {
         "cmdline": [],
@@ -37373,7 +37401,7 @@
             "tests",
             "tests.test_matcher"
         ],
-        "version": "0.1.17"
+        "version": "0.1.19"
     },
     "input-mocker": {
         "cmdline": [],
@@ -43113,60 +43141,55 @@
         "cmdline": [],
         "modules": [
             "intermake",
-            "intermake.commands.basic_command",
+            "intermake.commands",
             "intermake.commands.common_commands",
-            "intermake.commands.console_explorer",
-            "intermake.commands.setter_command",
-            "intermake.commands.test_plugins",
             "intermake.commands.visibilities",
-            "intermake.datastore.local_data",
+            "intermake.engine",
             "intermake.engine.abstract_command",
+            "intermake.engine.abstract_controller",
             "intermake.engine.async_result",
-            "intermake.engine.cli_helper",
-            "intermake.engine.command_collection",
+            "intermake.engine.collections",
             "intermake.engine.constants",
             "intermake.engine.environment",
             "intermake.engine.help",
-            "intermake.engine.host_manager",
-            "intermake.engine.mandate",
-            "intermake.engine.progress_reporter",
+            "intermake.engine.local_data",
             "intermake.engine.theme",
+            "intermake.engine.threaded_stream",
             "intermake.extensions",
             "intermake.extensions.coercion_extensions",
-            "intermake.helpers.file_to_display",
-            "intermake.helpers.results_explorer",
+            "intermake.framework",
+            "intermake.framework.basic_application",
+            "intermake.framework.basic_command",
+            "intermake.framework.console_configuration",
+            "intermake.framework.console_controller",
+            "intermake.framework.console_parser",
+            "intermake.framework.readline_importer",
+            "intermake.framework.setter_command",
+            "intermake.helpers.help_text",
+            "intermake.helpers.printing",
             "intermake.helpers.subprocess_helper",
-            "intermake.helpers.table_draw",
-            "intermake.hosts.base",
-            "intermake.hosts.console",
-            "intermake.hosts.frontends.command_line",
-            "intermake.init",
-            "intermake.visualisables.visualisable",
             "intermake_qt",
             "intermake_qt.extensions",
-            "intermake_qt.extensions.editorium_extensions",
+            "intermake_qt.extensions.gui_controller",
             "intermake_qt.extensions.resources_extensions",
             "intermake_qt.forms.designer.frm_arguments_designer",
             "intermake_qt.forms.designer.frm_big_text_designer",
-            "intermake_qt.forms.designer.frm_intermake_main_designer",
             "intermake_qt.forms.designer.frm_maintenance_designer",
-            "intermake_qt.forms.designer.frm_tree_view_designer",
             "intermake_qt.forms.designer.resource_files.resources",
             "intermake_qt.forms.designer.resource_files.resources_rc",
             "intermake_qt.forms.frm_arguments",
             "intermake_qt.forms.frm_big_text",
             "intermake_qt.forms.frm_intermake_main",
             "intermake_qt.forms.frm_maintenance",
-            "intermake_qt.forms.frm_tree_view",
-            "intermake_qt.host.gui",
+            "intermake_qt.utilities",
+            "intermake_qt.utilities.css_processing",
+            "intermake_qt.utilities.formatting",
+            "intermake_qt.utilities.gui_command_options",
             "intermake_qt.utilities.interfaces",
-            "intermake_qt.utilities.intermake_gui",
-            "intermake_qt.utilities.visualisation",
-            "intermake_qt.views.progress_view",
-            "intermake_qt.views.results_view",
-            "intermake_qt.views.tree_view"
+            "intermake_test",
+            "intermake_test.commands"
         ],
-        "version": "1.0.0.71"
+        "version": "1.0.0.76"
     },
     "interminal": {
         "cmdline": [
@@ -47160,7 +47183,7 @@
         "modules": [
             "ioapi"
         ],
-        "version": "0.0.3"
+        "version": "0.0.4"
     },
     "iob": {
         "cmdline": [],
@@ -47308,7 +47331,7 @@
             "ioc_fanger",
             "ioc_fanger.ioc_fanger"
         ],
-        "version": "3.0.0"
+        "version": "3.0.1"
     },
     "ioc-finder": {
         "cmdline": [],
@@ -48505,7 +48528,7 @@
             "ionosphere.utils",
             "ionosphere.validators"
         ],
-        "version": "0.0.23"
+        "version": "0.0.24"
     },
     "ionyweb": {
         "cmdline": [],
@@ -69194,7 +69217,7 @@
             "IsoSpecPy.isoFFI",
             "IsoSpecPy.kahan"
         ],
-        "version": "1.9.0"
+        "version": "1.9.1"
     },
     "isosplit5": {
         "cmdline": [],
@@ -76334,7 +76357,7 @@
             "ixnetwork_restpy.testplatform.sessions.sessions",
             "ixnetwork_restpy.testplatform.testplatform"
         ],
-        "version": "1.0.2"
+        "version": "1.0.6"
     },
     "ixnooapi": {
         "cmdline": [],
