@@ -1344,7 +1344,7 @@
             "racket.server",
             "racket.utils"
         ],
-        "version": "0.3.4"
+        "version": "0.3.5"
     },
     "rackfocus": {
         "cmdline": [],
@@ -14059,36 +14059,49 @@
             "rasa_dialogflow_interpreter",
             "rasa_dialogflow_interpreter.interpreter"
         ],
-        "version": "0.2.0"
+        "version": "0.3.0"
     },
     "rasa-host": {
         "cmdline": [],
         "modules": [
             "RasaHost",
             "RasaHost.controllers",
+            "RasaHost.controllers.analyze_controller",
+            "RasaHost.controllers.chat_controller",
             "RasaHost.controllers.domain_controller",
             "RasaHost.controllers.home_controller",
-            "RasaHost.controllers.intents_controller",
             "RasaHost.controllers.logs_controller",
+            "RasaHost.controllers.models_controller",
+            "RasaHost.controllers.nlu_controller",
             "RasaHost.controllers.rasa_controller",
             "RasaHost.controllers.stories_controller",
             "RasaHost.database",
+            "RasaHost.database.conversations",
             "RasaHost.database.db_context",
             "RasaHost.database.logs",
             "RasaHost.database.metadata",
+            "RasaHost.logging",
+            "RasaHost.logging.db_handler",
+            "RasaHost.logging.request_id",
+            "RasaHost.logging.senderid_filter",
+            "RasaHost.logging.socketio_handler",
             "RasaHost.models",
             "RasaHost.models.azuretablestorage",
             "RasaHost.models.factory",
             "RasaHost.models.memory",
             "RasaHost.models.mongodb",
             "RasaHost.services",
+            "RasaHost.services.analyze_service",
+            "RasaHost.services.conversations_service",
             "RasaHost.services.domain_service",
-            "RasaHost.services.intents_service",
             "RasaHost.services.logging_service",
+            "RasaHost.services.memoization_policy_service",
+            "RasaHost.services.nlu_service",
+            "RasaHost.services.query_parser",
             "RasaHost.services.stories_service",
             "RasaHost.settings"
         ],
-        "version": "0.0.1"
+        "version": "0.0.2"
     },
     "rasa-mongo-tracker-store": {
         "cmdline": [],
@@ -14158,7 +14171,7 @@
             "rasa_nlu.utils.spacy_utils",
             "rasa_nlu.version"
         ],
-        "version": "0.13.7"
+        "version": "0.13.8"
     },
     "rasa-nlu-gao": {
         "cmdline": [],
@@ -16967,7 +16980,7 @@
             "raw2clean.raw2clean",
             "raw2clean.summary_fastq"
         ],
-        "version": "1.0.7"
+        "version": "1.0.8"
     },
     "raw2mzml": {
         "cmdline": [],
@@ -21733,7 +21746,7 @@
     "read": {
         "cmdline": [],
         "modules": [],
-        "version": "1.0.2"
+        "version": "2018.11.20"
     },
     "read-and-close": {
         "cmdline": [],
@@ -21829,7 +21842,7 @@
             "read_roi._read_roi",
             "read_roi._version"
         ],
-        "version": "1.4.2"
+        "version": "1.4.6"
     },
     "read-sync": {
         "cmdline": [],
@@ -27788,7 +27801,7 @@
             "redis_extensions.expires",
             "redis_extensions.extensions"
         ],
-        "version": "1.2.3"
+        "version": "1.2.4"
     },
     "redis-faina": {
         "cmdline": [
@@ -28012,9 +28025,10 @@
     "redis-namespace": {
         "cmdline": [],
         "modules": [
-            "redis_namespace"
+            "redis_namespace",
+            "redis_namespace._version"
         ],
-        "version": "0.0.4"
+        "version": "3.0.1.1"
     },
     "redis-natives": {
         "cmdline": [],
@@ -29307,6 +29321,14 @@
         "version": "1.3.0"
     },
     "redlock-py": {
+        "cmdline": [],
+        "modules": [
+            "redlock",
+            "redlock.cli"
+        ],
+        "version": "1.0.8"
+    },
+    "redlock-py-catch": {
         "cmdline": [],
         "modules": [
             "redlock",
@@ -31704,6 +31726,13 @@
             "redylitics.wsgi"
         ],
         "version": "0.0.15"
+    },
+    "redys": {
+        "cmdline": [],
+        "modules": [
+            "redys"
+        ],
+        "version": "0.9.4"
     },
     "ree": {
         "cmdline": [],
@@ -43997,6 +44026,13 @@
         ],
         "version": "1.2.2"
     },
+    "requestidlogger": {
+        "cmdline": [],
+        "modules": [
+            "request_id_logger"
+        ],
+        "version": "0.1"
+    },
     "requestify": {
         "cmdline": [],
         "modules": [
@@ -48561,6 +48597,14 @@
             "rest_utils.worker.worker"
         ],
         "version": "1.1.7"
+    },
+    "rest2cmd": {
+        "cmdline": [],
+        "modules": [
+            "rest2cmd",
+            "rest2cmd.rest2cmd"
+        ],
+        "version": "0.0.2"
     },
     "rest2web": {
         "cmdline": [],
@@ -53448,7 +53492,7 @@
             "reviewio",
             "reviewio.cli"
         ],
-        "version": "0.1.6"
+        "version": "0.1.7"
     },
     "reviewleaderboard": {
         "cmdline": [],
@@ -54456,7 +54500,7 @@
             "reynir.reynir",
             "reynir.settings"
         ],
-        "version": "1.3.1"
+        "version": "1.3.2"
     },
     "rez": {
         "cmdline": [],
@@ -56142,13 +56186,20 @@
             "rhcephcompose",
             "rhcephcompose.artifacts",
             "rhcephcompose.build",
+            "rhcephcompose.common_koji",
             "rhcephcompose.compose",
             "rhcephcompose.comps",
+            "rhcephcompose.gather",
+            "rhcephcompose.gather.chacra",
+            "rhcephcompose.gather.koji",
             "rhcephcompose.log",
             "rhcephcompose.main",
+            "rhcephcompose.metadata",
+            "rhcephcompose.metadata.composeinfo",
+            "rhcephcompose.metadata.debs",
             "rhcephcompose.variants"
         ],
-        "version": "1.3.1"
+        "version": "1.4.1"
     },
     "rhcephpkg": {
         "cmdline": [
@@ -58298,7 +58349,7 @@
             "tests",
             "tests.test"
         ],
-        "version": "0.0.14"
+        "version": "0.0.15"
     },
     "rigger-singleton": {
         "cmdline": [],
@@ -59046,6 +59097,27 @@
             "ringcentral.test.testcase"
         ],
         "version": "0.7.9"
+    },
+    "ringcentral-bot-framework": {
+        "cmdline": [],
+        "modules": [
+            "ringcentral_bot_framework",
+            "ringcentral_bot_framework.core",
+            "ringcentral_bot_framework.core.bot",
+            "ringcentral_bot_framework.core.bot_oauth",
+            "ringcentral_bot_framework.core.bot_webhook",
+            "ringcentral_bot_framework.core.common",
+            "ringcentral_bot_framework.core.config",
+            "ringcentral_bot_framework.core.config_default",
+            "ringcentral_bot_framework.core.db",
+            "ringcentral_bot_framework.core.dynamodb",
+            "ringcentral_bot_framework.core.filedb",
+            "ringcentral_bot_framework.core.route",
+            "ringcentral_bot_framework.core.user",
+            "ringcentral_bot_framework.core.user_oauth",
+            "ringcentral_bot_framework.core.user_webhook"
+        ],
+        "version": "0.0.5"
     },
     "ringcentral-client": {
         "cmdline": [],
@@ -62557,7 +62629,7 @@
             "rlbot.utils.structures.utils",
             "rlbot.version"
         ],
-        "version": "1.5.0"
+        "version": "1.5.1"
     },
     "rlclient": {
         "cmdline": [],
@@ -64876,7 +64948,7 @@
             "rmsd",
             "rmsd.calculate_rmsd"
         ],
-        "version": "1.2.7"
+        "version": "1.3.0"
     },
     "rmseq": {
         "cmdline": [
@@ -70690,7 +70762,7 @@
             "robotpy_installer",
             "robotpy_installer.installer"
         ],
-        "version": "2018.0.5"
+        "version": "2018.0.6"
     },
     "robotpy-navx": {
         "cmdline": [],
@@ -78491,7 +78563,7 @@
             "rpcq.messages",
             "rpcq.version"
         ],
-        "version": "2.1.0"
+        "version": "2.2.0"
     },
     "rpcservices": {
         "cmdline": [],
@@ -79038,7 +79110,7 @@
             "rpi_ws281x",
             "rpi_ws281x.rpi_ws281x"
         ],
-        "version": "4.0.0"
+        "version": "4.1.0"
     },
     "rpi-xmpp": {
         "cmdline": [],
@@ -85252,7 +85324,7 @@
     "rstvalidator": {
         "cmdline": [],
         "modules": [],
-        "version": "1.0.3"
+        "version": "2018.11.20"
     },
     "rstview": {
         "cmdline": [],
@@ -85734,7 +85806,7 @@
             "rtbhouse_sdk",
             "rtbhouse_sdk.reports_api"
         ],
-        "version": "3.3.0"
+        "version": "3.3.1"
     },
     "rtc-tools": {
         "cmdline": [],
@@ -87153,7 +87225,7 @@
             "ruamel.yaml.tokens",
             "ruamel.yaml.util"
         ],
-        "version": "0.15.78"
+        "version": "0.15.79"
     },
     "ruamel-yaml-base": {
         "cmdline": [],
