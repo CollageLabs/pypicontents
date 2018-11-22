@@ -581,7 +581,7 @@
     "j2y": {
         "cmdline": [],
         "modules": [],
-        "version": "0.2.0"
+        "version": "0.2.1"
     },
     "j5basic": {
         "cmdline": [],
@@ -2457,7 +2457,7 @@
             "jam.wsgi",
             "jam.wsgi_server"
         ],
-        "version": "5.4.27"
+        "version": "5.4.29"
     },
     "jamaddr": {
         "cmdline": [],
@@ -6075,23 +6075,33 @@
         "modules": [
             "jcms",
             "jcms.apps",
+            "jcms.components",
+            "jcms.components.no_config",
+            "jcms.components.url_parser",
+            "jcms.components.util",
+            "jcms.config",
+            "jcms.config.app_info",
+            "jcms.config.jcms_settings",
+            "jcms.exceptions",
+            "jcms.exceptions.jcms_variable_missing",
+            "jcms.exceptions.submodule_missing",
             "jcms.forms",
-            "jcms.helpers",
-            "jcms.helpers.api_views",
-            "jcms.helpers.crud_views",
-            "jcms.helpers.functions",
-            "jcms.helpers.menu_item",
+            "jcms.generators",
+            "jcms.generators.api_generator",
+            "jcms.generators.cms_generator",
+            "jcms.generators.url_generator",
+            "jcms.jcms",
             "jcms.migrations",
             "jcms.migrations.0001_initial",
             "jcms.migrations.0002_auto_20170423_2048",
             "jcms.migrations.0003_remove_option_key",
             "jcms.migrations.0004_auto_20170529_2005",
             "jcms.migrations.0005_auto_20170720_1811",
-            "jcms.mixins",
-            "jcms.mixins.jcms_api",
-            "jcms.mixins.jcms_crud",
-            "jcms.mixins.menu_item",
             "jcms.models",
+            "jcms.models.generic_menu_item",
+            "jcms.models.models",
+            "jcms.models.single_menu_item",
+            "jcms.settings",
             "jcms.templatetags",
             "jcms.templatetags.add_item",
             "jcms.templatetags.crud_url",
@@ -6103,7 +6113,7 @@
             "jcms.views.groupsViews",
             "jcms.views.loginViews"
         ],
-        "version": "1.1.6"
+        "version": "1.2.0"
     },
     "jconf": {
         "cmdline": [],
@@ -6593,7 +6603,7 @@
             "testcases.config_test",
             "testcases.nc_test"
         ],
-        "version": "0.7.1"
+        "version": "0.7.2"
     },
     "jdcloud-sdk": {
         "cmdline": [],
@@ -11018,7 +11028,7 @@
             "jhub.mount",
             "jhub.swarmspawner"
         ],
-        "version": "0.1.3"
+        "version": "0.1.4"
     },
     "jhubctl": {
         "cmdline": [],
@@ -13671,7 +13681,7 @@
             "jismesh",
             "jismesh.utils"
         ],
-        "version": "1.3.1"
+        "version": "2.0.0"
     },
     "jit-open": {
         "cmdline": [],
@@ -13916,6 +13926,10 @@
             "jivago.scheduling.scheduled_task_runner",
             "jivago.scheduling.task_schedule_initializer",
             "jivago.scheduling.task_scheduler",
+            "jivago.serialization",
+            "jivago.serialization.dto_serialization_handler",
+            "jivago.serialization.object_mapper",
+            "jivago.serialization.serialization_exception",
             "jivago.templating",
             "jivago.templating.no_such_template_exception",
             "jivago.templating.rendered_view",
@@ -13923,45 +13937,87 @@
             "jivago.templating.view_template_repository",
             "jivago.wsgi",
             "jivago.wsgi.annotations",
-            "jivago.wsgi.dto_serialization_handler",
-            "jivago.wsgi.filters",
-            "jivago.wsgi.filters.body_serialization_filter",
-            "jivago.wsgi.filters.exception",
-            "jivago.wsgi.filters.exception.application_exception_filter",
-            "jivago.wsgi.filters.exception.debug_exception_filter",
-            "jivago.wsgi.filters.exception.exception_mapper",
-            "jivago.wsgi.filters.exception.routing",
-            "jivago.wsgi.filters.exception.routing.incorrect_resource_parameters_exception_mapper",
-            "jivago.wsgi.filters.exception.routing.method_not_allowed_exception_mapper",
-            "jivago.wsgi.filters.exception.routing.unknown_path_exception_mapper",
-            "jivago.wsgi.filters.exception.unknown_exception_filter",
-            "jivago.wsgi.filters.filter",
-            "jivago.wsgi.filters.filter_chain",
-            "jivago.wsgi.filters.jivago_banner_filter",
-            "jivago.wsgi.headers",
-            "jivago.wsgi.http_status_code_resolver",
-            "jivago.wsgi.incorrect_attribute_type_exception",
-            "jivago.wsgi.incorrect_resource_parameters_exception",
-            "jivago.wsgi.method_not_allowed_exception",
+            "jivago.wsgi.filter",
+            "jivago.wsgi.filter.body_serialization_filter",
+            "jivago.wsgi.filter.error_handling",
+            "jivago.wsgi.filter.error_handling.application_exception_filter",
+            "jivago.wsgi.filter.error_handling.debug_exception_filter",
+            "jivago.wsgi.filter.error_handling.exception_mapper",
+            "jivago.wsgi.filter.error_handling.unknown_exception_filter",
+            "jivago.wsgi.filter.filter",
+            "jivago.wsgi.filter.filter_chain",
+            "jivago.wsgi.filter.jivago_banner_filter",
+            "jivago.wsgi.invocation",
+            "jivago.wsgi.invocation.incorrect_attribute_type_exception",
+            "jivago.wsgi.invocation.incorrect_resource_parameters_exception",
+            "jivago.wsgi.invocation.missing_route_invocation_argument",
+            "jivago.wsgi.invocation.resource_invocator",
             "jivago.wsgi.methods",
-            "jivago.wsgi.missing_route_invocation_argument",
-            "jivago.wsgi.partial_content_handler",
             "jivago.wsgi.request",
+            "jivago.wsgi.request.headers",
             "jivago.wsgi.request.http_form_deserialization_filter",
+            "jivago.wsgi.request.http_status_code_resolver",
             "jivago.wsgi.request.json_serialization_filter",
             "jivago.wsgi.request.no_cors_filter",
+            "jivago.wsgi.request.partial_content_handler",
             "jivago.wsgi.request.request",
+            "jivago.wsgi.request.request_factory",
             "jivago.wsgi.request.response",
             "jivago.wsgi.request.url_encoded_query_parser",
-            "jivago.wsgi.resource_invocator",
-            "jivago.wsgi.route_node",
-            "jivago.wsgi.route_registration",
-            "jivago.wsgi.router",
-            "jivago.wsgi.routing_table",
-            "jivago.wsgi.serialization_exception",
-            "jivago.wsgi.unknown_path_exception"
+            "jivago.wsgi.routing",
+            "jivago.wsgi.routing.auto_discovering_routing_table",
+            "jivago.wsgi.routing.composite_routing_table",
+            "jivago.wsgi.routing.exception",
+            "jivago.wsgi.routing.exception.incorrect_resource_parameters_exception_mapper",
+            "jivago.wsgi.routing.exception.method_not_allowed_exception",
+            "jivago.wsgi.routing.exception.method_not_allowed_exception_mapper",
+            "jivago.wsgi.routing.exception.routing_exception",
+            "jivago.wsgi.routing.exception.unknown_path_exception",
+            "jivago.wsgi.routing.exception.unknown_path_exception_mapper",
+            "jivago.wsgi.routing.prefix_decorated_routing_table",
+            "jivago.wsgi.routing.reflective_routing_table",
+            "jivago.wsgi.routing.route_node",
+            "jivago.wsgi.routing.route_registration",
+            "jivago.wsgi.routing.router",
+            "jivago.wsgi.routing.routing_table",
+            "jivago.wsgi.routing.serving",
+            "jivago.wsgi.routing.serving.static_file_routing_table",
+            "jivago.wsgi.routing.serving.static_file_serving_resource",
+            "jivago.wsgi.routing.tree_routing_table",
+            "test",
+            "test.scheduling",
+            "test.scheduling.test_task_schedule_initializer",
+            "test.serialization",
+            "test.serialization.test_dto_serialization_handler",
+            "test.serialization.test_object_mapper",
+            "test.templating",
+            "test.templating.test_template_filter",
+            "test.templating.test_view_template_repository",
+            "test.wsgi",
+            "test.wsgi.filter",
+            "test.wsgi.filter.test_application_exception_filter",
+            "test.wsgi.filter.test_body_serialization_filter",
+            "test.wsgi.filter.test_filter_chain",
+            "test.wsgi.filter.test_jivago_banner_filter",
+            "test.wsgi.filter.test_json_serialization_filter",
+            "test.wsgi.reqquest",
+            "test.wsgi.reqquest.test_headers",
+            "test.wsgi.reqquest.test_request_factory",
+            "test.wsgi.routing",
+            "test.wsgi.routing.serving",
+            "test.wsgi.routing.serving.test_static_file_routing_table",
+            "test.wsgi.routing.test_composite_routing_table",
+            "test.wsgi.routing.test_prefix_decorated_routing_table",
+            "test.wsgi.routing.test_route_node",
+            "test.wsgi.routing.test_route_registration",
+            "test.wsgi.routing.test_router",
+            "test.wsgi.routing.test_tree_routing_table",
+            "test.wsgi.test_http_form_deserialization_filter",
+            "test.wsgi.test_partial_content_handler",
+            "test.wsgi.test_resource_invocator",
+            "test.wsgi.test_url_encoded_query_parser"
         ],
-        "version": "0.3.4"
+        "version": "0.4.0"
     },
     "jive": {
         "cmdline": [],
@@ -16533,29 +16589,8 @@
     },
     "jnrbase": {
         "cmdline": [],
-        "modules": [
-            "jnrbase",
-            "jnrbase._version",
-            "jnrbase.attrdict",
-            "jnrbase.cmdline",
-            "jnrbase.colourise",
-            "jnrbase.config",
-            "jnrbase.context",
-            "jnrbase.debug",
-            "jnrbase.entry",
-            "jnrbase.git",
-            "jnrbase.httplib2_certs",
-            "jnrbase.human_time",
-            "jnrbase.i18n",
-            "jnrbase.iso_8601",
-            "jnrbase.json_datetime",
-            "jnrbase.pager",
-            "jnrbase.pip_support",
-            "jnrbase.template",
-            "jnrbase.timer",
-            "jnrbase.xdg_basedir"
-        ],
-        "version": "1.0.0"
+        "modules": [],
+        "version": "1.1.0"
     },
     "jo-story": {
         "cmdline": [],
@@ -23879,7 +23914,7 @@
     "jsms": {
         "cmdline": [],
         "modules": [],
-        "version": "0.0.2"
+        "version": "0.0.3"
     },
     "jsnapy": {
         "cmdline": [
@@ -24303,9 +24338,10 @@
         "modules": [
             "json_lines",
             "json_lines._gzip",
-            "json_lines._lib"
+            "json_lines._lib",
+            "json_lines.utils"
         ],
-        "version": "0.4.0"
+        "version": "0.5.0"
     },
     "json-lines-to-object": {
         "cmdline": [
@@ -25157,7 +25193,7 @@
             "json2db.core",
             "json2db.types"
         ],
-        "version": "2.0.0"
+        "version": "3.1.0"
     },
     "json2df": {
         "cmdline": [],
@@ -26364,6 +26400,18 @@
         "cmdline": [],
         "modules": [],
         "version": ""
+    },
+    "jsonizable": {
+        "cmdline": [],
+        "modules": [
+            "jsonizable",
+            "jsonizable.common",
+            "jsonizable.exceptions",
+            "jsonizable.jsonizable",
+            "jsonizable.read",
+            "jsonizable.write"
+        ],
+        "version": "0.0.65"
     },
     "jsonjsc": {
         "cmdline": [],
@@ -33797,9 +33845,11 @@
             "jupyterlab_git.handlers",
             "tests",
             "tests.unit",
+            "tests.unit.test_branch",
+            "tests.unit.test_git",
             "tests.unit.test_handlers"
         ],
-        "version": "0.3.0"
+        "version": "0.4.4"
     },
     "jupyterlab-github": {
         "cmdline": [],
@@ -34026,7 +34076,7 @@
             "jupyters3",
             "jupyters3.jupyters3"
         ],
-        "version": "0.0.28"
+        "version": "0.0.29"
     },
     "jupyterspark": {
         "cmdline": [],
@@ -34575,13 +34625,6 @@
         ],
         "version": "1.0.2"
     },
-    "juruskupang": {
-        "cmdline": [],
-        "modules": [
-            "juruskupang"
-        ],
-        "version": "2.0"
-    },
     "jusibe": {
         "cmdline": [],
         "modules": [
@@ -35037,7 +35080,7 @@
             "justpith.util",
             "justpith.util.util"
         ],
-        "version": "1.0.4.28"
+        "version": "1.0.4.29"
     },
     "justpith-docker": {
         "cmdline": [],
@@ -35962,6 +36005,16 @@
         ],
         "version": "0.10.17243"
     },
+    "jxctl": {
+        "cmdline": [],
+        "modules": [
+            "jxctl",
+            "jxctl.ctlcore",
+            "jxctl.jxcore",
+            "jxctl.jxctl"
+        ],
+        "version": "0.0.2"
+    },
     "jxdwinter-nester": {
         "cmdline": [],
         "modules": [
@@ -36365,7 +36418,7 @@
             "JYTools/util.string_rich",
             "JYTools/util.strong"
         ],
-        "version": "1.9.6"
+        "version": "1.9.7"
     },
     "jyu-formwidget-object": {
         "cmdline": [],
