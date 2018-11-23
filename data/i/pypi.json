@@ -2325,6 +2325,11 @@
             "ibm_ai_openscale.clients_manager",
             "ibm_ai_openscale.data_mart",
             "ibm_ai_openscale.engines",
+            "ibm_ai_openscale.engines.azure_machine_learning",
+            "ibm_ai_openscale.engines.azure_machine_learning.asset",
+            "ibm_ai_openscale.engines.azure_machine_learning.azure_client",
+            "ibm_ai_openscale.engines.azure_machine_learning.consts",
+            "ibm_ai_openscale.engines.azure_machine_learning.instance",
             "ibm_ai_openscale.engines.custom_machine_learning",
             "ibm_ai_openscale.engines.custom_machine_learning.asset",
             "ibm_ai_openscale.engines.custom_machine_learning.consts",
@@ -2335,6 +2340,11 @@
             "ibm_ai_openscale.engines.generic_machine_learning.generic_client",
             "ibm_ai_openscale.engines.generic_machine_learning.generic_consts",
             "ibm_ai_openscale.engines.generic_machine_learning.generic_machine_learning_instance",
+            "ibm_ai_openscale.engines.sagemaker_machine_learning",
+            "ibm_ai_openscale.engines.sagemaker_machine_learning.asset",
+            "ibm_ai_openscale.engines.sagemaker_machine_learning.consts",
+            "ibm_ai_openscale.engines.sagemaker_machine_learning.instance",
+            "ibm_ai_openscale.engines.sagemaker_machine_learning.sagemaker_client",
             "ibm_ai_openscale.engines.watson_machine_learning",
             "ibm_ai_openscale.engines.watson_machine_learning.asset",
             "ibm_ai_openscale.engines.watson_machine_learning.client",
@@ -2381,6 +2391,7 @@
             "tests.models.Keras",
             "tests.models.KerasVGG16",
             "tests.models.SPSS",
+            "tests.models.Sagemaker",
             "tests.models.Scikit",
             "tests.models.Spark",
             "tests.models.SparkBestHeartDrug",
@@ -2390,14 +2401,21 @@
             "tests.models_preparation",
             "tests.preparation_and_cleaning",
             "tests.svt",
+            "tests.svt.test_azure_deployment_structured_all_monitors",
             "tests.svt.test_custom_deployment_structured_payload_logging",
             "tests.svt.test_custom_deployment_unstructured_image_payload_logging",
             "tests.svt.test_datamart_operations",
+            "tests.svt.test_db2_3rd_party_payload_logging",
+            "tests.svt.test_db2_wml_model_keras",
+            "tests.svt.test_db2_wml_model_spark_payload_logging",
+            "tests.svt.test_db2_wml_model_spark_quality_monitoring_with_feedback",
             "tests.svt.test_generic_model_basic_operations",
             "tests.svt.test_generic_model_payload_logging",
             "tests.svt.test_generic_model_performance_monitoring",
             "tests.svt.test_generic_model_update_deployments",
             "tests.svt.test_generic_standalone_deployment_structured_payload_logging",
+            "tests.svt.test_sagemaker_deployment_structured_all_monitors",
+            "tests.svt.test_update_data_mart_databases",
             "tests.svt.test_wml_function_basic_operations",
             "tests.svt.test_wml_function_payload_logging",
             "tests.svt.test_wml_function_performance_monitoring",
@@ -2431,7 +2449,7 @@
             "tests.unittests",
             "tests.unittests.test_table"
         ],
-        "version": "1.0.96"
+        "version": "1.0.128"
     },
     "ibm-ai-openscale-cli": {
         "cmdline": [],
@@ -3487,6 +3505,23 @@
         "cmdline": [],
         "modules": [],
         "version": ""
+    },
+    "ic-flask-login": {
+        "cmdline": [],
+        "modules": [
+            "ic_flask_login",
+            "ic_flask_login.context",
+            "ic_flask_login.mixins"
+        ],
+        "version": "1.0.0"
+    },
+    "ic-flask-rbac": {
+        "cmdline": [],
+        "modules": [
+            "ic_flask_rbac",
+            "ic_flask_rbac.mixins"
+        ],
+        "version": "1.0.0"
     },
     "ica": {
         "cmdline": [],
@@ -5844,7 +5879,7 @@
             "iconsdk.wallet",
             "iconsdk.wallet.wallet"
         ],
-        "version": "1.0.5"
+        "version": "1.0.6"
     },
     "iconservice": {
         "cmdline": [],
@@ -12440,7 +12475,7 @@
             "IM.xmlobject",
             "IM.xmlrpcssl"
         ],
-        "version": "1.7.5"
+        "version": "1.7.6"
     },
     "im-client": {
         "cmdline": [
@@ -18354,11 +18389,6 @@
         ],
         "version": "1.0"
     },
-    "import-path": {
-        "cmdline": [],
-        "modules": [],
-        "version": "1.0.2"
-    },
     "import-profiler": {
         "cmdline": [],
         "modules": [],
@@ -22028,6 +22058,21 @@
         "modules": [],
         "version": ""
     },
+    "indexedconv": {
+        "cmdline": [],
+        "modules": [
+            "indexedconv",
+            "indexedconv.engine",
+            "indexedconv.engine.indexed",
+            "indexedconv.engine.masked",
+            "indexedconv.nets",
+            "indexedconv.nets.aid",
+            "indexedconv.nets.cifar",
+            "indexedconv.nets.mnist",
+            "indexedconv.utils"
+        ],
+        "version": "0.1.0a0"
+    },
     "indexedlines": {
         "cmdline": [],
         "modules": [],
@@ -25470,7 +25515,7 @@
             "indy_node.utils.node_runner",
             "sample"
         ],
-        "version": "1.6.694"
+        "version": "1.6.696"
     },
     "indy-node-new-names": {
         "cmdline": [],
@@ -28089,6 +28134,8 @@
             "plenum.test.node_request.test_timestamp.test_timestamp_new_node",
             "plenum.test.node_request.test_timestamp.test_timestamp_post_view_change",
             "plenum.test.node_request.test_unit_setup_for_non_master",
+            "plenum.test.nodestack",
+            "plenum.test.nodestack.test_resend_stashed_msgs",
             "plenum.test.observer",
             "plenum.test.observer.conftest",
             "plenum.test.observer.test_observable",
@@ -28510,7 +28557,7 @@
             "stp_zmq.util",
             "stp_zmq.zstack"
         ],
-        "version": "1.6.598"
+        "version": "1.6.601"
     },
     "indy-plenum-new-names": {
         "cmdline": [],
@@ -38176,6 +38223,13 @@
         "modules": [],
         "version": "0.1.6"
     },
+    "insert-firmware": {
+        "cmdline": [],
+        "modules": [
+            "insert_firmware"
+        ],
+        "version": "1.0"
+    },
     "insertcode": {
         "cmdline": [],
         "modules": [
@@ -40254,7 +40308,7 @@
             "instana.util",
             "instana.wsgi"
         ],
-        "version": "1.8.0"
+        "version": "1.8.1"
     },
     "instana-api": {
         "cmdline": [],
@@ -42488,6 +42542,18 @@
             "intercept.intercept"
         ],
         "version": "0.1.2"
+    },
+    "intercept-py": {
+        "cmdline": [],
+        "modules": [
+            "intercept",
+            "intercept.api_handler",
+            "intercept.client",
+            "intercept.data_format",
+            "intercept.events",
+            "intercept.utils"
+        ],
+        "version": "0.0.2"
     },
     "interception": {
         "cmdline": [],
@@ -46604,7 +46670,7 @@
             "invisibleroads_macros.timestamp",
             "invisibleroads_macros.url"
         ],
-        "version": "0.9.4.4"
+        "version": "0.9.5"
     },
     "invisibleroads-posts": {
         "cmdline": [],
@@ -59038,11 +59104,6 @@
         ],
         "version": "2.1.3"
     },
-    "isbinaryfile": {
-        "cmdline": [],
-        "modules": [],
-        "version": "1.0.2"
-    },
     "isbn-hyphenate": {
         "cmdline": [],
         "modules": [
@@ -59309,11 +59370,6 @@
         ],
         "version": "0.0.1"
     },
-    "isclassmethod": {
-        "cmdline": [],
-        "modules": [],
-        "version": "1.0.2"
-    },
     "isclib": {
         "cmdline": [],
         "modules": [
@@ -59497,6 +59553,21 @@
             "isee_sipm"
         ],
         "version": "1.1.0"
+    },
+    "isensing": {
+        "cmdline": [],
+        "modules": [
+            "isensing",
+            "isensing.anomaly",
+            "isensing.anomaly.alphahull",
+            "isensing.anomaly.hdr",
+            "isensing.anomaly.outlier_detection",
+            "isensing.decomposition",
+            "isensing.decomposition.robpca",
+            "isensing.features_extraction",
+            "isensing.features_extraction.timeseries"
+        ],
+        "version": "0.1.1"
     },
     "iservices-controlpanel": {
         "cmdline": [],
@@ -70230,11 +70301,6 @@
         ],
         "version": "0.10.7.5"
     },
-    "isstaticmethod": {
-        "cmdline": [],
-        "modules": [],
-        "version": "1.0.2"
-    },
     "isstreamer": {
         "cmdline": [],
         "modules": [
@@ -70244,11 +70310,6 @@
             "ISStreamer.version"
         ],
         "version": "0.3.1"
-    },
-    "isstring": {
-        "cmdline": [],
-        "modules": [],
-        "version": "1.0.2"
     },
     "isstudio": {
         "cmdline": [
