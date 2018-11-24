@@ -236,6 +236,7 @@
             "l2tscaffolder.definitions.manager",
             "l2tscaffolder.definitions.plaso",
             "l2tscaffolder.definitions.timesketch",
+            "l2tscaffolder.definitions.turbinia",
             "l2tscaffolder.frontend",
             "l2tscaffolder.frontend.cli_output_handler",
             "l2tscaffolder.frontend.frontend",
@@ -258,6 +259,8 @@
             "l2tscaffolder.scaffolders.timesketch",
             "l2tscaffolder.scaffolders.timesketch_index",
             "l2tscaffolder.scaffolders.timesketch_sketch",
+            "l2tscaffolder.scaffolders.turbinia",
+            "l2tscaffolder.scaffolders.turbinia_job",
             "l2tscaffolder.templates",
             "tests",
             "tests.definitions",
@@ -273,6 +276,7 @@
             "tests.scaffolders.plaso_sqlite",
             "tests.scaffolders.timesketch_index",
             "tests.scaffolders.timesketch_sketch",
+            "tests.scaffolders.turbinia_job",
             "tests.test_database",
             "tests.test_helper",
             "tests.test_helper.path_helper",
@@ -281,7 +285,7 @@
             "utils.check_dependencies",
             "utils.dependencies"
         ],
-        "version": "20181122"
+        "version": "20181126"
     },
     "l3": {
         "cmdline": [],
@@ -11324,6 +11328,9 @@
             "law.contrib.slack.notification",
             "law.contrib.slack.parameter",
             "law.contrib.tasks",
+            "law.contrib.telegram",
+            "law.contrib.telegram.notification",
+            "law.contrib.telegram.parameter",
             "law.contrib.tensorflow",
             "law.contrib.tensorflow.formatter",
             "law.contrib.wlcg",
@@ -11358,7 +11365,7 @@
             "law.workflow.local",
             "law.workflow.remote"
         ],
-        "version": "0.0.27"
+        "version": "0.0.28"
     },
     "lawes": {
         "cmdline": [],
@@ -23903,7 +23910,7 @@
             "lesync.trafaret",
             "lesync.utils"
         ],
-        "version": "0.1.0"
+        "version": "0.2.0"
     },
     "let": {
         "cmdline": [],
@@ -25845,7 +25852,7 @@
     "lhapdf": {
         "cmdline": [],
         "modules": [],
-        "version": "6.2.1.post7"
+        "version": "6.2.1.post9"
     },
     "lhc-python": {
         "cmdline": [],
@@ -27119,7 +27126,7 @@
             "libaaron.aio",
             "libaaron.libaaron"
         ],
-        "version": "1.0.0"
+        "version": "1.0.2"
     },
     "libacr": {
         "cmdline": [],
@@ -28258,8 +28265,10 @@
     },
     "libconf": {
         "cmdline": [],
-        "modules": [],
-        "version": "1.0.1"
+        "modules": [
+            "libconf"
+        ],
+        "version": "2.0.0"
     },
     "libconfig": {
         "cmdline": [],
@@ -28270,7 +28279,7 @@
             "libconfig.evaluator",
             "libconfig.util"
         ],
-        "version": "0.7.0"
+        "version": "0.8.0"
     },
     "libcontractvm": {
         "cmdline": [],
@@ -35053,7 +35062,7 @@
             "lifelines.utils.progress_bar",
             "lifelines.version"
         ],
-        "version": "0.15.0"
+        "version": "0.15.1"
     },
     "lifelogger": {
         "cmdline": [],
@@ -44241,7 +44250,7 @@
             "lintreview.tools.yamllint",
             "lintreview.web"
         ],
-        "version": "2.11.1"
+        "version": "2.11.2"
     },
     "lintswitch": {
         "cmdline": [],
@@ -49081,10 +49090,15 @@
         "cmdline": [],
         "modules": [
             "LiveStreamingEnv",
+            "LiveStreamingEnv.ABR",
+            "LiveStreamingEnv.demo",
             "LiveStreamingEnv.env",
-            "LiveStreamingEnv.load_trace"
+            "LiveStreamingEnv.fixed_env",
+            "LiveStreamingEnv.load_trace",
+            "LiveStreamingEnv.online",
+            "LiveStreamingEnv.pyparams"
         ],
-        "version": "0.4.0"
+        "version": "0.4.9"
     },
     "livetest": {
         "cmdline": [],
@@ -50180,12 +50194,15 @@
         "modules": [
             "llama_slobber",
             "llama_slobber.calc_hun",
+            "llama_slobber.calc_wonder",
             "llama_slobber.fmt_float",
             "llama_slobber.fmt_html_calc",
             "llama_slobber.ll_get_rundle_comp",
             "llama_slobber.ll_leagues",
             "llama_slobber.ll_local_io",
+            "llama_slobber.ll_matchcount",
             "llama_slobber.ll_matchday",
+            "llama_slobber.ll_matchresult",
             "llama_slobber.ll_onedays",
             "llama_slobber.ll_personal_data",
             "llama_slobber.ll_qhist",
@@ -50193,7 +50210,7 @@
             "llama_slobber.ll_rundles",
             "llama_slobber.ll_season"
         ],
-        "version": "0.0.40"
+        "version": "0.0.47"
     },
     "llamicron-i": {
         "cmdline": [
@@ -51578,13 +51595,6 @@
         "cmdline": [],
         "modules": [],
         "version": "2018.11.19"
-    },
-    "load-module": {
-        "cmdline": [],
-        "modules": [
-            "load_module"
-        ],
-        "version": "1.0.4"
     },
     "load-resources": {
         "cmdline": [],
@@ -59897,7 +59907,7 @@
             "core.test_helpers",
             "core.test_helpers.server"
         ],
-        "version": "0.1.2"
+        "version": "0.1.3"
     },
     "lookout-style": {
         "cmdline": [],
@@ -62213,10 +62223,9 @@
             "lp_mongodb.loaders",
             "lp_mongodb.loaders.loader",
             "lp_mongodb.storages",
-            "lp_mongodb.storages.mongo_storage",
-            "lp_mongodb.storages.storage"
+            "lp_mongodb.storages.mongo_storage"
         ],
-        "version": "1.1.4"
+        "version": "1.2.0"
     },
     "lp-monitor": {
         "cmdline": [],
@@ -69893,7 +69902,7 @@
             "lyrebird_api_coverage",
             "lyrebird_api_coverage.app_ui"
         ],
-        "version": "0.2.5"
+        "version": "0.2.6"
     },
     "lyrebird-ios": {
         "cmdline": [],
@@ -70353,65 +70362,17 @@
     "lz": {
         "cmdline": [],
         "modules": [
-            "fixtures",
-            "fixtures.definitions",
-            "fixtures.functional",
-            "fixtures.iterating",
-            "fixtures.literals",
-            "functional_tests",
-            "functional_tests.test_cleave",
-            "functional_tests.test_combine",
-            "functional_tests.test_compose",
-            "functional_tests.test_curry",
-            "functional_tests.test_flip",
-            "functional_tests.test_identity",
-            "functional_tests.test_pack",
-            "functional_tests.test_to_constant",
-            "iterating_tests",
-            "iterating_tests.test_chopper",
-            "iterating_tests.test_cutter",
-            "iterating_tests.test_expand",
-            "iterating_tests.test_first",
-            "iterating_tests.test_grabber",
-            "iterating_tests.test_grouper",
-            "iterating_tests.test_kicker",
-            "iterating_tests.test_last",
-            "iterating_tests.test_reverse",
-            "iterating_tests.test_slider",
-            "iterating_tests.test_sorter",
-            "iterating_tests.test_trailer",
-            "left_tests",
-            "left_tests.test_accumulator",
-            "left_tests.test_applier",
-            "left_tests.test_attacher",
-            "left_tests.test_folder",
-            "logical_tests",
-            "logical_tests.test_conjoin",
-            "logical_tests.test_disjoin",
-            "logical_tests.test_exclusive_disjoin",
-            "logical_tests.test_negate",
             "lz",
+            "lz.arithmetical",
             "lz.functional",
             "lz.hints",
             "lz.iterating",
             "lz.left",
             "lz.logical",
             "lz.right",
-            "right_tests",
-            "right_tests.test_accumulator",
-            "right_tests.test_applier",
-            "right_tests.test_attacher",
-            "right_tests.test_folder",
-            "strategies",
-            "strategies.definitions",
-            "strategies.functional",
-            "strategies.iterating",
-            "strategies.literals",
-            "strategies.literals.base",
-            "strategies.literals.empty",
-            "strategies.literals.factories"
+            "lz.textual"
         ],
-        "version": "0.2.0"
+        "version": "0.3.0"
     },
     "lz-first": {
         "cmdline": [],
