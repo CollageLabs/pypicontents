@@ -2324,7 +2324,7 @@
             "ibm_ai_openscale.base_classes.configuration.payload_logging",
             "ibm_ai_openscale.base_classes.configuration.performance_monitoring",
             "ibm_ai_openscale.base_classes.configuration.quality_monitoring",
-            "ibm_ai_openscale.base_classes.configuration.table_viewer",
+            "ibm_ai_openscale.base_classes.configuration.table_from_rest_api_viewer",
             "ibm_ai_openscale.base_classes.instances",
             "ibm_ai_openscale.base_classes.instances.ai_instance",
             "ibm_ai_openscale.base_classes.instances.database_instance",
@@ -2404,66 +2404,74 @@
             "tests.models.AbstractModel",
             "tests.models.Keras",
             "tests.models.KerasVGG16",
-            "tests.models.SPSS",
-            "tests.models.Sagemaker",
-            "tests.models.Scikit",
-            "tests.models.Spark",
             "tests.models.SparkBestHeartDrug",
             "tests.models.SparkMlibRegression",
-            "tests.models.Tensorflow",
-            "tests.models.XGboost",
+            "tests.models.scikit",
+            "tests.models.spark",
+            "tests.models.spss",
+            "tests.models.tensorflow",
+            "tests.models.xgboost",
             "tests.models_preparation",
             "tests.preparation_and_cleaning",
             "tests.svt",
-            "tests.svt.test_azure_deployment_structured_all_monitors",
-            "tests.svt.test_custom_deployment_structured_payload_logging",
-            "tests.svt.test_custom_deployment_unstructured_image_payload_logging",
-            "tests.svt.test_datamart_operations",
-            "tests.svt.test_db2_3rd_party_payload_logging",
-            "tests.svt.test_db2_wml_model_keras",
-            "tests.svt.test_db2_wml_model_spark_payload_logging",
-            "tests.svt.test_db2_wml_model_spark_quality_monitoring_with_feedback",
-            "tests.svt.test_generic_model_basic_operations",
-            "tests.svt.test_generic_model_payload_logging",
-            "tests.svt.test_generic_model_performance_monitoring",
-            "tests.svt.test_generic_model_update_deployments",
-            "tests.svt.test_generic_standalone_deployment_structured_payload_logging",
-            "tests.svt.test_sagemaker_deployment_structured_all_monitors",
-            "tests.svt.test_update_data_mart_databases",
-            "tests.svt.test_wml_function_basic_operations",
+            "tests.svt._test_generic_standalone_deployment_structured_payload_logging",
+            "tests.svt.test_azure_postgres_native_multiclass_product-line_accuracy_monitoring",
+            "tests.svt.test_azure_postgres_native_multiclass_product-line_explainability",
+            "tests.svt.test_azure_postgres_native_multiclass_product-line_performance_monitoring",
+            "tests.svt.test_azure_postgres_scikit_multiclass_iris_accuracy_monitoring",
+            "tests.svt.test_azure_postgres_scikit_multiclass_iris_performance_monitoring",
+            "tests.svt.test_custom_postgres_deployment_structured_payload_logging",
+            "tests.svt.test_custom_postgres_deployment_unstructured_image_payload_logging",
+            "tests.svt.test_sagemaker_db2_native_binary_breast-cancer_payload_logging",
+            "tests.svt.test_sagemaker_postgres_native_binary_breast-cancer_explainability",
+            "tests.svt.test_sagemaker_postgres_native_binary_breast-cancer_performance_monitoring",
+            "tests.svt.test_sagemaker_postgres_native_binary_breast-cancer_quality_monitoring",
+            "tests.svt.test_wml_db2_function_payload_logging",
+            "tests.svt.test_wml_db2_keras_mnist_payload_logging",
+            "tests.svt.test_wml_db2_spark_best-heart-drug_quality_monitoring_with_feedback",
+            "tests.svt.test_wml_db2_spark_gosales_payload_logging",
             "tests.svt.test_wml_function_payload_logging",
-            "tests.svt.test_wml_function_performance_monitoring",
-            "tests.svt.test_wml_model_basic_operations",
-            "tests.svt.test_wml_model_basic_operations_with_internal_db",
-            "tests.svt.test_wml_model_basic_operations_with_specifing_deployments",
-            "tests.svt.test_wml_model_keras_classification_performance",
-            "tests.svt.test_wml_model_keras_payload_logging",
-            "tests.svt.test_wml_model_keras_performance",
-            "tests.svt.test_wml_model_keras_quality_monitoring_with_feedback",
-            "tests.svt.test_wml_model_multiple_deployments_payload_logging",
-            "tests.svt.test_wml_model_scikit_payload_logging",
-            "tests.svt.test_wml_model_scikit_performance",
-            "tests.svt.test_wml_model_spark_explainability",
-            "tests.svt.test_wml_model_spark_fairness_monitoring",
-            "tests.svt.test_wml_model_spark_fairness_monitoring_best_drug",
-            "tests.svt.test_wml_model_spark_payload_logging",
-            "tests.svt.test_wml_model_spark_performance_monitoring",
-            "tests.svt.test_wml_model_spark_quality_monitoring_with_feedback",
-            "tests.svt.test_wml_model_spark_quality_monitoring_with_learning_system_and_feedback",
-            "tests.svt.test_wml_model_spark_regression_explainability",
-            "tests.svt.test_wml_model_spark_regression_payload_logging",
-            "tests.svt.test_wml_model_spark_regression_performance_monitoring",
-            "tests.svt.test_wml_model_spark_update_deployments",
-            "tests.svt.test_wml_model_spss_payload_logging",
-            "tests.svt.test_wml_model_spss_performance",
-            "tests.svt.test_wml_model_tensorflow_payload_logging",
-            "tests.svt.test_wml_model_tensorflow_performance_monitoring",
-            "tests.svt.test_wml_model_xgboost_payload_logging",
-            "tests.svt.test_wml_model_xgboost_performance",
+            "tests.svt.test_wml_postgres_db2_spark_gosales_update_database",
+            "tests.svt.test_wml_postgres_function_basic_operations",
+            "tests.svt.test_wml_postgres_function_payload_logging",
+            "tests.svt.test_wml_postgres_function_performance_monitoring",
+            "tests.svt.test_wml_postgres_keras_boston_quality_monitoring_with_feedback",
+            "tests.svt.test_wml_postgres_keras_mnist_payload_logging",
+            "tests.svt.test_wml_postgres_keras_mnist_payload_logging_multiple_deployments",
+            "tests.svt.test_wml_postgres_keras_mnist_performance",
+            "tests.svt.test_wml_postgres_keras_vgg_performance_monitoring",
+            "tests.svt.test_wml_postgres_scikit_digits_payload_logging",
+            "tests.svt.test_wml_postgres_scikit_digits_performance",
+            "tests.svt.test_wml_postgres_spark_best-heart-drug_fairness_monitoring",
+            "tests.svt.test_wml_postgres_spark_drug_quality_monitoring_with_feedback",
+            "tests.svt.test_wml_postgres_spark_drug_quality_monitoring_with_learning_system_and_feedback",
+            "tests.svt.test_wml_postgres_spark_gosales_basic_operations",
+            "tests.svt.test_wml_postgres_spark_gosales_basic_operations_with_internal_db",
+            "tests.svt.test_wml_postgres_spark_gosales_basic_operations_with_specifing_deployments",
+            "tests.svt.test_wml_postgres_spark_gosales_datamart_operations",
+            "tests.svt.test_wml_postgres_spark_gosales_explainability",
+            "tests.svt.test_wml_postgres_spark_gosales_fairness_monitoring",
+            "tests.svt.test_wml_postgres_spark_gosales_payload_logging",
+            "tests.svt.test_wml_postgres_spark_gosales_performance_monitoring",
+            "tests.svt.test_wml_postgres_spark_gosales_update_deployments",
+            "tests.svt.test_wml_postgres_spark_telco_explainability",
+            "tests.svt.test_wml_postgres_spark_telco_payload_logging",
+            "tests.svt.test_wml_postgres_spark_telco_performance_monitoring",
+            "tests.svt.test_wml_postgres_spss_customer-satisfaction_payload_logging",
+            "tests.svt.test_wml_postgres_spss_customer-satisfaction_performance",
+            "tests.svt.test_wml_postgres_tensorflow_payload_logging",
+            "tests.svt.test_wml_postgres_tensorflow_performance",
+            "tests.svt.test_wml_postgres_xgboost_agaricus_payload_logging",
+            "tests.svt.test_wml_postgres_xgboost_agaricus_performance",
+            "tests.test_base",
+            "tests.thirdparty",
+            "tests.thirdparty.Azure",
+            "tests.thirdparty.Engine",
+            "tests.thirdparty.Sagemaker",
             "tests.unittests",
             "tests.unittests.test_table"
         ],
-        "version": "1.0.128"
+        "version": "1.0.179"
     },
     "ibm-ai-openscale-cli": {
         "cmdline": [],
@@ -8595,7 +8603,7 @@
             "idutils",
             "idutils.version"
         ],
-        "version": "1.1.0"
+        "version": "1.1.1"
     },
     "idv-teleport": {
         "cmdline": [
@@ -9090,7 +9098,7 @@
     "ies": {
         "cmdline": [],
         "modules": [],
-        "version": "1.0.3"
+        "version": "1.0.4"
     },
     "ies-scan-api": {
         "cmdline": [],
@@ -9401,11 +9409,19 @@
             "iexfinance.market",
             "iexfinance.ref",
             "iexfinance.stats",
-            "iexfinance.stock",
+            "iexfinance.stocks",
+            "iexfinance.stocks.base",
+            "iexfinance.stocks.collections",
+            "iexfinance.stocks.crypto",
+            "iexfinance.stocks.historical",
+            "iexfinance.stocks.ipocalendar",
+            "iexfinance.stocks.movers",
+            "iexfinance.stocks.sectorperformance",
+            "iexfinance.stocks.todayearnings",
             "iexfinance.utils",
             "iexfinance.utils.exceptions"
         ],
-        "version": "0.3.4"
+        "version": "0.3.5"
     },
     "iextools": {
         "cmdline": [],
@@ -9465,7 +9481,7 @@
             "ifaddr._win32",
             "ifaddr.test_ifaddr"
         ],
-        "version": "0.1.4"
+        "version": "0.1.5"
     },
     "ifalg": {
         "cmdline": [],
@@ -12146,7 +12162,7 @@
             "ilds.time",
             "ilds.util"
         ],
-        "version": "0.1.22"
+        "version": "0.1.23"
     },
     "ilhasoft-carriers": {
         "cmdline": [],
@@ -20282,8 +20298,10 @@
     },
     "imutil": {
         "cmdline": [],
-        "modules": [],
-        "version": "0.1.19"
+        "modules": [
+            "imutil"
+        ],
+        "version": "0.1.20"
     },
     "imutils": {
         "cmdline": [
@@ -23811,6 +23829,19 @@
         ],
         "version": "1.0.1"
     },
+    "indico-plugin-storage-s3": {
+        "cmdline": [],
+        "modules": [
+            "indico_storage_s3",
+            "indico_storage_s3.blueprint",
+            "indico_storage_s3.controllers",
+            "indico_storage_s3.migrate",
+            "indico_storage_s3.plugin",
+            "indico_storage_s3.storage",
+            "indico_storage_s3.task"
+        ],
+        "version": "2.0.3"
+    },
     "indico-plugin-storage-xrootd": {
         "cmdline": [],
         "modules": [],
@@ -25493,6 +25524,7 @@
             "data.migrations.deb.1_3_428_to_1_3_429",
             "data.migrations.deb.1_3_433_to_1_3_434",
             "data.migrations.deb.1_4_500_to_1_4_501",
+            "data.migrations.deb.1_6_703_to_1_6_704",
             "data.migrations.deb.disabled_1_0_97_to_1_0_96",
             "data.migrations.deb.helper_1_0_96_to_1_0_97",
             "indy_common",
@@ -25731,7 +25763,7 @@
             "indy_node.utils.node_runner",
             "sample"
         ],
-        "version": "1.6.703"
+        "version": "1.6.706"
     },
     "indy-node-new-names": {
         "cmdline": [],
@@ -28428,6 +28460,7 @@
             "plenum.test.replica.test_primary_marked_suspicious_for_sending_prepare",
             "plenum.test.replica.test_replica_clear_collections_after_view_change",
             "plenum.test.replica.test_replica_reject_same_pre_prepare",
+            "plenum.test.replica.test_replicas_primary_names",
             "plenum.test.replica.test_suspicious_on_sub_seq_and_final",
             "plenum.test.replica.test_the_same_order_reqidr_in_preprepare",
             "plenum.test.replica.test_update_watermarks_api",
@@ -28734,7 +28767,7 @@
             "stp_zmq.util",
             "stp_zmq.zstack"
         ],
-        "version": "1.6.611"
+        "version": "1.6.615"
     },
     "indy-plenum-new-names": {
         "cmdline": [],
@@ -39807,7 +39840,7 @@
             "inspire_service_orcid.models",
             "inspire_service_orcid.utils"
         ],
-        "version": "6.0.0"
+        "version": "6.1.0"
     },
     "inspire-utils": {
         "cmdline": [],
@@ -40062,8 +40095,24 @@
     },
     "instagraal": {
         "cmdline": [],
-        "modules": [],
-        "version": "0.1.2"
+        "modules": [
+            "instagraal",
+            "instagraal.cuda_lib_gl_single",
+            "instagraal.fragment",
+            "instagraal.glutil",
+            "instagraal.gpustruct",
+            "instagraal.init_nuisance",
+            "instagraal.instagraal",
+            "instagraal.leastsqbound",
+            "instagraal.log",
+            "instagraal.optim_rippe_curve_update",
+            "instagraal.parse_info_frags",
+            "instagraal.pyramid_sparse",
+            "instagraal.simu_single",
+            "instagraal.vector",
+            "instagraal.version"
+        ],
+        "version": "0.1.3"
     },
     "instagram": {
         "cmdline": [],
@@ -40496,7 +40545,7 @@
             "instana.util",
             "instana.wsgi"
         ],
-        "version": "1.8.2"
+        "version": "1.8.4"
     },
     "instana-api": {
         "cmdline": [],
@@ -41655,6 +41704,36 @@
         ],
         "version": "0.3.0"
     },
+    "intake-accumulo": {
+        "cmdline": [],
+        "modules": [
+            "intake_accumulo",
+            "intake_accumulo._version",
+            "intake_accumulo.accumulo",
+            "intake_accumulo.accumulo.proxy",
+            "intake_accumulo.accumulo.proxy.AccumuloProxy",
+            "intake_accumulo.accumulo.proxy.constants",
+            "intake_accumulo.accumulo.proxy.ttypes",
+            "intake_accumulo.source",
+            "tests",
+            "tests.test_intake_accumulo",
+            "tests.utils"
+        ],
+        "version": "0.1.1"
+    },
+    "intake-astro": {
+        "cmdline": [],
+        "modules": [
+            "intake_astro",
+            "intake_astro._version",
+            "intake_astro.array",
+            "intake_astro.table",
+            "tests",
+            "tests.test_array",
+            "tests.test_dataframe"
+        ],
+        "version": "0.1.1"
+    },
     "intbitset": {
         "cmdline": [],
         "modules": [],
@@ -42514,7 +42593,7 @@
         "modules": [
             "intelurls"
         ],
-        "version": "0.0.4"
+        "version": "0.0.5"
     },
     "intensional": {
         "cmdline": [],
@@ -47016,8 +47095,33 @@
     },
     "invoice2data": {
         "cmdline": [],
-        "modules": [],
-        "version": "0.3.1"
+        "modules": [
+            "invoice2data",
+            "invoice2data.extract",
+            "invoice2data.extract.invoice_template",
+            "invoice2data.extract.loader",
+            "invoice2data.extract.plugins",
+            "invoice2data.extract.plugins.__interface__",
+            "invoice2data.extract.plugins.lines",
+            "invoice2data.extract.plugins.tables",
+            "invoice2data.input",
+            "invoice2data.input.gvision",
+            "invoice2data.input.pdfminer_wrapper",
+            "invoice2data.input.pdftotext",
+            "invoice2data.input.tesseract",
+            "invoice2data.input.tesseract4",
+            "invoice2data.main",
+            "invoice2data.output",
+            "invoice2data.output.to_csv",
+            "invoice2data.output.to_json",
+            "invoice2data.output.to_xml",
+            "invoice2data.test",
+            "invoice2data.test.common",
+            "invoice2data.test.test_cli",
+            "invoice2data.test.test_extraction",
+            "invoice2data.test.test_lib"
+        ],
+        "version": "0.3.2"
     },
     "invoiced": {
         "cmdline": [],
@@ -49248,7 +49352,7 @@
             "iopipe.signer",
             "iopipe.system"
         ],
-        "version": "1.7.5"
+        "version": "1.7.6"
     },
     "iopipe-payload": {
         "cmdline": [],
@@ -51633,7 +51737,7 @@
             "ipam.client.backends",
             "ipam.client.backends.phpipam"
         ],
-        "version": "0.3.3"
+        "version": "0.3.4"
     },
     "ipamcli": {
         "cmdline": [],
@@ -59842,6 +59946,42 @@
         ],
         "version": "1.0.7"
     },
+    "isdc-avatar": {
+        "cmdline": [],
+        "modules": [
+            "avatar",
+            "avatar.admin",
+            "avatar.forms",
+            "avatar.management",
+            "avatar.management.commands",
+            "avatar.management.commands.rebuild_avatars",
+            "avatar.models",
+            "avatar.settings",
+            "avatar.signals",
+            "avatar.templatetags",
+            "avatar.templatetags.avatar_tags",
+            "avatar.tests",
+            "avatar.urls",
+            "avatar.util",
+            "avatar.views"
+        ],
+        "version": "0.1.dev0"
+    },
+    "isdc-dashboard": {
+        "cmdline": [],
+        "modules": [
+            "dashboard",
+            "dashboard.admin",
+            "dashboard.enumerations",
+            "dashboard.models",
+            "dashboard.templatetags",
+            "dashboard.templatetags.app_filters",
+            "dashboard.tests",
+            "dashboard.urls",
+            "dashboard.views"
+        ],
+        "version": "0.1.dev0"
+    },
     "isdc-geoaccessibility": {
         "cmdline": [],
         "modules": [
@@ -59863,6 +60003,32 @@
         ],
         "version": "1.0.0"
     },
+    "isdc-geodb": {
+        "cmdline": [],
+        "modules": [
+            "geodb",
+            "geodb.admin",
+            "geodb.enumerations",
+            "geodb.geo_calc",
+            "geodb.geoapi",
+            "geodb.middleware",
+            "geodb.migrations",
+            "geodb.migrations.0001_initial",
+            "geodb.migrations.0002_auto_20181128_1016",
+            "geodb.migrations.userfunctions_migration",
+            "geodb.models",
+            "geodb.radarchart",
+            "geodb.router",
+            "geodb.router copy",
+            "geodb.tasks",
+            "geodb.tests",
+            "geodb.update_add_summary",
+            "geodb.urls",
+            "geodb.usgs_comcat",
+            "geodb.views"
+        ],
+        "version": "0.1.dev2"
+    },
     "isdc-geonode-client": {
         "cmdline": [],
         "modules": [
@@ -59879,6 +60045,18 @@
             "isdc_geopanel"
         ],
         "version": "1.0.0"
+    },
+    "isdc-matrix": {
+        "cmdline": [],
+        "modules": [
+            "matrix",
+            "matrix.admin",
+            "matrix.migrations",
+            "matrix.models",
+            "matrix.tests",
+            "matrix.views"
+        ],
+        "version": "0.1.dev0"
     },
     "isdown": {
         "cmdline": [],
@@ -74913,7 +75091,7 @@
             "IxNetRestApi.IxNetRestApiStatistics",
             "IxNetRestApi.IxNetRestApiTraffic"
         ],
-        "version": "2018.1127.1"
+        "version": "2018.1128.1"
     },
     "ixnetrestwrap": {
         "cmdline": [],
