@@ -214,21 +214,44 @@ This package download URL does not point to a valid file: "http://sourceforge.ne
 [ERROR] (backdoor) Could not extract data from this package. See below for details.
 "http://www.techb.zxq.net/BackDoor.zip" file could not be downloaded. See below for details.
 Traceback (most recent call last):
+  File "/usr/lib/python3.5/urllib/request.py", line 1254, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers)
+  File "/usr/lib/python3.5/http/client.py", line 1107, in request
+    self._send_request(method, url, body, headers)
+  File "/usr/lib/python3.5/http/client.py", line 1152, in _send_request
+    self.endheaders(body)
+  File "/usr/lib/python3.5/http/client.py", line 1103, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python3.5/http/client.py", line 934, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.5/http/client.py", line 877, in send
+    self.connect()
+  File "/usr/lib/python3.5/http/client.py", line 849, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "/usr/lib/python3.5/socket.py", line 712, in create_connection
+    raise err
+  File "/usr/lib/python3.5/socket.py", line 703, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
   File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 107, in download_tar
     f.write(urlopen(url=urlesc(pkgurl), timeout=10).read())
   File "/usr/lib/python3.5/urllib/request.py", line 163, in urlopen
     return opener.open(url, data, timeout)
-  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
-    response = meth(req, response)
-  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
-    'http', request, response, code, msg, hdrs)
-  File "/usr/lib/python3.5/urllib/request.py", line 510, in error
-    return self._call_chain(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 466, in open
+    response = self._open(req, data)
+  File "/usr/lib/python3.5/urllib/request.py", line 484, in _open
+    '_open', req)
   File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
     result = func(*args)
-  File "/usr/lib/python3.5/urllib/request.py", line 590, in http_error_default
-    raise HTTPError(req.full_url, code, msg, hdrs, fp)
-urllib.error.HTTPError: HTTP Error 403: Forbidden
+  File "/usr/lib/python3.5/urllib/request.py", line 1282, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "/usr/lib/python3.5/urllib/request.py", line 1256, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno 111] Connection refused>
 
 [INFO] (backdrop) This package is up to date.
 [INFO] (backend) This package is up to date.
@@ -378,7 +401,7 @@ urllib.error.HTTPError: HTTP Error 403: Forbidden
 [INFO] (badminton-queuing-system) This package is up to date.
 [INFO] (badwolf) This package is up to date.
 [INFO] (badwords-zh) This package is up to date.
-[INFO] (badx12) This package is up to date.
+[INFO] (badx12) Data has been updated for this package.
 [INFO] (bae) This package is up to date.
 [INFO] (bae-image) This package is up to date.
 [INFO] (bae-log) This package is up to date.
@@ -396,7 +419,7 @@ urllib.error.HTTPError: HTTP Error 403: Forbidden
 [INFO] (bagcat) This package is up to date.
 [INFO] (bagel) This package is up to date.
 [INFO] (bagent) This package is up to date.
-[INFO] (bagga) This package is up to date.
+[INFO] (bagga) Data has been updated for this package.
 [INFO] (bagit) This package is up to date.
 [INFO] (bagit-profile) This package is up to date.
 [INFO] (bagofwords) This package is up to date.
@@ -438,6 +461,7 @@ urllib.error.HTTPError: HTTP Error 403: Forbidden
 [INFO] (baiduyuyin) This package is up to date.
 [INFO] (baiji) This package is up to date.
 [INFO] (baiji-pod) This package is up to date.
+[INFO] (baiji-sdk) Data has been updated for this package.
 [INFO] (baiji-serialization) This package is up to date.
 [ERROR] (bainester) This package does not have downloadable releases.
 [INFO] (baipython) This package is up to date.
@@ -476,7 +500,7 @@ urllib.error.HTTPError: HTTP Error 403: Forbidden
 [INFO] (balderdash) This package is up to date.
 [INFO] (baldr) This package is up to date.
 [INFO] (baldrick) This package is up to date.
-[INFO] (balebot) This package is up to date.
+[INFO] (balebot) Data has been updated for this package.
 [INFO] (baleen) This package is up to date.
 [INFO] (balena-sdk) This package is up to date.
 [INFO] (baler) This package is up to date.
@@ -720,7 +744,7 @@ This package download URL does not point to a valid file: "http://www.baow.com"
 [INFO] (barcode-splitter) This package is up to date.
 [ERROR] (barcode-splitter-multi) This package does not have downloadable releases.
 [INFO] (barcodecop) This package is up to date.
-[INFO] (barcodefinder) This package is up to date.
+[INFO] (barcodefinder) Data has been updated for this package.
 [INFO] (barcodegen) This package is up to date.
 [INFO] (barcodenumber) This package is up to date.
 [INFO] (bard) This package is up to date.
@@ -907,7 +931,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (baseproxy) This package is up to date.
 [INFO] (baseq) This package is up to date.
 [INFO] (baseq-drops) This package is up to date.
-[INFO] (baseqcnv) Data has been updated for this package.
+[INFO] (baseqcnv) This package is up to date.
 [INFO] (baseqdrops) This package is up to date.
 [INFO] (baseqsnv) This package is up to date.
 [INFO] (baserip) This package is up to date.
@@ -1134,7 +1158,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (bates) This package is up to date.
 [INFO] (batfish) This package is up to date.
 [INFO] (batinfo) This package is up to date.
-[INFO] (batlab) This package is up to date.
+[INFO] (batlab) Data has been updated for this package.
 [INFO] (batman) This package is up to date.
 [INFO] (batman-package) This package is up to date.
 [INFO] (batmon) This package is up to date.
@@ -1204,6 +1228,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (batzenca) This package is up to date.
 [INFO] (bauble) This package is up to date.
 [INFO] (bauhattan) This package is up to date.
+[INFO] (baumkuchen) Data has been updated for this package.
 [INFO] (bautils) This package is up to date.
 [INFO] (bauzak) This package is up to date.
 [INFO] (baxter) This package is up to date.
@@ -1357,7 +1382,7 @@ urllib.error.URLError: <urlopen error [Errno -2] Name or service not known>
 [INFO] (bbcflib) This package is up to date.
 [INFO] (bbchain) This package is up to date.
 [INFO] (bbcli) This package is up to date.
-[INFO] (bbcmd) Data has been updated for this package.
+[INFO] (bbcmd) This package is up to date.
 [INFO] (bbcode) This package is up to date.
 [INFO] (bbcondeparser) This package is up to date.
 [INFO] (bbcs-tools) This package is up to date.
@@ -1366,7 +1391,7 @@ urllib.error.URLError: <urlopen error [Errno -2] Name or service not known>
 [INFO] (bbcu-illuminainterop) This package is up to date.
 [INFO] (bbcu-ngs-snakemake) This package is up to date.
 [INFO] (bbcu-venn-diagram) This package is up to date.
-[INFO] (bbcu-venndiagram) Data has been updated for this package.
+[INFO] (bbcu-venndiagram) This package is up to date.
 [INFO] (bbdb-gmailfilter) This package is up to date.
 [INFO] (bbee) This package is up to date.
 [INFO] (bbfreeze) This package is up to date.
@@ -1384,7 +1409,7 @@ This package download URL does not point to a valid file: "http://code.google.co
 [INFO] (bblfsh) This package is up to date.
 [INFO] (bblfsh-sonar-checks) This package is up to date.
 [INFO] (bbnotify) This package is up to date.
-[INFO] (bbopt) Data has been updated for this package.
+[INFO] (bbopt) This package is up to date.
 [INFO] (bbot) This package is up to date.
 [ERROR] (bbox) Could not get a response from API for this package. See below for details.
 Traceback (most recent call last):
@@ -1508,7 +1533,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (bcls-tk) This package is up to date.
 [INFO] (bcmi) This package is up to date.
 [INFO] (bcmwindow) This package is up to date.
-[INFO] (bcnc) Data has been updated for this package.
+[INFO] (bcnc) This package is up to date.
 [INFO] (bco) This package is up to date.
 [INFO] (bcode) This package is up to date.
 [INFO] (bcoding) This package is up to date.
@@ -1612,7 +1637,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (bdp) This package is up to date.
 [INFO] (bdpcrypt) This package is up to date.
 [INFO] (bdpoisson1d) This package is up to date.
-[INFO] (bdquaternions) Data has been updated for this package.
+[INFO] (bdquaternions) This package is up to date.
 [INFO] (bdranalytics) This package is up to date.
 [INFO] (bds) This package is up to date.
 [INFO] (bdspace) This package is up to date.
@@ -1853,12 +1878,12 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (bee) This package is up to date.
 [INFO] (bee-data-cleaning) This package is up to date.
 [INFO] (bee-django-coin) This package is up to date.
-[INFO] (bee-django-course) This package is up to date.
+[INFO] (bee-django-course) Data has been updated for this package.
 [INFO] (bee-django-crm) This package is up to date.
 [INFO] (bee-django-crm-auth) This package is up to date.
 [INFO] (bee-django-exam) This package is up to date.
-[INFO] (bee-django-message) This package is up to date.
-[INFO] (bee-django-mission) This package is up to date.
+[INFO] (bee-django-message) Data has been updated for this package.
+[INFO] (bee-django-mission) Data has been updated for this package.
 [INFO] (bee-django-referral) This package is up to date.
 [INFO] (bee-django-report) This package is up to date.
 [INFO] (bee-django-social-feed) This package is up to date.
@@ -2011,7 +2036,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (beluga-py) This package is up to date.
 [INFO] (bemis) This package is up to date.
 [INFO] (bemo) This package is up to date.
-[INFO] (ben-cogs) This package is up to date.
+[INFO] (ben-cogs) Data has been updated for this package.
 [INFO] (bench) This package is up to date.
 [INFO] (bench-it) This package is up to date.
 [INFO] (benchbase) This package is up to date.
@@ -2383,7 +2408,7 @@ Traceback (most recent call last):
 urllib.error.HTTPError: HTTP Error 404: Not Found
 
 [INFO] (bf3stats) This package is up to date.
-[INFO] (bfa) This package is up to date.
+[INFO] (bfa) Data has been updated for this package.
 [INFO] (bfab) This package is up to date.
 [INFO] (bfabio-pyads) This package is up to date.
 [INFO] (bfabio-pykwalify) This package is up to date.
@@ -2477,7 +2502,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (bhargav-mac-nester) This package is up to date.
 [INFO] (bhasa) This package is up to date.
 [INFO] (bhclustering) This package is up to date.
-[INFO] (bhex) This package is up to date.
+[INFO] (bhex) Data has been updated for this package.
 [ERROR] (bhex-python) Could not get a response from API for this package. See below for details.
 Traceback (most recent call last):
   File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
@@ -2601,7 +2626,7 @@ This package download URL does not point to a valid file: "http://www.bibconvert
 [INFO] (bibliothequetoulouse) This package is up to date.
 [ERROR] (biblioticker) This package does not have downloadable releases.
 [INFO] (bibmania) This package is up to date.
-[INFO] (bibo) This package is up to date.
+[INFO] (bibo) Data has been updated for this package.
 [INFO] (bibolamazi) This package is up to date.
 [INFO] (bibolamazi-gui) This package is up to date.
 [INFO] (bibolamazigui) This package is up to date.
@@ -2748,7 +2773,7 @@ This package download URL does not point to a valid file: "http://www.bibconvert
 [INFO] (bigtree-log) This package is up to date.
 [INFO] (bigtree-sso) This package is up to date.
 [INFO] (bihan) This package is up to date.
-[INFO] (bihu) This package is up to date.
+[INFO] (bihu) Data has been updated for this package.
 [INFO] (bijection) This package is up to date.
 [INFO] (bijoy2unicode) This package is up to date.
 [INFO] (bijoytounicode) This package is up to date.
@@ -2819,7 +2844,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (bilm) This package is up to date.
 [INFO] (biloba) This package is up to date.
 [INFO] (bimap) This package is up to date.
-[INFO] (bimdata-api-client) This package is up to date.
+[INFO] (bimdata-api-client) Data has been updated for this package.
 [INFO] (bimeta) This package is up to date.
 [INFO] (bimgn) This package is up to date.
 [INFO] (bimmer-connected) This package is up to date.
@@ -3104,7 +3129,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (biokit) This package is up to date.
 [ERROR] (biokits) This package does not have downloadable releases.
 [INFO] (biolib) This package is up to date.
-[INFO] (biolinkmg) This package is up to date.
+[INFO] (biolinkmg) Data has been updated for this package.
 [INFO] (biolite) This package is up to date.
 [INFO] (biologicalprocessnetworks) This package is up to date.
 [INFO] (biolojoke) This package is up to date.
@@ -3121,10 +3146,10 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (biomaj-release) This package is up to date.
 [INFO] (biomaj-user) This package is up to date.
 [INFO] (biomaj-zipkin) This package is up to date.
-[INFO] (biomaj2galaxy) Data has been updated for this package.
+[INFO] (biomaj2galaxy) This package is up to date.
 [INFO] (biomap-core) This package is up to date.
 [INFO] (biomap-hgnc) This package is up to date.
-[INFO] (biomap-miriam) Data has been updated for this package.
+[INFO] (biomap-miriam) This package is up to date.
 [INFO] (biomap-mongodb) This package is up to date.
 [INFO] (biomap-utils) This package is up to date.
 [INFO] (biomart) This package is up to date.
@@ -3261,7 +3286,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (bisip) This package is up to date.
 [INFO] (biskit) This package is up to date.
 [INFO] (bismuth) This package is up to date.
-[INFO] (bismuthclient) This package is up to date.
+[INFO] (bismuthclient) Data has been updated for this package.
 [INFO] (bison) This package is up to date.
 [INFO] (bisos) This package is up to date.
 [INFO] (bisos-bootstrap) This package is up to date.
@@ -4119,7 +4144,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (block-disposable-email) This package is up to date.
 [INFO] (block-fund-trading) This package is up to date.
 [INFO] (block-hosts) This package is up to date.
-[INFO] (block-io) This package is up to date.
+[INFO] (block-io) Data has been updated for this package.
 [INFO] (block-magic) This package is up to date.
 [INFO] (block-timer) This package is up to date.
 [INFO] (block-tracing) This package is up to date.
@@ -4467,7 +4492,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (bluepy-devices) This package is up to date.
 [INFO] (bluepymm) This package is up to date.
 [INFO] (bluepyopt) This package is up to date.
-[INFO] (blueqat) Data has been updated for this package.
+[INFO] (blueqat) This package is up to date.
 [INFO] (blueque) This package is up to date.
 [ERROR] (bluerobotics-ping) This package does not have downloadable releases.
 [INFO] (bluesky) This package is up to date.
@@ -4476,7 +4501,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (bluesnap) This package is up to date.
 [INFO] (bluesnow) This package is up to date.
 [ERROR] (bluestocking) This package does not have downloadable releases.
-[INFO] (bluetest) Data has been updated for this package.
+[INFO] (bluetest) This package is up to date.
 [INFO] (bluetin-echo) This package is up to date.
 [INFO] (bluetool) This package is up to date.
 [INFO] (bluetorch) This package is up to date.
@@ -4843,14 +4868,14 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (bobtemplates-pypbr) This package is up to date.
 [INFO] (bobtemplates-sixfeetup) This package is up to date.
 [ERROR] (boby) This package does not have downloadable releases.
-[INFO] (bocadillo) Data has been updated for this package.
+[INFO] (bocadillo) This package is up to date.
 [INFO] (bocco) This package is up to date.
 [INFO] (bochica) This package is up to date.
 [INFO] (bod-metadata-management) This package is up to date.
 [INFO] (bodami) This package is up to date.
 [INFO] (bodatools) This package is up to date.
 [INFO] (boddle) This package is up to date.
-[INFO] (bode) Data has been updated for this package.
+[INFO] (bode) This package is up to date.
 [INFO] (bode-django-error-pages) This package is up to date.
 [INFO] (bodhi) This package is up to date.
 [INFO] (bodhi-client) This package is up to date.
@@ -5727,7 +5752,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (bpolicy) This package is up to date.
 [INFO] (bpp) This package is up to date.
 [INFO] (bpp-iplweb) This package is up to date.
-[INFO] (bpqcrypto) Data has been updated for this package.
+[INFO] (bpqcrypto) This package is up to date.
 [INFO] (bpr-knn) This package is up to date.
 [INFO] (bprc) This package is up to date.
 [ERROR] (bprint) This package does not have downloadable releases.
@@ -5887,9 +5912,9 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (brasil-gov-facetada) This package is up to date.
 [INFO] (brasil-gov-newfieldcomplement) This package is up to date.
 [INFO] (brasil-gov-paginadestaque) This package is up to date.
-[INFO] (brasil-gov-portal) Data has been updated for this package.
+[INFO] (brasil-gov-portal) This package is up to date.
 [INFO] (brasil-gov-portlets) This package is up to date.
-[INFO] (brasil-gov-temas) Data has been updated for this package.
+[INFO] (brasil-gov-temas) This package is up to date.
 [INFO] (brasil-gov-tiles) This package is up to date.
 [INFO] (brasil-gov-vcge) This package is up to date.
 [INFO] (brasil-gov-vlibrasnews) This package is up to date.
@@ -5917,7 +5942,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [ERROR] (bravo-plugin) This package does not have downloadable releases.
 [INFO] (bravocapital) This package is up to date.
 [INFO] (brawlstars) This package is up to date.
-[INFO] (brawlstats) This package is up to date.
+[INFO] (brawlstats) Data has been updated for this package.
 [INFO] (brayns) This package is up to date.
 [INFO] (brazier) This package is up to date.
 [INFO] (brazil-types) This package is up to date.
@@ -6513,7 +6538,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (bts-tools) This package is up to date.
 [INFO] (btsbots) This package is up to date.
 [INFO] (btsbots-wallet) This package is up to date.
-[INFO] (btsmarthub-devicelist) Data has been updated for this package.
+[INFO] (btsmarthub-devicelist) This package is up to date.
 [INFO] (btsnoop) This package is up to date.
 [INFO] (btsprice) This package is up to date.
 [INFO] (btspusher) This package is up to date.
@@ -6545,7 +6570,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (bucho) This package is up to date.
 [INFO] (buck-pprint) This package is up to date.
 [INFO] (bucket) This package is up to date.
-[INFO] (bucket-command-wrapper) Data has been updated for this package.
+[INFO] (bucket-command-wrapper) This package is up to date.
 [INFO] (bucket-filter) This package is up to date.
 [INFO] (bucket-limiter) This package is up to date.
 [INFO] (bucket-list) This package is up to date.
@@ -7238,7 +7263,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (bx-rabbitmq) Data has been updated for this package.
 [INFO] (bx-sql) This package is up to date.
 [INFO] (bx-utility) This package is up to date.
-[INFO] (bx-zmq) This package is up to date.
+[INFO] (bx-zmq) Data has been updated for this package.
 [INFO] (bxa) This package is up to date.
 [INFO] (bxdev) This package is up to date.
 [INFO] (bxinth) This package is up to date.
@@ -7255,12 +7280,12 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (bycycletripplanner) This package is up to date.
 [INFO] (bye) This package is up to date.
 [INFO] (bye-bye-shopify) This package is up to date.
-[INFO] (byexample) This package is up to date.
+[INFO] (byexample) Data has been updated for this package.
 [INFO] (bygone) This package is up to date.
 [INFO] (bygonessl) This package is up to date.
 [INFO] (byhelpers) This package is up to date.
 [ERROR] (byline) This package does not have downloadable releases.
-[INFO] (byml) This package is up to date.
+[INFO] (byml) Data has been updated for this package.
 [INFO] (bymtesting) This package is up to date.
 [INFO] (bynamodb) This package is up to date.
 [INFO] (bynder-sdk) This package is up to date.
@@ -7408,10 +7433,10 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (bzz) This package is up to date.
 [INFO] 
 [INFO] 
-[INFO] Total packages: 5513
-[INFO]     Packages processed: 5513
-[INFO]         Packages updated: 27
-[INFO]         Packages up-to-date: 5098
+[INFO] Total packages: 5515
+[INFO]     Packages processed: 5515
+[INFO]         Packages updated: 33
+[INFO]         Packages up-to-date: 5094
 [INFO]         Packages without response: 61
 [INFO]         Packages without urls: 0
 [INFO]         Packages without downloads: 274
