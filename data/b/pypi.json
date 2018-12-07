@@ -125,12 +125,18 @@
             "b2.sync.scan_policies",
             "b2.sync.sync",
             "b2.transferer",
+            "b2.transferer.abstract",
+            "b2.transferer.file_metadata",
+            "b2.transferer.parallel",
+            "b2.transferer.range",
+            "b2.transferer.simple",
+            "b2.transferer.transferer",
             "b2.unfinished_large_file",
             "b2.upload_source",
             "b2.utils",
             "b2.version"
         ],
-        "version": "1.3.6"
+        "version": "1.3.8"
     },
     "b26-toolkit": {
         "cmdline": [],
@@ -1423,13 +1429,15 @@
             "BAAlgorithmUtils",
             "BAAlgorithmUtils.BAAhoCorasickUtil",
             "BAAlgorithmUtils.BAAhoCorasickUtilTest",
+            "BAAlgorithmUtils.BABMUtil",
+            "BAAlgorithmUtils.BABMUtilTest",
             "BAAlgorithmUtils.BAClassUtil",
             "BAAlgorithmUtils.BAKMPUtil",
             "BAAlgorithmUtils.BAKMPUtilTest",
             "BAAlgorithmUtils.BATireTreeUtil",
             "BAAlgorithmUtils.BATireTreeUtilTest"
         ],
-        "version": "1.0.7"
+        "version": "1.0.9"
     },
     "baanlib": {
         "cmdline": [],
@@ -3924,7 +3932,7 @@
             "backy.timeout",
             "backy.utils"
         ],
-        "version": "2.4"
+        "version": "2.4.1"
     },
     "backy2": {
         "cmdline": [],
@@ -5979,6 +5987,7 @@
             "balafon.Profile.migrations.0004_auto_20160601_1128",
             "balafon.Profile.migrations.0005_auto_20180409_1301",
             "balafon.Profile.models",
+            "balafon.Profile.settings",
             "balafon.Profile.templatetags",
             "balafon.Profile.templatetags.balafon_profile_perm",
             "balafon.Profile.tests",
@@ -6107,7 +6116,7 @@
             "balafon.views",
             "balafon.widgets"
         ],
-        "version": "3.4.9"
+        "version": "3.4.10"
     },
     "balance": {
         "cmdline": [],
@@ -10305,7 +10314,7 @@
     "barcodefinder": {
         "cmdline": [],
         "modules": [],
-        "version": "0.9.13"
+        "version": "0.9.14"
     },
     "barcodegen": {
         "cmdline": [],
@@ -11656,7 +11665,7 @@
             "base_astro_bot.utils.install",
             "base_astro_bot.utils.my_logger"
         ],
-        "version": "1.2.2"
+        "version": "1.2.3"
     },
     "base-bridge": {
         "cmdline": [],
@@ -16066,7 +16075,7 @@
         "modules": [
             "bayerstraits_16s"
         ],
-        "version": "1.0.3"
+        "version": "1.0.4"
     },
     "bayes": {
         "cmdline": [],
@@ -24397,7 +24406,7 @@
             "bee_django_course.utils",
             "bee_django_course.views"
         ],
-        "version": "0.1.38"
+        "version": "0.1.39"
     },
     "bee-django-crm": {
         "cmdline": [],
@@ -24465,12 +24474,13 @@
             "bee_django_message.exports",
             "bee_django_message.forms",
             "bee_django_message.models",
+            "bee_django_message.signals",
             "bee_django_message.tests",
             "bee_django_message.urls",
             "bee_django_message.utils",
             "bee_django_message.views"
         ],
-        "version": "0.1.4"
+        "version": "0.1.9"
     },
     "bee-django-mission": {
         "cmdline": [],
@@ -28957,6 +28967,29 @@
         ],
         "version": "0.0.1a4"
     },
+    "bert-serving-client": {
+        "cmdline": [],
+        "modules": [
+            "bert_serving",
+            "bert_serving.client"
+        ],
+        "version": "1.4.6"
+    },
+    "bert-serving-server": {
+        "cmdline": [],
+        "modules": [
+            "bert_serving",
+            "bert_serving.server",
+            "bert_serving.server.bert",
+            "bert_serving.server.bert.extract_features",
+            "bert_serving.server.bert.modeling",
+            "bert_serving.server.bert.modeling_test",
+            "bert_serving.server.bert.optimization",
+            "bert_serving.server.bert.tokenization",
+            "bert_serving.server.helper"
+        ],
+        "version": "1.4.6"
+    },
     "bert-tokenizer": {
         "cmdline": [],
         "modules": [
@@ -31462,7 +31495,7 @@
             "bfa",
             "bfa.fingerprint"
         ],
-        "version": "0.2.2"
+        "version": "0.2.3"
     },
     "bfab": {
         "cmdline": [],
@@ -45862,7 +45895,7 @@
         "modules": [
             "bitclone"
         ],
-        "version": "0.27"
+        "version": "0.30"
     },
     "bitcodin": {
         "cmdline": [],
@@ -48752,7 +48785,7 @@
         "modules": [
             "bjson"
         ],
-        "version": "0.2.8"
+        "version": "0.2.9"
     },
     "bjsonrpc": {
         "cmdline": [],
@@ -49390,7 +49423,7 @@
             "blackduck",
             "blackduck.HubRestApi"
         ],
-        "version": "0.0.4"
+        "version": "0.0.5"
     },
     "blacken-docs": {
         "cmdline": [],
@@ -49454,7 +49487,7 @@
             "tests.test_timeseries",
             "tests.utils"
         ],
-        "version": "2.6.5"
+        "version": "2.7.0"
     },
     "blackgate": {
         "cmdline": [],
@@ -50968,7 +51001,7 @@
             "blender_asset_tracer.trace.progress",
             "blender_asset_tracer.trace.result"
         ],
-        "version": "0.6.1"
+        "version": "0.7"
     },
     "blender-bam": {
         "cmdline": [],
@@ -58589,21 +58622,53 @@
         "cmdline": [],
         "modules": [
             "boavus",
+            "boavus.bidso",
+            "boavus.command",
+            "boavus.corr",
+            "boavus.corr.corrfmri",
+            "boavus.corr.summary",
+            "boavus.electrodes",
+            "boavus.electrodes.assign_regions",
+            "boavus.electrodes.elec",
+            "boavus.electrodes.elec.annealing",
+            "boavus.electrodes.plot",
+            "boavus.electrodes.project_to_surf",
             "boavus.fmri",
-            "boavus.fmri.percent",
-            "boavus.freesurfer",
-            "boavus.freesurfer.freesurfer",
+            "boavus.fmri.at_electrodes",
+            "boavus.fmri.compare",
+            "boavus.fmri.utils",
             "boavus.fsl",
-            "boavus.fsl.bet",
+            "boavus.fsl.coreg",
             "boavus.fsl.feat",
+            "boavus.fsl.feat_on_surf",
+            "boavus.fsl.misc",
             "boavus.ieeg",
-            "boavus.ieeg.elec",
-            "boavus.ieeg.elec.project_elec",
-            "boavus.ieeg.electrodes",
-            "boavus.ieeg.wonambi",
-            "boavus.utils"
+            "boavus.ieeg.broadband",
+            "boavus.ieeg.compare",
+            "boavus.ieeg.preprocessing",
+            "boavus.ieeg.psd",
+            "boavus.ieeg.read",
+            "boavus.ieeg.utils",
+            "boavus.mri",
+            "boavus.mri.surface",
+            "boavus.prf",
+            "boavus.prf.core",
+            "boavus.prf.core.least_squares",
+            "boavus.prf.core.popeye",
+            "boavus.prf.fit",
+            "boavus.utils",
+            "boavus.workflow",
+            "boavus.workflow.corr_ieeg_fmri",
+            "boavus.workflow.fmri",
+            "boavus.workflow.ieeg",
+            "tests",
+            "tests.paths",
+            "tests.test_20_workflow_ieeg",
+            "tests.test_21_workflow_fmri",
+            "tests.test_22_workflow_grvx",
+            "tests.utils"
         ],
-        "version": "0.1"
+        "version": "0.4"
     },
     "bob": {
         "cmdline": [],
@@ -62215,7 +62280,7 @@
             "bohrium.summations",
             "bohrium.visualization"
         ],
-        "version": "0.10.0.post10"
+        "version": "0.10.0.post15"
     },
     "bohrium-api": {
         "cmdline": [],
@@ -62225,7 +62290,7 @@
             "bohrium_api.messaging",
             "bohrium_api.stack_info"
         ],
-        "version": "0.10.0.post10"
+        "version": "0.10.0.post15"
     },
     "bohrium-pygments-lexer": {
         "cmdline": [],
@@ -70797,7 +70862,7 @@
             "boto3.session",
             "boto3.utils"
         ],
-        "version": "1.9.60"
+        "version": "1.9.61"
     },
     "boto3-batch-utils": {
         "cmdline": [],
@@ -71927,7 +71992,7 @@
             "botocore.vendored.six",
             "botocore.waiter"
         ],
-        "version": "1.12.60"
+        "version": "1.12.61"
     },
     "botocore-callback": {
         "cmdline": [],
@@ -72817,7 +72882,7 @@
         "modules": [
             "botostubs"
         ],
-        "version": "0.4.1.9.58"
+        "version": "0.4.1.9.61"
     },
     "botoweb": {
         "cmdline": [],
@@ -82643,8 +82708,10 @@
     },
     "brica2": {
         "cmdline": [],
-        "modules": [],
-        "version": "0.2.3"
+        "modules": [
+            "_brica"
+        ],
+        "version": "0.4.0"
     },
     "brick": {
         "cmdline": [],
@@ -90949,31 +91016,40 @@
         "modules": [
             "buildlib",
             "buildlib.buildmisc",
-            "buildlib.buildmisc.lib",
+            "buildlib.buildmisc._lib",
+            "buildlib.buildmisc._lib_cmd",
             "buildlib.buildmisc.prompt",
             "buildlib.git",
-            "buildlib.git.lib",
+            "buildlib.git._lib",
+            "buildlib.git._lib_cmd",
             "buildlib.git.prompt",
             "buildlib.git.seq",
             "buildlib.module",
             "buildlib.npm",
-            "buildlib.npm.lib",
+            "buildlib.npm._lib",
+            "buildlib.npm._lib_cmd",
             "buildlib.npm.prompt",
             "buildlib.pip",
+            "buildlib.pip._lib",
+            "buildlib.pip._lib_cmd",
             "buildlib.pipenv",
+            "buildlib.pipenv._lib",
+            "buildlib.pipenv._lib_cmd",
             "buildlib.project",
-            "buildlib.project.lib",
+            "buildlib.project._lib",
+            "buildlib.project._lib_cmd",
             "buildlib.project.prompt",
             "buildlib.semver",
-            "buildlib.semver.lib",
+            "buildlib.semver._lib",
             "buildlib.semver.prompt",
             "buildlib.utils",
             "buildlib.wheel",
-            "buildlib.wheel.lib",
+            "buildlib.wheel._lib",
+            "buildlib.wheel._lib_cmd",
             "buildlib.wheel.prompt",
             "buildlib.yaml"
         ],
-        "version": "2.0.5"
+        "version": "2.1.6"
     },
     "buildmatrix": {
         "cmdline": [],
