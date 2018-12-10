@@ -983,15 +983,6 @@
         ],
         "version": "0.5.12"
     },
-    "h83s-dump": {
-        "cmdline": [],
-        "modules": [
-            "dump",
-            "dump.dump",
-            "dump.plot"
-        ],
-        "version": "0.0.1"
-    },
     "h9": {
         "cmdline": [],
         "modules": [
@@ -1870,6 +1861,7 @@
             "habu.cli.cmd_dhcp_starvation",
             "habu.cli.cmd_eicar",
             "habu.cli.cmd_extract_email",
+            "habu.cli.cmd_extract_hostname",
             "habu.cli.cmd_extract_ipv4",
             "habu.cli.cmd_fernet",
             "habu.cli.cmd_fernet_genkey",
@@ -1929,7 +1921,7 @@
             "habu.lib.webid",
             "habu.lib.xor"
         ],
-        "version": "0.0.90"
+        "version": "0.0.91"
     },
     "haburas": {
         "cmdline": [],
@@ -4217,6 +4209,7 @@
             "hackerman.transport.arp",
             "hackerman.transport.covert",
             "hackerman.transport.covert.dns",
+            "hackerman.transport.covert.dot11",
             "hackerman.transport.covert.jsc",
             "hackerman.transport.dns",
             "hackerman.transport.dot11",
@@ -4226,7 +4219,7 @@
             "hackerman.ui.shell",
             "hackerman.utils"
         ],
-        "version": "0.8.9"
+        "version": "0.8.10"
     },
     "hackernews": {
         "cmdline": [],
@@ -11304,18 +11297,37 @@
             "hass_apps.heaty.window_sensor",
             "hass_apps.loader",
             "hass_apps.motion_light",
-            "hass_apps.motion_light.app"
+            "hass_apps.motion_light.app",
+            "hass_apps.schedy",
+            "hass_apps.schedy.actor",
+            "hass_apps.schedy.actor.base",
+            "hass_apps.schedy.actor.custom",
+            "hass_apps.schedy.actor.generic",
+            "hass_apps.schedy.actor.switch",
+            "hass_apps.schedy.actor.thermostat",
+            "hass_apps.schedy.app",
+            "hass_apps.schedy.config",
+            "hass_apps.schedy.expression",
+            "hass_apps.schedy.expression.helpers",
+            "hass_apps.schedy.expression.types",
+            "hass_apps.schedy.room",
+            "hass_apps.schedy.schedule",
+            "hass_apps.schedy.stats",
+            "hass_apps.schedy.util"
         ],
-        "version": "0.20181005.0"
+        "version": "0.20181209.0"
     },
     "hass-data-detective": {
         "cmdline": [],
         "modules": [
             "detective",
+            "detective.auth",
+            "detective.config",
             "detective.core",
-            "detective.helpers"
+            "detective.functions",
+            "detective.time"
         ],
-        "version": "0.5"
+        "version": "0.6"
     },
     "hass-heaty": {
         "cmdline": [],
@@ -15405,6 +15417,14 @@
         ],
         "version": "0.0.1"
     },
+    "hcconfig": {
+        "cmdline": [],
+        "modules": [
+            "hcconfig",
+            "hcconfig.interface"
+        ],
+        "version": "0.1.1"
+    },
     "hcct": {
         "cmdline": [],
         "modules": [
@@ -16018,7 +16038,7 @@
             "hdate.htables",
             "hdate.zmanim"
         ],
-        "version": "0.8.1"
+        "version": "0.8.4"
     },
     "hdbscan": {
         "cmdline": [],
@@ -16438,12 +16458,16 @@
     },
     "hdlcontroller": {
         "cmdline": [
-            "hdlcontroller.py"
+            "hdlc_test"
         ],
         "modules": [
-            "hdlcontroller"
+            "hdlcontroller",
+            "hdlcontroller.hdlcontroller",
+            "hdlcontroller.version",
+            "test",
+            "test.test"
         ],
-        "version": "0.4.0"
+        "version": "0.4.1"
     },
     "hdlconvertor": {
         "cmdline": [],
@@ -17945,12 +17969,7 @@
         "version": ""
     },
     "heatmisercontroller": {
-        "cmdline": [
-            "hm_check_time_example.py",
-            "hm_find_example.py",
-            "hm_get_example.py",
-            "hm_set_example.py"
-        ],
+        "cmdline": [],
         "modules": [
             "heatmisercontroller",
             "heatmisercontroller.adaptor",
@@ -17970,7 +17989,7 @@
             "heatmisercontroller.setup",
             "heatmisercontroller.thermostatstate"
         ],
-        "version": "0.38"
+        "version": "0.39"
     },
     "heatmiserv3": {
         "cmdline": [],
@@ -21478,7 +21497,7 @@
             "helputils.defaultlog",
             "helputils.gfs"
         ],
-        "version": "1.4.30"
+        "version": "1.4.32"
     },
     "helpy": {
         "cmdline": [],
@@ -22290,34 +22309,76 @@
             "heptet_app",
             "heptet_app.context",
             "heptet_app.default",
-            "heptet_app.entity",
             "heptet_app.entity_layer",
             "heptet_app.entrypoint",
             "heptet_app.exceptions",
             "heptet_app.field_renderer",
-            "heptet_app.form",
             "heptet_app.impl",
             "heptet_app.interfaces",
             "heptet_app.mixin",
+            "heptet_app.mschema",
             "heptet_app.myapp_config",
             "heptet_app.process",
             "heptet_app.process_views",
+            "heptet_app.process_views2",
             "heptet_app.routes",
             "heptet_app.template",
             "heptet_app.tvars",
             "heptet_app.util",
             "heptet_app.view",
             "heptet_app.viewderiver",
+            "heptet_app.views",
             "heptet_app.webapp_main",
             "tests",
             "tests.conftest",
             "tests.fixtures",
-            "tests.t_config",
-            "tests.t_config.test_context_found",
-            "tests.test_default",
-            "tests.test_entry_points_json"
+            "tests.integration",
+            "tests.integration.conftest",
+            "tests.integration.test_context_found",
+            "tests.t_process",
+            "tests.t_process.test_process_views",
+            "tests.test_default"
         ],
-        "version": "0.43.0"
+        "version": "0.45.0"
+    },
+    "heptet-app-metadata": {
+        "cmdline": [],
+        "modules": [
+            "db_dump",
+            "db_dump.args",
+            "db_dump.dbd_fields",
+            "db_dump.events",
+            "db_dump.info",
+            "db_dump.loader",
+            "db_dump.main",
+            "db_dump.model",
+            "db_dump.registry",
+            "heptet_app_metadata",
+            "heptet_app_metadata.args",
+            "heptet_app_metadata.dbd_fields",
+            "heptet_app_metadata.events",
+            "heptet_app_metadata.info",
+            "heptet_app_metadata.main",
+            "heptet_app_metadata.model",
+            "heptet_app_metadata.registry"
+        ],
+        "version": "0.1"
+    },
+    "heptet-app-sqlalchemy": {
+        "cmdline": [],
+        "modules": [
+            "heptet_app_sqlalchemy"
+        ],
+        "version": "0.45.0"
+    },
+    "heptet-model-adapter": {
+        "cmdline": [],
+        "modules": [
+            "heptet_model_adapter",
+            "heptet_model_adapter.entity",
+            "heptet_model_adapter.form"
+        ],
+        "version": "0.45.0"
     },
     "her": {
         "cmdline": [],
@@ -27796,6 +27857,42 @@
         ],
         "version": "0.2.5"
     },
+    "higra": {
+        "cmdline": [],
+        "modules": [
+            "higra",
+            "higra.accumulator",
+            "higra.accumulator.graph_accumulator",
+            "higra.accumulator.tree_accumulator",
+            "higra.algo",
+            "higra.algo.alignment",
+            "higra.algo.graph_core",
+            "higra.algo.graph_weights",
+            "higra.algo.horizontal_cuts",
+            "higra.algo.rag",
+            "higra.algo.tree",
+            "higra.algo.watershed",
+            "higra.assessment",
+            "higra.assessment.fragmentation_curve",
+            "higra.attribute",
+            "higra.attribute.attributes",
+            "higra.concept",
+            "higra.data_cache",
+            "higra.hg_utils",
+            "higra.hierarchy",
+            "higra.hierarchy.binary_partition_tree",
+            "higra.hierarchy.hierarchy_core",
+            "higra.hierarchy.watershed_hierarchy",
+            "higra.image",
+            "higra.image.graph_image",
+            "higra.image.hierarchy_mean_pb",
+            "higra.image.image_utils",
+            "higra.io_utils",
+            "higra.io_utils.pink_io",
+            "higra.io_utils.tree_io"
+        ],
+        "version": "0.1.0"
+    },
     "hihimann": {
         "cmdline": [],
         "modules": [
@@ -28250,7 +28347,7 @@
             "HinetPy.utils",
             "HinetPy.win32"
         ],
-        "version": "0.5.0"
+        "version": "0.5.1"
     },
     "hinomaru": {
         "cmdline": [],
@@ -32165,6 +32262,19 @@
         "cmdline": [],
         "modules": [],
         "version": "0.1.6dev"
+    },
+    "hnews": {
+        "cmdline": [],
+        "modules": [
+            "hnews",
+            "hnews.ask",
+            "hnews.explore",
+            "hnews.globals",
+            "hnews.jobs",
+            "hnews.news",
+            "hnews.test"
+        ],
+        "version": "0.0.1"
     },
     "hnfb": {
         "cmdline": [],
@@ -40422,6 +40532,14 @@
         ],
         "version": "1.0.5"
     },
+    "hrpy": {
+        "cmdline": [],
+        "modules": [
+            "hrpy",
+            "hrpy.hr"
+        ],
+        "version": "0.0.8"
+    },
     "hrs": {
         "cmdline": [],
         "modules": [
@@ -40480,10 +40598,13 @@
         "modules": [
             "hrv",
             "hrv.classical",
+            "hrv.exceptions",
             "hrv.filters",
+            "hrv.io",
+            "hrv.rri",
             "hrv.utils"
         ],
-        "version": "0.1.5"
+        "version": "0.2.0"
     },
     "hrv-analysis": {
         "cmdline": [],
@@ -52430,10 +52551,11 @@
         "cmdline": [],
         "modules": [
             "hydraseq",
+            "hydraseq.automata",
             "hydraseq.columns",
             "hydraseq.hydraseq"
         ],
-        "version": "0.0.12"
+        "version": "0.0.13"
     },
     "hydraspa": {
         "cmdline": [
@@ -57480,7 +57602,7 @@
             "hypothesis.vendor.pretty",
             "hypothesis.version"
         ],
-        "version": "3.82.1"
+        "version": "3.82.5"
     },
     "hypothesis-client": {
         "cmdline": [],
