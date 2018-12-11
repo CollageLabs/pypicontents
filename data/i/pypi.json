@@ -1680,10 +1680,9 @@
             "ibats_bitmex_trader.agent.td_agent",
             "ibats_bitmex_trader.backend",
             "ibats_bitmex_trader.backend.check",
-            "ibats_bitmex_trader.backend.orm",
             "ibats_bitmex_trader.config"
         ],
-        "version": "0.1.16"
+        "version": "0.2.4"
     },
     "ibats-common": {
         "cmdline": [],
@@ -1737,10 +1736,9 @@
             "ibats_huobi_trader.analysis.account",
             "ibats_huobi_trader.backend",
             "ibats_huobi_trader.backend.check",
-            "ibats_huobi_trader.backend.orm",
             "ibats_huobi_trader.config"
         ],
-        "version": "0.1.5"
+        "version": "0.1.8"
     },
     "ibatscommon": {
         "cmdline": [],
@@ -2370,6 +2368,8 @@
             "ibm_ai_openscale.base_classes.assets.asset",
             "ibm_ai_openscale.base_classes.assets.known_service_asset",
             "ibm_ai_openscale.base_classes.assets.properties",
+            "ibm_ai_openscale.base_classes.client",
+            "ibm_ai_openscale.base_classes.client.client",
             "ibm_ai_openscale.base_classes.clients",
             "ibm_ai_openscale.base_classes.clients.client",
             "ibm_ai_openscale.base_classes.clients.known_service_client",
@@ -2393,6 +2393,7 @@
             "ibm_ai_openscale.base_classes.tables",
             "ibm_ai_openscale.bindings",
             "ibm_ai_openscale.client",
+            "ibm_ai_openscale.client_4_icp",
             "ibm_ai_openscale.clients_manager",
             "ibm_ai_openscale.data_mart",
             "ibm_ai_openscale.engines",
@@ -2416,6 +2417,8 @@
             "ibm_ai_openscale.engines.watson_machine_learning.client",
             "ibm_ai_openscale.engines.watson_machine_learning.consts",
             "ibm_ai_openscale.engines.watson_machine_learning.instance",
+            "ibm_ai_openscale.engines.watson_machine_learning_4_icp",
+            "ibm_ai_openscale.engines.watson_machine_learning_4_icp.instance",
             "ibm_ai_openscale.subscriptions",
             "ibm_ai_openscale.supporting_classes",
             "ibm_ai_openscale.supporting_classes.enums",
@@ -2466,18 +2469,31 @@
             "tests.models_preparation",
             "tests.preparation_and_cleaning",
             "tests.svt",
-            "tests.svt.test_azure_postgres_native_multiclass_product-line_accuracy_monitoring",
             "tests.svt.test_azure_postgres_native_multiclass_product-line_explainability",
+            "tests.svt.test_azure_postgres_native_multiclass_product-line_payload_logging",
             "tests.svt.test_azure_postgres_native_multiclass_product-line_performance_monitoring",
-            "tests.svt.test_azure_postgres_native_regression_product-line_accuracy_monitoring",
-            "tests.svt.test_azure_postgres_scikit_multiclass_iris_accuracy_monitoring",
+            "tests.svt.test_azure_postgres_native_multiclass_product-line_quality_monitoring",
+            "tests.svt.test_azure_postgres_native_regression_product-line_payload_logging",
+            "tests.svt.test_azure_postgres_native_regression_product-line_performance_monitoring",
+            "tests.svt.test_azure_postgres_native_regression_product-line_quality_monitoring",
+            "tests.svt.test_azure_postgres_scikit_multiclass_iris_payload_logging",
             "tests.svt.test_azure_postgres_scikit_multiclass_iris_performance_monitoring",
-            "tests.svt.test_custom_postgres_deployment_structured_payload_logging",
-            "tests.svt.test_custom_postgres_deployment_unstructured_image_payload_logging",
-            "tests.svt.test_sagemaker_db2_native_binary_breast-cancer_payload_logging",
+            "tests.svt.test_azure_postgres_scikit_multiclass_iris_quality_monitoring",
+            "tests.svt.test_custom_postgres_keras_multiclass_resnet50_payload_logging",
+            "tests.svt.test_custom_postgres_keras_multiclass_resnet50_performance_monitoring",
+            "tests.svt.test_custom_postgres_spark_multiclass_cars4u_payload_logging",
+            "tests.svt.test_custom_postgres_spark_multiclass_cars4u_performance_monitoring",
+            "tests.svt.test_custom_postgres_spark_multiclass_cars4u_quality_monitoring",
             "tests.svt.test_sagemaker_postgres_native_binary_breast-cancer_explainability",
+            "tests.svt.test_sagemaker_postgres_native_binary_breast-cancer_payload_logging",
             "tests.svt.test_sagemaker_postgres_native_binary_breast-cancer_performance_monitoring",
             "tests.svt.test_sagemaker_postgres_native_binary_breast-cancer_quality_monitoring",
+            "tests.svt.test_sagemaker_postgres_native_multiclass_breast-cancer_payload_logging",
+            "tests.svt.test_sagemaker_postgres_native_multiclass_breast-cancer_performance_monitoring",
+            "tests.svt.test_sagemaker_postgres_native_multiclass_breast-cancer_quality_monitoring",
+            "tests.svt.test_sagemaker_postgres_native_regression_breast-cancer_payload_logging",
+            "tests.svt.test_sagemaker_postgres_native_regression_breast-cancer_performance_monitoring",
+            "tests.svt.test_sagemaker_postgres_native_regression_breast-cancer_quality_monitoring",
             "tests.svt.test_wml_db2_function_payload_logging",
             "tests.svt.test_wml_db2_keras_mnist_payload_logging",
             "tests.svt.test_wml_db2_spark_best-heart-drug_quality_monitoring_with_feedback",
@@ -2494,6 +2510,7 @@
             "tests.svt.test_wml_postgres_keras_vgg_performance_monitoring",
             "tests.svt.test_wml_postgres_scikit_digits_payload_logging",
             "tests.svt.test_wml_postgres_scikit_digits_performance",
+            "tests.svt.test_wml_postgres_scikit_digits_quality_monitoring",
             "tests.svt.test_wml_postgres_spark_best-heart-drug_fairness_monitoring",
             "tests.svt.test_wml_postgres_spark_drug_quality_monitoring_with_feedback",
             "tests.svt.test_wml_postgres_spark_drug_quality_monitoring_with_learning_system_and_feedback",
@@ -2511,21 +2528,23 @@
             "tests.svt.test_wml_postgres_spark_telco_payload_logging",
             "tests.svt.test_wml_postgres_spark_telco_performance_monitoring",
             "tests.svt.test_wml_postgres_spark_telco_reconfigure",
+            "tests.svt.test_wml_postgres_spark_training_data_stats_fairness_monitoring",
             "tests.svt.test_wml_postgres_spss_customer-satisfaction_payload_logging",
             "tests.svt.test_wml_postgres_spss_customer-satisfaction_performance",
             "tests.svt.test_wml_postgres_tensorflow_payload_logging",
             "tests.svt.test_wml_postgres_tensorflow_performance",
             "tests.svt.test_wml_postgres_xgboost_agaricus_payload_logging",
             "tests.svt.test_wml_postgres_xgboost_agaricus_performance",
+            "tests.svt.test_wml_postgres_xgboost_agaricus_quality_monitoring",
             "tests.test_base",
             "tests.thirdparty",
-            "tests.thirdparty.Azure",
             "tests.thirdparty.Engine",
-            "tests.thirdparty.Sagemaker",
+            "tests.thirdparty.custom",
+            "tests.thirdparty.sagemaker",
             "tests.unittests",
             "tests.unittests.test_table"
         ],
-        "version": "1.0.193"
+        "version": "1.0.248"
     },
     "ibm-ai-openscale-cli": {
         "cmdline": [],
@@ -3658,7 +3677,7 @@
             "icaclswrap.foldertool",
             "icaclswrap.rights"
         ],
-        "version": "0.1.7"
+        "version": "0.2.0"
     },
     "ical-dict": {
         "cmdline": [],
@@ -4285,9 +4304,10 @@
             "iceaddr",
             "iceaddr.addresses",
             "iceaddr.db",
+            "iceaddr.placenames",
             "iceaddr.postcodes"
         ],
-        "version": "0.2"
+        "version": "0.3"
     },
     "icebox": {
         "cmdline": [],
@@ -6058,7 +6078,7 @@
             "iconsdk.wallet",
             "iconsdk.wallet.wallet"
         ],
-        "version": "1.0.6"
+        "version": "1.0.7"
     },
     "iconservice": {
         "cmdline": [],
@@ -10463,7 +10483,7 @@
             "igen.vm",
             "igen_templates"
         ],
-        "version": "1.2.2"
+        "version": "1.3.0"
     },
     "igenerate": {
         "cmdline": [
@@ -11058,6 +11078,17 @@
             "ihcsdk.ihcsslconnection"
         ],
         "version": "2.2.0"
+    },
+    "iheartradio": {
+        "cmdline": [
+            "iheartradio"
+        ],
+        "modules": [
+            "iheartradio",
+            "iheartradio.iheartradio",
+            "iheartradio.rhythmbox"
+        ],
+        "version": "1.0.4"
     },
     "ihex": {
         "cmdline": [],
@@ -15558,6 +15589,13 @@
             "imatlab._version"
         ],
         "version": "0.3"
+    },
+    "imba": {
+        "cmdline": [],
+        "modules": [
+            "imba"
+        ],
+        "version": "0.0.8"
     },
     "imbalanced-learn": {
         "cmdline": [],
@@ -22472,7 +22510,7 @@
             "Independence_test",
             "Independence_test.Independence_test"
         ],
-        "version": "0.0.1"
+        "version": "0.0.2"
     },
     "independentreserve": {
         "cmdline": [],
@@ -28725,6 +28763,7 @@
             "plenum.test.view_change.test_api",
             "plenum.test.view_change.test_checkPerformance",
             "plenum.test.view_change.test_client_req_during_view_change",
+            "plenum.test.view_change.test_client_req_during_view_change_integration",
             "plenum.test.view_change.test_complete_with_delayed_view_change",
             "plenum.test.view_change.test_current_state_building",
             "plenum.test.view_change.test_diconnected_node_reconnects_after_view_change",
@@ -28933,7 +28972,7 @@
             "stp_zmq.util",
             "stp_zmq.zstack"
         ],
-        "version": "1.6.628"
+        "version": "1.6.631"
     },
     "indy-plenum-new-names": {
         "cmdline": [],
@@ -30455,11 +30494,13 @@
     "infi-dnssimple": {
         "cmdline": [],
         "modules": [
-            "dnssimple",
-            "dnssimple.scripts",
-            "dnssimple.scripts.ddns"
+            "infi",
+            "infi.dnssimple",
+            "infi.dnssimple.__version__",
+            "infi.dnssimple.scripts",
+            "infi.dnssimple.scripts.ddns"
         ],
-        "version": "0.0.6"
+        "version": "0.0.7"
     },
     "infi-docopt-completion": {
         "cmdline": [],
@@ -37483,6 +37524,8 @@
             "inmanta.methods",
             "inmanta.model",
             "inmanta.module",
+            "inmanta.moduletool",
+            "inmanta.mongoproc",
             "inmanta.parser",
             "inmanta.parser.parsetab",
             "inmanta.parser.plyInmantaLex",
@@ -37492,11 +37535,13 @@
             "inmanta.resources",
             "inmanta.server",
             "inmanta.server.agentmanager",
+            "inmanta.server.bootloader",
             "inmanta.server.config",
+            "inmanta.server.protocol",
             "inmanta.server.server",
             "inmanta.util"
         ],
-        "version": "2018.2.1"
+        "version": "2018.3"
     },
     "inmanta-sphinx": {
         "cmdline": [],
@@ -38676,7 +38721,7 @@
         "modules": [
             "insertcode"
         ],
-        "version": "0.0.8"
+        "version": "0.1.2"
     },
     "inside": {
         "cmdline": [
@@ -39296,7 +39341,7 @@
             "inspire_schemas.resolved_records.elements",
             "inspire_schemas.utils"
         ],
-        "version": "59.0.0"
+        "version": "59.0.1"
     },
     "inspire-service-orcid": {
         "cmdline": [],
@@ -39309,7 +39354,7 @@
             "inspire_service_orcid.models",
             "inspire_service_orcid.utils"
         ],
-        "version": "8.0.0"
+        "version": "8.1.0"
     },
     "inspire-utils": {
         "cmdline": [],
@@ -39324,7 +39369,7 @@
             "inspire_utils.record",
             "inspire_utils.urls"
         ],
-        "version": "3.0.1"
+        "version": "3.0.2"
     },
     "inspired-django-utils": {
         "cmdline": [],
@@ -40598,6 +40643,15 @@
             "tests.test_ichart"
         ],
         "version": "0.2.1"
+    },
+    "instruct": {
+        "cmdline": [],
+        "modules": [
+            "instruct",
+            "instruct.about",
+            "instruct.utils"
+        ],
+        "version": "0.0.4"
     },
     "instruction-graph": {
         "cmdline": [
@@ -44526,8 +44580,17 @@
     },
     "intuit-oauth": {
         "cmdline": [],
-        "modules": [],
-        "version": "1.0.2"
+        "modules": [
+            "intuitlib",
+            "intuitlib.client",
+            "intuitlib.config",
+            "intuitlib.enums",
+            "intuitlib.exceptions",
+            "intuitlib.migration",
+            "intuitlib.utils",
+            "intuitlib.version"
+        ],
+        "version": "1.1.0"
     },
     "intuition": {
         "cmdline": [],
@@ -47153,6 +47216,7 @@
             "io3d.dili",
             "io3d.dili_subset",
             "io3d.fsbrowser",
+            "io3d.hdf5_io",
             "io3d.idxformat",
             "io3d.image_manipulation",
             "io3d.misc",
@@ -47161,7 +47225,7 @@
             "io3d.rawN",
             "io3d.tgz"
         ],
-        "version": "1.15.0"
+        "version": "1.20.2"
     },
     "ioamdoit": {
         "cmdline": [],
@@ -56147,7 +56211,7 @@
             "iraclis.images3_photometry",
             "iraclis.lightcurves1_fitting"
         ],
-        "version": "1.0.0"
+        "version": "1.1.0"
     },
     "irail": {
         "cmdline": [],
