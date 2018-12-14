@@ -438,7 +438,7 @@
             "j2cli.extras",
             "j2cli.extras.filters"
         ],
-        "version": "0.3.1-0"
+        "version": "0.3.2.post0"
     },
     "j2cli-3": {
         "cmdline": [],
@@ -5687,9 +5687,11 @@
         "modules": [
             "examples",
             "examples.datasets",
+            "examples.kernel_lsq",
             "examples.mnist_classifier",
             "examples.mnist_classifier_fromscratch",
             "examples.mnist_vae",
+            "examples.onnx2xla",
             "examples.resnet50",
             "jax",
             "jax.abstract_arrays",
@@ -5725,12 +5727,17 @@
             "jax.scipy.misc",
             "jax.scipy.special",
             "jax.scipy.stats",
+            "jax.scipy.stats.beta",
+            "jax.scipy.stats.expon",
+            "jax.scipy.stats.gamma",
+            "jax.scipy.stats.laplace",
             "jax.scipy.stats.norm",
+            "jax.scipy.stats.uniform",
             "jax.test_util",
             "jax.tree_util",
             "jax.util"
         ],
-        "version": "0.1.8"
+        "version": "0.1.9"
     },
     "jax-test": {
         "cmdline": [],
@@ -6966,6 +6973,7 @@
             "jdcloud_sdk.services.clouddnsservice.apis.AddRRRequest",
             "jdcloud_sdk.services.clouddnsservice.apis.AddUserViewIPRequest",
             "jdcloud_sdk.services.clouddnsservice.apis.AddUserViewRequest",
+            "jdcloud_sdk.services.clouddnsservice.apis.BatchSetDnsResolveRequest",
             "jdcloud_sdk.services.clouddnsservice.apis.DelDomainRequest",
             "jdcloud_sdk.services.clouddnsservice.apis.DelUserViewIPRequest",
             "jdcloud_sdk.services.clouddnsservice.apis.DelUserViewRequest",
@@ -6974,6 +6982,7 @@
             "jdcloud_sdk.services.clouddnsservice.apis.GetDomainQueryTrafficRequest",
             "jdcloud_sdk.services.clouddnsservice.apis.GetDomainStatisticsRequest",
             "jdcloud_sdk.services.clouddnsservice.apis.GetDomainsRequest",
+            "jdcloud_sdk.services.clouddnsservice.apis.GetLBRequest",
             "jdcloud_sdk.services.clouddnsservice.apis.GetMonitorAlarmInfoRequest",
             "jdcloud_sdk.services.clouddnsservice.apis.GetMonitorRequest",
             "jdcloud_sdk.services.clouddnsservice.apis.GetTargetsRequest",
@@ -6983,6 +6992,7 @@
             "jdcloud_sdk.services.clouddnsservice.apis.OperateMonitorRequest",
             "jdcloud_sdk.services.clouddnsservice.apis.OperateRRRequest",
             "jdcloud_sdk.services.clouddnsservice.apis.SearchRRRequest",
+            "jdcloud_sdk.services.clouddnsservice.apis.SetLBRequest",
             "jdcloud_sdk.services.clouddnsservice.apis.UpdateDomainRequest",
             "jdcloud_sdk.services.clouddnsservice.apis.UpdateMonitorRequest",
             "jdcloud_sdk.services.clouddnsservice.apis.UpdateRRRequest",
@@ -6998,8 +7008,10 @@
             "jdcloud_sdk.services.clouddnsservice.models.DelView",
             "jdcloud_sdk.services.clouddnsservice.models.DelViewIP",
             "jdcloud_sdk.services.clouddnsservice.models.Domain",
+            "jdcloud_sdk.services.clouddnsservice.models.DomainAdded",
             "jdcloud_sdk.services.clouddnsservice.models.DomainInfo",
             "jdcloud_sdk.services.clouddnsservice.models.Getalb",
+            "jdcloud_sdk.services.clouddnsservice.models.Getlb",
             "jdcloud_sdk.services.clouddnsservice.models.HostRRlb",
             "jdcloud_sdk.services.clouddnsservice.models.ImportDNS",
             "jdcloud_sdk.services.clouddnsservice.models.Jdvpc",
@@ -7011,6 +7023,7 @@
             "jdcloud_sdk.services.clouddnsservice.models.RRInfo",
             "jdcloud_sdk.services.clouddnsservice.models.Result",
             "jdcloud_sdk.services.clouddnsservice.models.Setalb",
+            "jdcloud_sdk.services.clouddnsservice.models.Setlb",
             "jdcloud_sdk.services.clouddnsservice.models.UpdateMonitor",
             "jdcloud_sdk.services.clouddnsservice.models.UpdateRR",
             "jdcloud_sdk.services.clouddnsservice.models.UserViewInput",
@@ -7120,6 +7133,28 @@
             "jdcloud_sdk.services.disk.models.SnapshotSpec",
             "jdcloud_sdk.services.disk.models.Tag",
             "jdcloud_sdk.services.disk.models.TagFilter",
+            "jdcloud_sdk.services.httpdns",
+            "jdcloud_sdk.services.httpdns.apis",
+            "jdcloud_sdk.services.httpdns.apis.AddDomainsRequest",
+            "jdcloud_sdk.services.httpdns.apis.CreateAccountRequest",
+            "jdcloud_sdk.services.httpdns.apis.DelDomainsRequest",
+            "jdcloud_sdk.services.httpdns.apis.GetAccountIdRequest",
+            "jdcloud_sdk.services.httpdns.apis.GetAccountInfoRequest",
+            "jdcloud_sdk.services.httpdns.apis.GetDomainsRequest",
+            "jdcloud_sdk.services.httpdns.apis.OperateKeyRequest",
+            "jdcloud_sdk.services.httpdns.client",
+            "jdcloud_sdk.services.httpdns.client.HttpdnsClient",
+            "jdcloud_sdk.services.httpdns.models",
+            "jdcloud_sdk.services.httpdns.models.Account",
+            "jdcloud_sdk.services.httpdns.models.AccountId",
+            "jdcloud_sdk.services.httpdns.models.Count",
+            "jdcloud_sdk.services.httpdns.models.CountData",
+            "jdcloud_sdk.services.httpdns.models.Dataplan",
+            "jdcloud_sdk.services.httpdns.models.DataplanInfo",
+            "jdcloud_sdk.services.httpdns.models.Domain",
+            "jdcloud_sdk.services.httpdns.models.DomainData",
+            "jdcloud_sdk.services.httpdns.models.Totalcount",
+            "jdcloud_sdk.services.httpdns.models.TotalcountData",
             "jdcloud_sdk.services.iam",
             "jdcloud_sdk.services.iam.apis",
             "jdcloud_sdk.services.iam.apis.AddPermissionsToSubUserRequest",
@@ -8062,7 +8097,7 @@
             "jdcloud_sdk.services.xdata.models.DwTableDesc",
             "jdcloud_sdk.services.xdata.models.DwTableRow"
         ],
-        "version": "1.2.22"
+        "version": "1.2.23"
     },
     "jdcloud-sdk-core": {
         "cmdline": [],
@@ -11367,7 +11402,7 @@
             "jhtalib.volume_indicators",
             "jhtalib.volume_indicators.volume_indicators"
         ],
-        "version": "20181109.0"
+        "version": "20181213.0"
     },
     "jhu-primitives": {
         "cmdline": [],
@@ -11806,7 +11841,7 @@
             "jicket.log",
             "jicket.mailhandling"
         ],
-        "version": "0.4.0"
+        "version": "0.4.1"
     },
     "jickle": {
         "cmdline": [],
@@ -13778,7 +13813,7 @@
             "jira_oauth",
             "jira_oauth.console"
         ],
-        "version": "0.1.9"
+        "version": "0.1.10"
     },
     "jira-oauth-generator": {
         "cmdline": [],
@@ -14024,7 +14059,7 @@
             "jira_issue_selector.issue_selector",
             "jira_issue_selector.jira_issue"
         ],
-        "version": "1.3.1"
+        "version": "1.3.3"
     },
     "jiraph": {
         "cmdline": [],
@@ -25673,7 +25708,7 @@
             "json2db.core",
             "json2db.types"
         ],
-        "version": "3.1.2"
+        "version": "3.2.1"
     },
     "json2df": {
         "cmdline": [],
@@ -29553,7 +29588,7 @@
             "jtracker.execution.scheduler.local",
             "jtracker.execution.worker"
         ],
-        "version": "0.2.0a27"
+        "version": "0.2.0a28"
     },
     "jtrans": {
         "cmdline": [],
@@ -30279,7 +30314,7 @@
             "juju.user",
             "juju.utils"
         ],
-        "version": "0.11.0"
+        "version": "0.11.1"
     },
     "juju-act": {
         "cmdline": [],
@@ -30552,7 +30587,7 @@
         "modules": [
             "juju_wait"
         ],
-        "version": "2.6.4"
+        "version": "2.7.0"
     },
     "jujube": {
         "cmdline": [],
@@ -32955,7 +32990,7 @@
             "jupyter_http_over_ws.handlers",
             "jupyter_http_over_ws.handlers_test"
         ],
-        "version": "0.0.1a3"
+        "version": "0.0.2"
     },
     "jupyter-js-widgets-nbextension": {
         "cmdline": [],
