@@ -839,6 +839,13 @@
         ],
         "version": "1.2.3"
     },
+    "rabbitmq-metrics-to-graphite": {
+        "cmdline": [],
+        "modules": [
+            "rabbitmq_metrics_to_graphite"
+        ],
+        "version": "0.2"
+    },
     "rabbitmq-munin": {
         "cmdline": [],
         "modules": [],
@@ -37031,6 +37038,19 @@
         ],
         "version": "0.3"
     },
+    "relaycommander": {
+        "cmdline": [],
+        "modules": [
+            "relay_commander",
+            "relay_commander.generators",
+            "relay_commander.ld",
+            "relay_commander.rc",
+            "relay_commander.redis",
+            "relay_commander.replayBuilder",
+            "relay_commander.validator"
+        ],
+        "version": "0.0.3"
+    },
     "relayer": {
         "cmdline": [],
         "modules": [
@@ -40913,6 +40933,13 @@
         "cmdline": [],
         "modules": [],
         "version": "1.3.4"
+    },
+    "reorientexpress": {
+        "cmdline": [
+            "reorientexpress.py"
+        ],
+        "modules": [],
+        "version": "0.105"
     },
     "rep": {
         "cmdline": [],
@@ -45995,6 +46022,14 @@
         "cmdline": [],
         "modules": [
             "requests_onshape"
+        ],
+        "version": "0.0.1"
+    },
+    "requests-opentracing": {
+        "cmdline": [],
+        "modules": [
+            "requests_opentracing",
+            "requests_opentracing.tracing"
         ],
         "version": "0.0.1"
     },
@@ -59222,6 +59257,14 @@
         ],
         "version": "0.60.4"
     },
+    "riksbank": {
+        "cmdline": [],
+        "modules": [
+            "riksbank",
+            "riksbank.riksbank"
+        ],
+        "version": "0.0.4"
+    },
     "riksdagendatadownloader": {
         "cmdline": [],
         "modules": [
@@ -63641,16 +63684,12 @@
             "rlgraph.agents.apex_agent",
             "rlgraph.agents.dqfd_agent",
             "rlgraph.agents.dqn_agent",
-            "rlgraph.agents.impala_agent",
             "rlgraph.agents.impala_agents",
             "rlgraph.agents.ppo_agent",
             "rlgraph.agents.random_agent",
             "rlgraph.components",
             "rlgraph.components.action_adapters",
             "rlgraph.components.action_adapters.action_adapter",
-            "rlgraph.components.action_adapters.baseline_action_adapter",
-            "rlgraph.components.action_adapters.dueling_action_adapter",
-            "rlgraph.components.action_adapters.obsolete_dueling_action_adapter",
             "rlgraph.components.common",
             "rlgraph.components.common.batch_apply",
             "rlgraph.components.common.batch_splitter",
@@ -63668,7 +63707,6 @@
             "rlgraph.components.common.softmax",
             "rlgraph.components.common.staging_area",
             "rlgraph.components.common.synchronizable",
-            "rlgraph.components.common.tuple_splitter",
             "rlgraph.components.component",
             "rlgraph.components.distributions",
             "rlgraph.components.distributions.bernoulli",
@@ -63703,7 +63741,6 @@
             "rlgraph.components.layers.preprocessing.clip",
             "rlgraph.components.layers.preprocessing.concat",
             "rlgraph.components.layers.preprocessing.convert_type",
-            "rlgraph.components.layers.preprocessing.flatten",
             "rlgraph.components.layers.preprocessing.grayscale",
             "rlgraph.components.layers.preprocessing.image_binary",
             "rlgraph.components.layers.preprocessing.image_crop",
@@ -63736,25 +63773,19 @@
             "rlgraph.components.neural_networks",
             "rlgraph.components.neural_networks.actor_component",
             "rlgraph.components.neural_networks.dict_preprocessor_stack",
-            "rlgraph.components.neural_networks.dynamic_batching_policy",
             "rlgraph.components.neural_networks.impala",
             "rlgraph.components.neural_networks.impala.impala_networks",
             "rlgraph.components.neural_networks.neural_network",
-            "rlgraph.components.neural_networks.policy",
             "rlgraph.components.neural_networks.preprocessor_stack",
             "rlgraph.components.neural_networks.stack",
             "rlgraph.components.neural_networks.value_function",
             "rlgraph.components.optimizers",
-            "rlgraph.components.optimizers.dynamic_batching_optimizer",
             "rlgraph.components.optimizers.horovod_optimizer",
             "rlgraph.components.optimizers.local_optimizers",
-            "rlgraph.components.optimizers.multi_gpu_sync_optimizer",
             "rlgraph.components.optimizers.optimizer",
-            "rlgraph.components.papers",
-            "rlgraph.components.papers.impala",
-            "rlgraph.components.papers.impala.impala_networks",
             "rlgraph.components.policies",
             "rlgraph.components.policies.dueling_policy",
+            "rlgraph.components.policies.dynamic_batching_policy",
             "rlgraph.components.policies.policy",
             "rlgraph.components.policies.shared_value_function_policy",
             "rlgraph.components.queues",
@@ -63770,7 +63801,6 @@
             "rlgraph.environments.vizdoom",
             "rlgraph.execution",
             "rlgraph.execution.distributed_tf",
-            "rlgraph.execution.distributed_tf.distributed_tf_worker",
             "rlgraph.execution.distributed_tf.impala",
             "rlgraph.execution.distributed_tf.impala.impala_worker",
             "rlgraph.execution.environment_sample",
@@ -63781,7 +63811,6 @@
             "rlgraph.execution.ray.apex.legacy_apex_memory",
             "rlgraph.execution.ray.apex.ray_memory_actor",
             "rlgraph.execution.ray.ray_actor",
-            "rlgraph.execution.ray.ray_agent",
             "rlgraph.execution.ray.ray_executor",
             "rlgraph.execution.ray.ray_util",
             "rlgraph.execution.ray.ray_worker",
@@ -63818,16 +63847,13 @@
             "rlgraph.tests.agent_learning.long_tasks.test_impala_agent_long_task_learning",
             "rlgraph.tests.agent_learning.short_tasks",
             "rlgraph.tests.agent_learning.short_tasks.test_actor_critic_agent_short_task_learning",
-            "rlgraph.tests.agent_learning.short_tasks.test_actor_critic_short_task_learning",
             "rlgraph.tests.agent_learning.short_tasks.test_dqn_agent_short_task_learning",
             "rlgraph.tests.agent_learning.short_tasks.test_impala_agent_short_task_learning",
             "rlgraph.tests.agent_learning.short_tasks.test_ppo_agent_short_task_learning",
-            "rlgraph.tests.agent_learning.short_tasks.test_ppo_short_task_learning",
             "rlgraph.tests.agent_test",
             "rlgraph.tests.component_test",
             "rlgraph.tests.components",
             "rlgraph.tests.components.test_action_adapters",
-            "rlgraph.tests.components.test_actor_component",
             "rlgraph.tests.components.test_actor_components",
             "rlgraph.tests.components.test_batch_apply",
             "rlgraph.tests.components.test_batch_splitter",
@@ -63851,7 +63877,6 @@
             "rlgraph.tests.components.test_policies_on_container_actions",
             "rlgraph.tests.components.test_preprocess_layers",
             "rlgraph.tests.components.test_preprocessor_stacks",
-            "rlgraph.tests.components.test_preprocessors",
             "rlgraph.tests.components.test_prioritized_replay",
             "rlgraph.tests.components.test_python_prioritized_replay",
             "rlgraph.tests.components.test_replay_memory",
@@ -63887,15 +63912,9 @@
             "rlgraph.tests.environments.test_grid_world",
             "rlgraph.tests.environments.test_openai_gym_atari",
             "rlgraph.tests.environments.test_random_env",
-            "rlgraph.tests.envs",
-            "rlgraph.tests.envs.test_deepmind_lab",
-            "rlgraph.tests.envs.test_grid_world",
-            "rlgraph.tests.envs.test_openai_gym_atari",
-            "rlgraph.tests.envs.test_random_env",
             "rlgraph.tests.execution",
             "rlgraph.tests.execution.test_apex_executor",
             "rlgraph.tests.execution.test_gpu_strategies",
-            "rlgraph.tests.execution.test_impala_executor",
             "rlgraph.tests.execution.test_ray_worker",
             "rlgraph.tests.execution.test_single_threaded_worker",
             "rlgraph.tests.performance",
@@ -63917,7 +63936,6 @@
             "rlgraph.utils.op_records",
             "rlgraph.utils.ops",
             "rlgraph.utils.pytorch_util",
-            "rlgraph.utils.rlgraph_error",
             "rlgraph.utils.rlgraph_errors",
             "rlgraph.utils.specifiable",
             "rlgraph.utils.specifiable_server",
@@ -63926,7 +63944,7 @@
             "rlgraph.utils.visualization_util",
             "rlgraph.version"
         ],
-        "version": "0.2.2"
+        "version": "0.2.3"
     },
     "rlgraph-plot": {
         "cmdline": [],
@@ -66972,7 +66990,7 @@
             "roax.static",
             "roax.wsgi"
         ],
-        "version": "1.0b47"
+        "version": "1.0.0"
     },
     "rob": {
         "cmdline": [],
@@ -68067,7 +68085,7 @@
             "roboschool.scene_stadium",
             "roboschool.test_manual"
         ],
-        "version": "1.0.11"
+        "version": "1.0.16"
     },
     "roboshodan": {
         "cmdline": [],
@@ -87552,11 +87570,6 @@
         ],
         "version": "0.2.2"
     },
-    "rtfdoc": {
-        "cmdline": [],
-        "modules": [],
-        "version": ""
-    },
     "rtfm": {
         "cmdline": [],
         "modules": [],
@@ -87910,7 +87923,7 @@
             "RTOC.jsonsocket",
             "RTOC.telegramBot"
         ],
-        "version": "1.8.4"
+        "version": "1.8.5.5"
     },
     "rtool": {
         "cmdline": [],
@@ -90173,7 +90186,7 @@
             "rule_engine.errors",
             "rule_engine.parser"
         ],
-        "version": "0.9.0"
+        "version": "1.0.0"
     },
     "rule-n": {
         "cmdline": [],
