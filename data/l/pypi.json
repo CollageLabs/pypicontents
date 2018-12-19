@@ -4505,7 +4505,6 @@
             "landlab.components.detachment_ltd_erosion",
             "landlab.components.detachment_ltd_erosion.generate_detachment_ltd_erosion",
             "landlab.components.detachment_ltd_erosion.generate_erosion_by_depth_slope",
-            "landlab.components.diff_2d",
             "landlab.components.diffusion",
             "landlab.components.diffusion.diffusion",
             "landlab.components.diffusion.tests",
@@ -4526,15 +4525,18 @@
             "landlab.components.flexure.funcs",
             "landlab.components.flexure.tests",
             "landlab.components.flexure.tests.conftest",
+            "landlab.components.flexure.tests.test_api",
             "landlab.components.flexure.tests.test_flexure",
             "landlab.components.flexure.tests.test_flexure_1d",
             "landlab.components.flow_accum",
             "landlab.components.flow_accum.flow_accum_bw",
             "landlab.components.flow_accum.flow_accum_to_n",
             "landlab.components.flow_accum.flow_accumulator",
+            "landlab.components.flow_accum.lossy_flow_accumulator",
             "landlab.components.flow_accum.tests",
             "landlab.components.flow_accum.tests.test_flow_accums",
             "landlab.components.flow_accum.tests.test_flow_accumulator",
+            "landlab.components.flow_accum.tests.test_lossy_flow_accumulator",
             "landlab.components.flow_director",
             "landlab.components.flow_director.flow_direction_DN",
             "landlab.components.flow_director.flow_direction_dinf",
@@ -4563,6 +4565,8 @@
             "landlab.components.fracture_grid.tests.test_fracture_grid",
             "landlab.components.gflex",
             "landlab.components.gflex.flexure",
+            "landlab.components.lake_fill",
+            "landlab.components.lake_fill.lake_fill_barnes",
             "landlab.components.landslides",
             "landlab.components.landslides.landslide_probability",
             "landlab.components.landslides.tests",
@@ -4611,6 +4615,7 @@
             "landlab.components.radiation.tests.test_radiation",
             "landlab.components.sink_fill",
             "landlab.components.sink_fill.fill_sinks",
+            "landlab.components.sink_fill.sink_fill_barnes",
             "landlab.components.sink_fill.tests",
             "landlab.components.sink_fill.tests.conftest",
             "landlab.components.sink_fill.tests.test_sink_filler",
@@ -4673,6 +4678,8 @@
             "landlab.core.tests.test_load_params",
             "landlab.core.tests.test_messager",
             "landlab.core.utils",
+            "landlab.data_record",
+            "landlab.data_record.data_record",
             "landlab.field",
             "landlab.field.field_mixin",
             "landlab.field.graph_field",
@@ -4854,7 +4861,6 @@
             "landlab.plot.video_out",
             "landlab.testing",
             "landlab.testing.decorators",
-            "landlab.testing.numpy_mixins",
             "landlab.testing.tools",
             "landlab.tests",
             "landlab.tests.conftest",
@@ -4872,6 +4878,7 @@
             "landlab.utils.jaggedarray_ma",
             "landlab.utils.return_array",
             "landlab.utils.source_tracking_algorithm",
+            "landlab.utils.stable_priority_queue",
             "landlab.utils.structured_grid",
             "landlab.utils.tests",
             "landlab.utils.tests.test_count_repeats",
@@ -4879,11 +4886,12 @@
             "landlab.utils.tests.test_flow__distance",
             "landlab.utils.tests.test_neighbor_node_array",
             "landlab.utils.tests.test_source_tracking_algorithm",
+            "landlab.utils.tests.test_stable_priority_queue",
             "landlab.utils.tests.test_structured_grid",
             "landlab.utils.tests.test_watershed",
             "landlab.utils.watershed"
         ],
-        "version": "1.5.4"
+        "version": "1.6.0"
     },
     "landmark-extractor": {
         "cmdline": [],
@@ -5425,9 +5433,22 @@
     "langmuir": {
         "cmdline": [],
         "modules": [
-            "langmuir"
+            "langmuir",
+            "langmuir.analytical",
+            "langmuir.geometry",
+            "langmuir.interpolated",
+            "langmuir.misc",
+            "langmuir.species",
+            "langmuir.tables",
+            "langmuir.test_analytical",
+            "langmuir.test_geometry",
+            "langmuir.test_interface",
+            "langmuir.test_interpolated",
+            "langmuir.test_misc",
+            "langmuir.test_species",
+            "langmuir.test_table"
         ],
-        "version": "0.2.0"
+        "version": "0.3.0"
     },
     "langner": {
         "cmdline": [],
@@ -10020,6 +10041,7 @@
             "latools.helpers.helpers",
             "latools.helpers.logging",
             "latools.helpers.plot",
+            "latools.helpers.process_fns",
             "latools.helpers.progressbars",
             "latools.helpers.srm",
             "latools.helpers.stat_fns",
@@ -10037,7 +10059,7 @@
             "tests.test_beginnersGuide",
             "tests.test_latools"
         ],
-        "version": "0.3.6"
+        "version": "0.3.7"
     },
     "latr": {
         "cmdline": [],
@@ -13702,6 +13724,14 @@
         ],
         "version": "0.1"
     },
+    "lbminhtts": {
+        "cmdline": [],
+        "modules": [
+            "lbminhtts",
+            "lbminhtts.lbminhtts"
+        ],
+        "version": "0.0.1.4"
+    },
     "lbn": {
         "cmdline": [],
         "modules": [],
@@ -13849,7 +13879,7 @@
         "modules": [
             "lbsntransform"
         ],
-        "version": "0.1.516"
+        "version": "0.1.517"
     },
     "lbt-dragonfly": {
         "cmdline": [],
@@ -16274,7 +16304,7 @@
             "ldeep.ldap.constants",
             "ldeep.utils"
         ],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     "ldetect": {
         "cmdline": [],
@@ -18403,6 +18433,24 @@
             "learncrypy.Utils"
         ],
         "version": "0.1"
+    },
+    "learndl": {
+        "cmdline": [],
+        "modules": [
+            "learndl",
+            "learndl.layers",
+            "learndl.layers.cost",
+            "learndl.layers.dense",
+            "learndl.layers.input",
+            "learndl.layers.layer",
+            "learndl.math",
+            "learndl.math.activations",
+            "learndl.math.losses",
+            "learndl.math.optimizers",
+            "learndl.models",
+            "learndl.utils"
+        ],
+        "version": "0.5.5"
     },
     "learnedevolution": {
         "cmdline": [],
@@ -24297,7 +24345,7 @@
             "lesspass.validator",
             "lesspass.version"
         ],
-        "version": "6.0.0"
+        "version": "6.1.0"
     },
     "lesspy": {
         "cmdline": [],
@@ -27405,7 +27453,7 @@
             "lib3to6.transpile",
             "lib3to6.utils"
         ],
-        "version": "201812.22a0"
+        "version": "201812.24b1"
     },
     "lib50": {
         "cmdline": [],
@@ -30588,7 +30636,7 @@
         ],
         "version": "0.2.3.0"
     },
-    "libneko-beta": {
+    "libneko": {
         "cmdline": [],
         "modules": [
             "libneko",
@@ -30635,7 +30683,7 @@
             "libneko.test.test_singleton",
             "libneko.test.test_strings"
         ],
-        "version": "0.23.25"
+        "version": "0.24.9"
     },
     "libneuroml": {
         "cmdline": [],
@@ -42359,9 +42407,6 @@
             "lino.fake_migrations",
             "lino.hello",
             "lino.help_texts",
-            "lino.history",
-            "lino.history.luc201212",
-            "lino.history.show",
             "lino.management",
             "lino.management.commands",
             "lino.management.commands.diag",
@@ -42595,7 +42640,7 @@
             "lino.utils.watch",
             "lino.utils.weekly"
         ],
-        "version": "18.12.1"
+        "version": "18.12.5"
     },
     "lino-algus": {
         "cmdline": [],
@@ -42939,14 +42984,12 @@
             "lino_cosi.lib.cosi.models",
             "lino_cosi.lib.cosi.settings",
             "lino_cosi.lib.cosi.user_types",
-            "lino_cosi.lib.delivery",
-            "lino_cosi.lib.delivery.models",
             "lino_cosi.lib.orders",
             "lino_cosi.lib.orders.models",
             "lino_cosi.migrate",
             "lino_cosi.setup_info"
         ],
-        "version": "18.8.0"
+        "version": "18.12.0"
     },
     "lino-noi": {
         "cmdline": [],
@@ -43860,11 +43903,13 @@
             "lino_xl.lib.working.roles",
             "lino_xl.lib.working.ui",
             "lino_xl.lib.xl",
+            "lino_xl.lib.xl.choicelists",
             "lino_xl.lib.xl.help_texts",
+            "lino_xl.lib.xl.models",
             "lino_xl.lib.xl.user_types",
             "lino_xl.setup_info"
         ],
-        "version": "18.12.3"
+        "version": "18.12.4"
     },
     "linode": {
         "cmdline": [],
@@ -44013,7 +44058,7 @@
             "linodecli.plugins.k8s-alpha",
             "linodecli.response"
         ],
-        "version": "2.0.17"
+        "version": "2.0.18"
     },
     "linode-deploy-experimental": {
         "cmdline": [],
@@ -52163,8 +52208,11 @@
             "lnet-cli",
             "lnet-daemon"
         ],
-        "modules": [],
-        "version": "0.0.2"
+        "modules": [
+            "lnet.utils",
+            "lnet.web"
+        ],
+        "version": "0.0.5"
     },
     "lnetatmo": {
         "cmdline": [],
@@ -62227,7 +62275,7 @@
             "losantrest.webhook",
             "losantrest.webhooks"
         ],
-        "version": "1.8.1"
+        "version": "1.8.2"
     },
     "losetup": {
         "cmdline": [],
@@ -65102,6 +65150,21 @@
         ],
         "version": "1.0.1"
     },
+    "lspkg": {
+        "cmdline": [],
+        "modules": [
+            "my_pkg",
+            "my_pkg.module1"
+        ],
+        "version": "1.0.0"
+    },
+    "lspkg1022": {
+        "cmdline": [],
+        "modules": [
+            "lspkg1022"
+        ],
+        "version": "1.0.1"
+    },
     "lspplot": {
         "cmdline": [],
         "modules": [
@@ -65349,6 +65412,16 @@
     "lstm-ram-v0": {
         "cmdline": [],
         "modules": [],
+        "version": "0.0.1"
+    },
+    "lstpy": {
+        "cmdline": [],
+        "modules": [
+            "lstpy",
+            "lstpy._version",
+            "lstpy.load",
+            "lstpy.utils"
+        ],
         "version": "0.0.1"
     },
     "lstree": {
@@ -68960,7 +69033,7 @@
             "lusid.models.versioned_resource_list_of_transaction",
             "lusid.version"
         ],
-        "version": "0.9.7"
+        "version": "0.9.15"
     },
     "lusid-tr-sdk": {
         "cmdline": [],
@@ -69181,7 +69254,7 @@
             "speaker",
             "speaker.speaker"
         ],
-        "version": "0.0.10"
+        "version": "0.0.11"
     },
     "lutin": {
         "cmdline": [
@@ -71538,7 +71611,7 @@
             "lyricsgenius.artist",
             "lyricsgenius.song"
         ],
-        "version": "1.0.2"
+        "version": "1.1.0"
     },
     "lyricsmaster": {
         "cmdline": [],
@@ -71743,7 +71816,7 @@
             "lz4.frame._compression",
             "lz4.version"
         ],
-        "version": "2.1.3"
+        "version": "2.1.5"
     },
     "lz4-cffi": {
         "cmdline": [],
@@ -71833,7 +71906,7 @@
             "src.net_util",
             "src.oracle_dao"
         ],
-        "version": "0.0.22"
+        "version": "0.0.25"
     },
     "lzhtools": {
         "cmdline": [],
