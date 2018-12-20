@@ -1627,6 +1627,7 @@
         "modules": [
             "wagtail",
             "wagtail.admin",
+            "wagtail.admin.action_menu",
             "wagtail.admin.api",
             "wagtail.admin.api.endpoints",
             "wagtail.admin.api.filters",
@@ -1692,6 +1693,7 @@
             "wagtail.admin.tests.test_html_ruleset",
             "wagtail.admin.tests.test_jinja2",
             "wagtail.admin.tests.test_messages",
+            "wagtail.admin.tests.test_moderation_list",
             "wagtail.admin.tests.test_navigation",
             "wagtail.admin.tests.test_page_chooser",
             "wagtail.admin.tests.test_pages_views",
@@ -1933,6 +1935,7 @@
             "wagtail.core.migrations.0038_make_first_published_at_editable",
             "wagtail.core.migrations.0039_collectionviewrestriction",
             "wagtail.core.migrations.0040_page_draft_title",
+            "wagtail.core.migrations.0041_group_collection_permissions_verbose_name_plural",
             "wagtail.core.models",
             "wagtail.core.permission_policies",
             "wagtail.core.permission_policies.base",
@@ -1998,6 +2001,8 @@
             "wagtail.documents.migrations.0006_copy_document_permissions_to_collections",
             "wagtail.documents.migrations.0007_merge",
             "wagtail.documents.migrations.0008_document_file_size",
+            "wagtail.documents.migrations.0009_document_verbose_name_plural",
+            "wagtail.documents.migrations.0010_document_file_hash",
             "wagtail.documents.models",
             "wagtail.documents.permissions",
             "wagtail.documents.rich_text",
@@ -2005,6 +2010,7 @@
             "wagtail.documents.tests",
             "wagtail.documents.tests.test_admin_views",
             "wagtail.documents.tests.test_collection_privacy",
+            "wagtail.documents.tests.test_document_chooser",
             "wagtail.documents.tests.test_models",
             "wagtail.documents.tests.test_rich_text",
             "wagtail.documents.tests.test_search",
@@ -2032,6 +2038,7 @@
             "wagtail.embeds.migrations.0001_initial",
             "wagtail.embeds.migrations.0002_add_verbose_names",
             "wagtail.embeds.migrations.0003_capitalizeverbose",
+            "wagtail.embeds.migrations.0004_embed_verbose_name_plural",
             "wagtail.embeds.models",
             "wagtail.embeds.oembed_providers",
             "wagtail.embeds.rich_text",
@@ -2065,6 +2072,7 @@
             "wagtail.images.jinja2tags",
             "wagtail.images.migrations",
             "wagtail.images.migrations.0001_initial",
+            "wagtail.images.migrations.0001_squashed_0021",
             "wagtail.images.migrations.0002_initial_data",
             "wagtail.images.migrations.0003_fix_focal_point_fields",
             "wagtail.images.migrations.0004_make_focal_point_key_not_nullable",
@@ -2132,6 +2140,7 @@
             "wagtail.search.migrations.0001_initial",
             "wagtail.search.migrations.0002_add_verbose_names",
             "wagtail.search.migrations.0003_remove_editors_pick",
+            "wagtail.search.migrations.0004_querydailyhits_verbose_name_plural",
             "wagtail.search.models",
             "wagtail.search.query",
             "wagtail.search.queryset",
@@ -2266,6 +2275,10 @@
             "wagtail.tests.testapp.migrations.0034_advertwithuuidcustomprimarykey",
             "wagtail.tests.testapp.migrations.0035_streamfieldmigrationmodels",
             "wagtail.tests.testapp.migrations.0036_streamfieldmigrationmodels_add_field",
+            "wagtail.tests.testapp.migrations.0037_customdocument_verbose_name_plural",
+            "wagtail.tests.testapp.migrations.0038_singletonpageviamaxcount",
+            "wagtail.tests.testapp.migrations.0039_customdocument_description",
+            "wagtail.tests.testapp.migrations.0040_customdocument_file_hash",
             "wagtail.tests.testapp.models",
             "wagtail.tests.testapp.rich_text",
             "wagtail.tests.testapp.urls",
@@ -2290,6 +2303,7 @@
             "wagtail.users.migrations.0006_userprofile_prefered_language",
             "wagtail.users.migrations.0007_userprofile_current_time_zone",
             "wagtail.users.migrations.0008_userprofile_avatar",
+            "wagtail.users.migrations.0009_userprofile_verbose_name_plural",
             "wagtail.users.models",
             "wagtail.users.templatetags",
             "wagtail.users.templatetags.wagtailusers_tags",
@@ -2322,7 +2336,7 @@
             "wagtail.utils.version",
             "wagtail.utils.widgets"
         ],
-        "version": "2.3"
+        "version": "2.4"
     },
     "wagtail-2fa": {
         "cmdline": [],
@@ -2895,12 +2909,18 @@
         "cmdline": [],
         "modules": [
             "wagtaillinkchecker",
+            "wagtaillinkchecker.apps",
             "wagtaillinkchecker.celery",
             "wagtaillinkchecker.forms",
+            "wagtaillinkchecker.management",
+            "wagtaillinkchecker.management.commands",
+            "wagtaillinkchecker.management.commands.linkcheck",
             "wagtaillinkchecker.migrations",
             "wagtaillinkchecker.migrations.0001_initial",
             "wagtaillinkchecker.migrations.0002_auto_20160209_1533",
             "wagtaillinkchecker.migrations.0003_store_scan_results",
+            "wagtaillinkchecker.migrations.0004_auto_20180829_1922",
+            "wagtaillinkchecker.migrations.0005_auto_20180922_1835",
             "wagtaillinkchecker.models",
             "wagtaillinkchecker.pagination",
             "wagtaillinkchecker.scanner",
@@ -2909,7 +2929,7 @@
             "wagtaillinkchecker.views",
             "wagtaillinkchecker.wagtail_hooks"
         ],
-        "version": "0.3.0"
+        "version": "0.4.0"
     },
     "wagtail-links": {
         "cmdline": [],
@@ -5477,7 +5497,7 @@
             "wakatime.stats",
             "wakatime.utils"
         ],
-        "version": "10.6.0"
+        "version": "10.6.1"
     },
     "wake": {
         "cmdline": [],
@@ -10708,7 +10728,7 @@
             "wasabi.traceback",
             "wasabi.util"
         ],
-        "version": "0.0.14"
+        "version": "0.0.15"
     },
     "wasabi-geom": {
         "cmdline": [],
@@ -11394,7 +11414,7 @@
             "watch_diff.format",
             "watch_diff.notify"
         ],
-        "version": "0.1.1"
+        "version": "0.2.1"
     },
     "watch-fs": {
         "cmdline": [],
@@ -14410,6 +14430,7 @@
             "wavespectra.input.netcdf",
             "wavespectra.input.octopus",
             "wavespectra.input.swan",
+            "wavespectra.input.triaxys",
             "wavespectra.input.ww3",
             "wavespectra.input.ww3_msl",
             "wavespectra.input.wwm",
@@ -14423,7 +14444,7 @@
             "wavespectra.specarray",
             "wavespectra.specdataset"
         ],
-        "version": "3.2.2"
+        "version": "3.2.3"
     },
     "wavesync": {
         "cmdline": [
@@ -23852,6 +23873,21 @@
         ],
         "version": "2.0.2"
     },
+    "webstack-django-jwt-auth": {
+        "cmdline": [],
+        "modules": [
+            "jwt_auth",
+            "jwt_auth.core",
+            "jwt_auth.exceptions",
+            "jwt_auth.forms",
+            "jwt_auth.middleware",
+            "jwt_auth.mixins",
+            "jwt_auth.settings",
+            "jwt_auth.utils",
+            "jwt_auth.views"
+        ],
+        "version": "0.3.0"
+    },
     "webstack-django-pagination": {
         "cmdline": [],
         "modules": [
@@ -25705,7 +25741,7 @@
             "tests.test_all",
             "weichigong"
         ],
-        "version": "1.0.1"
+        "version": "1.0.3"
     },
     "weidao": {
         "cmdline": [],
@@ -26671,11 +26707,14 @@
             "wemake_python_styleguide.logics.naming.logical",
             "wemake_python_styleguide.logics.naming.name_nodes",
             "wemake_python_styleguide.logics.nodes",
+            "wemake_python_styleguide.logics.tokens",
             "wemake_python_styleguide.options",
             "wemake_python_styleguide.options.config",
             "wemake_python_styleguide.options.defaults",
-            "wemake_python_styleguide.transformation",
-            "wemake_python_styleguide.transformation.ast_tree",
+            "wemake_python_styleguide.transformations",
+            "wemake_python_styleguide.transformations.ast",
+            "wemake_python_styleguide.transformations.ast.bugfixes",
+            "wemake_python_styleguide.transformations.ast_tree",
             "wemake_python_styleguide.types",
             "wemake_python_styleguide.version",
             "wemake_python_styleguide.violations",
@@ -26686,6 +26725,7 @@
             "wemake_python_styleguide.violations.naming",
             "wemake_python_styleguide.visitors",
             "wemake_python_styleguide.visitors.ast",
+            "wemake_python_styleguide.visitors.ast.annotations",
             "wemake_python_styleguide.visitors.ast.attributes",
             "wemake_python_styleguide.visitors.ast.builtins",
             "wemake_python_styleguide.visitors.ast.classes",
@@ -26714,9 +26754,10 @@
             "wemake_python_styleguide.visitors.tokenize",
             "wemake_python_styleguide.visitors.tokenize.comments",
             "wemake_python_styleguide.visitors.tokenize.keywords",
-            "wemake_python_styleguide.visitors.tokenize.primitives"
+            "wemake_python_styleguide.visitors.tokenize.primitives",
+            "wemake_python_styleguide.visitors.tokenize.statements"
         ],
-        "version": "0.5.1"
+        "version": "0.6.0"
     },
     "wemo": {
         "cmdline": [],
@@ -48549,7 +48590,7 @@
             "workfront.workfront",
             "workfront.workfront_subs"
         ],
-        "version": "0.22"
+        "version": "0.22.1"
     },
     "workfrontapi-plus": {
         "cmdline": [],
@@ -50171,8 +50212,10 @@
     },
     "wpilib-controller": {
         "cmdline": [],
-        "modules": [],
-        "version": "0.2"
+        "modules": [
+            "wpilib_controller"
+        ],
+        "version": "0.3"
     },
     "wplinks": {
         "cmdline": [],
@@ -53771,7 +53814,7 @@
             "wsk",
             "wsk.wsk"
         ],
-        "version": "0.1.10"
+        "version": "0.1.11"
     },
     "wsk-input-validator": {
         "cmdline": [],
