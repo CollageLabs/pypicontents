@@ -476,47 +476,24 @@ This package download URL does not point to a valid file: "http://ibpy.googlecod
 [ERROR] (id3repair) Could not extract data from this package. See below for details.
 "http://nirs.freeshell.org/files/id3repair-1.0.tar.gz" file could not be downloaded. See below for details.
 Traceback (most recent call last):
-  File "/usr/lib/python3.5/urllib/request.py", line 1254, in do_open
-    h.request(req.get_method(), req.selector, req.data, headers)
-  File "/usr/lib/python3.5/http/client.py", line 1107, in request
-    self._send_request(method, url, body, headers)
-  File "/usr/lib/python3.5/http/client.py", line 1152, in _send_request
-    self.endheaders(body)
-  File "/usr/lib/python3.5/http/client.py", line 1103, in endheaders
-    self._send_output(message_body)
-  File "/usr/lib/python3.5/http/client.py", line 934, in _send_output
-    self.send(msg)
-  File "/usr/lib/python3.5/http/client.py", line 877, in send
-    self.connect()
-  File "/usr/lib/python3.5/http/client.py", line 849, in connect
-    (self.host,self.port), self.timeout, self.source_address)
-  File "/usr/lib/python3.5/socket.py", line 712, in create_connection
-    raise err
-  File "/usr/lib/python3.5/socket.py", line 703, in create_connection
-    sock.connect(sa)
-ConnectionRefusedError: [Errno 111] Connection refused
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
   File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 107, in download_tar
     f.write(urlopen(url=urlesc(pkgurl), timeout=10).read())
   File "/usr/lib/python3.5/urllib/request.py", line 163, in urlopen
     return opener.open(url, data, timeout)
-  File "/usr/lib/python3.5/urllib/request.py", line 466, in open
-    response = self._open(req, data)
-  File "/usr/lib/python3.5/urllib/request.py", line 484, in _open
-    '_open', req)
+  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.5/urllib/request.py", line 510, in error
+    return self._call_chain(*args)
   File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
     result = func(*args)
-  File "/usr/lib/python3.5/urllib/request.py", line 1282, in http_open
-    return self.do_open(http.client.HTTPConnection, req)
-  File "/usr/lib/python3.5/urllib/request.py", line 1256, in do_open
-    raise URLError(err)
-urllib.error.URLError: <urlopen error [Errno 111] Connection refused>
+  File "/usr/lib/python3.5/urllib/request.py", line 590, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
 
 [INFO] (id3tree) This package is up to date.
-[INFO] (id4me-rp-client) Data has been updated for this package.
+[INFO] (id4me-rp-client) This package is up to date.
 [INFO] (ida-netnode) This package is up to date.
 [INFO] (ida-settings) This package is up to date.
 [INFO] (idact) This package is up to date.
@@ -825,9 +802,9 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (ig) This package is up to date.
 [INFO] (ig-cpp) This package is up to date.
 [ERROR] (ig-pg-utils) This package does not have downloadable releases.
-[INFO] (ig-rest-client) Data has been updated for this package.
+[INFO] (ig-rest-client) This package is up to date.
 [INFO] (ig-scraper) This package is up to date.
-[INFO] (ig-streaming-client) Data has been updated for this package.
+[INFO] (ig-streaming-client) This package is up to date.
 [ERROR] (ig-switchapi) Could not get a response from API for this package. See below for details.
 Traceback (most recent call last):
   File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
@@ -1146,6 +1123,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (image-augmentor) This package is up to date.
 [INFO] (image-bootstrap) This package is up to date.
 [INFO] (image-builder) This package is up to date.
+[INFO] (image-classifiers) Data has been updated for this package.
 [INFO] (image-cleaner) This package is up to date.
 [INFO] (image-compression) This package is up to date.
 [INFO] (image-compressor) This package is up to date.
@@ -1227,7 +1205,34 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (imagecodecs) This package is up to date.
 [INFO] (imagecolor) This package is up to date.
 [INFO] (imagecompare) This package is up to date.
-[INFO] (imagecompressor) This package is up to date.
+[ERROR] (imagecompressor) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.5/urllib/request.py", line 163, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.5/urllib/request.py", line 504, in error
+    result = self._call_chain(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 696, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.5/urllib/request.py", line 510, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 590, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+
 [INFO] (imagecontour) This package is up to date.
 [INFO] (imagecontrast) This package is up to date.
 [INFO] (imagecore) This package is up to date.
@@ -1333,7 +1338,7 @@ Unsupported package directory structure.
 [INFO] (imathics) This package is up to date.
 [INFO] (imatlab) This package is up to date.
 [INFO] (imba) This package is up to date.
-[INFO] (imbalanced-databases) Data has been updated for this package.
+[INFO] (imbalanced-databases) This package is up to date.
 [INFO] (imbalanced-learn) This package is up to date.
 [INFO] (imbalancedlearn) This package is up to date.
 [INFO] (imbd-quotes) This package is up to date.
@@ -1751,7 +1756,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (in-toto) This package is up to date.
 [INFO] (inaction) This package is up to date.
 [INFO] (inapp-purchases) This package is up to date.
-[INFO] (inapppy) This package is up to date.
+[INFO] (inapppy) Data has been updated for this package.
 [INFO] (inappropriate-notifications) This package is up to date.
 [INFO] (inarpa) This package is up to date.
 [INFO] (inasafe-cli) This package is up to date.
@@ -2013,7 +2018,7 @@ This package download URL does not point to a valid file: "http://www.florian-di
 [INFO] (indy-crypto-authz) This package is up to date.
 [INFO] (indy-node) This package is up to date.
 [INFO] (indy-node-authz) This package is up to date.
-[INFO] (indy-node-dev) Data has been updated for this package.
+[INFO] (indy-node-dev) This package is up to date.
 [INFO] (indy-node-new-names) This package is up to date.
 [INFO] (indy-plenum) This package is up to date.
 [INFO] (indy-plenum-authz) This package is up to date.
@@ -2204,6 +2209,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (inflect) This package is up to date.
 [INFO] (inflect-dj) This package is up to date.
 [INFO] (inflection) This package is up to date.
+[INFO] (inflection-jinja) Data has been updated for this package.
 [INFO] (inflector) This package is up to date.
 [INFO] (inflexion) This package is up to date.
 [INFO] (inflow) This package is up to date.
@@ -2601,7 +2607,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (inputscope) This package is up to date.
 [INFO] (inputtxt) This package is up to date.
 [INFO] (inpy) This package is up to date.
-[INFO] (inpy-commons) This package is up to date.
+[INFO] (inpy-commons) Data has been updated for this package.
 [INFO] (inqbus-bannerrotation) This package is up to date.
 [ERROR] (inqbus-clipboard) Could not get a response from API for this package. See below for details.
 Traceback (most recent call last):
@@ -2694,7 +2700,7 @@ This package download URL does not point to a valid file: "http://www.inqvista.c
 [INFO] (insar) This package is up to date.
 [INFO] (inscribe) This package is up to date.
 [INFO] (inscribeai) This package is up to date.
-[INFO] (inscriptis) Data has been updated for this package.
+[INFO] (inscriptis) This package is up to date.
 [INFO] (insdcalculator) This package is up to date.
 [INFO] (insect) This package is up to date.
 [INFO] (insecure-but-secure-enough) This package is up to date.
@@ -3498,7 +3504,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (iotile-support-firm-env-1) This package is up to date.
 [INFO] (iotile-support-lib-controller-3) This package is up to date.
 [INFO] (iotile-support-prod-pod1m-0) This package is up to date.
-[INFO] (iotile-support-prod-pod1m-1) Data has been updated for this package.
+[INFO] (iotile-support-prod-pod1m-1) This package is up to date.
 [INFO] (iotile-test) This package is up to date.
 [INFO] (iotile-transport-awsiot) This package is up to date.
 [INFO] (iotile-transport-bled112) This package is up to date.
@@ -3871,7 +3877,7 @@ urllib.error.URLError: <urlopen error [Errno -2] Name or service not known>
 [INFO] (ipyiiif) This package is up to date.
 [INFO] (ipyk) This package is up to date.
 [INFO] (ipykernel) This package is up to date.
-[INFO] (ipyleaflet) Data has been updated for this package.
+[INFO] (ipyleaflet) This package is up to date.
 [INFO] (ipylogger) This package is up to date.
 [INFO] (ipylogue) This package is up to date.
 [INFO] (ipymap) This package is up to date.
@@ -3989,7 +3995,7 @@ Unsupported package directory structure.
 [INFO] (iquery) This package is up to date.
 [INFO] (ir-fds) This package is up to date.
 [INFO] (ir-kit) This package is up to date.
-[INFO] (iraclis) Data has been updated for this package.
+[INFO] (iraclis) This package is up to date.
 [INFO] (irail) This package is up to date.
 [INFO] (iran) This package is up to date.
 [INFO] (irbasis) This package is up to date.
@@ -4109,7 +4115,7 @@ Unsupported package directory structure.
 [INFO] (irpf90) This package is up to date.
 [INFO] (irpy) This package is up to date.
 [INFO] (irq-reeler) This package is up to date.
-[INFO] (irrd) Data has been updated for this package.
+[INFO] (irrd) This package is up to date.
 [INFO] (irregular) This package is up to date.
 [INFO] (irritable) This package is up to date.
 [INFO] (irrtree) This package is up to date.
@@ -4456,6 +4462,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (isvd) This package is up to date.
 [INFO] (iswsl) This package is up to date.
 [INFO] (isylib) This package is up to date.
+[INFO] (isypy) Data has been updated for this package.
 [INFO] (isystem-connect) This package is up to date.
 [ERROR] (it) This package does not have downloadable releases.
 [INFO] (it-asset-info) This package is up to date.
@@ -4666,7 +4673,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (itstool) This package is up to date.
 [INFO] (itsxpress) This package is up to date.
 [INFO] (itsy) This package is up to date.
-[INFO] (itt) Data has been updated for this package.
+[INFO] (itt) This package is up to date.
 [INFO] (itty) This package is up to date.
 [INFO] (itu-turkish-nlp-pipeline-caller) This package is up to date.
 [INFO] (itunes) This package is up to date.
@@ -4829,7 +4836,7 @@ This package download URL does not point to a valid file: "http://download.hforg
 [INFO] (ixwsauth) This package is up to date.
 [INFO] (iyi) This package is up to date.
 [INFO] (iyo) This package is up to date.
-[INFO] (iyo-python) This package is up to date.
+[INFO] (iyo-python) Data has been updated for this package.
 [INFO] (iywhois) This package is up to date.
 [INFO] (iyzipay) This package is up to date.
 [INFO] (iz4vve) This package is up to date.
@@ -4877,11 +4884,11 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (izzati) This package is up to date.
 [INFO] 
 [INFO] 
-[INFO] Total packages: 3772
-[INFO]     Packages processed: 3772
-[INFO]         Packages updated: 12
-[INFO]         Packages up-to-date: 3542
-[INFO]         Packages without response: 40
+[INFO] Total packages: 3775
+[INFO]     Packages processed: 3775
+[INFO]         Packages updated: 7
+[INFO]         Packages up-to-date: 3549
+[INFO]         Packages without response: 41
 [INFO]         Packages without urls: 0
 [INFO]         Packages without downloads: 136
 [INFO]         Packages with data errors: 42
