@@ -43,6 +43,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (n26) This package is up to date.
 [INFO] (n2cw) This package is up to date.
 [INFO] (n2w) This package is up to date.
+[INFO] (n2yo) Data has been updated for this package.
 [INFO] (n3d) This package is up to date.
 [ERROR] (n8henrie) This package does not have downloadable releases.
 [INFO] (n8scripts) This package is up to date.
@@ -56,6 +57,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (nac) This package is up to date.
 [INFO] (nacculator) This package is up to date.
 [INFO] (nacelle) This package is up to date.
+[INFO] (nacf) Data has been updated for this package.
 [INFO] (nacha) This package is up to date.
 [ERROR] (nacho) This package does not have downloadable releases.
 [ERROR] (nacl) This package does not have downloadable releases.
@@ -155,7 +157,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (nagiosctl) This package is up to date.
 [INFO] (nagiosharder) This package is up to date.
 [INFO] (nagiosplugin) This package is up to date.
-[INFO] (nagisa) Data has been updated for this package.
+[INFO] (nagisa) This package is up to date.
 [INFO] (nago) This package is up to date.
 [ERROR] (nagobah) This package does not have downloadable releases.
 [INFO] (nagobah-with-server) This package is up to date.
@@ -170,17 +172,15 @@ Traceback (most recent call last):
     persistent=False)
   File "/usr/lib/python3.5/urllib/request.py", line 2313, in __init__
     self.init()
-  File "/usr/lib/python3.5/urllib/request.py", line 2325, in init
-    self.ftp.cwd(_target)
-  File "/usr/lib/python3.5/ftplib.py", line 632, in cwd
-    return self.voidcmd(cmd)
-  File "/usr/lib/python3.5/ftplib.py", line 279, in voidcmd
-    return self.voidresp()
-  File "/usr/lib/python3.5/ftplib.py", line 252, in voidresp
-    resp = self.getresp()
-  File "/usr/lib/python3.5/ftplib.py", line 247, in getresp
-    raise error_perm(resp)
-ftplib.error_perm: 550 Failed to change directory.
+  File "/usr/lib/python3.5/urllib/request.py", line 2322, in init
+    self.ftp.connect(self.host, self.port, self.timeout)
+  File "/usr/lib/python3.5/ftplib.py", line 153, in connect
+    source_address=self.source_address)
+  File "/usr/lib/python3.5/socket.py", line 712, in create_connection
+    raise err
+  File "/usr/lib/python3.5/socket.py", line 703, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
 
 During handling of the above exception, another exception occurred:
 
@@ -203,17 +203,15 @@ Traceback (most recent call last):
     persistent=False)
   File "/usr/lib/python3.5/urllib/request.py", line 2313, in __init__
     self.init()
-  File "/usr/lib/python3.5/urllib/request.py", line 2325, in init
-    self.ftp.cwd(_target)
-  File "/usr/lib/python3.5/ftplib.py", line 632, in cwd
-    return self.voidcmd(cmd)
-  File "/usr/lib/python3.5/ftplib.py", line 279, in voidcmd
-    return self.voidresp()
-  File "/usr/lib/python3.5/ftplib.py", line 252, in voidresp
-    resp = self.getresp()
-  File "/usr/lib/python3.5/ftplib.py", line 247, in getresp
-    raise error_perm(resp)
-urllib.error.URLError: <urlopen error ftp error: error_perm('550 Failed to change directory.',)>
+  File "/usr/lib/python3.5/urllib/request.py", line 2322, in init
+    self.ftp.connect(self.host, self.port, self.timeout)
+  File "/usr/lib/python3.5/ftplib.py", line 153, in connect
+    source_address=self.source_address)
+  File "/usr/lib/python3.5/socket.py", line 712, in create_connection
+    raise err
+  File "/usr/lib/python3.5/socket.py", line 703, in create_connection
+    sock.connect(sa)
+urllib.error.URLError: <urlopen error ftp error: timeout('timed out',)>
 
 [INFO] (nagpyrc) This package is up to date.
 [INFO] (nahpackpy) This package is up to date.
@@ -588,7 +586,34 @@ This package download URL does not point to a valid file: "https://bitbucket.org
 [INFO] (nasa-api-wrapper) This package is up to date.
 [INFO] (nasa-tle-loader) This package is up to date.
 [INFO] (nasalgeom) This package is up to date.
-[INFO] (nasaprecip) This package is up to date.
+[ERROR] (nasaprecip) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.5/urllib/request.py", line 163, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.5/urllib/request.py", line 504, in error
+    result = self._call_chain(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 696, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.5/urllib/request.py", line 510, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 590, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+
 [INFO] (nasdaq-stock) This package is up to date.
 [INFO] (nasdaq-stock-quote) This package is up to date.
 [INFO] (nash) This package is up to date.
@@ -775,7 +800,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (nba-api) This package is up to date.
 [INFO] (nba-data) This package is up to date.
 [INFO] (nba-images-client) This package is up to date.
-[INFO] (nba-player) This package is up to date.
+[INFO] (nba-player) Data has been updated for this package.
 [INFO] (nba-py) This package is up to date.
 [INFO] (nba-scrape) This package is up to date.
 [INFO] (nba-stats) This package is up to date.
@@ -917,7 +942,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 This package download URL does not point to a valid file: "ftp://ftp.ncbi.nih.gov/toolbox/ncbi_tools++/2008/Mar_17_2008/Python/"
 [INFO] (ncbi-acc-download) This package is up to date.
 [INFO] (ncbi-companion) This package is up to date.
-[INFO] (ncbi-genome-download) Data has been updated for this package.
+[INFO] (ncbi-genome-download) This package is up to date.
 [INFO] (ncbi-taxid) This package is up to date.
 [INFO] (ncbitk) This package is up to date.
 [INFO] (ncbpy) This package is up to date.
@@ -985,7 +1010,7 @@ This package download URL does not point to a valid file: "ftp://ftp.ncbi.nih.go
 [INFO] (ncs-tools) This package is up to date.
 [ERROR] (ncsdaemon) This package does not have downloadable releases.
 [INFO] (ncshunter) This package is up to date.
-[INFO] (ncssl-api-client) This package is up to date.
+[INFO] (ncssl-api-client) Data has been updated for this package.
 [INFO] (ncsv) This package is up to date.
 [INFO] (nctime) This package is up to date.
 [INFO] (nctu-oauth) This package is up to date.
@@ -1127,7 +1152,7 @@ This package download URL does not point to a valid file: "ftp://ftp.ncbi.nih.go
 [INFO] (nebula-ldaptools) This package is up to date.
 [INFO] (nebulabayes) This package is up to date.
 [INFO] (nebulacli) This package is up to date.
-[INFO] (nebulae) Data has been updated for this package.
+[INFO] (nebulae) This package is up to date.
 [INFO] (nebulaldaptools) This package is up to date.
 [INFO] (nebulalogin) This package is up to date.
 [INFO] (nebulapythonsdk) This package is up to date.
@@ -2733,7 +2758,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (nester20180627) This package is up to date.
 [INFO] (nester20181119) This package is up to date.
 [INFO] (nester20181217) This package is up to date.
-[INFO] (nester20181224) Data has been updated for this package.
+[INFO] (nester20181224) This package is up to date.
 [INFO] (nester21) This package is up to date.
 [INFO] (nester2112) This package is up to date.
 [ERROR] (nester21425) This package does not have downloadable releases.
@@ -2918,7 +2943,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (nesterhehe) This package is up to date.
 [INFO] (nesterhejingwei) This package is up to date.
 [ERROR] (nesterhfp-test) This package does not have downloadable releases.
-[INFO] (nesterhfpbypb) This package is up to date.
+[INFO] (nesterhfpbypb) Data has been updated for this package.
 [INFO] (nesterhh) This package is up to date.
 [INFO] (nesterhhh) This package is up to date.
 [ERROR] (nesterhj) This package does not have downloadable releases.
@@ -4274,7 +4299,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (ngen) This package is up to date.
 [INFO] (ngender) This package is up to date.
 [INFO] (ngenix-hackergraph) This package is up to date.
-[INFO] (ngfp) Data has been updated for this package.
+[INFO] (ngfp) This package is up to date.
 [INFO] (ngg2) This package is up to date.
 [INFO] (ngi-notify-datadog) This package is up to date.
 [INFO] (ngi-site-notification) This package is up to date.
@@ -4713,34 +4738,6 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (nitlab) This package is up to date.
 [INFO] (nitor-deploy-tools) This package is up to date.
 [INFO] (nitor-vault) This package is up to date.
-[ERROR] (nitpick) Could not get a response from API for this package. See below for details.
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
-    timeout=10).read()
-  File "/usr/lib/python3.5/urllib/request.py", line 163, in urlopen
-    return opener.open(url, data, timeout)
-  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
-    response = meth(req, response)
-  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
-    'http', request, response, code, msg, hdrs)
-  File "/usr/lib/python3.5/urllib/request.py", line 504, in error
-    result = self._call_chain(*args)
-  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
-    result = func(*args)
-  File "/usr/lib/python3.5/urllib/request.py", line 696, in http_error_302
-    return self.parent.open(new, timeout=req.timeout)
-  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
-    response = meth(req, response)
-  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
-    'http', request, response, code, msg, hdrs)
-  File "/usr/lib/python3.5/urllib/request.py", line 510, in error
-    return self._call_chain(*args)
-  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
-    result = func(*args)
-  File "/usr/lib/python3.5/urllib/request.py", line 590, in http_error_default
-    raise HTTPError(req.full_url, code, msg, hdrs, fp)
-urllib.error.HTTPError: HTTP Error 404: Not Found
-
 [INFO] (nitpicker) This package is up to date.
 [INFO] (nitpycker) This package is up to date.
 [INFO] (nitrate) This package is up to date.
@@ -4823,7 +4820,7 @@ This package download URL does not point to a valid file: "http://pypi.python.or
 [INFO] (nlp-modeller) This package is up to date.
 [INFO] (nlp-services) This package is up to date.
 [ERROR] (nlp-sketch) This package does not have downloadable releases.
-[INFO] (nlp-toolkit) Data has been updated for this package.
+[INFO] (nlp-toolkit) This package is up to date.
 [INFO] (nlp-utils) This package is up to date.
 [INFO] (nlp-zero) This package is up to date.
 [INFO] (nlp2) This package is up to date.
@@ -4992,7 +4989,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (nnlab) This package is up to date.
 [INFO] (nnlib) This package is up to date.
 [INFO] (nnlog) This package is up to date.
-[INFO] (nnmnkwii) Data has been updated for this package.
+[INFO] (nnmnkwii) This package is up to date.
 [INFO] (nnn) This package is up to date.
 [INFO] (nnnester) This package is up to date.
 [INFO] (nnpack) This package is up to date.
@@ -5339,7 +5336,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (nonconformist) This package is up to date.
 [INFO] (noncrawl) This package is up to date.
 [ERROR] (none) This package does not have downloadable releases.
-[INFO] (none-bot) Data has been updated for this package.
+[INFO] (none-bot) This package is up to date.
 [INFO] (none-of-your-fucking-business) This package is up to date.
 [INFO] (nonechucks) This package is up to date.
 [INFO] (nonester) This package is up to date.
@@ -5354,7 +5351,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (nonnewtonianicoflux) This package is up to date.
 [INFO] (nono-line) This package is up to date.
 [INFO] (nonobvious) This package is up to date.
-[INFO] (nonocaptcha) Data has been updated for this package.
+[INFO] (nonocaptcha) This package is up to date.
 [INFO] (nonofusedmadd) This package is up to date.
 [INFO] (nonogram) This package is up to date.
 [INFO] (nonogram-solver) This package is up to date.
@@ -6318,7 +6315,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (nuc-led) This package is up to date.
 [INFO] (nucdiff) This package is up to date.
 [INFO] (nuclai) This package is up to date.
-[INFO] (nucleartf) Data has been updated for this package.
+[INFO] (nucleartf) This package is up to date.
 [INFO] (nucleartools) This package is up to date.
 [INFO] (nuclei) This package is up to date.
 [INFO] (nuclei-discovery) This package is up to date.
@@ -6337,8 +6334,8 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (nucleusapp-telegram) This package is up to date.
 [INFO] (nucleusutils) This package is up to date.
 [INFO] (nuclio) This package is up to date.
-[INFO] (nuclio-jupyter) This package is up to date.
-[INFO] (nuclio-sdk) Data has been updated for this package.
+[INFO] (nuclio-jupyter) Data has been updated for this package.
+[INFO] (nuclio-sdk) This package is up to date.
 [INFO] (nuclitrack) This package is up to date.
 [INFO] (nucoscr) This package is up to date.
 [INFO] (nucosmq) This package is up to date.
@@ -6882,10 +6879,10 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (nzmath) This package is up to date.
 [INFO] 
 [INFO] 
-[INFO] Total packages: 4782
-[INFO]     Packages processed: 4782
-[INFO]         Packages updated: 13
-[INFO]         Packages up-to-date: 4340
+[INFO] Total packages: 4783
+[INFO]     Packages processed: 4783
+[INFO]         Packages updated: 8
+[INFO]         Packages up-to-date: 4346
 [INFO]         Packages without response: 90
 [INFO]         Packages without urls: 0
 [INFO]         Packages without downloads: 315
