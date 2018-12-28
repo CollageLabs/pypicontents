@@ -3177,9 +3177,12 @@
             "easy_workflow_manager.scripts.show_qa",
             "easy_workflow_manager.scripts.show_repo_info",
             "easy_workflow_manager.scripts.tag_release",
-            "easy_workflow_manager.scripts.update_branch"
+            "easy_workflow_manager.scripts.update_branch",
+            "tests",
+            "tests.conftest",
+            "tests.test_stuff"
         ],
-        "version": "0.0.9"
+        "version": "0.0.10"
     },
     "easy-xml": {
         "cmdline": [],
@@ -9800,7 +9803,7 @@
             "ecies.tests.test_crypt",
             "ecies.utils"
         ],
-        "version": "0.1.4"
+        "version": "0.1.5"
     },
     "eckerd-django-google-sso": {
         "cmdline": [],
@@ -12205,7 +12208,7 @@
             "edc_action_item.visit_schedule_mixin",
             "edc_action_item.wsgi"
         ],
-        "version": "0.1.23"
+        "version": "0.1.24"
     },
     "edc-appointment": {
         "cmdline": [],
@@ -12314,11 +12317,10 @@
             "edc_base.address",
             "edc_base.apps",
             "edc_base.choices",
-            "edc_base.config",
-            "edc_base.config.create_gunicorn_conf_files",
-            "edc_base.config.create_nginx_conf_files",
+            "edc_base.config_utils",
+            "edc_base.config_utils.create_gunicorn_conf_files",
+            "edc_base.config_utils.create_nginx_conf_files",
             "edc_base.constants",
-            "edc_base.freeze",
             "edc_base.logging",
             "edc_base.migrations",
             "edc_base.migrations.0001_initial",
@@ -12329,25 +12331,15 @@
             "edc_base.migrations.0006_auto_20180731_2241",
             "edc_base.model_managers",
             "edc_base.model_managers.historical_records",
-            "edc_base.model_managers.history_manager_mixin",
             "edc_base.model_mixins",
             "edc_base.model_mixins.address_mixin",
             "edc_base.model_mixins.base_model",
             "edc_base.model_mixins.base_uuid_model",
-            "edc_base.model_mixins.form_as_json_model_mixin",
             "edc_base.model_mixins.report_status_model_mixin",
-            "edc_base.model_mixins.url_mixin",
+            "edc_base.model_mixins.url_model_mixin",
             "edc_base.model_validators",
-            "edc_base.model_validators.compare_numbers",
-            "edc_base.model_validators.consent_age",
             "edc_base.model_validators.date",
-            "edc_base.model_validators.dob",
-            "edc_base.model_validators.eligibility",
             "edc_base.model_validators.phone",
-            "edc_base.modelform_mixins",
-            "edc_base.modelform_mixins.audit_fields_mixin",
-            "edc_base.modelform_mixins.json_modelform_mixin",
-            "edc_base.modelform_mixins.readonly_fields_form_mixin",
             "edc_base.models",
             "edc_base.navbars",
             "edc_base.settings",
@@ -12355,17 +12347,22 @@
             "edc_base.sites.admin",
             "edc_base.sites.forms",
             "edc_base.sites.managers",
+            "edc_base.sites.raise_on_save_if_reviewer",
             "edc_base.sites.site_model_mixin",
             "edc_base.sites.utils",
-            "edc_base.sites.view_mixins",
             "edc_base.system_checks",
             "edc_base.templatetags",
             "edc_base.templatetags.edc_base_extras",
             "edc_base.tests",
+            "edc_base.tests.admin",
+            "edc_base.tests.admin_site",
             "edc_base.tests.listdata_test_helper",
             "edc_base.tests.models",
             "edc_base.tests.site_test_case_mixin",
+            "edc_base.tests.test_history",
+            "edc_base.tests.test_models",
             "edc_base.tests.test_sites",
+            "edc_base.tests.test_templatetags",
             "edc_base.tests.test_utils",
             "edc_base.tests.test_validators",
             "edc_base.urls",
@@ -12376,7 +12373,7 @@
             "edc_base.views.home_view",
             "edc_base.wsgi"
         ],
-        "version": "0.2.42"
+        "version": "0.2.43"
     },
     "edc-consent": {
         "cmdline": [],
@@ -12435,7 +12432,7 @@
             "edc_consent.views.home_view",
             "edc_consent.wsgi"
         ],
-        "version": "0.2.16"
+        "version": "0.2.17"
     },
     "edc-constants": {
         "cmdline": [],
@@ -12478,6 +12475,7 @@
             "edc_dashboard.view_mixins.listboard.querystring_view_mixin",
             "edc_dashboard.view_mixins.listboard.search_form_view_mixin",
             "edc_dashboard.view_mixins.listboard.search_listboard_view_mixin",
+            "edc_dashboard.view_mixins.listboard.site_queryset_view_mixin",
             "edc_dashboard.view_mixins.template_request_context_mixin",
             "edc_dashboard.view_mixins.url_request_context_mixin",
             "edc_dashboard.views",
@@ -12487,7 +12485,7 @@
             "edc_dashboard.views.listboard_view",
             "edc_dashboard.wsgi"
         ],
-        "version": "0.2.22"
+        "version": "0.2.23"
     },
     "edc-device": {
         "cmdline": [],
@@ -12513,7 +12511,7 @@
             "edc_device.views",
             "edc_device.wsgi"
         ],
-        "version": "0.2.10"
+        "version": "0.2.11"
     },
     "edc-export": {
         "cmdline": [],
@@ -13088,7 +13086,7 @@
             "edc_locator.view_mixins",
             "edc_locator.wsgi"
         ],
-        "version": "0.2.14"
+        "version": "0.2.15"
     },
     "edc-metadata": {
         "cmdline": [],
@@ -13225,7 +13223,6 @@
             "edc_model_admin.changelist_buttons",
             "edc_model_admin.changelist_buttons.model_admin_changelist_button_mixin",
             "edc_model_admin.changelist_buttons.model_admin_changelist_model_button_mixin",
-            "edc_model_admin.form_as_json_model_admin_mixin",
             "edc_model_admin.inlines",
             "edc_model_admin.inlines.limited_admin_inline_mixin",
             "edc_model_admin.inlines.stacked_inline_mixin",
@@ -13250,7 +13247,7 @@
             "edc_model_admin.urls",
             "edc_model_admin.wsgi"
         ],
-        "version": "0.1.9"
+        "version": "0.1.10"
     },
     "edc-model-fields": {
         "cmdline": [],
@@ -13306,7 +13303,7 @@
             "edc_model_wrapper.wrappers.model_wrapper",
             "edc_model_wrapper.wsgi"
         ],
-        "version": "0.1.11"
+        "version": "0.1.12"
     },
     "edc-navbar": {
         "cmdline": [],
@@ -13365,7 +13362,7 @@
             "edc_notification.urls",
             "edc_notification.wsgi"
         ],
-        "version": "0.1.12"
+        "version": "0.1.13"
     },
     "edc-offstudy": {
         "cmdline": [],
@@ -13972,7 +13969,7 @@
             "edc_visit_schedule.visit_schedule.visit_schedule",
             "edc_visit_schedule.wsgi"
         ],
-        "version": "0.2.16"
+        "version": "0.2.18"
     },
     "edc-visit-tracking": {
         "cmdline": [],
@@ -14019,7 +14016,7 @@
             "edc_visit_tracking.visit_sequence",
             "edc_visit_tracking.wsgi"
         ],
-        "version": "0.2.16"
+        "version": "0.2.18"
     },
     "edd": {
         "cmdline": [],
@@ -17739,7 +17736,7 @@
             "analyticsclient.programs",
             "analyticsclient.status"
         ],
-        "version": "0.14.4"
+        "version": "0.15.2"
     },
     "edx-api-client": {
         "cmdline": [],
@@ -18338,19 +18335,62 @@
             "edx_proctoring.admin",
             "edx_proctoring.api",
             "edx_proctoring.apps",
+            "edx_proctoring.backends",
+            "edx_proctoring.backends.backend",
+            "edx_proctoring.backends.mock",
+            "edx_proctoring.backends.null",
+            "edx_proctoring.backends.rest",
+            "edx_proctoring.backends.software_secure",
+            "edx_proctoring.backends.tests",
+            "edx_proctoring.backends.tests.test_backend",
+            "edx_proctoring.backends.tests.test_rest",
+            "edx_proctoring.backends.tests.test_review_payload",
+            "edx_proctoring.backends.tests.test_software_secure",
             "edx_proctoring.callbacks",
             "edx_proctoring.constants",
             "edx_proctoring.decorators",
             "edx_proctoring.exceptions",
+            "edx_proctoring.management",
+            "edx_proctoring.management.commands",
+            "edx_proctoring.management.commands.set_attempt_status",
+            "edx_proctoring.management.commands.tests",
+            "edx_proctoring.management.commands.tests.test_set_attempt_status",
+            "edx_proctoring.migrations",
+            "edx_proctoring.migrations.0001_initial",
+            "edx_proctoring.migrations.0002_proctoredexamstudentattempt_is_status_acknowledged",
+            "edx_proctoring.migrations.0003_auto_20160101_0525",
+            "edx_proctoring.migrations.0004_auto_20160201_0523",
+            "edx_proctoring.migrations.0005_proctoredexam_hide_after_due",
+            "edx_proctoring.migrations.0006_allowed_time_limit_mins",
+            "edx_proctoring.migrations.0007_proctoredexam_backend",
+            "edx_proctoring.migrations.0008_auto_20181116_1551",
+            "edx_proctoring.migrations.0009_proctoredexamreviewpolicy_remove_rules",
             "edx_proctoring.models",
             "edx_proctoring.runtime",
             "edx_proctoring.serializers",
             "edx_proctoring.services",
+            "edx_proctoring.settings",
+            "edx_proctoring.settings.aws",
+            "edx_proctoring.settings.common",
+            "edx_proctoring.settings.test",
+            "edx_proctoring.statuses",
+            "edx_proctoring.tests",
+            "edx_proctoring.tests.test_api",
+            "edx_proctoring.tests.test_email",
+            "edx_proctoring.tests.test_models",
+            "edx_proctoring.tests.test_reviews",
+            "edx_proctoring.tests.test_serializer",
+            "edx_proctoring.tests.test_services",
+            "edx_proctoring.tests.test_student_view",
+            "edx_proctoring.tests.test_utils",
+            "edx_proctoring.tests.test_views",
+            "edx_proctoring.tests.test_workerconfig",
+            "edx_proctoring.tests.utils",
             "edx_proctoring.urls",
             "edx_proctoring.utils",
             "edx_proctoring.views"
         ],
-        "version": "1.4.0"
+        "version": "1.5.0"
     },
     "edx-rest-api-client": {
         "cmdline": [],
@@ -24456,7 +24496,7 @@
             "elasticsearch_loader.iter",
             "elasticsearch_loader.parsers"
         ],
-        "version": "0.2.12"
+        "version": "0.2.13"
     },
     "elasticsearch-opentracing": {
         "cmdline": [],
@@ -29388,6 +29428,31 @@
         ],
         "version": "1.1"
     },
+    "email-scrapper": {
+        "cmdline": [],
+        "modules": [
+            "email_scrapper",
+            "email_scrapper.email_settings",
+            "email_scrapper.models",
+            "email_scrapper.reader",
+            "email_scrapper.stores",
+            "email_scrapper.stores.amazon",
+            "email_scrapper.stores.bestbuy",
+            "email_scrapper.stores.ebgames",
+            "email_scrapper.stores.lego",
+            "email_scrapper.stores.walmart",
+            "email_scrapper.utils",
+            "src",
+            "src.email_settings",
+            "src.models",
+            "src.stores",
+            "src.stores.amazon",
+            "src.stores.bestbuy",
+            "src.stores.ebgames",
+            "src.stores.lego"
+        ],
+        "version": "0.5.0"
+    },
     "email-split": {
         "cmdline": [],
         "modules": [
@@ -30182,6 +30247,21 @@
         "cmdline": [],
         "modules": [],
         "version": ""
+    },
+    "emborg": {
+        "cmdline": [],
+        "modules": [
+            "emborg",
+            "emborg.collection",
+            "emborg.command",
+            "emborg.help",
+            "emborg.main",
+            "emborg.preferences",
+            "emborg.python",
+            "emborg.settings",
+            "emborg.utilities"
+        ],
+        "version": "0.3.0"
     },
     "embtest": {
         "cmdline": [],
@@ -38967,7 +39047,7 @@
             "\u0b8e\u0ba3\u0bcd\u0ba3\u0bbf\u0b95\u0bcd\u0b95\u0bc8.\u0ba8\u0bc0\u0b9f\u0bcd\u0b9f\u0bbf\u0baa\u0bcd\u0baa\u0bc1\u0b95\u0bb3\u0bcd.\u0bb0\u0bcb\u0bae\u0bc0",
             "\u0b8e\u0ba3\u0bcd\u0ba3\u0bbf\u0b95\u0bcd\u0b95\u0bc8.\u0bae\u0bc2\u0bb2\u0bae\u0bcd"
         ],
-        "version": "1.0"
+        "version": "1.2"
     },
     "enno": {
         "cmdline": [],
@@ -62641,7 +62721,7 @@
             "evo.tools.settings_template",
             "evo.tools.user"
         ],
-        "version": "1.2.1"
+        "version": "1.3.0"
     },
     "evo-1": {
         "cmdline": [],
@@ -65846,7 +65926,6 @@
         "cmdline": [],
         "modules": [
             "excalibur",
-            "excalibur.__version__",
             "excalibur.cli",
             "excalibur.config_templates",
             "excalibur.config_templates.default_celery",
@@ -65871,7 +65950,7 @@
             "excalibur.www.app",
             "excalibur.www.views"
         ],
-        "version": "0.4.0"
+        "version": "0.4.1"
     },
     "excavate": {
         "cmdline": [
@@ -67168,18 +67247,27 @@
             "exif",
             "exif._app1_metadata",
             "exif._constants",
+            "exif._hex_interface",
             "exif._ifd_tag",
             "exif._image",
             "exif.tests",
             "exif.tests.delete_exif_baselines",
             "exif.tests.delete_exif_baselines.delete_ascii_tags_hex",
             "exif.tests.delete_exif_baselines.delete_geotag_hex",
+            "exif.tests.get_file_baselines",
+            "exif.tests.get_file_baselines.modified_noise_file_hex",
+            "exif.tests.modify_exif_baselines",
+            "exif.tests.modify_exif_baselines.modify_ascii_same_len_hex",
+            "exif.tests.modify_exif_baselines.modify_ascii_shorter_hex",
+            "exif.tests.modify_exif_baselines.modify_rational_hex",
+            "exif.tests.modify_exif_baselines.modify_srational_hex",
             "exif.tests.test_delete_exif",
+            "exif.tests.test_dunder_dir",
             "exif.tests.test_get_file",
             "exif.tests.test_modify_exif",
             "exif.tests.test_read_exif"
         ],
-        "version": "0.2.0"
+        "version": "0.3.0"
     },
     "exif-utils": {
         "cmdline": [],
