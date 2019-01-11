@@ -358,6 +358,8 @@
             "weblog.migrations.0007_auto_20180122_1943",
             "weblog.migrations.0008_auto_20180329_1316",
             "weblog.migrations.0008_auto_20180531_0329",
+            "weblog.migrations.0009_merge_20190104_2123",
+            "weblog.migrations.0010_auto_20190110_1901",
             "weblog.models",
             "weblog.templatetags",
             "weblog.templatetags.weblog_extras",
@@ -365,7 +367,7 @@
             "weblog.urls",
             "weblog.views"
         ],
-        "version": "0.5.1"
+        "version": "0.5.2"
     },
     "w3c-validator": {
         "cmdline": [],
@@ -3371,7 +3373,7 @@
             "wagtail_personalisation.views",
             "wagtail_personalisation.wagtail_hooks"
         ],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     "wagtail-pg-search-backend": {
         "cmdline": [],
@@ -9011,10 +9013,9 @@
             "walt.client.startup",
             "walt.client.term",
             "walt.client.tools",
-            "walt.client.transfer",
-            "walt.client.update"
+            "walt.client.transfer"
         ],
-        "version": "0.9.post9"
+        "version": "2"
     },
     "walt-common": {
         "cmdline": [],
@@ -9044,15 +9045,13 @@
             "walt.common.tools",
             "walt.common.tty",
             "walt.common.udp",
+            "walt.common.update",
             "walt.common.version"
         ],
-        "version": "0.9.post9"
+        "version": "2"
     },
     "walt-node": {
-        "cmdline": [
-            "walt-echo",
-            "walt-monitor"
-        ],
+        "cmdline": [],
         "modules": [
             "walt",
             "walt.node",
@@ -9069,67 +9068,103 @@
             "walt.node.setup",
             "walt.node.setup.systemd"
         ],
-        "version": "0.9.post7"
+        "version": "2"
     },
     "walt-server": {
         "cmdline": [],
         "modules": [
             "walt",
             "walt.server",
-            "walt.server.blocking",
+            "walt.server.conf",
             "walt.server.const",
             "walt.server.daemon",
-            "walt.server.db",
-            "walt.server.devices",
-            "walt.server.devices.manager",
-            "walt.server.devices.topology",
-            "walt.server.filesystem",
-            "walt.server.images",
-            "walt.server.images.clone",
-            "walt.server.images.duplicate",
-            "walt.server.images.fixowner",
-            "walt.server.images.image",
-            "walt.server.images.manager",
-            "walt.server.images.publish",
-            "walt.server.images.remove",
-            "walt.server.images.rename",
-            "walt.server.images.search",
-            "walt.server.images.shell",
-            "walt.server.images.show",
-            "walt.server.images.store",
-            "walt.server.interactive",
-            "walt.server.logs",
-            "walt.server.mydocker",
-            "walt.server.network",
-            "walt.server.network.dhcpd",
-            "walt.server.network.nfs",
-            "walt.server.network.setup",
-            "walt.server.network.tools",
-            "walt.server.network.waltvlanconf",
-            "walt.server.nodes",
-            "walt.server.nodes.manager",
-            "walt.server.nodes.register",
-            "walt.server.nodes.show",
-            "walt.server.nodes.wait",
-            "walt.server.parallel",
+            "walt.server.dhcpevent",
+            "walt.server.info",
+            "walt.server.netconfig",
             "walt.server.postgres",
-            "walt.server.server",
-            "walt.server.snmp",
-            "walt.server.snmp.base",
-            "walt.server.snmp.ipsetup",
-            "walt.server.snmp.lldp",
-            "walt.server.snmp.poe",
-            "walt.server.snmp.proxy",
-            "walt.server.snmp.vlan",
-            "walt.server.status",
+            "walt.server.threads",
+            "walt.server.threads.blocking",
+            "walt.server.threads.blocking.images",
+            "walt.server.threads.blocking.images.clone",
+            "walt.server.threads.blocking.images.metadata",
+            "walt.server.threads.blocking.images.publish",
+            "walt.server.threads.blocking.images.search",
+            "walt.server.threads.blocking.logs",
+            "walt.server.threads.blocking.thread",
+            "walt.server.threads.hub",
+            "walt.server.threads.hub.client",
+            "walt.server.threads.hub.thread",
+            "walt.server.threads.main",
+            "walt.server.threads.main.api",
+            "walt.server.threads.main.api.cs",
+            "walt.server.threads.main.api.ns",
+            "walt.server.threads.main.api.ss",
+            "walt.server.threads.main.api.vs",
+            "walt.server.threads.main.apisession",
+            "walt.server.threads.main.blocking",
+            "walt.server.threads.main.db",
+            "walt.server.threads.main.devices",
+            "walt.server.threads.main.devices.grouper",
+            "walt.server.threads.main.devices.manager",
+            "walt.server.threads.main.devices.topology",
+            "walt.server.threads.main.filesystem",
+            "walt.server.threads.main.hub",
+            "walt.server.threads.main.images",
+            "walt.server.threads.main.images.clone",
+            "walt.server.threads.main.images.duplicate",
+            "walt.server.threads.main.images.fixowner",
+            "walt.server.threads.main.images.image",
+            "walt.server.threads.main.images.manager",
+            "walt.server.threads.main.images.metadata",
+            "walt.server.threads.main.images.publish",
+            "walt.server.threads.main.images.remove",
+            "walt.server.threads.main.images.rename",
+            "walt.server.threads.main.images.search",
+            "walt.server.threads.main.images.setup",
+            "walt.server.threads.main.images.shell",
+            "walt.server.threads.main.images.show",
+            "walt.server.threads.main.images.spec",
+            "walt.server.threads.main.images.store",
+            "walt.server.threads.main.interactive",
+            "walt.server.threads.main.logs",
+            "walt.server.threads.main.mydocker",
+            "walt.server.threads.main.network",
+            "walt.server.threads.main.network.dhcpd",
+            "walt.server.threads.main.network.netsetup",
+            "walt.server.threads.main.network.nfs",
+            "walt.server.threads.main.network.setup",
+            "walt.server.threads.main.network.tftp",
+            "walt.server.threads.main.network.tools",
+            "walt.server.threads.main.network.waltvlanconf",
+            "walt.server.threads.main.nodes",
+            "walt.server.threads.main.nodes.clock",
+            "walt.server.threads.main.nodes.expose",
+            "walt.server.threads.main.nodes.manager",
+            "walt.server.threads.main.nodes.register",
+            "walt.server.threads.main.nodes.show",
+            "walt.server.threads.main.nodes.wait",
+            "walt.server.threads.main.parallel",
+            "walt.server.threads.main.server",
+            "walt.server.threads.main.settings_manager",
+            "walt.server.threads.main.snmp",
+            "walt.server.threads.main.snmp.base",
+            "walt.server.threads.main.snmp.ipsetup",
+            "walt.server.threads.main.snmp.lldp",
+            "walt.server.threads.main.snmp.poe",
+            "walt.server.threads.main.snmp.proxy",
+            "walt.server.threads.main.snmp.vlan",
+            "walt.server.threads.main.status",
+            "walt.server.threads.main.task",
+            "walt.server.threads.main.thread",
+            "walt.server.threads.main.transfer",
+            "walt.server.threads.main.tree",
+            "walt.server.threads.main.ui",
+            "walt.server.threads.main.ui.manager",
             "walt.server.tools",
-            "walt.server.transfer",
-            "walt.server.tree",
             "walt.server.ui",
-            "walt.server.ui.console",
-            "walt.server.ui.manager"
+            "walt.server.ui.console"
         ],
-        "version": "0.9.post3"
+        "version": "2"
     },
     "walter": {
         "cmdline": [],
@@ -13654,7 +13689,7 @@
             "watson_machine_learning_client.wml_client_error",
             "watson_machine_learning_client.wml_resource"
         ],
-        "version": "1.0.348"
+        "version": "1.0.351"
     },
     "watson-mail": {
         "cmdline": [],
@@ -14538,7 +14573,7 @@
             "wavelink.stats",
             "wavelink.websocket"
         ],
-        "version": "0.1.80"
+        "version": "0.2.1"
     },
     "wavemaker": {
         "cmdline": [
@@ -16063,9 +16098,10 @@
             "wcc.req",
             "wcc.test",
             "wcc.urllibx",
-            "wcc.utils"
+            "wcc.utils",
+            "wcc.wcc_qcc_combasic"
         ],
-        "version": "1.6.3"
+        "version": "1.6.5"
     },
     "wccls": {
         "cmdline": [],
@@ -24561,7 +24597,7 @@
             "jwt_auth.utils",
             "jwt_auth.views"
         ],
-        "version": "0.5.0"
+        "version": "0.5.1"
     },
     "webstack-django-pagination": {
         "cmdline": [],
@@ -28329,6 +28365,10 @@
     "werobot": {
         "cmdline": [],
         "modules": [
+            "django_test",
+            "django_test.settings",
+            "django_test.urls",
+            "django_test.wsgi",
             "werobot",
             "werobot.client",
             "werobot.config",
@@ -28361,7 +28401,7 @@
             "werobot.testing",
             "werobot.utils"
         ],
-        "version": "1.6.0"
+        "version": "1.7.0"
     },
     "wes": {
         "cmdline": [],
@@ -38002,7 +38042,7 @@
             "wings_sanic.utils",
             "wings_sanic.views"
         ],
-        "version": "0.3.2"
+        "version": "0.3.3"
     },
     "wingspan": {
         "cmdline": [],
@@ -39445,7 +39485,7 @@
             "wisdoms.ms",
             "wisdoms.utils"
         ],
-        "version": "0.0.21"
+        "version": "0.0.22"
     },
     "wise": {
         "cmdline": [
@@ -41347,7 +41387,7 @@
             "wa.workloads.youtube",
             "wa.workloads.youtube_playback"
         ],
-        "version": "3.1.0"
+        "version": "3.1.1"
     },
     "wlc": {
         "cmdline": [],
@@ -52582,12 +52622,11 @@
         "cmdline": [],
         "modules": [
             "wrapt",
-            "wrapt.arguments",
             "wrapt.decorators",
             "wrapt.importer",
             "wrapt.wrappers"
         ],
-        "version": "1.10.11"
+        "version": "1.11.0"
     },
     "wrapt-bootstrap": {
         "cmdline": [],
