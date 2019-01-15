@@ -972,7 +972,7 @@
     "faas-supervisor": {
         "cmdline": [],
         "modules": [],
-        "version": "0.7.4"
+        "version": "0.7.8"
     },
     "faaspact-maker": {
         "cmdline": [],
@@ -3505,8 +3505,13 @@
     },
     "face-eevee": {
         "cmdline": [],
-        "modules": [],
-        "version": "0.1.0"
+        "modules": [
+            "face_eevee",
+            "face_eevee.config",
+            "face_eevee.face_eevee",
+            "face_eevee.utils"
+        ],
+        "version": "0.1.1"
     },
     "face-emotion": {
         "cmdline": [],
@@ -9345,10 +9350,6 @@
             "fam.schema.validator",
             "fam.schema.writer",
             "fam.tests",
-            "fam.tests._test_stale",
-            "fam.tests._test_view",
-            "fam.tests._test_view_2",
-            "fam.tests._test_views",
             "fam.tests.common",
             "fam.tests.common.anything_tests",
             "fam.tests.common.basic_tests",
@@ -9364,40 +9365,40 @@
             "fam.tests.models.test03",
             "fam.tests.models.test04",
             "fam.tests.models.test05",
-            "fam.tests.replication_tests",
-            "fam.tests.secrets",
             "fam.tests.test_couchdb",
             "fam.tests.test_couchdb.config",
-            "fam.tests.test_couchdb.index_tests",
             "fam.tests.test_couchdb.test_buffer",
             "fam.tests.test_couchdb.test_buffer_views",
             "fam.tests.test_couchdb.test_couchdb_common",
+            "fam.tests.test_couchdb.test_index",
             "fam.tests.test_couchdb.test_iterator",
             "fam.tests.test_couchdb.test_mapper",
             "fam.tests.test_couchdb.test_mapping",
             "fam.tests.test_couchdb.test_serialisation",
             "fam.tests.test_couchdb.test_temp",
             "fam.tests.test_firestore",
+            "fam.tests.test_firestore.config",
             "fam.tests.test_firestore.config_local",
             "fam.tests.test_firestore.test_firestore_auth",
             "fam.tests.test_firestore.test_firestore_collections",
             "fam.tests.test_firestore.test_firestore_db",
             "fam.tests.test_firestore.test_firestore_fields",
             "fam.tests.test_firestore.test_serialisation",
-            "fam.tests.test_firestore.test_sync",
+            "fam.tests.test_sync",
+            "fam.tests.test_sync.test_sync",
             "fam.tests.test_sync_gateway",
             "fam.tests.test_sync_gateway._test_acl",
+            "fam.tests.test_sync_gateway._test_basic",
+            "fam.tests.test_sync_gateway._test_sync_gateway_common",
+            "fam.tests.test_sync_gateway._test_user",
+            "fam.tests.test_sync_gateway._test_view_creation",
             "fam.tests.test_sync_gateway.config",
-            "fam.tests.test_sync_gateway.test_basic",
-            "fam.tests.test_sync_gateway.test_sync_gateway_common",
-            "fam.tests.test_sync_gateway.test_user",
-            "fam.tests.test_sync_gateway.test_view_creation",
             "fam.utils",
             "fam.utils.backoff",
             "fam.utils.couchbase_utils",
             "fam.utils.requests_shim"
         ],
-        "version": "2.0.10"
+        "version": "2.0.13"
     },
     "fam-parser": {
         "cmdline": [],
@@ -11286,6 +11287,7 @@
         "cmdline": [],
         "modules": [
             "draft",
+            "draft.domain",
             "draft.test",
             "draft.test_db",
             "draft.test_deploy",
@@ -11296,9 +11298,8 @@
             "farbox_bucket.backend.backend_jobs",
             "farbox_bucket.backend.service",
             "farbox_bucket.backend.sync",
-            "farbox_bucket.backend.sync.sync_bucket_ipfs_files",
-            "farbox_bucket.backend.sync.sync_bucket_remote",
-            "farbox_bucket.backend.sync.sync_buckets_from_nodes",
+            "farbox_bucket.backend.sync.buckets",
+            "farbox_bucket.backend.sync.ipfs_files",
             "farbox_bucket.backend.sync.utils",
             "farbox_bucket.client",
             "farbox_bucket.client.action",
@@ -11328,10 +11329,7 @@
             "farbox_bucket.server.template_system.namespace.request",
             "farbox_bucket.server.template_system.utils",
             "farbox_bucket.server.utils",
-            "farbox_bucket.server.utils.domain",
             "farbox_bucket.server.utils.message",
-            "farbox_bucket.server.utils.record",
-            "farbox_bucket.server.utils.web_bucket_auth",
             "farbox_bucket.server.web_app",
             "farbox_bucket.server.webviews",
             "farbox_bucket.server.webviews.bucket_web_page",
@@ -11341,6 +11339,26 @@
             "farbox_bucket.server.webviews.system",
             "farbox_bucket.utils",
             "farbox_bucket.utils.bucket",
+            "farbox_bucket.utils.bucket.data_api",
+            "farbox_bucket.utils.bucket.domain",
+            "farbox_bucket.utils.bucket.domain.info",
+            "farbox_bucket.utils.bucket.domain.register",
+            "farbox_bucket.utils.bucket.domain.register_api",
+            "farbox_bucket.utils.bucket.domain.utils",
+            "farbox_bucket.utils.bucket.ipfs_related",
+            "farbox_bucket.utils.bucket.node",
+            "farbox_bucket.utils.bucket.record",
+            "farbox_bucket.utils.bucket.record.create",
+            "farbox_bucket.utils.bucket.record.get",
+            "farbox_bucket.utils.bucket.record.utils",
+            "farbox_bucket.utils.bucket.status",
+            "farbox_bucket.utils.bucket.sync",
+            "farbox_bucket.utils.bucket.sync.node",
+            "farbox_bucket.utils.bucket.sync.remote",
+            "farbox_bucket.utils.bucket.sync.sync_api",
+            "farbox_bucket.utils.bucket.utils",
+            "farbox_bucket.utils.bucket.web",
+            "farbox_bucket.utils.bucket.web.password_auth",
             "farbox_bucket.utils.cache",
             "farbox_bucket.utils.cli_color",
             "farbox_bucket.utils.console_utils",
@@ -11354,6 +11372,8 @@
             "farbox_bucket.utils.gevent_run",
             "farbox_bucket.utils.gevent_utils",
             "farbox_bucket.utils.gzip_content",
+            "farbox_bucket.utils.ip",
+            "farbox_bucket.utils.ip.utils",
             "farbox_bucket.utils.key_encrypt",
             "farbox_bucket.utils.logger",
             "farbox_bucket.utils.memcache",
@@ -11367,6 +11387,7 @@
             "farbox_bucket.utils.ssdb_configs",
             "farbox_bucket.utils.ssdb_utils",
             "farbox_bucket.utils.system_status_recorder",
+            "farbox_bucket.utils.url",
             "farbox_bucket.utils.web_utils",
             "farbox_bucket.utils.web_utils.flask_httpauth",
             "farbox_bucket.utils.web_utils.response",
@@ -11379,7 +11400,7 @@
             "tests.ssdb",
             "tests.sync"
         ],
-        "version": "0.1495"
+        "version": "0.1496"
     },
     "farbox-markdown": {
         "cmdline": [],
@@ -13482,11 +13503,12 @@
             "fastlane.utils",
             "fastlane.worker",
             "fastlane.worker.docker_executor",
+            "fastlane.worker.errors",
             "fastlane.worker.job",
             "fastlane.worker.scheduler",
             "fastlane.worker.webhooks"
         ],
-        "version": "0.5.5"
+        "version": "0.5.6"
     },
     "fastlang": {
         "cmdline": [],
@@ -14381,7 +14403,7 @@
             "test.test_engine",
             "test.test_model_manage"
         ],
-        "version": "1.8.0"
+        "version": "1.9.0"
     },
     "fastscore-cli": {
         "cmdline": [],
@@ -14389,6 +14411,11 @@
             "cli",
             "cli._version",
             "cli.attachment",
+            "cli.auth",
+            "cli.auth.basicauth",
+            "cli.auth.ldap",
+            "cli.auth.oauth2",
+            "cli.auth.sessioncookie",
             "cli.colors",
             "cli.config",
             "cli.connect",
@@ -14396,6 +14423,7 @@
             "cli.dispatch",
             "cli.editor",
             "cli.engine",
+            "cli.login",
             "cli.model",
             "cli.monitor",
             "cli.monitor.layout",
@@ -14413,7 +14441,7 @@
             "cli.stream",
             "cli.version"
         ],
-        "version": "1.8.0"
+        "version": "1.9.0"
     },
     "fastscoredeploy": {
         "cmdline": [],
@@ -15408,6 +15436,7 @@
             "accounts.agents",
             "accounts.apps",
             "accounts.migrations",
+            "accounts.migrations.0001_initial",
             "accounts.models",
             "assignor",
             "assignor.test_copartitioned_assignor",
@@ -15663,7 +15692,7 @@
             "t.unit.web.test_base",
             "t.unit.web.test_views"
         ],
-        "version": "1.4.2"
+        "version": "1.4.3"
     },
     "faux": {
         "cmdline": [],
@@ -17302,7 +17331,7 @@
             "fbs_runtime.licensing",
             "fbs_runtime.platform"
         ],
-        "version": "0.6.5"
+        "version": "0.6.6"
     },
     "fbscraper": {
         "cmdline": [],
@@ -21367,7 +21396,7 @@
             "feebee",
             "feebee.feebee"
         ],
-        "version": "0.2.1"
+        "version": "0.2.4"
     },
     "feed": {
         "cmdline": [],
@@ -21919,7 +21948,7 @@
             "feedly.session",
             "feedly.stream"
         ],
-        "version": "0.18"
+        "version": "0.19"
     },
     "feedme": {
         "cmdline": [],
@@ -23677,7 +23706,7 @@
             "femagtools.tks",
             "femagtools.vbf"
         ],
-        "version": "0.8.6"
+        "version": "0.8.7"
     },
     "female": {
         "cmdline": [],
@@ -26033,7 +26062,7 @@
             "fever.reader.preprocessing",
             "fever.reader.simple_random"
         ],
-        "version": "1.5.29"
+        "version": "1.5.32"
     },
     "fever-scorer": {
         "cmdline": [],
@@ -26424,9 +26453,13 @@
     "ffflatex": {
         "cmdline": [],
         "modules": [
-            "FFFLaTeX"
+            "FFFLaTeX",
+            "FFFLaTeX.FFFparser",
+            "FFFLaTeX.configLaTeX",
+            "FFFLaTeX.configSymbols",
+            "FFFLaTeX.parserutil"
         ],
-        "version": "1.2.1"
+        "version": "1.4"
     },
     "fffw": {
         "cmdline": [],
@@ -27476,6 +27509,349 @@
             "fhir_parse_qs.update_mappings"
         ],
         "version": "0.6.0"
+    },
+    "fhir-resources": {
+        "cmdline": [],
+        "modules": [
+            "fhir",
+            "fhir.resources",
+            "fhir.resources.account",
+            "fhir.resources.activitydefinition",
+            "fhir.resources.address",
+            "fhir.resources.adverseevent",
+            "fhir.resources.age",
+            "fhir.resources.allergyintolerance",
+            "fhir.resources.annotation",
+            "fhir.resources.appointment",
+            "fhir.resources.appointmentresponse",
+            "fhir.resources.attachment",
+            "fhir.resources.auditevent",
+            "fhir.resources.backboneelement",
+            "fhir.resources.basic",
+            "fhir.resources.binary",
+            "fhir.resources.biologicallyderivedproduct",
+            "fhir.resources.bodystructure",
+            "fhir.resources.bundle",
+            "fhir.resources.capabilitystatement",
+            "fhir.resources.careplan",
+            "fhir.resources.careteam",
+            "fhir.resources.catalogentry",
+            "fhir.resources.chargeitem",
+            "fhir.resources.chargeitemdefinition",
+            "fhir.resources.claim",
+            "fhir.resources.claimresponse",
+            "fhir.resources.clinicalimpression",
+            "fhir.resources.codeableconcept",
+            "fhir.resources.codesystem",
+            "fhir.resources.coding",
+            "fhir.resources.communication",
+            "fhir.resources.communicationrequest",
+            "fhir.resources.compartmentdefinition",
+            "fhir.resources.composition",
+            "fhir.resources.conceptmap",
+            "fhir.resources.condition",
+            "fhir.resources.consent",
+            "fhir.resources.contactdetail",
+            "fhir.resources.contactpoint",
+            "fhir.resources.contract",
+            "fhir.resources.contributor",
+            "fhir.resources.count",
+            "fhir.resources.coverage",
+            "fhir.resources.coverageeligibilityrequest",
+            "fhir.resources.coverageeligibilityresponse",
+            "fhir.resources.datarequirement",
+            "fhir.resources.detectedissue",
+            "fhir.resources.device",
+            "fhir.resources.devicedefinition",
+            "fhir.resources.devicemetric",
+            "fhir.resources.devicerequest",
+            "fhir.resources.deviceusestatement",
+            "fhir.resources.diagnosticreport",
+            "fhir.resources.distance",
+            "fhir.resources.documentmanifest",
+            "fhir.resources.documentreference",
+            "fhir.resources.domainresource",
+            "fhir.resources.dosage",
+            "fhir.resources.duration",
+            "fhir.resources.effectevidencesynthesis",
+            "fhir.resources.element",
+            "fhir.resources.elementdefinition",
+            "fhir.resources.encounter",
+            "fhir.resources.endpoint",
+            "fhir.resources.enrollmentrequest",
+            "fhir.resources.enrollmentresponse",
+            "fhir.resources.episodeofcare",
+            "fhir.resources.eventdefinition",
+            "fhir.resources.evidence",
+            "fhir.resources.evidencevariable",
+            "fhir.resources.examplescenario",
+            "fhir.resources.explanationofbenefit",
+            "fhir.resources.expression",
+            "fhir.resources.extension",
+            "fhir.resources.familymemberhistory",
+            "fhir.resources.fhirabstractbase",
+            "fhir.resources.fhirabstractresource",
+            "fhir.resources.fhirdate",
+            "fhir.resources.fhirelementfactory",
+            "fhir.resources.fhirreference",
+            "fhir.resources.fhirsearch",
+            "fhir.resources.flag",
+            "fhir.resources.goal",
+            "fhir.resources.graphdefinition",
+            "fhir.resources.group",
+            "fhir.resources.guidanceresponse",
+            "fhir.resources.healthcareservice",
+            "fhir.resources.humanname",
+            "fhir.resources.identifier",
+            "fhir.resources.imagingstudy",
+            "fhir.resources.immunization",
+            "fhir.resources.immunizationevaluation",
+            "fhir.resources.immunizationrecommendation",
+            "fhir.resources.implementationguide",
+            "fhir.resources.insuranceplan",
+            "fhir.resources.invoice",
+            "fhir.resources.library",
+            "fhir.resources.linkage",
+            "fhir.resources.list",
+            "fhir.resources.location",
+            "fhir.resources.marketingstatus",
+            "fhir.resources.measure",
+            "fhir.resources.measurereport",
+            "fhir.resources.media",
+            "fhir.resources.medication",
+            "fhir.resources.medicationadministration",
+            "fhir.resources.medicationdispense",
+            "fhir.resources.medicationknowledge",
+            "fhir.resources.medicationrequest",
+            "fhir.resources.medicationstatement",
+            "fhir.resources.medicinalproduct",
+            "fhir.resources.medicinalproductauthorization",
+            "fhir.resources.medicinalproductcontraindication",
+            "fhir.resources.medicinalproductindication",
+            "fhir.resources.medicinalproductingredient",
+            "fhir.resources.medicinalproductinteraction",
+            "fhir.resources.medicinalproductmanufactured",
+            "fhir.resources.medicinalproductpackaged",
+            "fhir.resources.medicinalproductpharmaceutical",
+            "fhir.resources.medicinalproductundesirableeffect",
+            "fhir.resources.messagedefinition",
+            "fhir.resources.messageheader",
+            "fhir.resources.meta",
+            "fhir.resources.metadataresource",
+            "fhir.resources.molecularsequence",
+            "fhir.resources.money",
+            "fhir.resources.namingsystem",
+            "fhir.resources.narrative",
+            "fhir.resources.nutritionorder",
+            "fhir.resources.observation",
+            "fhir.resources.observationdefinition",
+            "fhir.resources.operationdefinition",
+            "fhir.resources.operationoutcome",
+            "fhir.resources.organization",
+            "fhir.resources.organizationaffiliation",
+            "fhir.resources.parameterdefinition",
+            "fhir.resources.parameters",
+            "fhir.resources.patient",
+            "fhir.resources.paymentnotice",
+            "fhir.resources.paymentreconciliation",
+            "fhir.resources.period",
+            "fhir.resources.person",
+            "fhir.resources.plandefinition",
+            "fhir.resources.population",
+            "fhir.resources.practitioner",
+            "fhir.resources.practitionerrole",
+            "fhir.resources.procedure",
+            "fhir.resources.prodcharacteristic",
+            "fhir.resources.productshelflife",
+            "fhir.resources.provenance",
+            "fhir.resources.quantity",
+            "fhir.resources.questionnaire",
+            "fhir.resources.questionnaireresponse",
+            "fhir.resources.range",
+            "fhir.resources.ratio",
+            "fhir.resources.reference",
+            "fhir.resources.relatedartifact",
+            "fhir.resources.relatedperson",
+            "fhir.resources.requestgroup",
+            "fhir.resources.researchdefinition",
+            "fhir.resources.researchelementdefinition",
+            "fhir.resources.researchstudy",
+            "fhir.resources.researchsubject",
+            "fhir.resources.resource",
+            "fhir.resources.riskassessment",
+            "fhir.resources.riskevidencesynthesis",
+            "fhir.resources.sampleddata",
+            "fhir.resources.schedule",
+            "fhir.resources.searchparameter",
+            "fhir.resources.servicerequest",
+            "fhir.resources.signature",
+            "fhir.resources.slot",
+            "fhir.resources.specimen",
+            "fhir.resources.specimendefinition",
+            "fhir.resources.structuredefinition",
+            "fhir.resources.structuremap",
+            "fhir.resources.subscription",
+            "fhir.resources.substance",
+            "fhir.resources.substanceamount",
+            "fhir.resources.substancenucleicacid",
+            "fhir.resources.substancepolymer",
+            "fhir.resources.substanceprotein",
+            "fhir.resources.substancereferenceinformation",
+            "fhir.resources.substancesourcematerial",
+            "fhir.resources.substancespecification",
+            "fhir.resources.supplydelivery",
+            "fhir.resources.supplyrequest",
+            "fhir.resources.task",
+            "fhir.resources.terminologycapabilities",
+            "fhir.resources.testreport",
+            "fhir.resources.tests",
+            "fhir.resources.tests.conftest",
+            "fhir.resources.tests.fixtures",
+            "fhir.resources.tests.test_account",
+            "fhir.resources.tests.test_activitydefinition",
+            "fhir.resources.tests.test_adverseevent",
+            "fhir.resources.tests.test_allergyintolerance",
+            "fhir.resources.tests.test_appointment",
+            "fhir.resources.tests.test_appointmentresponse",
+            "fhir.resources.tests.test_auditevent",
+            "fhir.resources.tests.test_basic",
+            "fhir.resources.tests.test_binary",
+            "fhir.resources.tests.test_biologicallyderivedproduct",
+            "fhir.resources.tests.test_bodystructure",
+            "fhir.resources.tests.test_bundle",
+            "fhir.resources.tests.test_capabilitystatement",
+            "fhir.resources.tests.test_careplan",
+            "fhir.resources.tests.test_careteam",
+            "fhir.resources.tests.test_catalogentry",
+            "fhir.resources.tests.test_chargeitem",
+            "fhir.resources.tests.test_chargeitemdefinition",
+            "fhir.resources.tests.test_claim",
+            "fhir.resources.tests.test_claimresponse",
+            "fhir.resources.tests.test_clinicalimpression",
+            "fhir.resources.tests.test_codesystem",
+            "fhir.resources.tests.test_communication",
+            "fhir.resources.tests.test_communicationrequest",
+            "fhir.resources.tests.test_compartmentdefinition",
+            "fhir.resources.tests.test_composition",
+            "fhir.resources.tests.test_conceptmap",
+            "fhir.resources.tests.test_condition",
+            "fhir.resources.tests.test_consent",
+            "fhir.resources.tests.test_contract",
+            "fhir.resources.tests.test_coverage",
+            "fhir.resources.tests.test_coverageeligibilityrequest",
+            "fhir.resources.tests.test_coverageeligibilityresponse",
+            "fhir.resources.tests.test_detectedissue",
+            "fhir.resources.tests.test_device",
+            "fhir.resources.tests.test_devicedefinition",
+            "fhir.resources.tests.test_devicemetric",
+            "fhir.resources.tests.test_devicerequest",
+            "fhir.resources.tests.test_deviceusestatement",
+            "fhir.resources.tests.test_diagnosticreport",
+            "fhir.resources.tests.test_documentmanifest",
+            "fhir.resources.tests.test_documentreference",
+            "fhir.resources.tests.test_effectevidencesynthesis",
+            "fhir.resources.tests.test_encounter",
+            "fhir.resources.tests.test_endpoint",
+            "fhir.resources.tests.test_enrollmentrequest",
+            "fhir.resources.tests.test_enrollmentresponse",
+            "fhir.resources.tests.test_episodeofcare",
+            "fhir.resources.tests.test_eventdefinition",
+            "fhir.resources.tests.test_evidence",
+            "fhir.resources.tests.test_evidencevariable",
+            "fhir.resources.tests.test_examplescenario",
+            "fhir.resources.tests.test_explanationofbenefit",
+            "fhir.resources.tests.test_familymemberhistory",
+            "fhir.resources.tests.test_flag",
+            "fhir.resources.tests.test_goal",
+            "fhir.resources.tests.test_graphdefinition",
+            "fhir.resources.tests.test_group",
+            "fhir.resources.tests.test_guidanceresponse",
+            "fhir.resources.tests.test_healthcareservice",
+            "fhir.resources.tests.test_imagingstudy",
+            "fhir.resources.tests.test_immunization",
+            "fhir.resources.tests.test_immunizationevaluation",
+            "fhir.resources.tests.test_immunizationrecommendation",
+            "fhir.resources.tests.test_implementationguide",
+            "fhir.resources.tests.test_insuranceplan",
+            "fhir.resources.tests.test_invoice",
+            "fhir.resources.tests.test_library",
+            "fhir.resources.tests.test_linkage",
+            "fhir.resources.tests.test_list",
+            "fhir.resources.tests.test_location",
+            "fhir.resources.tests.test_measure",
+            "fhir.resources.tests.test_measurereport",
+            "fhir.resources.tests.test_media",
+            "fhir.resources.tests.test_medicationknowledge",
+            "fhir.resources.tests.test_medicinalproduct",
+            "fhir.resources.tests.test_medicinalproductauthorization",
+            "fhir.resources.tests.test_medicinalproductcontraindication",
+            "fhir.resources.tests.test_medicinalproductindication",
+            "fhir.resources.tests.test_medicinalproductingredient",
+            "fhir.resources.tests.test_medicinalproductinteraction",
+            "fhir.resources.tests.test_medicinalproductmanufactured",
+            "fhir.resources.tests.test_medicinalproductpackaged",
+            "fhir.resources.tests.test_medicinalproductpharmaceutical",
+            "fhir.resources.tests.test_medicinalproductundesirableeffect",
+            "fhir.resources.tests.test_messagedefinition",
+            "fhir.resources.tests.test_messageheader",
+            "fhir.resources.tests.test_molecularsequence",
+            "fhir.resources.tests.test_namingsystem",
+            "fhir.resources.tests.test_nutritionorder",
+            "fhir.resources.tests.test_observation",
+            "fhir.resources.tests.test_observationdefinition",
+            "fhir.resources.tests.test_operationdefinition",
+            "fhir.resources.tests.test_operationoutcome",
+            "fhir.resources.tests.test_organization",
+            "fhir.resources.tests.test_organizationaffiliation",
+            "fhir.resources.tests.test_parameters",
+            "fhir.resources.tests.test_patient",
+            "fhir.resources.tests.test_paymentnotice",
+            "fhir.resources.tests.test_paymentreconciliation",
+            "fhir.resources.tests.test_person",
+            "fhir.resources.tests.test_plandefinition",
+            "fhir.resources.tests.test_practitioner",
+            "fhir.resources.tests.test_practitionerrole",
+            "fhir.resources.tests.test_procedure",
+            "fhir.resources.tests.test_provenance",
+            "fhir.resources.tests.test_questionnaire",
+            "fhir.resources.tests.test_questionnaireresponse",
+            "fhir.resources.tests.test_relatedperson",
+            "fhir.resources.tests.test_requestgroup",
+            "fhir.resources.tests.test_researchdefinition",
+            "fhir.resources.tests.test_researchelementdefinition",
+            "fhir.resources.tests.test_researchstudy",
+            "fhir.resources.tests.test_researchsubject",
+            "fhir.resources.tests.test_riskassessment",
+            "fhir.resources.tests.test_riskevidencesynthesis",
+            "fhir.resources.tests.test_schedule",
+            "fhir.resources.tests.test_searchparameter",
+            "fhir.resources.tests.test_servicerequest",
+            "fhir.resources.tests.test_slot",
+            "fhir.resources.tests.test_specimen",
+            "fhir.resources.tests.test_specimendefinition",
+            "fhir.resources.tests.test_structuredefinition",
+            "fhir.resources.tests.test_structuremap",
+            "fhir.resources.tests.test_subscription",
+            "fhir.resources.tests.test_substance",
+            "fhir.resources.tests.test_substancespecification",
+            "fhir.resources.tests.test_supplydelivery",
+            "fhir.resources.tests.test_supplyrequest",
+            "fhir.resources.tests.test_task",
+            "fhir.resources.tests.test_terminologycapabilities",
+            "fhir.resources.tests.test_testreport",
+            "fhir.resources.tests.test_testscript",
+            "fhir.resources.tests.test_valueset",
+            "fhir.resources.tests.test_verificationresult",
+            "fhir.resources.tests.test_visionprescription",
+            "fhir.resources.testscript",
+            "fhir.resources.timing",
+            "fhir.resources.triggerdefinition",
+            "fhir.resources.usagecontext",
+            "fhir.resources.valueset",
+            "fhir.resources.verificationresult",
+            "fhir.resources.visionprescription"
+        ],
+        "version": "4.0.0"
     },
     "fhir-to-sdo": {
         "cmdline": [
@@ -32787,7 +33163,7 @@
             "financeager.resources",
             "financeager.server"
         ],
-        "version": "0.12"
+        "version": "0.14"
     },
     "financeapi": {
         "cmdline": [],
@@ -34417,6 +34793,7 @@
             "FinMind.Data.CrudeOilPrices",
             "FinMind.Data.EnergyFuturesPrices",
             "FinMind.Data.EuropeStockInfo",
+            "FinMind.Data.EuropeStockPrice",
             "FinMind.Data.ExchangeRate",
             "FinMind.Data.GoldPrice",
             "FinMind.Data.GovernmentBonds",
@@ -34430,11 +34807,12 @@
             "FinMind.Data.TaiwanStockInfo",
             "FinMind.Data.TaiwanStockStockDividend",
             "FinMind.Data.UKStockInfo",
+            "FinMind.Data.UKStockPrice",
             "FinMind.Data.USStockInfo",
             "FinMind.Data.USStockPrice",
             "FinMind.demo"
         ],
-        "version": "1.0.21"
+        "version": "1.0.32"
     },
     "finna-client": {
         "cmdline": [],
@@ -34481,6 +34859,7 @@
             "finntk.emb",
             "finntk.emb.autoextend",
             "finntk.emb.base",
+            "finntk.emb.bert",
             "finntk.emb.concat",
             "finntk.emb.elmo",
             "finntk.emb.fasttext",
@@ -34496,6 +34875,7 @@
             "finntk.omor.tok",
             "finntk.utils",
             "finntk.vendor",
+            "finntk.vendor.bert",
             "finntk.vendor.conceptnet5",
             "finntk.vendor.conceptnet5.uri",
             "finntk.vendor.elmo",
@@ -34511,7 +34891,7 @@
             "finntk.wsd.lesk_pp",
             "finntk.wsd.nn"
         ],
-        "version": "0.0.29"
+        "version": "0.0.30"
     },
     "finny": {
         "cmdline": [],
@@ -36488,7 +36868,7 @@
             "fire_python",
             "fire_python.fire_python"
         ],
-        "version": "0.41"
+        "version": "0.42"
     },
     "fireant": {
         "cmdline": [],
@@ -37944,7 +38324,7 @@
             "firexapp.testing",
             "firexapp.testing.config_base"
         ],
-        "version": "0.1.18"
+        "version": "0.1.20"
     },
     "firexkit": {
         "cmdline": [],
@@ -37957,7 +38337,7 @@
             "firexkit.revoke",
             "firexkit.task"
         ],
-        "version": "0.1.35"
+        "version": "0.1.41"
     },
     "firheetoout": {
         "cmdline": [],
@@ -42290,6 +42670,14 @@
         "modules": [],
         "version": "1.0.0"
     },
+    "flake8-svg-badge": {
+        "cmdline": [],
+        "modules": [
+            "flake8_svg_badge",
+            "flake8_svg_badge.reporter"
+        ],
+        "version": "0.1.0"
+    },
     "flake8-tabs": {
         "cmdline": [],
         "modules": [],
@@ -44680,7 +45068,7 @@
             "flask_autoapi.utils.message",
             "flask_autoapi.utils.response"
         ],
-        "version": "0.8.15"
+        "version": "0.8.16"
     },
     "flask-autocrud": {
         "cmdline": [],
@@ -46337,8 +46725,37 @@
     },
     "flask-dance": {
         "cmdline": [],
-        "modules": [],
-        "version": "1.2.0"
+        "modules": [
+            "flask_dance",
+            "flask_dance.consumer",
+            "flask_dance.consumer.backend",
+            "flask_dance.consumer.backend.session",
+            "flask_dance.consumer.backend.sqla",
+            "flask_dance.consumer.base",
+            "flask_dance.consumer.oauth1",
+            "flask_dance.consumer.oauth2",
+            "flask_dance.consumer.requests",
+            "flask_dance.contrib",
+            "flask_dance.contrib.authentiq",
+            "flask_dance.contrib.azure",
+            "flask_dance.contrib.discord",
+            "flask_dance.contrib.dropbox",
+            "flask_dance.contrib.facebook",
+            "flask_dance.contrib.github",
+            "flask_dance.contrib.gitlab",
+            "flask_dance.contrib.google",
+            "flask_dance.contrib.jira",
+            "flask_dance.contrib.meetup",
+            "flask_dance.contrib.nylas",
+            "flask_dance.contrib.okta",
+            "flask_dance.contrib.reddit",
+            "flask_dance.contrib.slack",
+            "flask_dance.contrib.spotify",
+            "flask_dance.contrib.twitter",
+            "flask_dance.contrib.zoho",
+            "flask_dance.utils"
+        ],
+        "version": "1.3.0"
     },
     "flask-dashboard": {
         "cmdline": [],
@@ -54798,6 +55215,14 @@
         ],
         "version": "0.4"
     },
+    "flask-skeleton": {
+        "cmdline": [],
+        "modules": [
+            "flask_skeleton",
+            "flask_skeleton.core"
+        ],
+        "version": "1.0"
+    },
     "flask-sl": {
         "cmdline": [],
         "modules": [
@@ -56261,7 +56686,7 @@
             "flask_turbo_boost",
             "flask_turbo_boost.cli"
         ],
-        "version": "0.1.0"
+        "version": "0.2.2"
     },
     "flask-turbolinks": {
         "cmdline": [],
@@ -57364,7 +57789,7 @@
             "flask_wechat_utils.user.utils",
             "flask_wechat_utils.utils"
         ],
-        "version": "0.1"
+        "version": "0.1.6"
     },
     "flask-wechatpy": {
         "cmdline": [],
@@ -63003,7 +63428,7 @@
             "floatview.tests.conftest",
             "floatview.tests.test_example"
         ],
-        "version": "0.1.5"
+        "version": "0.1.6"
     },
     "flock": {
         "cmdline": [],
@@ -64953,7 +65378,7 @@
             "flowpipe.stats_reporter",
             "flowpipe.utilities"
         ],
-        "version": "0.1.0"
+        "version": "0.4.5"
     },
     "flowpython": {
         "cmdline": [],
@@ -68784,7 +69209,7 @@
             "flywheel.util",
             "flywheel.view_builder"
         ],
-        "version": "4.4.4"
+        "version": "4.4.5"
     },
     "flyxcd-nester": {
         "cmdline": [],
@@ -68895,7 +69320,7 @@
             "fmconcert.cli",
             "fmconcert.fmconcert"
         ],
-        "version": "0.2.8"
+        "version": "0.3.0"
     },
     "fmdataapi": {
         "cmdline": [],
@@ -72238,7 +72663,7 @@
             "fontTools.voltLib.lexer",
             "fontTools.voltLib.parser"
         ],
-        "version": "3.35.1"
+        "version": "3.35.2"
     },
     "fonty": {
         "cmdline": [],
@@ -79501,7 +79926,7 @@
             "frc3223_azurite.motors",
             "frc3223_azurite.pidcontroller"
         ],
-        "version": "0.0.7"
+        "version": "0.0.8"
     },
     "frccontrol": {
         "cmdline": [],
@@ -83944,7 +84369,7 @@
             "frimcla.webApp.FlaskApp.PythonApp",
             "frimcla.webApp.FlaskApp.app"
         ],
-        "version": "0.0.525"
+        "version": "0.0.529"
     },
     "frink": {
         "cmdline": [],
@@ -84894,10 +85319,9 @@
     "frontend-assets": {
         "cmdline": [],
         "modules": [
-            "frontend_assets",
-            "frontend_assets.utils"
+            "frontend_assets"
         ],
-        "version": "0.4"
+        "version": "0.5.8"
     },
     "frontera": {
         "cmdline": [],
@@ -95370,7 +95794,7 @@
             "funkpy.parCollection",
             "funkpy.utils"
         ],
-        "version": "1.0.1"
+        "version": "1.0.3"
     },
     "funktown": {
         "cmdline": [],
@@ -98608,15 +99032,23 @@
         "cmdline": [],
         "modules": [
             "fuzzylab",
+            "fuzzylab.FuzzyInferenceSystem",
             "fuzzylab.defuzz",
+            "fuzzylab.evalfis",
+            "fuzzylab.evalmf",
+            "fuzzylab.fismf",
+            "fuzzylab.fisrule",
+            "fuzzylab.fisvar",
             "fuzzylab.gaussmf",
             "fuzzylab.gbellmf",
             "fuzzylab.linspace",
+            "fuzzylab.plotmf",
             "fuzzylab.sugfis",
             "fuzzylab.trapmf",
-            "fuzzylab.trimf"
+            "fuzzylab.trimf",
+            "fuzzylab.wtaver"
         ],
-        "version": "0.0.4"
+        "version": "0.0.5"
     },
     "fuzzylib": {
         "cmdline": [],
@@ -98851,6 +99283,7 @@
         "modules": [
             "fwakit",
             "fwakit.cli",
+            "fwakit.dem",
             "fwakit.epa_waters",
             "fwakit.fwa",
             "fwakit.settings",
@@ -98858,7 +99291,7 @@
             "fwakit.watersheds",
             "fwakit.watersheds_arcgis"
         ],
-        "version": "0.0.1rc0"
+        "version": "0.0.2"
     },
     "fwapi": {
         "cmdline": [],
