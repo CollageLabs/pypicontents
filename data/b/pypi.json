@@ -17689,9 +17689,10 @@
         "cmdline": [],
         "modules": [
             "bb_unsucked",
+            "bb_unsucked.ftp_fs",
             "bb_unsucked.fuse_fs"
         ],
-        "version": "0.0.12"
+        "version": "0.0.13"
     },
     "bb-utils": {
         "cmdline": [],
@@ -18520,8 +18521,16 @@
     },
     "bbox": {
         "cmdline": [],
-        "modules": [],
-        "version": ""
+        "modules": [
+            "bbox",
+            "bbox.bbox2d",
+            "bbox.bbox2d_list",
+            "bbox.bbox3d",
+            "bbox.geometry",
+            "bbox.metrics",
+            "bbox.utils"
+        ],
+        "version": "0.8.1"
     },
     "bboxtiler": {
         "cmdline": [],
@@ -22279,7 +22288,7 @@
             "beam_nuggets.transforms.nested_dict",
             "beam_nuggets.transforms.unique_id"
         ],
-        "version": "0.13.1"
+        "version": "0.13.2"
     },
     "beam-up": {
         "cmdline": [],
@@ -27926,7 +27935,7 @@
             "bella.word_vectors",
             "bella.write_data"
         ],
-        "version": "0.2.6"
+        "version": "0.2.7"
     },
     "bellatrix": {
         "cmdline": [],
@@ -30108,26 +30117,26 @@
             "bert_serving",
             "bert_serving.client"
         ],
-        "version": "1.7.6"
+        "version": "1.7.7"
     },
     "bert-serving-server": {
-        "cmdline": [
-            "bert-serving-start"
-        ],
+        "cmdline": [],
         "modules": [
             "bert_serving",
             "bert_serving.server",
+            "bert_serving.server.benchmark",
             "bert_serving.server.bert",
             "bert_serving.server.bert.extract_features",
             "bert_serving.server.bert.modeling",
             "bert_serving.server.bert.optimization",
             "bert_serving.server.bert.tokenization",
+            "bert_serving.server.cli",
             "bert_serving.server.graph",
             "bert_serving.server.helper",
             "bert_serving.server.http",
             "bert_serving.server.zmq_decor"
         ],
-        "version": "1.7.6"
+        "version": "1.7.7"
     },
     "bert-tokenizer": {
         "cmdline": [],
@@ -47935,10 +47944,14 @@
         "cmdline": [],
         "modules": [
             "bitcoinx",
+            "bitcoinx.chain",
+            "bitcoinx.coin",
             "bitcoinx.hashes",
-            "bitcoinx.packing"
+            "bitcoinx.packing",
+            "bitcoinx.util",
+            "bitcoinx.work"
         ],
-        "version": "0.0.1"
+        "version": "0.0.2"
     },
     "bitcore": {
         "cmdline": [],
@@ -53915,7 +53928,7 @@
             "blllib",
             "blllib.blllib"
         ],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     "blmath": {
         "cmdline": [],
@@ -56488,6 +56501,21 @@
         "cmdline": [],
         "modules": [],
         "version": "0.1.12"
+    },
+    "blotto": {
+        "cmdline": [],
+        "modules": [
+            "blotto",
+            "blotto.blotto"
+        ],
+        "version": "0.0.2"
+    },
+    "blottopy": {
+        "cmdline": [],
+        "modules": [
+            "blotto"
+        ],
+        "version": "0.0.1"
     },
     "blowdrycss": {
         "cmdline": [],
@@ -65267,6 +65295,11 @@
         ],
         "version": "0.20.4"
     },
+    "bolighed": {
+        "cmdline": [],
+        "modules": [],
+        "version": ""
+    },
     "bolos": {
         "cmdline": [],
         "modules": [
@@ -67016,6 +67049,13 @@
             "bookmarks_parser.bookmarks_parser"
         ],
         "version": "0.1.3"
+    },
+    "bookmarks2markdown": {
+        "cmdline": [],
+        "modules": [
+            "bookmarks2markdown"
+        ],
+        "version": "1.0.2"
     },
     "bookmd": {
         "cmdline": [],
@@ -69849,7 +69889,7 @@
             "bookied.web",
             "bookied.work"
         ],
-        "version": "0.3.5"
+        "version": "0.3.6"
     },
     "bos-incidents": {
         "cmdline": [],
@@ -69916,7 +69956,7 @@
             "bookied_sync.update",
             "bookied_sync.utils"
         ],
-        "version": "0.3.5"
+        "version": "0.3.6"
     },
     "boscoin-base": {
         "cmdline": [],
@@ -76560,57 +76600,24 @@
         "version": "1.0.0"
     },
     "botz": {
-        "cmdline": [],
+        "cmdline": [
+            "botz"
+        ],
         "modules": [
             "botz",
-            "botz.cfg",
-            "botz.cli",
             "botz.clock",
-            "botz.defines",
-            "botz.dispatcher",
-            "botz.errors",
-            "botz.extra",
-            "botz.extra.feedparser",
-            "botz.extra.rijndael",
+            "botz.cmds",
+            "botz.email",
             "botz.irc",
-            "botz.kernel",
-            "botz.log",
-            "botz.plugs",
-            "botz.plugs.db",
-            "botz.plugs.license",
-            "botz.plugs.misc",
-            "botz.plugs.search",
-            "botz.plugs.status",
-            "botz.plugs.usage",
-            "botz.plugs.write",
-            "botz.service",
-            "botz.service.clock",
-            "botz.service.rest",
-            "botz.service.rss",
-            "botz.service.spider",
-            "botz.service.udp",
-            "botz.test",
-            "botz.thing",
+            "botz.rss",
+            "botz.select",
+            "botz.udp",
+            "botz.url",
+            "botz.users",
             "botz.utils",
-            "botz.utils.file",
-            "botz.utils.join",
-            "botz.utils.lock",
-            "botz.utils.name",
-            "botz.utils.opts",
-            "botz.utils.other",
-            "botz.utils.parse",
-            "botz.utils.resolve",
-            "botz.utils.serialize",
-            "botz.utils.set",
-            "botz.utils.signature",
-            "botz.utils.status",
-            "botz.utils.string",
-            "botz.utils.time",
-            "botz.utils.trace",
-            "botz.utils.url",
             "botz.xmpp"
         ],
-        "version": "1"
+        "version": "2"
     },
     "boudica": {
         "cmdline": [],
@@ -76695,7 +76702,7 @@
             "bouncing_balls.utility_functions",
             "bouncing_balls.video_writer"
         ],
-        "version": "0.7.0"
+        "version": "0.8.1"
     },
     "bouncy": {
         "cmdline": [],
@@ -80623,6 +80630,17 @@
             "brainbite.transpiler.transpiler"
         ],
         "version": "1.0.1"
+    },
+    "braincards": {
+        "cmdline": [],
+        "modules": [
+            "braincards",
+            "braincards.braincards",
+            "tests",
+            "tests.test_braincards",
+            "tests.test_cli"
+        ],
+        "version": "0.0.2"
     },
     "braincore": {
         "cmdline": [],
@@ -92338,6 +92356,7 @@
         "cmdline": [],
         "modules": [
             "bugtrack",
+            "bugtrack.admin",
             "bugtrack.forms",
             "bugtrack.models",
             "bugtrack.urls",
@@ -92345,7 +92364,7 @@
             "bugtrack.views",
             "bugtrack.workflows"
         ],
-        "version": "0.0.2"
+        "version": "0.0.5"
     },
     "bugwarrior": {
         "cmdline": [],
