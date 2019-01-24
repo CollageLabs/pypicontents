@@ -1028,16 +1028,8 @@
     },
     "labjackpython": {
         "cmdline": [],
-        "modules": [
-            "LabJackPython",
-            "Modbus",
-            "skymote",
-            "u12",
-            "u3",
-            "u6",
-            "ue9"
-        ],
-        "version": "1.201505"
+        "modules": [],
+        "version": "2.0.0"
     },
     "labjacku12": {
         "cmdline": [],
@@ -1538,10 +1530,20 @@
         "modules": [],
         "version": ""
     },
+    "labsmith-hvs448": {
+        "cmdline": [],
+        "modules": [
+            "Python"
+        ],
+        "version": "2.0.1.dev0"
+    },
     "labsmith-uprocess": {
         "cmdline": [],
-        "modules": [],
-        "version": "1.5.1dev"
+        "modules": [
+            "Python",
+            "includes"
+        ],
+        "version": "1.5.3.dev0"
     },
     "labssh": {
         "cmdline": [],
@@ -4652,8 +4654,6 @@
             "landlab.components.fracture_grid.tests.test_fracture_grid",
             "landlab.components.gflex",
             "landlab.components.gflex.flexure",
-            "landlab.components.lake_fill",
-            "landlab.components.lake_fill.lake_fill_barnes",
             "landlab.components.landslides",
             "landlab.components.landslides.landslide_probability",
             "landlab.components.landslides.tests",
@@ -4702,7 +4702,6 @@
             "landlab.components.radiation.tests.test_radiation",
             "landlab.components.sink_fill",
             "landlab.components.sink_fill.fill_sinks",
-            "landlab.components.sink_fill.sink_fill_barnes",
             "landlab.components.sink_fill.tests",
             "landlab.components.sink_fill.tests.conftest",
             "landlab.components.sink_fill.tests.test_sink_filler",
@@ -4842,6 +4841,7 @@
             "landlab.grid.hex",
             "landlab.grid.linkstatus",
             "landlab.grid.mappers",
+            "landlab.grid.network",
             "landlab.grid.nodestatus",
             "landlab.grid.radial",
             "landlab.grid.raster",
@@ -4862,7 +4862,10 @@
             "landlab.grid.structured_quad.tests.test_nodes",
             "landlab.grid.tests",
             "landlab.grid.tests.conftest",
+            "landlab.grid.tests.test_constructors",
+            "landlab.grid.tests.test_create",
             "landlab.grid.tests.test_diagonals",
+            "landlab.grid.tests.test_grid_reference",
             "landlab.grid.tests.test_hex_grid",
             "landlab.grid.tests.test_hex_grid.test_link_order",
             "landlab.grid.tests.test_hex_grid.testing_flux_divergence_hex_grid",
@@ -4919,6 +4922,8 @@
             "landlab.io.netcdf.tests.test_write_netcdf",
             "landlab.io.netcdf.tests.test_write_raster_netcdf",
             "landlab.io.netcdf.write",
+            "landlab.io.shapefile",
+            "landlab.io.shapefile.read_shapefile",
             "landlab.io.tests",
             "landlab.io.tests.test_read_esri_ascii",
             "landlab.io.tests.test_read_write_native",
@@ -4955,6 +4960,7 @@
             "landlab.tests.test_collections",
             "landlab.tests.test_param_dict",
             "landlab.utils",
+            "landlab.utils.add_halo",
             "landlab.utils.count_repeats",
             "landlab.utils.decorators",
             "landlab.utils.depth_dependent_roughness",
@@ -4965,20 +4971,24 @@
             "landlab.utils.jaggedarray_ma",
             "landlab.utils.return_array",
             "landlab.utils.source_tracking_algorithm",
-            "landlab.utils.stable_priority_queue",
             "landlab.utils.structured_grid",
             "landlab.utils.tests",
             "landlab.utils.tests.test_count_repeats",
             "landlab.utils.tests.test_decorators",
             "landlab.utils.tests.test_flow__distance",
+            "landlab.utils.tests.test_halo",
             "landlab.utils.tests.test_neighbor_node_array",
             "landlab.utils.tests.test_source_tracking_algorithm",
-            "landlab.utils.tests.test_stable_priority_queue",
             "landlab.utils.tests.test_structured_grid",
             "landlab.utils.tests.test_watershed",
-            "landlab.utils.watershed"
+            "landlab.utils.watershed",
+            "landlab.values",
+            "landlab.values.synthetic",
+            "landlab.values.tests",
+            "landlab.values.tests.conftest",
+            "landlab.values.tests.test_synthetic"
         ],
-        "version": "1.6.0"
+        "version": "1.7"
     },
     "landmark-extractor": {
         "cmdline": [],
@@ -13747,6 +13757,22 @@
         "modules": [],
         "version": "1.3.0"
     },
+    "lazynumpy": {
+        "cmdline": [],
+        "modules": [
+            "lazynumpy",
+            "lazynumpy.internals",
+            "lazynumpy.internals.MasterMatricesManager",
+            "lazynumpy.internals.evals",
+            "lazynumpy.larray",
+            "lazynumpy.util",
+            "lazynumpy.util.optimal_eval",
+            "tests",
+            "tests.test_larray",
+            "tests.test_optimal_association"
+        ],
+        "version": "0.0.1"
+    },
     "lazyobject": {
         "cmdline": [],
         "modules": [
@@ -13800,7 +13826,7 @@
             "lazypsf",
             "lazypsf.r_psf"
         ],
-        "version": "1.0.0"
+        "version": "1.0.5"
     },
     "lazypy": {
         "cmdline": [],
@@ -13997,9 +14023,11 @@
     "lbadmin": {
         "cmdline": [],
         "modules": [
-            "pypi_placeholder"
+            "LbAdmin",
+            "LbAdmin.LbDeploymentUpdateSdb",
+            "LbAdmin.RpmRelease"
         ],
-        "version": "0.0.2"
+        "version": "0.0.3"
     },
     "lbcapi": {
         "cmdline": [],
@@ -14018,46 +14046,199 @@
         "version": "1.0.0"
     },
     "lbciagent": {
-        "cmdline": [],
-        "modules": [
-            "pypi_placeholder"
+        "cmdline": [
+            "lbciagent"
         ],
-        "version": "0.0.1"
+        "modules": [
+            "lbciagent",
+            "lbciagent.DeploymentPolicy",
+            "lbciagent.LbCIAgent",
+            "lbciagent.test",
+            "lbciagent.test.test_order"
+        ],
+        "version": "1.0.7"
     },
     "lbcommon": {
         "cmdline": [],
         "modules": [
-            "pypi_placeholder"
+            "LbCommon",
+            "LbCommon.CMake",
+            "LbCommon.ConfigFile",
+            "LbCommon.Env",
+            "LbCommon.Log",
+            "LbCommon.Option",
+            "LbCommon.Processes",
+            "LbCommon.Script",
+            "LbCommon.Temporary",
+            "LbCommon.tests",
+            "LbCommon.tests.test_script"
         ],
-        "version": "0.0.1"
+        "version": "0.0.7"
     },
     "lbcvmfschecker": {
-        "cmdline": [],
-        "modules": [
-            "pypi_placeholder"
+        "cmdline": [
+            "lbCVMFSchecker"
         ],
-        "version": "0.0.1"
+        "modules": [
+            "lbCVMFSchecker",
+            "lbCVMFSchecker.LbCVMFSCheckerPluginBase",
+            "lbCVMFSchecker.LbCvmfsChecker",
+            "lbCVMFSchecker.LbDBConnector",
+            "lbCVMFSchecker.LbEmailer",
+            "lbCVMFSchecker.PluginLoader",
+            "lbCVMFSchecker.PluginManager",
+            "lbCVMFSchecker.Plugins",
+            "lbCVMFSchecker.Plugins.CVMFSync",
+            "lbCVMFSchecker.Plugins.LogChecker",
+            "lbCVMFSchecker.Plugins.NightliesChecker",
+            "lbCVMFSchecker.Plugins.NightliesErrorsChecker",
+            "lbCVMFSchecker.Plugins.NightliesRemove",
+            "lbCVMFSchecker.Plugins.ZZZAlivePlugin",
+            "lbCVMFSchecker.Plugins.tests",
+            "lbCVMFSchecker.Plugins.tests.TestCVMFSync",
+            "lbCVMFSchecker.Plugins.tests.TestLogChckerPlugin",
+            "lbCVMFSchecker.Plugins.tests.TestNightliesPlugin",
+            "lbCVMFSchecker.tests",
+            "lbCVMFSchecker.tests.MockLogger",
+            "lbCVMFSchecker.tests.Plugins",
+            "lbCVMFSchecker.tests.Plugins.MockPlugin",
+            "lbCVMFSchecker.tests.TestDBConnector",
+            "lbCVMFSchecker.tests.TestEmailer",
+            "lbCVMFSchecker.tests.TestPluginBase",
+            "lbCVMFSchecker.tests.TestPluginLoader",
+            "lbCVMFSchecker.tests.TestPluginManager"
+        ],
+        "version": "1.0.10"
     },
     "lbcvmfsreporting": {
-        "cmdline": [],
-        "modules": [
-            "pypi_placeholder"
+        "cmdline": [
+            "LbCVMFSReport"
         ],
-        "version": "0.0.1"
+        "modules": [
+            "lbCVMFSReporting",
+            "lbCVMFSReporting.APIInfoAgent",
+            "lbCVMFSReporting.HTMLUtils",
+            "lbCVMFSReporting.LbInfluxDBConnector",
+            "lbCVMFSReporting.LbReport",
+            "lbCVMFSReporting.Parser",
+            "lbCVMFSReporting.ReportEmailer",
+            "lbCVMFSReporting.Utils"
+        ],
+        "version": "1.0.4"
     },
     "lbcvmfsscheduler": {
-        "cmdline": [],
-        "modules": [
-            "pypi_placeholder"
+        "cmdline": [
+            "lbschedulerclient",
+            "lbschedulermanager"
         ],
-        "version": "0.0.1"
+        "modules": [
+            "lbCVMFSscheduler",
+            "lbCVMFSscheduler.lbCVMFSexecutor",
+            "lbCVMFSscheduler.lbCVMFSexecutor.LbCVMFSExecuter",
+            "lbCVMFSscheduler.lbCVMFSexecutor.LbCVMFSLogger",
+            "lbCVMFSscheduler.lbCVMFSexecutor.LbCVMFSManager",
+            "lbCVMFSscheduler.lbCVMFSexecutor.LbCVMFSScheduler",
+            "lbCVMFSscheduler.lbCVMFSexecutor.LbCVMFSStats",
+            "lbCVMFSscheduler.lbCVMFSexecutor.LockManager",
+            "lbCVMFSscheduler.lbCVMFSexecutor.MonitoringGW",
+            "lbCVMFSscheduler.lbscheduler",
+            "lbCVMFSscheduler.lbscheduler.LbSchedulerClient",
+            "lbCVMFSscheduler.lbscheduler.LbSchedulerExecuter"
+        ],
+        "version": "1.0.11"
     },
     "lbcvmfstools": {
-        "cmdline": [],
-        "modules": [
-            "pypi_placeholder"
+        "cmdline": [
+            "CVMFSDevChecker",
+            "CVMFSDevEnvKitInstaller",
+            "CVMFSDevGC",
+            "CVMFSDevManager",
+            "CVMFSGitConDDBSync",
+            "CVMFSGitCondDBCvmfsGc",
+            "CVMFSGitCondDBGitGc",
+            "CVMFSGitMirrors",
+            "CVMFSNightliesINstallTimePlotter",
+            "CVMFSNightliesInstallByProject",
+            "CVMFSNightliesRemove",
+            "CVMFSNightliesRemoveLinks",
+            "CVMFSPlotStats",
+            "LocalNightiliesInstall",
+            "SampleClient"
         ],
-        "version": "0.0.1"
+        "modules": [
+            "lbCVMFSTools",
+            "lbCVMFSTools.Audit",
+            "lbCVMFSTools.GenericClient",
+            "lbCVMFSTools.Injector",
+            "lbCVMFSTools.Scheduler",
+            "lbCVMFSTools.TaskHandlerInterface",
+            "lbCVMFSTools.TaskHandlers",
+            "lbCVMFSTools.TaskHandlers.DevPackagesGC",
+            "lbCVMFSTools.TaskHandlers.DevPackagesGC.DevPackagesGC",
+            "lbCVMFSTools.TaskHandlers.DevPackagesInstaller",
+            "lbCVMFSTools.TaskHandlers.DevPackagesInstaller.DevPackagesInstaller",
+            "lbCVMFSTools.TaskHandlers.DevPackagesInstaller.tests",
+            "lbCVMFSTools.TaskHandlers.DevPackagesInstaller.tests.TestDevPackages",
+            "lbCVMFSTools.TaskHandlers.EnvKitInstaller",
+            "lbCVMFSTools.TaskHandlers.EnvKitInstaller.EnvKitInstaller",
+            "lbCVMFSTools.TaskHandlers.EnvKitInstaller.tests",
+            "lbCVMFSTools.TaskHandlers.EnvKitInstaller.tests.TestEnvKitInstaller",
+            "lbCVMFSTools.TaskHandlers.GITCONDDBCvmfsGC",
+            "lbCVMFSTools.TaskHandlers.GITCONDDBCvmfsGC.GITCONDDBCvmfsGC",
+            "lbCVMFSTools.TaskHandlers.GITCONDDBGitGc",
+            "lbCVMFSTools.TaskHandlers.GITCONDDBGitGc.GITCONDDBGitGc",
+            "lbCVMFSTools.TaskHandlers.GITCONDDBSync",
+            "lbCVMFSTools.TaskHandlers.GITCONDDBSync.GITCONDDBSync",
+            "lbCVMFSTools.TaskHandlers.GitMirrorTask",
+            "lbCVMFSTools.TaskHandlers.GitMirrorTask.GitMirrorTask",
+            "lbCVMFSTools.TaskHandlers.GitMirrorTask.tests",
+            "lbCVMFSTools.TaskHandlers.GitMirrorTask.tests.TestGitMirror",
+            "lbCVMFSTools.TaskHandlers.LbCVMFSDevChecker",
+            "lbCVMFSTools.TaskHandlers.LbCVMFSDevChecker.LbCVMFSDevChecker",
+            "lbCVMFSTools.TaskHandlers.NightliesInstallByProjectTask",
+            "lbCVMFSTools.TaskHandlers.NightliesInstallByProjectTask.LbInfluxDBConnector",
+            "lbCVMFSTools.TaskHandlers.NightliesInstallByProjectTask.NightliesInstallByProjectTask",
+            "lbCVMFSTools.TaskHandlers.NightliesInstallByProjectTask.Utils",
+            "lbCVMFSTools.TaskHandlers.NightliesInstallByProjectTask.tests",
+            "lbCVMFSTools.TaskHandlers.NightliesInstallByProjectTask.tests.TestInstalledManager",
+            "lbCVMFSTools.TaskHandlers.NightliesInstallByProjectTask.tests.TestLinkManager",
+            "lbCVMFSTools.TaskHandlers.NightliesInstallByProjectTask.tests.TestLocalConfig",
+            "lbCVMFSTools.TaskHandlers.NightliesInstallByProjectTask.tests.TestPathManager",
+            "lbCVMFSTools.TaskHandlers.NightliesInstallTimePlotter",
+            "lbCVMFSTools.TaskHandlers.NightliesInstallTimePlotter.NightliesInstallTimePlotter",
+            "lbCVMFSTools.TaskHandlers.NightliesRemove",
+            "lbCVMFSTools.TaskHandlers.NightliesRemove.NightliesRemove",
+            "lbCVMFSTools.TaskHandlers.NightliesRemove.tests",
+            "lbCVMFSTools.TaskHandlers.NightliesRemove.tests.test_nightlies_remove",
+            "lbCVMFSTools.TaskHandlers.NightliesRemoveLinks",
+            "lbCVMFSTools.TaskHandlers.NightliesRemoveLinks.NightliesRemoveLinks",
+            "lbCVMFSTools.TaskHandlers.NightliesRemoveLinks.tests",
+            "lbCVMFSTools.TaskHandlers.PlotStats",
+            "lbCVMFSTools.TaskHandlers.PlotStats.PlotStats",
+            "lbCVMFSTools.TaskHandlers.SampleTask",
+            "lbCVMFSTools.TaskHandlers.SampleTask.SampleTask",
+            "lbCVMFSTools.TaskHandlers.SampleTask.tests",
+            "lbCVMFSTools.TaskHandlers.SampleTask.tests.TestSampleTask",
+            "lbCVMFSTools.TransactionHandlerInterface",
+            "lbCVMFSTools.TransactionHandlers",
+            "lbCVMFSTools.TransactionHandlers.CVMFSTransactionHandler",
+            "lbCVMFSTools.TransactionHandlers.CVMFSTransactionHandler.CVMFSTranscationHandler",
+            "lbCVMFSTools.TransactionHandlers.CVMFSTransactionHandler.tests",
+            "lbCVMFSTools.TransactionHandlers.CVMFSTransactionHandler.tests.TestCVMFManager",
+            "lbCVMFSTools.TransactionHandlers.CVMFSTransactionHandler.tests.TestCvmfsTransaction",
+            "lbCVMFSTools.TransactionHandlers.DefaultTransactionHandler",
+            "lbCVMFSTools.TransactionHandlers.DefaultTransactionHandler.DefaultTransactionHandler",
+            "lbCVMFSTools.TransactionHandlers.DefaultTransactionHandler.tests",
+            "lbCVMFSTools.TransactionHandlers.DefaultTransactionHandler.tests.TestDefaultTransactionHandler",
+            "lbCVMFSTools.tests",
+            "lbCVMFSTools.tests.MockLogger",
+            "lbCVMFSTools.tests.TestFrequancy",
+            "lbCVMFSTools.tests.TestInjector",
+            "lbCVMFSTools.tests.TestSceduler",
+            "lbCVMFSTools.tests.TestTransactionHandlerInterface",
+            "lbCVMFSTools.tests.TestWorkspaceManagerInterface"
+        ],
+        "version": "1.2.4"
     },
     "lbdata-load-tools": {
         "cmdline": [],
@@ -14069,18 +14250,39 @@
         "version": "0.0.9"
     },
     "lbdevmanager": {
-        "cmdline": [],
-        "modules": [
-            "pypi_placeholder"
+        "cmdline": [
+            "lbGetPackagesFromYAML",
+            "lbdevcheck"
         ],
-        "version": "0.0.1"
+        "modules": [
+            "lbdevmanager",
+            "lbdevmanager.CIManager",
+            "lbdevmanager.GitManager",
+            "lbdevmanager.LbDevManager",
+            "lbdevmanager.LbInstallManager",
+            "lbdevmanager.YamlManager",
+            "lbdevmanager.cvmfs-script"
+        ],
+        "version": "1.0.0"
     },
     "lbdevtools": {
         "cmdline": [],
         "modules": [
-            "pypi_placeholder"
+            "LbDevTools",
+            "LbDevTools.CopyrightCheck",
+            "LbDevTools.GitTools",
+            "LbDevTools.GitTools.checkout",
+            "LbDevTools.GitTools.clone_pkg",
+            "LbDevTools.GitTools.common",
+            "LbDevTools.GitTools.push",
+            "LbDevTools.GitTools.use",
+            "LbDevTools.Indexing",
+            "LbDevTools.ProjectDev",
+            "LbDevTools.ProjectInit",
+            "LbDevTools.ReleaseNotes",
+            "LbDevTools.SourceTools"
         ],
-        "version": "0.0.1"
+        "version": "0.4.3"
     },
     "lbdict": {
         "cmdline": [],
@@ -14092,9 +14294,9 @@
     "lbdiracwrappers": {
         "cmdline": [],
         "modules": [
-            "pypi_placeholder"
+            "LbDiracWrappers"
         ],
-        "version": "0.0.1"
+        "version": "0.1.0"
     },
     "lbdytang": {
         "cmdline": [],
@@ -14106,9 +14308,24 @@
     "lbenv": {
         "cmdline": [],
         "modules": [
-            "pypi_placeholder"
+            "LbEnv",
+            "LbEnv.Banner",
+            "LbEnv.Bootstrap",
+            "LbEnv.Info",
+            "LbEnv.ProjectEnv",
+            "LbEnv.ProjectEnv.LHCbDirac",
+            "LbEnv.ProjectEnv.compatibility",
+            "LbEnv.ProjectEnv.lookup",
+            "LbEnv.ProjectEnv.options",
+            "LbEnv.ProjectEnv.options_old",
+            "LbEnv.ProjectEnv.profiling",
+            "LbEnv.ProjectEnv.script",
+            "LbEnv.ProjectEnv.version",
+            "LbEnv.Utils",
+            "LbEnv.Utils.Completion",
+            "LbEnv.Utils.Temporary"
         ],
-        "version": "0.0.1"
+        "version": "0.3.3"
     },
     "lbexporters": {
         "cmdline": [],
@@ -14229,16 +14446,51 @@
     "lbmessaging": {
         "cmdline": [],
         "modules": [
-            "pypi_placeholder"
+            "lbmessaging",
+            "lbmessaging.exchanges",
+            "lbmessaging.exchanges.CommandExchange",
+            "lbmessaging.exchanges.Common",
+            "lbmessaging.exchanges.ContinuousIntegrationExchange",
+            "lbmessaging.exchanges.CvmfsConDBExchange",
+            "lbmessaging.exchanges.CvmfsDevExchange",
+            "lbmessaging.exchanges.CvmfsProdExchange",
+            "lbmessaging.exchanges.PeriodicTestsExchange",
+            "lbmessaging.exchanges.test",
+            "lbmessaging.exchanges.test.test_TTL",
+            "lbmessaging.exchanges.test.test_admin",
+            "lbmessaging.exchanges.test.test_backwards_compat",
+            "lbmessaging.exchanges.test.test_command",
+            "lbmessaging.exchanges.test.test_consumer",
+            "lbmessaging.exchanges.test.test_continuous_integration_exchange",
+            "lbmessaging.exchanges.test.test_memory",
+            "lbmessaging.exchanges.test.test_periodic_tests",
+            "lbmessaging.exchanges.test.test_priority_levels",
+            "lbmessaging.exchanges.test.test_priority_queue",
+            "lbmessaging.exchanges.test.test_resend",
+            "lbmessaging.exchanges.test.test_rpc",
+            "lbmessaging.exchanges.test.test_signal",
+            "lbmessaging.exchanges.test.test_timeout",
+            "lbmessaging.services",
+            "lbmessaging.services.CVMFSNightliesService",
+            "lbmessaging.services.Common",
+            "lbmessaging.services.LbCIService",
+            "lbmessaging.services.test",
+            "lbmessaging.services.test.test_CVMFSNightliesService",
+            "lbmessaging.services.test.test_LbCIService",
+            "lbmessaging.services.test.test_expose_in",
+            "lbmessaging.services.test.test_meta_service"
         ],
-        "version": "0.0.1"
+        "version": "1.2.1"
     },
     "lbmessagingadministration": {
-        "cmdline": [],
-        "modules": [
-            "pypi_placeholder"
+        "cmdline": [
+            "lbma"
         ],
-        "version": "0.0.1"
+        "modules": [
+            "LbMessagingAdministration",
+            "LbMessagingAdministration.LbMessagingAdministration"
+        ],
+        "version": "1.0.3"
     },
     "lbminhtts": {
         "cmdline": [],
@@ -14282,9 +14534,51 @@
     "lbnightlytools": {
         "cmdline": [],
         "modules": [
-            "pypi_placeholder"
+            "LbMsg",
+            "LbMsg.BuildMsg",
+            "LbMsg.Common",
+            "LbMsg.TestMsg",
+            "LbNightlyTools",
+            "LbNightlyTools.ArtifactsServer",
+            "LbNightlyTools.BuildLogScanner",
+            "LbNightlyTools.BuildMethods",
+            "LbNightlyTools.CheckSlotPreconditions",
+            "LbNightlyTools.CheckoutMethods",
+            "LbNightlyTools.Configuration",
+            "LbNightlyTools.GetNightlyRefs",
+            "LbNightlyTools.HTMLUtils",
+            "LbNightlyTools.LbScriptsUtils",
+            "LbNightlyTools.ProcUtils",
+            "LbNightlyTools.Scripts",
+            "LbNightlyTools.Scripts.Build",
+            "LbNightlyTools.Scripts.Checkout",
+            "LbNightlyTools.Scripts.CollectBuildLogs",
+            "LbNightlyTools.Scripts.Common",
+            "LbNightlyTools.Scripts.EnabledSlots",
+            "LbNightlyTools.Scripts.Index",
+            "LbNightlyTools.Scripts.Install",
+            "LbNightlyTools.Scripts.Preconditions",
+            "LbNightlyTools.Scripts.Release",
+            "LbNightlyTools.Scripts.Test",
+            "LbNightlyTools.Utils",
+            "LbPR",
+            "LbPR.LbPRJobManager",
+            "LbPeriodicTools",
+            "LbPeriodicTools.LbPeriodicStarter",
+            "LbPeriodicTools.LbPeriodicTest",
+            "LbPeriodicTools.LbPeriodicTestSchedule",
+            "LbRPMTools",
+            "LbRPMTools.LHCbCompatSpecBuilder",
+            "LbRPMTools.LHCbExternalsSpecBuilder",
+            "LbRPMTools.LHCbGenericSpecBuilder",
+            "LbRPMTools.LHCbLbScriptsSpecBuilder",
+            "LbRPMTools.LHCbMetaSpecBuilder",
+            "LbRPMTools.LHCbRPMSpecBuilder",
+            "LbRPMTools.PackageSlot",
+            "LbTools",
+            "LbTools.Manifest"
         ],
-        "version": "0.0.1"
+        "version": "0.3.0"
     },
     "lbp-print": {
         "cmdline": [],
@@ -14317,9 +14611,11 @@
     "lbplatformutils": {
         "cmdline": [],
         "modules": [
-            "pypi_placeholder"
+            "LbPlatformUtils",
+            "LbPlatformUtils.describe",
+            "LbPlatformUtils.inspect"
         ],
-        "version": "0.0.1"
+        "version": "2.1.0"
     },
     "lbr-context": {
         "cmdline": [],
@@ -14402,9 +14698,9 @@
     "lbscriptslegacy": {
         "cmdline": [],
         "modules": [
-            "pypi_placeholder"
+            "LbScriptsLegacy"
         ],
-        "version": "0.0.1"
+        "version": "0.1.2"
     },
     "lbsnstructure": {
         "cmdline": [],
@@ -14426,16 +14722,42 @@
     "lbsoftconfdb": {
         "cmdline": [],
         "modules": [
-            "pypi_placeholder"
+            "LbSoftConfDB",
+            "LbSoftConfDB.AppImporter",
+            "LbSoftConfDB.LbSdbAddPlatform",
+            "LbSoftConfDB.LbSdbBuildTool",
+            "LbSoftConfDB.LbSdbDeleteVersion",
+            "LbSoftConfDB.LbSdbDumpProjects",
+            "LbSoftConfDB.LbSdbGenerateVersionJSON",
+            "LbSoftConfDB.LbSdbImport",
+            "LbSoftConfDB.LbSdbQuery",
+            "LbSoftConfDB.LbSdbRelease",
+            "LbSoftConfDB.LbSdbSetPVProperties",
+            "LbSoftConfDB.LbSdbSetProjectProperties",
+            "LbSoftConfDB.SoftConfDB",
+            "LbSoftConfDB.SoftConfDBRO"
         ],
-        "version": "0.0.1"
+        "version": "0.0.4"
     },
     "lbsoftconfdb2clients": {
         "cmdline": [],
         "modules": [
-            "pypi_placeholder"
+            "LbSoftConfDb2Clients",
+            "LbSoftConfDb2Clients.AppImporter",
+            "LbSoftConfDb2Clients.GenericClient",
+            "LbSoftConfDb2Clients.LbSdbAddPlatform",
+            "LbSoftConfDb2Clients.LbSdbBuildTool",
+            "LbSoftConfDb2Clients.LbSdbDeleteVersion",
+            "LbSoftConfDb2Clients.LbSdbDumpProjects",
+            "LbSoftConfDb2Clients.LbSdbGenerateVersionJSON",
+            "LbSoftConfDb2Clients.LbSdbImport",
+            "LbSoftConfDb2Clients.LbSdbQuery",
+            "LbSoftConfDb2Clients.LbSdbRelease",
+            "LbSoftConfDb2Clients.LbSdbSetPVProperties",
+            "LbSoftConfDb2Clients.LbSdbSetProjectProperties",
+            "LbSoftConfDb2Clients.SoftConfDB"
         ],
-        "version": "0.0.1"
+        "version": "0.0.5"
     },
     "lbsoftconfdb2server": {
         "cmdline": [],
@@ -15701,6 +16023,9 @@
             "banzai.setup_package",
             "banzai.stages",
             "banzai.tests",
+            "banzai.tests.bias_utils",
+            "banzai.tests.dark_utils",
+            "banzai.tests.flat_utils",
             "banzai.tests.qc_stage_integration_tests",
             "banzai.tests.setup_package",
             "banzai.tests.test_array_utils",
@@ -15718,6 +16043,7 @@
             "banzai.tests.test_end_to_end",
             "banzai.tests.test_fits_utils",
             "banzai.tests.test_flat_comparer",
+            "banzai.tests.test_flat_maker",
             "banzai.tests.test_flat_normalizer",
             "banzai.tests.test_gain_normalizer",
             "banzai.tests.test_header_checker",
@@ -15740,6 +16066,7 @@
             "banzai.utils",
             "banzai.utils.array_utils",
             "banzai.utils.date_utils",
+            "banzai.utils.db_migration",
             "banzai.utils.file_utils",
             "banzai.utils.fits_utils",
             "banzai.utils.image_utils",
@@ -15748,7 +16075,7 @@
             "banzai.utils.stats",
             "banzai.version"
         ],
-        "version": "0.14.0"
+        "version": "0.17.1"
     },
     "lco-bpm-maker": {
         "cmdline": [],
@@ -30241,17 +30568,8 @@
     },
     "libeospy": {
         "cmdline": [],
-        "modules": [
-            "eospy",
-            "eospy.cleos",
-            "eospy.command_line",
-            "eospy.dynamic_url",
-            "eospy.keys",
-            "eospy.schema",
-            "eospy.types",
-            "eospy.utils"
-        ],
-        "version": "1.1.8"
+        "modules": [],
+        "version": "1.1.10"
     },
     "libepub": {
         "cmdline": [],
@@ -31247,7 +31565,7 @@
             "libknot",
             "libknot.control"
         ],
-        "version": "2.7.5"
+        "version": "2.7.6"
     },
     "libkural": {
         "cmdline": [],
@@ -33224,7 +33542,7 @@
             "libres.tests.test_types",
             "libres.tests.test_utils"
         ],
-        "version": "0.5.0"
+        "version": "0.5.1"
     },
     "libreshop": {
         "cmdline": [],
@@ -37095,7 +37413,7 @@
             "photons_transport.target.waiter",
             "photons_transport.target.writer"
         ],
-        "version": "0.9.5"
+        "version": "0.10.0"
     },
     "lifx-photons-messages-generator": {
         "cmdline": [],
@@ -37111,7 +37429,7 @@
             "photons_messages_generator.src",
             "photons_messages_generator.test_helpers"
         ],
-        "version": "0.5.1"
+        "version": "0.5.2"
     },
     "lifx-sdk": {
         "cmdline": [],
@@ -38166,48 +38484,55 @@
     "lightnovel-crawler": {
         "cmdline": [],
         "modules": [
-            "lightnovel_crawler",
-            "lightnovel_crawler.assets",
-            "lightnovel_crawler.assets.html_style",
-            "lightnovel_crawler.assets.version",
-            "lightnovel_crawler.binders",
-            "lightnovel_crawler.binders.epub",
-            "lightnovel_crawler.binders.html",
-            "lightnovel_crawler.binders.mobi",
-            "lightnovel_crawler.binders.text",
-            "lightnovel_crawler.core",
-            "lightnovel_crawler.core.app",
-            "lightnovel_crawler.core.arguments",
-            "lightnovel_crawler.core.display",
-            "lightnovel_crawler.core.downloader",
-            "lightnovel_crawler.core.icons",
-            "lightnovel_crawler.core.novel_info",
-            "lightnovel_crawler.core.prompts",
-            "lightnovel_crawler.spiders",
-            "lightnovel_crawler.spiders._sample",
-            "lightnovel_crawler.spiders.boxnovel",
-            "lightnovel_crawler.spiders.fullnovellive",
-            "lightnovel_crawler.spiders.idqidian",
-            "lightnovel_crawler.spiders.lnindo",
-            "lightnovel_crawler.spiders.lnmtl",
-            "lightnovel_crawler.spiders.novelall",
-            "lightnovel_crawler.spiders.novelplanet",
-            "lightnovel_crawler.spiders.novelspread",
-            "lightnovel_crawler.spiders.readln",
-            "lightnovel_crawler.spiders.romanticlb",
-            "lightnovel_crawler.spiders.webnonline",
-            "lightnovel_crawler.spiders.webnovel",
-            "lightnovel_crawler.spiders.wuxiaco",
-            "lightnovel_crawler.spiders.wuxiacom",
-            "lightnovel_crawler.spiders.wuxiaonline",
-            "lightnovel_crawler.utils",
-            "lightnovel_crawler.utils.cfscrape",
-            "lightnovel_crawler.utils.crawler",
-            "lightnovel_crawler.utils.kindlegen_download",
-            "lightnovel_crawler.utils.update_checker",
-            "lightnovel_crawler.utils.validators"
+            "lncrawl",
+            "lncrawl.assets",
+            "lncrawl.assets.html_style",
+            "lncrawl.assets.icons",
+            "lncrawl.assets.version",
+            "lncrawl.binders",
+            "lncrawl.binders.docx",
+            "lncrawl.binders.epub",
+            "lncrawl.binders.html",
+            "lncrawl.binders.mobi",
+            "lncrawl.binders.pdf",
+            "lncrawl.binders.text",
+            "lncrawl.bots",
+            "lncrawl.bots._sample",
+            "lncrawl.bots.console",
+            "lncrawl.bots.discord",
+            "lncrawl.bots.telegram",
+            "lncrawl.core",
+            "lncrawl.core.app",
+            "lncrawl.core.arguments",
+            "lncrawl.core.display",
+            "lncrawl.core.downloader",
+            "lncrawl.core.novel_info",
+            "lncrawl.core.translator",
+            "lncrawl.spiders",
+            "lncrawl.spiders._sample",
+            "lncrawl.spiders.boxnovel",
+            "lncrawl.spiders.fullnovellive",
+            "lncrawl.spiders.idqidian",
+            "lncrawl.spiders.lnindo",
+            "lncrawl.spiders.lnmtl",
+            "lncrawl.spiders.novelall",
+            "lncrawl.spiders.novelplanet",
+            "lncrawl.spiders.novelspread",
+            "lncrawl.spiders.readln",
+            "lncrawl.spiders.romanticlb",
+            "lncrawl.spiders.webnonline",
+            "lncrawl.spiders.webnovel",
+            "lncrawl.spiders.wuxiaco",
+            "lncrawl.spiders.wuxiacom",
+            "lncrawl.spiders.wuxiaonline",
+            "lncrawl.utils",
+            "lncrawl.utils.cfscrape",
+            "lncrawl.utils.crawler",
+            "lncrawl.utils.kindlegen_download",
+            "lncrawl.utils.update_checker",
+            "lncrawl.utils.validators"
         ],
-        "version": "2.6.6"
+        "version": "2.7.1"
     },
     "lightnovelapi": {
         "cmdline": [],
@@ -41817,24 +42142,26 @@
             "linguister",
             "linguister.audio",
             "linguister.config",
+            "linguister.const",
             "linguister.errout",
             "linguister.exceptions",
             "linguister.info",
+            "linguister.main",
             "linguister.sdk",
+            "linguister.sdk.base",
+            "linguister.sdk.bing",
+            "linguister.sdk.google",
+            "linguister.sdk.iciba",
+            "linguister.sdk.youdao",
+            "linguister.utils",
             "tests",
             "tests._test_play",
             "tests.const",
-            "tests.play",
             "tests.test_main",
             "tests.test_out",
-            "tests.test_sdk",
-            "translator",
-            "translator.audio",
-            "translator.config",
-            "translator.sdk",
-            "translator.sysout"
+            "tests.test_sdk"
         ],
-        "version": "0.0.6"
+        "version": "0.1.1"
     },
     "linguistica": {
         "cmdline": [],
@@ -46169,7 +46496,7 @@
             "lintreview.tools.yamllint",
             "lintreview.web"
         ],
-        "version": "2.12.0"
+        "version": "2.12.1"
     },
     "lintswitch": {
         "cmdline": [],
@@ -46268,6 +46595,17 @@
             "linux_aio.raw.syscall"
         ],
         "version": "0.3.0"
+    },
+    "linux-aio-bind": {
+        "cmdline": [],
+        "modules": [
+            "linux_aio_bind",
+            "linux_aio_bind.aio",
+            "linux_aio_bind.error",
+            "linux_aio_bind.iocb",
+            "linux_aio_bind.syscall"
+        ],
+        "version": "1.0.0"
     },
     "linux-daemon": {
         "cmdline": [],
@@ -62849,6 +63187,13 @@
         "modules": [],
         "version": ""
     },
+    "loopers": {
+        "cmdline": [],
+        "modules": [
+            "loopers"
+        ],
+        "version": "1.1"
+    },
     "loopfc": {
         "cmdline": [],
         "modules": [],
@@ -66747,9 +67092,10 @@
             "lsm_extras",
             "lsm_extras.base",
             "lsm_extras.dict",
-            "lsm_extras.shelves"
+            "lsm_extras.shelves",
+            "lsm_extras.tree"
         ],
-        "version": "0.2"
+        "version": "0.4.0"
     },
     "lsm303d": {
         "cmdline": [],
@@ -70128,16 +70474,18 @@
         "modules": [
             "lunas",
             "lunas.batch",
-            "lunas.interface",
             "lunas.iterator",
-            "lunas.reader",
+            "lunas.persistable",
             "lunas.readers",
+            "lunas.readers.base",
+            "lunas.readers.nested",
+            "lunas.readers.range",
             "lunas.readers.text",
             "lunas.tests",
             "lunas.tests.test",
             "lunas.utils"
         ],
-        "version": "0.2.0"
+        "version": "0.2.2"
     },
     "lunasync": {
         "cmdline": [],
@@ -70753,7 +71101,7 @@
             "lusid.models.versioned_resource_list_of_transaction",
             "lusid.version"
         ],
-        "version": "0.9.92"
+        "version": "0.9.94"
     },
     "lusid-tr-sdk": {
         "cmdline": [],
