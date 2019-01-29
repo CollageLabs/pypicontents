@@ -2013,6 +2013,7 @@
             "habu.cli.cmd_karma_bulk",
             "habu.cli.cmd_land",
             "habu.cli.cmd_nc",
+            "habu.cli.cmd_nmap_excluded",
             "habu.cli.cmd_nmap_open",
             "habu.cli.cmd_nmap_ports",
             "habu.cli.cmd_ping",
@@ -2065,7 +2066,7 @@
             "habu.lib.web_tech",
             "habu.lib.xor"
         ],
-        "version": "0.0.98"
+        "version": "0.0.99"
     },
     "haburas": {
         "cmdline": [],
@@ -6075,7 +6076,7 @@
             "halolib.util",
             "halolib.views"
         ],
-        "version": "0.14.8"
+        "version": "0.14.9"
     },
     "halonadm": {
         "cmdline": [],
@@ -9184,7 +9185,7 @@
             "hapic.type",
             "hapic.util"
         ],
-        "version": "0.71"
+        "version": "0.72"
     },
     "hapic-apispec": {
         "cmdline": [],
@@ -23070,50 +23071,44 @@
         "cmdline": [],
         "modules": [
             "hera",
-            "hera.assembler",
-            "hera.config",
+            "hera.checker",
             "hera.data",
             "hera.debugger",
-            "hera.exceptions",
+            "hera.debugger.debugger",
+            "hera.debugger.minilanguage",
+            "hera.debugger.shell",
             "hera.loader",
             "hera.main",
+            "hera.op",
             "hera.parser",
-            "hera.preprocessor",
-            "hera.symtab",
-            "hera.typechecker",
+            "hera.stdlib",
             "hera.utils",
             "hera.vm",
             "test",
-            "test.test_assembler",
-            "test.test_config",
+            "test.test_cmd",
             "test.test_debugger",
-            "test.test_integration",
-            "test.test_integration.test_cs240",
-            "test.test_integration.test_error",
-            "test.test_integration.test_include",
-            "test.test_integration.test_manual",
-            "test.test_integration.test_simple",
-            "test.test_main",
-            "test.test_op",
-            "test.test_op.test_arithmetic_logic",
-            "test.test_op.test_branch_call_return",
-            "test.test_op.test_data_statements",
-            "test.test_op.test_debug_ops",
-            "test.test_op.test_debugging",
-            "test.test_op.test_flag",
-            "test.test_op.test_interrupt",
-            "test.test_op.test_load_store",
-            "test.test_op.test_misc",
-            "test.test_op.test_set_inc_dec",
-            "test.test_op.test_shift",
-            "test.test_parser",
+            "test.test_error",
+            "test.test_exec",
+            "test.test_exec.test_arithmetic_logic",
+            "test.test_exec.test_branch_call_return",
+            "test.test_exec.test_data_statements",
+            "test.test_exec.test_debug_ops",
+            "test.test_exec.test_flag",
+            "test.test_exec.test_interrupt",
+            "test.test_exec.test_load_store",
+            "test.test_exec.test_set_inc_dec",
+            "test.test_exec.test_shift",
+            "test.test_exec.utils",
+            "test.test_from_cs240",
+            "test.test_from_cs350",
+            "test.test_from_manual",
+            "test.test_include",
+            "test.test_integ_simple",
             "test.test_preprocessor",
-            "test.test_symtab",
-            "test.test_typechecker",
-            "test.test_utils",
-            "test.test_vm"
+            "test.test_warning",
+            "test.utils"
         ],
-        "version": "0.4.0"
+        "version": "0.5.0"
     },
     "heracles": {
         "cmdline": [],
@@ -23962,7 +23957,7 @@
             "heroku_env.heroku_env",
             "heroku_env.param_types"
         ],
-        "version": "0.5.1"
+        "version": "0.5.2"
     },
     "heroku-git-fs": {
         "cmdline": [],
@@ -26095,7 +26090,7 @@
             "hfpy.strategy",
             "hfpy.structs"
         ],
-        "version": "0.1.5.4"
+        "version": "0.1.5.5"
     },
     "hfpy2": {
         "cmdline": [],
@@ -27881,7 +27876,7 @@
             "hicstuff.version",
             "hicstuff.view"
         ],
-        "version": "0.2.1"
+        "version": "0.2.3"
     },
     "hictornadio2": {
         "cmdline": [],
@@ -34753,7 +34748,7 @@
             "holoviews.util.settings",
             "holoviews.util.transform"
         ],
-        "version": "1.11.1"
+        "version": "1.11.2"
     },
     "holster": {
         "cmdline": [],
@@ -38421,7 +38416,7 @@
             "triedict",
             "triedict.test_"
         ],
-        "version": "0.4.2"
+        "version": "0.4.3"
     },
     "horizon": {
         "cmdline": [],
@@ -41140,7 +41135,7 @@
         "modules": [
             "hpfrec"
         ],
-        "version": "0.2.2.12"
+        "version": "0.2.2.13"
     },
     "hpicsp": {
         "cmdline": [],
@@ -45271,8 +45266,10 @@
     },
     "httmock": {
         "cmdline": [],
-        "modules": [],
-        "version": "1.2.6"
+        "modules": [
+            "httmock"
+        ],
+        "version": "1.3.0"
     },
     "http": {
         "cmdline": [],
@@ -46611,6 +46608,24 @@
             "httpproxy.settings"
         ],
         "version": "0.5"
+    },
+    "httppy": {
+        "cmdline": [],
+        "modules": [
+            "HttpPy",
+            "HttpPy.Arguments",
+            "HttpPy.Exceptions",
+            "HttpPy.Exceptions.KeyValDefinition",
+            "HttpPy.Exceptions.RequestDefinition",
+            "HttpPy.Logger",
+            "HttpPy.Logger.generics",
+            "HttpPy.Logger.request",
+            "HttpPy.ParseRequest",
+            "HttpPy.Request",
+            "HttpPy.decorators",
+            "HttpPy.decorators.timming"
+        ],
+        "version": "0.0.1"
     },
     "httpreplay": {
         "cmdline": [],
@@ -50527,7 +50542,7 @@
             "humilis_dynamodb.humilis_dynamodb",
             "humilis_dynamodb.plugin"
         ],
-        "version": "0.1.8"
+        "version": "0.2.0"
     },
     "humilis-elasticache": {
         "cmdline": [],
@@ -52029,6 +52044,7 @@
             "hvplot.converter",
             "hvplot.dask",
             "hvplot.intake",
+            "hvplot.networkx",
             "hvplot.pandas",
             "hvplot.sample_data",
             "hvplot.streamz",
@@ -52036,14 +52052,16 @@
             "hvplot.tests.testcharts",
             "hvplot.tests.testdefaults",
             "hvplot.tests.testgeo",
+            "hvplot.tests.testgridplots",
             "hvplot.tests.testoperations",
             "hvplot.tests.testoverrides",
             "hvplot.tests.testpatch",
             "hvplot.tests.testutil",
             "hvplot.util",
+            "hvplot.utilities",
             "hvplot.xarray"
         ],
-        "version": "0.3.0"
+        "version": "0.4.0"
     },
     "hvsi": {
         "cmdline": [],
@@ -57956,9 +57974,10 @@
             "hyperspace.affordances",
             "hyperspace.html",
             "hyperspace.hydra",
+            "hyperspace.rdf",
             "hyperspace.turtle"
         ],
-        "version": "0.1.0"
+        "version": "0.2.0"
     },
     "hyperspaces": {
         "cmdline": [],
@@ -58929,7 +58948,7 @@
             "hyperwallet.utils.apiclient",
             "hyperwallet.utils.encryption"
         ],
-        "version": "1.2.1"
+        "version": "1.3.0"
     },
     "hyphe-traph": {
         "cmdline": [],
