@@ -2462,6 +2462,7 @@
             "ibm_ai_openscale.base_classes.client.client",
             "ibm_ai_openscale.base_classes.clients",
             "ibm_ai_openscale.base_classes.clients.client",
+            "ibm_ai_openscale.base_classes.clients.client_with_ml_gateway_support",
             "ibm_ai_openscale.base_classes.clients.known_service_client",
             "ibm_ai_openscale.base_classes.configuration",
             "ibm_ai_openscale.base_classes.configuration.explainability",
@@ -2552,7 +2553,14 @@
             "tests.assertions",
             "tests.csv_to_payload",
             "tests.datasets_classes",
-            "tests.fixtures",
+            "tests.deployments",
+            "tests.deployments.azure",
+            "tests.deployments.deployment_template",
+            "tests.deployments.sagemaker",
+            "tests.deployments.wml",
+            "tests.deployments.wml.keras",
+            "tests.deployments.wml.spark",
+            "tests.deployments.wml.xgboost",
             "tests.install_requirements",
             "tests.models",
             "tests.models.AbstractModel",
@@ -2567,17 +2575,21 @@
             "tests.models.tensorflow",
             "tests.models.xgboost",
             "tests.models_preparation",
+            "tests.nonfunction",
+            "tests.nonfunction.common_steps",
+            "tests.nonfunction.fixtures",
+            "tests.nonfunction.test_azure_engine",
+            "tests.nonfunction.test_gateway_response_time",
             "tests.preparation_and_cleaning",
             "tests.svt",
             "tests.svt._test_wml_keras_regression_boston_quality_monitoring_with_feedback",
             "tests.svt.test_azure_discovery_response_time",
+            "tests.svt.test_azure_native_binary_credit-risk_explainability_and_fairness",
             "tests.svt.test_azure_native_binary_credit-risk_performance_and_quality_monitoring",
             "tests.svt.test_azure_native_multiclass_product-line_explainability",
             "tests.svt.test_azure_native_multiclass_product-line_fairness_monitoring",
-            "tests.svt.test_azure_native_multiclass_product-line_performance_monitoring",
-            "tests.svt.test_azure_native_multiclass_product-line_quality_monitoring",
-            "tests.svt.test_azure_native_regression_product-line_performance_monitoring",
-            "tests.svt.test_azure_native_regression_product-line_quality_monitoring",
+            "tests.svt.test_azure_native_multiclass_product-line_performance_and_quality_monitoring",
+            "tests.svt.test_azure_native_regression_product-line_performance_and_quality_monitoring",
             "tests.svt.test_azure_scikit_multiclass_iris_performance_monitoring",
             "tests.svt.test_azure_scikit_multiclass_iris_quality_monitoring",
             "tests.svt.test_custom_discovery_response_time",
@@ -2586,19 +2598,28 @@
             "tests.svt.test_custom_spark_multiclass_cars4u_performance_and_quality_monitoring",
             "tests.svt.test_datamart_operations",
             "tests.svt.test_internal_db",
-            "tests.svt.test_limitation",
+            "tests.svt.test_limitation_aios",
+            "tests.svt.test_limitation_wml",
+            "tests.svt.test_payload_logging_multiple_deployments",
             "tests.svt.test_sagemaker_discovery_response_time",
             "tests.svt.test_sagemaker_native_binary_breast-cancer_explainability",
             "tests.svt.test_sagemaker_native_binary_breast-cancer_fairness_monitoring",
             "tests.svt.test_sagemaker_native_binary_breast-cancer_performance_and_quality_monitoring",
-            "tests.svt.test_sagemaker_native_multiclass_breast-cancer_performance_and_quality_monitoring",
-            "tests.svt.test_sagemaker_native_regression_breast-cancer_performance_and_quality_monitoring",
+            "tests.svt.test_sagemaker_native_binary_credit-risk_all_monitors",
+            "tests.svt.test_sagemaker_native_multiclass_breast-cancer_all_monitors",
+            "tests.svt.test_spss_spss_binary_credit-risk-mlogistic_performance_and_quality_monitoring",
+            "tests.svt.test_spss_spss_binary_credit_risk_performance_and_quality_monitoring",
+            "tests.svt.test_spss_spss_multiclass_heart-drug-classes_performance_and_quality_monitoring",
+            "tests.svt.test_spss_spss_multiclass_heart-drug-svm_performance_and_quality_monitoring",
+            "tests.svt.test_spss_spss_multiclass_heart-drug_performance_and_quality_monitoring",
+            "tests.svt.test_spss_spss_regression_house-prices_performance_and_quality_monitoring",
+            "tests.svt.test_subscription_from_configuration",
             "tests.svt.test_update_deployments_and_databases",
             "tests.svt.test_wml_discovery_response_time",
             "tests.svt.test_wml_function_performance_and_quality_monitoring",
-            "tests.svt.test_wml_keras_multiclass_mnist_payload_logging_multiple_deployments",
             "tests.svt.test_wml_keras_multiclass_mnist_performance",
             "tests.svt.test_wml_scikit_multiclass_digits_performance_and_quality_monitoring",
+            "tests.svt.test_wml_spark_binary_credit-risk_explainability_monitoring",
             "tests.svt.test_wml_spark_binary_credit-risk_fairness_monitoring",
             "tests.svt.test_wml_spark_binary_credit-risk_performance_and_quality_monitoring",
             "tests.svt.test_wml_spark_multiclass_drug_explainability",
@@ -2608,12 +2629,10 @@
             "tests.svt.test_wml_spark_multiclass_gosales_explainability",
             "tests.svt.test_wml_spark_multiclass_gosales_fairness_monitoring",
             "tests.svt.test_wml_spark_multiclass_gosales_performance_monitoring",
-            "tests.svt.test_wml_spark_regression_customer-satisfaction_explainability",
-            "tests.svt.test_wml_spark_regression_customer-satisfaction_performance_monitoring",
+            "tests.svt.test_wml_spark_regression_customer-satisfaction_performance_quality_and_explainability_monitoring",
             "tests.svt.test_wml_spss_customer-satisfaction_performance_and_quality_monitoring",
             "tests.svt.test_wml_tensorflow_binary_performance_monitoring",
-            "tests.svt.test_wml_xgboost_agaricus_performance_and_quality_monitoring",
-            "tests.test_base",
+            "tests.svt.test_wml_xgboost_binary_agaricus_performance_and_quality_monitoring",
             "tests.thirdparty",
             "tests.thirdparty.Engine",
             "tests.thirdparty.custom",
@@ -2621,7 +2640,7 @@
             "tests.unittests",
             "tests.unittests.test_table"
         ],
-        "version": "1.0.429"
+        "version": "1.0.456"
     },
     "ibm-ai-openscale-cli": {
         "cmdline": [],
@@ -8952,7 +8971,7 @@
             "iduoliao_ml.recommend",
             "iduoliao_ml.test"
         ],
-        "version": "1.0.216"
+        "version": "1.0.223"
     },
     "iduoliao-ml-dev": {
         "cmdline": [],
@@ -10315,7 +10334,7 @@
             "ifpd.stats",
             "ifpd.web"
         ],
-        "version": "2.0.0.post1"
+        "version": "2.0.0.post2"
     },
     "ifrit": {
         "cmdline": [],
@@ -12396,6 +12415,11 @@
         ],
         "version": "0.2.5"
     },
+    "iktos-rdkit": {
+        "cmdline": [],
+        "modules": [],
+        "version": ""
+    },
     "ikwi": {
         "cmdline": [
             "ikwi"
@@ -14204,6 +14228,14 @@
             "sketchingdev.image_to_ascii",
             "sketchingdev.image_to_ascii.centre",
             "sketchingdev.image_to_ascii.converter"
+        ],
+        "version": "0.0.1"
+    },
+    "image-toolbox": {
+        "cmdline": [],
+        "modules": [
+            "image_toolbox",
+            "image_toolbox.resize"
         ],
         "version": "0.0.1"
     },
@@ -16201,7 +16233,7 @@
             "imaplibext",
             "imaplibext._imaplibext"
         ],
-        "version": "0.7.5"
+        "version": "0.7.6"
     },
     "imapnotify": {
         "cmdline": [],
@@ -16239,7 +16271,7 @@
             "imapy.structures",
             "imapy.utils"
         ],
-        "version": "1.1.1"
+        "version": "1.2.0"
     },
     "imathics": {
         "cmdline": [],
@@ -17525,7 +17557,7 @@
     "imgqa": {
         "cmdline": [],
         "modules": [],
-        "version": "0.3.0"
+        "version": "0.3.1"
     },
     "imgroi": {
         "cmdline": [],
@@ -18044,7 +18076,7 @@
             "imgviz.tile",
             "imgviz.trajectory"
         ],
-        "version": "0.2.4"
+        "version": "0.2.5"
     },
     "imhdsk": {
         "cmdline": [],
@@ -21486,9 +21518,10 @@
     "imutil": {
         "cmdline": [],
         "modules": [
-            "imutil"
+            "imutil",
+            "imutil.server"
         ],
-        "version": "0.1.22"
+        "version": "0.1.23"
     },
     "imutils": {
         "cmdline": [
@@ -23163,6 +23196,14 @@
     "incuna-test-utils": {
         "cmdline": [],
         "modules": [
+            "complete_migrations",
+            "complete_migrations.migrations",
+            "complete_migrations.migrations.0001_initial",
+            "complete_migrations.models",
+            "factory_tests",
+            "factory_tests.test_feincms_page",
+            "factory_tests.test_images",
+            "factory_tests.test_user",
             "incuna_test_utils",
             "incuna_test_utils.compat",
             "incuna_test_utils.factories",
@@ -23179,9 +23220,20 @@
             "incuna_test_utils.testcases.integration",
             "incuna_test_utils.testcases.request",
             "incuna_test_utils.testcases.urls",
-            "incuna_test_utils.utils"
+            "incuna_test_utils.utils",
+            "partial_migrations",
+            "partial_migrations.migrations",
+            "partial_migrations.migrations.0001_initial",
+            "partial_migrations.models",
+            "testcases",
+            "testcases.test_admin_request",
+            "testcases.test_api_examples",
+            "testcases.test_api_request",
+            "testcases.test_integration",
+            "testcases.test_request",
+            "testcases.test_urls"
         ],
-        "version": "6.6.0"
+        "version": "7.0.0"
     },
     "incuna-videos": {
         "cmdline": [],
@@ -36503,7 +36555,7 @@
             "infosystem.tests.functional.test_roles",
             "infosystem.tests.functional.test_users"
         ],
-        "version": "0.1.50"
+        "version": "0.1.51"
     },
     "infotags": {
         "cmdline": [],
@@ -41292,7 +41344,7 @@
             "inspire_dojson.utils",
             "inspire_dojson.utils.geo"
         ],
-        "version": "61.1.4"
+        "version": "61.1.5"
     },
     "inspire-json-merger": {
         "cmdline": [],
@@ -41607,7 +41659,7 @@
             "tests.test_bot_support",
             "tests.test_variables"
         ],
-        "version": "0.11.0"
+        "version": "0.13.0"
     },
     "instabot-py": {
         "cmdline": [],
@@ -45097,6 +45149,7 @@
             "interkamen_career.modules.administration.logger_cfg",
             "interkamen_career.modules.administration.users",
             "interkamen_career.modules.career_status",
+            "interkamen_career.modules.count_workers_salary",
             "interkamen_career.modules.drill_instrument_report",
             "interkamen_career.modules.drill_passports",
             "interkamen_career.modules.main_career_report",
@@ -45116,7 +45169,7 @@
             "interkamen_career.modules.workers_module",
             "interkamen_career.modules.workers_salary"
         ],
-        "version": "1.17.0"
+        "version": "1.18.0"
     },
     "interlap": {
         "cmdline": [],
@@ -45506,6 +45559,8 @@
             "intermake.helpers.help_text",
             "intermake.helpers.printing",
             "intermake.helpers.subprocess_helper",
+            "intermake_debug",
+            "intermake_debug.commands",
             "intermake_qt",
             "intermake_qt.extensions",
             "intermake_qt.extensions.gui_controller",
@@ -45527,7 +45582,7 @@
             "intermake_test",
             "intermake_test.commands"
         ],
-        "version": "1.0.0.76"
+        "version": "1.0.0.77"
     },
     "interminal": {
         "cmdline": [
@@ -49213,7 +49268,7 @@
             "invirtualenv_plugins.rpm_scripts.post_install",
             "invirtualenv_plugins.rpm_scripts.pre_uninstall"
         ],
-        "version": "19.1.0"
+        "version": "19.1.2"
     },
     "invisible-ink": {
         "cmdline": [],
@@ -51728,7 +51783,7 @@
             "iopipe.signer",
             "iopipe.system"
         ],
-        "version": "1.7.12"
+        "version": "1.7.13"
     },
     "iopipe-payload": {
         "cmdline": [],
@@ -52459,7 +52514,7 @@
             "iotedgehubdev.telemetry_upload",
             "iotedgehubdev.utils"
         ],
-        "version": "0.6.0"
+        "version": "0.7.0"
     },
     "iotest": {
         "cmdline": [],
@@ -54802,7 +54857,7 @@
         "modules": [
             "ipdbugger"
         ],
-        "version": "2.0.3"
+        "version": "2.1.0"
     },
     "ipdetailscache": {
         "cmdline": [],
@@ -55028,7 +55083,7 @@
             "ipfml/iqa",
             "ipfml/iqa.fr"
         ],
-        "version": "0.3.1"
+        "version": "0.3.2"
     },
     "ipfn": {
         "cmdline": [],
@@ -55187,6 +55242,19 @@
             "ipgw.test"
         ],
         "version": "1.1.2"
+    },
+    "iphigen": {
+        "cmdline": [],
+        "modules": [
+            "iphigen",
+            "iphigen.config",
+            "iphigen.core",
+            "iphigen.iphigen_2d",
+            "iphigen.iphigen_nifti",
+            "iphigen.ui",
+            "iphigen.utils"
+        ],
+        "version": "1.0.0"
     },
     "iphone-checker": {
         "cmdline": [],
@@ -56802,9 +56870,10 @@
     "iptoolsjj": {
         "cmdline": [],
         "modules": [
-            "iptoolsjj"
+            "iptoolsjj",
+            "iptoolsjj.iptoolsjj"
         ],
-        "version": "1.2.2"
+        "version": "1.2.3"
     },
     "iptv": {
         "cmdline": [],
@@ -57767,60 +57836,22 @@
         "cmdline": [],
         "modules": [
             "ipypublish",
+            "ipypublish.convert",
+            "ipypublish.convert.config_manager",
+            "ipypublish.convert.main",
             "ipypublish.export_plugins",
-            "ipypublish.export_plugins.html_ipypublish_all",
-            "ipypublish.export_plugins.html_ipypublish_main",
-            "ipypublish.export_plugins.html_ipypublish_nocode",
-            "ipypublish.export_plugins.html_standard",
-            "ipypublish.export_plugins.latex_ipypublish_all",
-            "ipypublish.export_plugins.latex_ipypublish_main",
-            "ipypublish.export_plugins.latex_ipypublish_nocode",
-            "ipypublish.export_plugins.latex_standard_article",
-            "ipypublish.export_plugins.nb_ipypublish_all",
-            "ipypublish.export_plugins.nb_ipypublish_nocode",
-            "ipypublish.export_plugins.slides_ipypublish_all",
-            "ipypublish.export_plugins.slides_ipypublish_main",
-            "ipypublish.export_plugins.slides_ipypublish_nocode",
-            "ipypublish.export_plugins.slides_mkdown_all",
-            "ipypublish.export_plugins.slides_mkdown_main",
-            "ipypublish.export_plugins.slides_mkdown_nocode",
-            "ipypublish.export_plugins.slides_standard",
             "ipypublish.filters",
             "ipypublish.filters.ansi_listings",
             "ipypublish.filters.filters",
+            "ipypublish.filters.meta_to_yaml",
             "ipypublish.filters.replace_string",
-            "ipypublish.html",
-            "ipypublish.html.create_tpl",
-            "ipypublish.html.ipypublish",
-            "ipypublish.html.ipypublish.flexbox_css",
-            "ipypublish.html.ipypublish.latex_doc",
-            "ipypublish.html.ipypublish.slides_ipypublish",
-            "ipypublish.html.ipypublish.slides_mkdown",
-            "ipypublish.html.ipypublish.toc_sidebar",
-            "ipypublish.html.ipypublish.toggle_buttons",
-            "ipypublish.html.standard",
-            "ipypublish.html.standard.content",
-            "ipypublish.html.standard.content_tagging",
-            "ipypublish.html.standard.document",
-            "ipypublish.html.standard.inout_prompt",
-            "ipypublish.html.standard.mathjax",
-            "ipypublish.html.standard.slides",
-            "ipypublish.html.standard.widgets",
-            "ipypublish.latex",
-            "ipypublish.latex.create_tplx",
-            "ipypublish.latex.ipypublish",
-            "ipypublish.latex.ipypublish.biblio_natbib",
-            "ipypublish.latex.ipypublish.contents_framed_code",
-            "ipypublish.latex.ipypublish.contents_output",
-            "ipypublish.latex.ipypublish.doc_article",
-            "ipypublish.latex.ipypublish.front_pages",
-            "ipypublish.latex.standard",
-            "ipypublish.latex.standard.in_out_prompts",
-            "ipypublish.latex.standard.standard_article",
-            "ipypublish.latex.standard.standard_contents",
-            "ipypublish.latex.standard.standard_definitions",
-            "ipypublish.latex.standard.standard_packages",
-            "ipypublish.main",
+            "ipypublish.frontend",
+            "ipypublish.frontend.nbpresent",
+            "ipypublish.frontend.nbpublish",
+            "ipypublish.frontend.shared",
+            "ipypublish.port_api",
+            "ipypublish.port_api.plugin_to_json",
+            "ipypublish.port_api.tpl_dct_to_json",
             "ipypublish.preprocessors",
             "ipypublish.preprocessors.crop_cells",
             "ipypublish.preprocessors.latex_doc_captions",
@@ -57831,15 +57862,29 @@
             "ipypublish.preprocessors.slides_from_markdown",
             "ipypublish.preprocessors.split_outputs",
             "ipypublish.scripts",
-            "ipypublish.scripts.export_plugins",
+            "ipypublish.scripts.create_template",
             "ipypublish.scripts.ipynb_latex_setup",
-            "ipypublish.scripts.nbexport",
             "ipypublish.scripts.nbmerge",
             "ipypublish.scripts.pdfexport",
             "ipypublish.scripts.reveal_serve",
-            "ipypublish.test_main"
+            "ipypublish.templates",
+            "ipypublish.templates.outline_schemas",
+            "ipypublish.templates.segments",
+            "ipypublish.tests",
+            "ipypublish.tests.conftest",
+            "ipypublish.tests.convert_notebooks",
+            "ipypublish.tests.test_files",
+            "ipypublish.tests.test_files.ipynb1_converted",
+            "ipypublish.tests.test_files.ipynb1_converted.python_with_meta",
+            "ipypublish.tests.test_files.ipynb_with_external",
+            "ipypublish.tests.test_frontend",
+            "ipypublish.tests.test_nbexport",
+            "ipypublish.tests.test_nbmerge",
+            "ipypublish.tests.test_nbpublish",
+            "ipypublish.tests.test_port_api",
+            "ipypublish.utils"
         ],
-        "version": "0.6.8"
+        "version": "0.7.0"
     },
     "ipyrad": {
         "cmdline": [],
@@ -62601,7 +62646,7 @@
             "tracker.views.messages_state",
             "tracker.views.messages_theme"
         ],
-        "version": "0.0.1.dev70"
+        "version": "0.0.1.dev71"
     },
     "iscc": {
         "cmdline": [],
@@ -75105,22 +75150,9 @@
             "iter2.option",
             "iter2.sequence_builders",
             "iter2.utils",
-            "iter2.wrapped_algorithms",
-            "tests",
-            "tests.algorithms",
-            "tests.algorithms.extra",
-            "tests.algorithms.folding",
-            "tests.algorithms.merging",
-            "tests.algorithms.predicate_on_sequence",
-            "tests.algorithms.searching",
-            "tests.algorithms.sequence_to_groups",
-            "tests.algorithms.sequence_to_sequence",
-            "tests.algorithms.splitting",
-            "tests.iterators",
-            "tests.iterators.iterator2",
-            "tests.option"
+            "iter2.wrapped_algorithms"
         ],
-        "version": "1.0rc1"
+        "version": "1.0"
     },
     "iter8": {
         "cmdline": [],
@@ -77032,13 +77064,9 @@
         "version": "0.0.1"
     },
     "iu-jar": {
-        "cmdline": [
-            "iujar"
-        ],
-        "modules": [
-            "iu-jar"
-        ],
-        "version": "0.0.2"
+        "cmdline": [],
+        "modules": [],
+        "version": "0.0.3"
     },
     "iucm": {
         "cmdline": [],
@@ -77615,7 +77643,7 @@
             "ivy.urls",
             "ivy.utils"
         ],
-        "version": "2.0.5"
+        "version": "2.1.0"
     },
     "ivy-phylo": {
         "cmdline": [],
@@ -80230,7 +80258,7 @@
             "ixnetwork_restpy.testplatform.sessions.sessions",
             "ixnetwork_restpy.testplatform.testplatform"
         ],
-        "version": "1.0.17"
+        "version": "1.0.19"
     },
     "ixnooapi": {
         "cmdline": [],
