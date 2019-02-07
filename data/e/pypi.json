@@ -535,7 +535,7 @@
         "modules": [
             "e4client"
         ],
-        "version": "1.1"
+        "version": "1.12"
     },
     "e4u": {
         "cmdline": [],
@@ -2729,7 +2729,7 @@
             "tests.protocol_for_tests",
             "tests.test_main"
         ],
-        "version": "1.2.2"
+        "version": "1.2.3"
     },
     "easy-net-tf": {
         "cmdline": [],
@@ -7706,7 +7706,7 @@
             "ebook_homebrew.utils",
             "ebook_homebrew.utils.logging"
         ],
-        "version": "1.1.0"
+        "version": "1.1.1"
     },
     "ebook-thumbnailer": {
         "cmdline": [],
@@ -12480,6 +12480,7 @@
             "edc_appointment.migrations.0016_auto_20181108_0353",
             "edc_appointment.migrations.0017_auto_20190201_0446",
             "edc_appointment.model_mixins",
+            "edc_appointment.model_mixins.appointment_methods_model_mixin",
             "edc_appointment.model_mixins.appointment_model_mixin",
             "edc_appointment.modeladmin_mixins",
             "edc_appointment.models",
@@ -12495,6 +12496,7 @@
             "edc_appointment.tests.test_appointment",
             "edc_appointment.tests.test_appointment_config",
             "edc_appointment.tests.test_appointment_creator",
+            "edc_appointment.tests.test_appointment_form",
             "edc_appointment.tests.test_appt_datetimes",
             "edc_appointment.tests.test_unscheduled",
             "edc_appointment.tests.visit_schedule",
@@ -12506,7 +12508,7 @@
             "edc_appointment.views.unscheduled_appointment_view",
             "edc_appointment.wsgi"
         ],
-        "version": "0.2.22"
+        "version": "0.2.25"
     },
     "edc-auth": {
         "cmdline": [],
@@ -13601,6 +13603,8 @@
         "cmdline": [],
         "modules": [
             "edc_offstudy",
+            "edc_offstudy.admin",
+            "edc_offstudy.admin_site",
             "edc_offstudy.apps",
             "edc_offstudy.choices",
             "edc_offstudy.constants",
@@ -13636,7 +13640,7 @@
             "edc_offstudy.view_mixins",
             "edc_offstudy.wsgi"
         ],
-        "version": "0.2.9"
+        "version": "0.2.10"
     },
     "edc-pdutils": {
         "cmdline": [],
@@ -14071,7 +14075,7 @@
             "edc_subject_dashboard.views.subject_review_listboard",
             "edc_subject_dashboard.wsgi"
         ],
-        "version": "0.1.20"
+        "version": "0.1.21"
     },
     "edc-sync": {
         "cmdline": [],
@@ -14156,7 +14160,7 @@
             "edc_visit_schedule.model_wrappers.permissions_mixin",
             "edc_visit_schedule.model_wrappers.requisition_model_wrapper",
             "edc_visit_schedule.modelform_mixins",
-            "edc_visit_schedule.modelform_mixins.subject_schedule_modelform_mixin",
+            "edc_visit_schedule.modelform_mixins.off_schedule_modelform_mixin",
             "edc_visit_schedule.models",
             "edc_visit_schedule.models.subject_schedule_history",
             "edc_visit_schedule.navbars",
@@ -14203,7 +14207,7 @@
             "edc_visit_schedule.visit_schedule.visit_schedule",
             "edc_visit_schedule.wsgi"
         ],
-        "version": "0.2.18"
+        "version": "0.2.20"
     },
     "edc-visit-tracking": {
         "cmdline": [],
@@ -18663,22 +18667,65 @@
             "edx_proctoring.admin",
             "edx_proctoring.api",
             "edx_proctoring.apps",
+            "edx_proctoring.backends",
+            "edx_proctoring.backends.backend",
+            "edx_proctoring.backends.mock",
+            "edx_proctoring.backends.null",
+            "edx_proctoring.backends.rest",
+            "edx_proctoring.backends.software_secure",
+            "edx_proctoring.backends.tests",
+            "edx_proctoring.backends.tests.test_backend",
+            "edx_proctoring.backends.tests.test_rest",
+            "edx_proctoring.backends.tests.test_review_payload",
+            "edx_proctoring.backends.tests.test_software_secure",
             "edx_proctoring.callbacks",
             "edx_proctoring.constants",
             "edx_proctoring.decorators",
             "edx_proctoring.exceptions",
             "edx_proctoring.instructor_dashboard_exam_urls",
+            "edx_proctoring.management",
+            "edx_proctoring.management.commands",
+            "edx_proctoring.management.commands.set_attempt_status",
+            "edx_proctoring.management.commands.tests",
+            "edx_proctoring.management.commands.tests.test_set_attempt_status",
+            "edx_proctoring.migrations",
+            "edx_proctoring.migrations.0001_initial",
+            "edx_proctoring.migrations.0002_proctoredexamstudentattempt_is_status_acknowledged",
+            "edx_proctoring.migrations.0003_auto_20160101_0525",
+            "edx_proctoring.migrations.0004_auto_20160201_0523",
+            "edx_proctoring.migrations.0005_proctoredexam_hide_after_due",
+            "edx_proctoring.migrations.0006_allowed_time_limit_mins",
+            "edx_proctoring.migrations.0007_proctoredexam_backend",
+            "edx_proctoring.migrations.0008_auto_20181116_1551",
+            "edx_proctoring.migrations.0009_proctoredexamreviewpolicy_remove_rules",
             "edx_proctoring.models",
+            "edx_proctoring.rules",
             "edx_proctoring.runtime",
             "edx_proctoring.serializers",
             "edx_proctoring.services",
+            "edx_proctoring.settings",
+            "edx_proctoring.settings.aws",
+            "edx_proctoring.settings.common",
+            "edx_proctoring.settings.test",
             "edx_proctoring.signals",
             "edx_proctoring.statuses",
+            "edx_proctoring.tests",
+            "edx_proctoring.tests.test_api",
+            "edx_proctoring.tests.test_email",
+            "edx_proctoring.tests.test_models",
+            "edx_proctoring.tests.test_reviews",
+            "edx_proctoring.tests.test_serializer",
+            "edx_proctoring.tests.test_services",
+            "edx_proctoring.tests.test_student_view",
+            "edx_proctoring.tests.test_utils",
+            "edx_proctoring.tests.test_views",
+            "edx_proctoring.tests.test_workerconfig",
+            "edx_proctoring.tests.utils",
             "edx_proctoring.urls",
             "edx_proctoring.utils",
             "edx_proctoring.views"
         ],
-        "version": "1.5.8"
+        "version": "1.5.9"
     },
     "edx-proctoring-proctortrack": {
         "cmdline": [],
@@ -23104,7 +23151,7 @@
             "eis_pointing.utils.plots",
             "eis_pointing.utils.sun"
         ],
-        "version": "2018.12.19"
+        "version": "2019.2.6"
     },
     "either": {
         "cmdline": [],
@@ -26893,7 +26940,7 @@
             "elementpath.xpath_selectors",
             "elementpath.xpath_token"
         ],
-        "version": "1.1.2"
+        "version": "1.1.3"
     },
     "elements": {
         "cmdline": [],
@@ -29743,6 +29790,11 @@
         ],
         "version": "0.1"
     },
+    "em3mod": {
+        "cmdline": [],
+        "modules": [],
+        "version": ""
+    },
     "em73xx": {
         "cmdline": [],
         "modules": [
@@ -30113,6 +30165,14 @@
         "cmdline": [],
         "modules": [],
         "version": "0.2.1"
+    },
+    "email-notify-magic": {
+        "cmdline": [],
+        "modules": [
+            "email_notify_magic",
+            "email_notify_magic.email_notify_magic"
+        ],
+        "version": "0.0.1"
     },
     "email-phone-block": {
         "cmdline": [],
@@ -34512,7 +34572,7 @@
             "tests.unit.pubsub",
             "tests.unit.pubsub.test_emsMessage"
         ],
-        "version": "0.1.25"
+        "version": "0.1.27"
     },
     "emsim": {
         "cmdline": [],
@@ -36396,6 +36456,15 @@
             "enboard.menu"
         ],
         "version": "0.3"
+    },
+    "encapsia-api": {
+        "cmdline": [],
+        "modules": [
+            "encapsia_api",
+            "encapsia_api.credentials",
+            "encapsia_api.rest"
+        ],
+        "version": "0.1.7"
     },
     "encarne": {
         "cmdline": [],
@@ -46963,13 +47032,16 @@
             "epistasis.pyplot.coefs",
             "epistasis.pyplot.nonlinear",
             "epistasis.sampling",
+            "epistasis.sampling.base",
             "epistasis.sampling.bayesian",
+            "epistasis.sampling.bootstrap",
             "epistasis.sampling.tests",
             "epistasis.sampling.tests.test_bayesian",
             "epistasis.setup",
             "epistasis.simulate",
             "epistasis.simulate.base",
             "epistasis.simulate.linear",
+            "epistasis.simulate.mapping",
             "epistasis.simulate.power",
             "epistasis.simulate.tests",
             "epistasis.simulate.tests.test_base",
@@ -46979,9 +47051,10 @@
             "epistasis.stats",
             "epistasis.tests",
             "epistasis.tests.test_mapping",
-            "epistasis.utils"
+            "epistasis.utils",
+            "epistasis.validate"
         ],
-        "version": "0.6.7"
+        "version": "0.6.8"
     },
     "epistle": {
         "cmdline": [],
@@ -50135,7 +50208,7 @@
             "ereuse_workbench.utils",
             "ereuse_workbench.workbench"
         ],
-        "version": "11.0b2"
+        "version": "11.0b4"
     },
     "erezutils": {
         "cmdline": [],
@@ -56026,7 +56099,7 @@
             "tests.test_helpers",
             "tests.test_services_setup"
         ],
-        "version": "0.0.2a2"
+        "version": "0.0.2"
     },
     "eth-docgen": {
         "cmdline": [],
@@ -60590,9 +60663,10 @@
             "evalcache.dircache_v2",
             "evalcache.funcarg",
             "evalcache.lazy",
-            "evalcache.lazyfile"
+            "evalcache.lazyfile",
+            "evalcache.util"
         ],
-        "version": "1.9.1"
+        "version": "1.10.0"
     },
     "evalexpr": {
         "cmdline": [],
@@ -63122,7 +63196,7 @@
             "tests",
             "tests.test_docstrings"
         ],
-        "version": "2.4.2"
+        "version": "2.4.3"
     },
     "evenz": {
         "cmdline": [],
@@ -63996,7 +64070,7 @@
     "everytime-parser": {
         "cmdline": [],
         "modules": [],
-        "version": "0.0.2"
+        "version": "0.0.4"
     },
     "everytrail-export": {
         "cmdline": [],
@@ -74725,17 +74799,9 @@
             "eye2you.inception_short",
             "eye2you.make_default_config",
             "eye2you.meter_functions",
-            "eye2you.model_wrapper",
-            "medAI",
-            "medAI.PandasDataset",
-            "medAI.RetinaCheckerPandas",
-            "medAI.inception_short",
-            "medAI.make_default_config",
-            "medAI.medAIService",
-            "medAI.meter_functions",
-            "medAI.model_wrapper"
+            "eye2you.model_wrapper"
         ],
-        "version": "0.0.dev1"
+        "version": "0.0.dev2"
     },
     "eyeball": {
         "cmdline": [],
@@ -75617,7 +75683,7 @@
             "ez.xpinyin",
             "ez.xpinyinMandarindat"
         ],
-        "version": "4.3.9"
+        "version": "4.4.6"
     },
     "ez-elb": {
         "cmdline": [],
