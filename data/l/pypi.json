@@ -2222,6 +2222,8 @@
             "lactolyse.apps",
             "lactolyse.consumers",
             "lactolyse.executors",
+            "lactolyse.executors.docker",
+            "lactolyse.executors.local",
             "lactolyse.forms",
             "lactolyse.management",
             "lactolyse.management.commands",
@@ -2231,6 +2233,7 @@
             "lactolyse.migrations.0002_add_results",
             "lactolyse.migrations.0003_add_contributor",
             "lactolyse.migrations.0004_conconi_test",
+            "lactolyse.migrations.0005_conconi_report_location",
             "lactolyse.models",
             "lactolyse.protocol",
             "lactolyse.registry",
@@ -2243,7 +2246,7 @@
             "lactolyse.views.download",
             "lactolyse.views.lactate_threshold"
         ],
-        "version": "0.9.0a6"
+        "version": "0.9.0a12"
     },
     "lad": {
         "cmdline": [],
@@ -2735,7 +2738,7 @@
             "lair3.sockets",
             "lair3.x509"
         ],
-        "version": "0.1.3"
+        "version": "0.1.4"
     },
     "lairucrem": {
         "cmdline": [],
@@ -11404,7 +11407,7 @@
             "laurelin.ldap.utils",
             "laurelin.ldap.validation"
         ],
-        "version": "2.0.0"
+        "version": "2.0.1"
     },
     "laurentnester": {
         "cmdline": [],
@@ -15176,7 +15179,7 @@
             "lbuild.vcs.common",
             "lbuild.vcs.git"
         ],
-        "version": "1.6.3"
+        "version": "1.6.4"
     },
     "lbwmath": {
         "cmdline": [],
@@ -16858,9 +16861,7 @@
         "version": ""
     },
     "ldapcherry": {
-        "cmdline": [
-            "ldapcherryd"
-        ],
+        "cmdline": [],
         "modules": [
             "ldapcherry",
             "ldapcherry.attributes",
@@ -16868,6 +16869,7 @@
             "ldapcherry.backend.backendAD",
             "ldapcherry.backend.backendDemo",
             "ldapcherry.backend.backendLdap",
+            "ldapcherry.cli",
             "ldapcherry.exceptions",
             "ldapcherry.lclogging",
             "ldapcherry.ppolicy",
@@ -16876,7 +16878,7 @@
             "ldapcherry.roles",
             "ldapcherry.version"
         ],
-        "version": "0.5.2"
+        "version": "1.0.1"
     },
     "ldapdomaindump": {
         "cmdline": [
@@ -39600,7 +39602,7 @@
             "limacharlie.demo_spout",
             "limacharlie.utils"
         ],
-        "version": "2.6.0"
+        "version": "2.7.0"
     },
     "limb": {
         "cmdline": [],
@@ -44461,7 +44463,7 @@
             "lino.utils.watch",
             "lino.utils.weekly"
         ],
-        "version": "19.1.5"
+        "version": "19.2.0"
     },
     "lino-algus": {
         "cmdline": [],
@@ -45559,6 +45561,12 @@
             "lino_xl.lib.online.users.fixtures.demo2",
             "lino_xl.lib.online.users.fixtures.demo_users",
             "lino_xl.lib.online.users.models",
+            "lino_xl.lib.orders",
+            "lino_xl.lib.orders.actions",
+            "lino_xl.lib.orders.desktop",
+            "lino_xl.lib.orders.mixins",
+            "lino_xl.lib.orders.models",
+            "lino_xl.lib.orders.roles",
             "lino_xl.lib.outbox",
             "lino_xl.lib.outbox.choicelists",
             "lino_xl.lib.outbox.dummy",
@@ -45730,7 +45738,7 @@
             "lino_xl.lib.xl.user_types",
             "lino_xl.setup_info"
         ],
-        "version": "19.1.1"
+        "version": "19.2.0"
     },
     "linode": {
         "cmdline": [],
@@ -52327,6 +52335,7 @@
     "lizard": {
         "cmdline": [],
         "modules": [
+            "lizard",
             "lizard_ext",
             "lizard_ext.auto_open",
             "lizard_ext.csvoutput",
@@ -52363,17 +52372,19 @@
             "lizard_languages.javascript",
             "lizard_languages.js_style_language_states",
             "lizard_languages.js_style_regex_expression",
+            "lizard_languages.lua",
             "lizard_languages.objc",
             "lizard_languages.php",
             "lizard_languages.python",
             "lizard_languages.ruby",
+            "lizard_languages.rubylike",
             "lizard_languages.scala",
             "lizard_languages.script_language",
             "lizard_languages.swift",
             "lizard_languages.tnsdl",
             "lizard_languages.ttcn"
         ],
-        "version": "1.15.7"
+        "version": "1.16.1"
     },
     "lizard-connector": {
         "cmdline": [],
@@ -56196,7 +56207,7 @@
             "tests",
             "tests.all_test"
         ],
-        "version": "0.1.28"
+        "version": "0.1.32"
     },
     "loco-cli": {
         "cmdline": [],
@@ -63069,7 +63080,7 @@
             "core.test_helpers",
             "core.test_helpers.server"
         ],
-        "version": "0.10.0"
+        "version": "0.11.0"
     },
     "lookout-style": {
         "cmdline": [],
@@ -67132,6 +67143,56 @@
             "src.utils"
         ],
         "version": "0.0.1"
+    },
+    "lsga": {
+        "cmdline": [],
+        "modules": [
+            "lsga",
+            "lsga.analysis",
+            "lsga.analysis.console_output",
+            "lsga.analysis.fitness_store",
+            "lsga.components",
+            "lsga.components.binary_individual",
+            "lsga.components.decimal_individual",
+            "lsga.components.individual",
+            "lsga.components.population",
+            "lsga.engine",
+            "lsga.engine_wrapper",
+            "lsga.mpiutil",
+            "lsga.operators",
+            "lsga.operators.crossover",
+            "lsga.operators.crossover.uniform_crossover",
+            "lsga.operators.mutation",
+            "lsga.operators.mutation.flip_bit_mutation",
+            "lsga.operators.selection",
+            "lsga.operators.selection.exponential_ranking_selection",
+            "lsga.operators.selection.linear_ranking_selection",
+            "lsga.operators.selection.roulette_wheel_selection",
+            "lsga.operators.selection.tournament_selection",
+            "lsga.plugin_interfaces",
+            "lsga.plugin_interfaces.analysis",
+            "lsga.plugin_interfaces.metaclasses",
+            "lsga.plugin_interfaces.operators",
+            "lsga.plugin_interfaces.operators.crossover",
+            "lsga.plugin_interfaces.operators.mutation",
+            "lsga.plugin_interfaces.operators.selection",
+            "lsga.tests",
+            "lsga.tests.dynamic_linear_scaling_test",
+            "lsga.tests.engine_test",
+            "lsga.tests.exponential_ranking_selection_test",
+            "lsga.tests.flip_bit_big_mutation_test",
+            "lsga.tests.flip_bit_mutation_test",
+            "lsga.tests.individual_test",
+            "lsga.tests.linear_ranking_selection_test",
+            "lsga.tests.linear_scaling_test",
+            "lsga.tests.mpiutil_test",
+            "lsga.tests.population_test",
+            "lsga.tests.roulette_wheel_selection_test",
+            "lsga.tests.test_all",
+            "lsga.tests.tournament_selection_test",
+            "lsga.tests.uniform_crossover_test"
+        ],
+        "version": "0.5.7"
     },
     "lsh": {
         "cmdline": [],
@@ -72883,7 +72944,7 @@
             "lxml.tests.test_xslt",
             "lxml.usedoctest"
         ],
-        "version": "4.3.0"
+        "version": "4.3.1"
     },
     "lxml-asserts": {
         "cmdline": [],
