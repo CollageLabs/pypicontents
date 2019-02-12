@@ -7719,6 +7719,13 @@
         ],
         "version": "0.0.5"
     },
+    "bamboos": {
+        "cmdline": [],
+        "modules": [
+            "bamboos"
+        ],
+        "version": "0.1"
+    },
     "bambora": {
         "cmdline": [],
         "modules": [
@@ -13660,6 +13667,13 @@
         ],
         "version": "0.7.1"
     },
+    "bash-plus": {
+        "cmdline": [
+            "bash-plus"
+        ],
+        "modules": [],
+        "version": "0.1"
+    },
     "bash-powerprompt": {
         "cmdline": [],
         "modules": [
@@ -14424,6 +14438,7 @@
             "basis_set_exchange",
             "basis_set_exchange._version",
             "basis_set_exchange.api",
+            "basis_set_exchange.bundle",
             "basis_set_exchange.cli",
             "basis_set_exchange.cli.check",
             "basis_set_exchange.cli.cli",
@@ -14481,15 +14496,19 @@
             "basis_set_exchange.tests.common_testvars",
             "basis_set_exchange.tests.test_api",
             "basis_set_exchange.tests.test_api_slow",
+            "basis_set_exchange.tests.test_api_xfail",
             "basis_set_exchange.tests.test_authoritative",
             "basis_set_exchange.tests.test_aux_sanity",
             "basis_set_exchange.tests.test_bib",
+            "basis_set_exchange.tests.test_bundle",
             "basis_set_exchange.tests.test_cli",
             "basis_set_exchange.tests.test_converters",
             "basis_set_exchange.tests.test_curate",
+            "basis_set_exchange.tests.test_curate2",
             "basis_set_exchange.tests.test_curate_roundtrip",
             "basis_set_exchange.tests.test_io",
             "basis_set_exchange.tests.test_lut",
+            "basis_set_exchange.tests.test_memo",
             "basis_set_exchange.tests.test_metadata",
             "basis_set_exchange.tests.test_misc",
             "basis_set_exchange.tests.test_references",
@@ -14497,7 +14516,7 @@
             "basis_set_exchange.tests.test_valid",
             "basis_set_exchange.validator"
         ],
-        "version": "0.5.6"
+        "version": "0.5.7"
     },
     "basisgen": {
         "cmdline": [],
@@ -18328,7 +18347,7 @@
             "ngs-snakemake.snakefile_base.transcriptome_consts",
             "ngs-snakemake.test"
         ],
-        "version": "1.0.37"
+        "version": "1.0.40"
     },
     "bbcu-venn-diagram": {
         "cmdline": [
@@ -18922,7 +18941,7 @@
             "BCBio.GFF.GFFParser",
             "BCBio.GFF._utils"
         ],
-        "version": "0.6.4"
+        "version": "0.6.5"
     },
     "bcbio-monitor": {
         "cmdline": [],
@@ -21013,15 +21032,9 @@
             "bdbag.fetch.transports.fetch_boto3",
             "bdbag.fetch.transports.fetch_ftp",
             "bdbag.fetch.transports.fetch_globus",
-            "bdbag.fetch.transports.fetch_http",
-            "test",
-            "test.test_api",
-            "test.test_bdbagit",
-            "test.test_cli",
-            "test.test_common",
-            "test.test_remote"
+            "bdbag.fetch.transports.fetch_http"
         ],
-        "version": "1.5.1"
+        "version": "1.5.3"
     },
     "bdbcontrib": {
         "cmdline": [],
@@ -23519,9 +23532,11 @@
         "cmdline": [],
         "modules": [
             "bearer",
-            "bearer.Client"
+            "bearer.Client",
+            "tests",
+            "tests.test_client"
         ],
-        "version": "0.0.3"
+        "version": "0.0.1"
     },
     "bearfield": {
         "cmdline": [],
@@ -28182,7 +28197,7 @@
             "bella.word_vectors",
             "bella.write_data"
         ],
-        "version": "0.3.27"
+        "version": "0.3.28"
     },
     "bellatrix": {
         "cmdline": [],
@@ -28584,8 +28599,122 @@
     },
     "benchexec": {
         "cmdline": [],
-        "modules": [],
-        "version": "1.17"
+        "modules": [
+            "benchexec",
+            "benchexec.baseexecutor",
+            "benchexec.benchexec",
+            "benchexec.cgroups",
+            "benchexec.check_cgroups",
+            "benchexec.container",
+            "benchexec.containerexecutor",
+            "benchexec.filehierarchylimit",
+            "benchexec.filewriter",
+            "benchexec.intel_cpu_energy",
+            "benchexec.libc",
+            "benchexec.localexecution",
+            "benchexec.model",
+            "benchexec.oomhandler",
+            "benchexec.outputhandler",
+            "benchexec.resources",
+            "benchexec.result",
+            "benchexec.runexecutor",
+            "benchexec.systeminfo",
+            "benchexec.tablegenerator",
+            "benchexec.tablegenerator.columns",
+            "benchexec.tablegenerator.test_columns",
+            "benchexec.tablegenerator.test_statvalue",
+            "benchexec.tablegenerator.test_util",
+            "benchexec.tablegenerator.util",
+            "benchexec.test_analyze_run_result",
+            "benchexec.test_cgroups",
+            "benchexec.test_core_assignment",
+            "benchexec.test_python2",
+            "benchexec.test_result",
+            "benchexec.test_runexecutor",
+            "benchexec.test_tool_info",
+            "benchexec.test_tool_wrapper",
+            "benchexec.test_util",
+            "benchexec.tools",
+            "benchexec.tools.acsar",
+            "benchexec.tools.aprove",
+            "benchexec.tools.blast",
+            "benchexec.tools.calculatepi",
+            "benchexec.tools.cascade",
+            "benchexec.tools.cbmc",
+            "benchexec.tools.cbmc-path",
+            "benchexec.tools.ceagle",
+            "benchexec.tools.civl",
+            "benchexec.tools.consequence",
+            "benchexec.tools.cpa-witness2test",
+            "benchexec.tools.cpachecker",
+            "benchexec.tools.cseq",
+            "benchexec.tools.depthk",
+            "benchexec.tools.divine",
+            "benchexec.tools.divine4",
+            "benchexec.tools.dummy",
+            "benchexec.tools.ecav",
+            "benchexec.tools.esbmc",
+            "benchexec.tools.fairfuzz",
+            "benchexec.tools.false",
+            "benchexec.tools.feaver",
+            "benchexec.tools.forest",
+            "benchexec.tools.forester",
+            "benchexec.tools.fshell-witness2test",
+            "benchexec.tools.hiprec",
+            "benchexec.tools.hiptnt",
+            "benchexec.tools.impara",
+            "benchexec.tools.javac",
+            "benchexec.tools.jayhorn",
+            "benchexec.tools.jbmc",
+            "benchexec.tools.jpf",
+            "benchexec.tools.klee",
+            "benchexec.tools.lazycseq",
+            "benchexec.tools.lazycseqabs",
+            "benchexec.tools.lazycseqswarm",
+            "benchexec.tools.lctd",
+            "benchexec.tools.llbmc",
+            "benchexec.tools.map2check",
+            "benchexec.tools.mathsat",
+            "benchexec.tools.mucseq",
+            "benchexec.tools.pacman",
+            "benchexec.tools.pagai",
+            "benchexec.tools.pesco",
+            "benchexec.tools.pinaka",
+            "benchexec.tools.predatorhp",
+            "benchexec.tools.satabs",
+            "benchexec.tools.seahorn",
+            "benchexec.tools.skink",
+            "benchexec.tools.smack",
+            "benchexec.tools.smtinterpol",
+            "benchexec.tools.smtlib2",
+            "benchexec.tools.spf",
+            "benchexec.tools.symbiotic",
+            "benchexec.tools.symbiotic4",
+            "benchexec.tools.symdivine",
+            "benchexec.tools.tabol",
+            "benchexec.tools.tbf",
+            "benchexec.tools.tbf_testsuite_validator",
+            "benchexec.tools.template",
+            "benchexec.tools.test",
+            "benchexec.tools.threader",
+            "benchexec.tools.two_ls",
+            "benchexec.tools.ufo",
+            "benchexec.tools.ulcseq",
+            "benchexec.tools.ultimate",
+            "benchexec.tools.ultimateautomizer",
+            "benchexec.tools.ultimatekojak",
+            "benchexec.tools.ultimatetaipan",
+            "benchexec.tools.veriabs",
+            "benchexec.tools.verifuzz",
+            "benchexec.tools.viap",
+            "benchexec.tools.vvt",
+            "benchexec.tools.wolverine",
+            "benchexec.tools.yogar-cbmc",
+            "benchexec.tools.yogar-cbmc-parallel",
+            "benchexec.tools.z3",
+            "benchexec.util"
+        ],
+        "version": "1.18"
     },
     "benchit": {
         "cmdline": [],
@@ -29006,7 +29135,7 @@
             "benderclient.benderclient",
             "benderclient.utils"
         ],
-        "version": "0.3.2.1"
+        "version": "0.3.3"
     },
     "bender-hooks": {
         "cmdline": [],
@@ -30364,7 +30493,7 @@
             "bert_base.train.tf_metrics",
             "bert_base.train.train_helper"
         ],
-        "version": "0.0.2"
+        "version": "0.0.5"
     },
     "bert-chatbot": {
         "cmdline": [],
@@ -30392,7 +30521,7 @@
             "bert_embedding.tests.test_bert",
             "bert_embedding.version"
         ],
-        "version": "0.1.1"
+        "version": "0.1.2"
     },
     "bert-pytorch": {
         "cmdline": [],
@@ -35937,9 +36066,10 @@
             "bidshandler.Scan",
             "bidshandler.Session",
             "bidshandler.Subject",
+            "bidshandler.constants",
             "bidshandler.utils"
         ],
-        "version": "0.2"
+        "version": "0.2.1"
     },
     "bidsify": {
         "cmdline": [],
@@ -42135,7 +42265,7 @@
             "BiobankRead2",
             "BiobankRead2.BiobankRead2"
         ],
-        "version": "3.0.1"
+        "version": "3.1"
     },
     "biobb-analysis": {
         "cmdline": [],
@@ -49117,6 +49247,15 @@
             "bitfinex_best_api.bitfinex_best_api"
         ],
         "version": "4.0.1"
+    },
+    "bitfinex-tencars": {
+        "cmdline": [],
+        "modules": [
+            "bitfinex",
+            "bitfinex.bitfinex_v1",
+            "bitfinex.bitfinex_v2"
+        ],
+        "version": "0.0.3"
     },
     "bitfinex-v2": {
         "cmdline": [],
@@ -58441,7 +58580,7 @@
             "bluepyopt.parameters",
             "bluepyopt.tools"
         ],
-        "version": "1.8.4"
+        "version": "1.8.5"
     },
     "blueqat": {
         "cmdline": [],
@@ -62852,6 +62991,7 @@
             "bob.devtools.scripts.dumpsphinx",
             "bob.devtools.scripts.getpath",
             "bob.devtools.scripts.lasttag",
+            "bob.devtools.scripts.new",
             "bob.devtools.scripts.release",
             "bob.devtools.scripts.visibility",
             "bob.devtools.webdav3",
@@ -62860,7 +63000,7 @@
             "bob.devtools.webdav3.exceptions",
             "bob.devtools.webdav3.urn"
         ],
-        "version": "0.1.2"
+        "version": "0.1.3"
     },
     "bob-example-cmake": {
         "cmdline": [],
@@ -64510,7 +64650,6 @@
             "bocadillo",
             "bocadillo.api",
             "bocadillo.app_types",
-            "bocadillo.cli",
             "bocadillo.compat",
             "bocadillo.constants",
             "bocadillo.error_handlers",
@@ -64525,14 +64664,12 @@
             "bocadillo.request",
             "bocadillo.response",
             "bocadillo.routing",
-            "bocadillo.scaffold",
-            "bocadillo.scaffold.boca",
             "bocadillo.staticfiles",
             "bocadillo.templates",
             "bocadillo.views",
             "bocadillo.websockets"
         ],
-        "version": "0.10.3"
+        "version": "0.11.0"
     },
     "bocco": {
         "cmdline": [],
@@ -66309,7 +66446,7 @@
             "boltons.typeutils",
             "boltons.urlutils"
         ],
-        "version": "18.0.1"
+        "version": "19.0.0"
     },
     "boltun": {
         "cmdline": [],
@@ -73707,7 +73844,7 @@
             "boto3.session",
             "boto3.utils"
         ],
-        "version": "1.9.91"
+        "version": "1.9.92"
     },
     "boto3-batch-utils": {
         "cmdline": [],
@@ -74839,7 +74976,7 @@
             "botocore.vendored.six",
             "botocore.waiter"
         ],
-        "version": "1.12.91"
+        "version": "1.12.92"
     },
     "botocore-callback": {
         "cmdline": [],
@@ -89895,7 +90032,27 @@
         "version": "0.8.2"
     },
     "bslideshow": {
-        "cmdline": [],
+        "cmdline": [
+            "bs_animImages",
+            "bs_animImages.cmd",
+            "bs_banner",
+            "bs_banner.cmd",
+            "bs_bgmusic",
+            "bs_bgmusic.cmd",
+            "bs_encode",
+            "bs_encode.cmd",
+            "bs_footage",
+            "bs_footage.cmd",
+            "bs_frames",
+            "bs_frames.cmd",
+            "bs_scale",
+            "bs_scale.cmd",
+            "bs_split",
+            "bs_split.cmd",
+            "bs_transition.cmd",
+            "bs_update",
+            "bs_update.cmd"
+        ],
         "modules": [
             "bslideshow",
             "bslideshow.director",
@@ -89907,7 +90064,7 @@
             "bslideshow.tool",
             "bslideshow.tools"
         ],
-        "version": "0.0.24"
+        "version": "0.0.25"
     },
     "bslint": {
         "cmdline": [],
@@ -101680,6 +101837,20 @@
             "bytecode.tests.test_peephole_opt"
         ],
         "version": "0.7.0"
+    },
+    "bytecode-tools": {
+        "cmdline": [],
+        "modules": [
+            "bytecode_tools",
+            "bytecode_tools.compatibility",
+            "bytecode_tools.constants",
+            "bytecode_tools.dis",
+            "bytecode_tools.opcodes",
+            "bytecode_tools.pyc_decoder",
+            "bytecode_tools.unmarshal",
+            "bytecode_tools.utils"
+        ],
+        "version": "0.0.1"
     },
     "bytecodeassembler": {
         "cmdline": [],
