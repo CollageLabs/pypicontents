@@ -256,6 +256,14 @@
         ],
         "version": "0.1.0"
     },
+    "e2e-env": {
+        "cmdline": [],
+        "modules": [
+            "env",
+            "env.exceptions"
+        ],
+        "version": "0.1.0"
+    },
     "e2indicator": {
         "cmdline": [],
         "modules": [
@@ -497,19 +505,25 @@
             "e3db.tests",
             "e3db.tests.test_crypto",
             "e3db.tests.test_integration",
+            "e3db.tests.test_search_integration",
             "e3db.types",
             "e3db.types.authorizer_policy",
             "e3db.types.client_details",
             "e3db.types.client_info",
             "e3db.types.file",
+            "e3db.types.file_meta",
             "e3db.types.incoming_sharing",
             "e3db.types.meta",
             "e3db.types.outgoing_sharing",
             "e3db.types.query",
             "e3db.types.query_result",
-            "e3db.types.record"
+            "e3db.types.record",
+            "e3db.types.search",
+            "e3db.types.search_params",
+            "e3db.types.search_range",
+            "e3db.types.search_result"
         ],
-        "version": "2.0.1"
+        "version": "2.1.0"
     },
     "e3fp": {
         "cmdline": [],
@@ -2737,7 +2751,7 @@
             "easy_multip.decorators",
             "easy_multip.functions"
         ],
-        "version": "0.2.1"
+        "version": "0.2.2"
     },
     "easy-nested": {
         "cmdline": [],
@@ -7670,7 +7684,7 @@
             "ebmdatalab.test_maps",
             "ebmdatalab.test_stats"
         ],
-        "version": "0.0.3"
+        "version": "0.0.4"
     },
     "ebmdatalab-python": {
         "cmdline": [],
@@ -9260,7 +9274,7 @@
             "allotools.tests.test_allo_ts",
             "allotools.util"
         ],
-        "version": "0.0.4"
+        "version": "0.0.5"
     },
     "ecapy": {
         "cmdline": [],
@@ -9291,6 +9305,14 @@
             "ecart.serializer"
         ],
         "version": "1.0.2"
+    },
+    "ecasb2share": {
+        "cmdline": [],
+        "modules": [
+            "ecasb2share",
+            "ecasb2share.ecasb2shareclient"
+        ],
+        "version": "0.0.1b4"
     },
     "ecauth0backend": {
         "cmdline": [],
@@ -9608,43 +9630,43 @@
     "ecell4": {
         "cmdline": [],
         "modules": [
-            "ecell4_extras",
-            "ecell4_extras.datasource",
-            "ecell4_extras.datasource.biocyc",
-            "ecell4_extras.datasource.biogrid",
-            "ecell4_extras.datasource.ecocyc",
-            "ecell4_extras.datasource.pdb",
-            "ecell4_extras.datasource.psicquic",
-            "ecell4_extras.datasource.pubmed",
-            "ecell4_extras.datasource.rdf",
-            "ecell4_extras.datasource.sbml",
-            "ecell4_extras.datasource.sparql",
-            "ecell4_extras.datasource.uniprot",
-            "ecell4_extras.extra",
-            "ecell4_extras.extra._unit",
-            "ecell4_extras.extra.azure_batch",
-            "ecell4_extras.extra.bdml",
-            "ecell4_extras.extra.ensemble",
-            "ecell4_extras.extra.latex",
-            "ecell4_extras.extra.sge",
-            "ecell4_extras.extra.slurm",
-            "ecell4_extras.extra.unit",
-            "ecell4_extras.extra.vtkview",
-            "ecell4_extras.util",
-            "ecell4_extras.util.cyjs",
-            "ecell4_extras.util.decorator",
-            "ecell4_extras.util.decorator_base",
-            "ecell4_extras.util.logger",
-            "ecell4_extras.util.model_parser",
-            "ecell4_extras.util.parseobj",
-            "ecell4_extras.util.ports",
-            "ecell4_extras.util.progressbar",
-            "ecell4_extras.util.show",
-            "ecell4_extras.util.simulation",
-            "ecell4_extras.util.viz",
-            "ecell4_extras.util.vizstyles"
+            "ecell4",
+            "ecell4.datasource",
+            "ecell4.datasource.biocyc",
+            "ecell4.datasource.biogrid",
+            "ecell4.datasource.ecocyc",
+            "ecell4.datasource.pdb",
+            "ecell4.datasource.psicquic",
+            "ecell4.datasource.pubmed",
+            "ecell4.datasource.rdf",
+            "ecell4.datasource.sbml",
+            "ecell4.datasource.sparql",
+            "ecell4.datasource.uniprot",
+            "ecell4.extra",
+            "ecell4.extra._unit",
+            "ecell4.extra.azure_batch",
+            "ecell4.extra.bdml",
+            "ecell4.extra.ensemble",
+            "ecell4.extra.latex",
+            "ecell4.extra.sge",
+            "ecell4.extra.slurm",
+            "ecell4.extra.unit",
+            "ecell4.extra.vtkview",
+            "ecell4.util",
+            "ecell4.util.cyjs",
+            "ecell4.util.decorator",
+            "ecell4.util.decorator_base",
+            "ecell4.util.logger",
+            "ecell4.util.model_parser",
+            "ecell4.util.parseobj",
+            "ecell4.util.ports",
+            "ecell4.util.progressbar",
+            "ecell4.util.show",
+            "ecell4.util.simulation",
+            "ecell4.util.viz",
+            "ecell4.util.vizstyles"
         ],
-        "version": "1.0.dev2"
+        "version": "1.0.dev3"
     },
     "ecell4-base": {
         "cmdline": [],
@@ -17622,8 +17644,19 @@
     },
     "eds": {
         "cmdline": [],
-        "modules": [],
-        "version": "0.2.0"
+        "modules": [
+            "eds",
+            "eds.bigquery",
+            "eds.cloudsql",
+            "eds.config",
+            "eds.datastore",
+            "eds.db",
+            "eds.db.mysql",
+            "eds.exceptions",
+            "eds.logger",
+            "eds.query"
+        ],
+        "version": "1.0.0"
     },
     "edsac": {
         "cmdline": [
@@ -18826,23 +18859,65 @@
             "edx_proctoring.admin",
             "edx_proctoring.api",
             "edx_proctoring.apps",
+            "edx_proctoring.backends",
+            "edx_proctoring.backends.backend",
+            "edx_proctoring.backends.mock",
+            "edx_proctoring.backends.null",
+            "edx_proctoring.backends.rest",
+            "edx_proctoring.backends.software_secure",
+            "edx_proctoring.backends.tests",
+            "edx_proctoring.backends.tests.test_backend",
+            "edx_proctoring.backends.tests.test_rest",
+            "edx_proctoring.backends.tests.test_review_payload",
+            "edx_proctoring.backends.tests.test_software_secure",
             "edx_proctoring.callbacks",
             "edx_proctoring.constants",
             "edx_proctoring.decorators",
             "edx_proctoring.exceptions",
             "edx_proctoring.instructor_dashboard_exam_urls",
+            "edx_proctoring.management",
+            "edx_proctoring.management.commands",
+            "edx_proctoring.management.commands.set_attempt_status",
+            "edx_proctoring.management.commands.tests",
+            "edx_proctoring.management.commands.tests.test_set_attempt_status",
+            "edx_proctoring.migrations",
+            "edx_proctoring.migrations.0001_initial",
+            "edx_proctoring.migrations.0002_proctoredexamstudentattempt_is_status_acknowledged",
+            "edx_proctoring.migrations.0003_auto_20160101_0525",
+            "edx_proctoring.migrations.0004_auto_20160201_0523",
+            "edx_proctoring.migrations.0005_proctoredexam_hide_after_due",
+            "edx_proctoring.migrations.0006_allowed_time_limit_mins",
+            "edx_proctoring.migrations.0007_proctoredexam_backend",
+            "edx_proctoring.migrations.0008_auto_20181116_1551",
+            "edx_proctoring.migrations.0009_proctoredexamreviewpolicy_remove_rules",
             "edx_proctoring.models",
             "edx_proctoring.rules",
             "edx_proctoring.runtime",
             "edx_proctoring.serializers",
             "edx_proctoring.services",
+            "edx_proctoring.settings",
+            "edx_proctoring.settings.aws",
+            "edx_proctoring.settings.common",
+            "edx_proctoring.settings.test",
             "edx_proctoring.signals",
             "edx_proctoring.statuses",
+            "edx_proctoring.tests",
+            "edx_proctoring.tests.test_api",
+            "edx_proctoring.tests.test_email",
+            "edx_proctoring.tests.test_models",
+            "edx_proctoring.tests.test_reviews",
+            "edx_proctoring.tests.test_serializer",
+            "edx_proctoring.tests.test_services",
+            "edx_proctoring.tests.test_student_view",
+            "edx_proctoring.tests.test_utils",
+            "edx_proctoring.tests.test_views",
+            "edx_proctoring.tests.test_workerconfig",
+            "edx_proctoring.tests.utils",
             "edx_proctoring.urls",
             "edx_proctoring.utils",
             "edx_proctoring.views"
         ],
-        "version": "1.5.11"
+        "version": "1.5.12"
     },
     "edx-proctoring-proctortrack": {
         "cmdline": [],
@@ -20723,9 +20798,10 @@
         "modules": [
             "eel",
             "eel.browsers",
-            "eel.chrome"
+            "eel.chrome",
+            "eel.electron"
         ],
-        "version": "0.9.11"
+        "version": "0.10.0"
     },
     "eelale": {
         "cmdline": [],
@@ -21106,6 +21182,33 @@
             "eeweather.warnings"
         ],
         "version": "0.3.13"
+    },
+    "eexpressor": {
+        "cmdline": [],
+        "modules": [
+            "src",
+            "src.const",
+            "src.errors",
+            "src.main",
+            "src.main.main",
+            "src.main.output_selector",
+            "src.output_processor",
+            "src.output_processor.dict",
+            "src.output_processor.dict_processor",
+            "src.output_processor.img",
+            "src.output_processor.translate",
+            "src.output_processor.webtools",
+            "test",
+            "test.main",
+            "test.main.test_main",
+            "test.main.test_output_selector",
+            "test.output_processor",
+            "test.output_processor.test_dict",
+            "test.output_processor.test_dict_processor",
+            "test.output_processor.test_img",
+            "test.output_processor.test_translation"
+        ],
+        "version": "1.0"
     },
     "ef-open": {
         "cmdline": [],
@@ -22449,17 +22552,23 @@
             "eggit",
             "eggit.api_response",
             "eggit.converters",
+            "eggit.egg_enum",
+            "eggit.egg_string",
+            "eggit.egg_time",
             "eggit.enums",
             "eggit.paginator",
             "eggit.time_utils",
             "tests",
             "tests.test_api_response",
             "tests.test_converters",
+            "tests.test_egg_enum",
+            "tests.test_egg_string",
+            "tests.test_egg_time",
             "tests.test_enums",
             "tests.test_paginator",
             "tests.test_time_utils"
         ],
-        "version": "0.0.25"
+        "version": "0.0.26"
     },
     "eggmonster": {
         "cmdline": [],
@@ -28271,6 +28380,32 @@
         ],
         "version": "1.2.2"
     },
+    "elisctl": {
+        "cmdline": [],
+        "modules": [
+            "elisctl",
+            "elisctl.arguments",
+            "elisctl.configure",
+            "elisctl.csv",
+            "elisctl.lib",
+            "elisctl.lib.api_client",
+            "elisctl.options",
+            "elisctl.queue",
+            "elisctl.schema",
+            "elisctl.schema.transform",
+            "elisctl.schema.upload",
+            "elisctl.tools",
+            "elisctl.tools.compare",
+            "elisctl.tools.csv_to_options",
+            "elisctl.tools.xls_to_csv",
+            "elisctl.user",
+            "elisctl.user.create",
+            "elisctl.user.helpers",
+            "elisctl.user.options",
+            "elisctl.workspace"
+        ],
+        "version": "1.0.0"
+    },
     "elise": {
         "cmdline": [],
         "modules": [
@@ -33721,18 +33856,12 @@
         "cmdline": [],
         "modules": [
             "emptool",
-            "emptool.boot_config",
-            "emptool.emp_boot",
-            "emptool.emp_http",
-            "emptool.emp_ide",
-            "emptool.emp_utils",
-            "emptool.emp_webrepl",
-            "emptool.emp_wifi",
+            "emptool.cli",
             "emptool.emptool",
-            "emptool.logo",
-            "emptool.test"
+            "emptool.pypi",
+            "emptool.rawrepl"
         ],
-        "version": "0.1.1"
+        "version": "0.1.4"
     },
     "emptoring": {
         "cmdline": [],
@@ -35174,6 +35303,50 @@
             "emulator.views"
         ],
         "version": "1.8.7"
+    },
+    "emulsion": {
+        "cmdline": [],
+        "modules": [
+            "emulsion",
+            "emulsion.agent",
+            "emulsion.agent.action",
+            "emulsion.agent.atoms",
+            "emulsion.agent.comparts",
+            "emulsion.agent.core",
+            "emulsion.agent.core.abstract_agent",
+            "emulsion.agent.core.emulsion_agent",
+            "emulsion.agent.core.groups",
+            "emulsion.agent.exceptions",
+            "emulsion.agent.managers",
+            "emulsion.agent.managers.abstract_process_manager",
+            "emulsion.agent.managers.compart_process_manager",
+            "emulsion.agent.managers.functions",
+            "emulsion.agent.managers.group_manager",
+            "emulsion.agent.managers.ibm_process_manager",
+            "emulsion.agent.managers.metapop_process_manager",
+            "emulsion.agent.managers.multi_process_manager",
+            "emulsion.agent.meta",
+            "emulsion.agent.process",
+            "emulsion.agent.views",
+            "emulsion.init_emulsion",
+            "emulsion.model",
+            "emulsion.model.emulsion_model",
+            "emulsion.model.exceptions",
+            "emulsion.model.functions",
+            "emulsion.model.state_machines",
+            "emulsion.tools",
+            "emulsion.tools.calendar",
+            "emulsion.tools.functions",
+            "emulsion.tools.graph",
+            "emulsion.tools.misc",
+            "emulsion.tools.parallel",
+            "emulsion.tools.plot",
+            "emulsion.tools.simulation",
+            "emulsion.tools.state",
+            "emulsion.tools.timing",
+            "emulsion.tools.view"
+        ],
+        "version": "1.0rc10"
     },
     "emuparadise-dl": {
         "cmdline": [],
@@ -36774,11 +36947,12 @@
             "encodermap",
             "encodermap.autoencoder",
             "encodermap.dihedral_backmapping",
+            "encodermap.encodermap",
             "encodermap.misc",
             "encodermap.parameters",
             "encodermap.plot"
         ],
-        "version": "0.0.5"
+        "version": "0.0.7"
     },
     "encoding-cleaner": {
         "cmdline": [],
@@ -38935,7 +39109,7 @@
             "energycap.sdk.models.workflow_settings_response",
             "energycap.sdk.version"
         ],
-        "version": "7.3.1886"
+        "version": "7.3.1889"
     },
     "energydram": {
         "cmdline": [],
@@ -46552,7 +46726,7 @@
             "epic2.src",
             "epic2.version"
         ],
-        "version": "0.0.17"
+        "version": "0.0.18"
     },
     "epic2cf": {
         "cmdline": [],
@@ -46675,7 +46849,7 @@
             "epicscorelibs.test.test_version",
             "epicscorelibs.version"
         ],
-        "version": "7.0.1.99.16.3"
+        "version": "7.0.2.99.0.0"
     },
     "epicserver": {
         "cmdline": [],
@@ -51882,7 +52056,7 @@
             "es_logger.plugins.target",
             "es_logger.zmq_client"
         ],
-        "version": "2.66"
+        "version": "2.68"
     },
     "es-loghandler": {
         "cmdline": [],
@@ -52630,6 +52804,7 @@
             "content.upgrades.52_53",
             "content.upgrades.54_55",
             "content.upgrades.55_56",
+            "content.upgrades.56_57",
             "content.upgrades.5_6",
             "content.upgrades.6_7",
             "content.upgrades.7_8",
@@ -52642,7 +52817,7 @@
             "content.utilities.roles",
             "content.vocabularies"
         ],
-        "version": "1.71.1"
+        "version": "1.71.2"
     },
     "esdrt-theme": {
         "cmdline": [],
@@ -54015,6 +54190,181 @@
             "lib.helpers"
         ],
         "version": "0.0.3"
+    },
+    "esphome": {
+        "cmdline": [],
+        "modules": [
+            "esphomeyaml",
+            "esphomeyaml.api",
+            "esphomeyaml.api.api_pb2",
+            "esphomeyaml.api.client",
+            "esphomeyaml.automation",
+            "esphomeyaml.components",
+            "esphomeyaml.components.ads1115",
+            "esphomeyaml.components.apds9960",
+            "esphomeyaml.components.api",
+            "esphomeyaml.components.binary_sensor",
+            "esphomeyaml.components.binary_sensor.apds9960",
+            "esphomeyaml.components.binary_sensor.custom",
+            "esphomeyaml.components.binary_sensor.esp32_ble_tracker",
+            "esphomeyaml.components.binary_sensor.esp32_touch",
+            "esphomeyaml.components.binary_sensor.gpio",
+            "esphomeyaml.components.binary_sensor.nextion",
+            "esphomeyaml.components.binary_sensor.pn532",
+            "esphomeyaml.components.binary_sensor.rdm6300",
+            "esphomeyaml.components.binary_sensor.remote_receiver",
+            "esphomeyaml.components.binary_sensor.status",
+            "esphomeyaml.components.binary_sensor.template",
+            "esphomeyaml.components.cover",
+            "esphomeyaml.components.cover.template",
+            "esphomeyaml.components.custom_component",
+            "esphomeyaml.components.dallas",
+            "esphomeyaml.components.debug",
+            "esphomeyaml.components.deep_sleep",
+            "esphomeyaml.components.display",
+            "esphomeyaml.components.display.lcd_gpio",
+            "esphomeyaml.components.display.lcd_pcf8574",
+            "esphomeyaml.components.display.max7219",
+            "esphomeyaml.components.display.nextion",
+            "esphomeyaml.components.display.ssd1306_i2c",
+            "esphomeyaml.components.display.ssd1306_spi",
+            "esphomeyaml.components.display.waveshare_epaper",
+            "esphomeyaml.components.esp32_ble_beacon",
+            "esphomeyaml.components.esp32_ble_tracker",
+            "esphomeyaml.components.esp32_touch",
+            "esphomeyaml.components.ethernet",
+            "esphomeyaml.components.fan",
+            "esphomeyaml.components.fan.binary",
+            "esphomeyaml.components.fan.speed",
+            "esphomeyaml.components.font",
+            "esphomeyaml.components.globals",
+            "esphomeyaml.components.i2c",
+            "esphomeyaml.components.image",
+            "esphomeyaml.components.interval",
+            "esphomeyaml.components.light",
+            "esphomeyaml.components.light.binary",
+            "esphomeyaml.components.light.cwww",
+            "esphomeyaml.components.light.fastled_clockless",
+            "esphomeyaml.components.light.fastled_spi",
+            "esphomeyaml.components.light.monochromatic",
+            "esphomeyaml.components.light.neopixelbus",
+            "esphomeyaml.components.light.rgb",
+            "esphomeyaml.components.light.rgbw",
+            "esphomeyaml.components.light.rgbww",
+            "esphomeyaml.components.logger",
+            "esphomeyaml.components.mqtt",
+            "esphomeyaml.components.my9231",
+            "esphomeyaml.components.ota",
+            "esphomeyaml.components.output",
+            "esphomeyaml.components.output.custom",
+            "esphomeyaml.components.output.esp8266_pwm",
+            "esphomeyaml.components.output.gpio",
+            "esphomeyaml.components.output.ledc",
+            "esphomeyaml.components.output.my9231",
+            "esphomeyaml.components.output.pca9685",
+            "esphomeyaml.components.pca9685",
+            "esphomeyaml.components.pcf8574",
+            "esphomeyaml.components.pn532",
+            "esphomeyaml.components.power_supply",
+            "esphomeyaml.components.rdm6300",
+            "esphomeyaml.components.remote_receiver",
+            "esphomeyaml.components.remote_transmitter",
+            "esphomeyaml.components.script",
+            "esphomeyaml.components.sensor",
+            "esphomeyaml.components.sensor.adc",
+            "esphomeyaml.components.sensor.ads1115",
+            "esphomeyaml.components.sensor.apds9960",
+            "esphomeyaml.components.sensor.bh1750",
+            "esphomeyaml.components.sensor.ble_rssi",
+            "esphomeyaml.components.sensor.bme280",
+            "esphomeyaml.components.sensor.bme680",
+            "esphomeyaml.components.sensor.bmp085",
+            "esphomeyaml.components.sensor.bmp280",
+            "esphomeyaml.components.sensor.cse7766",
+            "esphomeyaml.components.sensor.custom",
+            "esphomeyaml.components.sensor.dallas",
+            "esphomeyaml.components.sensor.dht",
+            "esphomeyaml.components.sensor.dht12",
+            "esphomeyaml.components.sensor.duty_cycle",
+            "esphomeyaml.components.sensor.esp32_hall",
+            "esphomeyaml.components.sensor.hdc1080",
+            "esphomeyaml.components.sensor.hlw8012",
+            "esphomeyaml.components.sensor.hmc5883l",
+            "esphomeyaml.components.sensor.homeassistant",
+            "esphomeyaml.components.sensor.htu21d",
+            "esphomeyaml.components.sensor.hx711",
+            "esphomeyaml.components.sensor.ina219",
+            "esphomeyaml.components.sensor.ina3221",
+            "esphomeyaml.components.sensor.max31855",
+            "esphomeyaml.components.sensor.max6675",
+            "esphomeyaml.components.sensor.mhz19",
+            "esphomeyaml.components.sensor.mpu6050",
+            "esphomeyaml.components.sensor.mqtt_subscribe",
+            "esphomeyaml.components.sensor.ms5611",
+            "esphomeyaml.components.sensor.pmsx003",
+            "esphomeyaml.components.sensor.pulse_counter",
+            "esphomeyaml.components.sensor.rotary_encoder",
+            "esphomeyaml.components.sensor.sht3xd",
+            "esphomeyaml.components.sensor.tcs34725",
+            "esphomeyaml.components.sensor.template",
+            "esphomeyaml.components.sensor.total_daily_energy",
+            "esphomeyaml.components.sensor.tsl2561",
+            "esphomeyaml.components.sensor.ultrasonic",
+            "esphomeyaml.components.sensor.uptime",
+            "esphomeyaml.components.sensor.wifi_signal",
+            "esphomeyaml.components.sensor.xiaomi_miflora",
+            "esphomeyaml.components.sensor.xiaomi_mijia",
+            "esphomeyaml.components.spi",
+            "esphomeyaml.components.status_led",
+            "esphomeyaml.components.stepper",
+            "esphomeyaml.components.stepper.a4988",
+            "esphomeyaml.components.stepper.uln2003",
+            "esphomeyaml.components.substitutions",
+            "esphomeyaml.components.switch",
+            "esphomeyaml.components.switch.custom",
+            "esphomeyaml.components.switch.gpio",
+            "esphomeyaml.components.switch.output",
+            "esphomeyaml.components.switch.remote_transmitter",
+            "esphomeyaml.components.switch.restart",
+            "esphomeyaml.components.switch.shutdown",
+            "esphomeyaml.components.switch.template",
+            "esphomeyaml.components.switch.uart",
+            "esphomeyaml.components.text_sensor",
+            "esphomeyaml.components.text_sensor.custom",
+            "esphomeyaml.components.text_sensor.homeassistant",
+            "esphomeyaml.components.text_sensor.mqtt_subscribe",
+            "esphomeyaml.components.text_sensor.template",
+            "esphomeyaml.components.text_sensor.version",
+            "esphomeyaml.components.time",
+            "esphomeyaml.components.time.homeassistant",
+            "esphomeyaml.components.time.sntp",
+            "esphomeyaml.components.uart",
+            "esphomeyaml.components.web_server",
+            "esphomeyaml.components.wifi",
+            "esphomeyaml.config",
+            "esphomeyaml.config_validation",
+            "esphomeyaml.const",
+            "esphomeyaml.core",
+            "esphomeyaml.core_config",
+            "esphomeyaml.cpp_generator",
+            "esphomeyaml.cpp_helpers",
+            "esphomeyaml.cpp_types",
+            "esphomeyaml.dashboard",
+            "esphomeyaml.dashboard.dashboard",
+            "esphomeyaml.espota",
+            "esphomeyaml.espota2",
+            "esphomeyaml.helpers",
+            "esphomeyaml.mqtt",
+            "esphomeyaml.pins",
+            "esphomeyaml.platformio_api",
+            "esphomeyaml.py_compat",
+            "esphomeyaml.storage_json",
+            "esphomeyaml.util",
+            "esphomeyaml.wizard",
+            "esphomeyaml.writer",
+            "esphomeyaml.yaml_util"
+        ],
+        "version": "1.10.1"
     },
     "esphomeflasher": {
         "cmdline": [],
@@ -56192,7 +56542,7 @@
             "etesync.pim",
             "etesync.service"
         ],
-        "version": "0.7.0"
+        "version": "0.8.0"
     },
     "etesync-dav": {
         "cmdline": [
@@ -56204,7 +56554,7 @@
             "etesync_dav",
             "etesync_dav.config"
         ],
-        "version": "0.3.0"
+        "version": "0.4.0"
     },
     "etgen": {
         "cmdline": [],
@@ -56309,7 +56659,7 @@
             "tests.test_helpers",
             "tests.test_services_setup"
         ],
-        "version": "0.0.2"
+        "version": "0.0.3"
     },
     "eth-docgen": {
         "cmdline": [],
@@ -58911,6 +59261,18 @@
         ],
         "version": "0.2.1"
     },
+    "ett-ds": {
+        "cmdline": [],
+        "modules": [
+            "ett_ds",
+            "ett_ds.cleanser",
+            "ett_ds.constants",
+            "ett_ds.helper",
+            "ett_ds.predictor",
+            "ett_ds.transformer"
+        ],
+        "version": "0.1"
+    },
     "etude": {
         "cmdline": [],
         "modules": [],
@@ -60947,7 +61309,6 @@
         "cmdline": [],
         "modules": [
             "evalutils",
-            "evalutils.__version__",
             "evalutils.annotations",
             "evalutils.cli",
             "evalutils.evalutils",
@@ -60956,9 +61317,12 @@
             "evalutils.roc",
             "evalutils.scorers",
             "evalutils.stats",
-            "evalutils.validators"
+            "evalutils.validators",
+            "hooks",
+            "hooks.post_gen_project",
+            "hooks.pre_gen_project"
         ],
-        "version": "0.1.15"
+        "version": "0.1.16"
     },
     "evalys": {
         "cmdline": [],
@@ -67401,7 +67765,7 @@
             "example_pkg_cloos.cli",
             "example_pkg_cloos.utils"
         ],
-        "version": "0.5.0"
+        "version": "1.0.0"
     },
     "example-pkg-demonsong": {
         "cmdline": [],
@@ -74648,6 +75012,19 @@
             "extranet.extranet"
         ],
         "version": "0.1"
+    },
+    "extranormal3": {
+        "cmdline": [
+            "ab_test.py"
+        ],
+        "modules": [
+            "extranormal3",
+            "extranormal3.curved_tools",
+            "extranormal3.extra_exafs",
+            "extranormal3.forward_fourier",
+            "extranormal3.normal_xas"
+        ],
+        "version": "0.0.1"
     },
     "extrapypi": {
         "cmdline": [],
