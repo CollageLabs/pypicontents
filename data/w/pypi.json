@@ -7099,6 +7099,7 @@
             "waldur_mastermind.analytics.migrations",
             "waldur_mastermind.analytics.migrations.0001_initial",
             "waldur_mastermind.analytics.migrations.0002_import_quotas",
+            "waldur_mastermind.analytics.migrations.0003_daily_quota_constraints",
             "waldur_mastermind.analytics.models",
             "waldur_mastermind.analytics.openstack",
             "waldur_mastermind.analytics.serializers",
@@ -7204,10 +7205,9 @@
             "waldur_mastermind.invoices.migrations.0024_immutable_default_json",
             "waldur_mastermind.invoices.migrations.0025_servicedowntime",
             "waldur_mastermind.invoices.migrations.0026_invoice__file",
+            "waldur_mastermind.invoices.migrations.0027_migrate_items",
+            "waldur_mastermind.invoices.migrations.0028_delete_offering_and_openstack_item",
             "waldur_mastermind.invoices.models",
-            "waldur_mastermind.invoices.plugins",
-            "waldur_mastermind.invoices.plugins.offering_registrator",
-            "waldur_mastermind.invoices.plugins.openstack_registrator",
             "waldur_mastermind.invoices.registrators",
             "waldur_mastermind.invoices.serializers",
             "waldur_mastermind.invoices.tasks",
@@ -7284,6 +7284,7 @@
             "waldur_mastermind.marketplace.migrations.0053_add_category_component",
             "waldur_mastermind.marketplace.migrations.0054_categorycomponentusage",
             "waldur_mastermind.marketplace.migrations.0055_offeringfile",
+            "waldur_mastermind.marketplace.migrations.0056_plan_max_amount",
             "waldur_mastermind.marketplace.models",
             "waldur_mastermind.marketplace.permissions",
             "waldur_mastermind.marketplace.plugins",
@@ -7350,6 +7351,7 @@
             "waldur_mastermind.packages.migrations.0013_packagetemplate_article_code",
             "waldur_mastermind.packages.migrations.0014_unique_package_tenant",
             "waldur_mastermind.packages.models",
+            "waldur_mastermind.packages.registrators",
             "waldur_mastermind.packages.serializers",
             "waldur_mastermind.packages.tasks",
             "waldur_mastermind.packages.urls",
@@ -7433,7 +7435,7 @@
             "waldur_mastermind.support_invoices.handlers",
             "waldur_mastermind.support_invoices.migrations",
             "waldur_mastermind.support_invoices.migrations.0001_initial",
-            "waldur_mastermind.support_invoices.models",
+            "waldur_mastermind.support_invoices.migrations.0002_delete_requestbasedoffering",
             "waldur_mastermind.support_invoices.registrators",
             "waldur_mastermind.support_invoices.utils",
             "waldur_mastermind.zabbix_openstack",
@@ -7642,7 +7644,7 @@
             "waldur_zabbix.utils",
             "waldur_zabbix.views"
         ],
-        "version": "3.3.0"
+        "version": "3.3.1"
     },
     "waldur-openstack": {
         "cmdline": [],
@@ -14731,6 +14733,7 @@
             "wavelink",
             "wavelink.backoff",
             "wavelink.client",
+            "wavelink.eqs",
             "wavelink.errors",
             "wavelink.events",
             "wavelink.node",
@@ -14738,7 +14741,7 @@
             "wavelink.stats",
             "wavelink.websocket"
         ],
-        "version": "0.2.1"
+        "version": "0.2.6"
     },
     "wavemaker": {
         "cmdline": [
@@ -18790,7 +18793,7 @@
             "web2ldap.web.session",
             "web2ldap.wsgi"
         ],
-        "version": "1.4.4"
+        "version": "1.4.5"
     },
     "web2py": {
         "cmdline": [],
@@ -19998,6 +20001,26 @@
         "cmdline": [],
         "modules": [],
         "version": ""
+    },
+    "webcollector": {
+        "cmdline": [],
+        "modules": [
+            "webcollector",
+            "webcollector.config",
+            "webcollector.crawler",
+            "webcollector.db_manager",
+            "webcollector.fetch",
+            "webcollector.filter",
+            "webcollector.generate",
+            "webcollector.model",
+            "webcollector.net",
+            "webcollector.plugin",
+            "webcollector.plugin.net",
+            "webcollector.plugin.ram",
+            "webcollector.plugin.redis",
+            "webcollector.utils"
+        ],
+        "version": "0.0.4a0"
     },
     "webcolors": {
         "cmdline": [],
@@ -29037,7 +29060,7 @@
             "wes_service.util",
             "wes_service.wes_service_main"
         ],
-        "version": "3.1"
+        "version": "3.2"
     },
     "wesci": {
         "cmdline": [],
@@ -29115,7 +29138,7 @@
             "_bootstrap.main",
             "_bootstrap.version"
         ],
-        "version": "0.5.2"
+        "version": "0.5.4"
     },
     "west-enrich": {
         "cmdline": [
@@ -39051,7 +39074,7 @@
             "wings_sanic.utils",
             "wings_sanic.views"
         ],
-        "version": "0.5.9"
+        "version": "0.5.10"
     },
     "wingspan": {
         "cmdline": [],
@@ -39693,6 +39716,7 @@
             "tests",
             "tests.conftest",
             "tests.controllers",
+            "tests.controllers.controller_with_exceptions",
             "tests.controllers.no_authentication_controller",
             "tests.controllers.simple_controller",
             "tests.entities",
@@ -39702,12 +39726,16 @@
             "tests.pagination.test_page_position_argument_inspector",
             "tests.pagination.test_page_position_argument_resolver",
             "tests.pagination.test_serializer",
+            "tests.routing",
+            "tests.routing.test_route_table",
             "tests.schema",
             "tests.schema.test_argument_type_info",
+            "tests.schema.test_response_schema",
             "tests.schema.test_type_inspection",
             "tests.test_argument_resolver",
             "tests.test_controller",
             "tests.test_encodings",
+            "tests.test_exception_handling",
             "tests.test_type_utils",
             "tests.test_version",
             "tests.urls",
@@ -39745,6 +39773,8 @@
             "winter.response_entity",
             "winter.response_status",
             "winter.routing",
+            "winter.routing.route_table",
+            "winter.routing.routing",
             "winter.schema",
             "winter.schema.controller_method_inspector",
             "winter.schema.enum_inspector",
@@ -39754,7 +39784,7 @@
             "winter.schema.type_inspection",
             "winter.type_utils"
         ],
-        "version": "1.2.2"
+        "version": "1.2.3"
     },
     "winterstone": {
         "cmdline": [],
@@ -41829,11 +41859,12 @@
         "modules": [
             "wix-elk-logger",
             "wix-elk-logger.elk-logger",
+            "wix-elk-logger.elk_logger",
             "wix_elk_logger",
             "wix_elk_logger.elk-logger",
             "wix_elk_logger.elk_logger"
         ],
-        "version": "1.0.2"
+        "version": "1.0.4"
     },
     "wix-media-platform": {
         "cmdline": [],
@@ -46554,7 +46585,7 @@
         "modules": [
             "wofryshadow.version"
         ],
-        "version": "1.0.1"
+        "version": "1.0.2"
     },
     "wofrysrw": {
         "cmdline": [],
@@ -46907,6 +46938,14 @@
             "wolframclient.utils.url"
         ],
         "version": "1.0.0.dev4"
+    },
+    "wolfreader": {
+        "cmdline": [],
+        "modules": [
+            "wolf",
+            "wolf.wolf"
+        ],
+        "version": "0.2"
     },
     "wolfson": {
         "cmdline": [],
@@ -51491,7 +51530,7 @@
             "workspacemanager.test.venvtest",
             "workspacemanager.utils"
         ],
-        "version": "0.3.1"
+        "version": "0.3.2"
     },
     "workspaces": {
         "cmdline": [],
@@ -51930,7 +51969,7 @@
             "wosplus._wos_scp",
             "wosplus.wosplus"
         ],
-        "version": "0.2.4"
+        "version": "0.2.5"
     },
     "wospyfile": {
         "cmdline": [],
@@ -52864,7 +52903,7 @@
             "wpilib.watchdog",
             "wpilib.xboxcontroller"
         ],
-        "version": "2019.1.0"
+        "version": "2019.1.1"
     },
     "wpilib-controller": {
         "cmdline": [],
@@ -54063,7 +54102,7 @@
             "wrappa.storage.file",
             "wrappa.validate"
         ],
-        "version": "0.3.1"
+        "version": "0.3.2"
     },
     "wrapper": {
         "cmdline": [],
