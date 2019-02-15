@@ -2799,7 +2799,7 @@
     "valiot-worker": {
         "cmdline": [],
         "modules": [],
-        "version": "0.8"
+        "version": "1.0"
     },
     "valipede": {
         "cmdline": [],
@@ -3055,22 +3055,25 @@
         "modules": [
             "valohai_yaml",
             "valohai_yaml.commands",
+            "valohai_yaml.lint",
             "valohai_yaml.objs",
             "valohai_yaml.objs.base",
             "valohai_yaml.objs.config",
             "valohai_yaml.objs.endpoint",
+            "valohai_yaml.objs.environment_variable",
             "valohai_yaml.objs.file",
             "valohai_yaml.objs.input",
             "valohai_yaml.objs.mount",
             "valohai_yaml.objs.parameter",
             "valohai_yaml.objs.parameter_map",
             "valohai_yaml.objs.step",
+            "valohai_yaml.objs.utils",
             "valohai_yaml.parsing",
-            "valohai_yaml.test_utils",
             "valohai_yaml.utils",
+            "valohai_yaml.utils.terminal",
             "valohai_yaml.validation"
         ],
-        "version": "0.7.1"
+        "version": "0.8.0"
     },
     "valorum": {
         "cmdline": [],
@@ -4873,19 +4876,23 @@
         "version": "0.2.0a1"
     },
     "variant-tools": {
-        "cmdline": [
-            "vtools",
-            "vtools_report"
-        ],
+        "cmdline": [],
         "modules": [
             "variant_tools",
+            "variant_tools._version",
+            "variant_tools.accessor",
             "variant_tools.annotation",
-            "variant_tools.assoTests_py3",
+            "variant_tools.assoTests",
             "variant_tools.association",
-            "variant_tools.cgatools_py3",
+            "variant_tools.association_hdf5",
+            "variant_tools.cgatools",
+            "variant_tools.checking_asso_result",
             "variant_tools.compare",
             "variant_tools.exporter",
+            "variant_tools.exporter_reader",
+            "variant_tools.geno_store",
             "variant_tools.importer",
+            "variant_tools.importer_allele_hdf5",
             "variant_tools.liftOver",
             "variant_tools.meta",
             "variant_tools.phenotype",
@@ -4895,16 +4902,19 @@
             "variant_tools.preprocessor",
             "variant_tools.project",
             "variant_tools.rtester",
-            "variant_tools.simulation",
             "variant_tools.site_options",
             "variant_tools.tester",
-            "variant_tools.ucsctools_py3",
+            "variant_tools.text_reader",
+            "variant_tools.ucsctools",
             "variant_tools.update",
             "variant_tools.utils",
             "variant_tools.variant",
-            "variant_tools.vt_sqlite3_py3"
+            "variant_tools.vt_sqlite3",
+            "variant_tools.vtools",
+            "variant_tools.vtools_report",
+            "variant_tools.worker_zmq"
         ],
-        "version": "2.7.0"
+        "version": "3.0.1"
     },
     "variant2pubmed": {
         "cmdline": [],
@@ -11310,7 +11320,7 @@
             "verchew.tests.conftest",
             "verchew.tests.test_script"
         ],
-        "version": "1.6"
+        "version": "1.6.1"
     },
     "verchy": {
         "cmdline": [],
@@ -14914,8 +14924,11 @@
     },
     "vexdb": {
         "cmdline": [],
-        "modules": [],
-        "version": "1.0.5"
+        "modules": [
+            "vexdb",
+            "vexdb.vexdb"
+        ],
+        "version": "1.0.11"
     },
     "vexer": {
         "cmdline": [],
@@ -18430,6 +18443,31 @@
         "cmdline": [],
         "modules": [],
         "version": ""
+    },
+    "viola": {
+        "cmdline": [],
+        "modules": [
+            "test",
+            "test.wsgi_bottle_test",
+            "test.wsgi_flask_test",
+            "test.wsgi_server_test",
+            "viola",
+            "viola.core",
+            "viola.core.epoll",
+            "viola.core.event_loop",
+            "viola.core.scheduler",
+            "viola.core.server",
+            "viola.core.stream",
+            "viola.exception",
+            "viola.http",
+            "viola.http.keepalive",
+            "viola.http.parser",
+            "viola.http.wrapper",
+            "viola.wsgi",
+            "viola.wsgi.server",
+            "viola.wsgi.stream"
+        ],
+        "version": "0.3.7"
     },
     "violent-webdriver": {
         "cmdline": [],
@@ -24903,9 +24941,7 @@
         "modules": [
             "tests",
             "tests.conftest",
-            "tests.test_core",
-            "tests.test_data_artifact",
-            "tests.test_forecasting",
+            "tests.test_utilities",
             "vivarium_inputs",
             "vivarium_inputs.core",
             "vivarium_inputs.data_artifact",
@@ -24915,12 +24951,24 @@
             "vivarium_inputs.data_artifact.loaders",
             "vivarium_inputs.data_artifact.passthrough",
             "vivarium_inputs.data_artifact.utilities",
-            "vivarium_inputs.forecasting",
+            "vivarium_inputs.extract",
+            "vivarium_inputs.globals",
             "vivarium_inputs.interface",
             "vivarium_inputs.mapping_extension",
-            "vivarium_inputs.utilities"
+            "vivarium_inputs.mapping_extension.alternative_risk_factor",
+            "vivarium_inputs.mapping_extension.alternative_risk_factor_template",
+            "vivarium_inputs.mapping_extension.health_technology",
+            "vivarium_inputs.mapping_extension.health_technology_template",
+            "vivarium_inputs.mapping_extension.healthcare_entity",
+            "vivarium_inputs.mapping_extension.healthcare_entity_template",
+            "vivarium_inputs.utilities",
+            "vivarium_inputs.utility_data",
+            "vivarium_inputs.validation",
+            "vivarium_inputs.validation.raw",
+            "vivarium_inputs.validation.shared",
+            "vivarium_inputs.validation.sim"
         ],
-        "version": "1.0.18"
+        "version": "2.0.1"
     },
     "vivarium-public-health": {
         "cmdline": [],
@@ -24939,7 +24987,10 @@
             "vivarium_public_health.metrics",
             "vivarium_public_health.metrics.disability",
             "vivarium_public_health.metrics.inspector",
+            "vivarium_public_health.metrics.mortality",
+            "vivarium_public_health.metrics.risk",
             "vivarium_public_health.metrics.sample_history",
+            "vivarium_public_health.metrics.utilities",
             "vivarium_public_health.mslt",
             "vivarium_public_health.mslt.delay",
             "vivarium_public_health.mslt.disease",
@@ -24954,7 +25005,7 @@
             "vivarium_public_health.population.mortality",
             "vivarium_public_health.risks",
             "vivarium_public_health.risks.base_risk",
-            "vivarium_public_health.risks.data_transformation",
+            "vivarium_public_health.risks.data_transformations",
             "vivarium_public_health.risks.distributions",
             "vivarium_public_health.risks.effect",
             "vivarium_public_health.testing",
@@ -24963,11 +25014,12 @@
             "vivarium_public_health.treatment",
             "vivarium_public_health.treatment.base_treatment",
             "vivarium_public_health.treatment.healthcare_access",
+            "vivarium_public_health.treatment.magic_wand",
             "vivarium_public_health.treatment.mass_treatment_campaign",
             "vivarium_public_health.treatment.schedule",
-            "vivarium_public_health.util"
+            "vivarium_public_health.treatment.therapeutic_inertia"
         ],
-        "version": "0.8.13"
+        "version": "0.9.1"
     },
     "vivek": {
         "cmdline": [],
@@ -25076,7 +25128,6 @@
             "vivotool.command_line",
             "vivotool.harvester",
             "vivotool.harvester.elements",
-            "vivotool.test",
             "vivotool.tests",
             "vivotool.tests.test_file_utils",
             "vivotool.tests.test_harvester",
@@ -25102,7 +25153,7 @@
             "vivotool.vivo",
             "vivotool.vivo.vivo"
         ],
-        "version": "0.0.31"
+        "version": "0.0.38"
     },
     "vix": {
         "cmdline": [],
@@ -31876,6 +31927,14 @@
             "voyage.models"
         ],
         "version": "0.1.2"
+    },
+    "voyager-icon": {
+        "cmdline": [],
+        "modules": [
+            "icon_lib",
+            "icon_lib.voyager_icon"
+        ],
+        "version": "0.0.1"
     },
     "voyager-python": {
         "cmdline": [],
@@ -39344,7 +39403,7 @@
             "vulners.common.cookiejar",
             "vulners.common.ratelimit"
         ],
-        "version": "1.4.3"
+        "version": "1.4.4"
     },
     "vulnix": {
         "cmdline": [],
