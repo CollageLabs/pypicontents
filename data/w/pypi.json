@@ -12981,11 +12981,18 @@
             "watools.Collect.ETmonitor.Es_monthly",
             "watools.Collect.ETmonitor.Ew_monthly",
             "watools.Collect.ETmonitor.Tr_monthly",
+            "watools.Collect.FEWS",
+            "watools.Collect.FEWS.ETpot_daily",
             "watools.Collect.GLDAS",
             "watools.Collect.GLDAS.CLSM_DataAccess",
             "watools.Collect.GLDAS.CLSM_daily",
             "watools.Collect.GLDAS.CLSM_monthly",
+            "watools.Collect.GLDAS.CLSM_three_hourly",
             "watools.Collect.GLDAS.DataAccess",
+            "watools.Collect.GLDAS.NOAH_DataAccess",
+            "watools.Collect.GLDAS.NOAH_daily",
+            "watools.Collect.GLDAS.NOAH_monthly",
+            "watools.Collect.GLDAS.NOAH_three_hourly",
             "watools.Collect.GLDAS.daily",
             "watools.Collect.GLDAS.monthly",
             "watools.Collect.GLDAS.three_hourly",
@@ -12993,6 +13000,8 @@
             "watools.Collect.GLEAM.DataAccess",
             "watools.Collect.GLEAM.ET_daily",
             "watools.Collect.GLEAM.ET_monthly",
+            "watools.Collect.GLEAM.ETpot_daily",
+            "watools.Collect.GLEAM.ETpot_monthly",
             "watools.Collect.HiHydroSoil",
             "watools.Collect.HiHydroSoil.DataAccess",
             "watools.Collect.HiHydroSoil.ThetaSat_TopSoil",
@@ -13038,6 +13047,9 @@
             "watools.Collect.MYD13",
             "watools.Collect.MYD13.DataAccess",
             "watools.Collect.MYD13.NDVI_16daily",
+            "watools.Collect.PROBAV",
+            "watools.Collect.PROBAV.DataAccess",
+            "watools.Collect.PROBAV.five_daily",
             "watools.Collect.RFE",
             "watools.Collect.RFE.DataAccess",
             "watools.Collect.RFE.daily",
@@ -13047,7 +13059,20 @@
             "watools.Collect.SEBS.monthly",
             "watools.Collect.SSEBop",
             "watools.Collect.SSEBop.DataAccess",
-            "watools.Collect.SSEBop.monthly",
+            "watools.Collect.SSEBop.ET_monthly",
+            "watools.Collect.SSEBop.ETpot_daily",
+            "watools.Collect.SoilGrids",
+            "watools.Collect.SoilGrids.Absolute_Depth_To_Bedrock",
+            "watools.Collect.SoilGrids.Bulk_Density",
+            "watools.Collect.SoilGrids.Clay_Content",
+            "watools.Collect.SoilGrids.Coarse_Fragment_Volumetric",
+            "watools.Collect.SoilGrids.DataAccess",
+            "watools.Collect.SoilGrids.Depth_To_Bedrock",
+            "watools.Collect.SoilGrids.Organic_Carbon_Content",
+            "watools.Collect.SoilGrids.Organic_Carbon_Stock",
+            "watools.Collect.SoilGrids.Predicted_Probability_Of_Occurrence",
+            "watools.Collect.SoilGrids.Sand_Content",
+            "watools.Collect.SoilGrids.Silt_Content",
             "watools.Collect.TRMM",
             "watools.Collect.TRMM.DataAccess",
             "watools.Collect.TRMM.daily",
@@ -13137,6 +13162,13 @@
             "watools.Products.ETref.SlopeInfluence_ETref",
             "watools.Products.ETref.daily",
             "watools.Products.ETref.monthly",
+            "watools.Products.SoilGrids",
+            "watools.Products.SoilGrids.K_Sat",
+            "watools.Products.SoilGrids.Theta_FC",
+            "watools.Products.SoilGrids.Theta_Res",
+            "watools.Products.SoilGrids.Theta_Sat",
+            "watools.Products.SoilGrids.Theta_Sat2",
+            "watools.Products.SoilGrids.Water_Holding_Capacity",
             "watools.Sheets",
             "watools.Sheets.sheet1",
             "watools.Sheets.sheet2",
@@ -13146,7 +13178,7 @@
             "watools.Sheets.sheet7",
             "watools.WebAccounts"
         ],
-        "version": "0.0.5"
+        "version": "0.0.8"
     },
     "wator": {
         "cmdline": [],
@@ -22797,6 +22829,14 @@
         ],
         "version": "1.1.9"
     },
+    "webmail-domains": {
+        "cmdline": [],
+        "modules": [
+            "webmail_domains",
+            "webmail_domains.webmail_domains"
+        ],
+        "version": "0.22"
+    },
     "webmake": {
         "cmdline": [],
         "modules": [
@@ -29056,10 +29096,6 @@
     "werobot": {
         "cmdline": [],
         "modules": [
-            "django_test",
-            "django_test.settings",
-            "django_test.urls",
-            "django_test.wsgi",
             "werobot",
             "werobot.client",
             "werobot.config",
@@ -29086,13 +29122,14 @@
             "werobot.session.filestorage",
             "werobot.session.mongodbstorage",
             "werobot.session.mysqlstorage",
+            "werobot.session.postgresqlstorage",
             "werobot.session.redisstorage",
             "werobot.session.saekvstorage",
             "werobot.session.sqlitestorage",
             "werobot.testing",
             "werobot.utils"
         ],
-        "version": "1.7.0"
+        "version": "1.8.0"
     },
     "wes": {
         "cmdline": [],
@@ -37758,15 +37795,8 @@
     },
     "win-app-packager": {
         "cmdline": [],
-        "modules": [
-            "win_app_packager",
-            "win_app_packager.run_win_app",
-            "win_app_packager.win_app_package_builder",
-            "win_app_packager.win_app_package_exe_config",
-            "win_app_packager.win_app_package_win_pe_info",
-            "win_app_packager.win_known_paths"
-        ],
-        "version": "1.2.4"
+        "modules": [],
+        "version": "1.2.5"
     },
     "win-bash-aliases": {
         "cmdline": [],
@@ -39036,10 +39066,24 @@
         "modules": [
             "winfspy",
             "winfspy._version",
-            "winfspy.bindings",
-            "winfspy.utils"
+            "winfspy.exceptions",
+            "winfspy.file_system",
+            "winfspy.operations",
+            "winfspy.plumbing",
+            "winfspy.plumbing.bindings",
+            "winfspy.plumbing.file_system_interface",
+            "winfspy.plumbing.get_winfsp_dir",
+            "winfspy.plumbing.service",
+            "winfspy.plumbing.win32_filetime",
+            "winfspy.plumbing.winstuff",
+            "winfspy2",
+            "winfspy2.fs_interface",
+            "winfspy2.plumbing",
+            "winfspy2.plumbing.fs_interface_trampoline",
+            "winfspy2.plumbing.volume_params",
+            "winfspy2.porcelain"
         ],
-        "version": "0.2.0"
+        "version": "0.3.1"
     },
     "wingcommander": {
         "cmdline": [],
@@ -52532,6 +52576,15 @@
         "modules": [],
         "version": "0.1"
     },
+    "wp-monitor": {
+        "cmdline": [],
+        "modules": [
+            "resources",
+            "wpmonitor",
+            "wpmonitor._wpmonitor"
+        ],
+        "version": "1.0"
+    },
     "wp-version-checker": {
         "cmdline": [],
         "modules": [
@@ -59911,10 +59964,8 @@
     },
     "wxasync": {
         "cmdline": [],
-        "modules": [
-            "wxasync"
-        ],
-        "version": "0.2"
+        "modules": [],
+        "version": "0.3"
     },
     "wxautocompletectrl": {
         "cmdline": [],
