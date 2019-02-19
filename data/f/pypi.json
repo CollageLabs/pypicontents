@@ -6369,22 +6369,22 @@
         "modules": [
             "faculty_cli",
             "faculty_cli.auth",
-            "faculty_cli.baskerville",
-            "faculty_cli.casebook",
             "faculty_cli.cli",
             "faculty_cli.client",
             "faculty_cli.config",
-            "faculty_cli.galleon",
             "faculty_cli.hound",
             "faculty_cli.parse",
             "faculty_cli.shell",
             "faculty_cli.update",
             "faculty_cli.version",
             "test",
+            "test.conftest",
+            "test.fixtures",
             "test.test_config",
-            "test.test_parse"
+            "test.test_parse",
+            "test.test_projects"
         ],
-        "version": "0.11.0"
+        "version": "0.11.1"
     },
     "faculty-hound": {
         "cmdline": [],
@@ -8205,7 +8205,7 @@
             "fakeredis._server",
             "fakeredis._zset"
         ],
-        "version": "1.0.1"
+        "version": "1.0.2"
     },
     "fakeredis-fix": {
         "cmdline": [],
@@ -9335,6 +9335,13 @@
             "falkustest.integ"
         ],
         "version": "1.2"
+    },
+    "fallback-property": {
+        "cmdline": [],
+        "modules": [
+            "fallback_property"
+        ],
+        "version": "0.1.0"
     },
     "fallball": {
         "cmdline": [],
@@ -12995,7 +13002,7 @@
             "fastapi.security.utils",
             "fastapi.utils"
         ],
-        "version": "0.5.0"
+        "version": "0.5.1"
     },
     "fastaq": {
         "cmdline": [],
@@ -13463,7 +13470,7 @@
         "modules": [
             "faster_numpy"
         ],
-        "version": "0.1.0"
+        "version": "0.1.1"
     },
     "faster-particles": {
         "cmdline": [],
@@ -13640,10 +13647,9 @@
             "fastgenomics.parameters",
             "fastgenomics.process",
             "fastgenomics.summary",
-            "fastgenomics.testing",
-            "fastgenomics.utils"
+            "fastgenomics.testing"
         ],
-        "version": "2.0.1"
+        "version": "2.0.2"
     },
     "fastgeo": {
         "cmdline": [],
@@ -13934,7 +13940,7 @@
             "fastlane.worker.scheduler",
             "fastlane.worker.webhooks"
         ],
-        "version": "1.3.2"
+        "version": "1.3.4"
     },
     "fastlang": {
         "cmdline": [],
@@ -17562,6 +17568,8 @@
         "modules": [
             "fbotics",
             "fbotics._version",
+            "fbotics.client",
+            "fbotics.client.exceptions",
             "fbotics.models",
             "fbotics.models.attachment",
             "fbotics.models.buttons",
@@ -17574,11 +17582,16 @@
             "fbotics.models.recipient",
             "fbotics.models.request",
             "fbotics.tests",
-            "fbotics.tests.conftest",
-            "fbotics.tests.test_retrieve_supported_tags",
-            "fbotics.tests.test_send_message"
+            "fbotics.tests.client",
+            "fbotics.tests.client.test_retrieve_supported_tags",
+            "fbotics.tests.client.test_send_button_template",
+            "fbotics.tests.client.test_send_generic_template",
+            "fbotics.tests.client.test_send_quick_replies",
+            "fbotics.tests.client.test_send_rich_media",
+            "fbotics.tests.client.test_send_text",
+            "fbotics.tests.conftest"
         ],
-        "version": "0.0.6"
+        "version": "0.0.7"
     },
     "fbp-calculator": {
         "cmdline": [],
@@ -17876,7 +17889,7 @@
             "fbs_runtime.licensing",
             "fbs_runtime.platform"
         ],
-        "version": "0.6.7"
+        "version": "0.6.8"
     },
     "fbscraper": {
         "cmdline": [],
@@ -23255,6 +23268,7 @@
         "cmdline": [],
         "modules": [
             "examples",
+            "examples.api_key",
             "examples.dashboard",
             "examples.dashboard_export_models",
             "examples.dashboard_import_models",
@@ -23265,6 +23279,7 @@
             "examples.faq_matcher_load",
             "examples.faq_matcher_save_training_samples_to_csv",
             "examples.faq_matcher_single_language",
+            "examples.health",
             "examples.intent_classifier",
             "examples.intent_classifier_load",
             "examples.intent_classifier_save_training_samples_to_csv",
@@ -23273,41 +23288,20 @@
             "examples.regex_extractor",
             "examples.sentiment_detector",
             "examples.similarity_extractor",
-            "examples.similarity_extractor_alcohol",
-            "examples.similarity_extractor_breakfast",
-            "examples.similarity_extractor_breakfast_lunch_snack",
-            "examples.similarity_extractor_cook",
-            "examples.similarity_extractor_dairy",
-            "examples.similarity_extractor_diabetes",
-            "examples.similarity_extractor_dressings_and_sauces",
-            "examples.similarity_extractor_drink",
-            "examples.similarity_extractor_fat_and_oil",
-            "examples.similarity_extractor_food_labels",
-            "examples.similarity_extractor_fruit_and_veg",
-            "examples.similarity_extractor_healthy",
-            "examples.similarity_extractor_kids",
-            "examples.similarity_extractor_lunch",
-            "examples.similarity_extractor_pharma",
-            "examples.similarity_extractor_protein",
-            "examples.similarity_extractor_salad",
-            "examples.similarity_extractor_salt",
-            "examples.similarity_extractor_salt_sugar",
-            "examples.similarity_extractor_snack",
-            "examples.similarity_extractor_starch",
-            "examples.similarity_extractor_sugar",
-            "examples.similarity_extractor_takeout",
-            "examples.similarity_extractor_tinned",
             "examples.text_classifier",
             "examples.text_clsfr_load",
             "examples.word_manifold_modify",
             "examples.word_manifold_use",
             "feersum_nlu",
             "feersum_nlu.api",
+            "feersum_nlu.api.api_keys_api",
+            "feersum_nlu.api.crf_entity_extractors_api",
             "feersum_nlu.api.dashboard_api",
             "feersum_nlu.api.data_objects_api",
             "feersum_nlu.api.date_parsers_api",
             "feersum_nlu.api.duckling_entity_extractors_api",
             "feersum_nlu.api.faq_matchers_api",
+            "feersum_nlu.api.health_api",
             "feersum_nlu.api.intent_classifiers_api",
             "feersum_nlu.api.language_recognisers_api",
             "feersum_nlu.api.person_name_entity_extractors_api",
@@ -23319,8 +23313,14 @@
             "feersum_nlu.api_client",
             "feersum_nlu.configuration",
             "feersum_nlu.models",
+            "feersum_nlu.models.api_key_create_details",
+            "feersum_nlu.models.api_key_instance_detail",
             "feersum_nlu.models.class_label",
             "feersum_nlu.models.class_label_pair",
+            "feersum_nlu.models.crf_entity",
+            "feersum_nlu.models.crf_entity_extractor_create_details",
+            "feersum_nlu.models.crf_entity_extractor_instance_detail",
+            "feersum_nlu.models.crf_sample",
             "feersum_nlu.models.dashboard_detail",
             "feersum_nlu.models.dashboard_model_detail",
             "feersum_nlu.models.data_object",
@@ -23356,6 +23356,8 @@
             "feersum_nlu.models.text_input",
             "feersum_nlu.models.total_samples",
             "feersum_nlu.models.train_details",
+            "feersum_nlu.models.tsne_sample",
+            "feersum_nlu.models.tsne_settings",
             "feersum_nlu.models.word_and_distance",
             "feersum_nlu.models.word_and_threshold",
             "feersum_nlu.models.word_manifold_create_details",
@@ -23364,6 +23366,7 @@
             "feersum_nlu_util",
             "feersum_nlu_util.transfer",
             "test",
+            "test.test_dashboard",
             "test.test_data_object",
             "test.test_duckling_extractor",
             "test.test_faq_matcher",
@@ -23375,7 +23378,7 @@
             "test.test_text_classifier",
             "test.test_word_manifold_use"
         ],
-        "version": "2.0.28"
+        "version": "2.0.29"
     },
     "feets": {
         "cmdline": [],
@@ -23854,7 +23857,7 @@
             "pagepermissions.templatetags",
             "pagepermissions.templatetags.feincms_pagepermissions_tags"
         ],
-        "version": "0.3.3"
+        "version": "0.3.4"
     },
     "feincms-pages-api": {
         "cmdline": [],
@@ -38469,7 +38472,7 @@
         ],
         "version": "0.1.29"
     },
-    "firebase-stream-harris-beg": {
+    "firebase-stream": {
         "cmdline": [],
         "modules": [],
         "version": ""
@@ -38478,6 +38481,14 @@
         "cmdline": [],
         "modules": [],
         "version": ""
+    },
+    "firebase-streamer": {
+        "cmdline": [],
+        "modules": [
+            "FirebaseStream",
+            "FirebaseStream.FirebaseStream"
+        ],
+        "version": "0.0.1"
     },
     "firebase-token-generator": {
         "cmdline": [],
@@ -40778,6 +40789,7 @@
         "modules": [
             "fissa",
             "fissa.ROI",
+            "fissa.bgf0",
             "fissa.core",
             "fissa.datahandler",
             "fissa.datahandler_framebyframe",
@@ -40786,7 +40798,7 @@
             "fissa.readimagejrois",
             "fissa.roitools"
         ],
-        "version": "0.5.2"
+        "version": "0.5.3"
     },
     "fission": {
         "cmdline": [],
@@ -41091,7 +41103,7 @@
             "fitch.testcase",
             "fitch.utils"
         ],
-        "version": "0.1.0"
+        "version": "0.2.0"
     },
     "fitchain": {
         "cmdline": [],
@@ -43212,7 +43224,7 @@
             "flack.oauth",
             "flack.utils"
         ],
-        "version": "1.2.0"
+        "version": "1.2.1"
     },
     "flackon": {
         "cmdline": [],
@@ -43338,6 +43350,7 @@
             "tests.autolib.test_utils",
             "tests.conftest",
             "tests.response_mocks",
+            "tests.test_autopwn",
             "tests.test_cli",
             "tests.test_config",
             "tests.test_credentials",
@@ -43347,7 +43360,7 @@
             "tests.test_project",
             "tests.test_utils"
         ],
-        "version": "0.6.1"
+        "version": "0.7.0"
     },
     "flagen": {
         "cmdline": [],
@@ -43512,7 +43525,7 @@
             "flake8.style_guide",
             "flake8.utils"
         ],
-        "version": "3.7.5"
+        "version": "3.7.6"
     },
     "flake8-aaa": {
         "cmdline": [],
@@ -43641,7 +43654,7 @@
             "flake8_class_attributes_order",
             "flake8_class_attributes_order.checker"
         ],
-        "version": "0.0.1"
+        "version": "0.0.2"
     },
     "flake8-class-newline": {
         "cmdline": [],
@@ -45592,6 +45605,16 @@
         ],
         "version": "1.2.0"
     },
+    "flashgamma": {
+        "cmdline": [],
+        "modules": [
+            "flashgamma",
+            "flashgamma.algorithms",
+            "flashgamma.distribution",
+            "flashgamma.helpers"
+        ],
+        "version": "0.0.1"
+    },
     "flashlight": {
         "cmdline": [],
         "modules": [
@@ -46066,8 +46089,10 @@
     },
     "flask-and-redis": {
         "cmdline": [],
-        "modules": [],
-        "version": "0.7"
+        "modules": [
+            "flask_redis"
+        ],
+        "version": "1.0.0"
     },
     "flask-annex": {
         "cmdline": [],
@@ -50909,6 +50934,13 @@
             "flask_indieauth"
         ],
         "version": "0.0.3.2"
+    },
+    "flask-inflate": {
+        "cmdline": [],
+        "modules": [
+            "flask_inflate"
+        ],
+        "version": "0.1"
     },
     "flask-influxdb": {
         "cmdline": [],
@@ -62717,9 +62749,10 @@
             "fleader",
             "fleader.fleader",
             "fleader.pider",
+            "fleader.rider",
             "fleader.test"
         ],
-        "version": "0.0.10"
+        "version": "0.0.11"
     },
     "fleaker": {
         "cmdline": [],
@@ -72258,6 +72291,15 @@
         ],
         "version": "0.5.2"
     },
+    "fn-reflection": {
+        "cmdline": [],
+        "modules": [
+            "fn_reflection",
+            "fn_reflection._capcell",
+            "fn_reflection.util"
+        ],
+        "version": "0.2.3"
+    },
     "fnal-column-analysis-tools": {
         "cmdline": [],
         "modules": [
@@ -73548,7 +73590,7 @@
         "modules": [
             "foliant.preprocessors.replace"
         ],
-        "version": "1.0.1"
+        "version": "1.0.2"
     },
     "foliantcontrib-runcommands": {
         "cmdline": [],
@@ -73720,9 +73762,6 @@
     "followthemoney": {
         "cmdline": [],
         "modules": [
-            "dedupe",
-            "dedupe.test_linker",
-            "dedupe.test_recon",
             "followthemoney",
             "followthemoney.compare",
             "followthemoney.dedupe",
@@ -73742,6 +73781,7 @@
             "followthemoney.mapping.sql",
             "followthemoney.messages",
             "followthemoney.model",
+            "followthemoney.namespace",
             "followthemoney.ontology",
             "followthemoney.property",
             "followthemoney.proxy",
@@ -73767,30 +73807,9 @@
             "followthemoney.types.string",
             "followthemoney.types.text",
             "followthemoney.types.url",
-            "followthemoney.util",
-            "graph",
-            "graph.test_export",
-            "graph.test_statement",
-            "types",
-            "types.test_addresses",
-            "types.test_checksum",
-            "types.test_common",
-            "types.test_countries",
-            "types.test_dates",
-            "types.test_domains",
-            "types.test_emails",
-            "types.test_entity",
-            "types.test_iban",
-            "types.test_identifiers",
-            "types.test_ip",
-            "types.test_languages",
-            "types.test_mimetypes",
-            "types.test_names",
-            "types.test_phones",
-            "types.test_registry",
-            "types.test_urls"
+            "followthemoney.util"
         ],
-        "version": "1.5.9"
+        "version": "1.6.0"
     },
     "followthemoney-enrich": {
         "cmdline": [],
@@ -73804,7 +73823,7 @@
             "followthemoney_enrich.result",
             "followthemoney_enrich.util"
         ],
-        "version": "1.5.9"
+        "version": "1.6.0"
     },
     "followthemoney-integrate": {
         "cmdline": [],
@@ -73816,7 +73835,7 @@
             "followthemoney_integrate.util",
             "followthemoney_integrate.views"
         ],
-        "version": "1.5.9"
+        "version": "1.6.0"
     },
     "followthemoney-util": {
         "cmdline": [],
@@ -73832,7 +73851,7 @@
             "followthemoney_util.results",
             "followthemoney_util.util"
         ],
-        "version": "1.5.9"
+        "version": "1.6.0"
     },
     "folmon": {
         "cmdline": [],
@@ -74646,6 +74665,7 @@
             "fontTools.svgLib.path",
             "fontTools.svgLib.path.arc",
             "fontTools.svgLib.path.parser",
+            "fontTools.svgLib.path.shapes",
             "fontTools.t1Lib",
             "fontTools.ttLib",
             "fontTools.ttLib.macUtils",
@@ -74786,7 +74806,7 @@
             "fontTools.voltLib.lexer",
             "fontTools.voltLib.parser"
         ],
-        "version": "3.37.3"
+        "version": "3.38.0"
     },
     "fonty": {
         "cmdline": [],
@@ -77671,7 +77691,7 @@
             "formica.stack_waiter",
             "formica.yaml_tags"
         ],
-        "version": "0.9.7"
+        "version": "0.10.0"
     },
     "formiko": {
         "cmdline": [],
@@ -79734,11 +79754,18 @@
         "modules": [
             "foxaur",
             "foxaur.aur",
+            "foxaur.clear_cache",
             "foxaur.handlers",
+            "foxaur.install",
+            "foxaur.list",
             "foxaur.pacman",
-            "foxaur.parser"
+            "foxaur.parser",
+            "foxaur.remove",
+            "foxaur.sync",
+            "foxaur.update",
+            "foxaur.wrappers"
         ],
-        "version": "0.0.3"
+        "version": "0.1.0"
     },
     "foxdot": {
         "cmdline": [],
@@ -79981,7 +80008,7 @@
             "foxyproxy.upstream.pythoncard",
             "foxyproxy.upstream.register"
         ],
-        "version": "2.2.5"
+        "version": "2.2.6"
     },
     "foy-python": {
         "cmdline": [],
@@ -80170,9 +80197,10 @@
             "fpd.ransac_tools",
             "fpd.segmented_dpc_class",
             "fpd.synthetic_data",
-            "fpd.tem_tools"
+            "fpd.tem_tools",
+            "fpd.utils"
         ],
-        "version": "0.1.4"
+        "version": "0.1.5"
     },
     "fpd-data-processing": {
         "cmdline": [],
@@ -80357,6 +80385,7 @@
             "fpl.utils",
             "tests",
             "tests.conftest",
+            "tests.helper",
             "tests.test_classic_league",
             "tests.test_fixture",
             "tests.test_fpl",
@@ -80367,7 +80396,7 @@
             "tests.test_team",
             "tests.test_user"
         ],
-        "version": "0.6.1"
+        "version": "0.6.2"
     },
     "fpl-test": {
         "cmdline": [],
@@ -81892,7 +81921,6 @@
             "frasco.upload.utils",
             "frasco.users",
             "frasco.users.auth",
-            "frasco.users.auth.ldap",
             "frasco.users.auth.oauth",
             "frasco.users.avatars",
             "frasco.users.blueprint",
@@ -81905,7 +81933,7 @@
             "frasco.users.user",
             "frasco.utils"
         ],
-        "version": "1.1.0"
+        "version": "1.1.1"
     },
     "frasco-admin": {
         "cmdline": [],
@@ -86086,7 +86114,7 @@
             "frida",
             "frida.core"
         ],
-        "version": "12.3.1"
+        "version": "12.3.2"
     },
     "frida-android-adb": {
         "cmdline": [],
@@ -90573,6 +90601,13 @@
         "cmdline": [],
         "modules": [],
         "version": ""
+    },
+    "ftdu": {
+        "cmdline": [],
+        "modules": [
+            "ftdu"
+        ],
+        "version": "0.0.1"
     },
     "fte": {
         "cmdline": [],
@@ -97656,7 +97691,7 @@
             "functional_pipeline.helpers.utils",
             "functional_pipeline.pipeline"
         ],
-        "version": "0.2.0"
+        "version": "0.3.0"
     },
     "functionalcache": {
         "cmdline": [],
@@ -98669,6 +98704,16 @@
             "funniest.command_line",
             "funniest.joke_file"
         ],
+        "version": "0.1"
+    },
+    "funniest-xink": {
+        "cmdline": [],
+        "modules": [],
+        "version": "0.1"
+    },
+    "funniest-xkn": {
+        "cmdline": [],
+        "modules": [],
         "version": "0.1"
     },
     "funniest-yassine": {
@@ -102913,7 +102958,7 @@
             "fzutils.time_utils",
             "fzutils.url_utils"
         ],
-        "version": "0.2.5.7"
+        "version": "0.2.5.8"
     },
     "fzysearch": {
         "cmdline": [],
