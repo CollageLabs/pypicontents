@@ -4232,7 +4232,7 @@
             "nanostream.watchdog",
             "nanostream.watchdog.watchdog"
         ],
-        "version": "0.1.16"
+        "version": "0.1.20"
     },
     "nanostructureucph": {
         "cmdline": [],
@@ -7102,10 +7102,6 @@
     "nark": {
         "cmdline": [],
         "modules": [
-            "migrations",
-            "migrations.manage",
-            "migrations.versions",
-            "migrations.versions.001_Add_deleted_columns",
             "nark",
             "nark.backends",
             "nark.backends.sqlalchemy",
@@ -7148,6 +7144,10 @@
             "nark.managers.fact",
             "nark.managers.migrate",
             "nark.managers.tag",
+            "nark.migrations",
+            "nark.migrations.manage",
+            "nark.migrations.versions",
+            "nark.migrations.versions.001_Add_deleted_columns",
             "nark.reports",
             "tests",
             "tests.backends",
@@ -7172,7 +7172,7 @@
             "tests.nark.test_reports",
             "tests.nark.test_storage"
         ],
-        "version": "3.0.0a31"
+        "version": "3.0.0a33"
     },
     "narmer": {
         "cmdline": [],
@@ -8567,6 +8567,11 @@
             "nautacli.nauta"
         ],
         "version": "0.4"
+    },
+    "nautc": {
+        "cmdline": [],
+        "modules": [],
+        "version": "0.1.0"
     },
     "nauth": {
         "cmdline": [],
@@ -16866,7 +16871,7 @@
             "negotiator_common.config",
             "negotiator_common.utils"
         ],
-        "version": "0.8.4"
+        "version": "0.8.5"
     },
     "negotiator-guest": {
         "cmdline": [],
@@ -16874,7 +16879,7 @@
             "negotiator_guest",
             "negotiator_guest.cli"
         ],
-        "version": "0.8.4"
+        "version": "0.8.5"
     },
     "negotiator-host": {
         "cmdline": [],
@@ -16882,7 +16887,7 @@
             "negotiator_host",
             "negotiator_host.cli"
         ],
-        "version": "0.8.4"
+        "version": "0.8.5"
     },
     "negotiator2": {
         "cmdline": [],
@@ -18477,10 +18482,13 @@
             "nengo_loihi.builder.builder",
             "nengo_loihi.builder.connection",
             "nengo_loihi.builder.ensemble",
+            "nengo_loihi.builder.nengo_dl",
             "nengo_loihi.builder.node",
             "nengo_loihi.builder.probe",
             "nengo_loihi.builder.tests",
             "nengo_loihi.builder.tests.test_builder",
+            "nengo_loihi.builder.tests.test_nengo_dl",
+            "nengo_loihi.compat",
             "nengo_loihi.config",
             "nengo_loihi.conv",
             "nengo_loihi.decode_neurons",
@@ -18488,7 +18496,7 @@
             "nengo_loihi.emulator",
             "nengo_loihi.emulator.interface",
             "nengo_loihi.emulator.tests",
-            "nengo_loihi.emulator.tests.test_emulator",
+            "nengo_loihi.emulator.tests.test_interface",
             "nengo_loihi.hardware",
             "nengo_loihi.hardware.allocators",
             "nengo_loihi.hardware.builder",
@@ -18497,7 +18505,8 @@
             "nengo_loihi.hardware.nxsdk_shim",
             "nengo_loihi.hardware.tests",
             "nengo_loihi.hardware.tests.test_allocators",
-            "nengo_loihi.hardware.tests.test_simulator",
+            "nengo_loihi.hardware.tests.test_interface",
+            "nengo_loihi.hardware.tests.test_nxsdk_objects",
             "nengo_loihi.hardware.validate",
             "nengo_loihi.inputs",
             "nengo_loihi.neurons",
@@ -18505,30 +18514,27 @@
             "nengo_loihi.simulator",
             "nengo_loihi.splitter",
             "nengo_loihi.tests",
-            "nengo_loihi.tests.test_communication",
+            "nengo_loihi.tests.test_block",
             "nengo_loihi.tests.test_connection",
             "nengo_loihi.tests.test_conv",
             "nengo_loihi.tests.test_decode_neurons",
             "nengo_loihi.tests.test_discretize",
-            "nengo_loihi.tests.test_ens_on_host",
             "nengo_loihi.tests.test_ensemble",
             "nengo_loihi.tests.test_examples",
+            "nengo_loihi.tests.test_inputs",
             "nengo_loihi.tests.test_learning",
-            "nengo_loihi.tests.test_model",
-            "nengo_loihi.tests.test_multiple",
             "nengo_loihi.tests.test_neurons",
+            "nengo_loihi.tests.test_node",
             "nengo_loihi.tests.test_passthrough",
-            "nengo_loihi.tests.test_precompute",
             "nengo_loihi.tests.test_probe",
-            "nengo_loihi.tests.test_radius",
             "nengo_loihi.tests.test_simulator",
-            "nengo_loihi.tests.test_snips",
             "nengo_loihi.tests.test_splitter",
             "nengo_loihi.tests.test_testing",
+            "nengo_loihi.tests.test_validate",
             "nengo_loihi.validate",
             "nengo_loihi.version"
         ],
-        "version": "0.5.0"
+        "version": "0.6.0"
     },
     "nengo-ocl": {
         "cmdline": [],
@@ -29473,6 +29479,47 @@
         ],
         "version": "2018.11.13"
     },
+    "netapp-ocum": {
+        "cmdline": [],
+        "modules": [
+            "netapp_ocum",
+            "netapp_ocum.client",
+            "netapp_ocum.client_test",
+            "netapp_ocum.debug",
+            "netapp_ocum.http",
+            "netapp_ocum.http_test",
+            "netapp_ocum.objects",
+            "netapp_ocum.objects.aggregate",
+            "netapp_ocum.objects.aggregate_metrics",
+            "netapp_ocum.objects.aggregate_metrics_test",
+            "netapp_ocum.objects.aggregate_test",
+            "netapp_ocum.objects.base",
+            "netapp_ocum.objects.base_test",
+            "netapp_ocum.objects.cluster",
+            "netapp_ocum.objects.cluster_test",
+            "netapp_ocum.objects.event",
+            "netapp_ocum.objects.event_test",
+            "netapp_ocum.objects.lif",
+            "netapp_ocum.objects.lif_test",
+            "netapp_ocum.objects.lun",
+            "netapp_ocum.objects.lun_test",
+            "netapp_ocum.objects.namespace",
+            "netapp_ocum.objects.namespace_test",
+            "netapp_ocum.objects.node",
+            "netapp_ocum.objects.node_test",
+            "netapp_ocum.objects.port",
+            "netapp_ocum.objects.port_test",
+            "netapp_ocum.objects.svm",
+            "netapp_ocum.objects.svm_test",
+            "netapp_ocum.objects.volume",
+            "netapp_ocum.objects.volume_metrics",
+            "netapp_ocum.objects.volume_metrics_test",
+            "netapp_ocum.objects.volume_test",
+            "netapp_ocum.settings",
+            "netapp_ocum.settings_test"
+        ],
+        "version": "0.1.3"
+    },
     "netapp-santricity": {
         "cmdline": [],
         "modules": [
@@ -33873,7 +33920,7 @@
     "netket": {
         "cmdline": [],
         "modules": [],
-        "version": "2.0b1"
+        "version": "2.0b2"
     },
     "netki-partner-client": {
         "cmdline": [],
@@ -44278,7 +44325,7 @@
             "newsplease.pipeline.pipelines",
             "newsplease.single_crawler"
         ],
-        "version": "1.2.51"
+        "version": "1.2.52"
     },
     "news-popularity-prediction": {
         "cmdline": [],
@@ -45691,34 +45738,33 @@
     "nextstrain-cli": {
         "cmdline": [],
         "modules": [
-            "nextstrain.cli",
-            "nextstrain.cli.__version__",
-            "nextstrain.cli.argparse",
-            "nextstrain.cli.aws",
-            "nextstrain.cli.command",
-            "nextstrain.cli.command.build",
-            "nextstrain.cli.command.check_setup",
-            "nextstrain.cli.command.deploy",
-            "nextstrain.cli.command.shell",
-            "nextstrain.cli.command.update",
-            "nextstrain.cli.command.version",
-            "nextstrain.cli.command.view",
-            "nextstrain.cli.config",
-            "nextstrain.cli.deploy",
-            "nextstrain.cli.deploy.s3",
-            "nextstrain.cli.hostenv",
-            "nextstrain.cli.runner",
-            "nextstrain.cli.runner.aws_batch",
-            "nextstrain.cli.runner.aws_batch.jobs",
-            "nextstrain.cli.runner.aws_batch.logs",
-            "nextstrain.cli.runner.aws_batch.s3",
-            "nextstrain.cli.runner.docker",
-            "nextstrain.cli.runner.native",
-            "nextstrain.cli.types",
-            "nextstrain.cli.util",
-            "nextstrain.cli.volume"
+            "cli",
+            "cli.argparse",
+            "cli.aws",
+            "cli.command",
+            "cli.command.build",
+            "cli.command.check_setup",
+            "cli.command.deploy",
+            "cli.command.shell",
+            "cli.command.update",
+            "cli.command.version",
+            "cli.command.view",
+            "cli.config",
+            "cli.deploy",
+            "cli.deploy.s3",
+            "cli.hostenv",
+            "cli.runner",
+            "cli.runner.aws_batch",
+            "cli.runner.aws_batch.jobs",
+            "cli.runner.aws_batch.logs",
+            "cli.runner.aws_batch.s3",
+            "cli.runner.docker",
+            "cli.runner.native",
+            "cli.types",
+            "cli.util",
+            "cli.volume"
         ],
-        "version": "1.9.1"
+        "version": "1.10.0"
     },
     "nexttest": {
         "cmdline": [],
@@ -49231,7 +49277,7 @@
     "ngraph-tensorflow-bridge": {
         "cmdline": [],
         "modules": [],
-        "version": "0.8.0"
+        "version": "0.11.0"
     },
     "ngrok": {
         "cmdline": [
@@ -50478,9 +50524,10 @@
         "cmdline": [],
         "modules": [
             "nibeuplink",
-            "nibeuplink.console"
+            "nibeuplink.console",
+            "nibeuplink.typing"
         ],
-        "version": "0.4.3"
+        "version": "0.5.0"
     },
     "nic-api": {
         "cmdline": [],
@@ -50897,7 +50944,7 @@
             "nicepay",
             "nicepay.nicepay"
         ],
-        "version": "1.0.6"
+        "version": "1.0.9"
     },
     "niceplot": {
         "cmdline": [],
@@ -51005,7 +51052,7 @@
             "test",
             "test.test_wrapper"
         ],
-        "version": "0.1.10"
+        "version": "0.1.12"
     },
     "nicfit-py": {
         "cmdline": [],
@@ -51381,7 +51428,7 @@
             "nielsen.config",
             "nielsen.titles"
         ],
-        "version": "1.1.0"
+        "version": "1.1.2"
     },
     "niemads": {
         "cmdline": [],
@@ -52382,6 +52429,7 @@
     "nikola": {
         "cmdline": [],
         "modules": [
+            "emoji",
             "nikola",
             "nikola.filters",
             "nikola.hierarchy_utils",
@@ -52470,7 +52518,7 @@
             "nikola.utils",
             "nikola.winutils"
         ],
-        "version": "8.0.1"
+        "version": "8.0.2"
     },
     "nikopackage": {
         "cmdline": [],
@@ -73158,6 +73206,7 @@
             "nonebot.argparse",
             "nonebot.command",
             "nonebot.command.argfilter",
+            "nonebot.command.argfilter.controllers",
             "nonebot.command.argfilter.converters",
             "nonebot.command.argfilter.extractors",
             "nonebot.command.argfilter.validators",
@@ -73177,7 +73226,7 @@
             "nonebot.session",
             "nonebot.typing"
         ],
-        "version": "1.2.3"
+        "version": "1.3.0"
     },
     "nonebot-tuling": {
         "cmdline": [],
@@ -77548,6 +77597,14 @@
         ],
         "version": "6.0.0.dev1"
     },
+    "notebookc": {
+        "cmdline": [],
+        "modules": [
+            "notebookc",
+            "notebookc.notebookc"
+        ],
+        "version": "0.0.5"
+    },
     "notebookism-chicago": {
         "cmdline": [],
         "modules": [
@@ -77958,6 +78015,44 @@
             "notification.wsgiapp"
         ],
         "version": "0.2.1"
+    },
+    "notification-common-service": {
+        "cmdline": [],
+        "modules": [
+            "notification_service",
+            "notification_service.baidu",
+            "notification_service.baidu.Channel",
+            "notification_service.baidu.push_core",
+            "notification_service.exceptions",
+            "notification_service.jpush",
+            "notification_service.jpush.common",
+            "notification_service.jpush.core",
+            "notification_service.jpush.device",
+            "notification_service.jpush.device.core",
+            "notification_service.jpush.device.entity",
+            "notification_service.jpush.push",
+            "notification_service.jpush.push.audience",
+            "notification_service.jpush.push.core",
+            "notification_service.jpush.push.payload",
+            "notification_service.jpush.push_core",
+            "notification_service.push",
+            "notification_service.push.AWS",
+            "notification_service.push.base",
+            "notification_service.push.xinge",
+            "notification_service.result",
+            "notification_service.states",
+            "notification_service.utils",
+            "notification_service.xinge",
+            "notification_service.xinge.constant",
+            "notification_service.xinge.push_core",
+            "notification_service.xinge.result_status",
+            "tests",
+            "tests.unit",
+            "tests.unit.push",
+            "tests.unit.push.test_AWS",
+            "tests.unit.push.test_xinge"
+        ],
+        "version": "0.7.4"
     },
     "notification-mount": {
         "cmdline": [
@@ -81843,7 +81938,7 @@
             "nsaproxy.plugins.cdns",
             "nsaproxy.plugins.r53"
         ],
-        "version": "0.1.26"
+        "version": "0.1.29"
     },
     "nsb": {
         "cmdline": [],
