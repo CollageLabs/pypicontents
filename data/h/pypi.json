@@ -5126,7 +5126,7 @@
             "haf.suite",
             "haf.utils"
         ],
-        "version": "2.4.4"
+        "version": "2.4.5"
     },
     "hafnian": {
         "cmdline": [],
@@ -11840,7 +11840,7 @@
             "hashget.submiturl",
             "hashget.utils"
         ],
-        "version": "0.104"
+        "version": "0.105"
     },
     "hashheap": {
         "cmdline": [],
@@ -16280,6 +16280,7 @@
             "ingest.api",
             "ingest.api.dssapi",
             "ingest.api.ingestapi",
+            "ingest.api.requests_utils",
             "ingest.api.stagingapi",
             "ingest.exporter",
             "ingest.exporter.ingestexportservice",
@@ -16296,6 +16297,7 @@
             "ingest.importer.importer",
             "ingest.importer.spreadsheet",
             "ingest.importer.spreadsheet.ingest_workbook",
+            "ingest.importer.spreadsheet.ingest_worksheet",
             "ingest.importer.spreadsheetUploadError",
             "ingest.importer.submission",
             "ingest.template",
@@ -16308,10 +16310,11 @@
             "ingest.utils.doctict",
             "ingest.utils.errorreport",
             "ingest.utils.s2s_token_client",
+            "ingest.utils.spreadsheet",
             "ingest.utils.token_manager",
             "ingest.utils.validationreport"
         ],
-        "version": "0.6.2"
+        "version": "0.6.3"
     },
     "hcache": {
         "cmdline": [],
@@ -24782,13 +24785,20 @@
         "cmdline": [],
         "modules": [
             "hermes_python",
+            "hermes_python.api",
+            "hermes_python.api.dialogue",
+            "hermes_python.api.ffi",
             "hermes_python.ffi",
             "hermes_python.ffi.ontology",
+            "hermes_python.ffi.ontology.dialogue",
+            "hermes_python.ffi.ontology.facades",
             "hermes_python.ffi.utils",
+            "hermes_python.ffi.wrappers",
             "hermes_python.hermes",
-            "hermes_python.ontology"
+            "hermes_python.ontology",
+            "hermes_python.ontology.dialogue"
         ],
-        "version": "0.2.0"
+        "version": "0.3.2"
     },
     "hermes-zmq": {
         "cmdline": [],
@@ -28061,13 +28071,13 @@
     },
     "hgmarkerdetection": {
         "cmdline": [],
-        "modules": [
-            "hgmd",
-            "hgmd.hgmd",
-            "hgmd.quads",
-            "hgmd.visualize"
-        ],
-        "version": "1.1.12"
+        "modules": [],
+        "version": "1.1.13"
+    },
+    "hgmeans": {
+        "cmdline": [],
+        "modules": [],
+        "version": "1.2"
     },
     "hgmonitor": {
         "cmdline": [],
@@ -28917,7 +28927,7 @@
             "hickle.loaders.load_scipy",
             "hickle.lookup"
         ],
-        "version": "3.3.3"
+        "version": "3.4.2"
     },
     "hicli": {
         "cmdline": [],
@@ -30464,17 +30474,16 @@
             "hiphive.core",
             "hiphive.core.atoms",
             "hiphive.core.cluster_space_builder",
-            "hiphive.core.constraints",
-            "hiphive.core.core_config",
+            "hiphive.core.clusters",
+            "hiphive.core.config",
             "hiphive.core.debug",
             "hiphive.core.eigentensors",
-            "hiphive.core.get_clusters",
-            "hiphive.core.get_orbits",
-            "hiphive.core.orbit",
-            "hiphive.core.orientation_family",
-            "hiphive.core.relate_structures",
+            "hiphive.core.orbits",
             "hiphive.core.rotational_constraints",
+            "hiphive.core.structure_alignment",
+            "hiphive.core.structures",
             "hiphive.core.tensors",
+            "hiphive.core.translational_constraints",
             "hiphive.core.utilities",
             "hiphive.cutoffs",
             "hiphive.fitting",
@@ -30504,7 +30513,7 @@
             "hiphive.structure_generation.rattle",
             "hiphive.utilities"
         ],
-        "version": "0.3"
+        "version": "0.4"
     },
     "hipku": {
         "cmdline": [],
@@ -32741,7 +32750,7 @@
             "hiveql.main",
             "hiveql.tool_sql"
         ],
-        "version": "1.0.8"
+        "version": "1.0.9"
     },
     "hiver": {
         "cmdline": [],
@@ -38035,7 +38044,7 @@
             "homeconnect.api",
             "homeconnect.sseclient"
         ],
-        "version": "0.2"
+        "version": "0.2.1"
     },
     "homectl": {
         "cmdline": [],
@@ -41785,8 +41794,11 @@
     },
     "hourly": {
         "cmdline": [],
-        "modules": [],
-        "version": "0.0.2"
+        "modules": [
+            "hourly",
+            "hourly.hourly"
+        ],
+        "version": "0.0.3"
     },
     "hoursofoperation": {
         "cmdline": [],
@@ -47885,7 +47897,7 @@
             "httpdis.ext.httpdis_json",
             "httpdis.httpdis"
         ],
-        "version": "0.5.14"
+        "version": "0.5.15"
     },
     "httpdns": {
         "cmdline": [],
@@ -48833,7 +48845,7 @@
             "httptools.parser",
             "httptools.parser.errors"
         ],
-        "version": "0.0.11"
+        "version": "0.0.13"
     },
     "httputil": {
         "cmdline": [],
@@ -58854,6 +58866,7 @@
         "modules": [
             "hyperdock",
             "hyperdock.common",
+            "hyperdock.common.config",
             "hyperdock.common.experiment",
             "hyperdock.common.notification",
             "hyperdock.common.notification.pushover",
@@ -58879,7 +58892,9 @@
             "tests.common.notification",
             "tests.common.notification.test_init",
             "tests.common.notification.test_pushover",
+            "tests.common.notification.test_service",
             "tests.common.notification.test_slack",
+            "tests.common.test_config",
             "tests.common.test_experiment",
             "tests.common.test_stability",
             "tests.common.test_trialsqueue",
@@ -58894,7 +58909,7 @@
             "tests.worker",
             "tests.worker.test_worker"
         ],
-        "version": "0.16.0"
+        "version": "0.17.3"
     },
     "hyperdrive": {
         "cmdline": [],
@@ -61243,7 +61258,7 @@
             "hypothesis.vendor.pretty",
             "hypothesis.version"
         ],
-        "version": "4.7.9"
+        "version": "4.7.11"
     },
     "hypothesis-client": {
         "cmdline": [],
@@ -61456,6 +61471,13 @@
             "hypothetical.nonparametric.wilcoxon"
         ],
         "version": "0.1.0"
+    },
+    "hypotonic": {
+        "cmdline": [],
+        "modules": [
+            "hypotonic"
+        ],
+        "version": "0.0.2"
     },
     "hyppopotamus": {
         "cmdline": [],
