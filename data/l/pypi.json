@@ -3016,6 +3016,7 @@
         "cmdline": [],
         "modules": [
             "lal",
+            "lal.antenna",
             "lal.git_version",
             "lal.gpstime",
             "lal.lal",
@@ -3036,7 +3037,6 @@
             "lalapps.power",
             "lalapps.pulsarhtmlutils",
             "lalapps.pulsarpputils",
-            "lalapps.ring",
             "lalapps.strain",
             "lalburst",
             "lalburst.SimBurstUtils",
@@ -3050,6 +3050,7 @@
             "lalburst.date",
             "lalburst.git_version",
             "lalburst.lalburst",
+            "lalburst.offsetvector",
             "lalburst.packing",
             "lalburst.snglcluster",
             "lalburst.snglcoinc",
@@ -3064,18 +3065,9 @@
             "lalinference",
             "lalinference.bayespputils",
             "lalinference.bayestar",
-            "lalinference.bayestar.command",
-            "lalinference.bayestar.decorator",
             "lalinference.bayestar.deprecation",
-            "lalinference.bayestar.distance",
-            "lalinference.bayestar.filter",
-            "lalinference.bayestar.ligolw",
-            "lalinference.bayestar.moc",
-            "lalinference.bayestar.postprocess",
             "lalinference.bayestar.sky_map",
-            "lalinference.bayestar.timing",
             "lalinference.distance",
-            "lalinference.eigenframe",
             "lalinference.git_version",
             "lalinference.healpix_tree",
             "lalinference.imrtgr",
@@ -3083,17 +3075,8 @@
             "lalinference.imrtgr.nrutils",
             "lalinference.imrtgr.pneqns",
             "lalinference.io",
-            "lalinference.io.events",
-            "lalinference.io.events.base",
-            "lalinference.io.events.detector_disabled",
-            "lalinference.io.events.gracedb",
-            "lalinference.io.events.hdf",
-            "lalinference.io.events.ligolw",
-            "lalinference.io.events.magic",
-            "lalinference.io.events.sqlite",
             "lalinference.io.fits",
             "lalinference.io.hdf5",
-            "lalinference.kde",
             "lalinference.lalinference",
             "lalinference.lalinference_pipe_utils",
             "lalinference.moc",
@@ -3101,12 +3084,8 @@
             "lalinference.plot",
             "lalinference.plot.allsky",
             "lalinference.plot.angle",
-            "lalinference.plot.backend_pdf_vcs_friendly",
             "lalinference.plot.cmap",
             "lalinference.plot.healpix",
-            "lalinference.plot.marker",
-            "lalinference.plot.poly",
-            "lalinference.plot.pp",
             "lalinference.plot.spindisk",
             "lalinference.rapid_pe",
             "lalinference.rapid_pe.amrlib",
@@ -3146,11 +3125,12 @@
             "lalpulsar.git_version",
             "lalpulsar.lalpulsar",
             "lalpulsar.simulateCW",
+            "lalpulsar.simulateHeterodynedCW",
             "lalsimulation",
             "lalsimulation.git_version",
             "lalsimulation.lalsimulation"
         ],
-        "version": "6.52"
+        "version": "6.53"
     },
     "lama": {
         "cmdline": [],
@@ -6670,7 +6650,7 @@
             "lapdog.operations",
             "lapdog.schema"
         ],
-        "version": "0.14.0"
+        "version": "0.14.1"
     },
     "lapels": {
         "cmdline": [],
@@ -11059,6 +11039,16 @@
         ],
         "version": "2019.2.25"
     },
+    "launchd-exec": {
+        "cmdline": [],
+        "modules": [],
+        "version": "2019.2.28"
+    },
+    "launchd-generator": {
+        "cmdline": [],
+        "modules": [],
+        "version": "2019.3.1"
+    },
     "launchd-ini": {
         "cmdline": [],
         "modules": [],
@@ -14553,7 +14543,7 @@
             "LbEnv.Utils.Completion",
             "LbEnv.Utils.Temporary"
         ],
-        "version": "0.3.6"
+        "version": "0.3.7"
     },
     "lbexporters": {
         "cmdline": [],
@@ -14996,7 +14986,7 @@
             "LbSoftConfDb2Clients.LbSdbSetProjectProperties",
             "LbSoftConfDb2Clients.SoftConfDB"
         ],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     "lbsoftconfdb2server": {
         "cmdline": [],
@@ -16800,8 +16790,16 @@
     },
     "lda2vec": {
         "cmdline": [],
-        "modules": [],
-        "version": "0.12.0"
+        "modules": [
+            "lda2vec",
+            "lda2vec.Lda2vec",
+            "lda2vec.dirichlet_likelihood",
+            "lda2vec.embedding_mixture",
+            "lda2vec.nlppipe",
+            "lda2vec.utils",
+            "lda2vec.word_embedding"
+        ],
+        "version": "0.15.10"
     },
     "ldap": {
         "cmdline": [],
@@ -27449,17 +27447,21 @@
         "cmdline": [],
         "modules": [
             "examples",
+            "examples.eventpriority",
             "examples.helloworld",
             "examples.kwargs",
             "examples.prestart",
+            "examples.priority",
             "lfc",
             "lfc.event",
             "lfc.eventHandler",
             "lfc.eventManager",
             "lfc.impl",
-            "lfc.impl.start"
+            "lfc.impl.exit",
+            "lfc.impl.start",
+            "lfc.priority"
         ],
-        "version": "0.2.0"
+        "version": "0.3.3"
     },
     "lfc-blog": {
         "cmdline": [],
@@ -35161,7 +35163,7 @@
     "libshusaku": {
         "cmdline": [],
         "modules": [],
-        "version": "0.1.5"
+        "version": "0.1.6"
     },
     "libsignetsim": {
         "cmdline": [],
@@ -39098,23 +39100,40 @@
             "lightnlp",
             "lightnlp.base",
             "lightnlp.base.config",
+            "lightnlp.base.model",
             "lightnlp.base.module",
+            "lightnlp.base.tool",
             "lightnlp.sl",
             "lightnlp.sl.ner",
             "lightnlp.sl.ner.config",
             "lightnlp.sl.ner.model",
+            "lightnlp.sl.ner.module",
             "lightnlp.sl.ner.ner",
+            "lightnlp.sl.ner.tool",
             "lightnlp.sl.ner.utils",
             "lightnlp.sl.ner.utils.convert",
             "lightnlp.sl.ner.utils.dataset",
             "lightnlp.sl.ner.utils.evaluate",
             "lightnlp.sl.ner.utils.learning",
             "lightnlp.sl.ner.utils.log",
+            "lightnlp.sr",
+            "lightnlp.sr.ss",
+            "lightnlp.sr.ss.config",
+            "lightnlp.sr.ss.model",
+            "lightnlp.sr.ss.module",
+            "lightnlp.sr.ss.tool",
+            "lightnlp.sr.te",
+            "lightnlp.sr.te.config",
+            "lightnlp.sr.te.model",
+            "lightnlp.sr.te.module",
+            "lightnlp.sr.te.tool",
             "lightnlp.tc",
             "lightnlp.tc.sa",
             "lightnlp.tc.sa.config",
             "lightnlp.tc.sa.model",
+            "lightnlp.tc.sa.module",
             "lightnlp.tc.sa.sa",
+            "lightnlp.tc.sa.tool",
             "lightnlp.tc.sa.utils",
             "lightnlp.tc.sa.utils.convert",
             "lightnlp.tc.sa.utils.dataset",
@@ -39122,10 +39141,18 @@
             "lightnlp.tc.sa.utils.learning",
             "lightnlp.tc.sa.utils.log",
             "lightnlp.tc.sa.utils.pad",
+            "lightnlp.tg",
+            "lightnlp.tg.lm",
+            "lightnlp.tg.lm.config",
+            "lightnlp.tg.lm.model",
+            "lightnlp.tg.lm.module",
+            "lightnlp.tg.lm.tool",
+            "lightnlp.tg.mt",
             "lightnlp.utils",
+            "lightnlp.utils.learning",
             "lightnlp.utils.log"
         ],
-        "version": "0.1.1.0"
+        "version": "0.2.1.0"
     },
     "lightnmf": {
         "cmdline": [],
@@ -39507,7 +39534,7 @@
             "lightwave2",
             "lightwave2.lightwave2"
         ],
-        "version": "0.3.8"
+        "version": "0.3.10"
     },
     "lightweightpush": {
         "cmdline": [],
@@ -39586,24 +39613,55 @@
     "ligo-gracedb": {
         "cmdline": [],
         "modules": [
-            "ligo",
-            "ligo.gracedb",
-            "ligo.gracedb.cli",
-            "ligo.gracedb.exceptions",
-            "ligo.gracedb.logging",
-            "ligo.gracedb.rest",
-            "ligo.gracedb.test",
-            "ligo.gracedb.test.integration",
-            "ligo.gracedb.test.integration.base",
-            "ligo.gracedb.test.integration.test_events",
-            "ligo.gracedb.test.integration.test_labels",
-            "ligo.gracedb.test.integration.test_superevents",
-            "ligo.gracedb.test.integration.test_voevents",
-            "ligo.gracedb.test.test_client",
-            "ligo.gracedb.utils",
-            "ligo.gracedb.version"
+            "gracedb",
+            "gracedb.cli",
+            "gracedb.cli.client",
+            "gracedb.cli.commands",
+            "gracedb.cli.commands.add",
+            "gracedb.cli.commands.base",
+            "gracedb.cli.commands.create",
+            "gracedb.cli.commands.delete",
+            "gracedb.cli.commands.get",
+            "gracedb.cli.commands.list",
+            "gracedb.cli.commands.remove",
+            "gracedb.cli.commands.search",
+            "gracedb.cli.commands.subcommands",
+            "gracedb.cli.commands.tests",
+            "gracedb.cli.commands.tests.test_add",
+            "gracedb.cli.commands.tests.test_create",
+            "gracedb.cli.commands.tests.test_delete",
+            "gracedb.cli.commands.tests.test_get",
+            "gracedb.cli.commands.tests.test_level1_commands",
+            "gracedb.cli.commands.tests.test_level1_subcommands",
+            "gracedb.cli.commands.tests.test_level2_subcommands_help",
+            "gracedb.cli.commands.tests.test_list",
+            "gracedb.cli.commands.tests.test_remove",
+            "gracedb.cli.commands.tests.test_search",
+            "gracedb.cli.commands.tests.test_update",
+            "gracedb.cli.commands.update",
+            "gracedb.cli.commands.utils",
+            "gracedb.cli.conftest",
+            "gracedb.cli.parsers",
+            "gracedb.cli.tests",
+            "gracedb.cli.tests.test_cli",
+            "gracedb.cli.tests.test_main",
+            "gracedb.exceptions",
+            "gracedb.legacy_cli",
+            "gracedb.logging",
+            "gracedb.rest",
+            "gracedb.test",
+            "gracedb.test.integration",
+            "gracedb.test.integration.base",
+            "gracedb.test.integration.test_cli",
+            "gracedb.test.integration.test_events",
+            "gracedb.test.integration.test_labels",
+            "gracedb.test.integration.test_superevents",
+            "gracedb.test.integration.test_voevents",
+            "gracedb.test.test_client",
+            "gracedb.utils",
+            "gracedb.version"
         ],
-        "version": "2.1.2"
+        "version": "2.2.0"
     },
     "ligo-lvalert": {
         "cmdline": [
@@ -39771,7 +39829,7 @@
             "skymap.util.sqlite",
             "skymap.version"
         ],
-        "version": "0.1.1"
+        "version": "0.1.2"
     },
     "ligo-synthetic-pe": {
         "cmdline": [],
@@ -41236,11 +41294,18 @@
         "version": "0.0.1a0"
     },
     "linchpin": {
-        "cmdline": [
-            "install_libvirt_deps.sh",
-            "install_selinux_venv.sh"
-        ],
+        "cmdline": [],
         "modules": [
+            "library",
+            "library.async_status_custom",
+            "library.auth_driver",
+            "library.bkr_info",
+            "library.bkr_server",
+            "library.dummy",
+            "library.os_hot_stack",
+            "library.output_parser",
+            "library.rundb",
+            "library.schema_check",
             "linchpin",
             "linchpin.InventoryFilters",
             "linchpin.InventoryFilters.AWSInventory",
@@ -41295,7 +41360,7 @@
             "linchpin.validator.anyofvalidator",
             "linchpin.version"
         ],
-        "version": "1.7.1"
+        "version": "1.7.2"
     },
     "linconserial": {
         "cmdline": [],
@@ -42103,7 +42168,7 @@
             "lineflow.core",
             "lineflow.reducers"
         ],
-        "version": "0.1.2"
+        "version": "0.1.3"
     },
     "linehaul": {
         "cmdline": [],
@@ -42125,7 +42190,7 @@
         "modules": [
             "lineintf"
         ],
-        "version": "1.0.1"
+        "version": "1.0.2"
     },
     "linelengthbear": {
         "cmdline": [],
@@ -45656,6 +45721,14 @@
         "cmdline": [],
         "modules": [
             "lino_welfare",
+            "lino_welfare.eupen",
+            "lino_welfare.eupen.lib",
+            "lino_welfare.eupen.lib.pcsw",
+            "lino_welfare.eupen.lib.pcsw.fixtures",
+            "lino_welfare.eupen.lib.pcsw.fixtures.demo2",
+            "lino_welfare.eupen.lib.pcsw.fixtures.std",
+            "lino_welfare.eupen.lib.pcsw.models",
+            "lino_welfare.eupen.settings",
             "lino_welfare.migrate",
             "lino_welfare.migrate_old",
             "lino_welfare.modlib",
@@ -45847,84 +45920,11 @@
             "lino_welfare.modlib.xcourses.fixtures.demo",
             "lino_welfare.modlib.xcourses.models",
             "lino_welfare.modlib.xcourses.roles",
-            "lino_welfare.projects",
-            "lino_welfare.projects.chatelet",
-            "lino_welfare.projects.chatelet.manage",
-            "lino_welfare.projects.chatelet.migrate",
-            "lino_welfare.projects.chatelet.modlib",
-            "lino_welfare.projects.chatelet.modlib.courses",
-            "lino_welfare.projects.chatelet.modlib.courses.desktop",
-            "lino_welfare.projects.chatelet.modlib.courses.fixtures",
-            "lino_welfare.projects.chatelet.modlib.courses.fixtures.demo",
-            "lino_welfare.projects.chatelet.modlib.courses.fixtures.std",
-            "lino_welfare.projects.chatelet.modlib.courses.models",
-            "lino_welfare.projects.chatelet.modlib.cv",
-            "lino_welfare.projects.chatelet.modlib.cv.fixtures",
-            "lino_welfare.projects.chatelet.modlib.cv.fixtures.demo",
-            "lino_welfare.projects.chatelet.modlib.cv.fixtures.std",
-            "lino_welfare.projects.chatelet.modlib.cv.models",
-            "lino_welfare.projects.chatelet.modlib.isip",
-            "lino_welfare.projects.chatelet.modlib.isip.models",
-            "lino_welfare.projects.chatelet.modlib.pcsw",
-            "lino_welfare.projects.chatelet.modlib.pcsw.fixtures",
-            "lino_welfare.projects.chatelet.modlib.pcsw.fixtures.demo2",
-            "lino_welfare.projects.chatelet.modlib.pcsw.fixtures.std",
-            "lino_welfare.projects.chatelet.modlib.pcsw.models",
-            "lino_welfare.projects.chatelet.settings",
-            "lino_welfare.projects.chatelet.settings.demo",
-            "lino_welfare.projects.chatelet.settings.doctests",
-            "lino_welfare.projects.chatelet.settings.memory",
-            "lino_welfare.projects.chatelet.tests",
-            "lino_welfare.projects.chatelet.tests.test_chatelet",
-            "lino_welfare.projects.chatelet.tests.test_notify",
-            "lino_welfare.projects.eupen",
-            "lino_welfare.projects.eupen.django110_isnull",
-            "lino_welfare.projects.eupen.manage",
-            "lino_welfare.projects.eupen.modlib",
-            "lino_welfare.projects.eupen.modlib.pcsw",
-            "lino_welfare.projects.eupen.modlib.pcsw.fixtures",
-            "lino_welfare.projects.eupen.modlib.pcsw.fixtures.demo2",
-            "lino_welfare.projects.eupen.modlib.pcsw.fixtures.std",
-            "lino_welfare.projects.eupen.modlib.pcsw.models",
-            "lino_welfare.projects.eupen.print_tx25",
-            "lino_welfare.projects.eupen.settings",
-            "lino_welfare.projects.eupen.settings.demo",
-            "lino_welfare.projects.eupen.settings.doctests",
-            "lino_welfare.projects.eupen.settings.memory",
-            "lino_welfare.projects.eupen.settings.mysql",
-            "lino_welfare.projects.eupen.tests",
-            "lino_welfare.projects.eupen.tests.test_aids",
-            "lino_welfare.projects.eupen.tests.test_broken_gfks",
-            "lino_welfare.projects.eupen.tests.test_cbss",
-            "lino_welfare.projects.eupen.tests.test_clients",
-            "lino_welfare.projects.eupen.tests.test_debts",
-            "lino_welfare.projects.eupen.tests.test_watchtim",
-            "lino_welfare.projects.std",
-            "lino_welfare.projects.std.manage",
-            "lino_welfare.projects.std.settings",
-            "lino_welfare.projects.std.settings.demo",
-            "lino_welfare.projects.std.settings.doctests",
-            "lino_welfare.projects.std.settings.memory",
-            "lino_welfare.projects.std.tests",
-            "lino_welfare.projects.std.tests.test_ddh",
-            "lino_welfare.projects.std.tests.test_dupe_clients",
-            "lino_welfare.projects.std.tests.test_households",
-            "lino_welfare.projects.std.tests.test_isip",
-            "lino_welfare.projects.std.tests.test_plausibility",
-            "lino_welfare.projects.std.tests.test_sepa",
-            "lino_welfare.projects.std.tests.test_sql",
-            "lino_welfare.projects.std.tests.test_webindex",
-            "lino_welfare.projects.y2k",
-            "lino_welfare.projects.y2k.manage",
-            "lino_welfare.projects.y2k.settings",
-            "lino_welfare.projects.y2k.settings.demo",
-            "lino_welfare.projects.y2k.settings.doctests",
-            "lino_welfare.projects.y2k.settings.memory",
             "lino_welfare.scripts",
             "lino_welfare.scripts.load_plp",
             "lino_welfare.setup_info"
         ],
-        "version": "18.4.0"
+        "version": "19.2.0"
     },
     "lino-xl": {
         "cmdline": [],
@@ -48207,7 +48207,7 @@
             "liquepy.trigger.triggering_measures",
             "liquepy.trigger.volumetric_strain"
         ],
-        "version": "0.4.4"
+        "version": "0.4.7"
     },
     "liquer": {
         "cmdline": [],
@@ -61302,6 +61302,14 @@
         ],
         "version": "0.4.0"
     },
+    "logquicky": {
+        "cmdline": [],
+        "modules": [
+            "logquicky",
+            "logquicky.logquicky"
+        ],
+        "version": "0.0.1"
+    },
     "logr": {
         "cmdline": [],
         "modules": [
@@ -62778,9 +62786,11 @@
             "lolopy",
             "lolopy.learners",
             "lolopy.loloserver",
+            "lolopy.metrics",
+            "lolopy.utils",
             "lolopy.version"
         ],
-        "version": "0.2.1"
+        "version": "1.0.0"
     },
     "lolp": {
         "cmdline": [],
@@ -64025,7 +64035,7 @@
             "core.test_helpers",
             "core.test_helpers.server"
         ],
-        "version": "0.13.1"
+        "version": "0.14.0"
     },
     "lookout-style": {
         "cmdline": [],
@@ -66228,8 +66238,10 @@
     },
     "lowerdict": {
         "cmdline": [],
-        "modules": [],
-        "version": "2018.11.19"
+        "modules": [
+            "lowerdict"
+        ],
+        "version": "2019.2.28"
     },
     "lowerpines": {
         "cmdline": [],
@@ -74006,60 +74018,14 @@
             "lxml.html.formfill",
             "lxml.html.html5parser",
             "lxml.html.soupparser",
-            "lxml.html.tests",
-            "lxml.html.tests.test_autolink",
-            "lxml.html.tests.test_basic",
-            "lxml.html.tests.test_clean",
-            "lxml.html.tests.test_diff",
-            "lxml.html.tests.test_elementsoup",
-            "lxml.html.tests.test_feedparser_data",
-            "lxml.html.tests.test_formfill",
-            "lxml.html.tests.test_forms",
-            "lxml.html.tests.test_frames",
-            "lxml.html.tests.test_html5parser",
-            "lxml.html.tests.test_rewritelinks",
-            "lxml.html.tests.test_select",
-            "lxml.html.tests.test_xhtml",
-            "lxml.html.tests.transform_feedparser_data",
             "lxml.html.usedoctest",
             "lxml.includes",
             "lxml.isoschematron",
             "lxml.pyclasslookup",
             "lxml.sax",
-            "lxml.tests",
-            "lxml.tests.common_imports",
-            "lxml.tests.dummy_http_server",
-            "lxml.tests.selftest",
-            "lxml.tests.selftest2",
-            "lxml.tests.test_builder",
-            "lxml.tests.test_classlookup",
-            "lxml.tests.test_css",
-            "lxml.tests.test_doctestcompare",
-            "lxml.tests.test_dtd",
-            "lxml.tests.test_elementpath",
-            "lxml.tests.test_elementtree",
-            "lxml.tests.test_errors",
-            "lxml.tests.test_etree",
-            "lxml.tests.test_external_document",
-            "lxml.tests.test_htmlparser",
-            "lxml.tests.test_http_io",
-            "lxml.tests.test_incremental_xmlfile",
-            "lxml.tests.test_io",
-            "lxml.tests.test_isoschematron",
-            "lxml.tests.test_nsclasses",
-            "lxml.tests.test_objectify",
-            "lxml.tests.test_pyclasslookup",
-            "lxml.tests.test_relaxng",
-            "lxml.tests.test_sax",
-            "lxml.tests.test_schematron",
-            "lxml.tests.test_threading",
-            "lxml.tests.test_unicode",
-            "lxml.tests.test_xmlschema",
-            "lxml.tests.test_xpathevaluator",
-            "lxml.tests.test_xslt",
             "lxml.usedoctest"
         ],
-        "version": "4.3.1"
+        "version": "4.3.2"
     },
     "lxml-asserts": {
         "cmdline": [],
@@ -75305,10 +75271,9 @@
             "lyricsmaster.cli",
             "lyricsmaster.models",
             "lyricsmaster.providers",
-            "lyricsmaster.utils",
-            "lyricsmaster.verb_scraper"
+            "lyricsmaster.utils"
         ],
-        "version": "2.7.22"
+        "version": "2.7.23"
     },
     "lyricspy": {
         "cmdline": [],
