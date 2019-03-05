@@ -285,7 +285,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (xcodetool) This package is up to date.
 [INFO] (xcom2modsync) This package is up to date.
 [INFO] (xcomment) This package is up to date.
-[INFO] (xcomposite) Data has been updated for this package.
+[INFO] (xcomposite) This package is up to date.
 [INFO] (xconnectpy) This package is up to date.
 [INFO] (xconverter) This package is up to date.
 [INFO] (xcore) This package is up to date.
@@ -413,8 +413,8 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (xenapi-python) This package is up to date.
 [INFO] (xenapython) This package is up to date.
 [INFO] (xenarix) This package is up to date.
-[INFO] (xenavalkyrie) Data has been updated for this package.
-[INFO] (xenavalkyrie-rest) Data has been updated for this package.
+[INFO] (xenavalkyrie) This package is up to date.
+[INFO] (xenavalkyrie-rest) This package is up to date.
 [INFO] (xenbackup) This package is up to date.
 [INFO] (xenballoond) This package is up to date.
 [ERROR] (xenia) This package does not have downloadable releases.
@@ -468,7 +468,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (xfers) This package is up to date.
 [ERROR] (xfile) This package does not have downloadable releases.
 [INFO] (xfin) This package is up to date.
-[INFO] (xfinity-gateway) Data has been updated for this package.
+[INFO] (xfinity-gateway) This package is up to date.
 [INFO] (xfinity-usage) This package is up to date.
 [ERROR] (xfl) This package does not have downloadable releases.
 [INFO] (xflash) This package is up to date.
@@ -872,7 +872,7 @@ This package download URL does not point to a valid file: "http://klette.us/~kle
 [INFO] (xml2obj) This package is up to date.
 [INFO] (xml2py) This package is up to date.
 [INFO] (xml2pytorch) This package is up to date.
-[INFO] (xml2rfc) This package is up to date.
+[INFO] (xml2rfc) Data has been updated for this package.
 [INFO] (xml2xlsx) This package is up to date.
 [INFO] (xml4h) This package is up to date.
 [INFO] (xmla) This package is up to date.
@@ -896,7 +896,7 @@ This package download URL does not point to a valid file: "http://klette.us/~kle
 [INFO] (xmldiff-real) This package is up to date.
 [INFO] (xmldiffs) This package is up to date.
 [INFO] (xmldirector-bookalope) This package is up to date.
-[INFO] (xmldirector-connector) This package is up to date.
+[INFO] (xmldirector-connector) Data has been updated for this package.
 [INFO] (xmldirector-crex) This package is up to date.
 [INFO] (xmldirector-demo) This package is up to date.
 [INFO] (xmldirector-dita) This package is up to date.
@@ -991,31 +991,44 @@ This package download URL does not point to a valid file: "http://effbot.org/dow
 [ERROR] (xmltreewalker) Could not extract data from this package. See below for details.
 "http://www.schmut.com/xmltreewalker-0.1.tar.gz" file could not be downloaded. See below for details.
 Traceback (most recent call last):
+  File "/usr/lib/python3.5/urllib/request.py", line 1254, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers)
+  File "/usr/lib/python3.5/http/client.py", line 1107, in request
+    self._send_request(method, url, body, headers)
+  File "/usr/lib/python3.5/http/client.py", line 1152, in _send_request
+    self.endheaders(body)
+  File "/usr/lib/python3.5/http/client.py", line 1103, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python3.5/http/client.py", line 934, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.5/http/client.py", line 877, in send
+    self.connect()
+  File "/usr/lib/python3.5/http/client.py", line 849, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "/usr/lib/python3.5/socket.py", line 712, in create_connection
+    raise err
+  File "/usr/lib/python3.5/socket.py", line 703, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
   File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 107, in download_tar
     f.write(urlopen(url=urlesc(pkgurl), timeout=10).read())
   File "/usr/lib/python3.5/urllib/request.py", line 163, in urlopen
     return opener.open(url, data, timeout)
-  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
-    response = meth(req, response)
-  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
-    'http', request, response, code, msg, hdrs)
-  File "/usr/lib/python3.5/urllib/request.py", line 504, in error
-    result = self._call_chain(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 466, in open
+    response = self._open(req, data)
+  File "/usr/lib/python3.5/urllib/request.py", line 484, in _open
+    '_open', req)
   File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
     result = func(*args)
-  File "/usr/lib/python3.5/urllib/request.py", line 696, in http_error_302
-    return self.parent.open(new, timeout=req.timeout)
-  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
-    response = meth(req, response)
-  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
-    'http', request, response, code, msg, hdrs)
-  File "/usr/lib/python3.5/urllib/request.py", line 510, in error
-    return self._call_chain(*args)
-  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
-    result = func(*args)
-  File "/usr/lib/python3.5/urllib/request.py", line 590, in http_error_default
-    raise HTTPError(req.full_url, code, msg, hdrs, fp)
-urllib.error.HTTPError: HTTP Error 404: Not Found
+  File "/usr/lib/python3.5/urllib/request.py", line 1282, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "/usr/lib/python3.5/urllib/request.py", line 1256, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error timed out>
 
 [INFO] (xmlui) This package is up to date.
 [INFO] (xmlunittest) This package is up to date.
@@ -1081,7 +1094,7 @@ This package download URL does not point to a valid file: "http://xmppony.last-e
 [INFO] (xocto) This package is up to date.
 [INFO] (xodb) This package is up to date.
 [ERROR] (xodmr) This package does not have downloadable releases.
-[INFO] (xoeuf) Data has been updated for this package.
+[INFO] (xoeuf) This package is up to date.
 [INFO] (xolib) This package is up to date.
 [INFO] (xolnowplaying) This package is up to date.
 [INFO] (xolphin-api) This package is up to date.
@@ -1287,7 +1300,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (xsd-to-django-model) This package is up to date.
 [ERROR] (xsdb) This package does not have downloadable releases.
 [INFO] (xsec) This package is up to date.
-[INFO] (xsect) Data has been updated for this package.
+[INFO] (xsect) This package is up to date.
 [INFO] (xsendfile) This package is up to date.
 [INFO] (xsendfile-middleware) This package is up to date.
 [INFO] (xserver) This package is up to date.
@@ -1487,7 +1500,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (xtal) This package is up to date.
 [INFO] (xtarfile) This package is up to date.
 [INFO] (xtas) This package is up to date.
-[INFO] (xtcryptosignals) Data has been updated for this package.
+[INFO] (xtcryptosignals) This package is up to date.
 [INFO] (xtd) This package is up to date.
 [INFO] (xtea) This package is up to date.
 [INFO] (xtea3) This package is up to date.
@@ -1566,6 +1579,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (xweb) This package is up to date.
 [INFO] (xweb-router) This package is up to date.
 [INFO] (xwinkey) This package is up to date.
+[INFO] (xwklwwltestpackage) Data has been updated for this package.
 [INFO] (xworkflows) This package is up to date.
 [INFO] (xwot-dsl) This package is up to date.
 [INFO] (xwot-py) This package is up to date.
@@ -1732,10 +1746,10 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (xzqs-01) This package is up to date.
 [INFO] 
 [INFO] 
-[INFO] Total packages: 1378
-[INFO]     Packages processed: 1378
-[INFO]         Packages updated: 7
-[INFO]         Packages up-to-date: 1272
+[INFO] Total packages: 1379
+[INFO]     Packages processed: 1379
+[INFO]         Packages updated: 3
+[INFO]         Packages up-to-date: 1277
 [INFO]         Packages without response: 16
 [INFO]         Packages without urls: 0
 [INFO]         Packages without downloads: 70
