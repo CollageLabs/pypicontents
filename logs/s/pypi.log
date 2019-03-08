@@ -172,46 +172,38 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (s3monkey) This package is up to date.
 [INFO] (s3mpython) This package is up to date.
 [ERROR] (s3mysqlbkp) Could not extract data from this package. See below for details.
-"http://pip.hosting4django.net/s3mysqlbkp-1.3.tar.gz" file could not be downloaded. See below for details.
+Could not extract tarball. See below for details.
 Traceback (most recent call last):
-  File "/usr/lib/python3.5/urllib/request.py", line 1254, in do_open
-    h.request(req.get_method(), req.selector, req.data, headers)
-  File "/usr/lib/python3.5/http/client.py", line 1107, in request
-    self._send_request(method, url, body, headers)
-  File "/usr/lib/python3.5/http/client.py", line 1152, in _send_request
-    self.endheaders(body)
-  File "/usr/lib/python3.5/http/client.py", line 1103, in endheaders
-    self._send_output(message_body)
-  File "/usr/lib/python3.5/http/client.py", line 934, in _send_output
-    self.send(msg)
-  File "/usr/lib/python3.5/http/client.py", line 877, in send
-    self.connect()
-  File "/usr/lib/python3.5/http/client.py", line 849, in connect
-    (self.host,self.port), self.timeout, self.source_address)
-  File "/usr/lib/python3.5/socket.py", line 694, in create_connection
-    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
-  File "/usr/lib/python3.5/socket.py", line 733, in getaddrinfo
-    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
-socket.gaierror: [Errno -5] No address associated with hostname
+  File "/usr/lib/python3.5/tarfile.py", line 1631, in gzopen
+    t = cls.taropen(name, mode, fileobj, **kwargs)
+  File "/usr/lib/python3.5/tarfile.py", line 1607, in taropen
+    return cls(name, mode, fileobj, **kwargs)
+  File "/usr/lib/python3.5/tarfile.py", line 1470, in __init__
+    self.firstmember = self.next()
+  File "/usr/lib/python3.5/tarfile.py", line 2281, in next
+    tarinfo = self.tarinfo.fromtarfile(self)
+  File "/usr/lib/python3.5/tarfile.py", line 1082, in fromtarfile
+    buf = tarfile.fileobj.read(BLOCKSIZE)
+  File "/usr/lib/python3.5/gzip.py", line 274, in read
+    return self._buffer.read(size)
+  File "/usr/lib/python3.5/_compression.py", line 68, in readinto
+    data = self.read(len(byte_view))
+  File "/usr/lib/python3.5/gzip.py", line 461, in read
+    if not self._read_gzip_header():
+  File "/usr/lib/python3.5/gzip.py", line 409, in _read_gzip_header
+    raise OSError('Not a gzipped file (%r)' % magic)
+OSError: Not a gzipped file (b'<!')
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
-  File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 107, in download_tar
-    f.write(urlopen(url=urlesc(pkgurl), timeout=10).read())
-  File "/usr/lib/python3.5/urllib/request.py", line 163, in urlopen
-    return opener.open(url, data, timeout)
-  File "/usr/lib/python3.5/urllib/request.py", line 466, in open
-    response = self._open(req, data)
-  File "/usr/lib/python3.5/urllib/request.py", line 484, in _open
-    '_open', req)
-  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
-    result = func(*args)
-  File "/usr/lib/python3.5/urllib/request.py", line 1282, in http_open
-    return self.do_open(http.client.HTTPConnection, req)
-  File "/usr/lib/python3.5/urllib/request.py", line 1256, in do_open
-    raise URLError(err)
-urllib.error.URLError: <urlopen error [Errno -5] No address associated with hostname>
+  File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 131, in get_tar_topdir
+    with closing(compressed(tarpath, tarmode)) as tar:
+  File "/usr/lib/python3.5/tarfile.py", line 1577, in open
+    return func(name, filemode, fileobj, **kwargs)
+  File "/usr/lib/python3.5/tarfile.py", line 1635, in gzopen
+    raise ReadError("not a gzip file")
+tarfile.ReadError: not a gzip file
 
 [INFO] (s3nb) This package is up to date.
 [INFO] (s3ninja) This package is up to date.
@@ -492,7 +484,7 @@ This package download URL does not point to a valid file: "http://www.salstar.sk
 [INFO] (sagecell) This package is up to date.
 [INFO] (sagecipher) This package is up to date.
 [INFO] (sagecreator) This package is up to date.
-[INFO] (sagemaker) This package is up to date.
+[INFO] (sagemaker) Data has been updated for this package.
 [INFO] (sagemaker-container-support) This package is up to date.
 [INFO] (sagemaker-containers) This package is up to date.
 [INFO] (sagemaker-pyspark) This package is up to date.
@@ -662,7 +654,7 @@ This package download URL does not point to a valid file: "http://code.google.co
 [INFO] (salty-ilthermo) This package is up to date.
 [INFO] (saltypie) This package is up to date.
 [INFO] (saltyrtc-server) This package is up to date.
-[INFO] (salure-helpers) This package is up to date.
+[INFO] (salure-helpers) Data has been updated for this package.
 [INFO] (salut) This package is up to date.
 [INFO] (salvage) This package is up to date.
 [INFO] (salvationfocus) This package is up to date.
@@ -825,7 +817,7 @@ This package download URL does not point to a valid file: "http://samurai-x.org/
 [INFO] (sancta-article) This package is up to date.
 [INFO] (sanction) This package is up to date.
 [INFO] (sanctuary) This package is up to date.
-[INFO] (sand) Data has been updated for this package.
+[INFO] (sand) This package is up to date.
 [ERROR] (sandals) This package does not have downloadable releases.
 [INFO] (sandblox) This package is up to date.
 [ERROR] (sandbox) This package does not have downloadable releases.
@@ -909,7 +901,7 @@ This package download URL does not point to a valid file: "http://www.procoders.
 [INFO] (sanic-jwt) This package is up to date.
 [INFO] (sanic-jwt-extended) This package is up to date.
 [INFO] (sanic-limiter) This package is up to date.
-[INFO] (sanic-macrobase) Data has been updated for this package.
+[INFO] (sanic-macrobase) This package is up to date.
 [INFO] (sanic-mail) This package is up to date.
 [INFO] (sanic-mako) This package is up to date.
 [INFO] (sanic-management-blueprint) This package is up to date.
@@ -920,7 +912,7 @@ This package download URL does not point to a valid file: "http://www.procoders.
 [INFO] (sanic-oauth) This package is up to date.
 [INFO] (sanic-openapi) This package is up to date.
 [INFO] (sanic-openapi3) This package is up to date.
-[INFO] (sanic-openapi3e) Data has been updated for this package.
+[INFO] (sanic-openapi3e) This package is up to date.
 [INFO] (sanic-openid-connect-provider) This package is up to date.
 [INFO] (sanic-patched) This package is up to date.
 [INFO] (sanic-plugins-framework) This package is up to date.
@@ -1219,7 +1211,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (satchmobeanstream) This package is up to date.
 [INFO] (satcomum) This package is up to date.
 [INFO] (sate) This package is up to date.
-[INFO] (satel-integra) This package is up to date.
+[INFO] (satel-integra) Data has been updated for this package.
 [INFO] (satella) This package is up to date.
 [INFO] (satellite) This package is up to date.
 [INFO] (satellite-constellation) This package is up to date.
@@ -1307,7 +1299,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (save-experiences) This package is up to date.
 [INFO] (save-ipython-variables) This package is up to date.
 [INFO] (save-skype) This package is up to date.
-[INFO] (save-to-db) Data has been updated for this package.
+[INFO] (save-to-db) This package is up to date.
 [INFO] (saved-searches) This package is up to date.
 [INFO] (savef) This package is up to date.
 [INFO] (savefig) This package is up to date.
@@ -1719,7 +1711,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (scapy-http) This package is up to date.
 [INFO] (scapy-nflog-capture) This package is up to date.
 [INFO] (scapy-python3) This package is up to date.
-[INFO] (scapy-real) Data has been updated for this package.
+[INFO] (scapy-real) This package is up to date.
 [INFO] (scapy-ssl-tls) This package is up to date.
 [INFO] (scapy2dict) This package is up to date.
 [ERROR] (scapydhclient) This package does not have downloadable releases.
@@ -1908,7 +1900,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (schemaflow) This package is up to date.
 [INFO] (schemagic) This package is up to date.
 [INFO] (schemaindex) This package is up to date.
-[INFO] (schemainspect) This package is up to date.
+[INFO] (schemainspect) Data has been updated for this package.
 [INFO] (schemaish) This package is up to date.
 [INFO] (schemalib) This package is up to date.
 [INFO] (schemalite) This package is up to date.
@@ -2129,6 +2121,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (scikit-keras) This package is up to date.
 [INFO] (scikit-kinematics) This package is up to date.
 [INFO] (scikit-learn) This package is up to date.
+[INFO] (scikit-learn-helper) Data has been updated for this package.
 [INFO] (scikit-learn-runnr) This package is up to date.
 [INFO] (scikit-lego) This package is up to date.
 [INFO] (scikit-luc) This package is up to date.
@@ -2141,12 +2134,12 @@ Unsupported package directory structure.
 [ERROR] (scikit-moletools) This package does not have downloadable releases.
 [INFO] (scikit-monaco) This package is up to date.
 [INFO] (scikit-mps) This package is up to date.
-[INFO] (scikit-multiflow) This package is up to date.
+[INFO] (scikit-multiflow) Data has been updated for this package.
 [INFO] (scikit-multilearn) This package is up to date.
 [INFO] (scikit-nano) This package is up to date.
 [INFO] (scikit-network) This package is up to date.
 [INFO] (scikit-neuralnetwork) This package is up to date.
-[INFO] (scikit-onnxruntime) Data has been updated for this package.
+[INFO] (scikit-onnxruntime) This package is up to date.
 [INFO] (scikit-optimize) This package is up to date.
 [INFO] (scikit-optimize-w) This package is up to date.
 [INFO] (scikit-otree) This package is up to date.
@@ -2320,12 +2313,12 @@ Traceback (most recent call last):
 urllib.error.HTTPError: HTTP Error 404: Not Found
 
 [INFO] (scipion-em-appion) This package is up to date.
-[INFO] (scipion-em-atomstructutils) This package is up to date.
+[INFO] (scipion-em-atomstructutils) Data has been updated for this package.
 [INFO] (scipion-em-atsas) This package is up to date.
 [INFO] (scipion-em-bamfordlab) This package is up to date.
 [INFO] (scipion-em-bsoft) This package is up to date.
-[INFO] (scipion-em-ccp4) This package is up to date.
-[INFO] (scipion-em-chimera) This package is up to date.
+[INFO] (scipion-em-ccp4) Data has been updated for this package.
+[INFO] (scipion-em-chimera) Data has been updated for this package.
 [INFO] (scipion-em-cryoef) This package is up to date.
 [INFO] (scipion-em-eman2) This package is up to date.
 [INFO] (scipion-em-empiar) This package is up to date.
@@ -2340,13 +2333,13 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (scipion-em-locscale) This package is up to date.
 [INFO] (scipion-em-motioncorr) This package is up to date.
 [INFO] (scipion-em-nysbc) This package is up to date.
-[INFO] (scipion-em-phenix) This package is up to date.
+[INFO] (scipion-em-phenix) Data has been updated for this package.
 [INFO] (scipion-em-powerfit) This package is up to date.
 [INFO] (scipion-em-relion) This package is up to date.
 [INFO] (scipion-em-resmap) This package is up to date.
 [INFO] (scipion-em-simple) This package is up to date.
 [INFO] (scipion-em-sphire) This package is up to date.
-[INFO] (scipion-em-spider) This package is up to date.
+[INFO] (scipion-em-spider) Data has been updated for this package.
 [INFO] (scipion-em-xmipp) This package is up to date.
 [INFO] (scipion-empiar-depositor) This package is up to date.
 [INFO] (sciplot) This package is up to date.
@@ -2462,6 +2455,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (scodb) This package is up to date.
 [INFO] (scodeu) This package is up to date.
 [INFO] (scoggle) This package is up to date.
+[INFO] (scola) Data has been updated for this package.
 [INFO] (sconce) This package is up to date.
 [INFO] (scone-client) This package is up to date.
 [INFO] (sconfig) This package is up to date.
@@ -2506,7 +2500,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (scopusreport) This package is up to date.
 [INFO] (scopusscrapus) This package is up to date.
 [INFO] (scopy) This package is up to date.
-[INFO] (scopyon) Data has been updated for this package.
+[INFO] (scopyon) This package is up to date.
 [INFO] (scorch) This package is up to date.
 [INFO] (scorched) This package is up to date.
 [INFO] (score-asyncio) This package is up to date.
@@ -2525,7 +2519,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (score-geoip) This package is up to date.
 [INFO] (score-html) This package is up to date.
 [INFO] (score-http) This package is up to date.
-[INFO] (score-init) Data has been updated for this package.
+[INFO] (score-init) This package is up to date.
 [INFO] (score-jinja2) This package is up to date.
 [INFO] (score-js) This package is up to date.
 [INFO] (score-jsapi) This package is up to date.
@@ -2592,7 +2586,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (scout-browser) This package is up to date.
 [INFO] (scout-py) This package is up to date.
 [INFO] (scouter) This package is up to date.
-[INFO] (scoutsuite) This package is up to date.
+[INFO] (scoutsuite) Data has been updated for this package.
 [INFO] (scp) This package is up to date.
 [INFO] (scp-marvin) This package is up to date.
 [INFO] (scpack) This package is up to date.
@@ -2600,7 +2594,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (scpi) This package is up to date.
 [INFO] (scpidev) This package is up to date.
 [INFO] (scpilib) This package is up to date.
-[INFO] (scprep) This package is up to date.
+[INFO] (scprep) Data has been updated for this package.
 [INFO] (scpy) This package is up to date.
 [INFO] (scr-dim) This package is up to date.
 [INFO] (scrabble) This package is up to date.
@@ -2846,7 +2840,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (scrapy-notifications) This package is up to date.
 [INFO] (scrapy-pagestorage) This package is up to date.
 [INFO] (scrapy-pipeline-mongodb) This package is up to date.
-[INFO] (scrapy-plus) This package is up to date.
+[INFO] (scrapy-plus) Data has been updated for this package.
 [INFO] (scrapy-plyvel) This package is up to date.
 [INFO] (scrapy-prometheus) This package is up to date.
 [INFO] (scrapy-prometheus-exporter) This package is up to date.
@@ -2931,7 +2925,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (scrapy-venom) This package is up to date.
 [INFO] (scrapy-wayback-machine) This package is up to date.
 [INFO] (scrapy-wayback-middleware) This package is up to date.
-[INFO] (scrapy-webshare) Data has been updated for this package.
+[INFO] (scrapy-webshare) This package is up to date.
 [INFO] (scrapy3) This package is up to date.
 [INFO] (scrapyapperyio) This package is up to date.
 [INFO] (scrapybox) This package is up to date.
@@ -3164,7 +3158,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (scripttest) This package is up to date.
 [INFO] (scripttester) This package is up to date.
 [INFO] (scripttranscluder) This package is up to date.
-[INFO] (scriptworker) This package is up to date.
+[INFO] (scriptworker) Data has been updated for this package.
 [INFO] (scripy) This package is up to date.
 [INFO] (scrivener) This package is up to date.
 [INFO] (scrivenor) This package is up to date.
@@ -3386,7 +3380,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (sdh-curator) This package is up to date.
 [INFO] (sdh-curator-py) This package is up to date.
 [INFO] (sdh-dbutils) This package is up to date.
-[INFO] (sdh-forms) Data has been updated for this package.
+[INFO] (sdh-forms) This package is up to date.
 [INFO] (sdh-jsondoc2) This package is up to date.
 [INFO] (sdh-metrics) This package is up to date.
 [ERROR] (sdh-nester) This package does not have downloadable releases.
@@ -3644,7 +3638,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (searchscrapeserver) This package is up to date.
 [INFO] (searchsplunk) This package is up to date.
 [INFO] (searchstax-simulator-crawler) This package is up to date.
-[INFO] (searchstims) This package is up to date.
+[INFO] (searchstims) Data has been updated for this package.
 [INFO] (searchstringparser) This package is up to date.
 [INFO] (searchtester) This package is up to date.
 [INFO] (searchthesky) This package is up to date.
@@ -3835,7 +3829,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (secsgem) This package is up to date.
 [INFO] (sectemp-bootstrap) This package is up to date.
 [INFO] (sectioner) This package is up to date.
-[INFO] (sectionproperties) Data has been updated for this package.
+[INFO] (sectionproperties) This package is up to date.
 [INFO] (sectoralarm) This package is up to date.
 [INFO] (sectorizedradialprofile) This package is up to date.
 [INFO] (sectw) This package is up to date.
@@ -3921,7 +3915,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (seed-control-interface-service) This package is up to date.
 [INFO] (seed-identity-store) This package is up to date.
 [INFO] (seed-isort-config) This package is up to date.
-[INFO] (seed-message-sender) Data has been updated for this package.
+[INFO] (seed-message-sender) This package is up to date.
 [INFO] (seed-otp) This package is up to date.
 [INFO] (seed-papertrail) This package is up to date.
 [INFO] (seed-phrases-for-stellar) This package is up to date.
@@ -3981,7 +3975,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (seequent-resources-spatial) This package is up to date.
 [INFO] (seer) This package is up to date.
 [INFO] (seerequest) This package is up to date.
-[INFO] (seersync) Data has been updated for this package.
+[INFO] (seersync) This package is up to date.
 [INFO] (seesaw) This package is up to date.
 [INFO] (seestar) This package is up to date.
 [INFO] (seetaas-helper) This package is up to date.
@@ -4052,7 +4046,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (seiyu) This package is up to date.
 [INFO] (seizure) This package is up to date.
 [INFO] (sej) This package is up to date.
-[INFO] (sekg) Data has been updated for this package.
+[INFO] (sekg) This package is up to date.
 [INFO] (seki) This package is up to date.
 [INFO] (seki-c-syntax-highlighter) This package is up to date.
 [INFO] (sel) This package is up to date.
@@ -4060,7 +4054,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (selang) This package is up to date.
 [ERROR] (seldo) This package does not have downloadable releases.
 [INFO] (seldon) This package is up to date.
-[INFO] (seldon-core) Data has been updated for this package.
+[INFO] (seldon-core) This package is up to date.
 [ERROR] (select) This package does not have downloadable releases.
 [INFO] (select-backport) This package is up to date.
 [INFO] (select-shuttle) This package is up to date.
@@ -4068,7 +4062,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (selecta) This package is up to date.
 [INFO] (selectel-api) This package is up to date.
 [INFO] (selectel-cloud-api) This package is up to date.
-[INFO] (selectel-dns-api) Data has been updated for this package.
+[INFO] (selectel-dns-api) This package is up to date.
 [INFO] (selectel-storage) This package is up to date.
 [INFO] (selecting) This package is up to date.
 [INFO] (selection) This package is up to date.
@@ -4352,7 +4346,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (sendtx) This package is up to date.
 [INFO] (sendwithus) This package is up to date.
 [INFO] (sendypy) This package is up to date.
-[INFO] (seneca) This package is up to date.
+[INFO] (seneca) Data has been updated for this package.
 [INFO] (senex) This package is up to date.
 [INFO] (senf) This package is up to date.
 [INFO] (senic-cryptoyaml) This package is up to date.
@@ -4368,8 +4362,8 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (senscritique) This package is up to date.
 [INFO] (sense) This package is up to date.
 [INFO] (sense-client) This package is up to date.
-[INFO] (sense-core) Data has been updated for this package.
-[INFO] (sense-data) Data has been updated for this package.
+[INFO] (sense-core) This package is up to date.
+[INFO] (sense-data) This package is up to date.
 [INFO] (sense-data2) This package is up to date.
 [INFO] (sense-django) This package is up to date.
 [INFO] (sense-emu) This package is up to date.
@@ -4396,7 +4390,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (sensible) This package is up to date.
 [INFO] (sensibleconfig) This package is up to date.
 [INFO] (sensifai) This package is up to date.
-[INFO] (sensiml) This package is up to date.
+[INFO] (sensiml) Data has been updated for this package.
 [INFO] (sensirion-shdlc-driver) This package is up to date.
 [INFO] (sensirion-sps030) This package is up to date.
 [ERROR] (sensit-client) This package does not have downloadable releases.
@@ -4420,7 +4414,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (sensu-auditor) This package is up to date.
 [INFO] (sensu-cli) This package is up to date.
 [INFO] (sensu-handler-rocketchat) This package is up to date.
-[INFO] (sensu-plugin) Data has been updated for this package.
+[INFO] (sensu-plugin) This package is up to date.
 [INFO] (sensu-plugin26) This package is up to date.
 [INFO] (sensu-plugins-aws-subnet) This package is up to date.
 [INFO] (sensys) This package is up to date.
@@ -4779,7 +4773,7 @@ Traceback (most recent call last):
     raise HTTPError(req.full_url, code, msg, hdrs, fp)
 urllib.error.HTTPError: HTTP Error 404: Not Found
 
-[INFO] (sequoia-client-sdk) Data has been updated for this package.
+[INFO] (sequoia-client-sdk) This package is up to date.
 [INFO] (sequtil) This package is up to date.
 [INFO] (sera) This package is up to date.
 [INFO] (serafin) This package is up to date.
@@ -4933,14 +4927,14 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (serpentai) This package is up to date.
 [INFO] (serpentine) This package is up to date.
 [INFO] (serpentologist) This package is up to date.
-[INFO] (serpenttools) Data has been updated for this package.
+[INFO] (serpenttools) This package is up to date.
 [INFO] (serpextract) This package is up to date.
 [INFO] (serpextract-meiqia) This package is up to date.
 [INFO] (serplint) This package is up to date.
 [INFO] (serpost) This package is up to date.
 [INFO] (serpscrap) This package is up to date.
 [INFO] (serpy) This package is up to date.
-[INFO] (serpyco) This package is up to date.
+[INFO] (serpyco) Data has been updated for this package.
 [INFO] (serrano) This package is up to date.
 [INFO] (sersic) This package is up to date.
 [INFO] (sersir) This package is up to date.
@@ -5052,7 +5046,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (serviceultractl) This package is up to date.
 [INFO] (servicewall) This package is up to date.
 [INFO] (serviceworker) This package is up to date.
-[INFO] (serving-utils) This package is up to date.
+[INFO] (serving-utils) Data has been updated for this package.
 [INFO] (servo) This package is up to date.
 [INFO] (servo-tidy) This package is up to date.
 [INFO] (servoarray) This package is up to date.
@@ -5069,7 +5063,7 @@ This package download URL does not point to a valid file: "http://www.goermezer.
 [INFO] (sesam) This package is up to date.
 [INFO] (sesamclient) This package is up to date.
 [INFO] (sesame) This package is up to date.
-[INFO] (sesame-package-tools) This package is up to date.
+[INFO] (sesame-package-tools) Data has been updated for this package.
 [INFO] (sesamelib) This package is up to date.
 [INFO] (sesar-web-services-library) This package is up to date.
 [INFO] (sesd) This package is up to date.
@@ -5195,7 +5189,7 @@ This package download URL does not point to a valid file: "http://nevill.ch/sess
 [ERROR] (setip3) This package does not have downloadable releases.
 [INFO] (setix) This package is up to date.
 [INFO] (setlog) This package is up to date.
-[INFO] (setlr) Data has been updated for this package.
+[INFO] (setlr) This package is up to date.
 [INFO] (setman) This package is up to date.
 [INFO] (setmem) This package is up to date.
 [INFO] (setmeup) This package is up to date.
@@ -5316,7 +5310,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 
 [INFO] (setuphelper) This package is up to date.
 [INFO] (setuphelpers) This package is up to date.
-[INFO] (setupmeta) This package is up to date.
+[INFO] (setupmeta) Data has been updated for this package.
 [INFO] (setuppycheck) This package is up to date.
 [INFO] (setupreader) This package is up to date.
 [INFO] (setuptools) This package is up to date.
@@ -5343,7 +5337,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (setuptools-git-version) This package is up to date.
 [INFO] (setuptools-gitver) This package is up to date.
 [INFO] (setuptools-golang) This package is up to date.
-[INFO] (setuptools-golang-examples) This package is up to date.
+[INFO] (setuptools-golang-examples) Data has been updated for this package.
 [INFO] (setuptools-green) This package is up to date.
 [INFO] (setuptools-hg) This package is up to date.
 [INFO] (setuptools-i18n) This package is up to date.
@@ -5397,6 +5391,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (seur) This package is up to date.
 [INFO] (seurvalencia) This package is up to date.
 [INFO] (seussexport) This package is up to date.
+[INFO] (seutil) Data has been updated for this package.
 [INFO] (sevabot) This package is up to date.
 [INFO] (seven) This package is up to date.
 [ERROR] (seven-segs) Could not extract data from this package. See below for details.
@@ -5430,7 +5425,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (sf-diamond) This package is up to date.
 [INFO] (sf-mail) This package is up to date.
 [INFO] (sf-object-tools) This package is up to date.
-[INFO] (sf-object-updates) Data has been updated for this package.
+[INFO] (sf-object-updates) This package is up to date.
 [INFO] (sf-suds) This package is up to date.
 [INFO] (sf-tools) This package is up to date.
 [INFO] (sf-uploader) This package is up to date.
@@ -5449,7 +5444,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (sfdclib) This package is up to date.
 [INFO] (sfdm) This package is up to date.
 [INFO] (sfdmap) This package is up to date.
-[INFO] (sfeprapy) This package is up to date.
+[INFO] (sfeprapy) Data has been updated for this package.
 [ERROR] (sff3) Could not get a response from API for this package. See below for details.
 Traceback (most recent call last):
   File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
@@ -5594,7 +5589,7 @@ Unsupported package directory structure.
 [INFO] (shackra-disqus-python) This package is up to date.
 [INFO] (shad) This package is up to date.
 [ERROR] (shaddock) This package does not have downloadable releases.
-[INFO] (shade) This package is up to date.
+[INFO] (shade) Data has been updated for this package.
 [INFO] (shade-ansible) This package is up to date.
 [INFO] (shaderdef) This package is up to date.
 [INFO] (shadertest) This package is up to date.
@@ -5654,7 +5649,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (shadowsocks-py) This package is up to date.
 [INFO] (shadowsocks-sdk) This package is up to date.
 [INFO] (shadowsocks-valoroso) This package is up to date.
-[INFO] (shady) Data has been updated for this package.
+[INFO] (shady) This package is up to date.
 [INFO] (shaft) This package is up to date.
 [INFO] (shake) This package is up to date.
 [INFO] (shake-auth) This package is up to date.
@@ -5948,13 +5943,13 @@ Unsupported package directory structure.
 [INFO] (shellerate) This package is up to date.
 [INFO] (shellescape) This package is up to date.
 [INFO] (shelley) This package is up to date.
-[INFO] (shellfoundry) Data has been updated for this package.
+[INFO] (shellfoundry) This package is up to date.
 [INFO] (shellfuncs) This package is up to date.
 [INFO] (shellgraph) This package is up to date.
 [INFO] (shellhistory) This package is up to date.
 [INFO] (shellify) This package is up to date.
 [INFO] (shellinford) This package is up to date.
-[INFO] (shellingham) Data has been updated for this package.
+[INFO] (shellingham) This package is up to date.
 [INFO] (shellish) This package is up to date.
 [ERROR] (shellist) Could not extract data from this package. See below for details.
 This package download URL does not point to a valid file: "https://sourceforge.net/projects/projpython/files/latest/download?source=files"
@@ -6012,7 +6007,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (shelves) This package is up to date.
 [INFO] (shelves-and-buckets) This package is up to date.
 [INFO] (shen-nseter) This package is up to date.
-[INFO] (shenfun) Data has been updated for this package.
+[INFO] (shenfun) This package is up to date.
 [INFO] (shenjian) This package is up to date.
 [INFO] (shenko) This package is up to date.
 [INFO] (sheol) This package is up to date.
@@ -6037,7 +6032,7 @@ IndexError: list index out of range
 [INFO] (sherpa) This package is up to date.
 [INFO] (sherry-listprint) This package is up to date.
 [INFO] (shet) This package is up to date.
-[INFO] (shexjsg) This package is up to date.
+[INFO] (shexjsg) Data has been updated for this package.
 [INFO] (shextest) This package is up to date.
 [INFO] (shfd) This package is up to date.
 [INFO] (shgo) This package is up to date.
@@ -6147,9 +6142,9 @@ IndexError: list index out of range
 [INFO] (shipdataprocess) This package is up to date.
 [INFO] (shipfunk-python) This package is up to date.
 [ERROR] (shipit) This package does not have downloadable releases.
-[INFO] (shipitapi) Data has been updated for this package.
+[INFO] (shipitapi) This package is up to date.
 [INFO] (shipitchile) This package is up to date.
-[INFO] (shipitscript) Data has been updated for this package.
+[INFO] (shipitscript) This package is up to date.
 [INFO] (shipmaster) This package is up to date.
 [INFO] (shipment) This package is up to date.
 [INFO] (shipnames) This package is up to date.
@@ -6168,7 +6163,7 @@ IndexError: list index out of range
 [INFO] (shisell) This package is up to date.
 [INFO] (shisensho) This package is up to date.
 [INFO] (shisetsu) This package is up to date.
-[INFO] (shishito) This package is up to date.
+[INFO] (shishito) Data has been updated for this package.
 [INFO] (shit) This package is up to date.
 [INFO] (shit123456789) This package is up to date.
 [INFO] (shitjs) This package is up to date.
@@ -6347,7 +6342,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (shortesttrack-sdk) This package is up to date.
 [INFO] (shortesttrack-tools) This package is up to date.
 [INFO] (shortform) This package is up to date.
-[INFO] (shortfuse) Data has been updated for this package.
+[INFO] (shortfuse) This package is up to date.
 [INFO] (shortid) This package is up to date.
 [INFO] (shortid8) This package is up to date.
 [INFO] (shortie) This package is up to date.
@@ -6617,7 +6612,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [ERROR] (sib) This package does not have downloadable releases.
 [INFO] (sib-api-v3-sdk) This package is up to date.
 [INFO] (sib-commit-parser) This package is up to date.
-[INFO] (sib-manager) Data has been updated for this package.
+[INFO] (sib-manager) This package is up to date.
 [INFO] (sibis) This package is up to date.
 [INFO] (sibl) This package is up to date.
 [INFO] (sibl-gui) This package is up to date.
@@ -6647,7 +6642,7 @@ Traceback (most recent call last):
 urllib.error.HTTPError: HTTP Error 404: Not Found
 
 [INFO] (sickmuse) This package is up to date.
-[INFO] (sickrage) Data has been updated for this package.
+[INFO] (sickrage) This package is up to date.
 [ERROR] (sickragetv) This package does not have downloadable releases.
 [INFO] (sid) This package is up to date.
 [INFO] (sidc-gui) This package is up to date.
@@ -6691,7 +6686,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (sifcoin-hash) This package is up to date.
 [INFO] (sifr) This package is up to date.
 [INFO] (sifreader) This package is up to date.
-[INFO] (sift) This package is up to date.
+[INFO] (sift) Data has been updated for this package.
 [INFO] (sift-pyocl) This package is up to date.
 [INFO] (siftapi) This package is up to date.
 [INFO] (sifter) This package is up to date.
@@ -6854,14 +6849,14 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (sigopt-python) This package is up to date.
 [INFO] (sigopt-sklearn) This package is up to date.
 [INFO] (sigprocge) This package is up to date.
-[INFO] (sigproextractor) This package is up to date.
+[INFO] (sigproextractor) Data has been updated for this package.
 [INFO] (sigprofiler) This package is up to date.
-[INFO] (sigprofilermatrixgenerator) This package is up to date.
+[INFO] (sigprofilermatrixgenerator) Data has been updated for this package.
 [INFO] (sigprofilerplotting) This package is up to date.
 [INFO] (sigprofilersimulator) This package is up to date.
 [INFO] (sigprofilertopography) This package is up to date.
 [INFO] (sigpross) This package is up to date.
-[INFO] (sigpy) This package is up to date.
+[INFO] (sigpy) Data has been updated for this package.
 [INFO] (sigseekr) This package is up to date.
 [INFO] (sigtools) This package is up to date.
 [INFO] (sigur-connector) This package is up to date.
@@ -7785,7 +7780,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (simplemysql) This package is up to date.
 [INFO] (simplenb) This package is up to date.
 [INFO] (simplencryption) This package is up to date.
-[INFO] (simplendb) Data has been updated for this package.
+[INFO] (simplendb) This package is up to date.
 [INFO] (simpleneighbors) This package is up to date.
 [INFO] (simplenest) This package is up to date.
 [INFO] (simplenester) This package is up to date.
@@ -8054,8 +8049,8 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (simso) This package is up to date.
 [INFO] (simsoexp) This package is up to date.
 [INFO] (simsogui) This package is up to date.
-[INFO] (simspec) This package is up to date.
-[INFO] (simspec-lib) This package is up to date.
+[INFO] (simspec) Data has been updated for this package.
+[INFO] (simspec-lib) Data has been updated for this package.
 [INFO] (simspeclib) This package is up to date.
 [INFO] (simspider) This package is up to date.
 [ERROR] (simsteg) This package does not have downloadable releases.
@@ -8660,7 +8655,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (skele) This package is up to date.
 [INFO] (skele-test) This package is up to date.
 [INFO] (skeleprint-ui) This package is up to date.
-[INFO] (skelet3d) This package is up to date.
+[INFO] (skelet3d) Data has been updated for this package.
 [INFO] (skelethon) This package is up to date.
 [INFO] (skeleton) This package is up to date.
 [INFO] (skeleton-stu) This package is up to date.
@@ -8767,16 +8762,16 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (skid) This package is up to date.
 [INFO] (skidl) This package is up to date.
 [INFO] (skidmarks) This package is up to date.
-[INFO] (skidward) This package is up to date.
+[INFO] (skidward) Data has been updated for this package.
 [INFO] (skiff) This package is up to date.
 [INFO] (skift) This package is up to date.
 [INFO] (skijumpdesign) This package is up to date.
 [INFO] (skil) This package is up to date.
-[INFO] (skil-client) This package is up to date.
+[INFO] (skil-client) Data has been updated for this package.
 [INFO] (skillcorner) This package is up to date.
 [INFO] (skillful) This package is up to date.
 [INFO] (skillmetrics) This package is up to date.
-[INFO] (skillpub) Data has been updated for this package.
+[INFO] (skillpub) This package is up to date.
 [INFO] (skills) This package is up to date.
 [INFO] (skills-ml) This package is up to date.
 [INFO] (skills-utils) This package is up to date.
@@ -8986,7 +8981,7 @@ This package download URL does not point to a valid file: "http://nope.com"
 [INFO] (skygrid) This package is up to date.
 [INFO] (skyhook) This package is up to date.
 [INFO] (skylark) This package is up to date.
-[INFO] (skylette) This package is up to date.
+[INFO] (skylette) Data has been updated for this package.
 [INFO] (skylibs) This package is up to date.
 [ERROR] (skyline) Could not get a response from API for this package. See below for details.
 Traceback (most recent call last):
@@ -9055,7 +9050,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (sl-postbot) This package is up to date.
 [INFO] (sl2gtfs) This package is up to date.
 [INFO] (sl4a-pydroid-mock-api) This package is up to date.
-[INFO] (sla-runner) Data has been updated for this package.
+[INFO] (sla-runner) This package is up to date.
 [INFO] (slab) This package is up to date.
 [INFO] (slab-diffusion) This package is up to date.
 [INFO] (slabbe) This package is up to date.
@@ -9099,6 +9094,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (slack-machine) This package is up to date.
 [INFO] (slack-notifier) This package is up to date.
 [INFO] (slack-notify) This package is up to date.
+[INFO] (slack-on) Data has been updated for this package.
 [INFO] (slack-pdb) This package is up to date.
 [INFO] (slack-progress) This package is up to date.
 [INFO] (slack-pull-reminder) This package is up to date.
@@ -9213,7 +9209,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (slapdsock) This package is up to date.
 [INFO] (slapi) This package is up to date.
 [INFO] (slapos-cookbook) This package is up to date.
-[INFO] (slapos-core) Data has been updated for this package.
+[INFO] (slapos-core) This package is up to date.
 [INFO] (slapos-extension-shared) This package is up to date.
 [INFO] (slapos-extension-strip) This package is up to date.
 [ERROR] (slapos-format) Could not get a response from API for this package. See below for details.
@@ -9902,7 +9898,7 @@ Traceback (most recent call last):
     raise HTTPError(req.full_url, code, msg, hdrs, fp)
 urllib.error.HTTPError: HTTP Error 404: Not Found
 
-[INFO] (slapos-toolbox) Data has been updated for this package.
+[INFO] (slapos-toolbox) This package is up to date.
 [INFO] (slapos-zcbworkarounds) This package is up to date.
 [INFO] (slapprepare) This package is up to date.
 [INFO] (slappy) This package is up to date.
@@ -10298,7 +10294,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (slurm-sbalance) This package is up to date.
 [INFO] (slurm-toys) This package is up to date.
 [INFO] (slurmpy) This package is up to date.
-[INFO] (slurmqueen) This package is up to date.
+[INFO] (slurmqueen) Data has been updated for this package.
 [INFO] (slurmy) This package is up to date.
 [INFO] (slurp) This package is up to date.
 [INFO] (slurpbox) This package is up to date.
@@ -10351,7 +10347,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (smalluuid) This package is up to date.
 [INFO] (smallvectors) This package is up to date.
 [INFO] (smallworld) This package is up to date.
-[INFO] (smamp) This package is up to date.
+[INFO] (smamp) Data has been updated for this package.
 [INFO] (smap) This package is up to date.
 [INFO] (smap-io) This package is up to date.
 [INFO] (smapp-collection-stats) This package is up to date.
@@ -10388,6 +10384,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (smart-reading) This package is up to date.
 [INFO] (smart-rename) This package is up to date.
 [INFO] (smart-router-api) This package is up to date.
+[INFO] (smart-scrapy) Data has been updated for this package.
 [INFO] (smart-sentinel) This package is up to date.
 [INFO] (smart-sheet-pp) This package is up to date.
 [ERROR] (smart-smog) Could not get a response from API for this package. See below for details.
@@ -10483,7 +10480,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (smartlib) This package is up to date.
 [INFO] (smartlingapisdk) This package is up to date.
 [INFO] (smartlivinglab) This package is up to date.
-[INFO] (smartlog) Data has been updated for this package.
+[INFO] (smartlog) This package is up to date.
 [INFO] (smartlogin) This package is up to date.
 [INFO] (smartmeter-analyze) This package is up to date.
 [INFO] (smartmin) This package is up to date.
@@ -10588,7 +10585,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (smhasher) This package is up to date.
 [INFO] (smhi-pkg) This package is up to date.
 [INFO] (smic) This package is up to date.
-[INFO] (smif) Data has been updated for this package.
+[INFO] (smif) This package is up to date.
 [INFO] (smii) This package is up to date.
 [INFO] (smile) This package is up to date.
 [INFO] (smilectl) This package is up to date.
@@ -10634,7 +10631,7 @@ Traceback (most recent call last):
     raise HTTPError(req.full_url, code, msg, hdrs, fp)
 urllib.error.HTTPError: HTTP Error 404: Not Found
 
-[INFO] (smklog) Data has been updated for this package.
+[INFO] (smklog) This package is up to date.
 [INFO] (sml) This package is up to date.
 [INFO] (sml-extras) This package is up to date.
 [INFO] (sml-metadata-that-some-guy) This package is up to date.
@@ -10719,7 +10716,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (smqtk) This package is up to date.
 [INFO] (smr) This package is up to date.
 [ERROR] (smrf) This package does not have downloadable releases.
-[INFO] (smriprep) Data has been updated for this package.
+[INFO] (smriprep) This package is up to date.
 [INFO] (smrzr) This package is up to date.
 [INFO] (sms) This package is up to date.
 [INFO] (sms-51ym) This package is up to date.
@@ -10889,7 +10886,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (smvceviz) This package is up to date.
 [INFO] (smw) This package is up to date.
 [INFO] (smwogger) This package is up to date.
-[INFO] (smx) Data has been updated for this package.
+[INFO] (smx) This package is up to date.
 [INFO] (smx-client) This package is up to date.
 [INFO] (smxsso) This package is up to date.
 [INFO] (smycli) This package is up to date.
@@ -11167,11 +11164,12 @@ Unsupported package directory structure.
 [INFO] (snekbol) This package is up to date.
 [INFO] (snekchek) This package is up to date.
 [INFO] (sneklang) This package is up to date.
-[INFO] (sneks) This package is up to date.
+[INFO] (sneks) Data has been updated for this package.
 [INFO] (sner) This package is up to date.
 [INFO] (snester) This package is up to date.
 [INFO] (snester-nested) This package is up to date.
 [INFO] (snet-cli) This package is up to date.
+[INFO] (snet-sdk) Data has been updated for this package.
 [INFO] (snetd-alpha) This package is up to date.
 [ERROR] (snf) Could not get a response from API for this package. See below for details.
 Traceback (most recent call last):
@@ -11251,12 +11249,12 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (sniprd) This package is up to date.
 [INFO] (snips) This package is up to date.
 [INFO] (snips-helper) This package is up to date.
-[INFO] (snips-nlu) Data has been updated for this package.
+[INFO] (snips-nlu) This package is up to date.
 [INFO] (snips-nlu-metrics) This package is up to date.
 [INFO] (snips-nlu-ontology) This package is up to date.
 [INFO] (snips-nlu-parsers) This package is up to date.
 [INFO] (snips-nlu-rust) This package is up to date.
-[INFO] (snips-nlu-utils) Data has been updated for this package.
+[INFO] (snips-nlu-utils) This package is up to date.
 [INFO] (snips-respeaker) This package is up to date.
 [INFO] (snips-skill-maths) This package is up to date.
 [INFO] (snips-skill-monitorcontrol) This package is up to date.
@@ -11264,6 +11262,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (snips-skill-usb-power) This package is up to date.
 [INFO] (snipsfakeweather) This package is up to date.
 [INFO] (snipshue) This package is up to date.
+[INFO] (snipskit) Data has been updated for this package.
 [INFO] (snipslocalmusic) This package is up to date.
 [INFO] (snipsmanager) This package is up to date.
 [INFO] (snipsmanagercore) This package is up to date.
@@ -11284,7 +11283,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (snitch) This package is up to date.
 [INFO] (snitch2) This package is up to date.
 [INFO] (snitcher) This package is up to date.
-[INFO] (snitun) This package is up to date.
+[INFO] (snitun) Data has been updated for this package.
 [INFO] (snkit) This package is up to date.
 [INFO] (snl) This package is up to date.
 [INFO] (snmp) This package is up to date.
@@ -11355,7 +11354,7 @@ Traceback (most recent call last):
 urllib.error.HTTPError: HTTP Error 404: Not Found
 
 [INFO] (snorkel-ie) This package is up to date.
-[INFO] (snorkel-lite) This package is up to date.
+[INFO] (snorkel-lite) Data has been updated for this package.
 [INFO] (snorkel-metal) This package is up to date.
 [INFO] (snorky) This package is up to date.
 [ERROR] (snorlax) Could not get a response from API for this package. See below for details.
@@ -11421,6 +11420,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (snowflake-ingest) This package is up to date.
 [INFO] (snowflake-smart-suspend) This package is up to date.
 [INFO] (snowflake-sqlalchemy) This package is up to date.
+[INFO] (snowflake-sqlalchemy-fork) Data has been updated for this package.
 [INFO] (snowflakeconnectorpython) This package is up to date.
 [INFO] (snowflakesqlalchemy) This package is up to date.
 [INFO] (snowjob) This package is up to date.
@@ -11861,7 +11861,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (solar) This package is up to date.
 [INFO] (solar-calculation) This package is up to date.
 [INFO] (solar-correlation-map) This package is up to date.
-[INFO] (solar-data-tools) Data has been updated for this package.
+[INFO] (solar-data-tools) This package is up to date.
 [INFO] (solar-flares) This package is up to date.
 [INFO] (solar-radiation-model) This package is up to date.
 [INFO] (solar-sails) This package is up to date.
@@ -11877,7 +11877,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (solarshed) This package is up to date.
 [INFO] (solartime) This package is up to date.
 [INFO] (solartz) This package is up to date.
-[INFO] (solarutils) This package is up to date.
+[INFO] (solarutils) Data has been updated for this package.
 [INFO] (solarwindpy) This package is up to date.
 [INFO] (solarwolf) This package is up to date.
 [INFO] (solascriptura) This package is up to date.
@@ -11912,7 +11912,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (solidfire-cli) This package is up to date.
 [INFO] (solidfire-sdk-python) This package is up to date.
 [INFO] (solidity-flattener) This package is up to date.
-[INFO] (solidity-parser) Data has been updated for this package.
+[INFO] (solidity-parser) This package is up to date.
 [INFO] (solidity-unfolder) This package is up to date.
 [INFO] (solidpinball) This package is up to date.
 [INFO] (solidpy) This package is up to date.
@@ -11928,7 +11928,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (solit) This package is up to date.
 [INFO] (solnado) This package is up to date.
 [INFO] (solo) This package is up to date.
-[INFO] (solo-python) This package is up to date.
+[INFO] (solo-python) Data has been updated for this package.
 [INFO] (solobjectlib) This package is up to date.
 [INFO] (soloftpd) This package is up to date.
 [INFO] (sololearn) This package is up to date.
@@ -11967,7 +11967,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (solvcon) This package is up to date.
 [ERROR] (solve-instrument) This package does not have downloadable releases.
 [INFO] (solve360) This package is up to date.
-[INFO] (solvebio) This package is up to date.
+[INFO] (solvebio) Data has been updated for this package.
 [INFO] (solvebio-dash-components) This package is up to date.
 [INFO] (solveerror) This package is up to date.
 [INFO] (solver) This package is up to date.
@@ -12110,7 +12110,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (songwrite3) This package is up to date.
 [INFO] (songye) This package is up to date.
 [INFO] (soniatheme) This package is up to date.
-[INFO] (sonic) This package is up to date.
+[INFO] (sonic) Data has been updated for this package.
 [INFO] (sonic182-json-validator) This package is up to date.
 [INFO] (sonic182-logger) This package is up to date.
 [INFO] (sonic182-my-logger) This package is up to date.
@@ -12216,7 +12216,7 @@ This package download URL does not point to a valid file: "https://play.google.c
 [INFO] (sort) This package is up to date.
 [INFO] (sort-algorithms) This package is up to date.
 [INFO] (sort-asma) This package is up to date.
-[INFO] (sort-dataframeby-monthorweek) Data has been updated for this package.
+[INFO] (sort-dataframeby-monthorweek) This package is up to date.
 [INFO] (sortable) This package is up to date.
 [INFO] (sortableclass) This package is up to date.
 [INFO] (sortableclasses) This package is up to date.
@@ -12295,7 +12295,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (sos-essentials) This package is up to date.
 [INFO] (sos-javascript) This package is up to date.
 [INFO] (sos-julia) This package is up to date.
-[INFO] (sos-matlab) This package is up to date.
+[INFO] (sos-matlab) Data has been updated for this package.
 [INFO] (sos-notebook) This package is up to date.
 [INFO] (sos-pbs) This package is up to date.
 [INFO] (sos-python) This package is up to date.
@@ -12316,7 +12316,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (sosreport) This package is up to date.
 [INFO] (soss) This package is up to date.
 [INFO] (sostore) This package is up to date.
-[INFO] (sosw) Data has been updated for this package.
+[INFO] (sosw) This package is up to date.
 [INFO] (sosww) This package is up to date.
 [INFO] (sota) This package is up to date.
 [INFO] (soteruser) This package is up to date.
@@ -12355,7 +12355,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (soundmeter) This package is up to date.
 [INFO] (soundmixture) This package is up to date.
 [INFO] (soundscrape) This package is up to date.
-[INFO] (soundsig) This package is up to date.
+[INFO] (soundsig) Data has been updated for this package.
 [INFO] (soup) This package is up to date.
 [INFO] (soup-helpers) This package is up to date.
 [INFO] (soupcan) This package is up to date.
@@ -12507,7 +12507,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (soya3) This package is up to date.
 [INFO] (soyclustering) This package is up to date.
 [INFO] (soykeyword) This package is up to date.
-[INFO] (soynlp) This package is up to date.
+[INFO] (soynlp) Data has been updated for this package.
 [INFO] (soyprice) This package is up to date.
 [INFO] (soyspacing) This package is up to date.
 [INFO] (sozigen) This package is up to date.
@@ -12805,7 +12805,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (sparqlkernel) This package is up to date.
 [INFO] (sparqlquery) This package is up to date.
 [INFO] (sparqltosql) This package is up to date.
-[INFO] (sparqltransformer) Data has been updated for this package.
+[INFO] (sparqltransformer) This package is up to date.
 [INFO] (sparqlwrapper) This package is up to date.
 [INFO] (sparray) This package is up to date.
 [INFO] (sparrow) This package is up to date.
@@ -12918,10 +12918,10 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (spatialite) This package is up to date.
 [INFO] (spatialiteintrospect) This package is up to date.
 [INFO] (spatialkappa) This package is up to date.
-[INFO] (spatialnc) Data has been updated for this package.
+[INFO] (spatialnc) This package is up to date.
 [INFO] (spatious) This package is up to date.
 [INFO] (spats) This package is up to date.
-[INFO] (spats-shape-seq) Data has been updated for this package.
+[INFO] (spats-shape-seq) This package is up to date.
 [INFO] (spatula) This package is up to date.
 [INFO] (spavro) This package is up to date.
 [INFO] (spaw) This package is up to date.
@@ -12949,7 +12949,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [ERROR] (spe) This package does not have downloadable releases.
 [INFO] (spe2py) This package is up to date.
 [INFO] (spead) This package is up to date.
-[INFO] (spead2) This package is up to date.
+[INFO] (spead2) Data has been updated for this package.
 [INFO] (speake) This package is up to date.
 [INFO] (speake3) This package is up to date.
 [INFO] (speakeasy) This package is up to date.
@@ -12970,7 +12970,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (spear-nist-sre12) This package is up to date.
 [INFO] (spec) This package is up to date.
 [INFO] (spec-checker) This package is up to date.
-[INFO] (spec-cleaner) This package is up to date.
+[INFO] (spec-cleaner) Data has been updated for this package.
 [INFO] (spec-list-pp) This package is up to date.
 [INFO] (spec-plots) This package is up to date.
 [INFO] (spec-synthase) This package is up to date.
@@ -13194,10 +13194,10 @@ Unsupported package directory structure.
 [INFO] (spf2ip) This package is up to date.
 [ERROR] (spfifo) Could not extract data from this package. See below for details.
 
-[INFO] (spflow) This package is up to date.
+[INFO] (spflow) Data has been updated for this package.
 [INFO] (spfplus) This package is up to date.
 [INFO] (spfpm) This package is up to date.
-[INFO] (spfy) Data has been updated for this package.
+[INFO] (spfy) This package is up to date.
 [INFO] (spgateway-core) This package is up to date.
 [INFO] (spgen) This package is up to date.
 [ERROR] (spgl) This package does not have downloadable releases.
@@ -13276,7 +13276,7 @@ Unsupported package directory structure.
 [INFO] (sphinx-drove-theme) This package is up to date.
 [INFO] (sphinx-dust) This package is up to date.
 [INFO] (sphinx-elasticsearch) This package is up to date.
-[INFO] (sphinx-enos-theme) This package is up to date.
+[INFO] (sphinx-enos-theme) Data has been updated for this package.
 [INFO] (sphinx-epytext) This package is up to date.
 [INFO] (sphinx-erdiagram) This package is up to date.
 [INFO] (sphinx-execute-code) This package is up to date.
@@ -13922,7 +13922,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (spirentslc) This package is up to date.
 [INFO] (spirit) This package is up to date.
 [INFO] (spirit-plone-sitemanagement) This package is up to date.
-[INFO] (spirit-plone-theming) This package is up to date.
+[INFO] (spirit-plone-theming) Data has been updated for this package.
 [INFO] (spirit-releaser) This package is up to date.
 [INFO] (spirit-zptlint) This package is up to date.
 [INFO] (spiro) This package is up to date.
@@ -14523,7 +14523,7 @@ This package download URL does not point to a valid file: "http://sourceforge.ne
 [INFO] (sql-mojo-parser) This package is up to date.
 [INFO] (sql-query-dict) This package is up to date.
 [INFO] (sql-sanitizer) This package is up to date.
-[INFO] (sql-schema-builder) This package is up to date.
+[INFO] (sql-schema-builder) Data has been updated for this package.
 [INFO] (sql-server-pyodbc) This package is up to date.
 [INFO] (sql-to-graphite) This package is up to date.
 [INFO] (sql-tricks) This package is up to date.
@@ -14593,7 +14593,7 @@ This package download URL does not point to a valid file: "http://sourceforge.ne
 [INFO] (sqlalchemy-fdw) This package is up to date.
 [INFO] (sqlalchemy-fileattach) This package is up to date.
 [INFO] (sqlalchemy-filterparams) This package is up to date.
-[INFO] (sqlalchemy-filters) This package is up to date.
+[INFO] (sqlalchemy-filters) Data has been updated for this package.
 [INFO] (sqlalchemy-find) This package is up to date.
 [INFO] (sqlalchemy-fixture) This package is up to date.
 [INFO] (sqlalchemy-fixture-factory) This package is up to date.
@@ -14615,7 +14615,7 @@ This package download URL does not point to a valid file: "http://sourceforge.ne
 [INFO] (sqlalchemy-json-api) This package is up to date.
 [INFO] (sqlalchemy-json-querybuilder) This package is up to date.
 [INFO] (sqlalchemy-jsonapi) This package is up to date.
-[INFO] (sqlalchemy-jsonfield) Data has been updated for this package.
+[INFO] (sqlalchemy-jsonfield) This package is up to date.
 [INFO] (sqlalchemy-jsonio) This package is up to date.
 [INFO] (sqlalchemy-lazy-way) This package is up to date.
 [INFO] (sqlalchemy-lightening) This package is up to date.
@@ -14986,7 +14986,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (squery-pg) This package is up to date.
 [INFO] (squid) This package is up to date.
 [INFO] (squid-dedup) This package is up to date.
-[INFO] (squid-py) Data has been updated for this package.
+[INFO] (squid-py) This package is up to date.
 [ERROR] (squidbeard) This package does not have downloadable releases.
 [INFO] (squidnet) This package is up to date.
 [INFO] (squidpeek) This package is up to date.
@@ -15006,7 +15006,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (squmfit) This package is up to date.
 [INFO] (sr) This package is up to date.
 [INFO] (sr-auth) This package is up to date.
-[INFO] (sr-python-commons) Data has been updated for this package.
+[INFO] (sr-python-commons) This package is up to date.
 [INFO] (sr-tools) This package is up to date.
 [INFO] (sr700-artisan-profile-builder) This package is up to date.
 [INFO] (sr700-artisan-server) This package is up to date.
@@ -15041,7 +15041,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (sre-py) This package is up to date.
 [INFO] (sre-yield) This package is up to date.
 [INFO] (sregex) This package is up to date.
-[INFO] (sregistry) This package is up to date.
+[INFO] (sregistry) Data has been updated for this package.
 [INFO] (sreverse) This package is up to date.
 [INFO] (srf) This package is up to date.
 [INFO] (srfax) This package is up to date.
@@ -15108,7 +15108,7 @@ Traceback (most recent call last):
     raise HTTPError(req.full_url, code, msg, hdrs, fp)
 urllib.error.HTTPError: HTTP Error 404: Not Found
 
-[INFO] (sridentify) This package is up to date.
+[INFO] (sridentify) Data has been updated for this package.
 [INFO] (srim-srout) This package is up to date.
 [INFO] (srininest) This package is up to date.
 [INFO] (sriovmng) This package is up to date.
@@ -15178,7 +15178,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (srv-hijacker) This package is up to date.
 [INFO] (srvice) This package is up to date.
 [INFO] (srvlookup) This package is up to date.
-[INFO] (srvresolver) Data has been updated for this package.
+[INFO] (srvresolver) This package is up to date.
 [INFO] (srvup) This package is up to date.
 [INFO] (srvup-comments) This package is up to date.
 [INFO] (srw-parser) This package is up to date.
@@ -15215,7 +15215,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (ssdts-matching) This package is up to date.
 [INFO] (sse) This package is up to date.
 [INFO] (sse2fedmsg) This package is up to date.
-[INFO] (ssearch) This package is up to date.
+[INFO] (ssearch) Data has been updated for this package.
 [INFO] (ssebop) This package is up to date.
 [INFO] (sseclient) This package is up to date.
 [INFO] (sseclient-py) This package is up to date.
@@ -15421,7 +15421,7 @@ This package download URL does not point to a valid file: "http://www.keyphrene.
 [INFO] (sslam) This package is up to date.
 [INFO] (sslcheck) This package is up to date.
 [INFO] (sslchecker) This package is up to date.
-[INFO] (sslclient) This package is up to date.
+[INFO] (sslclient) Data has been updated for this package.
 [INFO] (sslexport) This package is up to date.
 [INFO] (sslf) This package is up to date.
 [INFO] (sslfix) This package is up to date.
@@ -15496,8 +15496,8 @@ This package download URL does not point to a valid file: "http://www.keyphrene.
 [INFO] (sstc) This package is up to date.
 [INFO] (sstcloudclient) This package is up to date.
 [INFO] (ssterm) This package is up to date.
-[INFO] (ssti-ab) This package is up to date.
-[INFO] (ssti-ab-tool) This package is up to date.
+[INFO] (ssti-ab) Data has been updated for this package.
+[INFO] (ssti-ab-tool) Data has been updated for this package.
 [INFO] (sstool-general) This package is up to date.
 [INFO] (sstp-server) This package is up to date.
 [INFO] (ssu-tk) This package is up to date.
@@ -15520,7 +15520,7 @@ This package download URL does not point to a valid file: "http://www.keyphrene.
 [INFO] (st-package-reviewer) This package is up to date.
 [INFO] (st-schema) This package is up to date.
 [INFO] (st2aws) This package is up to date.
-[INFO] (st2client) This package is up to date.
+[INFO] (st2client) Data has been updated for this package.
 [INFO] (st2sdk) This package is up to date.
 [INFO] (st2smv) This package is up to date.
 [INFO] (st7036) This package is up to date.
@@ -15653,7 +15653,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (stacks-textblock) This package is up to date.
 [INFO] (stacks-twitter) This package is up to date.
 [INFO] (stacksentinel) This package is up to date.
-[INFO] (stacksplit) Data has been updated for this package.
+[INFO] (stacksplit) This package is up to date.
 [INFO] (stackstrap) This package is up to date.
 [INFO] (stacktask) This package is up to date.
 [INFO] (stacktask-odoo) This package is up to date.
@@ -15872,7 +15872,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (starlette-apispec) This package is up to date.
 [INFO] (starlette-jwt) This package is up to date.
 [INFO] (starlette-prometheus) This package is up to date.
-[INFO] (starlette-service-utils) Data has been updated for this package.
+[INFO] (starlette-service-utils) This package is up to date.
 [INFO] (starlight) This package is up to date.
 [INFO] (starlight-wrapper) This package is up to date.
 [INFO] (starling) This package is up to date.
@@ -16060,7 +16060,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (states) This package is up to date.
 [INFO] (statesaver) This package is up to date.
 [INFO] (statesofusa) This package is up to date.
-[INFO] (statespace) Data has been updated for this package.
+[INFO] (statespace) This package is up to date.
 [INFO] (stateutil) This package is up to date.
 [INFO] (statgcb) This package is up to date.
 [INFO] (statham) This package is up to date.
@@ -16393,7 +16393,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (steampy) This package is up to date.
 [INFO] (steampy-by-eshao-for-fun) This package is up to date.
 [INFO] (steamquery) This package is up to date.
-[INFO] (steamreviews) Data has been updated for this package.
+[INFO] (steamreviews) This package is up to date.
 [INFO] (steamroller) This package is up to date.
 [INFO] (steamspy) This package is up to date.
 [INFO] (steamspypi) This package is up to date.
@@ -16457,9 +16457,9 @@ This package download URL does not point to a valid file: "http://sourceforge.ne
 [INFO] (steemax) This package is up to date.
 [INFO] (steembit) This package is up to date.
 [INFO] (steemconnect) This package is up to date.
-[INFO] (steemconnect-auth) Data has been updated for this package.
+[INFO] (steemconnect-auth) This package is up to date.
 [INFO] (steemdata) This package is up to date.
-[INFO] (steemengine) This package is up to date.
+[INFO] (steemengine) Data has been updated for this package.
 [INFO] (steemflagrewards) This package is up to date.
 [INFO] (steemhistory) This package is up to date.
 [INFO] (steemmonsters) This package is up to date.
@@ -16475,9 +16475,9 @@ This package download URL does not point to a valid file: "http://sourceforge.ne
 [INFO] (steepdata) This package is up to date.
 [INFO] (steeve) This package is up to date.
 [INFO] (stefan-c-nester) This package is up to date.
-[INFO] (stefuna) Data has been updated for this package.
+[INFO] (stefuna) This package is up to date.
 [INFO] (steg) This package is up to date.
-[INFO] (stegano) Data has been updated for this package.
+[INFO] (stegano) This package is up to date.
 [INFO] (steganocrypto) This package is up to date.
 [INFO] (steganogan) This package is up to date.
 [INFO] (steganographer) This package is up to date.
@@ -17098,7 +17098,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (stratipy) This package is up to date.
 [INFO] (stratis) This package is up to date.
 [INFO] (stratisd-client-dbus) This package is up to date.
-[INFO] (strato-query) This package is up to date.
+[INFO] (strato-query) Data has been updated for this package.
 [INFO] (strato-skipper) This package is up to date.
 [INFO] (stratos) This package is up to date.
 [ERROR] (stratos-cli) This package does not have downloadable releases.
@@ -17211,7 +17211,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (streamlines) This package is up to date.
 [INFO] (streamlink) This package is up to date.
 [INFO] (streamlink-helper) This package is up to date.
-[INFO] (streamlit) This package is up to date.
+[INFO] (streamlit) Data has been updated for this package.
 [INFO] (streamlocal) This package is up to date.
 [INFO] (streamly) This package is up to date.
 [INFO] (streamm) This package is up to date.
@@ -17469,9 +17469,10 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (structure-spider) This package is up to date.
 [INFO] (structure-threader) This package is up to date.
 [INFO] (structured) This package is up to date.
-[INFO] (structured-config) This package is up to date.
+[INFO] (structured-config) Data has been updated for this package.
 [INFO] (structured-data) This package is up to date.
 [INFO] (structured-data-seo) This package is up to date.
+[INFO] (structured-markdown) Data has been updated for this package.
 [INFO] (structured-text-renderer) This package is up to date.
 [INFO] (structurediff) This package is up to date.
 [INFO] (structuredlogging) This package is up to date.
@@ -17776,7 +17777,7 @@ Unsupported package directory structure.
 [INFO] (subnetting) This package is up to date.
 [INFO] (subnetviz) This package is up to date.
 [INFO] (subnuker) This package is up to date.
-[INFO] (subopen) This package is up to date.
+[INFO] (subopen) Data has been updated for this package.
 [ERROR] (subordinate) This package does not have downloadable releases.
 [INFO] (subp) This package is up to date.
 [INFO] (subparse) This package is up to date.
@@ -17883,7 +17884,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (subways) This package is up to date.
 [INFO] (subword-nmt) This package is up to date.
 [INFO] (subwrap) This package is up to date.
-[INFO] (subx) Data has been updated for this package.
+[INFO] (subx) This package is up to date.
 [INFO] (subzero) This package is up to date.
 [ERROR] (subzilla) This package does not have downloadable releases.
 [INFO] (subzone) This package is up to date.
@@ -18053,12 +18054,12 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (suitable) This package is up to date.
 [INFO] (suitcase) This package is up to date.
 [INFO] (suitcase-core) This package is up to date.
-[INFO] (suitcase-csv) This package is up to date.
-[INFO] (suitcase-json-metadata) This package is up to date.
-[INFO] (suitcase-jsonl) This package is up to date.
+[INFO] (suitcase-csv) Data has been updated for this package.
+[INFO] (suitcase-json-metadata) Data has been updated for this package.
+[INFO] (suitcase-jsonl) Data has been updated for this package.
 [INFO] (suitcase-mongo) This package is up to date.
 [INFO] (suitcase-specfile) Data has been updated for this package.
-[INFO] (suitcase-tiff) This package is up to date.
+[INFO] (suitcase-tiff) Data has been updated for this package.
 [INFO] (suitcase-utils) Data has been updated for this package.
 [INFO] (suite) This package is up to date.
 [INFO] (suite-dog) This package is up to date.
@@ -18165,7 +18166,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (suncalcpy) This package is up to date.
 [INFO] (sundarkid-foreman) This package is up to date.
 [INFO] (sundowner) This package is up to date.
-[INFO] (sundry) This package is up to date.
+[INFO] (sundry) Data has been updated for this package.
 [INFO] (sunflower) This package is up to date.
 [INFO] (sunfluidhbox) This package is up to date.
 [INFO] (sunfounder-emo) This package is up to date.
@@ -18448,7 +18449,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (surgeo) This package is up to date.
 [INFO] (surgeon) This package is up to date.
 [INFO] (suricata-prettifier) This package is up to date.
-[INFO] (suricata-update) This package is up to date.
+[INFO] (suricata-update) Data has been updated for this package.
 [INFO] (surjection) This package is up to date.
 [INFO] (surl) This package is up to date.
 [INFO] (surlex) This package is up to date.
@@ -18593,7 +18594,7 @@ Unsupported package directory structure.
 [INFO] (svgwrite) This package is up to date.
 [INFO] (svhc) This package is up to date.
 [INFO] (svhn) This package is up to date.
-[INFO] (svim) Data has been updated for this package.
+[INFO] (svim) This package is up to date.
 [INFO] (svin-state-bot) This package is up to date.
 [INFO] (svineruscheckpay) This package is up to date.
 [INFO] (svist4get) This package is up to date.
@@ -18697,7 +18698,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (swagger-render) This package is up to date.
 [INFO] (swagger-schema) This package is up to date.
 [INFO] (swagger-server1) This package is up to date.
-[INFO] (swagger-spec-compatibility) This package is up to date.
+[INFO] (swagger-spec-compatibility) Data has been updated for this package.
 [INFO] (swagger-spec-validator) This package is up to date.
 [INFO] (swagger-spec-validator3) This package is up to date.
 [INFO] (swagger-stub) This package is up to date.
@@ -18924,7 +18925,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (swiglpk) This package is up to date.
 [INFO] (swim) This package is up to date.
 [INFO] (swimbundle-dev) This package is up to date.
-[INFO] (swimbundle-email) Data has been updated for this package.
+[INFO] (swimbundle-email) This package is up to date.
 [INFO] (swimbundle-utils) This package is up to date.
 [INFO] (swimlane) This package is up to date.
 [INFO] (swimlane-python-logger) This package is up to date.
@@ -18976,7 +18977,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (swisstime) This package is up to date.
 [INFO] (switch) This package is up to date.
 [INFO] (switch-case) This package is up to date.
-[INFO] (switch-config-render) This package is up to date.
+[INFO] (switch-config-render) Data has been updated for this package.
 [INFO] (switch-inputs) This package is up to date.
 [INFO] (switch-mexico) This package is up to date.
 [INFO] (switch-model) This package is up to date.
@@ -18997,7 +18998,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (switchpayments) This package is up to date.
 [INFO] (switchy) This package is up to date.
 [INFO] (switchyard) This package is up to date.
-[INFO] (switrs-to-sqlite) Data has been updated for this package.
+[INFO] (switrs-to-sqlite) This package is up to date.
 [ERROR] (switzerland) This package does not have downloadable releases.
 [INFO] (swjsq) This package is up to date.
 [INFO] (swk) This package is up to date.
@@ -19145,6 +19146,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (syaml) This package is up to date.
 [ERROR] (sybase) This package does not have downloadable releases.
 [INFO] (sybil) This package is up to date.
+[INFO] (sycopath) Data has been updated for this package.
 [ERROR] (syd) This package does not have downloadable releases.
 [INFO] (sydar) This package is up to date.
 [INFO] (sydbank-exporter) This package is up to date.
@@ -19157,7 +19159,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (syfi) This package is up to date.
 [INFO] (syfilebrowser) This package is up to date.
 [INFO] (syfr) This package is up to date.
-[INFO] (syft) Data has been updated for this package.
+[INFO] (syft) This package is up to date.
 [INFO] (sygicmaps) This package is up to date.
 [INFO] (sygma) This package is up to date.
 [INFO] (syh123) This package is up to date.
@@ -19204,6 +19206,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (symgroupy) This package is up to date.
 [INFO] (symigrate) This package is up to date.
 [INFO] (syml) This package is up to date.
+[INFO] (symlens) Data has been updated for this package.
 [INFO] (symlink-gardener) This package is up to date.
 [INFO] (symlinkator) This package is up to date.
 [INFO] (symmetricjsonrpc) This package is up to date.
@@ -19616,7 +19619,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (systranio) This package is up to date.
 [INFO] (systray-file-watcher) This package is up to date.
 [INFO] (systraypinger) This package is up to date.
-[INFO] (sysutil) Data has been updated for this package.
+[INFO] (sysutil) This package is up to date.
 [INFO] (sysutils) This package is up to date.
 [INFO] (sysuwang) This package is up to date.
 [INFO] (sysv-ipc) This package is up to date.
@@ -19694,10 +19697,10 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 
 [INFO] 
 [INFO] 
-[INFO] Total packages: 14301
-[INFO]     Packages processed: 14301
-[INFO]         Packages updated: 85
-[INFO]         Packages up-to-date: 13178
+[INFO] Total packages: 14312
+[INFO]     Packages processed: 14312
+[INFO]         Packages updated: 102
+[INFO]         Packages up-to-date: 13172
 [INFO]         Packages without response: 216
 [INFO]         Packages without urls: 0
 [INFO]         Packages without downloads: 668
