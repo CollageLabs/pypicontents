@@ -2179,7 +2179,7 @@
             "radar_server.union",
             "radar_server.utils"
         ],
-        "version": "0.1.3"
+        "version": "0.1.4"
     },
     "radar5": {
         "cmdline": [],
@@ -3449,7 +3449,7 @@
             "radicale_storage_etesync.etesync_cache",
             "radicale_storage_etesync.rights"
         ],
-        "version": "0.6.0"
+        "version": "0.7.0"
     },
     "radicale-storage-family-scheduler": {
         "cmdline": [],
@@ -5008,6 +5008,7 @@
             "rafcon.gui.views.utils.tree",
             "rafcon.utils",
             "rafcon.utils.constants",
+            "rafcon.utils.decorators",
             "rafcon.utils.dict_operations",
             "rafcon.utils.execution_log",
             "rafcon.utils.filesystem",
@@ -5027,7 +5028,7 @@
             "rafcon.utils.type_helpers",
             "rafcon.utils.vividict"
         ],
-        "version": "0.13.6"
+        "version": "0.13.7"
     },
     "raffaello": {
         "cmdline": [],
@@ -6557,6 +6558,14 @@
         ],
         "version": "1.0.0"
     },
+    "raj": {
+        "cmdline": [],
+        "modules": [
+            "raj",
+            "raj.views"
+        ],
+        "version": "1.0.dev20190307"
+    },
     "raja-ongkir": {
         "cmdline": [],
         "modules": [],
@@ -6631,6 +6640,16 @@
             "rajaongkir.api"
         ],
         "version": "1.1.2"
+    },
+    "rajat-distribution": {
+        "cmdline": [],
+        "modules": [
+            "rajat_distribution",
+            "rajat_distribution.Binomialdistribution",
+            "rajat_distribution.Gaussiandistribution",
+            "rajat_distribution.Generaldistribution"
+        ],
+        "version": "0.1"
     },
     "rajce-download": {
         "cmdline": [
@@ -6868,6 +6887,18 @@
         "cmdline": [],
         "modules": [],
         "version": ""
+    },
+    "rakali": {
+        "cmdline": [],
+        "modules": [
+            "rakali",
+            "rakali.cli",
+            "rakali.cli.show",
+            "rakali.img",
+            "rakali.video_reader",
+            "rakali.video_writer"
+        ],
+        "version": "0.0.4"
     },
     "rakam": {
         "cmdline": [],
@@ -7423,268 +7454,8 @@
     },
     "rally-openstack": {
         "cmdline": [],
-        "modules": [
-            "rally_openstack",
-            "rally_openstack.cfg",
-            "rally_openstack.cfg.cinder",
-            "rally_openstack.cfg.cleanup",
-            "rally_openstack.cfg.ec2",
-            "rally_openstack.cfg.glance",
-            "rally_openstack.cfg.heat",
-            "rally_openstack.cfg.ironic",
-            "rally_openstack.cfg.keystone_roles",
-            "rally_openstack.cfg.keystone_users",
-            "rally_openstack.cfg.magnum",
-            "rally_openstack.cfg.manila",
-            "rally_openstack.cfg.mistral",
-            "rally_openstack.cfg.monasca",
-            "rally_openstack.cfg.murano",
-            "rally_openstack.cfg.neutron",
-            "rally_openstack.cfg.nova",
-            "rally_openstack.cfg.opts",
-            "rally_openstack.cfg.osclients",
-            "rally_openstack.cfg.profiler",
-            "rally_openstack.cfg.sahara",
-            "rally_openstack.cfg.senlin",
-            "rally_openstack.cfg.tempest",
-            "rally_openstack.cfg.vm",
-            "rally_openstack.cfg.watcher",
-            "rally_openstack.cleanup",
-            "rally_openstack.cleanup.base",
-            "rally_openstack.cleanup.manager",
-            "rally_openstack.cleanup.resources",
-            "rally_openstack.consts",
-            "rally_openstack.contexts",
-            "rally_openstack.contexts.api_versions",
-            "rally_openstack.contexts.ceilometer",
-            "rally_openstack.contexts.ceilometer.samples",
-            "rally_openstack.contexts.cinder",
-            "rally_openstack.contexts.cinder.volume_types",
-            "rally_openstack.contexts.cinder.volumes",
-            "rally_openstack.contexts.cleanup",
-            "rally_openstack.contexts.cleanup.admin",
-            "rally_openstack.contexts.cleanup.base",
-            "rally_openstack.contexts.cleanup.user",
-            "rally_openstack.contexts.dataplane",
-            "rally_openstack.contexts.dataplane.heat",
-            "rally_openstack.contexts.designate",
-            "rally_openstack.contexts.designate.zones",
-            "rally_openstack.contexts.ec2",
-            "rally_openstack.contexts.ec2.servers",
-            "rally_openstack.contexts.glance",
-            "rally_openstack.contexts.glance.images",
-            "rally_openstack.contexts.heat",
-            "rally_openstack.contexts.heat.stacks",
-            "rally_openstack.contexts.keystone",
-            "rally_openstack.contexts.keystone.roles",
-            "rally_openstack.contexts.keystone.users",
-            "rally_openstack.contexts.magnum",
-            "rally_openstack.contexts.magnum.ca_certs",
-            "rally_openstack.contexts.magnum.cluster_templates",
-            "rally_openstack.contexts.magnum.clusters",
-            "rally_openstack.contexts.manila",
-            "rally_openstack.contexts.manila.consts",
-            "rally_openstack.contexts.manila.manila_security_services",
-            "rally_openstack.contexts.manila.manila_share_networks",
-            "rally_openstack.contexts.manila.manila_shares",
-            "rally_openstack.contexts.monasca",
-            "rally_openstack.contexts.monasca.metrics",
-            "rally_openstack.contexts.murano",
-            "rally_openstack.contexts.murano.murano_environments",
-            "rally_openstack.contexts.murano.murano_packages",
-            "rally_openstack.contexts.network",
-            "rally_openstack.contexts.network.allow_ssh",
-            "rally_openstack.contexts.network.existing_network",
-            "rally_openstack.contexts.network.networks",
-            "rally_openstack.contexts.network.routers",
-            "rally_openstack.contexts.neutron",
-            "rally_openstack.contexts.neutron.lbaas",
-            "rally_openstack.contexts.nova",
-            "rally_openstack.contexts.nova.flavors",
-            "rally_openstack.contexts.nova.keypairs",
-            "rally_openstack.contexts.nova.servers",
-            "rally_openstack.contexts.quotas",
-            "rally_openstack.contexts.quotas.cinder_quotas",
-            "rally_openstack.contexts.quotas.designate_quotas",
-            "rally_openstack.contexts.quotas.manila_quotas",
-            "rally_openstack.contexts.quotas.neutron_quotas",
-            "rally_openstack.contexts.quotas.nova_quotas",
-            "rally_openstack.contexts.quotas.quotas",
-            "rally_openstack.contexts.sahara",
-            "rally_openstack.contexts.sahara.sahara_cluster",
-            "rally_openstack.contexts.sahara.sahara_image",
-            "rally_openstack.contexts.sahara.sahara_input_data_sources",
-            "rally_openstack.contexts.sahara.sahara_job_binaries",
-            "rally_openstack.contexts.sahara.sahara_output_data_sources",
-            "rally_openstack.contexts.senlin",
-            "rally_openstack.contexts.senlin.profiles",
-            "rally_openstack.contexts.swift",
-            "rally_openstack.contexts.swift.objects",
-            "rally_openstack.contexts.swift.utils",
-            "rally_openstack.contexts.vm",
-            "rally_openstack.contexts.vm.custom_image",
-            "rally_openstack.contexts.vm.image_command_customizer",
-            "rally_openstack.contexts.watcher",
-            "rally_openstack.contexts.watcher.audit_templates",
-            "rally_openstack.credential",
-            "rally_openstack.embedcharts",
-            "rally_openstack.embedcharts.osprofilerchart",
-            "rally_openstack.exceptions",
-            "rally_openstack.hook",
-            "rally_openstack.hook.fault_injection",
-            "rally_openstack.osclients",
-            "rally_openstack.platforms",
-            "rally_openstack.platforms.existing",
-            "rally_openstack.scenario",
-            "rally_openstack.scenarios",
-            "rally_openstack.scenarios.authenticate",
-            "rally_openstack.scenarios.authenticate.authenticate",
-            "rally_openstack.scenarios.barbican",
-            "rally_openstack.scenarios.ceilometer",
-            "rally_openstack.scenarios.ceilometer.alarms",
-            "rally_openstack.scenarios.ceilometer.events",
-            "rally_openstack.scenarios.ceilometer.meters",
-            "rally_openstack.scenarios.ceilometer.queries",
-            "rally_openstack.scenarios.ceilometer.resources",
-            "rally_openstack.scenarios.ceilometer.samples",
-            "rally_openstack.scenarios.ceilometer.stats",
-            "rally_openstack.scenarios.ceilometer.traits",
-            "rally_openstack.scenarios.ceilometer.utils",
-            "rally_openstack.scenarios.cinder",
-            "rally_openstack.scenarios.cinder.qos_specs",
-            "rally_openstack.scenarios.cinder.utils",
-            "rally_openstack.scenarios.cinder.volume_backups",
-            "rally_openstack.scenarios.cinder.volume_types",
-            "rally_openstack.scenarios.cinder.volumes",
-            "rally_openstack.scenarios.designate",
-            "rally_openstack.scenarios.designate.basic",
-            "rally_openstack.scenarios.designate.utils",
-            "rally_openstack.scenarios.dummy",
-            "rally_openstack.scenarios.ec2",
-            "rally_openstack.scenarios.ec2.servers",
-            "rally_openstack.scenarios.ec2.utils",
-            "rally_openstack.scenarios.elasticsearch",
-            "rally_openstack.scenarios.elasticsearch.logging",
-            "rally_openstack.scenarios.glance",
-            "rally_openstack.scenarios.glance.images",
-            "rally_openstack.scenarios.gnocchi",
-            "rally_openstack.scenarios.gnocchi.archive_policy",
-            "rally_openstack.scenarios.gnocchi.archive_policy_rule",
-            "rally_openstack.scenarios.gnocchi.capabilities",
-            "rally_openstack.scenarios.gnocchi.metric",
-            "rally_openstack.scenarios.gnocchi.resource",
-            "rally_openstack.scenarios.gnocchi.resource_type",
-            "rally_openstack.scenarios.gnocchi.status",
-            "rally_openstack.scenarios.gnocchi.utils",
-            "rally_openstack.scenarios.grafana",
-            "rally_openstack.scenarios.grafana.metrics",
-            "rally_openstack.scenarios.heat",
-            "rally_openstack.scenarios.heat.stacks",
-            "rally_openstack.scenarios.heat.utils",
-            "rally_openstack.scenarios.ironic",
-            "rally_openstack.scenarios.ironic.nodes",
-            "rally_openstack.scenarios.ironic.utils",
-            "rally_openstack.scenarios.keystone",
-            "rally_openstack.scenarios.keystone.basic",
-            "rally_openstack.scenarios.magnum",
-            "rally_openstack.scenarios.magnum.cluster_templates",
-            "rally_openstack.scenarios.magnum.clusters",
-            "rally_openstack.scenarios.magnum.k8s_pods",
-            "rally_openstack.scenarios.magnum.utils",
-            "rally_openstack.scenarios.manila",
-            "rally_openstack.scenarios.manila.shares",
-            "rally_openstack.scenarios.manila.utils",
-            "rally_openstack.scenarios.mistral",
-            "rally_openstack.scenarios.mistral.executions",
-            "rally_openstack.scenarios.mistral.utils",
-            "rally_openstack.scenarios.mistral.workbooks",
-            "rally_openstack.scenarios.monasca",
-            "rally_openstack.scenarios.monasca.metrics",
-            "rally_openstack.scenarios.monasca.utils",
-            "rally_openstack.scenarios.murano",
-            "rally_openstack.scenarios.murano.environments",
-            "rally_openstack.scenarios.murano.packages",
-            "rally_openstack.scenarios.murano.utils",
-            "rally_openstack.scenarios.neutron",
-            "rally_openstack.scenarios.neutron.bgpvpn",
-            "rally_openstack.scenarios.neutron.loadbalancer_v1",
-            "rally_openstack.scenarios.neutron.loadbalancer_v2",
-            "rally_openstack.scenarios.neutron.network",
-            "rally_openstack.scenarios.neutron.security_groups",
-            "rally_openstack.scenarios.neutron.utils",
-            "rally_openstack.scenarios.nova",
-            "rally_openstack.scenarios.nova.agents",
-            "rally_openstack.scenarios.nova.aggregates",
-            "rally_openstack.scenarios.nova.availability_zones",
-            "rally_openstack.scenarios.nova.flavors",
-            "rally_openstack.scenarios.nova.hypervisors",
-            "rally_openstack.scenarios.nova.keypairs",
-            "rally_openstack.scenarios.nova.server_groups",
-            "rally_openstack.scenarios.nova.servers",
-            "rally_openstack.scenarios.nova.services",
-            "rally_openstack.scenarios.nova.utils",
-            "rally_openstack.scenarios.quotas",
-            "rally_openstack.scenarios.quotas.quotas",
-            "rally_openstack.scenarios.quotas.utils",
-            "rally_openstack.scenarios.sahara",
-            "rally_openstack.scenarios.sahara.clusters",
-            "rally_openstack.scenarios.sahara.consts",
-            "rally_openstack.scenarios.sahara.jobs",
-            "rally_openstack.scenarios.sahara.node_group_templates",
-            "rally_openstack.scenarios.sahara.utils",
-            "rally_openstack.scenarios.senlin",
-            "rally_openstack.scenarios.senlin.clusters",
-            "rally_openstack.scenarios.senlin.utils",
-            "rally_openstack.scenarios.swift",
-            "rally_openstack.scenarios.swift.objects",
-            "rally_openstack.scenarios.swift.utils",
-            "rally_openstack.scenarios.vm",
-            "rally_openstack.scenarios.vm.utils",
-            "rally_openstack.scenarios.vm.vmtasks",
-            "rally_openstack.scenarios.watcher",
-            "rally_openstack.scenarios.watcher.basic",
-            "rally_openstack.scenarios.watcher.utils",
-            "rally_openstack.scenarios.zaqar",
-            "rally_openstack.scenarios.zaqar.basic",
-            "rally_openstack.scenarios.zaqar.utils",
-            "rally_openstack.service",
-            "rally_openstack.services",
-            "rally_openstack.services.gnocchi",
-            "rally_openstack.services.gnocchi.metric",
-            "rally_openstack.services.grafana",
-            "rally_openstack.services.grafana.grafana",
-            "rally_openstack.services.heat",
-            "rally_openstack.services.heat.main",
-            "rally_openstack.services.identity",
-            "rally_openstack.services.identity.identity",
-            "rally_openstack.services.identity.keystone_common",
-            "rally_openstack.services.identity.keystone_v2",
-            "rally_openstack.services.identity.keystone_v3",
-            "rally_openstack.services.image",
-            "rally_openstack.services.image.glance_common",
-            "rally_openstack.services.image.glance_v1",
-            "rally_openstack.services.image.glance_v2",
-            "rally_openstack.services.image.image",
-            "rally_openstack.services.storage",
-            "rally_openstack.services.storage.block",
-            "rally_openstack.services.storage.cinder_common",
-            "rally_openstack.services.storage.cinder_v1",
-            "rally_openstack.services.storage.cinder_v2",
-            "rally_openstack.services.storage.cinder_v3",
-            "rally_openstack.types",
-            "rally_openstack.validators",
-            "rally_openstack.verification",
-            "rally_openstack.verification.tempest",
-            "rally_openstack.verification.tempest.config",
-            "rally_openstack.verification.tempest.consts",
-            "rally_openstack.verification.tempest.context",
-            "rally_openstack.verification.tempest.manager",
-            "rally_openstack.workload",
-            "rally_openstack.workload.siege",
-            "rally_openstack.wrappers",
-            "rally_openstack.wrappers.network"
-        ],
-        "version": "1.3.0"
+        "modules": [],
+        "version": "1.4.0"
     },
     "rally-runners": {
         "cmdline": [],
@@ -17242,7 +17013,7 @@
             "rattail.win32.users",
             "rattail.wince"
         ],
-        "version": "0.9.67"
+        "version": "0.9.68"
     },
     "rattail-brdata": {
         "cmdline": [],
@@ -19150,7 +18921,7 @@
             "raytracing.olympus",
             "raytracing.thorlabs"
         ],
-        "version": "1.0.9"
+        "version": "1.1.0"
     },
     "rayures": {
         "cmdline": [],
@@ -20261,7 +20032,7 @@
             "rc_cts.lib.resilient_mock",
             "rc_cts.lib.threat_models"
         ],
-        "version": "32.0.0"
+        "version": "32.0.126"
     },
     "rc-customcontent": {
         "cmdline": [],
@@ -20386,7 +20157,7 @@
             "rc_webserver.components.webservice",
             "rc_webserver.web"
         ],
-        "version": "32.0.0"
+        "version": "32.0.126"
     },
     "rc2": {
         "cmdline": [],
@@ -25696,6 +25467,7 @@
             "rebasehelper.spec_hooks.escape_macros",
             "rebasehelper.spec_hooks.paths_to_rpm_macros",
             "rebasehelper.spec_hooks.pypi_url_fix",
+            "rebasehelper.spec_hooks.replace_old_version",
             "rebasehelper.spec_hooks.ruby_helper",
             "rebasehelper.spec_hooks.typo_fix",
             "rebasehelper.specfile",
@@ -25730,7 +25502,7 @@
             "rebasehelper.versioneers.pypi_versioneer",
             "rebasehelper.versioneers.rubygems_versioneer"
         ],
-        "version": "0.16.1"
+        "version": "0.16.2"
     },
     "rebecca": {
         "cmdline": [],
@@ -26235,6 +26007,21 @@
         ],
         "version": "0.0.1"
     },
+    "recarraytools": {
+        "cmdline": [],
+        "modules": [
+            "RecarrayTools",
+            "RecarrayTools.AppendFields",
+            "RecarrayTools.AssignToRecarray",
+            "RecarrayTools.InterpRecarrayFields",
+            "RecarrayTools.JoinRecarray",
+            "RecarrayTools.ReadRecarray",
+            "RecarrayTools.ReduceRecarray",
+            "RecarrayTools.SaveRecarray",
+            "RecarrayTools._InterpGaps"
+        ],
+        "version": "0.0.1"
+    },
     "recast-api": {
         "cmdline": [],
         "modules": [
@@ -26507,7 +26294,13 @@
         "version": "1.0.1"
     },
     "recentrifuge": {
-        "cmdline": [],
+        "cmdline": [
+            "rcf",
+            "remock",
+            "retaxdump",
+            "retest",
+            "rextract"
+        ],
         "modules": [
             "recentrifuge",
             "recentrifuge.centrifuge",
@@ -26531,7 +26324,7 @@
             "recentrifuge.taxonomy",
             "recentrifuge.trees"
         ],
-        "version": "0.28.6"
+        "version": "0.28.7"
     },
     "receptacle": {
         "cmdline": [],
@@ -38841,7 +38634,7 @@
             "rehive.api.resources.user_resources",
             "rehive.rehive"
         ],
-        "version": "1.2.0"
+        "version": "1.2.1"
     },
     "rehowdoi": {
         "cmdline": [],
@@ -44153,8 +43946,10 @@
     },
     "rentropy": {
         "cmdline": [],
-        "modules": [],
-        "version": "0.1.1"
+        "modules": [
+            "rentropy"
+        ],
+        "version": "0.1.2"
     },
     "rentry": {
         "cmdline": [
@@ -46585,6 +46380,7 @@
             "repoze",
             "repoze.catalog",
             "repoze.catalog.catalog",
+            "repoze.catalog.compat",
             "repoze.catalog.document",
             "repoze.catalog.indexes",
             "repoze.catalog.indexes.common",
@@ -46612,7 +46408,7 @@
             "repoze.catalog.tests.test_migration",
             "repoze.catalog.tests.test_query"
         ],
-        "version": "0.8.3"
+        "version": "0.9.0"
     },
     "repoze-component": {
         "cmdline": [],
@@ -51445,7 +51241,7 @@
     "research-dash-components": {
         "cmdline": [],
         "modules": [],
-        "version": "0.0.2"
+        "version": "0.0.0"
     },
     "researchdataau": {
         "cmdline": [],
@@ -51630,7 +51426,7 @@
             "resilient.patch",
             "resilient.resilient_rest_mock"
         ],
-        "version": "32.0.0"
+        "version": "32.0.126"
     },
     "resilient-circuits": {
         "cmdline": [],
@@ -51658,7 +51454,7 @@
             "resilient_circuits.util.resilient_config",
             "resilient_circuits.util.resilient_customize"
         ],
-        "version": "32.0.0"
+        "version": "32.0.126"
     },
     "resilient-lib": {
         "cmdline": [],
@@ -51680,7 +51476,7 @@
             "tests.test_payload",
             "tests.test_requests"
         ],
-        "version": "32.0.0"
+        "version": "32.0.126"
     },
     "resim": {
         "cmdline": [],
@@ -52193,7 +51989,7 @@
             "resolwe.toolkit",
             "resolwe.utils"
         ],
-        "version": "14.3.0"
+        "version": "14.4.0"
     },
     "resolwe-bio": {
         "cmdline": [],
@@ -52276,23 +52072,16 @@
             "resonate.bubble_plot",
             "resonate.cohorts",
             "resonate.compress",
-            "resonate.distance_filter",
-            "resonate.filter_detections",
             "resonate.filters",
-            "resonate.geojson",
-            "resonate.html_maps",
             "resonate.interval_data_tool",
-            "resonate.kessel_ri",
             "resonate.library",
             "resonate.library.exceptions",
             "resonate.receiver_efficiency",
             "resonate.residence_index",
-            "resonate.simulation_tool",
             "resonate.uniqueid",
-            "resonate.velocity_filter",
             "resonate.visual_timeline"
         ],
-        "version": "1.0.5"
+        "version": "1.0.6"
     },
     "resort": {
         "cmdline": [],
@@ -52536,7 +52325,7 @@
             "resource_manager.visitor",
             "resource_manager.wrappers"
         ],
-        "version": "0.9.2"
+        "version": "0.9.3"
     },
     "resource-pool": {
         "cmdline": [],
@@ -54615,7 +54404,7 @@
             "restible_appengine.secure.util",
             "restible_appengine.util"
         ],
-        "version": "0.3.3"
+        "version": "0.3.4"
     },
     "restible-swagger": {
         "cmdline": [],
@@ -54627,7 +54416,7 @@
             "restible_swagger.route",
             "restible_swagger.util"
         ],
-        "version": "0.3"
+        "version": "0.3.1"
     },
     "restifier": {
         "cmdline": [],
@@ -55969,7 +55758,7 @@
     "result-quality": {
         "cmdline": [],
         "modules": [],
-        "version": "0.0.2"
+        "version": "0.0.0"
     },
     "result2": {
         "cmdline": [],
@@ -57778,6 +57567,11 @@
             "reverseip"
         ],
         "version": "1.0.1"
+    },
+    "reverseip-ver-0-truburbank": {
+        "cmdline": [],
+        "modules": [],
+        "version": "0.1"
     },
     "reversi": {
         "cmdline": [],
@@ -59724,7 +59518,7 @@
             "rfcde.core",
             "rfcde.kde"
         ],
-        "version": "0.2"
+        "version": "0.2.1"
     },
     "rfclient": {
         "cmdline": [],
@@ -59911,6 +59705,22 @@
             "rfhq.views"
         ],
         "version": "0.1.14"
+    },
+    "rfhub2": {
+        "cmdline": [],
+        "modules": [
+            "rfhub2",
+            "rfhub2.app",
+            "rfhub2.blueprints",
+            "rfhub2.blueprints.api",
+            "rfhub2.blueprints.api.keywords",
+            "rfhub2.blueprints.api.libraries",
+            "rfhub2.blueprints.dashboard",
+            "rfhub2.blueprints.doc",
+            "rfhub2.kwdb",
+            "rfhub2.version"
+        ],
+        "version": "0.2"
     },
     "rfid-uuid-usb-card-reader": {
         "cmdline": [],
@@ -60376,7 +60186,7 @@
             "rgbmatrix5x5",
             "rgbmatrix5x5.is31fl3731"
         ],
-        "version": "0.0.1"
+        "version": "0.0.2"
     },
     "rgbnotes": {
         "cmdline": [],
@@ -63202,7 +63012,7 @@
         "modules": [
             "riemann_zyxel_gs1200"
         ],
-        "version": "0"
+        "version": "1"
     },
     "rif": {
         "cmdline": [],
@@ -65031,7 +64841,7 @@
             "mbtiles.scripts",
             "mbtiles.scripts.cli"
         ],
-        "version": "1.4.1"
+        "version": "1.4.2"
     },
     "rio-merge-rgba": {
         "cmdline": [],
@@ -65698,7 +65508,7 @@
             "ripe_proposal_2018_06.ripe_proposal_2018_06",
             "ripe_proposal_2018_06.rpkitools"
         ],
-        "version": "1.0.3"
+        "version": "1.0.4"
     },
     "ripe-tinyurl": {
         "cmdline": [],
@@ -67161,7 +66971,7 @@
         "modules": [
             "rkpython"
         ],
-        "version": "0.0.14"
+        "version": "0.0.16"
     },
     "rkquery": {
         "cmdline": [],
@@ -72210,13 +72020,25 @@
         ],
         "version": "0.5.5"
     },
+    "roberto": {
+        "cmdline": [],
+        "modules": [
+            "roberto",
+            "roberto.tasks",
+            "roberto.test",
+            "roberto.test.test_utils",
+            "roberto.utils",
+            "roberto.version"
+        ],
+        "version": "0.9.4"
+    },
     "robertsons-rules": {
         "cmdline": [],
         "modules": [
             "robertsons_rules",
             "robertsons_rules.plotting"
         ],
-        "version": "0.1.0"
+        "version": "0.1.1"
     },
     "robin": {
         "cmdline": [],
@@ -74603,7 +74425,7 @@
             "JsdLibrary.jsd",
             "JsdLibrary.version"
         ],
-        "version": "0.1.1"
+        "version": "0.1.3"
     },
     "robotframework-jsonlibrary": {
         "cmdline": [],
@@ -81119,7 +80941,7 @@
             "rook.trigger_services",
             "rook.user_warnings"
         ],
-        "version": "0.1.42"
+        "version": "0.1.43"
     },
     "rookie-stock-crawler": {
         "cmdline": [],
@@ -82112,7 +81934,7 @@
             "rope.refactor.usefunction",
             "rope.refactor.wildcards"
         ],
-        "version": "0.12.0"
+        "version": "0.12.1"
     },
     "ropeide": {
         "cmdline": [],
@@ -86357,12 +86179,14 @@
         "cmdline": [],
         "modules": [
             "rpg",
+            "rpg.RapidNEWPeptidesGenerator",
             "rpg.RapidPeptidesGenerator",
             "rpg.context",
             "rpg.core",
             "rpg.digest",
             "rpg.enzyme",
             "rpg.enzymes_definition",
+            "rpg.finder",
             "rpg.rule",
             "rpg.sequence",
             "tests",
@@ -86374,7 +86198,7 @@
             "tests.test_rule",
             "tests.test_sequence"
         ],
-        "version": "1.0.8"
+        "version": "1.0.9"
     },
     "rpg-1d6": {
         "cmdline": [],
@@ -90206,7 +90030,7 @@
     "rqr-features": {
         "cmdline": [],
         "modules": [],
-        "version": "0.0.2"
+        "version": "0.0.0"
     },
     "rqrisk": {
         "cmdline": [],
@@ -91285,7 +91109,7 @@
             "rsclib.timeout",
             "rsclib.trafficshape"
         ],
-        "version": "0.54"
+        "version": "0.55"
     },
     "rscloud": {
         "cmdline": [
@@ -93785,6 +93609,13 @@
             "rsyncrun.steps"
         ],
         "version": "1.1.2"
+    },
+    "rsyncstats": {
+        "cmdline": [],
+        "modules": [
+            "rsyncstats"
+        ],
+        "version": "0.1.5"
     },
     "rt": {
         "cmdline": [],
@@ -99056,7 +98887,7 @@
             "runway.module.terraform",
             "runway.util"
         ],
-        "version": "0.42.0"
+        "version": "0.43.0"
     },
     "runway-python": {
         "cmdline": [],
