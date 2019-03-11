@@ -3610,10 +3610,13 @@
         "modules": [
             "lambdabase",
             "lambdabase.BaseHandler",
+            "lambdabase.BaseStrap",
             "lambdabase.ConfigManager",
             "lambdabase.Constants",
             "lambdabase.LambdaException",
-            "lambdabase.LogFactoryBase",
+            "lambdabase.Request",
+            "lambdabase.RequestContext",
+            "lambdabase.Response",
             "lambdabase.Utils",
             "lambdabase.data",
             "lambdabase.data.DynamoDbObjectStore",
@@ -3625,19 +3628,6 @@
             "lambdabase.invokers.LambdaInvokerFactory",
             "lambdabase.invokers.LogFactory",
             "lambdabase.lambdas",
-            "lambdabase.lambdas.BaseStrap",
-            "lambdabase.lambdas.DynamoDbObjectStore",
-            "lambdabase.lambdas.LambdaException",
-            "lambdabase.lambdas.MultiMapDatastore",
-            "lambdabase.lambdas.Request",
-            "lambdabase.lambdas.RequestContext",
-            "lambdabase.lambdas.Response",
-            "lambdabase.lambdas.invokers",
-            "lambdabase.lambdas.invokers.Invoker",
-            "lambdabase.lambdas.invokers.InvokerFactory",
-            "lambdabase.lambdas.invokers.LambdaInvoker",
-            "lambdabase.lambdas.invokers.LambdaInvokerFactory",
-            "lambdabase.lambdas.invokers.LogFactory",
             "lambdabase.lambdas.users",
             "lambdabase.lambdas.users.Bootstrap",
             "lambdabase.lambdas.users.LogFactory",
@@ -3651,7 +3641,6 @@
             "lambdabase.local.CognitoProxy",
             "lambdabase.local.JwtValidator",
             "lambdabase.local.LambdaProxy",
-            "lambdabase.local.MemoryObjectStore",
             "lambdabase.local.data",
             "lambdabase.local.data.MemoryObjectStore",
             "lambdabase.local.invokers",
@@ -3660,12 +3649,13 @@
             "lambdabase.local.invokers.LocalInvokerFactory",
             "lambdabase.log",
             "lambdabase.log.LogContextFilter",
+            "lambdabase.log.LogFactoryBase",
             "lambdabase.log.LogMessage",
             "lambdabase.test",
             "lambdabase.test.unit",
             "lambdabase.test.unit.test_base_handler"
         ],
-        "version": "0.3"
+        "version": "0.4"
     },
     "lambdacookie": {
         "cmdline": [],
@@ -3980,6 +3970,13 @@
             "lambkin.zip"
         ],
         "version": "0.3.5"
+    },
+    "lamblackbox": {
+        "cmdline": [],
+        "modules": [
+            "lamblackbox"
+        ],
+        "version": "0.0.11"
     },
     "lambpack": {
         "cmdline": [],
@@ -7694,7 +7691,7 @@
             "LAS.converter",
             "LAS.test_converter"
         ],
-        "version": "0.1"
+        "version": "0.3"
     },
     "lasagna": {
         "cmdline": [],
@@ -11067,21 +11064,6 @@
         ],
         "version": "0.5.2"
     },
-    "launchagents": {
-        "cmdline": [],
-        "modules": [
-            "launchagents",
-            "launchagents.colorize",
-            "launchagents.list",
-            "launchagents.load",
-            "launchagents.logs",
-            "launchagents.logs.create",
-            "launchagents.logs.err",
-            "launchagents.logs.out",
-            "launchagents.unload"
-        ],
-        "version": "0.0.4"
-    },
     "launchbox": {
         "cmdline": [],
         "modules": [
@@ -12568,7 +12550,7 @@
             "laxpytest",
             "laxpytest.test_laxpy"
         ],
-        "version": "0.0.2"
+        "version": "0.1"
     },
     "layabout": {
         "cmdline": [],
@@ -15915,6 +15897,14 @@
             "lccserver",
             "lccserver._version",
             "lccserver.authnzerver",
+            "lccserver.authnzerver.actions",
+            "lccserver.authnzerver.actions.admin",
+            "lccserver.authnzerver.actions.apikey",
+            "lccserver.authnzerver.actions.email",
+            "lccserver.authnzerver.actions.session",
+            "lccserver.authnzerver.actions.user",
+            "lccserver.authnzerver.authdb",
+            "lccserver.authnzerver.cache",
             "lccserver.authnzerver.handlers",
             "lccserver.authnzerver.main",
             "lccserver.authnzerver.tables",
@@ -15923,29 +15913,48 @@
             "lccserver.backend.abcat_columns",
             "lccserver.backend.datasets",
             "lccserver.backend.dbsearch",
+            "lccserver.backend.footprints",
             "lccserver.backend.frames",
             "lccserver.backend.lightcurves",
             "lccserver.backend.mosaic",
             "lccserver.cli",
             "lccserver.external",
+            "lccserver.external.cookies",
+            "lccserver.external.cookies.cookies",
             "lccserver.external.futures37",
             "lccserver.external.futures37._base",
             "lccserver.external.futures37.process",
             "lccserver.external.futures37.thread",
             "lccserver.frontend",
+            "lccserver.frontend.admin_handlers",
+            "lccserver.frontend.auth_handlers",
+            "lccserver.frontend.basehandler",
             "lccserver.frontend.dataserver_handlers",
             "lccserver.frontend.indexserver",
             "lccserver.frontend.indexserver_handlers",
             "lccserver.frontend.objectserver_handlers",
             "lccserver.frontend.searchserver_handlers",
+            "lccserver.frontend.testserver",
             "lccserver.modtemplate",
             "lccserver.services",
             "lccserver.tests",
+            "lccserver.tests.setup_tests",
+            "lccserver.tests.test_auth_creation",
+            "lccserver.tests.test_auth_login",
+            "lccserver.tests.test_auth_loginlogout",
+            "lccserver.tests.test_auth_passcheck",
+            "lccserver.tests.test_auth_sessioninfo",
+            "lccserver.tests.test_auth_timing",
+            "lccserver.tests.test_authdb_anonymous",
+            "lccserver.tests.test_authdb_authenticated",
+            "lccserver.tests.test_authdb_locked",
+            "lccserver.tests.test_authdb_staff",
+            "lccserver.tests.test_authdb_superuser",
             "lccserver.tests.test_cli",
             "lccserver.tests.test_utils",
             "lccserver.utils"
         ],
-        "version": "0.1.4"
+        "version": "0.2.2"
     },
     "lcd": {
         "cmdline": [],
@@ -29124,7 +29133,7 @@
     "liara": {
         "cmdline": [],
         "modules": [],
-        "version": "2.0a2"
+        "version": "2.0a3"
     },
     "liarcom": {
         "cmdline": [],
@@ -29853,7 +29862,7 @@
             "libagent.ssh.protocol",
             "libagent.util"
         ],
-        "version": "0.13.0"
+        "version": "0.13.1"
     },
     "libagents": {
         "cmdline": [],
@@ -31939,6 +31948,8 @@
         "cmdline": [],
         "modules": [
             "libgutenberg",
+            "libgutenberg.CommonOptions",
+            "libgutenberg.Cover",
             "libgutenberg.DublinCore",
             "libgutenberg.DummyConnectionPool",
             "libgutenberg.GutenbergDatabase",
@@ -31947,7 +31958,7 @@
             "libgutenberg.Logger",
             "libgutenberg.MediaTypes"
         ],
-        "version": "0.1.6"
+        "version": "0.3.1"
     },
     "libgwas": {
         "cmdline": [],
@@ -39526,7 +39537,7 @@
             "lightnlp.utils.learning",
             "lightnlp.utils.log"
         ],
-        "version": "0.2.2.0"
+        "version": "0.2.2.1"
     },
     "lightnmf": {
         "cmdline": [],
@@ -39601,10 +39612,12 @@
             "lncrawl.spiders.fullnovellive",
             "lncrawl.spiders.gravitytales",
             "lncrawl.spiders.idqidian",
+            "lncrawl.spiders.litnet",
             "lncrawl.spiders.lnindo",
             "lncrawl.spiders.lnmtl",
             "lncrawl.spiders.machinetrans",
             "lncrawl.spiders.meionovel",
+            "lncrawl.spiders.mtlednovels",
             "lncrawl.spiders.novelall",
             "lncrawl.spiders.novelfull",
             "lncrawl.spiders.novelonlinefree",
@@ -39615,6 +39628,7 @@
             "lncrawl.spiders.romanticlb",
             "lncrawl.spiders.royalroad",
             "lncrawl.spiders.scribblehub",
+            "lncrawl.spiders.volarenovels",
             "lncrawl.spiders.webnonline",
             "lncrawl.spiders.webnovel",
             "lncrawl.spiders.worldnovelonline",
@@ -39629,7 +39643,7 @@
             "lncrawl.utils.update_checker",
             "lncrawl.utils.uploader"
         ],
-        "version": "2.8.2"
+        "version": "2.8.3"
     },
     "lightnovelapi": {
         "cmdline": [],
@@ -40333,7 +40347,7 @@
             "like_spider.mysql",
             "like_spider.request"
         ],
-        "version": "1.1.6"
+        "version": "1.1.7"
     },
     "like01": {
         "cmdline": [],
@@ -42574,7 +42588,7 @@
             "lineflow.datasets",
             "lineflow.datasets.seq2seq"
         ],
-        "version": "0.2.0"
+        "version": "0.2.1"
     },
     "linehaul": {
         "cmdline": [],
@@ -47844,7 +47858,7 @@
         "modules": [
             "lintipy"
         ],
-        "version": "1.0.1"
+        "version": "1.1.0"
     },
     "lintjenkins": {
         "cmdline": [],
@@ -48241,16 +48255,6 @@
             "linuxdvb"
         ],
         "version": "0.1"
-    },
-    "linuxed": {
-        "cmdline": [
-            "LinuxED",
-            "linuxed"
-        ],
-        "modules": [
-            "LinuxED"
-        ],
-        "version": "0.0.3"
     },
     "linuxfd": {
         "cmdline": [],
@@ -53524,9 +53528,10 @@
     "liwc-analysis": {
         "cmdline": [],
         "modules": [
-            "liwc_analysis"
+            "liwcanalysis",
+            "liwcanalysis.liwcanalysis"
         ],
-        "version": "1.0.1"
+        "version": "1.2.0"
     },
     "liwc-analysis-ericwiener": {
         "cmdline": [],
@@ -56648,11 +56653,10 @@
         "version": "1.8"
     },
     "localgraphclustering": {
-        "cmdline": [
-            "createGraphLibFile.sh"
-        ],
+        "cmdline": [],
         "modules": [
             "localgraphclustering",
+            "localgraphclustering.GraphDrawing",
             "localgraphclustering.GraphLocal",
             "localgraphclustering.MQI",
             "localgraphclustering.SimpleLocal",
@@ -56663,21 +56667,25 @@
             "localgraphclustering.algorithms.sweepcut",
             "localgraphclustering.approximate_PageRank",
             "localgraphclustering.approximate_PageRank_weighted",
+            "localgraphclustering.approximate_PageRank_weighted_seed",
             "localgraphclustering.capacity_releasing_diffusion",
             "localgraphclustering.cpp",
             "localgraphclustering.cpp.MQI_cpp",
             "localgraphclustering.cpp.SimpleLocal_cpp",
             "localgraphclustering.cpp.aclpagerank_cpp",
             "localgraphclustering.cpp.aclpagerank_weighted_cpp",
+            "localgraphclustering.cpp.aclpagerank_weighted_seed_cpp",
             "localgraphclustering.cpp.capacity_releasing_diffusion_cpp",
             "localgraphclustering.cpp.densest_subgraph_cpp",
             "localgraphclustering.cpp.proxl1PRaccel",
+            "localgraphclustering.cpp.proxl1PRrand_cpp",
+            "localgraphclustering.cpp.set_scores_cpp",
             "localgraphclustering.cpp.sweepcut_cpp",
             "localgraphclustering.cpp.triangleclusters_cpp",
             "localgraphclustering.cpp.utility",
             "localgraphclustering.densest_subgraph",
             "localgraphclustering.fiedler",
-            "localgraphclustering.find_library",
+            "localgraphclustering.find_k_clusters",
             "localgraphclustering.flow_clustering",
             "localgraphclustering.multiclass_label_prediction",
             "localgraphclustering.ncp",
@@ -56686,16 +56694,9 @@
             "localgraphclustering.pageRank_nibble",
             "localgraphclustering.spectral_clustering",
             "localgraphclustering.sweep_cut",
-            "localgraphclustering.tests",
-            "localgraphclustering.tests.conftest",
-            "localgraphclustering.tests.test_algs",
-            "localgraphclustering.tests.test_load",
-            "localgraphclustering.tests.test_ncp",
-            "localgraphclustering.tests.test_notebooks",
-            "localgraphclustering.tests.test_plots",
             "localgraphclustering.triangleclusters"
         ],
-        "version": "0.4.4"
+        "version": "0.5.0"
     },
     "localgrowl": {
         "cmdline": [],
@@ -56882,7 +56883,7 @@
             "tests",
             "tests.test_variable_pubsub"
         ],
-        "version": "0.0.3"
+        "version": "0.0.4"
     },
     "localshare": {
         "cmdline": [],
@@ -67589,7 +67590,7 @@
             "lpu.smt.trans_models.make_glue_rules",
             "lpu.smt.trans_models.normalize"
         ],
-        "version": "0.1.6"
+        "version": "0.1.7"
     },
     "lpx-nester": {
         "cmdline": [],
