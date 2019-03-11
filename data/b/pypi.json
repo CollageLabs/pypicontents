@@ -9342,7 +9342,7 @@
             "bandit_aws.aws_checks",
             "bandit_aws.test_aws_checks"
         ],
-        "version": "0.0.20190307090942"
+        "version": "0.0.20190311082449"
     },
     "bandit-cli": {
         "cmdline": [],
@@ -13966,7 +13966,7 @@
             "bashlex.utils",
             "bashlex.yacc"
         ],
-        "version": "0.13"
+        "version": "0.14"
     },
     "bashlint": {
         "cmdline": [],
@@ -14541,6 +14541,7 @@
         "cmdline": [],
         "modules": [
             "basilisp",
+            "basilisp.__version__",
             "basilisp.cli",
             "basilisp.importer",
             "basilisp.lang",
@@ -14548,6 +14549,12 @@
             "basilisp.lang.atom",
             "basilisp.lang.collection",
             "basilisp.lang.compiler",
+            "basilisp.lang.compiler.constants",
+            "basilisp.lang.compiler.exception",
+            "basilisp.lang.compiler.generator",
+            "basilisp.lang.compiler.nodes",
+            "basilisp.lang.compiler.optimizer",
+            "basilisp.lang.compiler.parser",
             "basilisp.lang.delay",
             "basilisp.lang.deref",
             "basilisp.lang.exception",
@@ -14571,7 +14578,7 @@
             "basilisp.util",
             "basilisp.walker"
         ],
-        "version": "0.1.dev7"
+        "version": "0.1.dev8"
     },
     "basin": {
         "cmdline": [],
@@ -18968,12 +18975,14 @@
         "cmdline": [],
         "modules": [
             "bbopt",
+            "bbopt.__coconut__",
             "bbopt.backends",
             "bbopt.backends.hyperopt",
             "bbopt.backends.mixture",
             "bbopt.backends.random",
             "bbopt.backends.serving",
             "bbopt.backends.skopt",
+            "bbopt.backends.util",
             "bbopt.cli",
             "bbopt.constants",
             "bbopt.examples",
@@ -18994,7 +19003,7 @@
             "bbopt.tests.examples_test",
             "bbopt.util"
         ],
-        "version": "0.4.5"
+        "version": "0.5.1"
     },
     "bboss": {
         "cmdline": [],
@@ -21200,7 +21209,7 @@
             "bda.plone.ajax.setuphandlers",
             "bda.plone.ajax.utils"
         ],
-        "version": "1.8"
+        "version": "2.0"
     },
     "bda-plone-finder": {
         "cmdline": [],
@@ -26112,7 +26121,7 @@
             "bee_django_social_feed.utils",
             "bee_django_social_feed.views"
         ],
-        "version": "0.0.26"
+        "version": "0.0.27"
     },
     "bee-django-track": {
         "cmdline": [],
@@ -31894,53 +31903,51 @@
         "cmdline": [],
         "modules": [
             "betanin",
-            "betanin.api",
-            "betanin.api.events",
-            "betanin.api.jobs",
-            "betanin.api.jobs.import_torrents",
-            "betanin.api.jobs.register_notifications",
-            "betanin.api.jobs.retry_old_imports",
-            "betanin.api.jobs.serve_web",
-            "betanin.api.notifications",
-            "betanin.api.orm",
-            "betanin.api.orm.models",
-            "betanin.api.orm.models.line",
-            "betanin.api.orm.models.torrent",
-            "betanin.api.rest",
-            "betanin.api.rest.base",
-            "betanin.api.rest.models",
-            "betanin.api.rest.models.request",
-            "betanin.api.rest.models.response",
-            "betanin.api.rest.namespaces",
-            "betanin.api.rest.resources",
-            "betanin.api.rest.resources.authentication",
-            "betanin.api.rest.resources.beets",
-            "betanin.api.rest.resources.meta",
-            "betanin.api.rest.resources.notifications",
-            "betanin.api.rest.resources.torrent_clients",
-            "betanin.api.rest.resources.torrents",
-            "betanin.api.status",
+            "betanin.application",
             "betanin.beets",
-            "betanin.client",
+            "betanin.blueprints",
             "betanin.entry_betanin",
-            "betanin.entry_database_creation",
-            "betanin.entry_database_migration",
             "betanin.entry_shell",
+            "betanin.events",
             "betanin.extensions",
             "betanin.flask_config",
+            "betanin.jobs",
+            "betanin.jobs.import_torrents",
+            "betanin.jobs.migrate_database",
+            "betanin.jobs.register_notifications",
+            "betanin.jobs.retry_old_imports",
+            "betanin.jobs.serve_web",
             "betanin.main_config",
-            "betanin.message",
+            "betanin.notifications",
+            "betanin.orm",
+            "betanin.orm.models",
+            "betanin.orm.models.line",
+            "betanin.orm.models.torrent",
             "betanin.paths",
+            "betanin.rest",
+            "betanin.rest.base",
+            "betanin.rest.models",
+            "betanin.rest.models.request",
+            "betanin.rest.models.response",
+            "betanin.rest.namespaces",
+            "betanin.rest.resources",
+            "betanin.rest.resources.authentication",
+            "betanin.rest.resources.beets",
+            "betanin.rest.resources.meta",
+            "betanin.rest.resources.notifications",
+            "betanin.rest.resources.torrent_clients",
+            "betanin.rest.resources.torrents",
             "betanin.secret_key",
+            "betanin.status",
             "betanin.system_info",
+            "betanin_client",
+            "betanin_migrations",
+            "betanin_migrations.env",
             "tests",
             "tests.test_api",
-            "tests.test_client",
-            "utilities",
-            "utilities.mock_transmission_server",
-            "utilities.mock_transmission_server.response"
+            "tests.test_client"
         ],
-        "version": "0.0.35"
+        "version": "0.0.47"
     },
     "betapy": {
         "cmdline": [],
@@ -43076,8 +43083,14 @@
     },
     "biobb-wf-mutations": {
         "cmdline": [],
-        "modules": [],
-        "version": "0.0.3"
+        "modules": [
+            "biobb_wf_mutations",
+            "biobb_wf_mutations.pycompss",
+            "biobb_wf_mutations.pycompss.mutations",
+            "biobb_wf_mutations.python",
+            "biobb_wf_mutations.python.mutations"
+        ],
+        "version": "0.0.5"
     },
     "biobeam": {
         "cmdline": [],
@@ -48132,7 +48145,7 @@
             "bismuthclient.rpcconnections",
             "bismuthclient.simplecrypt"
         ],
-        "version": "0.0.35"
+        "version": "0.0.36"
     },
     "bismuthcore": {
         "cmdline": [],
@@ -48522,8 +48535,10 @@
         "cmdline": [],
         "modules": [
             "bit",
+            "bit.base32",
             "bit.base58",
             "bit.cli",
+            "bit.constants",
             "bit.crypto",
             "bit.curve",
             "bit.exceptions",
@@ -48547,12 +48562,13 @@
             "tests.test_base58",
             "tests.test_curve",
             "tests.test_format",
+            "tests.test_segwit_addr",
             "tests.test_transaction",
             "tests.test_utils",
             "tests.test_wallet",
             "tests.utils"
         ],
-        "version": "0.4.3"
+        "version": "0.5.0"
     },
     "bit-array": {
         "cmdline": [],
@@ -54308,7 +54324,7 @@
             "bleach.sourcecontrol.bitbucket_cloud",
             "bleach.sourcecontrol.github"
         ],
-        "version": "0.0.15"
+        "version": "0.0.17"
     },
     "bleak": {
         "cmdline": [],
@@ -54473,11 +54489,8 @@
     },
     "blend-modes": {
         "cmdline": [],
-        "modules": [
-            "blend_modes",
-            "blend_modes.blend_modes"
-        ],
-        "version": "1.0.1"
+        "modules": [],
+        "version": "2.0.1"
     },
     "blended": {
         "cmdline": [],
@@ -60284,7 +60297,7 @@
         "modules": [
             "blus"
         ],
-        "version": "0.0.5"
+        "version": "0.0.9"
     },
     "blutils": {
         "cmdline": [],
@@ -82155,7 +82168,7 @@
             "BPTK_Py.widgets.pulse_widget",
             "BPTK_Py.widgets.widget"
         ],
-        "version": "0.6.2"
+        "version": "0.6.3"
     },
     "bpy": {
         "cmdline": [],
@@ -83388,6 +83401,16 @@
             "brainfeatures.visualization.visualize"
         ],
         "version": "0.0.2"
+    },
+    "brainflow": {
+        "cmdline": [],
+        "modules": [
+            "brainflow",
+            "brainflow.board_shim",
+            "brainflow.exit_codes",
+            "brainflow.preprocess"
+        ],
+        "version": "1.0.3"
     },
     "brainfm": {
         "cmdline": [],
@@ -85125,7 +85148,7 @@
             "brawlstats.models",
             "brawlstats.utils"
         ],
-        "version": "2.3.1"
+        "version": "2.3.2"
     },
     "brayns": {
         "cmdline": [],
@@ -88436,7 +88459,7 @@
             "bffacilities.monitor",
             "bffacilities.qtStatement"
         ],
-        "version": "0.0.1a20"
+        "version": "0.0.1a21"
     },
     "brigade": {
         "cmdline": [],
@@ -91156,6 +91179,7 @@
             "brunns",
             "brunns.matchers",
             "brunns.matchers.data",
+            "brunns.matchers.datetime",
             "brunns.matchers.dbapi",
             "brunns.matchers.html",
             "brunns.matchers.matcher",
@@ -91163,11 +91187,9 @@
             "brunns.matchers.object",
             "brunns.matchers.response",
             "brunns.matchers.smtp",
-            "brunns.matchers.url",
-            "brunns.utils",
-            "brunns.utils.dtuple"
+            "brunns.matchers.url"
         ],
-        "version": "2.0.0"
+        "version": "2.1.0"
     },
     "brunns-row": {
         "cmdline": [],
