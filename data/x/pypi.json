@@ -355,10 +355,11 @@
         "modules": [
             "x_xmlparse_src",
             "x_xmlparse_src.cmd",
+            "x_xmlparse_src.download",
             "x_xmlparse_src.logs",
             "x_xmlparse_src.parse"
         ],
-        "version": "0.0.0"
+        "version": "0.0.4"
     },
     "x10-any": {
         "cmdline": [],
@@ -2108,7 +2109,7 @@
             "xbbg.tests",
             "xbbg.tests.conftest"
         ],
-        "version": "0.2.5"
+        "version": "0.2.6"
     },
     "xbcf": {
         "cmdline": [],
@@ -5873,7 +5874,7 @@
             "xenoGI.trees",
             "xenoGI.xenoGI"
         ],
-        "version": "1.1.2"
+        "version": "2.0.0"
     },
     "xenoglossia": {
         "cmdline": [],
@@ -5991,7 +5992,7 @@
             "xenonpy.visualization",
             "xenonpy.visualization.heatmap"
         ],
-        "version": "0.3.0"
+        "version": "0.3.1"
     },
     "xenops": {
         "cmdline": [],
@@ -15426,7 +15427,6 @@
             "tests.xpra.clients.fake_client",
             "tests.xpra.clients.fake_gtk_client",
             "tests.xpra.clients.fast_scrolling_window",
-            "tests.xpra.clients.inspector",
             "tests.xpra.clients.test_DoS_client",
             "tests.xpra.clients.test_DoS_memory_client",
             "tests.xpra.clients.test_DoS_timeout_client",
@@ -15439,7 +15439,6 @@
             "tests.xpra.clients.test_scroll_circle",
             "tests.xpra.clients.test_scroll_replay_dirs",
             "tests.xpra.clients.test_window_scroll_and_paint",
-            "tests.xpra.clients.webkit_scrolling_window",
             "tests.xpra.clipboard",
             "tests.xpra.clipboard.test_clipboard",
             "tests.xpra.codecs",
@@ -15490,12 +15489,14 @@
             "tests.xpra.net.test_yaml",
             "tests.xpra.net.vsock_client_test",
             "tests.xpra.net.vsock_server_test",
+            "tests.xpra.net.websockify_numpy_vs_cython",
             "tests.xpra.perf_config_default",
             "tests.xpra.scripts",
             "tests.xpra.scripts.test_config",
             "tests.xpra.server",
             "tests.xpra.server.pam_open",
             "tests.xpra.server.test_crc32c",
+            "tests.xpra.server.test_dbus_launch",
             "tests.xpra.server.test_dbus_signal_receiver",
             "tests.xpra.server.test_displayfd",
             "tests.xpra.server.test_nofd",
@@ -15514,6 +15515,7 @@
             "tests.xpra.test_apps.dump_xshape",
             "tests.xpra.test_apps.fps",
             "tests.xpra.test_apps.gtk3_key_crash",
+            "tests.xpra.test_apps.gtk3_size_hints",
             "tests.xpra.test_apps.gtk_header_bar_window",
             "tests.xpra.test_apps.screensaver_listener",
             "tests.xpra.test_apps.send_dbus_video_exclusion_zone",
@@ -15544,6 +15546,7 @@
             "tests.xpra.test_apps.test_videoregions",
             "tests.xpra.test_apps.test_window_bypass_compositor",
             "tests.xpra.test_apps.test_window_close_message",
+            "tests.xpra.test_apps.test_window_content_type",
             "tests.xpra.test_apps.test_window_fixed_size",
             "tests.xpra.test_apps.test_window_icon_colors",
             "tests.xpra.test_apps.test_window_icon_from_files",
@@ -15559,9 +15562,11 @@
             "tests.xpra.test_apps.test_window_moveresize",
             "tests.xpra.test_apps.test_window_opacity",
             "tests.xpra.test_apps.test_window_overrideredirect",
+            "tests.xpra.test_apps.test_window_quality_speed_hints",
             "tests.xpra.test_apps.test_window_raise",
             "tests.xpra.test_apps.test_window_resize",
             "tests.xpra.test_apps.test_window_size_hints",
+            "tests.xpra.test_apps.test_window_small",
             "tests.xpra.test_apps.test_window_states",
             "tests.xpra.test_apps.test_window_strut",
             "tests.xpra.test_apps.test_window_title",
@@ -15608,7 +15613,9 @@
             "unit.net.HMAC_test",
             "unit.net.bencode_test",
             "unit.net.crypto_test",
+            "unit.net.cyxor_hybi_test",
             "unit.net.net_util_test",
+            "unit.net.protocol_test",
             "unit.net.subprocess_wrapper_test",
             "unit.os_util_test",
             "unit.run",
@@ -15654,6 +15661,7 @@
             "xpra.client.gl.gl_check",
             "xpra.client.gl.gl_colorspace_conversions",
             "xpra.client.gl.gl_drivers",
+            "xpra.client.gl.gl_spinner",
             "xpra.client.gl.gl_window_backing_base",
             "xpra.client.gl.gtk2",
             "xpra.client.gl.gtk2.gl_client_window",
@@ -15671,6 +15679,7 @@
             "xpra.client.gl.gtk_base.gtk_compat",
             "xpra.client.gl.gtk_base.gtkgl_check",
             "xpra.client.gl.gtk_base.gtkgl_window_backing_base",
+            "xpra.client.gl.window_backend",
             "xpra.client.gobject_client_base",
             "xpra.client.gtk2",
             "xpra.client.gtk2.cairo_backing",
@@ -15791,6 +15800,7 @@
             "xpra.gtk_common.auth_dialog",
             "xpra.gtk_common.cursor_names",
             "xpra.gtk_common.error",
+            "xpra.gtk_common.gi_init",
             "xpra.gtk_common.gobject_compat",
             "xpra.gtk_common.gobject_util",
             "xpra.gtk_common.graph",
@@ -15832,11 +15842,17 @@
             "xpra.net.net_util",
             "xpra.net.packet_encoding",
             "xpra.net.protocol",
+            "xpra.net.protocol_classes",
             "xpra.net.pycryptography_backend",
             "xpra.net.ssh",
+            "xpra.net.sshfp",
             "xpra.net.subprocess_wrapper",
             "xpra.net.udp_protocol",
-            "xpra.net.websocket_connection",
+            "xpra.net.websockets",
+            "xpra.net.websockets.common",
+            "xpra.net.websockets.handler",
+            "xpra.net.websockets.header",
+            "xpra.net.websockets.protocol",
             "xpra.notifications",
             "xpra.notifications.common",
             "xpra.notifications.dbus_notifier",
@@ -15925,6 +15941,7 @@
             "xpra.platform.xposix.printing",
             "xpra.platform.xposix.shadow_server",
             "xpra.platform.xposix.webcam",
+            "xpra.platform.xposix.xdg_helper",
             "xpra.scripts",
             "xpra.scripts.bug_report",
             "xpra.scripts.config",
@@ -15967,6 +15984,7 @@
             "xpra.server.dbus.dbus_server_base",
             "xpra.server.dbus.dbus_source",
             "xpra.server.gtk_server_base",
+            "xpra.server.http_handler",
             "xpra.server.keyboard_config_base",
             "xpra.server.mixins",
             "xpra.server.mixins.audio_server",
@@ -16026,7 +16044,6 @@
             "xpra.server.source.webcam_mixin",
             "xpra.server.source.windows_mixin",
             "xpra.server.ssh",
-            "xpra.server.websocket",
             "xpra.server.window",
             "xpra.server.window.batch_config",
             "xpra.server.window.batch_delay_calculator",
@@ -16064,33 +16081,35 @@
             "xpra.x11.desktop_server",
             "xpra.x11.fakeXinerama",
             "xpra.x11.gtk2",
-            "xpra.x11.gtk2.composite",
             "xpra.x11.gtk2.gdk_display_util",
-            "xpra.x11.gtk2.models",
-            "xpra.x11.gtk2.models.base",
-            "xpra.x11.gtk2.models.core",
-            "xpra.x11.gtk2.models.model_stub",
-            "xpra.x11.gtk2.models.or_window",
-            "xpra.x11.gtk2.models.size_hints_util",
-            "xpra.x11.gtk2.models.systray",
-            "xpra.x11.gtk2.models.window",
-            "xpra.x11.gtk2.selection",
-            "xpra.x11.gtk2.tray",
-            "xpra.x11.gtk2.window",
-            "xpra.x11.gtk2.window_damage",
-            "xpra.x11.gtk2.wm",
-            "xpra.x11.gtk2.world_window",
             "xpra.x11.gtk3",
             "xpra.x11.gtk3.gdk_display_util",
             "xpra.x11.gtk_x11",
+            "xpra.x11.gtk_x11.composite",
+            "xpra.x11.gtk_x11.gdk_bindings",
             "xpra.x11.gtk_x11.gdk_display_source",
             "xpra.x11.gtk_x11.keys",
             "xpra.x11.gtk_x11.prop",
+            "xpra.x11.gtk_x11.selection",
             "xpra.x11.gtk_x11.send_wm",
+            "xpra.x11.gtk_x11.tray",
+            "xpra.x11.gtk_x11.window_damage",
+            "xpra.x11.gtk_x11.wm",
+            "xpra.x11.gtk_x11.wm_check",
+            "xpra.x11.gtk_x11.world_window",
+            "xpra.x11.models",
+            "xpra.x11.models.base",
+            "xpra.x11.models.core",
+            "xpra.x11.models.model_stub",
+            "xpra.x11.models.or_window",
+            "xpra.x11.models.size_hints_util",
+            "xpra.x11.models.systray",
+            "xpra.x11.models.window",
             "xpra.x11.prop_conv",
             "xpra.x11.server",
             "xpra.x11.server_keyboard_config",
             "xpra.x11.shadow_x11_server",
+            "xpra.x11.uinput_device",
             "xpra.x11.vfb_util",
             "xpra.x11.window_info",
             "xpra.x11.x11_server_base",
@@ -16101,7 +16120,7 @@
             "xpra.x11.xsettings",
             "xpra.x11.xsettings_prop"
         ],
-        "version": "2.4.3"
+        "version": "2.5"
     },
     "xpress": {
         "cmdline": [],
@@ -16166,7 +16185,7 @@
             "xptools.utils.select_roi",
             "xptools.utils.videotools"
         ],
-        "version": "0.38"
+        "version": "0.38.post1"
     },
     "xpy": {
         "cmdline": [],
@@ -19030,7 +19049,7 @@
             "xtab.py"
         ],
         "modules": [],
-        "version": "0.10.2"
+        "version": "1.0.0"
     },
     "xtal": {
         "cmdline": [],
