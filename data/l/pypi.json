@@ -7729,6 +7729,14 @@
         ],
         "version": "0.4.0"
     },
+    "las-to-df": {
+        "cmdline": [],
+        "modules": [
+            "las_to_df",
+            "las_to_df.ReadLAS"
+        ],
+        "version": "0.1"
+    },
     "lasagna": {
         "cmdline": [],
         "modules": [],
@@ -11207,17 +11215,13 @@
             "launchdarkly_api.api_client",
             "launchdarkly_api.configuration",
             "launchdarkly_api.models",
-            "launchdarkly_api.models.action",
-            "launchdarkly_api.models.actions",
             "launchdarkly_api.models.audit_log_entries",
             "launchdarkly_api.models.audit_log_entry",
             "launchdarkly_api.models.audit_log_entry_target",
             "launchdarkly_api.models.clause",
             "launchdarkly_api.models.custom_property",
-            "launchdarkly_api.models.custom_property_values",
             "launchdarkly_api.models.custom_role",
             "launchdarkly_api.models.custom_role_body",
-            "launchdarkly_api.models.custom_role_key_or_id",
             "launchdarkly_api.models.custom_roles",
             "launchdarkly_api.models.environment",
             "launchdarkly_api.models.environment_post",
@@ -11241,8 +11245,6 @@
             "launchdarkly_api.models.project",
             "launchdarkly_api.models.project_body",
             "launchdarkly_api.models.projects",
-            "launchdarkly_api.models.resource",
-            "launchdarkly_api.models.resources",
             "launchdarkly_api.models.role",
             "launchdarkly_api.models.rollout",
             "launchdarkly_api.models.rule",
@@ -11266,18 +11268,14 @@
             "launchdarkly_api.models.weighted_variation",
             "launchdarkly_api.rest",
             "test",
-            "test.test_action",
-            "test.test_actions",
             "test.test_audit_log_api",
             "test.test_audit_log_entries",
             "test.test_audit_log_entry",
             "test.test_audit_log_entry_target",
             "test.test_clause",
             "test.test_custom_property",
-            "test.test_custom_property_values",
             "test.test_custom_role",
             "test.test_custom_role_body",
-            "test.test_custom_role_key_or_id",
             "test.test_custom_roles",
             "test.test_custom_roles_api",
             "test.test_environment",
@@ -11305,8 +11303,6 @@
             "test.test_project_body",
             "test.test_projects",
             "test.test_projects_api",
-            "test.test_resource",
-            "test.test_resources",
             "test.test_role",
             "test.test_rollout",
             "test.test_root_api",
@@ -11335,7 +11331,7 @@
             "test.test_webhooks_api",
             "test.test_weighted_variation"
         ],
-        "version": "2.0.14"
+        "version": "2.0.15"
     },
     "launchdcheckin": {
         "cmdline": [],
@@ -11448,8 +11444,10 @@
     },
     "launchpad": {
         "cmdline": [],
-        "modules": [],
-        "version": "0.0.0"
+        "modules": [
+            "launchpad"
+        ],
+        "version": "0.0.1"
     },
     "launchpad-buildd": {
         "cmdline": [],
@@ -13054,6 +13052,16 @@
             "test.test_vulnerable_image_data"
         ],
         "version": "0.9.6"
+    },
+    "layla": {
+        "cmdline": [],
+        "modules": [
+            "layla",
+            "layla.data",
+            "layla.mysubmodule",
+            "layla.mysubmodule.utils"
+        ],
+        "version": "0.1.4"
     },
     "laylib": {
         "cmdline": [],
@@ -19918,90 +19926,100 @@
             "learnbot_dsl.components.emotionrecognition2.src.specificworker",
             "learnbot_dsl.functions",
             "learnbot_dsl.functions.expressions",
-            "learnbot_dsl.functions.expressions.expressAnger",
-            "learnbot_dsl.functions.expressions.expressDisgust",
-            "learnbot_dsl.functions.expressions.expressFear",
-            "learnbot_dsl.functions.expressions.expressJoy",
-            "learnbot_dsl.functions.expressions.expressNeutral",
-            "learnbot_dsl.functions.expressions.expressSadness",
-            "learnbot_dsl.functions.expressions.expressSurprise",
+            "learnbot_dsl.functions.expressions.display",
+            "learnbot_dsl.functions.expressions.display.expressAnger",
+            "learnbot_dsl.functions.expressions.display.expressDisgust",
+            "learnbot_dsl.functions.expressions.display.expressFear",
+            "learnbot_dsl.functions.expressions.display.expressJoy",
+            "learnbot_dsl.functions.expressions.display.expressNeutral",
+            "learnbot_dsl.functions.expressions.display.expressSadness",
+            "learnbot_dsl.functions.expressions.display.expressSurprise",
             "learnbot_dsl.functions.motor",
-            "learnbot_dsl.functions.motor.down_camera",
-            "learnbot_dsl.functions.motor.look_floor",
-            "learnbot_dsl.functions.motor.look_front",
-            "learnbot_dsl.functions.motor.look_up",
-            "learnbot_dsl.functions.motor.move_left",
-            "learnbot_dsl.functions.motor.move_right",
-            "learnbot_dsl.functions.motor.move_straight",
-            "learnbot_dsl.functions.motor.setAngleCamera",
-            "learnbot_dsl.functions.motor.setAngleMotor",
-            "learnbot_dsl.functions.motor.set_move",
-            "learnbot_dsl.functions.motor.slow_down",
-            "learnbot_dsl.functions.motor.stop_bot",
-            "learnbot_dsl.functions.motor.turn",
-            "learnbot_dsl.functions.motor.turn_90_left",
-            "learnbot_dsl.functions.motor.turn_90_right",
-            "learnbot_dsl.functions.motor.turn_back",
-            "learnbot_dsl.functions.motor.turn_left",
-            "learnbot_dsl.functions.motor.turn_right",
-            "learnbot_dsl.functions.motor.up_camera",
+            "learnbot_dsl.functions.motor.base",
+            "learnbot_dsl.functions.motor.base.move_left",
+            "learnbot_dsl.functions.motor.base.move_right",
+            "learnbot_dsl.functions.motor.base.move_straight",
+            "learnbot_dsl.functions.motor.base.set_move",
+            "learnbot_dsl.functions.motor.base.slow_down",
+            "learnbot_dsl.functions.motor.base.stop_bot",
+            "learnbot_dsl.functions.motor.base.turn",
+            "learnbot_dsl.functions.motor.base.turn_90_left",
+            "learnbot_dsl.functions.motor.base.turn_90_right",
+            "learnbot_dsl.functions.motor.base.turn_back",
+            "learnbot_dsl.functions.motor.base.turn_left",
+            "learnbot_dsl.functions.motor.base.turn_right",
+            "learnbot_dsl.functions.motor.jointmotor",
+            "learnbot_dsl.functions.motor.jointmotor.down_camera",
+            "learnbot_dsl.functions.motor.jointmotor.look_floor",
+            "learnbot_dsl.functions.motor.jointmotor.look_front",
+            "learnbot_dsl.functions.motor.jointmotor.look_up",
+            "learnbot_dsl.functions.motor.jointmotor.setAngleCamera",
+            "learnbot_dsl.functions.motor.jointmotor.setAngleMotor",
+            "learnbot_dsl.functions.motor.jointmotor.up_camera",
             "learnbot_dsl.functions.others",
-            "learnbot_dsl.functions.others.sayText",
-            "learnbot_dsl.functions.others.sleep",
+            "learnbot_dsl.functions.others.basics",
+            "learnbot_dsl.functions.others.basics.sleep",
+            "learnbot_dsl.functions.others.speaker",
+            "learnbot_dsl.functions.others.speaker.say_Text",
             "learnbot_dsl.functions.perceptual",
-            "learnbot_dsl.functions.perceptual.back_obstacle",
-            "learnbot_dsl.functions.perceptual.center_black_line",
-            "learnbot_dsl.functions.perceptual.center_blue_line",
-            "learnbot_dsl.functions.perceptual.center_face",
-            "learnbot_dsl.functions.perceptual.center_red_line",
-            "learnbot_dsl.functions.perceptual.down_face",
-            "learnbot_dsl.functions.perceptual.front_obstacle",
-            "learnbot_dsl.functions.perceptual.get_distance",
-            "learnbot_dsl.functions.perceptual.get_image",
-            "learnbot_dsl.functions.perceptual.is_there_black_line",
-            "learnbot_dsl.functions.perceptual.is_there_blue_line",
-            "learnbot_dsl.functions.perceptual.is_there_face",
-            "learnbot_dsl.functions.perceptual.is_there_red_line",
-            "learnbot_dsl.functions.perceptual.is_there_somebody_angry",
-            "learnbot_dsl.functions.perceptual.is_there_somebody_happy",
-            "learnbot_dsl.functions.perceptual.is_there_somebody_neutral",
-            "learnbot_dsl.functions.perceptual.is_there_somebody_sad",
-            "learnbot_dsl.functions.perceptual.is_there_somebody_surprised",
-            "learnbot_dsl.functions.perceptual.left_black_line",
-            "learnbot_dsl.functions.perceptual.left_blue_line",
-            "learnbot_dsl.functions.perceptual.left_face",
-            "learnbot_dsl.functions.perceptual.left_obstacle",
-            "learnbot_dsl.functions.perceptual.left_red_line",
-            "learnbot_dsl.functions.perceptual.line_crossing",
-            "learnbot_dsl.functions.perceptual.obstacle_free",
-            "learnbot_dsl.functions.perceptual.right_black_line",
-            "learnbot_dsl.functions.perceptual.right_blue_line",
-            "learnbot_dsl.functions.perceptual.right_face",
-            "learnbot_dsl.functions.perceptual.right_obstacle",
-            "learnbot_dsl.functions.perceptual.right_red_line",
-            "learnbot_dsl.functions.perceptual.see_some_tag",
-            "learnbot_dsl.functions.perceptual.seeing_the_tag",
-            "learnbot_dsl.functions.perceptual.up_face",
-            "learnbot_dsl.functions.perceptual.visual_auxiliary",
+            "learnbot_dsl.functions.perceptual.camera",
+            "learnbot_dsl.functions.perceptual.camera.get_image",
+            "learnbot_dsl.functions.perceptual.camera.is_any_face_angry",
+            "learnbot_dsl.functions.perceptual.camera.is_any_face_happy",
+            "learnbot_dsl.functions.perceptual.camera.is_any_face_neutral",
+            "learnbot_dsl.functions.perceptual.camera.is_any_face_sad",
+            "learnbot_dsl.functions.perceptual.camera.is_any_face_surprised",
+            "learnbot_dsl.functions.perceptual.camera.is_any_tag",
+            "learnbot_dsl.functions.perceptual.camera.is_center_black_line",
+            "learnbot_dsl.functions.perceptual.camera.is_center_blue_line",
+            "learnbot_dsl.functions.perceptual.camera.is_center_face",
+            "learnbot_dsl.functions.perceptual.camera.is_center_red_line",
+            "learnbot_dsl.functions.perceptual.camera.is_down_face",
+            "learnbot_dsl.functions.perceptual.camera.is_image",
+            "learnbot_dsl.functions.perceptual.camera.is_left_black_line",
+            "learnbot_dsl.functions.perceptual.camera.is_left_blue_line",
+            "learnbot_dsl.functions.perceptual.camera.is_left_face",
+            "learnbot_dsl.functions.perceptual.camera.is_left_red_line",
+            "learnbot_dsl.functions.perceptual.camera.is_line_crossing",
+            "learnbot_dsl.functions.perceptual.camera.is_right_black_line",
+            "learnbot_dsl.functions.perceptual.camera.is_right_blue_line",
+            "learnbot_dsl.functions.perceptual.camera.is_right_face",
+            "learnbot_dsl.functions.perceptual.camera.is_right_red_line",
+            "learnbot_dsl.functions.perceptual.camera.is_tag",
+            "learnbot_dsl.functions.perceptual.camera.is_there_black_line",
+            "learnbot_dsl.functions.perceptual.camera.is_there_blue_line",
+            "learnbot_dsl.functions.perceptual.camera.is_there_face",
+            "learnbot_dsl.functions.perceptual.camera.is_there_red_line",
+            "learnbot_dsl.functions.perceptual.camera.is_up_face",
+            "learnbot_dsl.functions.perceptual.camera.visual_auxiliary",
+            "learnbot_dsl.functions.perceptual.distancesensors",
+            "learnbot_dsl.functions.perceptual.distancesensors.get_min_distance",
+            "learnbot_dsl.functions.perceptual.distancesensors.is_back_obstacle",
+            "learnbot_dsl.functions.perceptual.distancesensors.is_front_obstacle",
+            "learnbot_dsl.functions.perceptual.distancesensors.is_left_obstacle",
+            "learnbot_dsl.functions.perceptual.distancesensors.is_obstacle_free",
+            "learnbot_dsl.functions.perceptual.distancesensors.is_right_obstacle",
             "learnbot_dsl.functions.proprioceptive",
-            "learnbot_dsl.functions.proprioceptive.am_I_Angry",
-            "learnbot_dsl.functions.proprioceptive.am_I_Disgust",
-            "learnbot_dsl.functions.proprioceptive.am_I_Joy",
-            "learnbot_dsl.functions.proprioceptive.am_I_Neutral",
-            "learnbot_dsl.functions.proprioceptive.am_I_Sadness",
-            "learnbot_dsl.functions.proprioceptive.am_I_Scared",
-            "learnbot_dsl.functions.proprioceptive.am_I_Surprise",
-            "learnbot_dsl.functions.proprioceptive.am_I_moving_left",
-            "learnbot_dsl.functions.proprioceptive.am_I_moving_right",
-            "learnbot_dsl.functions.proprioceptive.am_I_moving_straight",
-            "learnbot_dsl.functions.proprioceptive.am_I_turning",
-            "learnbot_dsl.functions.proprioceptive.am_I_turning_left",
-            "learnbot_dsl.functions.proprioceptive.am_I_turning_right",
-            "learnbot_dsl.functions.proprioceptive.get_pose",
-            "learnbot_dsl.functions.proprioceptive.near_to_target",
-            "learnbot_dsl.functions.proprioceptive.target_at_front",
-            "learnbot_dsl.functions.proprioceptive.target_at_left",
-            "learnbot_dsl.functions.proprioceptive.target_at_right",
+            "learnbot_dsl.functions.proprioceptive.base",
+            "learnbot_dsl.functions.proprioceptive.base.get_pose",
+            "learnbot_dsl.functions.proprioceptive.base.is_moving_left",
+            "learnbot_dsl.functions.proprioceptive.base.is_moving_right",
+            "learnbot_dsl.functions.proprioceptive.base.is_moving_straight",
+            "learnbot_dsl.functions.proprioceptive.base.is_turning",
+            "learnbot_dsl.functions.proprioceptive.base.is_turning_left",
+            "learnbot_dsl.functions.proprioceptive.base.is_turning_right",
+            "learnbot_dsl.functions.proprioceptive.base.near_to_target",
+            "learnbot_dsl.functions.proprioceptive.base.target_at_front",
+            "learnbot_dsl.functions.proprioceptive.base.target_at_left",
+            "learnbot_dsl.functions.proprioceptive.base.target_at_right",
+            "learnbot_dsl.functions.proprioceptive.display",
+            "learnbot_dsl.functions.proprioceptive.display.is_Angry",
+            "learnbot_dsl.functions.proprioceptive.display.is_Disgust",
+            "learnbot_dsl.functions.proprioceptive.display.is_Joy",
+            "learnbot_dsl.functions.proprioceptive.display.is_Neutral",
+            "learnbot_dsl.functions.proprioceptive.display.is_Sadness",
+            "learnbot_dsl.functions.proprioceptive.display.is_Scared",
+            "learnbot_dsl.functions.proprioceptive.display.is_Surprise",
             "learnbot_dsl.guis",
             "learnbot_dsl.guis.AddNumberOrString",
             "learnbot_dsl.guis.AddVar",
@@ -20010,6 +20028,7 @@
             "learnbot_dsl.guis.CreateFunctions",
             "learnbot_dsl.guis.DelVar",
             "learnbot_dsl.guis.DelWhen",
+            "learnbot_dsl.guis.EditDictionaryTags",
             "learnbot_dsl.guis.EditVar",
             "learnbot_dsl.guis.Learnblock",
             "learnbot_dsl.guis.TabLibrary",
@@ -20032,6 +20051,7 @@
             "learnbot_dsl.learnbotCode.VisualBlock",
             "learnbot_dsl.learnbotCode.checkFile",
             "learnbot_dsl.learnbotCode.dialogAddNumberOrString",
+            "learnbot_dsl.learnbotCode.editDictionaryTags",
             "learnbot_dsl.learnbotCode.etc",
             "learnbot_dsl.learnbotCode.guiCreateBlock",
             "learnbot_dsl.learnbotCode.guiTabLibrary",
@@ -20042,7 +20062,7 @@
             "learnbot_dsl.learnbotCode.parserConfig",
             "learnbot_dsl.learnbotCode.toQImage"
         ],
-        "version": "0.3.7"
+        "version": "0.3.8"
     },
     "learnbysubs": {
         "cmdline": [],
@@ -28395,6 +28415,72 @@
         ],
         "version": "0.0.1"
     },
+    "lfview": {
+        "cmdline": [],
+        "modules": [],
+        "version": ""
+    },
+    "lfview-api-client": {
+        "cmdline": [],
+        "modules": [
+            "lfview",
+            "lfview.client",
+            "lfview.client.constants",
+            "lfview.client.convert",
+            "lfview.client.convert.omf",
+            "lfview.client.convert.steno3d",
+            "lfview.client.session",
+            "lfview.client.utils"
+        ],
+        "version": "0.0.1"
+    },
+    "lfview-resources-files": {
+        "cmdline": [],
+        "modules": [
+            "lfview",
+            "lfview.resources",
+            "lfview.resources.files",
+            "lfview.resources.files.base",
+            "lfview.resources.files.files"
+        ],
+        "version": "0.0.1"
+    },
+    "lfview-resources-manifests": {
+        "cmdline": [],
+        "modules": [
+            "lfview",
+            "lfview.resources",
+            "lfview.resources.manifests",
+            "lfview.resources.manifests.manifests"
+        ],
+        "version": "0.0.1"
+    },
+    "lfview-resources-scene": {
+        "cmdline": [],
+        "modules": [
+            "lfview",
+            "lfview.resources",
+            "lfview.resources.scene",
+            "lfview.resources.scene.scene",
+            "lfview.resources.scene.slide"
+        ],
+        "version": "0.0.1"
+    },
+    "lfview-resources-spatial": {
+        "cmdline": [],
+        "modules": [
+            "lfview",
+            "lfview.resources",
+            "lfview.resources.spatial",
+            "lfview.resources.spatial.base",
+            "lfview.resources.spatial.data",
+            "lfview.resources.spatial.elements",
+            "lfview.resources.spatial.mappings",
+            "lfview.resources.spatial.options",
+            "lfview.resources.spatial.textures"
+        ],
+        "version": "0.0.1"
+    },
     "lgad": {
         "cmdline": [
             "lgad"
@@ -30823,7 +30909,7 @@
             "libcgroup_bind.log",
             "libcgroup_bind.tasks"
         ],
-        "version": "1.0.3"
+        "version": "1.0.4"
     },
     "libchaos": {
         "cmdline": [],
@@ -31884,6 +31970,11 @@
         ],
         "version": "0.0.12"
     },
+    "libfacturacioatr": {
+        "cmdline": [],
+        "modules": [],
+        "version": ""
+    },
     "libfaketime": {
         "cmdline": [],
         "modules": [
@@ -32824,6 +32915,13 @@
         "cmdline": [],
         "modules": [],
         "version": "2.1.0"
+    },
+    "libmi": {
+        "cmdline": [],
+        "modules": [
+            "libmi"
+        ],
+        "version": "0.1.0"
     },
     "libml": {
         "cmdline": [],
@@ -34703,7 +34801,7 @@
             "librelay.util",
             "librelay.websocket_resource"
         ],
-        "version": "0.6.0"
+        "version": "0.6.1"
     },
     "libreoffice-convert": {
         "cmdline": [],
@@ -35854,6 +35952,102 @@
         "cmdline": [],
         "modules": [],
         "version": "0.3.1"
+    },
+    "libsignal": {
+        "cmdline": [],
+        "modules": [
+            "libsignal",
+            "libsignal.axolotladdress",
+            "libsignal.duplicatemessagexception",
+            "libsignal.ecc",
+            "libsignal.ecc.curve",
+            "libsignal.ecc.djbec",
+            "libsignal.ecc.ec",
+            "libsignal.ecc.eckeypair",
+            "libsignal.groups",
+            "libsignal.groups.groupcipher",
+            "libsignal.groups.groupsessionbuilder",
+            "libsignal.groups.ratchet",
+            "libsignal.groups.ratchet.senderchainkey",
+            "libsignal.groups.ratchet.sendermessagekey",
+            "libsignal.groups.senderkeyname",
+            "libsignal.groups.state",
+            "libsignal.groups.state.senderkeyrecord",
+            "libsignal.groups.state.senderkeystate",
+            "libsignal.groups.state.senderkeystore",
+            "libsignal.identitykey",
+            "libsignal.identitykeypair",
+            "libsignal.invalidkeyexception",
+            "libsignal.invalidkeyidexception",
+            "libsignal.invalidmessageexception",
+            "libsignal.invalidversionexception",
+            "libsignal.kdf",
+            "libsignal.kdf.derivedmessagesecrets",
+            "libsignal.kdf.derivedrootsecrets",
+            "libsignal.kdf.hkdf",
+            "libsignal.kdf.hkdfv2",
+            "libsignal.kdf.hkdfv3",
+            "libsignal.kdf.messagekeys",
+            "libsignal.legacymessageexception",
+            "libsignal.nosessionexception",
+            "libsignal.protocol",
+            "libsignal.protocol.ciphertextmessage",
+            "libsignal.protocol.keyexchangemessage",
+            "libsignal.protocol.prekeywhispermessage",
+            "libsignal.protocol.senderkeydistributionmessage",
+            "libsignal.protocol.senderkeymessage",
+            "libsignal.protocol.whispermessage",
+            "libsignal.protocol.whisperprotos_pb2",
+            "libsignal.ratchet",
+            "libsignal.ratchet.aliceaxolotlparameters",
+            "libsignal.ratchet.bobaxolotlparamaters",
+            "libsignal.ratchet.chainkey",
+            "libsignal.ratchet.ratchetingsession",
+            "libsignal.ratchet.rootkey",
+            "libsignal.ratchet.symmetricaxolotlparameters",
+            "libsignal.sessionbuilder",
+            "libsignal.sessioncipher",
+            "libsignal.state",
+            "libsignal.state.axolotlstore",
+            "libsignal.state.identitykeystore",
+            "libsignal.state.prekeybundle",
+            "libsignal.state.prekeyrecord",
+            "libsignal.state.prekeystore",
+            "libsignal.state.sessionrecord",
+            "libsignal.state.sessionstate",
+            "libsignal.state.sessionstore",
+            "libsignal.state.signedprekeyrecord",
+            "libsignal.state.signedprekeystore",
+            "libsignal.state.storageprotos_pb2",
+            "libsignal.statekeyexchangeexception",
+            "libsignal.tests",
+            "libsignal.tests.groups",
+            "libsignal.tests.groups.inmemorysenderkeystore",
+            "libsignal.tests.groups.test_groupcipher",
+            "libsignal.tests.inmemoryaxolotlstore",
+            "libsignal.tests.inmemoryidentitykeystore",
+            "libsignal.tests.inmemoryprekeystore",
+            "libsignal.tests.inmemorysessionstore",
+            "libsignal.tests.inmemorysignedprekeystore",
+            "libsignal.tests.kdf",
+            "libsignal.tests.kdf.test_hkdf",
+            "libsignal.tests.ratchet",
+            "libsignal.tests.ratchet.test_chainkey",
+            "libsignal.tests.ratchet.test_ratchetingsession",
+            "libsignal.tests.ratchet.test_rootkey",
+            "libsignal.tests.test_sessionbuilder",
+            "libsignal.tests.test_sessioncipher",
+            "libsignal.tests.test_sigs",
+            "libsignal.tests.util",
+            "libsignal.tests.util.test_byteutil",
+            "libsignal.untrustedidentityexception",
+            "libsignal.util",
+            "libsignal.util.byteutil",
+            "libsignal.util.hexutil",
+            "libsignal.util.keyhelper",
+            "libsignal.util.medium"
+        ],
+        "version": "0.0.4"
     },
     "libsignetsim": {
         "cmdline": [],
@@ -39873,6 +40067,11 @@
             "lightnlp.sr.te.module",
             "lightnlp.sr.te.tool",
             "lightnlp.tc",
+            "lightnlp.tc.re",
+            "lightnlp.tc.re.config",
+            "lightnlp.tc.re.model",
+            "lightnlp.tc.re.module",
+            "lightnlp.tc.re.tool",
             "lightnlp.tc.sa",
             "lightnlp.tc.sa.config",
             "lightnlp.tc.sa.model",
@@ -39897,7 +40096,7 @@
             "lightnlp.utils.learning",
             "lightnlp.utils.log"
         ],
-        "version": "0.2.2.1"
+        "version": "0.2.3.1"
     },
     "lightnmf": {
         "cmdline": [],
@@ -40008,7 +40207,7 @@
             "lncrawl.utils.update_checker",
             "lncrawl.utils.uploader"
         ],
-        "version": "2.9.2"
+        "version": "2.9.3"
     },
     "lightnovelapi": {
         "cmdline": [],
@@ -41065,7 +41264,7 @@
             "lime_python.utils.scope",
             "lime_python.utils.stringUtils"
         ],
-        "version": "0.61"
+        "version": "0.62"
     },
     "limecc": {
         "cmdline": [],
@@ -43401,9 +43600,10 @@
         "modules": [
             "lineus",
             "lineus.diagnostics",
-            "lineus.lineus"
+            "lineus.lineus",
+            "lineus.test_lineus"
         ],
-        "version": "0.1.15"
+        "version": "0.1.16"
     },
     "lineviewer": {
         "cmdline": [],
@@ -44943,7 +45143,7 @@
             "linkedin_driver.api",
             "linkedin_driver.utils"
         ],
-        "version": "0.0.7"
+        "version": "0.1.0"
     },
     "linkedin-pkg": {
         "cmdline": [],
@@ -49427,6 +49627,7 @@
             "lisa.loginWindow",
             "lisa.main",
             "lisa.misc",
+            "lisa.multimodal_vessels_segmentation",
             "lisa.organ_localizator",
             "lisa.organ_model",
             "lisa.organ_seeds",
@@ -49434,6 +49635,7 @@
             "lisa.paraview_skript_lisa_auto",
             "lisa.pklz_info",
             "lisa.qmisc",
+            "lisa.registration",
             "lisa.resection",
             "lisa.runner",
             "lisa.seg2mesh",
@@ -49456,7 +49658,7 @@
             "lisa.virtual_resection",
             "lisa.volumetry_evaluation"
         ],
-        "version": "1.16.0"
+        "version": "1.17.2"
     },
     "lisa-api": {
         "cmdline": [],
@@ -50028,7 +50230,7 @@
             "listlookup",
             "listlookup.listlookup"
         ],
-        "version": "1.0.3"
+        "version": "1.0.5"
     },
     "list-meta-print": {
         "cmdline": [],
@@ -58308,7 +58510,7 @@
             "lod_executor.executor",
             "lod_executor.utilities"
         ],
-        "version": "1.0.40"
+        "version": "1.0.41"
     },
     "lod-tools": {
         "cmdline": [],
@@ -61451,21 +61653,20 @@
     "logilab-database": {
         "cmdline": [],
         "modules": [
-            "logilab",
-            "logilab.database",
-            "logilab.database.fti",
-            "logilab.database.ftiparser",
-            "logilab.database.ftiquery",
-            "logilab.database.mysql",
-            "logilab.database.postgres",
-            "logilab.database.sqlgen",
-            "logilab.database.sqlite",
-            "logilab.database.sqlserver",
-            "logilab.database.sqlserver2000",
-            "logilab.database.sqlserver2005",
-            "logilab.database.sqlserver2008"
+            "database",
+            "database.fti",
+            "database.ftiparser",
+            "database.ftiquery",
+            "database.mysql",
+            "database.postgres",
+            "database.sqlgen",
+            "database.sqlite",
+            "database.sqlserver",
+            "database.sqlserver2000",
+            "database.sqlserver2005",
+            "database.sqlserver2008"
         ],
-        "version": "1.15.0"
+        "version": "1.16.0"
     },
     "logilab-devtools": {
         "cmdline": [],
@@ -68582,6 +68783,11 @@
             "test.test_case"
         ],
         "version": "1.1.0"
+    },
+    "lric": {
+        "cmdline": [],
+        "modules": [],
+        "version": ""
     },
     "lripy": {
         "cmdline": [],
@@ -76709,9 +76915,10 @@
             "lyx.logic",
             "lyx.network",
             "lyx.num",
+            "lyx.parallel",
             "lyx.sql"
         ],
-        "version": "0.4.0"
+        "version": "0.5.0"
     },
     "lyze": {
         "cmdline": [],
