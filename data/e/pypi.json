@@ -17,13 +17,18 @@
             "e_drive",
             "e_drive.crc",
             "e_drive.drone",
+            "e_drive.gui",
+            "e_drive.gui.cards",
+            "e_drive.gui.update",
             "e_drive.protocol",
             "e_drive.receiver",
             "e_drive.storage",
             "e_drive.system",
-            "e_drive.update"
+            "e_drive.tools",
+            "e_drive.tools.parser",
+            "e_drive.tools.update"
         ],
-        "version": "0.0.23"
+        "version": "0.0.31"
     },
     "e-drone": {
         "cmdline": [],
@@ -1639,10 +1644,9 @@
             "earthpy.io",
             "earthpy.mask",
             "earthpy.plot",
-            "earthpy.spatial",
-            "earthpy.utils"
+            "earthpy.spatial"
         ],
-        "version": "0.6.3"
+        "version": "0.6.4"
     },
     "earthreader": {
         "cmdline": [],
@@ -5015,7 +5019,7 @@
             "easyimages.logger",
             "easyimages.utils"
         ],
-        "version": "0.8.9"
+        "version": "0.9.0"
     },
     "easyimap": {
         "cmdline": [],
@@ -10708,7 +10712,7 @@
             "eclients.redis_client",
             "eclients.utils"
         ],
-        "version": "1.0.0b15"
+        "version": "1.0.0b17"
     },
     "eclinic": {
         "cmdline": [],
@@ -11158,16 +11162,25 @@
         "cmdline": [],
         "modules": [
             "ecnet",
-            "ecnet.data_utils",
-            "ecnet.error_utils",
-            "ecnet.fitness_functions",
-            "ecnet.limit_parameters",
-            "ecnet.model",
+            "ecnet.models",
+            "ecnet.models.mlp",
             "ecnet.server",
+            "ecnet.tasks",
+            "ecnet.tasks.limit_inputs",
+            "ecnet.tasks.remove_outliers",
+            "ecnet.tasks.tuning",
             "ecnet.tools",
-            "ecnet.tools.tools"
+            "ecnet.tools.conversions",
+            "ecnet.tools.database",
+            "ecnet.tools.plotting",
+            "ecnet.tools.project",
+            "ecnet.utils",
+            "ecnet.utils.data_utils",
+            "ecnet.utils.error_utils",
+            "ecnet.utils.logging",
+            "ecnet.utils.server_utils"
         ],
-        "version": "2.1.1"
+        "version": "3.0.0"
     },
     "ecnunetwork": {
         "cmdline": [],
@@ -13205,7 +13218,7 @@
             "edc_appointment.views.unscheduled_appointment_view",
             "edc_appointment.wsgi"
         ],
-        "version": "0.2.44"
+        "version": "0.2.45"
     },
     "edc-auth": {
         "cmdline": [],
@@ -13329,7 +13342,7 @@
             "edc_consent.views.home_view",
             "edc_consent.wsgi"
         ],
-        "version": "0.2.22"
+        "version": "0.2.23"
     },
     "edc-constants": {
         "cmdline": [],
@@ -13371,10 +13384,12 @@
             "edc_dashboard.view_mixins.edc_view_mixin",
             "edc_dashboard.view_mixins.listboard",
             "edc_dashboard.view_mixins.listboard.listboard_filter_view_mixin",
+            "edc_dashboard.view_mixins.listboard.permission_mixin",
             "edc_dashboard.view_mixins.listboard.querystring_view_mixin",
             "edc_dashboard.view_mixins.listboard.search_form_view_mixin",
             "edc_dashboard.view_mixins.listboard.search_listboard_view_mixin",
             "edc_dashboard.view_mixins.listboard.site_queryset_view_mixin",
+            "edc_dashboard.view_mixins.message_view_mixin",
             "edc_dashboard.view_mixins.template_request_context_mixin",
             "edc_dashboard.view_mixins.url_request_context_mixin",
             "edc_dashboard.views",
@@ -13384,7 +13399,7 @@
             "edc_dashboard.views.listboard_view",
             "edc_dashboard.wsgi"
         ],
-        "version": "0.2.27"
+        "version": "0.2.28"
     },
     "edc-device": {
         "cmdline": [],
@@ -13683,7 +13698,7 @@
             "edc_identifier.views",
             "edc_identifier.wsgi"
         ],
-        "version": "0.2.21"
+        "version": "0.2.23"
     },
     "edc-lab": {
         "cmdline": [],
@@ -13764,6 +13779,25 @@
             "edc_lab.migrations.0017_auto_20181108_0353",
             "edc_lab.migrations.0018_auto_20190201_0446",
             "edc_lab.migrations.0019_auto_20190305_0123",
+            "edc_lab.model_mixins",
+            "edc_lab.model_mixins.aliquot",
+            "edc_lab.model_mixins.aliquot.aliquot_identifier_model_mixin",
+            "edc_lab.model_mixins.aliquot.aliquot_label_mixin",
+            "edc_lab.model_mixins.aliquot.aliquot_model_mixin",
+            "edc_lab.model_mixins.aliquot.aliquot_shipping_mixin",
+            "edc_lab.model_mixins.aliquot.aliquot_type_model_mixin",
+            "edc_lab.model_mixins.panel_model_mixin",
+            "edc_lab.model_mixins.requisition",
+            "edc_lab.model_mixins.requisition.requisition_identifier_mixin",
+            "edc_lab.model_mixins.requisition.requisition_model_mixin",
+            "edc_lab.model_mixins.requisition.requisition_status_mixin",
+            "edc_lab.model_mixins.requisition.requisition_verify_model_mixin",
+            "edc_lab.model_mixins.result",
+            "edc_lab.model_mixins.result.result_item_model_mixin",
+            "edc_lab.model_mixins.result.result_model_mixin",
+            "edc_lab.model_mixins.shipping",
+            "edc_lab.model_mixins.shipping.manifest_model_mixin",
+            "edc_lab.model_mixins.shipping.verify_model_mixin",
             "edc_lab.models",
             "edc_lab.models.aliquot",
             "edc_lab.models.box",
@@ -13774,25 +13808,6 @@
             "edc_lab.models.manifest.manifest",
             "edc_lab.models.manifest.manifest_item",
             "edc_lab.models.manifest.shipper",
-            "edc_lab.models.model_mixins",
-            "edc_lab.models.model_mixins.aliquot",
-            "edc_lab.models.model_mixins.aliquot.aliquot_identifier_model_mixin",
-            "edc_lab.models.model_mixins.aliquot.aliquot_label_mixin",
-            "edc_lab.models.model_mixins.aliquot.aliquot_model_mixin",
-            "edc_lab.models.model_mixins.aliquot.aliquot_shipping_mixin",
-            "edc_lab.models.model_mixins.aliquot.aliquot_type_model_mixin",
-            "edc_lab.models.model_mixins.panel_model_mixin",
-            "edc_lab.models.model_mixins.requisition",
-            "edc_lab.models.model_mixins.requisition.requisition_identifier_mixin",
-            "edc_lab.models.model_mixins.requisition.requisition_model_mixin",
-            "edc_lab.models.model_mixins.requisition.requisition_status_mixin",
-            "edc_lab.models.model_mixins.requisition.requisition_verify_model_mixin",
-            "edc_lab.models.model_mixins.result",
-            "edc_lab.models.model_mixins.result.result_item_model_mixin",
-            "edc_lab.models.model_mixins.result.result_model_mixin",
-            "edc_lab.models.model_mixins.shipping",
-            "edc_lab.models.model_mixins.shipping.manifest_model_mixin",
-            "edc_lab.models.model_mixins.shipping.verify_model_mixin",
             "edc_lab.models.order",
             "edc_lab.models.panel",
             "edc_lab.models.result",
@@ -13824,7 +13839,7 @@
             "edc_lab.urls",
             "edc_lab.wsgi"
         ],
-        "version": "0.2.40"
+        "version": "0.2.41"
     },
     "edc-lab-dashboard": {
         "cmdline": [],
@@ -13896,7 +13911,7 @@
             "edc_lab_dashboard.views.listboard_views.verify_box_listboard_view",
             "edc_lab_dashboard.wsgi"
         ],
-        "version": "0.1.22"
+        "version": "0.1.24"
     },
     "edc-label": {
         "cmdline": [],
@@ -13924,7 +13939,7 @@
             "edc_label.views.print_label_view",
             "edc_label.wsgi"
         ],
-        "version": "0.1.17"
+        "version": "0.1.18"
     },
     "edc-list-data": {
         "cmdline": [],
@@ -14073,7 +14088,7 @@
             "edc_metadata.views.home_view",
             "edc_metadata.wsgi"
         ],
-        "version": "0.2.30"
+        "version": "0.2.31"
     },
     "edc-metadata-rules": {
         "cmdline": [],
@@ -14116,7 +14131,7 @@
             "edc_metadata_rules.urls",
             "edc_metadata_rules.wsgi"
         ],
-        "version": "0.1.13"
+        "version": "0.1.14"
     },
     "edc-model": {
         "cmdline": [],
@@ -14193,9 +14208,10 @@
             "edc_model_admin.tests.tests.test_model_admin_web",
             "edc_model_admin.tests.urls",
             "edc_model_admin.tests.views",
-            "edc_model_admin.tests.visit_schedule"
+            "edc_model_admin.tests.visit_schedule",
+            "edc_model_admin.utils"
         ],
-        "version": "0.2.3"
+        "version": "0.2.4"
     },
     "edc-model-fields": {
         "cmdline": [],
@@ -14250,7 +14266,7 @@
             "edc_model_wrapper.wrappers.model_with_log_wrapper",
             "edc_model_wrapper.wrappers.model_wrapper"
         ],
-        "version": "0.1.20"
+        "version": "0.1.21"
     },
     "edc-navbar": {
         "cmdline": [],
@@ -14265,13 +14281,15 @@
             "edc_navbar.navbars",
             "edc_navbar.settings",
             "edc_navbar.site_navbars",
+            "edc_navbar.templatetags",
+            "edc_navbar.templatetags.edc_navbar_extras",
             "edc_navbar.tests",
             "edc_navbar.tests.test_navbar",
             "edc_navbar.urls",
             "edc_navbar.view_mixin",
             "edc_navbar.wsgi"
         ],
-        "version": "0.1.12"
+        "version": "0.1.13"
     },
     "edc-notification": {
         "cmdline": [],
@@ -14311,7 +14329,7 @@
             "edc_notification.update_mailing_lists_in_m2m",
             "edc_notification.urls"
         ],
-        "version": "0.1.20"
+        "version": "0.1.21"
     },
     "edc-offstudy": {
         "cmdline": [],
@@ -14537,7 +14555,7 @@
             "edc_pharmacy_dashboard.views.mixins.urls_view_mixin",
             "edc_pharmacy_dashboard.wsgi"
         ],
-        "version": "0.1.1a6"
+        "version": "0.1.1a7"
     },
     "edc-prn": {
         "cmdline": [],
@@ -14627,7 +14645,7 @@
             "edc_reference.views",
             "edc_reference.wsgi"
         ],
-        "version": "0.1.26"
+        "version": "0.1.27"
     },
     "edc-registration": {
         "cmdline": [],
@@ -14737,10 +14755,11 @@
             "edc_search.tests",
             "edc_search.tests.models",
             "edc_search.tests.tests",
+            "edc_search.updater",
             "edc_search.urls",
             "edc_search.wsgi"
         ],
-        "version": "0.1.8"
+        "version": "0.1.9"
     },
     "edc-selenium": {
         "cmdline": [],
@@ -14771,7 +14790,7 @@
             "edc_sites.tests.urls",
             "edc_sites.utils"
         ],
-        "version": "0.1.3"
+        "version": "0.1.4"
     },
     "edc-subject-dashboard": {
         "cmdline": [],
@@ -14798,12 +14817,13 @@
             "edc_subject_dashboard.view_mixins.registered_subject_view_mixin",
             "edc_subject_dashboard.view_mixins.subject_visit_view_mixin",
             "edc_subject_dashboard.views",
+            "edc_subject_dashboard.views.base_requisition_view",
             "edc_subject_dashboard.views.requisition_print_actions_view",
             "edc_subject_dashboard.views.requisition_verify_actions_view",
             "edc_subject_dashboard.views.subject_dashboard_view",
             "edc_subject_dashboard.wsgi"
         ],
-        "version": "0.1.24"
+        "version": "0.1.25"
     },
     "edc-subject-model-wrapper": {
         "cmdline": [],
@@ -14848,7 +14868,7 @@
             "edc_subject_model_wrappers.tests.urls",
             "edc_subject_model_wrappers.tests.visit_schedule"
         ],
-        "version": "0.1.2"
+        "version": "0.1.3"
     },
     "edc-sync": {
         "cmdline": [],
@@ -14890,7 +14910,7 @@
             "edc_test_utils.tests",
             "edc_test_utils.tests.tests"
         ],
-        "version": "0.1.2"
+        "version": "0.1.3"
     },
     "edc-timepoint": {
         "cmdline": [],
@@ -14915,7 +14935,7 @@
             "edc_timepoint.timepoint_collection",
             "edc_timepoint.timepoint_lookup"
         ],
-        "version": "0.1.10"
+        "version": "0.1.11"
     },
     "edc-utils": {
         "cmdline": [],
@@ -14999,7 +15019,7 @@
             "edc_visit_schedule.visit_schedule.visit_schedule",
             "edc_visit_schedule.wsgi"
         ],
-        "version": "0.2.32"
+        "version": "0.2.33"
     },
     "edc-visit-tracking": {
         "cmdline": [],
@@ -15048,7 +15068,7 @@
             "edc_visit_tracking.visit_sequence",
             "edc_visit_tracking.wsgi"
         ],
-        "version": "0.2.27"
+        "version": "0.2.28"
     },
     "edd": {
         "cmdline": [],
@@ -20941,7 +20961,7 @@
             "eea.jquery.tests.test_doctests",
             "eea.jquery.upgrades"
         ],
-        "version": "11.0"
+        "version": "11.1"
     },
     "eea-pdf": {
         "cmdline": [],
@@ -23701,9 +23721,10 @@
             "eic_utils.cache",
             "eic_utils.colorful_print",
             "eic_utils.database",
+            "eic_utils.image",
             "eic_utils.procedure"
         ],
-        "version": "0.5"
+        "version": "1.1"
     },
     "eidawsauth": {
         "cmdline": [],
@@ -24262,39 +24283,9 @@
         "cmdline": [],
         "modules": [
             "ejpm",
-            "ejpm.cli",
-            "ejpm.cli.ejpm_context",
-            "ejpm.cli.env",
-            "ejpm.cli.find",
-            "ejpm.cli.install",
-            "ejpm.cli.req",
-            "ejpm.cli.rm",
-            "ejpm.cli.set",
-            "ejpm.engine",
-            "ejpm.engine.commands",
-            "ejpm.engine.convig",
-            "ejpm.engine.db",
-            "ejpm.engine.env_gen",
-            "ejpm.engine.installation",
-            "ejpm.engine.output",
-            "ejpm.engine.packet_manager",
-            "ejpm.engine.py23",
-            "ejpm.engine.standard_actions",
-            "ejpm.packets",
-            "ejpm.packets.clhep",
-            "ejpm.packets.ejana",
-            "ejpm.packets.g4e",
-            "ejpm.packets.geant",
-            "ejpm.packets.genfit",
-            "ejpm.packets.hepmc",
-            "ejpm.packets.jana",
-            "ejpm.packets.pythia",
-            "ejpm.packets.rave",
-            "ejpm.packets.root",
-            "ejpm.packets.vgm",
             "ejpm.version"
         ],
-        "version": "0.0.24"
+        "version": "0.0.25"
     },
     "ejson": {
         "cmdline": [],
@@ -24902,6 +24893,13 @@
             "compress.versioning.mtime"
         ],
         "version": "1.0.3"
+    },
+    "el-paquete-de-barbi": {
+        "cmdline": [],
+        "modules": [
+            "paquete"
+        ],
+        "version": "0.0.1"
     },
     "el-user": {
         "cmdline": [],
@@ -32425,7 +32423,7 @@
     "embedded-jubatus": {
         "cmdline": [],
         "modules": [],
-        "version": "1.1.1"
+        "version": "1.1.1.post1"
     },
     "embeddify": {
         "cmdline": [],
@@ -34326,6 +34324,14 @@
         "modules": [],
         "version": "1.0.1"
     },
+    "emojimenu": {
+        "cmdline": [],
+        "modules": [
+            "emojimenu",
+            "emojimenu.emojimenu"
+        ],
+        "version": "0.1.1"
+    },
     "emojineer": {
         "cmdline": [],
         "modules": [
@@ -34515,7 +34521,7 @@
             "emonoda.web.gziphandler",
             "emonoda.web.sockshandler"
         ],
-        "version": "2.1.26"
+        "version": "2.1.27"
     },
     "emonpi-sensors": {
         "cmdline": [],
@@ -39741,9 +39747,10 @@
             "energy_trading_api.eia_api",
             "energy_trading_api.japanElectricity",
             "energy_trading_api.jepx",
+            "energy_trading_api.singaporeNEMS",
             "energy_trading_api.wagbb"
         ],
-        "version": "0.0.22"
+        "version": "0.0.23"
     },
     "energy-trading-api-wrappers": {
         "cmdline": [],
@@ -40467,7 +40474,7 @@
             "energycap.sdk.models.workflow_settings_response",
             "energycap.sdk.version"
         ],
-        "version": "7.3.1944"
+        "version": "7.3.1947"
     },
     "energydram": {
         "cmdline": [],
@@ -41759,7 +41766,7 @@
             "enisegui.listboxkv",
             "enisegui.table"
         ],
-        "version": "0.0.2.2"
+        "version": "0.0.2.3"
     },
     "enisenet": {
         "cmdline": [],
@@ -42112,7 +42119,7 @@
             "enosapi.util.Sign",
             "enosapi.util.const"
         ],
-        "version": "0.0.3"
+        "version": "0.0.4"
     },
     "enos-kubernetes": {
         "cmdline": [],
@@ -44987,7 +44994,7 @@
             "envault.shell",
             "envault.vault"
         ],
-        "version": "0.3.0"
+        "version": "0.3.1"
     },
     "envauth": {
         "cmdline": [],
@@ -48006,7 +48013,7 @@
             "epcpm.tests.test_symtocan",
             "epcpm.tests.test_symtoproject"
         ],
-        "version": "2019.3.4"
+        "version": "2019.3.5"
     },
     "epcpyyes": {
         "cmdline": [],
@@ -48037,7 +48044,7 @@
             "EPCPyYes.core.v1_2.json_encoders",
             "EPCPyYes.core.v1_2.template_events"
         ],
-        "version": "1.3.2"
+        "version": "1.3.3"
     },
     "epd": {
         "cmdline": [],
@@ -50651,6 +50658,7 @@
             "epyqlib.nv",
             "epyqlib.nvview",
             "epyqlib.nvviewplugin",
+            "epyqlib.outparsecheck",
             "epyqlib.overlaylabel",
             "epyqlib.overlaylabelplugin",
             "epyqlib.parameteredit",
@@ -50757,7 +50765,7 @@
             "epyqlib.widgets.toggle",
             "epyqlib.widgets.toggleplugin"
         ],
-        "version": "2019.3.4"
+        "version": "2019.3.5"
     },
     "epys": {
         "cmdline": [],
@@ -52213,28 +52221,31 @@
             "erdesktop.dialogs.about_dialog",
             "erdesktop.dialogs.account_dialog",
             "erdesktop.dialogs.backup_dialog",
-            "erdesktop.dialogs.create_event_dialog",
+            "erdesktop.dialogs.event_details_dialog",
             "erdesktop.dialogs.event_list_dialog",
             "erdesktop.dialogs.settings_dialog",
             "erdesktop.main_window",
+            "erdesktop.resources",
+            "erdesktop.resources.languages",
             "erdesktop.settings",
             "erdesktop.settings.default",
             "erdesktop.settings.settings",
             "erdesktop.settings.theme",
             "erdesktop.storage",
-            "erdesktop.storage.instance",
             "erdesktop.storage.models",
+            "erdesktop.storage.sql",
             "erdesktop.storage.storage",
             "erdesktop.system",
             "erdesktop.system.autostart",
-            "erdesktop.system.autostart.autostart",
-            "erdesktop.system.autostart.linux",
-            "erdesktop.system.autostart.windows",
+            "erdesktop.system.linux",
+            "erdesktop.system.shortcut_icon",
             "erdesktop.system.system",
+            "erdesktop.system.windows",
             "erdesktop.util",
             "erdesktop.util.decorators",
             "erdesktop.util.exceptions",
             "erdesktop.util.logger",
+            "erdesktop.util.notification",
             "erdesktop.util.service",
             "erdesktop.util.worker",
             "erdesktop.widgets",
@@ -52246,9 +52257,12 @@
             "erdesktop.widgets.util.buttons",
             "erdesktop.widgets.util.popup",
             "erdesktop.widgets.waiting_spinner",
-            "unittests"
+            "unittests",
+            "unittests.storage",
+            "unittests.storage.test_models",
+            "unittests.storage.test_storage"
         ],
-        "version": "2019.0.1a0"
+        "version": "2019.0.3b2"
     },
     "erdos": {
         "cmdline": [],
@@ -52603,7 +52617,7 @@
             "ergal.profile",
             "ergal.utils"
         ],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     "ergaleia": {
         "cmdline": [],
@@ -63976,7 +63990,7 @@
             "eveapi.huey",
             "eveapi.sso"
         ],
-        "version": "1.6.3"
+        "version": "1.6.3.1"
     },
     "eve-arango": {
         "cmdline": [],
@@ -71983,10 +71997,10 @@
         "modules": [],
         "version": ""
     },
-    "exec": {
+    "exec-cache": {
         "cmdline": [],
         "modules": [],
-        "version": ""
+        "version": "2019.3.24"
     },
     "exec-cmd": {
         "cmdline": [],
@@ -72724,6 +72738,14 @@
             "exileui.widgets"
         ],
         "version": "0.1.9.16"
+    },
+    "eximhandler": {
+        "cmdline": [],
+        "modules": [
+            "eximhandler",
+            "eximhandler.eximhandler"
+        ],
+        "version": "1.1.0"
     },
     "eximloganalyzer": {
         "cmdline": [],
@@ -78808,7 +78830,7 @@
             "eyewitness.result_handler.line_detection_result_handler",
             "eyewitness.utils"
         ],
-        "version": "1.0.6"
+        "version": "1.0.7"
     },
     "eyring": {
         "cmdline": [],
