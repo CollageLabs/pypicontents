@@ -2501,7 +2501,7 @@
             "cuda.nvidia",
             "cuda.plugin"
         ],
-        "version": "0.10.3"
+        "version": "0.10.4"
     },
     "backend-ai-agent": {
         "cmdline": [],
@@ -3267,6 +3267,13 @@
             "backports.test.support.script_helper"
         ],
         "version": "0.1.1"
+    },
+    "backports-time-perf-counter": {
+        "cmdline": [],
+        "modules": [
+            "time_perf_counter"
+        ],
+        "version": "0.0.4"
     },
     "backports-unittest-mock": {
         "cmdline": [],
@@ -4186,7 +4193,7 @@
             "bacon_replay_analyzer",
             "bacon_replay_analyzer.bco_repo"
         ],
-        "version": "0.0.7"
+        "version": "0.0.8"
     },
     "baconql": {
         "cmdline": [],
@@ -8910,7 +8917,7 @@
             "tests",
             "tests.test_build"
         ],
-        "version": "1.0.8"
+        "version": "1.0.9"
     },
     "bamos-opt": {
         "cmdline": [],
@@ -9574,16 +9581,23 @@
         "modules": [
             "bandwidth",
             "bandwidth.account",
+            "bandwidth.account.api_exception_module",
+            "bandwidth.account.client_module",
+            "bandwidth.client_module",
             "bandwidth.convert_camel",
             "bandwidth.messaging",
+            "bandwidth.messaging.api_exception_module",
+            "bandwidth.messaging.client_module",
             "bandwidth.version",
             "bandwidth.voice",
+            "bandwidth.voice.api_exception_module",
             "bandwidth.voice.backup_init",
             "bandwidth.voice.bxml",
+            "bandwidth.voice.client_module",
             "bandwidth.voice.decorators",
             "bandwidth.voice.lazy_enumerable"
         ],
-        "version": "3.0.1"
+        "version": "3.0.3"
     },
     "bandwidthmonitor": {
         "cmdline": [],
@@ -9644,7 +9658,7 @@
             "bane.vulns",
             "bane.wp"
         ],
-        "version": "1.7.1"
+        "version": "1.8.0"
     },
     "bang": {
         "cmdline": [],
@@ -10806,6 +10820,13 @@
         ],
         "version": "1.0"
     },
+    "barbi-quilmes-pack": {
+        "cmdline": [],
+        "modules": [
+            "pack_barbi"
+        ],
+        "version": "0.0.1"
+    },
     "barbican": {
         "cmdline": [],
         "modules": [],
@@ -11023,17 +11044,22 @@
             "bareasgi.basic_router.path_definition",
             "bareasgi.basic_router.path_segment",
             "bareasgi.basic_router.web_socket_router",
+            "bareasgi.compression",
+            "bareasgi.compression.middleware",
+            "bareasgi.compression.streaming",
             "bareasgi.cookies",
+            "bareasgi.header",
             "bareasgi.http_instance",
             "bareasgi.instance",
             "bareasgi.lifespan_instance",
             "bareasgi.middleware",
+            "bareasgi.responses",
             "bareasgi.streaming",
             "bareasgi.types",
             "bareasgi.utils",
             "bareasgi.websocket_instance"
         ],
-        "version": "0.3.0"
+        "version": "1.0.0"
     },
     "bareasgi-cors": {
         "cmdline": [],
@@ -11042,7 +11068,7 @@
             "bareasgi_cors.cors_provider",
             "bareasgi_cors.headers"
         ],
-        "version": "0.1.0"
+        "version": "1.0.0"
     },
     "bareasgi-graphql-next": {
         "cmdline": [],
@@ -11054,7 +11080,7 @@
             "bareasgi_graphql_next.websocket_handler",
             "bareasgi_graphql_next.websocket_instance"
         ],
-        "version": "0.1.1"
+        "version": "1.0.0"
     },
     "bareasgi-jinja2": {
         "cmdline": [],
@@ -11062,7 +11088,7 @@
             "bareasgi_jinja2",
             "bareasgi_jinja2.jinja2_template_provider"
         ],
-        "version": "0.0.1"
+        "version": "1.0.0"
     },
     "bareasgi-static": {
         "cmdline": [],
@@ -11071,7 +11097,7 @@
             "bareasgi_static.file_streaming",
             "bareasgi_static.static_files_provider"
         ],
-        "version": "0.1.0"
+        "version": "1.0.0"
     },
     "barebonesbot": {
         "cmdline": [],
@@ -11106,7 +11132,7 @@
             "barectf.templates",
             "barectf.tsdl182gen"
         ],
-        "version": "2.3.0"
+        "version": "2.3.1"
     },
     "bareditor": {
         "cmdline": [],
@@ -13396,12 +13422,7 @@
         "version": "1.3.51"
     },
     "baseplate": {
-        "cmdline": [
-            "baseplate-healthcheck",
-            "baseplate-script",
-            "baseplate-serve",
-            "baseplate-tshell"
-        ],
+        "cmdline": [],
         "modules": [
             "baseplate",
             "baseplate._compat",
@@ -13433,9 +13454,19 @@
             "baseplate.experiments.providers.feature_flag",
             "baseplate.experiments.providers.forced_variant",
             "baseplate.experiments.providers.r2",
+            "baseplate.experiments.providers.simple_experiment",
+            "baseplate.experiments.targeting",
+            "baseplate.experiments.targeting.base",
+            "baseplate.experiments.targeting.tree_targeting",
+            "baseplate.experiments.variant_sets",
+            "baseplate.experiments.variant_sets.base",
+            "baseplate.experiments.variant_sets.multi_variant_set",
+            "baseplate.experiments.variant_sets.rollout_variant_set",
+            "baseplate.experiments.variant_sets.single_variant_set",
             "baseplate.file_watcher",
             "baseplate.integration",
             "baseplate.integration.pyramid",
+            "baseplate.integration.pyramid.csrf",
             "baseplate.integration.thrift",
             "baseplate.integration.thrift.command",
             "baseplate.integration.wrapped_context",
@@ -13455,13 +13486,14 @@
             "baseplate.server",
             "baseplate.server.einhorn",
             "baseplate.server.healthcheck",
+            "baseplate.server.metrics",
             "baseplate.server.reloader",
             "baseplate.server.thrift",
             "baseplate.server.wsgi",
             "baseplate.service_discovery",
             "baseplate.thrift_pool"
         ],
-        "version": "0.26.0"
+        "version": "0.29.0"
     },
     "baseproxy": {
         "cmdline": [],
@@ -19071,6 +19103,7 @@
             "bblfsh",
             "bblfsh.aliases",
             "bblfsh.client",
+            "bblfsh.compat",
             "bblfsh.github",
             "bblfsh.github.com",
             "bblfsh.github.com.gogo",
@@ -19087,11 +19120,22 @@
             "bblfsh.gopkg.in.bblfsh.sdk.v1.protocol.generated_pb2_grpc",
             "bblfsh.gopkg.in.bblfsh.sdk.v1.uast",
             "bblfsh.gopkg.in.bblfsh.sdk.v1.uast.generated_pb2",
+            "bblfsh.gopkg.in.bblfsh.sdk.v2",
+            "bblfsh.gopkg.in.bblfsh.sdk.v2.protocol",
+            "bblfsh.gopkg.in.bblfsh.sdk.v2.protocol.generated_pb2",
+            "bblfsh.gopkg.in.bblfsh.sdk.v2.protocol.generated_pb2_grpc",
+            "bblfsh.gopkg.in.bblfsh.sdk.v2.uast",
+            "bblfsh.gopkg.in.bblfsh.sdk.v2.uast.generated_pb2",
             "bblfsh.launcher",
-            "bblfsh.sdkversion",
-            "bblfsh.test"
+            "bblfsh.node",
+            "bblfsh.node_iterator",
+            "bblfsh.result_context",
+            "bblfsh.test",
+            "bblfsh.test_compat",
+            "bblfsh.tree_order",
+            "bblfsh.type_aliases"
         ],
-        "version": "2.12.7"
+        "version": "3.0.0"
     },
     "bblfsh-sonar-checks": {
         "cmdline": [],
@@ -23210,7 +23254,7 @@
             "beamformers.tests",
             "beamformers.tests.test_beamformers"
         ],
-        "version": "0.4.5"
+        "version": "0.4.7"
     },
     "beaminfluxdbwriter": {
         "cmdline": [],
@@ -25458,7 +25502,7 @@
             "BeautifulReport",
             "BeautifulReport.BeautifulReport"
         ],
-        "version": "0.0.4"
+        "version": "0.0.7"
     },
     "beautifulrequests": {
         "cmdline": [],
@@ -26860,18 +26904,7 @@
             "beepdrive.snake",
             "beepdrive.utils"
         ],
-        "version": "2019.3.23"
-    },
-    "beepdrive-develop": {
-        "cmdline": [],
-        "modules": [
-            "beepdrive",
-            "beepdrive.bdrive",
-            "beepdrive.pyside",
-            "beepdrive.snake",
-            "beepdrive.utils"
-        ],
-        "version": "2019.3.25"
+        "version": "2019.3.26"
     },
     "beeper": {
         "cmdline": [],
@@ -32603,8 +32636,41 @@
     },
     "bets-cli": {
         "cmdline": [],
-        "modules": [],
-        "version": "3.0.0"
+        "modules": [
+            "bets",
+            "bets.main",
+            "bets.model",
+            "bets.model.match",
+            "bets.model.matches",
+            "bets.model.scenario",
+            "bets.model.scenarios",
+            "bets.program_io",
+            "bets.program_io.matches_input",
+            "bets.program_io.matches_output",
+            "bets.program_io.scenarios_output",
+            "bets.ui",
+            "bets.ui.bets_app",
+            "bets.ui.matches_observable",
+            "bets.ui.matches_tab",
+            "bets.ui.matches_tab.constants",
+            "bets.ui.matches_tab.matches_tab",
+            "bets.ui.matches_tab.matches_table",
+            "bets.ui.matches_tab.pasted_matches_input",
+            "bets.ui.matches_tab.single_match_input",
+            "bets.ui.menu_bar",
+            "bets.ui.scenarios_tab",
+            "bets.ui.scenarios_tab.filter_frames",
+            "bets.ui.scenarios_tab.generate_scenarios_frame",
+            "bets.ui.scenarios_tab.scenarios_data_row",
+            "bets.ui.scenarios_tab.scenarios_tab",
+            "bets.ui.table_frame",
+            "bets.utils",
+            "bets.utils.decorators",
+            "bets.utils.log",
+            "bets.utils.num_utils",
+            "bets.utils.string_utils"
+        ],
+        "version": "3.0.1"
     },
     "betsapi": {
         "cmdline": [],
@@ -33822,7 +33888,7 @@
     "beyond": {
         "cmdline": [],
         "modules": [],
-        "version": "0.6.3"
+        "version": "0.6.4"
     },
     "beyondskins-ploneday-site": {
         "cmdline": [],
@@ -34435,6 +34501,15 @@
             "BFScratch.BFStringDeal"
         ],
         "version": "0.0.6"
+    },
+    "bfseg": {
+        "cmdline": [],
+        "modules": [
+            "bfseg",
+            "bfseg.findmax",
+            "bfseg.watershed"
+        ],
+        "version": "0.0.2"
     },
     "bfurlparser": {
         "cmdline": [],
@@ -40032,6 +40107,7 @@
         "modules": [
             "bilby",
             "bilby.core",
+            "bilby.core.grid",
             "bilby.core.likelihood",
             "bilby.core.prior",
             "bilby.core.result",
@@ -40067,7 +40143,7 @@
             "cli_bilby.bilby_result",
             "cli_bilby.plot_multiple_posteriors"
         ],
-        "version": "0.4.2"
+        "version": "0.4.3"
     },
     "bilby-pipe": {
         "cmdline": [],
@@ -40172,7 +40248,7 @@
             "bilibiliupload",
             "bilibiliupload.bilibili"
         ],
-        "version": "0.1.2"
+        "version": "0.1.3"
     },
     "bilicaptcha": {
         "cmdline": [],
@@ -40661,6 +40737,7 @@
             "bimdata_api_client.models.project_role",
             "bimdata_api_client.models.property_definition",
             "bimdata_api_client.models.property_set",
+            "bimdata_api_client.models.raw_classification",
             "bimdata_api_client.models.raw_definition",
             "bimdata_api_client.models.raw_element",
             "bimdata_api_client.models.raw_elements",
@@ -40735,6 +40812,7 @@
             "test.test_project_role",
             "test.test_property_definition",
             "test.test_property_set",
+            "test.test_raw_classification",
             "test.test_raw_definition",
             "test.test_raw_element",
             "test.test_raw_elements",
@@ -40765,7 +40843,7 @@
             "test.test_zone",
             "test.test_zone_space"
         ],
-        "version": "2.12.2"
+        "version": "2.12.3"
     },
     "bimeta": {
         "cmdline": [],
@@ -41173,6 +41251,7 @@
             "bincrafters_conventions.actions.check_for_required_attributes",
             "bincrafters_conventions.actions.check_for_spdx_license",
             "bincrafters_conventions.actions.update_a_path_manipulation",
+            "bincrafters_conventions.actions.update_a_python_environment_variable",
             "bincrafters_conventions.actions.update_a_python_version",
             "bincrafters_conventions.actions.update_c_build_subfolder",
             "bincrafters_conventions.actions.update_c_configure_cmake",
@@ -41186,7 +41265,7 @@
             "bincrafters_conventions.bincrafters_conventions",
             "bincrafters_conventions.main"
         ],
-        "version": "0.4.1"
+        "version": "0.4.2"
     },
     "bincrafters-envy": {
         "cmdline": [],
@@ -44947,7 +45026,7 @@
             "biomaj_download.message.downmessage_pb2",
             "biomaj_download.wsgi"
         ],
-        "version": "3.0.23"
+        "version": "3.0.24"
     },
     "biomaj-ftp": {
         "cmdline": [],
@@ -49731,7 +49810,7 @@
             "bitcoinutils.setup",
             "bitcoinutils.transactions"
         ],
-        "version": "0.2.5"
+        "version": "0.2.6"
     },
     "bitcoinacceptor": {
         "cmdline": [],
@@ -52065,7 +52144,7 @@
             "tests.test_wallet",
             "tests.utils"
         ],
-        "version": "0.5.3"
+        "version": "0.5.4"
     },
     "bitsyauth": {
         "cmdline": [],
@@ -54802,7 +54881,7 @@
             "bleach.sourcecontrol.bitbucket_cloud",
             "bleach.sourcecontrol.github"
         ],
-        "version": "0.0.17"
+        "version": "0.0.18"
     },
     "bleak": {
         "cmdline": [],
@@ -55050,6 +55129,12 @@
             "blender_asset_tracer.pack.filesystem",
             "blender_asset_tracer.pack.progress",
             "blender_asset_tracer.pack.s3",
+            "blender_asset_tracer.pack.shaman",
+            "blender_asset_tracer.pack.shaman.auth",
+            "blender_asset_tracer.pack.shaman.cache",
+            "blender_asset_tracer.pack.shaman.client",
+            "blender_asset_tracer.pack.shaman.time_tracker",
+            "blender_asset_tracer.pack.shaman.transfer",
             "blender_asset_tracer.pack.transfer",
             "blender_asset_tracer.pack.zipped",
             "blender_asset_tracer.trace",
@@ -55061,7 +55146,7 @@
             "blender_asset_tracer.trace.progress",
             "blender_asset_tracer.trace.result"
         ],
-        "version": "1.0"
+        "version": "1.1"
     },
     "blender-bam": {
         "cmdline": [],
@@ -60225,7 +60310,7 @@
             "blueqat.utils",
             "blueqat.vqe"
         ],
-        "version": "0.3.6"
+        "version": "0.3.7"
     },
     "blueque": {
         "cmdline": [],
@@ -63769,13 +63854,8 @@
     },
     "bob-builder": {
         "cmdline": [],
-        "modules": [
-            "bob",
-            "bob.cli",
-            "bob.models",
-            "bob.utils"
-        ],
-        "version": "0.0.14"
+        "modules": [],
+        "version": "0.0.15"
     },
     "bob-buildout": {
         "cmdline": [],
@@ -66332,7 +66412,7 @@
             "package_tests.test_viewlet",
             "package_tests.test_vocabulary"
         ],
-        "version": "4.0.1"
+        "version": "4.0.2"
     },
     "bobtemplates-pypbr": {
         "cmdline": [],
@@ -74010,56 +74090,32 @@
         "version": "0.2.4"
     },
     "botlib": {
-        "cmdline": [
-            "bot"
-        ],
+        "cmdline": [],
         "modules": [
-            "bot",
-            "bot.cli",
+            "bot.base",
+            "bot.bot",
             "bot.clock",
             "bot.cmds",
-            "bot.cmds.clock",
-            "bot.cmds.db",
-            "bot.cmds.doc",
-            "bot.cmds.ed",
-            "bot.cmds.email",
-            "bot.cmds.input",
-            "bot.cmds.license",
-            "bot.cmds.loader",
-            "bot.cmds.oper",
-            "bot.cmds.rss",
-            "bot.cmds.test",
-            "bot.cmds.udp",
-            "bot.cmds.users",
-            "bot.core",
-            "bot.db",
-            "bot.dcc",
-            "bot.defines",
+            "bot.command",
+            "bot.edit",
+            "bot.email",
+            "bot.entry",
             "bot.event",
             "bot.fleet",
             "bot.handler",
             "bot.irc",
+            "bot.kernel",
             "bot.loader",
-            "bot.obj",
-            "bot.raw",
-            "bot.register",
+            "bot.poller",
             "bot.rss",
-            "bot.select",
-            "bot.space",
-            "bot.thr",
+            "bot.shell",
+            "bot.store",
+            "bot.tasks",
+            "bot.udp",
             "bot.users",
-            "bot.utils",
-            "bot.utils.db",
-            "bot.utils.decorators",
-            "bot.utils.log",
-            "bot.utils.misc",
-            "bot.utils.shell",
-            "bot.utils.time",
-            "bot.utils.trace",
-            "bot.utils.url",
-            "bot.xmpp"
+            "bot.utils"
         ],
-        "version": "49"
+        "version": "50"
     },
     "botly": {
         "cmdline": [],
@@ -75713,7 +75769,7 @@
             "boto3.session",
             "boto3.utils"
         ],
-        "version": "1.9.120"
+        "version": "1.9.121"
     },
     "boto3-batch-utils": {
         "cmdline": [],
@@ -77059,7 +77115,7 @@
             "botocore.vendored.six",
             "botocore.waiter"
         ],
-        "version": "1.12.120"
+        "version": "1.12.121"
     },
     "botocore-callback": {
         "cmdline": [],
@@ -85633,7 +85689,11 @@
         "cmdline": [],
         "modules": [
             "bravado",
+            "bravado.cli",
+            "bravado.cli.generate",
+            "bravado.cli.main",
             "bravado.client",
+            "bravado.compat",
             "bravado.config",
             "bravado.docstring_property",
             "bravado.exception",
@@ -85648,7 +85708,7 @@
             "bravado.testing.response_mocks",
             "bravado.warning"
         ],
-        "version": "10.3.1"
+        "version": "10.3.2"
     },
     "bravado-asyncio": {
         "cmdline": [],
@@ -88859,6 +88919,7 @@
             "bricknil.bricknil",
             "bricknil.const",
             "bricknil.hub",
+            "bricknil.message_dispatch",
             "bricknil.messages",
             "bricknil.peripheral",
             "bricknil.process",
@@ -88866,7 +88927,7 @@
             "bricknil.utils",
             "bricknil.version"
         ],
-        "version": "0.7"
+        "version": "0.7.1"
     },
     "bricknil-bleak": {
         "cmdline": [],
@@ -100459,9 +100520,11 @@
             "buoy.tests.item",
             "buoy.tests.item_db_to_send_thread",
             "buoy.tests.item_save_thread",
-            "buoy.tests.serial"
+            "buoy.tests.serial",
+            "support",
+            "support.function"
         ],
-        "version": "0.0.6"
+        "version": "0.0.8"
     },
     "buoy-client": {
         "cmdline": [],
@@ -100752,7 +100815,7 @@
             "burger.strutils",
             "burger.windowsutils"
         ],
-        "version": "1.1.13"
+        "version": "1.1.14"
     },
     "burki-module": {
         "cmdline": [],
