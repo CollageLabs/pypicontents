@@ -6019,7 +6019,7 @@
             "gameduino2.remote",
             "gameduino2.tmxreader"
         ],
-        "version": "0.2.4"
+        "version": "0.3.0"
     },
     "gamefaqs-py": {
         "cmdline": [
@@ -31291,29 +31291,21 @@
             "georss_client.consts",
             "georss_client.exceptions",
             "georss_client.feed_manager",
-            "georss_client.generic_feed",
-            "georss_client.ign_sismologia_feed",
-            "georss_client.ingv_centro_nazionale_terremoti_feed",
-            "georss_client.natural_resources_canada_earthquakes_feed",
-            "georss_client.qfes_bushfire_alert_feed",
-            "georss_client.tasmania_fire_service_incidents_feed",
-            "georss_client.wa_dfes_feed",
+            "georss_client.geo_rss_distance_helper",
             "georss_client.xml_parser",
             "georss_client.xml_parser.feed",
+            "georss_client.xml_parser.feed_dict_source",
+            "georss_client.xml_parser.feed_image",
+            "georss_client.xml_parser.feed_item",
+            "georss_client.xml_parser.feed_or_feed_item",
             "georss_client.xml_parser.geometry",
             "tests",
-            "tests.test_generic_feed",
-            "tests.test_ign_sismologia_feed",
-            "tests.test_ingv_centro_nazionale_terremoti_feed",
+            "tests.test_feed_manager",
             "tests.test_init",
-            "tests.test_natural_resources_canada_earthquakes_feed",
-            "tests.test_qfes_bushfire_alert_feed",
-            "tests.test_tasmania_fire_service_incidents_feed",
-            "tests.test_wa_dfes_feed",
             "tests.test_xml_parser",
             "tests.utils"
         ],
-        "version": "0.8"
+        "version": "0.9"
     },
     "georss-generic-client": {
         "cmdline": [],
@@ -31322,7 +31314,7 @@
             "tests",
             "tests.test_generic_feed"
         ],
-        "version": "0.1"
+        "version": "0.2"
     },
     "georss-ign-sismologia-client": {
         "cmdline": [],
@@ -33576,7 +33568,7 @@
         "modules": [
             "get_time"
         ],
-        "version": "0.0.1"
+        "version": "0.0.3"
     },
     "get-user-headers": {
         "cmdline": [],
@@ -37159,7 +37151,6 @@
         "cmdline": [],
         "modules": [
             "gfort2py",
-            "gfort2py.array_static",
             "gfort2py.arrays",
             "gfort2py.cmplx",
             "gfort2py.errors",
@@ -37179,7 +37170,7 @@
             "tests",
             "tests.gfort2py_test"
         ],
-        "version": "1.1.2"
+        "version": "1.1.3"
     },
     "gfoxaur": {
         "cmdline": [],
@@ -43307,11 +43298,13 @@
         "modules": [
             "gistools",
             "gistools.datasets",
+            "gistools.network",
             "gistools.raster",
+            "gistools.rec",
             "gistools.util",
             "gistools.vector"
         ],
-        "version": "1.0.3"
+        "version": "1.0.9"
     },
     "gistore": {
         "cmdline": [
@@ -48954,6 +48947,14 @@
         "cmdline": [],
         "modules": [],
         "version": "1.5"
+    },
+    "gitlab-to-codecommit-migration": {
+        "cmdline": [
+            "gitlab-set-read-only",
+            "gitlab-to-codecommit"
+        ],
+        "modules": [],
+        "version": "0.2.0"
     },
     "gitlab-users": {
         "cmdline": [],
@@ -81974,6 +81975,41 @@
         ],
         "version": "1.4.2"
     },
+    "grakn-client": {
+        "cmdline": [],
+        "modules": [
+            "grakn",
+            "grakn.client",
+            "grakn.exception",
+            "grakn.exception.GraknError",
+            "grakn.rpc",
+            "grakn.rpc.protocol",
+            "grakn.rpc.protocol.keyspace",
+            "grakn.rpc.protocol.keyspace.Keyspace_pb2",
+            "grakn.rpc.protocol.keyspace.Keyspace_pb2_grpc",
+            "grakn.rpc.protocol.session",
+            "grakn.rpc.protocol.session.Answer_pb2",
+            "grakn.rpc.protocol.session.Answer_pb2_grpc",
+            "grakn.rpc.protocol.session.Concept_pb2",
+            "grakn.rpc.protocol.session.Concept_pb2_grpc",
+            "grakn.rpc.protocol.session.Session_pb2",
+            "grakn.rpc.protocol.session.Session_pb2_grpc",
+            "grakn.service",
+            "grakn.service.Keyspace",
+            "grakn.service.Keyspace.KeyspaceService",
+            "grakn.service.Session",
+            "grakn.service.Session.Concept",
+            "grakn.service.Session.Concept.BaseTypeMapping",
+            "grakn.service.Session.Concept.Concept",
+            "grakn.service.Session.Concept.ConceptFactory",
+            "grakn.service.Session.TransactionService",
+            "grakn.service.Session.util",
+            "grakn.service.Session.util.RequestBuilder",
+            "grakn.service.Session.util.ResponseReader",
+            "grakn.service.Session.util.enums"
+        ],
+        "version": "1.5.1"
+    },
     "grakn-kglib": {
         "cmdline": [],
         "modules": [
@@ -90693,20 +90729,24 @@
         "version": "0.14.0"
     },
     "gridmeld": {
-        "cmdline": [],
+        "cmdline": [
+            "gate.py",
+            "grid.py",
+            "meld.py"
+        ],
         "modules": [
             "gridmeld",
-            "gridmeld.minemeld",
-            "gridmeld.minemeld.api",
-            "gridmeld.pxgrid",
-            "gridmeld.pxgrid.rest",
-            "gridmeld.pxgrid.stomp",
-            "gridmeld.pxgrid.wsstomp",
-            "gridmeld.util",
-            "gridmeld.util.mixin",
-            "gridmeld.util.util_daemon"
+            "gridmeld/minemeld",
+            "gridmeld/minemeld.api",
+            "gridmeld/pxgrid",
+            "gridmeld/pxgrid.rest",
+            "gridmeld/pxgrid.stomp",
+            "gridmeld/pxgrid.wsstomp",
+            "gridmeld/util",
+            "gridmeld/util.mixin",
+            "gridmeld/util.util_daemon"
         ],
-        "version": "0.0.0"
+        "version": "0.1.0"
     },
     "gridopt": {
         "cmdline": [],
@@ -91782,6 +91822,7 @@
         "cmdline": [],
         "modules": [
             "development",
+            "development.benedikt",
             "development.tests",
             "development.tests.working",
             "development.tests.working.aux",
@@ -91798,6 +91839,7 @@
             "docs.figures.scripts.fig-weights-marginal-effect",
             "docs.figures.scripts.fig_config",
             "grmpy",
+            "grmpy.__version__",
             "grmpy.check",
             "grmpy.check.auxiliary",
             "grmpy.check.check",
@@ -91823,7 +91865,7 @@
             "grmpy.test.test_quality",
             "grmpy.test.test_unit"
         ],
-        "version": "0.1.0.dev0"
+        "version": "0.1.1.dev0"
     },
     "grnhse-api": {
         "cmdline": [],
@@ -96197,7 +96239,7 @@
             "grpclib.testing",
             "grpclib.utils"
         ],
-        "version": "0.2.2"
+        "version": "0.2.3"
     },
     "grpy": {
         "cmdline": [],
@@ -100625,7 +100667,7 @@
             "gsuite_sync.google",
             "gsuite_sync.ise"
         ],
-        "version": "0.0.11"
+        "version": "0.0.14"
     },
     "gsum": {
         "cmdline": [],
@@ -104850,9 +104892,10 @@
             "gumo.core.domain.entity_key",
             "gumo.core.exceptions",
             "gumo.core.infrastructure",
+            "gumo.core.infrastructure.credential",
             "gumo.core.injector"
         ],
-        "version": "0.0.13"
+        "version": "0.0.17"
     },
     "gumo-datastore": {
         "cmdline": [],
@@ -108284,9 +108327,11 @@
             "gym_rl_book",
             "gym_rl_book.envs",
             "gym_rl_book.envs.multiarmbandit",
-            "gym_rl_book.envs.tictactoe"
+            "gym_rl_book.envs.tictactoe",
+            "gym_rl_book.testbeds",
+            "gym_rl_book.testbeds.parallel"
         ],
-        "version": "0.0.4"
+        "version": "0.0.5"
     },
     "gym-rock-paper-scissors": {
         "cmdline": [],
