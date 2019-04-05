@@ -811,11 +811,13 @@
             "i4t.client.topic",
             "i4t.core",
             "i4t.core.common",
+            "i4t.core.firmware",
             "i4t.core.instancing",
             "i4t.core.provisioning",
             "i4t.core.session",
             "i4t.core.utilites",
             "i4t.protobuf",
+            "i4t.protobuf.Firmware_pb2",
             "i4t.protobuf.Instancing_pb2",
             "i4t.protobuf.Provisioning_pb2",
             "i4t.protobuf.Session_pb2",
@@ -825,9 +827,10 @@
             "i4t.protobuf.protobuf.Provisioning_pb2",
             "i4t.protobuf.protobuf.Session_pb2",
             "i4t.protobuf.protobuf.common_pb2",
-            "tests"
+            "tests",
+            "tests.test_instancing"
         ],
-        "version": "0.1.0"
+        "version": "0.2.0"
     },
     "i8c": {
         "cmdline": [],
@@ -1589,7 +1592,7 @@
             "tests.test_registry",
             "tests.test_sector"
         ],
-        "version": "2.0.5"
+        "version": "2.0.6"
     },
     "iatisegmenter": {
         "cmdline": [],
@@ -2658,10 +2661,13 @@
             "ibm_ai_openscale.base_classes.clients.client_with_ml_gateway_support",
             "ibm_ai_openscale.base_classes.clients.known_service_client",
             "ibm_ai_openscale.base_classes.configuration",
+            "ibm_ai_openscale.base_classes.configuration.custom_metrics_viewer",
+            "ibm_ai_openscale.base_classes.configuration.data_distribution",
             "ibm_ai_openscale.base_classes.configuration.explainability",
             "ibm_ai_openscale.base_classes.configuration.fairness_monitoring",
             "ibm_ai_openscale.base_classes.configuration.feedback_logging",
             "ibm_ai_openscale.base_classes.configuration.metrics_viewer",
+            "ibm_ai_openscale.base_classes.configuration.monitoring",
             "ibm_ai_openscale.base_classes.configuration.payload_logging",
             "ibm_ai_openscale.base_classes.configuration.performance_monitoring",
             "ibm_ai_openscale.base_classes.configuration.quality_monitoring",
@@ -2708,13 +2714,20 @@
             "ibm_ai_openscale.engines.watson_machine_learning.instance",
             "ibm_ai_openscale.engines.watson_machine_learning_4_icp",
             "ibm_ai_openscale.engines.watson_machine_learning_4_icp.instance",
+            "ibm_ai_openscale.monitors",
             "ibm_ai_openscale.subscriptions",
             "ibm_ai_openscale.supporting_classes",
+            "ibm_ai_openscale.supporting_classes.data_distribution_agg",
+            "ibm_ai_openscale.supporting_classes.data_distribution_date_conversion",
+            "ibm_ai_openscale.supporting_classes.data_distribution_filter",
             "ibm_ai_openscale.supporting_classes.database_credentials",
             "ibm_ai_openscale.supporting_classes.enums",
             "ibm_ai_openscale.supporting_classes.feature",
+            "ibm_ai_openscale.supporting_classes.metric",
             "ibm_ai_openscale.supporting_classes.payload_record",
             "ibm_ai_openscale.supporting_classes.storage_reference",
+            "ibm_ai_openscale.supporting_classes.tag",
+            "ibm_ai_openscale.supporting_classes.threshold",
             "ibm_ai_openscale.utils",
             "ibm_ai_openscale.utils.client_errors",
             "ibm_ai_openscale.utils.href_definitions",
@@ -2747,38 +2760,13 @@
             "tests.assertions",
             "tests.csv_to_payload",
             "tests.datasets_classes",
-            "tests.deployments",
-            "tests.deployments.azure",
-            "tests.deployments.deployment_template",
-            "tests.deployments.sagemaker",
-            "tests.deployments.wml",
-            "tests.deployments.wml.keras",
-            "tests.deployments.wml.spark",
-            "tests.deployments.wml.xgboost",
             "tests.install_requirements",
-            "tests.models",
-            "tests.models.AbstractModel",
-            "tests.models.Keras",
-            "tests.models.KerasVGG16",
-            "tests.models.SparkBestHeartDrug",
-            "tests.models.SparkMlibRegression",
-            "tests.models.function",
-            "tests.models.keras_text_classification",
-            "tests.models.scikit",
-            "tests.models.spark",
-            "tests.models.spss",
-            "tests.models.tensorflow",
-            "tests.models.xgboost",
             "tests.models_preparation",
-            "tests.nonfunction",
-            "tests.nonfunction.common_steps",
-            "tests.nonfunction.fixtures",
-            "tests.nonfunction.test_azure_engine",
-            "tests.nonfunction.test_gateway_response_time",
             "tests.preparation_and_cleaning",
             "tests.svt",
             "tests.svt._test_azure_scikit_multiclass_iris_performance_quality_and_explainability_monitoring",
             "tests.svt._test_spss_spss_regression_house-prices_performance_and_quality_monitoring",
+            "tests.svt._test_wml_keras_multiclass_urban-sound_performance_and_quality_monitoring",
             "tests.svt._test_wml_keras_regression_fuel-efficency_performance_and_quality_monitoring",
             "tests.svt._test_wml_xgboost_binary_agaricus_performance_and_quality_monitoring",
             "tests.svt.test_3rdparty_discovery_response_time",
@@ -2787,6 +2775,7 @@
             "tests.svt.test_azure_native_regression_product-line_all_monitors",
             "tests.svt.test_custom_keras_multiclass_resnet50_performance_monitoring",
             "tests.svt.test_custom_scikit_binary_credit-risk_all_monitors",
+            "tests.svt.test_custom_scikit_binary_credit-risk_custom_monitors",
             "tests.svt.test_datamart_operations",
             "tests.svt.test_limitation_aios",
             "tests.svt.test_limitation_wml",
@@ -2803,10 +2792,10 @@
             "tests.svt.test_wml_function_performance_and_quality_monitoring",
             "tests.svt.test_wml_keras_binary_dogs-vs-cats_performance_and_quality_monitoring",
             "tests.svt.test_wml_keras_binary_spam_performance_and_quality_monitoring",
+            "tests.svt.test_wml_keras_lstm_performance_and_quality_monitoring",
             "tests.svt.test_wml_keras_multiclass_iris_performance_and_quality_monitoring",
-            "tests.svt.test_wml_keras_multiclass_mnist_performance",
+            "tests.svt.test_wml_keras_multiclass_mnist_performance_and_quality_monitoring",
             "tests.svt.test_wml_keras_multiclass_stack-overflow_performance_and_quality_monitoring",
-            "tests.svt.test_wml_keras_multiclass_urban-sound_performance_and_quality_monitoring",
             "tests.svt.test_wml_keras_regression_house-prices_performance_and_quality_monitoring",
             "tests.svt.test_wml_scikit_multiclass_digits_performance_and_quality_monitoring",
             "tests.svt.test_wml_scikit_multiclass_golf_all_monitors",
@@ -2818,15 +2807,12 @@
             "tests.svt.test_wml_spark_regression_customer-satisfaction_performance_quality_and_explainability_monitoring",
             "tests.svt.test_wml_spss_customer-satisfaction_performance_and_quality_monitoring",
             "tests.svt.test_wml_tensorflow_binary_performance_monitoring",
+            "tests.svt.test_wml_xgboost_regression_boston_performance_and_quality_monitoring",
             "tests.svt.test_wml_xgboost_regression_solar_performance_and_quality_monitoring",
-            "tests.thirdparty",
-            "tests.thirdparty.Engine",
-            "tests.thirdparty.custom",
-            "tests.thirdparty.sagemaker",
-            "tests.unittests",
-            "tests.unittests.test_table"
+            "tests.svt_explain-bias-squad",
+            "tests.svt_explain-bias-squad.test_training_stats"
         ],
-        "version": "2.1.1"
+        "version": "2.1.3"
     },
     "ibm-ai-openscale-cli": {
         "cmdline": [],
@@ -2861,6 +2847,15 @@
             "ibm_analytics_engine.logger"
         ],
         "version": "0.0.13"
+    },
+    "ibm-apidocs-cli": {
+        "cmdline": [],
+        "modules": [
+            "ibm_apidocs_cli",
+            "ibm_apidocs_cli.main",
+            "ibm_apidocs_cli.version"
+        ],
+        "version": "1.0.0"
     },
     "ibm-cloud-env": {
         "cmdline": [],
@@ -3537,7 +3532,7 @@
             "ibmBluepages",
             "ibmBluepages.ibmBluepages"
         ],
-        "version": "1.10"
+        "version": "1.11"
     },
     "ibmcloudenv": {
         "cmdline": [],
@@ -8261,8 +8256,10 @@
         "modules": [
             "idebug",
             "idebug.DataStructure",
+            "idebug.dbg",
             "idebug.etc",
             "idebug.function",
+            "idebug.function_bk",
             "idebug.html",
             "idebug.iinspect",
             "idebug.mongo",
@@ -8271,7 +8268,7 @@
             "idebug.tests.iinspect",
             "idebug.tests.performance"
         ],
-        "version": "0.0.9"
+        "version": "0.0.10"
     },
     "ideefixe": {
         "cmdline": [],
@@ -8551,11 +8548,13 @@
             "idevops.cli",
             "idevops.iserver",
             "idevops.shell_wrapper",
+            "idevops.ssh",
             "idevops.test",
             "idevops.test_up",
-            "idevops.utils"
+            "idevops.utils",
+            "idevops.version"
         ],
-        "version": "3.0.12"
+        "version": "3.0.13"
     },
     "idf-tags": {
         "cmdline": [],
@@ -14571,7 +14570,7 @@
             "pipelines_utils_rdkit.sdf2json",
             "pipelines_utils_rdkit.splitter"
         ],
-        "version": "1.5.1"
+        "version": "1.5.2"
     },
     "im-qsb": {
         "cmdline": [],
@@ -14670,7 +14669,7 @@
             "imgaug.tests.doc_test",
             "imgaug.tests.image_test"
         ],
-        "version": "0.1.9"
+        "version": "0.2.3"
     },
     "image-augmentor": {
         "cmdline": [],
@@ -16561,9 +16560,10 @@
         "cmdline": [],
         "modules": [
             "imagepypelines_tools",
-            "imagepypelines_tools.imagepypelines_tools"
+            "imagepypelines_tools.imagepypelines_tools",
+            "imagepypelines_tools.version_info"
         ],
-        "version": "0.2.4a0"
+        "version": "0.3.3a0"
     },
     "imagerater": {
         "cmdline": [
@@ -21764,8 +21764,21 @@
     },
     "importlib-metadata": {
         "cmdline": [],
-        "modules": [],
-        "version": "0.8"
+        "modules": [
+            "importlib_metadata",
+            "importlib_metadata._hooks",
+            "importlib_metadata.abc",
+            "importlib_metadata.api",
+            "importlib_metadata.docs",
+            "importlib_metadata.docs.conf",
+            "importlib_metadata.tests",
+            "importlib_metadata.tests.data",
+            "importlib_metadata.tests.fixtures",
+            "importlib_metadata.tests.test_api",
+            "importlib_metadata.tests.test_main",
+            "importlib_metadata.tests.test_zip"
+        ],
+        "version": "0.9"
     },
     "importlib-no-failure": {
         "cmdline": [],
@@ -41366,7 +41379,7 @@
             "inpout.inpout",
             "inpout.packing"
         ],
-        "version": "1.0.4"
+        "version": "1.0.5"
     },
     "input": {
         "cmdline": [],
@@ -41406,7 +41419,7 @@
             "tests.test_init",
             "tests.test_matcher"
         ],
-        "version": "0.1.30"
+        "version": "0.1.31"
     },
     "input-mocker": {
         "cmdline": [],
@@ -42393,7 +42406,7 @@
     "insights-core": {
         "cmdline": [],
         "modules": [],
-        "version": "3.0.86"
+        "version": "3.0.88"
     },
     "insights-py": {
         "cmdline": [],
@@ -42772,7 +42785,7 @@
             "inspire_dojson.utils",
             "inspire_dojson.utils.geo"
         ],
-        "version": "61.1.8"
+        "version": "61.1.9"
     },
     "inspire-json-merger": {
         "cmdline": [],
@@ -43714,6 +43727,7 @@
             "instana.agent",
             "instana.agent_const",
             "instana.api",
+            "instana.configurator",
             "instana.flaskana",
             "instana.fsm",
             "instana.helpers",
@@ -43722,6 +43736,7 @@
             "instana.instrumentation.aiohttp",
             "instana.instrumentation.aiohttp.client",
             "instana.instrumentation.aiohttp.server",
+            "instana.instrumentation.asyncio",
             "instana.instrumentation.asynqp",
             "instana.instrumentation.django",
             "instana.instrumentation.django.middleware",
@@ -43746,7 +43761,7 @@
             "instana.util",
             "instana.wsgi"
         ],
-        "version": "1.10.2"
+        "version": "1.10.3"
     },
     "instana-api": {
         "cmdline": [],
@@ -49445,7 +49460,7 @@
             "intuitiveml.unsupervised.KMeans",
             "intuitiveml.utils"
         ],
-        "version": "0.0.1a2"
+        "version": "0.0.1a3"
     },
     "inukshuk": {
         "cmdline": [],
@@ -49627,7 +49642,7 @@
             "invana_bot.utils.selectors",
             "invana_bot.utils.url"
         ],
-        "version": "0.0.3"
+        "version": "0.0.8"
     },
     "invana-transformers": {
         "cmdline": [],
@@ -51458,7 +51473,7 @@
             "investpy.resources",
             "investpy.user_agent"
         ],
-        "version": "0.7.6"
+        "version": "0.8"
     },
     "investpy-test": {
         "cmdline": [],
@@ -57635,7 +57650,7 @@
         "modules": [
             "ipdbugger"
         ],
-        "version": "2.1.0"
+        "version": "2.2.0"
     },
     "ipdetailscache": {
         "cmdline": [],
@@ -59617,7 +59632,7 @@
             "iptables_exporter",
             "iptables_exporter.main"
         ],
-        "version": "0.3.2"
+        "version": "0.9.3"
     },
     "iptables-stats": {
         "cmdline": [],
@@ -60153,7 +60168,7 @@
             "ipydeps.logger",
             "ipydeps.utils"
         ],
-        "version": "0.8.1"
+        "version": "0.8.2"
     },
     "ipydex": {
         "cmdline": [],
@@ -76955,6 +76970,11 @@
         ],
         "version": "1.0.1"
     },
+    "isx": {
+        "cmdline": [],
+        "modules": [],
+        "version": ""
+    },
     "isylib": {
         "cmdline": [
             "isy_find.py",
@@ -79200,7 +79220,7 @@
             "itt.utilities.monkey_patch",
             "itt.utilities.remove_old_config_db"
         ],
-        "version": "2.71.0"
+        "version": "2.72.0"
     },
     "itty": {
         "cmdline": [],
@@ -80968,6 +80988,11 @@
             "iwx.utils"
         ],
         "version": "0.1.0.dev1"
+    },
+    "ix": {
+        "cmdline": [],
+        "modules": [],
+        "version": ""
     },
     "ixc-django-compressor": {
         "cmdline": [],
