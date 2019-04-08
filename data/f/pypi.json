@@ -114,7 +114,7 @@
     "f2format": {
         "cmdline": [],
         "modules": [],
-        "version": "0.5.0"
+        "version": "0.5.2"
     },
     "f2format-codec": {
         "cmdline": [],
@@ -6453,9 +6453,10 @@
             "facturacion_electronica.linea_impuesto",
             "facturacion_electronica.receptor",
             "facturacion_electronica.respuesta",
-            "facturacion_electronica.signature"
+            "facturacion_electronica.signature",
+            "facturacion_electronica.signature_cert"
         ],
-        "version": "0.4.6"
+        "version": "0.4.7.1"
     },
     "facturacom": {
         "cmdline": [],
@@ -16675,6 +16676,30 @@
     "faust": {
         "cmdline": [],
         "modules": [
+            "accounts",
+            "accounts.agents",
+            "accounts.apps",
+            "accounts.migrations",
+            "accounts.migrations.0001_initial",
+            "accounts.models",
+            "assignor",
+            "assignor.test_copartitioned_assignor",
+            "cli",
+            "cli.test_agents",
+            "cli.test_base",
+            "cli.test_model",
+            "cli.test_models",
+            "drivers",
+            "drivers.test_aiokafka",
+            "examples",
+            "examples.concurrency",
+            "examples.hello_world",
+            "examples.leader",
+            "examples.tableofset",
+            "examples.tabletest",
+            "examples.task_queue",
+            "examples.withdrawals",
+            "examples.word_count",
             "faust",
             "faust._cython",
             "faust.agents",
@@ -16814,9 +16839,159 @@
             "faust.web.exceptions",
             "faust.web.views",
             "faust.windows",
-            "faust.worker"
+            "faust.worker",
+            "faustapp",
+            "faustapp.app",
+            "faustapp.apps",
+            "faustapp.migrations",
+            "proj",
+            "proj.settings",
+            "proj.urls",
+            "proj.wsgi",
+            "t",
+            "t.bench",
+            "t.bench.base",
+            "t.bench.baseline",
+            "t.bench.forward",
+            "t.conftest",
+            "t.consistency",
+            "t.consistency.consistency_checker",
+            "t.consistency.test_consistency",
+            "t.docs",
+            "t.docs.testing",
+            "t.docs.testing.test_figB_agent_to_agent",
+            "t.docs.testing.test_figC_windowed_table",
+            "t.functional",
+            "t.functional.agents",
+            "t.functional.agents.helpers",
+            "t.functional.agents.test_concurrency",
+            "t.functional.agents.test_current_agent",
+            "t.functional.agents.test_isolated_partitions",
+            "t.functional.conftest",
+            "t.functional.helpers",
+            "t.functional.sensors",
+            "t.functional.sensors.test_statsd",
+            "t.functional.serializers",
+            "t.functional.serializers.test_registry",
+            "t.functional.test_aiokafka",
+            "t.functional.test_app",
+            "t.functional.test_channels",
+            "t.functional.test_faust",
+            "t.functional.test_models",
+            "t.functional.test_streams",
+            "t.functional.web",
+            "t.functional.web.conftest",
+            "t.functional.web.test_cache",
+            "t.functional.web.test_tables",
+            "t.functional.web.test_views",
+            "t.helpers",
+            "t.old",
+            "t.old.app",
+            "t.old.test_simple",
+            "t.regression",
+            "t.regression.i323",
+            "t.regression.i323.conftest",
+            "t.regression.i323.proj323",
+            "t.regression.i323.proj323.faust",
+            "t.regression.i323.proj323.foo",
+            "t.regression.i323.proj323.foo.bar",
+            "t.regression.i323.proj323.foo.bar.baz",
+            "t.regression.i323.proj323.foo.bar.baz.commands",
+            "t.regression.i323.test_autodiscover",
+            "t.regression.i324",
+            "t.regression.i324.conftest",
+            "t.regression.i324.proj324",
+            "t.regression.i324.proj324.faust",
+            "t.regression.i324.proj324.foo",
+            "t.regression.i324.proj324.foo.bar",
+            "t.regression.i324.proj324.foo.bar.baz",
+            "t.regression.i324.proj324.foo.bar.baz.commands",
+            "t.regression.i324.proj324.foo.test_x",
+            "t.regression.i324.test_autodiscover",
+            "t.stress",
+            "t.stress.app",
+            "t.stress.config",
+            "t.stress.killer",
+            "t.stress.models",
+            "t.stress.producer",
+            "t.stress.reports",
+            "t.stress.reports.app",
+            "t.stress.reports.checks",
+            "t.stress.reports.collector",
+            "t.stress.reports.logging",
+            "t.stress.reports.models",
+            "t.stress.reports.states",
+            "t.stress.reports.web",
+            "t.stress.tests",
+            "t.stress.tests.forwarder",
+            "t.stress.tests.forwarder.app",
+            "t.stress.tests.simple",
+            "t.stress.tests.simple.app",
+            "t.stress.tests.tables",
+            "t.stress.tests.tables.app",
+            "t.unit",
+            "t.unit.agents",
+            "t.unit.agents.test_actor",
+            "t.unit.agents.test_agent",
+            "t.unit.agents.test_manager",
+            "t.unit.agents.test_replies",
+            "t.unit.cli",
+            "t.unit.cli.conftest",
+            "t.unit.cli.test_base",
+            "t.unit.cli.test_clean_versions",
+            "t.unit.cli.test_completion",
+            "t.unit.cli.test_env",
+            "t.unit.cli.test_params",
+            "t.unit.conftest",
+            "t.unit.fixups",
+            "t.unit.fixups.test_base",
+            "t.unit.fixups.test_django",
+            "t.unit.sensors",
+            "t.unit.sensors.test_base",
+            "t.unit.sensors.test_datadog",
+            "t.unit.sensors.test_monitor",
+            "t.unit.sensors.test_statsd",
+            "t.unit.serializers",
+            "t.unit.serializers.test_codecs",
+            "t.unit.stores",
+            "t.unit.stores.test_base",
+            "t.unit.stores.test_memory",
+            "t.unit.stores.test_rocksdb",
+            "t.unit.tables",
+            "t.unit.tables.test_base",
+            "t.unit.tables.test_manager",
+            "t.unit.tables.test_objects",
+            "t.unit.tables.test_recovery",
+            "t.unit.tables.test_sets",
+            "t.unit.tables.test_table",
+            "t.unit.tables.test_wrappers",
+            "t.unit.test_auth",
+            "t.unit.test_events",
+            "t.unit.test_faust",
+            "t.unit.test_joins",
+            "t.unit.test_streams",
+            "t.unit.test_topics",
+            "t.unit.test_worker",
+            "t.unit.utils",
+            "t.unit.utils.terminal",
+            "t.unit.utils.terminal.test_spinners",
+            "t.unit.utils.terminal.test_tables",
+            "t.unit.utils.test_cron",
+            "t.unit.utils.test_functional",
+            "t.unit.utils.test_iso8601",
+            "t.unit.utils.test_json",
+            "t.unit.utils.test_urls",
+            "t.unit.utils.test_utils",
+            "t.unit.utils.test_venusian",
+            "t.unit.web",
+            "t.unit.web.drivers",
+            "t.unit.web.drivers.test_aiohttp",
+            "t.unit.web.test_base",
+            "t.unit.web.test_blueprints",
+            "t.unit.web.test_exceptions",
+            "t.unit.web.test_views"
         ],
-        "version": "1.5.2"
+        "version": "1.5.3"
     },
     "faux": {
         "cmdline": [],
@@ -21962,7 +22137,7 @@
             "febs",
             "febs.file"
         ],
-        "version": "0.0.3"
+        "version": "0.0.7"
     },
     "fec": {
         "cmdline": [],
@@ -37262,7 +37437,7 @@
             "FinMind.demo",
             "FinMind.demo2"
         ],
-        "version": "1.0.52"
+        "version": "1.0.53"
     },
     "finml": {
         "cmdline": [],
@@ -44443,7 +44618,6 @@
             "fkl.fkl_io",
             "fkl.fkl_math",
             "fkl.fkl_model",
-            "fkl.fkl_plot",
             "fkl.fkl_process_pool",
             "fkl.fkl_socket",
             "fkl.fkl_socket_connect",
@@ -44452,7 +44626,7 @@
             "fkl.fkl_thread_pool",
             "fkl.fkl_time"
         ],
-        "version": "1.0.5.2"
+        "version": "1.0.5.3"
     },
     "fklearn": {
         "cmdline": [],
@@ -59123,7 +59297,7 @@
             "flask_sqlalchemy_booster.schema_generators",
             "flask_sqlalchemy_booster.utils"
         ],
-        "version": "0.5.20"
+        "version": "0.5.21"
     },
     "flask-sqlalchemy-cache": {
         "cmdline": [],
@@ -76289,12 +76463,6 @@
     "followthemoney": {
         "cmdline": [],
         "modules": [
-            "dedupe",
-            "dedupe.test_linker",
-            "dedupe.test_recon",
-            "export",
-            "export.test_csv",
-            "export.test_excel",
             "followthemoney",
             "followthemoney.compare",
             "followthemoney.dedupe",
@@ -76344,31 +76512,9 @@
             "followthemoney.types.string",
             "followthemoney.types.text",
             "followthemoney.types.url",
-            "followthemoney.util",
-            "graph",
-            "graph.test_export",
-            "graph.test_statement",
-            "types",
-            "types.test_addresses",
-            "types.test_checksum",
-            "types.test_common",
-            "types.test_countries",
-            "types.test_dates",
-            "types.test_domains",
-            "types.test_emails",
-            "types.test_entity",
-            "types.test_iban",
-            "types.test_identifiers",
-            "types.test_ip",
-            "types.test_json",
-            "types.test_languages",
-            "types.test_mimetypes",
-            "types.test_names",
-            "types.test_phones",
-            "types.test_registry",
-            "types.test_urls"
+            "followthemoney.util"
         ],
-        "version": "1.11.7"
+        "version": "1.11.9"
     },
     "followthemoney-enrich": {
         "cmdline": [],
@@ -76382,7 +76528,7 @@
             "followthemoney_enrich.result",
             "followthemoney_enrich.util"
         ],
-        "version": "1.11.7"
+        "version": "1.11.9"
     },
     "followthemoney-integrate": {
         "cmdline": [],
@@ -76394,7 +76540,7 @@
             "followthemoney_integrate.util",
             "followthemoney_integrate.views"
         ],
-        "version": "1.11.7"
+        "version": "1.11.9"
     },
     "followthemoney-util": {
         "cmdline": [],
@@ -76413,7 +76559,7 @@
             "followthemoney_util.results",
             "followthemoney_util.util"
         ],
-        "version": "1.11.7"
+        "version": "1.11.9"
     },
     "folmon": {
         "cmdline": [],
@@ -78999,6 +79145,35 @@
         "modules": [],
         "version": ""
     },
+    "forest-benchmarking": {
+        "cmdline": [],
+        "modules": [
+            "benchmarking",
+            "benchmarking.analysis",
+            "benchmarking.analysis.fitting",
+            "benchmarking.bell_state",
+            "benchmarking.classical_logic",
+            "benchmarking.classical_logic.primitives",
+            "benchmarking.classical_logic.ripple_carry_adder",
+            "benchmarking.compilation",
+            "benchmarking.direct_fidelity_estimation",
+            "benchmarking.distance_measures",
+            "benchmarking.graph_state",
+            "benchmarking.operator_estimation",
+            "benchmarking.plotting",
+            "benchmarking.plotting.hinton",
+            "benchmarking.quantum_volume",
+            "benchmarking.qubit_spectroscopy",
+            "benchmarking.random_operators",
+            "benchmarking.randomized_benchmarking",
+            "benchmarking.readout",
+            "benchmarking.robust_phase_estimation",
+            "benchmarking.superoperator_conversion",
+            "benchmarking.tomography",
+            "benchmarking.utils"
+        ],
+        "version": "0.3.0"
+    },
     "forest-django": {
         "cmdline": [],
         "modules": [
@@ -79254,11 +79429,9 @@
             "forge.server.server",
             "forge.utils",
             "forge.utils.helper",
-            "forge.utils.utils",
-            "kv_protos",
-            "kv_protos.kvstore_pb2"
+            "forge.utils.utils"
         ],
-        "version": "0.18.13"
+        "version": "0.18.14"
     },
     "forge-python-sdk": {
         "cmdline": [],
@@ -86774,7 +86947,7 @@
             "free_properties.property_factory",
             "free_properties.subclasses"
         ],
-        "version": "0.1.5"
+        "version": "0.1.6"
     },
     "free-proxy": {
         "cmdline": [],
@@ -105451,9 +105624,12 @@
     "fweb": {
         "cmdline": [],
         "modules": [
-            "TWeb"
+            "FWeb",
+            "FWeb.App",
+            "FWeb.Http",
+            "FWeb.Utils"
         ],
-        "version": "0.1"
+        "version": "0.2"
     },
     "fwf": {
         "cmdline": [],
@@ -106359,6 +106535,7 @@
             "fzutils.path_utils",
             "fzutils.qrcode_utils",
             "fzutils.register_utils",
+            "fzutils.retry_utils",
             "fzutils.safe_utils",
             "fzutils.shell_utils",
             "fzutils.sms_utils",
@@ -106382,7 +106559,7 @@
             "fzutils.time_utils",
             "fzutils.url_utils"
         ],
-        "version": "0.2.9.0"
+        "version": "0.2.9.2"
     },
     "fzysearch": {
         "cmdline": [],
