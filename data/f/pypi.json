@@ -996,7 +996,7 @@
     "faas-supervisor": {
         "cmdline": [],
         "modules": [],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     "faaspact-maker": {
         "cmdline": [],
@@ -5902,8 +5902,14 @@
     },
     "factocli": {
         "cmdline": [],
-        "modules": [],
-        "version": "0.2.3"
+        "modules": [
+            "custom_imports",
+            "custom_imports.Install_server",
+            "custom_imports.Remove_server",
+            "custom_imports.Update_server",
+            "custom_imports.scrape_website"
+        ],
+        "version": "0.3.3"
     },
     "factoirc": {
         "cmdline": [],
@@ -6008,14 +6014,13 @@
         "cmdline": [],
         "modules": [
             "factor_analyzer",
-            "factor_analyzer.analyze",
             "factor_analyzer.confirmatory_factor_analyzer",
             "factor_analyzer.factor_analyzer",
             "factor_analyzer.rotator",
             "factor_analyzer.test_utils",
             "factor_analyzer.utils"
         ],
-        "version": "0.3.0"
+        "version": "0.3.1"
     },
     "factoradic": {
         "cmdline": [],
@@ -7067,43 +7072,93 @@
     "fairing": {
         "cmdline": [],
         "modules": [
+            "containerregistry",
+            "containerregistry.client",
+            "containerregistry.client.docker_creds_",
+            "containerregistry.client.docker_name_",
+            "containerregistry.client.monitor_",
+            "containerregistry.client.v1",
+            "containerregistry.client.v1.docker_creds_",
+            "containerregistry.client.v1.docker_http_",
+            "containerregistry.client.v1.docker_image_",
+            "containerregistry.client.v1.docker_session_",
+            "containerregistry.client.v1.save_",
+            "containerregistry.client.v2",
+            "containerregistry.client.v2.append_",
+            "containerregistry.client.v2.docker_creds_",
+            "containerregistry.client.v2.docker_digest_",
+            "containerregistry.client.v2.docker_http_",
+            "containerregistry.client.v2.docker_image_",
+            "containerregistry.client.v2.docker_session_",
+            "containerregistry.client.v2.util_",
+            "containerregistry.client.v2.v1_compat_",
+            "containerregistry.client.v2_2",
+            "containerregistry.client.v2_2.append_",
+            "containerregistry.client.v2_2.docker_creds_",
+            "containerregistry.client.v2_2.docker_digest_",
+            "containerregistry.client.v2_2.docker_http_",
+            "containerregistry.client.v2_2.docker_image_",
+            "containerregistry.client.v2_2.docker_image_list_",
+            "containerregistry.client.v2_2.docker_session_",
+            "containerregistry.client.v2_2.oci_compat_",
+            "containerregistry.client.v2_2.save_",
+            "containerregistry.client.v2_2.v2_compat_",
+            "containerregistry.transform",
+            "containerregistry.transform.v2_2",
+            "containerregistry.transform.v2_2.metadata_",
+            "containerregistry.transport",
+            "containerregistry.transport.nested_",
+            "containerregistry.transport.retry_",
+            "containerregistry.transport.transport_pool_",
             "fairing",
-            "fairing.architectures",
-            "fairing.architectures.architecture",
-            "fairing.architectures.kubeflow",
-            "fairing.architectures.kubeflow.basic",
-            "fairing.architectures.kubeflow.distributed",
-            "fairing.architectures.native",
-            "fairing.architectures.native.basic",
-            "fairing.backend",
-            "fairing.backend.backend",
-            "fairing.backend.kubeflow",
-            "fairing.backend.native",
+            "fairing.backends",
+            "fairing.backends.backends",
             "fairing.builders",
+            "fairing.builders.append",
+            "fairing.builders.append.append",
+            "fairing.builders.base_builder",
             "fairing.builders.builder",
-            "fairing.builders.container_image_builder",
+            "fairing.builders.cluster",
+            "fairing.builders.cluster.cluster",
+            "fairing.builders.cluster.context_source",
+            "fairing.builders.cluster.gcs_context",
             "fairing.builders.docker",
+            "fairing.builders.docker.docker",
             "fairing.builders.dockerfile",
-            "fairing.builders.knative",
-            "fairing.builders.knative.knative",
-            "fairing.builders.knative.models",
-            "fairing.builders.knative.models.build",
-            "fairing.builders.knative.models.build_template",
-            "fairing.metaparticle",
-            "fairing.notebook_helper",
-            "fairing.options",
-            "fairing.serve",
-            "fairing.strategies",
-            "fairing.strategies.basic",
-            "fairing.strategies.hp",
-            "fairing.strategies.pbt",
-            "fairing.strategies.pbt.exploit",
-            "fairing.strategies.pbt.explore",
-            "fairing.strategies.pbt.pbt",
-            "fairing.train",
+            "fairing.cloud",
+            "fairing.cloud.gcp",
+            "fairing.config",
+            "fairing.constants",
+            "fairing.constants.constants",
+            "fairing.deployers",
+            "fairing.deployers.deployer",
+            "fairing.deployers.gcp",
+            "fairing.deployers.gcp.gcp",
+            "fairing.deployers.gcp.gcpserving",
+            "fairing.deployers.job",
+            "fairing.deployers.job.job",
+            "fairing.deployers.serving",
+            "fairing.deployers.serving.serving",
+            "fairing.deployers.tfjob",
+            "fairing.deployers.tfjob.tfjob",
+            "fairing.functions",
+            "fairing.functions.function_shim",
+            "fairing.kubernetes",
+            "fairing.kubernetes.manager",
+            "fairing.ml_tasks",
+            "fairing.ml_tasks.tasks",
+            "fairing.ml_tasks.utils",
+            "fairing.notebook",
+            "fairing.notebook.notebook_util",
+            "fairing.preprocessors",
+            "fairing.preprocessors.base",
+            "fairing.preprocessors.converted_notebook",
+            "fairing.preprocessors.full_notebook",
+            "fairing.preprocessors.function",
+            "fairing.runtime_config",
             "fairing.utils"
         ],
-        "version": "0.0.3"
+        "version": "0.5.2"
     },
     "fairlearn": {
         "cmdline": [],
@@ -16632,7 +16687,7 @@
             "fault.verilog_utils",
             "fault.wrapper"
         ],
-        "version": "2.0.3"
+        "version": "2.0.4"
     },
     "fault-localization": {
         "cmdline": [],
@@ -18708,7 +18763,7 @@
             "fbs_runtime.licensing",
             "fbs_runtime.platform"
         ],
-        "version": "0.7.3"
+        "version": "0.7.4"
     },
     "fbscraper": {
         "cmdline": [],
@@ -22137,7 +22192,7 @@
             "febs",
             "febs.file"
         ],
-        "version": "0.0.7"
+        "version": "0.0.9"
     },
     "fec": {
         "cmdline": [],
@@ -24920,7 +24975,7 @@
             "feincms3_sites.migrations.0004_site_is_active",
             "feincms3_sites.models"
         ],
-        "version": "0.8.0"
+        "version": "0.8.1"
     },
     "feing-core": {
         "cmdline": [],
@@ -42225,7 +42280,7 @@
         "modules": [
             "fishnet"
         ],
-        "version": "1.15.15"
+        "version": "1.15.16"
     },
     "fishtaco": {
         "cmdline": [
@@ -51173,7 +51228,7 @@
             "tests.test_executor",
             "tests.test_futures"
         ],
-        "version": "0.8.3"
+        "version": "0.9.0"
     },
     "flask-expects-json": {
         "cmdline": [],
@@ -56629,7 +56684,7 @@
             "flask_rak.core",
             "flask_rak.models"
         ],
-        "version": "2019.4.6.1"
+        "version": "2019.4.8.1"
     },
     "flask-raml": {
         "cmdline": [],
@@ -57769,7 +57824,7 @@
             "flask_resty.utils",
             "flask_resty.view"
         ],
-        "version": "0.20.11"
+        "version": "0.20.12"
     },
     "flask-resty-shared-session": {
         "cmdline": [],
@@ -58661,7 +58716,7 @@
             "flask_sieve.translator",
             "flask_sieve.validator"
         ],
-        "version": "0.0.1"
+        "version": "1.0.0"
     },
     "flask-signalbus": {
         "cmdline": [],
@@ -63518,7 +63573,7 @@
             "flask_xxl.templates.project",
             "flask_xxl.testing"
         ],
-        "version": "0.10.4"
+        "version": "0.10.6"
     },
     "flasky": {
         "cmdline": [],
@@ -64009,7 +64064,7 @@
             "flaterra",
             "flaterra.version"
         ],
-        "version": "0.1.6"
+        "version": "0.1.7"
     },
     "flatfilecms": {
         "cmdline": [],
@@ -65859,7 +65914,7 @@
             "flexget.utils.tools",
             "flexget.webserver"
         ],
-        "version": "2.20.17"
+        "version": "2.20.18"
     },
     "flexibility-analysis-pkg": {
         "cmdline": [],
@@ -76514,7 +76569,7 @@
             "followthemoney.types.url",
             "followthemoney.util"
         ],
-        "version": "1.11.9"
+        "version": "1.11.10"
     },
     "followthemoney-enrich": {
         "cmdline": [],
@@ -76528,7 +76583,7 @@
             "followthemoney_enrich.result",
             "followthemoney_enrich.util"
         ],
-        "version": "1.11.9"
+        "version": "1.11.10"
     },
     "followthemoney-integrate": {
         "cmdline": [],
@@ -76540,7 +76595,7 @@
             "followthemoney_integrate.util",
             "followthemoney_integrate.views"
         ],
-        "version": "1.11.9"
+        "version": "1.11.10"
     },
     "followthemoney-util": {
         "cmdline": [],
@@ -76559,7 +76614,7 @@
             "followthemoney_util.results",
             "followthemoney_util.util"
         ],
-        "version": "1.11.9"
+        "version": "1.11.10"
     },
     "folmon": {
         "cmdline": [],
@@ -77136,7 +77191,7 @@
             "diffenator.hbinput",
             "diffenator.utils"
         ],
-        "version": "0.7.13"
+        "version": "0.7.15"
     },
     "fontdump": {
         "cmdline": [],
@@ -77537,7 +77592,7 @@
             "fontTools.voltLib.lexer",
             "fontTools.voltLib.parser"
         ],
-        "version": "3.39.0"
+        "version": "3.40.0"
     },
     "fonty": {
         "cmdline": [],
@@ -78348,7 +78403,7 @@
             "footil.path",
             "footil.xtyping"
         ],
-        "version": "0.7.0"
+        "version": "0.8.0"
     },
     "footix": {
         "cmdline": [],
@@ -79431,7 +79486,7 @@
             "forge.utils.helper",
             "forge.utils.utils"
         ],
-        "version": "0.18.14"
+        "version": "0.18.16"
     },
     "forge-python-sdk": {
         "cmdline": [],
@@ -83360,7 +83415,7 @@
             "fpga4p.train",
             "fpga4p.train.train_nbc"
         ],
-        "version": "1.2"
+        "version": "1.3"
     },
     "fpgaflow-esdg": {
         "cmdline": [],
@@ -85050,7 +85105,7 @@
             "frasco.users.user",
             "frasco.utils"
         ],
-        "version": "1.2.17"
+        "version": "1.2.18"
     },
     "frasco-admin": {
         "cmdline": [],
@@ -86750,7 +86805,7 @@
             "frcuploader.viewer",
             "frcuploader.youtube"
         ],
-        "version": "3.4.1"
+        "version": "3.5.0"
     },
     "frcwp": {
         "cmdline": [],
@@ -86919,7 +86974,7 @@
         "modules": [
             "fredpy"
         ],
-        "version": "3.1.1"
+        "version": "3.1.3"
     },
     "free": {
         "cmdline": [],
@@ -89586,6 +89641,21 @@
         "modules": [],
         "version": "0.0.1.dev4"
     },
+    "friendly-traceback": {
+        "cmdline": [],
+        "modules": [
+            "friendly_traceback",
+            "friendly_traceback.core",
+            "friendly_traceback.generic_info",
+            "friendly_traceback.specific_info",
+            "friendly_traceback.version",
+            "tests",
+            "tests.catch_name_error",
+            "tests.conftest",
+            "tests.raise_name_error"
+        ],
+        "version": "0.0.2"
+    },
     "friendlyautopep8": {
         "cmdline": [],
         "modules": [
@@ -90455,6 +90525,16 @@
             "frogweather.frogweather"
         ],
         "version": "0.5"
+    },
+    "froi": {
+        "cmdline": [],
+        "modules": [
+            "froi",
+            "froi.exceptions",
+            "froi.froi",
+            "froi.route"
+        ],
+        "version": "0.4.4"
     },
     "froide": {
         "cmdline": [
@@ -92811,7 +92891,7 @@
             "fsleyes.views.timeseriespanel",
             "fsleyes.views.viewpanel"
         ],
-        "version": "0.28.0"
+        "version": "0.28.1"
     },
     "fsleyes-props": {
         "cmdline": [],
@@ -95503,7 +95583,7 @@
             "ftw.calendarwidget.tests",
             "ftw.calendarwidget.tests.test_integration"
         ],
-        "version": "1.1.12"
+        "version": "1.2.0"
     },
     "ftw-candlestick": {
         "cmdline": [],
@@ -106559,7 +106639,7 @@
             "fzutils.time_utils",
             "fzutils.url_utils"
         ],
-        "version": "0.2.9.2"
+        "version": "0.2.9.3"
     },
     "fzysearch": {
         "cmdline": [],
