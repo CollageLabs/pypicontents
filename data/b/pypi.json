@@ -2556,17 +2556,56 @@
         "cmdline": [],
         "modules": [
             "agent",
-            "agent.accelerator",
+            "agent.exception",
             "agent.files",
+            "agent.fs",
+            "agent.intrinsic",
             "agent.kernel",
             "agent.resources",
             "agent.server",
             "agent.stats",
             "agent.utils",
             "agent.vendor",
-            "agent.vendor.linux"
+            "agent.vendor.linux",
+            "agent.watcher",
+            "helpers",
+            "helpers.package",
+            "kernel",
+            "kernel.base",
+            "kernel.c",
+            "kernel.compat",
+            "kernel.cpp",
+            "kernel.git",
+            "kernel.golang",
+            "kernel.haskell",
+            "kernel.java",
+            "kernel.julia",
+            "kernel.jupyter_client",
+            "kernel.logging",
+            "kernel.lua",
+            "kernel.nodejs",
+            "kernel.octave",
+            "kernel.php",
+            "kernel.python",
+            "kernel.python.drawing",
+            "kernel.python.drawing.canvas",
+            "kernel.python.drawing.color",
+            "kernel.python.drawing.encoding",
+            "kernel.python.drawing.turtle",
+            "kernel.python.sitecustomize",
+            "kernel.python.types",
+            "kernel.r",
+            "kernel.r_server_ms",
+            "kernel.rust",
+            "kernel.scheme",
+            "kernel.terminal",
+            "kernel.test_utils",
+            "kernel.utils",
+            "kernel.vendor",
+            "kernel.vendor.aws_polly",
+            "kernel.vendor.aws_polly.inproc"
         ],
-        "version": "18.12.1"
+        "version": "19.3.0"
     },
     "backend-ai-client": {
         "cmdline": [],
@@ -2581,6 +2620,7 @@
             "client.cli.admin.agents",
             "client.cli.admin.images",
             "client.cli.admin.keypairs",
+            "client.cli.admin.resource_policies",
             "client.cli.admin.sessions",
             "client.cli.admin.vfolders",
             "client.cli.app",
@@ -2596,23 +2636,27 @@
             "client.compat",
             "client.config",
             "client.exceptions",
+            "client.helper",
             "client.image",
             "client.kernel",
             "client.keypair",
             "client.manager",
             "client.request",
+            "client.resource_policy",
             "client.session",
             "client.vfolder"
         ],
-        "version": "18.12.3"
+        "version": "19.3.0"
     },
     "backend-ai-common": {
         "cmdline": [],
         "modules": [
             "common",
             "common.argparse",
+            "common.docker",
             "common.etcd",
             "common.etcd_beta",
+            "common.exception",
             "common.identity",
             "common.logging",
             "common.monitor",
@@ -2622,7 +2666,7 @@
             "common.types",
             "common.utils"
         ],
-        "version": "18.12.0"
+        "version": "19.3.0"
     },
     "backend-ai-integration-jupyter": {
         "cmdline": [],
@@ -2692,6 +2736,7 @@
             "gateway.manager",
             "gateway.metric",
             "gateway.ratelimit",
+            "gateway.resource",
             "gateway.server",
             "gateway.stream",
             "gateway.utils",
@@ -2709,10 +2754,12 @@
             "manager.models.image",
             "manager.models.kernel",
             "manager.models.keypair",
+            "manager.models.resource_policy",
+            "manager.models.resource_preset",
             "manager.models.vfolder",
             "manager.registry"
         ],
-        "version": "18.12"
+        "version": "19.3.0"
     },
     "background": {
         "cmdline": [],
@@ -7123,11 +7170,12 @@
             "balkhash.dataset",
             "balkhash.datastore",
             "balkhash.leveldb",
+            "balkhash.memorious",
             "balkhash.postgres",
             "balkhash.settings",
             "balkhash.utils"
         ],
-        "version": "0.3.0"
+        "version": "0.3.1"
     },
     "ball": {
         "cmdline": [],
@@ -13685,7 +13733,7 @@
             "basepair.utils.sqs",
             "basepair.utils.swf"
         ],
-        "version": "1.3.51"
+        "version": "1.3.52"
     },
     "baseplate": {
         "cmdline": [],
@@ -15963,7 +16011,7 @@
             "batchcompute_cli.util.validator",
             "batchcompute_cli.util.zip"
         ],
-        "version": "1.7.1"
+        "version": "1.7.2"
     },
     "batchcompute-sge": {
         "cmdline": [],
@@ -17679,10 +17727,10 @@
         "cmdline": [],
         "modules": [
             "bayesian_hmm",
-            "bayesian_hmm.hdphmm",
-            "bayesian_hmm.npbhmm"
+            "bayesian_hmm.chain",
+            "bayesian_hmm.hdphmm"
         ],
-        "version": "0.0.0a0"
+        "version": "0.0.1"
     },
     "bayesian-nn": {
         "cmdline": [],
@@ -26054,6 +26102,11 @@
         ],
         "version": "0.0.1"
     },
+    "beavr": {
+        "cmdline": [],
+        "modules": [],
+        "version": "1.0.5"
+    },
     "bebi103": {
         "cmdline": [],
         "modules": [
@@ -29214,7 +29267,7 @@
             "bel.terms.terms",
             "bel.utils"
         ],
-        "version": "0.12.19"
+        "version": "0.12.22"
     },
     "bel-enrichment": {
         "cmdline": [],
@@ -29325,7 +29378,7 @@
         "modules": [
             "bella"
         ],
-        "version": "1.2.1"
+        "version": "1.2.2"
     },
     "bella-tdsa": {
         "cmdline": [],
@@ -31385,9 +31438,10 @@
             "berliner.utils._test",
             "berliner.utils._track_set",
             "berliner.utils.imf",
-            "berliner.utils.isochrone_interp"
+            "berliner.utils.isochrone_interp",
+            "berliner.utils.machine"
         ],
-        "version": "0.0.7"
+        "version": "0.0.8"
     },
     "berlioz": {
         "cmdline": [],
@@ -31780,6 +31834,18 @@
             "bert_embedding.version"
         ],
         "version": "1.0.1"
+    },
+    "bert-mrc-predict": {
+        "cmdline": [],
+        "modules": [
+            "bert_mrc_predict",
+            "bert_mrc_predict.file_utils",
+            "bert_mrc_predict.modeling",
+            "bert_mrc_predict.optimization",
+            "bert_mrc_predict.run_mmrc2",
+            "bert_mrc_predict.tokenization"
+        ],
+        "version": "0.0.4"
     },
     "bert-pytorch": {
         "cmdline": [],
@@ -32738,7 +32804,7 @@
             "tests.test_api",
             "tests.test_client"
         ],
-        "version": "0.0.57"
+        "version": "0.0.60"
     },
     "betapy": {
         "cmdline": [],
@@ -33751,8 +33817,11 @@
     },
     "better-uniform": {
         "cmdline": [],
-        "modules": [],
-        "version": "1.0.2"
+        "modules": [
+            "better_uniform",
+            "better_uniform.better_uniform"
+        ],
+        "version": "1.0.3"
     },
     "better-utils": {
         "cmdline": [],
@@ -35503,6 +35572,17 @@
             "bgp.userBgp"
         ],
         "version": "0.2"
+    },
+    "bgp-forecast-modules": {
+        "cmdline": [],
+        "modules": [
+            "BGP_Forecast_Modules",
+            "BGP_Forecast_Modules.Database",
+            "BGP_Forecast_Modules.ROAs_Collector",
+            "BGP_Forecast_Modules.Utilities",
+            "BGP_Forecast_Modules.main"
+        ],
+        "version": "0.0.2"
     },
     "bgp-visualize": {
         "cmdline": [],
@@ -38235,6 +38315,14 @@
         ],
         "version": "0.0.2"
     },
+    "bigdatacloudapi-client": {
+        "cmdline": [],
+        "modules": [
+            "bigdatacloudapi",
+            "bigdatacloudapi.client"
+        ],
+        "version": "1.0.1"
+    },
     "bigdl": {
         "cmdline": [],
         "modules": [
@@ -38941,7 +39029,7 @@
             "bigml.tssubmodels",
             "bigml.util"
         ],
-        "version": "4.21.1"
+        "version": "4.21.2"
     },
     "bigmler": {
         "cmdline": [],
@@ -41455,6 +41543,17 @@
             "binance_chain.websocket"
         ],
         "version": "1.0.0"
+    },
+    "binance-chain-python": {
+        "cmdline": [],
+        "modules": [
+            "binance_chain_python",
+            "binance_chain_python.CONSTS",
+            "binance_chain_python.Client",
+            "binance_chain_python.Error_handling",
+            "binance_chain_python.Private_funcs"
+        ],
+        "version": "0.0.2"
     },
     "binance-db": {
         "cmdline": [],
@@ -44055,7 +44154,22 @@
             "biobb_model.structure_manager.structure_manager",
             "biobb_model.test"
         ],
-        "version": "0.1.5"
+        "version": "0.1.6"
+    },
+    "biobb-structure-checking": {
+        "cmdline": [],
+        "modules": [
+            "biobb_structure_checking",
+            "biobb_structure_checking.check_structure",
+            "biobb_structure_checking.cmd_line",
+            "biobb_structure_checking.constants",
+            "biobb_structure_checking.default_settings",
+            "biobb_structure_checking.help_manager",
+            "biobb_structure_checking.json_writer",
+            "biobb_structure_checking.param_input",
+            "biobb_structure_checking.structure_checking"
+        ],
+        "version": "1.0.6"
     },
     "biobb-structure-manager": {
         "cmdline": [],
@@ -45372,7 +45486,7 @@
             "includes",
             "includes.types"
         ],
-        "version": "0.6.2"
+        "version": "0.6.3"
     },
     "biolite": {
         "cmdline": [
@@ -50646,9 +50760,11 @@
         "cmdline": [],
         "modules": [
             "bitcoinx",
+            "bitcoinx.address",
             "bitcoinx.aes",
             "bitcoinx.base58",
             "bitcoinx.bip32",
+            "bitcoinx.cashaddr",
             "bitcoinx.chain",
             "bitcoinx.coin",
             "bitcoinx.hashes",
@@ -50660,7 +50776,7 @@
             "bitcoinx.util",
             "bitcoinx.work"
         ],
-        "version": "0.1.2"
+        "version": "0.1.3"
     },
     "bitcore": {
         "cmdline": [],
@@ -55090,7 +55206,7 @@
             "BlastML",
             "BlastML.blastml"
         ],
-        "version": "0.1.5"
+        "version": "0.2.0"
     },
     "blastn-extract": {
         "cmdline": [],
@@ -55648,26 +55764,34 @@
         "cmdline": [],
         "modules": [
             "bleak",
-            "bleak.__version__",
             "bleak.backends",
             "bleak.backends.bluezdbus",
+            "bleak.backends.bluezdbus.characteristic",
             "bleak.backends.bluezdbus.client",
             "bleak.backends.bluezdbus.defs",
+            "bleak.backends.bluezdbus.descriptor",
             "bleak.backends.bluezdbus.discovery",
+            "bleak.backends.bluezdbus.service",
             "bleak.backends.bluezdbus.signals",
             "bleak.backends.bluezdbus.utils",
+            "bleak.backends.characteristic",
             "bleak.backends.client",
             "bleak.backends.corebluetooth",
+            "bleak.backends.descriptor",
             "bleak.backends.device",
             "bleak.backends.dotnet",
+            "bleak.backends.dotnet.characteristic",
             "bleak.backends.dotnet.client",
+            "bleak.backends.dotnet.descriptor",
             "bleak.backends.dotnet.discovery",
+            "bleak.backends.dotnet.service",
             "bleak.backends.dotnet.utils",
+            "bleak.backends.service",
             "bleak.exc",
             "bleak.utils",
             "bleak.uuids"
         ],
-        "version": "0.3.0"
+        "version": "0.4.0"
     },
     "blee": {
         "cmdline": [],
@@ -57826,7 +57950,7 @@
             "blockchain.neo.ingest",
             "blockchain.neo.switcheo"
         ],
-        "version": "0.1.6"
+        "version": "0.1.14"
     },
     "blockchain-parser": {
         "cmdline": [],
@@ -67982,7 +68106,7 @@
             "bohrium.version",
             "bohrium.visualization"
         ],
-        "version": "0.10.2.post20"
+        "version": "0.10.2.post21"
     },
     "bohrium-api": {
         "cmdline": [],
@@ -67993,7 +68117,7 @@
             "bohrium_api.stack_info",
             "bohrium_api.version"
         ],
-        "version": "0.10.2.post20"
+        "version": "0.10.2.post21"
     },
     "bohrium-pygments-lexer": {
         "cmdline": [],
@@ -68567,6 +68691,7 @@
             "bokeh.core.property.override",
             "bokeh.core.property.primitive",
             "bokeh.core.property.regex",
+            "bokeh.core.property.struct",
             "bokeh.core.property.tests",
             "bokeh.core.property.tests.test___init__",
             "bokeh.core.property.tests.test_any",
@@ -68865,10 +68990,12 @@
             "bokeh.sphinxext.bokeh_prop",
             "bokeh.sphinxext.bokeh_releases",
             "bokeh.sphinxext.bokeh_sitemap",
+            "bokeh.sphinxext.bokehjs_content",
             "bokeh.sphinxext.collapsible_code_block",
             "bokeh.sphinxext.example_handler",
             "bokeh.sphinxext.sample",
             "bokeh.sphinxext.templates",
+            "bokeh.sphinxext.util",
             "bokeh.tests",
             "bokeh.tests.test___init__",
             "bokeh.tests.test___main__",
@@ -68928,7 +69055,7 @@
             "bokeh.util.version",
             "bokeh.util.warnings"
         ],
-        "version": "1.0.4"
+        "version": "1.1.0"
     },
     "bokeh-image-explore": {
         "cmdline": [],
@@ -75127,7 +75254,7 @@
             "bot.udp",
             "bot.users"
         ],
-        "version": "55"
+        "version": "56"
     },
     "botly": {
         "cmdline": [],
@@ -89637,7 +89764,7 @@
             "brian2hears.tests.test_hrtf",
             "brian2hears.tests.test_sounds"
         ],
-        "version": "0.9"
+        "version": "0.9.1"
     },
     "brian2tools": {
         "cmdline": [],
@@ -102015,7 +102142,7 @@
             "burger.strutils",
             "burger.windowsutils"
         ],
-        "version": "1.1.15"
+        "version": "1.1.16"
     },
     "burki-module": {
         "cmdline": [],
