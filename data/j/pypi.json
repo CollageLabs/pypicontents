@@ -52,11 +52,8 @@
     },
     "j-test": {
         "cmdline": [],
-        "modules": [
-            "j_test",
-            "j_test.janome_test"
-        ],
-        "version": "1.0.1"
+        "modules": [],
+        "version": "1.0.2"
     },
     "j01-autosuggest": {
         "cmdline": [],
@@ -631,10 +628,12 @@
         "modules": [
             "j5",
             "j5.backends",
-            "j5.backends.base",
-            "j5.backends.dummy",
-            "j5.backends.dummy.demo",
-            "j5.backends.dummy.env",
+            "j5.backends.backend",
+            "j5.backends.console",
+            "j5.backends.console.env",
+            "j5.backends.console.sr",
+            "j5.backends.console.sr.v4",
+            "j5.backends.console.sr.v4.power_board",
             "j5.backends.hardware",
             "j5.backends.hardware.env",
             "j5.backends.hardware.sr",
@@ -642,23 +641,22 @@
             "j5.backends.hardware.sr.v4.power_board",
             "j5.base_robot",
             "j5.boards",
-            "j5.boards.base",
-            "j5.boards.j5",
-            "j5.boards.j5.demo",
+            "j5.boards.board",
             "j5.boards.sr",
             "j5.boards.sr.v4",
             "j5.boards.sr.v4.power_board",
             "j5.components",
-            "j5.components.base",
             "j5.components.battery_sensor",
             "j5.components.button",
+            "j5.components.component",
             "j5.components.gpio_pin",
             "j5.components.led",
+            "j5.components.motor",
             "j5.components.piezo",
             "j5.components.power_output",
             "j5.components.servo"
         ],
-        "version": "0.1.0"
+        "version": "0.2.0"
     },
     "j5basic": {
         "cmdline": [],
@@ -3038,6 +3036,7 @@
             "janis.unix.data_types",
             "janis.unix.data_types.tar_file",
             "janis.unix.data_types.tsv",
+            "janis.unix.data_types.zipfile",
             "janis.unix.tools",
             "janis.unix.tools.cat",
             "janis.unix.tools.compile",
@@ -3065,7 +3064,7 @@
             "janis.workflow.step",
             "janis.workflow.workflow"
         ],
-        "version": "0.2.12"
+        "version": "0.2.13"
     },
     "janis-pipelines-bioinformatics": {
         "cmdline": [],
@@ -7883,9 +7882,7 @@
             "jdcloud_sdk.services.clouddnsservice.apis.GetActionLogRequest",
             "jdcloud_sdk.services.clouddnsservice.apis.GetDomainQueryCountRequest",
             "jdcloud_sdk.services.clouddnsservice.apis.GetDomainQueryTrafficRequest",
-            "jdcloud_sdk.services.clouddnsservice.apis.GetDomainStatisticsRequest",
             "jdcloud_sdk.services.clouddnsservice.apis.GetDomainsRequest",
-            "jdcloud_sdk.services.clouddnsservice.apis.GetLBRequest",
             "jdcloud_sdk.services.clouddnsservice.apis.GetMonitorAlarmInfoRequest",
             "jdcloud_sdk.services.clouddnsservice.apis.GetMonitorRequest",
             "jdcloud_sdk.services.clouddnsservice.apis.GetTargetsRequest",
@@ -7895,7 +7892,6 @@
             "jdcloud_sdk.services.clouddnsservice.apis.OperateMonitorRequest",
             "jdcloud_sdk.services.clouddnsservice.apis.OperateRRRequest",
             "jdcloud_sdk.services.clouddnsservice.apis.SearchRRRequest",
-            "jdcloud_sdk.services.clouddnsservice.apis.SetLBRequest",
             "jdcloud_sdk.services.clouddnsservice.apis.UpdateDomainRequest",
             "jdcloud_sdk.services.clouddnsservice.apis.UpdateMonitorRequest",
             "jdcloud_sdk.services.clouddnsservice.apis.UpdateRRRequest",
@@ -7925,8 +7921,11 @@
             "jdcloud_sdk.services.clouddnsservice.models.RR",
             "jdcloud_sdk.services.clouddnsservice.models.RRInfo",
             "jdcloud_sdk.services.clouddnsservice.models.Result",
+            "jdcloud_sdk.services.clouddnsservice.models.SetRR",
+            "jdcloud_sdk.services.clouddnsservice.models.SetRecords",
             "jdcloud_sdk.services.clouddnsservice.models.Setalb",
             "jdcloud_sdk.services.clouddnsservice.models.Setlb",
+            "jdcloud_sdk.services.clouddnsservice.models.SubDomainExist",
             "jdcloud_sdk.services.clouddnsservice.models.UpdateMonitor",
             "jdcloud_sdk.services.clouddnsservice.models.UpdateRR",
             "jdcloud_sdk.services.clouddnsservice.models.UserViewInput",
@@ -8123,6 +8122,7 @@
             "jdcloud_sdk.services.elite.models.ProductServiceVoListData",
             "jdcloud_sdk.services.function",
             "jdcloud_sdk.services.function.apis",
+            "jdcloud_sdk.services.function.apis.AsyncInvokeRequest",
             "jdcloud_sdk.services.function.apis.CreateAliasRequest",
             "jdcloud_sdk.services.function.apis.CreateFunctionRequest",
             "jdcloud_sdk.services.function.apis.CreateVersionRequest",
@@ -8133,11 +8133,11 @@
             "jdcloud_sdk.services.function.apis.GetFunctionRequest",
             "jdcloud_sdk.services.function.apis.GetTriggerRequest",
             "jdcloud_sdk.services.function.apis.GetVersionRequest",
+            "jdcloud_sdk.services.function.apis.InvokeRequest",
             "jdcloud_sdk.services.function.apis.ListAliasRequest",
             "jdcloud_sdk.services.function.apis.ListFunctionRequest",
             "jdcloud_sdk.services.function.apis.ListTriggerRequest",
             "jdcloud_sdk.services.function.apis.ListVersionRequest",
-            "jdcloud_sdk.services.function.apis.TestInvokeRequest",
             "jdcloud_sdk.services.function.apis.UpdateAliasRequest",
             "jdcloud_sdk.services.function.apis.UpdateFunctionRequest",
             "jdcloud_sdk.services.function.client",
@@ -9256,14 +9256,21 @@
             "jdcloud_sdk.services.mps",
             "jdcloud_sdk.services.mps.apis",
             "jdcloud_sdk.services.mps.apis.CreateThumbnailTaskRequest",
+            "jdcloud_sdk.services.mps.apis.DeleteStyleDelimiterRequest",
             "jdcloud_sdk.services.mps.apis.GetNotificationRequest",
+            "jdcloud_sdk.services.mps.apis.GetStyleDelimiterRequest",
             "jdcloud_sdk.services.mps.apis.GetThumbnailTaskRequest",
             "jdcloud_sdk.services.mps.apis.ListThumbnailTaskRequest",
             "jdcloud_sdk.services.mps.apis.SetNotificationRequest",
+            "jdcloud_sdk.services.mps.apis.SetStyleDelimiterRequest",
             "jdcloud_sdk.services.mps.client",
             "jdcloud_sdk.services.mps.client.MpsClient",
             "jdcloud_sdk.services.mps.models",
+            "jdcloud_sdk.services.mps.models.ImageStyle",
+            "jdcloud_sdk.services.mps.models.ImageStyleCount",
+            "jdcloud_sdk.services.mps.models.ImageStyleID",
             "jdcloud_sdk.services.mps.models.Notification",
+            "jdcloud_sdk.services.mps.models.StyleDelimiterConf",
             "jdcloud_sdk.services.mps.models.ThumbnailQuery",
             "jdcloud_sdk.services.mps.models.ThumbnailStatus",
             "jdcloud_sdk.services.mps.models.ThumbnailTask",
@@ -9586,6 +9593,25 @@
             "jdcloud_sdk.services.redis.models.ConfigItem",
             "jdcloud_sdk.services.redis.models.InstanceClass",
             "jdcloud_sdk.services.redis.models.OrderStatus",
+            "jdcloud_sdk.services.rms",
+            "jdcloud_sdk.services.rms.apis",
+            "jdcloud_sdk.services.rms.apis.AddTemplateRequest",
+            "jdcloud_sdk.services.rms.apis.QueryOneTemplateRequest",
+            "jdcloud_sdk.services.rms.apis.QuerySendStatusRequest",
+            "jdcloud_sdk.services.rms.apis.QueryTemplateListRequest",
+            "jdcloud_sdk.services.rms.apis.SendBatchMsgRequest",
+            "jdcloud_sdk.services.rms.client",
+            "jdcloud_sdk.services.rms.client.RmsClient",
+            "jdcloud_sdk.services.rms.models",
+            "jdcloud_sdk.services.rms.models.QueryAddTemplateContent",
+            "jdcloud_sdk.services.rms.models.QuerySendStatus",
+            "jdcloud_sdk.services.rms.models.QuerySendStatusSpec",
+            "jdcloud_sdk.services.rms.models.RespAddTemplateData",
+            "jdcloud_sdk.services.rms.models.RespQueryOneTemplateResourceList",
+            "jdcloud_sdk.services.rms.models.RespQueryTemplateListData",
+            "jdcloud_sdk.services.rms.models.SendBatchMsg",
+            "jdcloud_sdk.services.rms.models.SendBatchMsgSpec",
+            "jdcloud_sdk.services.rms.models.SendStatus",
             "jdcloud_sdk.services.sms",
             "jdcloud_sdk.services.sms.apis",
             "jdcloud_sdk.services.sms.apis.AddSdkSmsSignRequest",
@@ -9928,9 +9954,28 @@
             "jdcloud_sdk.services.xdata.models.DwInstance",
             "jdcloud_sdk.services.xdata.models.DwTable",
             "jdcloud_sdk.services.xdata.models.DwTableDesc",
-            "jdcloud_sdk.services.xdata.models.DwTableRow"
+            "jdcloud_sdk.services.xdata.models.DwTableRow",
+            "jdcloud_sdk.services.zfs",
+            "jdcloud_sdk.services.zfs.apis",
+            "jdcloud_sdk.services.zfs.apis.CreateFileSystemRequest",
+            "jdcloud_sdk.services.zfs.apis.CreateMountTargetRequest",
+            "jdcloud_sdk.services.zfs.apis.DeleteFileSystemRequest",
+            "jdcloud_sdk.services.zfs.apis.DeleteMountTargetRequest",
+            "jdcloud_sdk.services.zfs.apis.DescribeFileSystemRequest",
+            "jdcloud_sdk.services.zfs.apis.DescribeFileSystemsRequest",
+            "jdcloud_sdk.services.zfs.apis.DescribeMountTargetRequest",
+            "jdcloud_sdk.services.zfs.apis.DescribeMountTargetsRequest",
+            "jdcloud_sdk.services.zfs.apis.ModifyFileSystemAttributeRequest",
+            "jdcloud_sdk.services.zfs.client",
+            "jdcloud_sdk.services.zfs.client.ZfsClient",
+            "jdcloud_sdk.services.zfs.models",
+            "jdcloud_sdk.services.zfs.models.FileSystem",
+            "jdcloud_sdk.services.zfs.models.MountTarget",
+            "jdcloud_sdk.services.zfs.models.SizeByte",
+            "jdcloud_sdk.services.zfs.models.Tag",
+            "jdcloud_sdk.services.zfs.models.TagFilter"
         ],
-        "version": "1.5.7"
+        "version": "1.5.8"
     },
     "jdcloud-sdk-core": {
         "cmdline": [],
@@ -12783,6 +12828,17 @@
         "modules": [],
         "version": ""
     },
+    "jflib": {
+        "cmdline": [],
+        "modules": [
+            "jflib",
+            "jflib._version",
+            "jflib.argparser_to_readme",
+            "jflib.capturing",
+            "jflib.send_email"
+        ],
+        "version": "0.0.2"
+    },
     "jflink": {
         "cmdline": [],
         "modules": [
@@ -13618,7 +13674,7 @@
             "jhub_qx_login",
             "jhub_qx_login.jhub_qx_login"
         ],
-        "version": "0.2.30"
+        "version": "0.2.34"
     },
     "jhub-remote-auth-mount": {
         "cmdline": [],
@@ -15577,9 +15633,7 @@
         "version": "0.0.1dev"
     },
     "jinjaform": {
-        "cmdline": [
-            "jinjaform"
-        ],
+        "cmdline": [],
         "modules": [
             "jinjaform",
             "jinjaform.aws",
@@ -15590,7 +15644,7 @@
             "jinjaform.terraform",
             "jinjaform.workspace"
         ],
-        "version": "0.4.6"
+        "version": "0.4.7"
     },
     "jinjafy": {
         "cmdline": [],
@@ -23503,7 +23557,7 @@
             "jqdatasdk.technical_analysis",
             "jqdatasdk.utils"
         ],
-        "version": "1.6.1"
+        "version": "1.6.2"
     },
     "jqfactor-analyzer": {
         "cmdline": [],
@@ -27332,15 +27386,17 @@
     "jsfiddle-build": {
         "cmdline": [],
         "modules": [
-            "jsfiddle_build",
-            "xdg_cache"
+            "jsfiddle_build"
         ],
-        "version": "2019.4.8"
+        "version": "2019.4.11"
     },
     "jsfiddle-generator": {
         "cmdline": [],
-        "modules": [],
-        "version": "2019.4.7"
+        "modules": [
+            "jsfiddle_build",
+            "jsfiddle_generator"
+        ],
+        "version": "2019.4.11"
     },
     "jsfiddle-readme": {
         "cmdline": [],
@@ -27426,7 +27482,7 @@
             "jsii_sample",
             "jsii_sample._jsii"
         ],
-        "version": "1.4.14"
+        "version": "1.5.0"
     },
     "jsim": {
         "cmdline": [],
@@ -36456,7 +36512,7 @@
             "jupyter_conda.tests.test_api",
             "jupyter_conda.tests.test_notebook"
         ],
-        "version": "2.4.1"
+        "version": "2.4.2"
     },
     "jupyter-conf-search": {
         "cmdline": [],
@@ -37513,9 +37569,10 @@
             "jupyter_require",
             "jupyter_require.core",
             "jupyter_require.magic",
+            "jupyter_require.minify",
             "jupyter_require.notebook"
         ],
-        "version": "0.2.0"
+        "version": "0.2.1"
     },
     "jupyter-rsession-proxy": {
         "cmdline": [],
@@ -38757,6 +38814,14 @@
         ],
         "version": "0.3.0"
     },
+    "jupyterlab-slurm": {
+        "cmdline": [],
+        "modules": [
+            "jupyterlab_slurm",
+            "jupyterlab_slurm.slurm"
+        ],
+        "version": "0.1.0"
+    },
     "jupyterlab-snippets": {
         "cmdline": [],
         "modules": [
@@ -39769,7 +39834,7 @@
             "justbytes._util.generators",
             "justbytes.version"
         ],
-        "version": "0.11"
+        "version": "0.12"
     },
     "justbytes-gui": {
         "cmdline": [],
@@ -40919,6 +40984,15 @@
             "jx_elasticsearch.meta_columns"
         ],
         "version": "2.43.19055"
+    },
+    "jx-enum": {
+        "cmdline": [],
+        "modules": [
+            "tests",
+            "tests.test_classdict",
+            "tests.test_metaclass"
+        ],
+        "version": "1.0.0"
     },
     "jx-nester": {
         "cmdline": [],
