@@ -115,6 +115,15 @@
         ],
         "version": "1.1.4"
     },
+    "r10k-webhook": {
+        "cmdline": [],
+        "modules": [
+            "r10kwebhook",
+            "r10kwebhook.hook",
+            "r10kwebhook.webserver"
+        ],
+        "version": "0.0.6"
+    },
     "r12": {
         "cmdline": [
             "r12-shell"
@@ -3116,7 +3125,7 @@
             "radical.pilot.worker",
             "radical.pilot.worker.update"
         ],
-        "version": "0.60.0"
+        "version": "0.60.1"
     },
     "radical-pilot-sc15": {
         "cmdline": [
@@ -3449,7 +3458,15 @@
         "version": "0.50.0"
     },
     "radical-utils": {
-        "cmdline": [],
+        "cmdline": [
+            "radical-stack",
+            "radical-utils-fix-headers.pl",
+            "radical-utils-gtod",
+            "radical-utils-mongodb.py",
+            "radical-utils-pwatch",
+            "radical-utils-pylint.sh",
+            "radical-utils-version"
+        ],
         "modules": [
             "radical",
             "radical.utils",
@@ -3510,7 +3527,7 @@
             "radical.utils.zmq.pubsub",
             "radical.utils.zmq.queue"
         ],
-        "version": "0.60.0"
+        "version": "0.60.1"
     },
     "radicale": {
         "cmdline": [],
@@ -5808,11 +5825,9 @@
             "raiden_contracts.utils.proofs",
             "raiden_contracts.utils.signature",
             "raiden_contracts.utils.transaction",
-            "raiden_contracts.utils.type_aliases",
-            "source",
-            "source.test"
+            "raiden_contracts.utils.type_aliases"
         ],
-        "version": "0.17.2"
+        "version": "0.18.0"
     },
     "raiden-libs": {
         "cmdline": [],
@@ -17409,7 +17424,7 @@
             "rattail.win32.users",
             "rattail.wince"
         ],
-        "version": "0.9.77"
+        "version": "0.9.78"
     },
     "rattail-brdata": {
         "cmdline": [],
@@ -19949,75 +19964,6 @@
         ],
         "version": "0.0.2"
     },
-    "rbf": {
-        "cmdline": [],
-        "modules": [
-            "rbfFTP",
-            "rbfFTP.rbfFTP",
-            "rbfFTP.version",
-            "rbfREST",
-            "rbfREST.compat",
-            "rbfREST.keywords",
-            "rbfREST.schema_keywords",
-            "rbfREST.version",
-            "rbfWEB",
-            "rbfWEB.base",
-            "rbfWEB.base.context",
-            "rbfWEB.base.librarycomponent",
-            "rbfWEB.base.robotlibcore",
-            "rbfWEB.errors",
-            "rbfWEB.keywords",
-            "rbfWEB.keywords.alert",
-            "rbfWEB.keywords.browsermanagement",
-            "rbfWEB.keywords.cookie",
-            "rbfWEB.keywords.element",
-            "rbfWEB.keywords.formelement",
-            "rbfWEB.keywords.frames",
-            "rbfWEB.keywords.javascript",
-            "rbfWEB.keywords.runonfailure",
-            "rbfWEB.keywords.screenshot",
-            "rbfWEB.keywords.selectelement",
-            "rbfWEB.keywords.tableelement",
-            "rbfWEB.keywords.waiting",
-            "rbfWEB.keywords.webdrivertools",
-            "rbfWEB.keywords.window",
-            "rbfWEB.locators",
-            "rbfWEB.locators.customlocator",
-            "rbfWEB.locators.elementfinder",
-            "rbfWEB.locators.windowmanager",
-            "rbfWEB.utils",
-            "rbfWEB.utils.deprecated",
-            "rbfWEB.utils.events",
-            "rbfWEB.utils.events.event",
-            "rbfWEB.utils.events.scope_event",
-            "rbfWEB.utils.librarylistener",
-            "rbfWEB.utils.seleniumversion",
-            "rbfWEB.utils.types",
-            "rbfWEB.version",
-            "rbfzOS",
-            "rbfzOS.py3270",
-            "rbfzOS.version",
-            "rbfzOS.x3270",
-            "rflint",
-            "rflint.common",
-            "rflint.exceptions",
-            "rflint.parser",
-            "rflint.parser.common",
-            "rflint.parser.parser",
-            "rflint.parser.rfkeyword",
-            "rflint.parser.tables",
-            "rflint.parser.testcase",
-            "rflint.parser.util",
-            "rflint.rflint",
-            "rflint.rules",
-            "rflint.rules.keywordRules",
-            "rflint.rules.otherRules",
-            "rflint.rules.suiteRules",
-            "rflint.rules.testcaseRules",
-            "rflint.version"
-        ],
-        "version": "1.4"
-    },
     "rbfopt": {
         "cmdline": [
             "rbfopt_cl_interface.py",
@@ -20570,7 +20516,7 @@
             "rc_cts.lib.resilient_mock",
             "rc_cts.lib.threat_models"
         ],
-        "version": "32.0.126"
+        "version": "32.0.140"
     },
     "rc-customcontent": {
         "cmdline": [],
@@ -20695,7 +20641,7 @@
             "rc_webserver.components.webservice",
             "rc_webserver.web"
         ],
-        "version": "32.0.126"
+        "version": "32.0.140"
     },
     "rc2": {
         "cmdline": [],
@@ -21336,7 +21282,7 @@
             "rcsb.utils.ec",
             "rcsb.utils.ec.EnzymeDatabaseUtils"
         ],
-        "version": "0.11"
+        "version": "0.12"
     },
     "rcsb-utils-io": {
         "cmdline": [],
@@ -21383,7 +21329,7 @@
             "rcsb.utils.taxonomy",
             "rcsb.utils.taxonomy.TaxonomyUtils"
         ],
-        "version": "0.13"
+        "version": "0.14"
     },
     "rcsb-utils-validation": {
         "cmdline": [],
@@ -23866,6 +23812,100 @@
             "rxgrpc.thread_pool"
         ],
         "version": "0.0.2"
+    },
+    "reactive-pyecharts": {
+        "cmdline": [],
+        "modules": [
+            "example",
+            "example.bar3d_example",
+            "example.bar_example",
+            "example.boxplot_example",
+            "example.calendar_example",
+            "example.commons",
+            "example.effectscatter_example",
+            "example.funnel_example",
+            "example.gauge_example",
+            "example.geo_example",
+            "example.graph_eaxmple",
+            "example.grid_example",
+            "example.heatmap_example",
+            "example.kline_example",
+            "example.line3d_example",
+            "example.line_example",
+            "example.liquid_example",
+            "example.map_example",
+            "example.overlap_example",
+            "example.parallel_example",
+            "example.pie_example",
+            "example.polar_example",
+            "example.radar_example",
+            "example.sankey_example",
+            "example.scatter3d_example",
+            "example.scatter_example",
+            "example.surface3d_example",
+            "example.table_example",
+            "example.theme_example",
+            "example.themeriver_example",
+            "example.timeline_example",
+            "example.tree_example",
+            "example.treemap_example",
+            "example.wordcould_example",
+            "pyecharts",
+            "pyecharts._version",
+            "pyecharts.charts",
+            "pyecharts.charts.base",
+            "pyecharts.charts.basic_charts",
+            "pyecharts.charts.basic_charts.bar",
+            "pyecharts.charts.basic_charts.boxplot",
+            "pyecharts.charts.basic_charts.calendar",
+            "pyecharts.charts.basic_charts.effectscatter",
+            "pyecharts.charts.basic_charts.funnel",
+            "pyecharts.charts.basic_charts.gauge",
+            "pyecharts.charts.basic_charts.geo",
+            "pyecharts.charts.basic_charts.graph",
+            "pyecharts.charts.basic_charts.heatmap",
+            "pyecharts.charts.basic_charts.kline",
+            "pyecharts.charts.basic_charts.line",
+            "pyecharts.charts.basic_charts.liquid",
+            "pyecharts.charts.basic_charts.map",
+            "pyecharts.charts.basic_charts.parallel",
+            "pyecharts.charts.basic_charts.pie",
+            "pyecharts.charts.basic_charts.polar",
+            "pyecharts.charts.basic_charts.radar",
+            "pyecharts.charts.basic_charts.sankey",
+            "pyecharts.charts.basic_charts.scatter",
+            "pyecharts.charts.basic_charts.themeriver",
+            "pyecharts.charts.basic_charts.tree",
+            "pyecharts.charts.basic_charts.treemap",
+            "pyecharts.charts.basic_charts.wordcloud",
+            "pyecharts.charts.chart",
+            "pyecharts.charts.composite_charts",
+            "pyecharts.charts.composite_charts.grid",
+            "pyecharts.charts.composite_charts.page",
+            "pyecharts.charts.composite_charts.timeline",
+            "pyecharts.charts.threeD_charts",
+            "pyecharts.charts.threeD_charts.bar3D",
+            "pyecharts.charts.threeD_charts.line3D",
+            "pyecharts.charts.threeD_charts.scatter3D",
+            "pyecharts.charts.threeD_charts.surface3D",
+            "pyecharts.commons",
+            "pyecharts.commons.types",
+            "pyecharts.commons.utils",
+            "pyecharts.components",
+            "pyecharts.components.table",
+            "pyecharts.datasets",
+            "pyecharts.exceptions",
+            "pyecharts.globals",
+            "pyecharts.options",
+            "pyecharts.options.global_options",
+            "pyecharts.options.series_options",
+            "pyecharts.render",
+            "pyecharts.render.display",
+            "pyecharts.render.engine",
+            "pyecharts.render.snapshot",
+            "pyecharts.scaffold"
+        ],
+        "version": "1.0.0"
     },
     "reactivehub-sdk-python": {
         "cmdline": [],
@@ -27737,7 +27777,7 @@
             "recentrifuge.taxonomy",
             "recentrifuge.trees"
         ],
-        "version": "0.28.7"
+        "version": "0.28.8"
     },
     "receptacle": {
         "cmdline": [],
@@ -28123,7 +28163,7 @@
             "reckoner.release",
             "reckoner.repository"
         ],
-        "version": "1.1.0"
+        "version": "1.1.1"
     },
     "reclaim": {
         "cmdline": [],
@@ -31208,7 +31248,6 @@
             "red_star.plugins.custom_commands",
             "red_star.plugins.info",
             "red_star.plugins.logger",
-            "red_star.plugins.motd",
             "red_star.plugins.music_player",
             "red_star.plugins.reminder",
             "red_star.plugins.roles",
@@ -31216,11 +31255,10 @@
             "red_star.plugins.rs_lisp",
             "red_star.plugins.voting",
             "red_star.rs_errors",
-            "red_star.rs_lisp",
             "red_star.rs_utils",
             "red_star.rs_version"
         ],
-        "version": "2.1.2"
+        "version": "2.1.3"
     },
     "red-trivia": {
         "cmdline": [],
@@ -33563,7 +33601,7 @@
             "redisbeat",
             "redisbeat.scheduler"
         ],
-        "version": "1.1.0"
+        "version": "1.1.4"
     },
     "redisbloomfilter": {
         "cmdline": [],
@@ -35807,17 +35845,6 @@
         ],
         "version": "1.2"
     },
-    "redtask": {
-        "cmdline": [],
-        "modules": [
-            "redtask",
-            "redtask.debug",
-            "redtask.executors",
-            "redtask.server",
-            "redtask.tests"
-        ],
-        "version": "0.1.0"
-    },
     "redteam": {
         "cmdline": [],
         "modules": [
@@ -36797,13 +36824,38 @@
             "redvox",
             "redvox.api900",
             "redvox.api900.cli",
+            "redvox.api900.concat",
             "redvox.api900.constants",
+            "redvox.api900.date_time_utils",
+            "redvox.api900.deprecation",
+            "redvox.api900.exceptions",
             "redvox.api900.lib",
             "redvox.api900.lib.api900_pb2",
             "redvox.api900.reader",
-            "redvox.api900.stat_utils"
+            "redvox.api900.reader_utils",
+            "redvox.api900.sensors",
+            "redvox.api900.sensors.accelerometer_sensor",
+            "redvox.api900.sensors.barometer_sensor",
+            "redvox.api900.sensors.evenly_sampled_channel",
+            "redvox.api900.sensors.evenly_sampled_sensor",
+            "redvox.api900.sensors.gyroscope_sensor",
+            "redvox.api900.sensors.image_sensor",
+            "redvox.api900.sensors.infrared_sensor",
+            "redvox.api900.sensors.interleaved_channel",
+            "redvox.api900.sensors.light_sensor",
+            "redvox.api900.sensors.location_sensor",
+            "redvox.api900.sensors.magnetometer_sensor",
+            "redvox.api900.sensors.microphone_sensor",
+            "redvox.api900.sensors.time_synchronization_sensor",
+            "redvox.api900.sensors.unevenly_sampled_channel",
+            "redvox.api900.sensors.unevenly_sampled_sensor",
+            "redvox.api900.sensors.xyz_unevenly_sampled_sensor",
+            "redvox.api900.stat_utils",
+            "redvox.api900.summarize",
+            "redvox.api900.types",
+            "redvox.api900.wrapped_redvox_packet"
         ],
-        "version": "1.5.0"
+        "version": "2.0.0"
     },
     "redwall": {
         "cmdline": [],
@@ -37089,7 +37141,7 @@
             "reentry.hooks",
             "reentry.jsonbackend"
         ],
-        "version": "1.2.2"
+        "version": "1.3.0"
     },
     "reesaurora": {
         "cmdline": [],
@@ -38672,7 +38724,7 @@
             "regex.test",
             "regex.test.test_regex"
         ],
-        "version": "2019.04.10"
+        "version": "2019.04.12"
     },
     "regex-decorator": {
         "cmdline": [],
@@ -46975,7 +47027,7 @@
             "replay_trajectory_classification.spiking_likelihood",
             "replay_trajectory_classification.state_transition"
         ],
-        "version": "0.3.1.dev0"
+        "version": "0.4.2.dev0"
     },
     "replayenhancer": {
         "cmdline": [],
@@ -55316,7 +55368,7 @@
             "resilient.patch",
             "resilient.resilient_rest_mock"
         ],
-        "version": "32.0.126"
+        "version": "32.0.140"
     },
     "resilient-circuits": {
         "cmdline": [],
@@ -55344,7 +55396,7 @@
             "resilient_circuits.util.resilient_config",
             "resilient_circuits.util.resilient_customize"
         ],
-        "version": "32.0.126"
+        "version": "32.0.140"
     },
     "resilient-lib": {
         "cmdline": [],
@@ -55357,6 +55409,7 @@
             "resilient_lib.components.integration_errors",
             "resilient_lib.components.requests_common",
             "resilient_lib.components.resilient_common",
+            "resilient_lib.components.workflow_status",
             "resilient_lib.util",
             "resilient_lib.util.config",
             "tests",
@@ -55366,7 +55419,7 @@
             "tests.test_payload",
             "tests.test_requests"
         ],
-        "version": "32.0.126"
+        "version": "32.0.140"
     },
     "resim": {
         "cmdline": [],
@@ -57526,18 +57579,6 @@
         ],
         "version": "0.1.2"
     },
-    "restapilibrary": {
-        "cmdline": [],
-        "modules": [
-            "RESTAPILibrary",
-            "RESTAPILibrary.MyContinuableError",
-            "RESTAPILibrary.compat",
-            "RESTAPILibrary.keywords",
-            "RESTAPILibrary.schema_keywords",
-            "RESTAPILibrary.version"
-        ],
-        "version": "3.6"
-    },
     "restapiz": {
         "cmdline": [],
         "modules": [
@@ -58391,7 +58432,7 @@
             "restible.url_params",
             "restible.util"
         ],
-        "version": "0.11.12"
+        "version": "0.12"
     },
     "restible-appengine": {
         "cmdline": [],
@@ -58404,7 +58445,7 @@
             "restible_appengine.secure.util",
             "restible_appengine.util"
         ],
-        "version": "0.4.1"
+        "version": "0.5"
     },
     "restible-django": {
         "cmdline": [],
@@ -58448,7 +58489,7 @@
             "restible_swagger.route",
             "restible_swagger.util"
         ],
-        "version": "0.3.1"
+        "version": "0.3.2"
     },
     "restiblog": {
         "cmdline": [],
@@ -58690,6 +58731,13 @@
             "restiro.parser.resource"
         ],
         "version": "0.8.0"
+    },
+    "restiro-spa-material": {
+        "cmdline": [],
+        "modules": [
+            "restiro_spa_material"
+        ],
+        "version": "0.2.8"
     },
     "restish": {
         "cmdline": [],
@@ -65803,6 +65851,16 @@
         ],
         "version": "0.1"
     },
+    "ri-distributions": {
+        "cmdline": [],
+        "modules": [
+            "ri_distributions",
+            "ri_distributions.Binomialdistribution",
+            "ri_distributions.Gaussiandistribution",
+            "ri_distributions.Generaldistribution"
+        ],
+        "version": "1.0"
+    },
     "ri-pass": {
         "cmdline": [],
         "modules": [],
@@ -67255,7 +67313,6 @@
         "cmdline": [],
         "modules": [
             "riemann",
-            "riemann.blake2",
             "riemann.blake256",
             "riemann.encoding",
             "riemann.encoding.addresses",
@@ -67264,6 +67321,7 @@
             "riemann.encoding.cashaddr",
             "riemann.networks",
             "riemann.networks.networks",
+            "riemann.networks.standard",
             "riemann.script",
             "riemann.script.examples",
             "riemann.script.opcodes",
@@ -67284,7 +67342,6 @@
             "riemann.tests.tx.helpers.decred_helpers",
             "riemann.tests.tx.helpers.overwinter_helpers",
             "riemann.tests.tx.helpers.sapling_helpers",
-            "riemann.tests.tx.overwinter_helpers",
             "riemann.tests.tx.test_decred",
             "riemann.tests.tx.test_overwinter",
             "riemann.tests.tx.test_overwinter_sighash",
@@ -67304,7 +67361,7 @@
             "riemann.tx.zcash_shared",
             "riemann.utils"
         ],
-        "version": "1.1.6"
+        "version": "1.1.7"
     },
     "riemann-wrapper": {
         "cmdline": [],
@@ -68968,6 +69025,100 @@
             "rinoh.warnings"
         ],
         "version": "0.3.1"
+    },
+    "rinokeras": {
+        "cmdline": [],
+        "modules": [
+            "rinokeras",
+            "rinokeras.compat",
+            "rinokeras.compat.distributed",
+            "rinokeras.compat.py34_utils",
+            "rinokeras.compat.py35_utils",
+            "rinokeras.compat.utils",
+            "rinokeras.core",
+            "rinokeras.core.v1x",
+            "rinokeras.core.v1x.common",
+            "rinokeras.core.v1x.common.attention",
+            "rinokeras.core.v1x.common.distributions",
+            "rinokeras.core.v1x.common.gcn",
+            "rinokeras.core.v1x.common.layers",
+            "rinokeras.core.v1x.common.layers.activations",
+            "rinokeras.core.v1x.common.layers.autoregressive",
+            "rinokeras.core.v1x.common.layers.conv",
+            "rinokeras.core.v1x.common.layers.dropout",
+            "rinokeras.core.v1x.common.layers.inversion",
+            "rinokeras.core.v1x.common.layers.masking",
+            "rinokeras.core.v1x.common.layers.normalization",
+            "rinokeras.core.v1x.common.layers.position_embedding",
+            "rinokeras.core.v1x.common.layers.residual",
+            "rinokeras.core.v1x.common.layers.stack",
+            "rinokeras.core.v1x.common.losses",
+            "rinokeras.core.v1x.common.optimizers",
+            "rinokeras.core.v1x.common.rnn",
+            "rinokeras.core.v1x.models",
+            "rinokeras.core.v1x.models.glow",
+            "rinokeras.core.v1x.models.masked_rmc",
+            "rinokeras.core.v1x.models.qanet",
+            "rinokeras.core.v1x.models.qanet.qanet",
+            "rinokeras.core.v1x.models.qanet.qanet_attention",
+            "rinokeras.core.v1x.models.qanet.qanet_embedding",
+            "rinokeras.core.v1x.models.qanet.qanet_encoder",
+            "rinokeras.core.v1x.models.qanet.qanet_ff",
+            "rinokeras.core.v1x.models.resnet",
+            "rinokeras.core.v1x.models.resnet.resnet",
+            "rinokeras.core.v1x.models.rmc",
+            "rinokeras.core.v1x.models.rmc.masked_rmc",
+            "rinokeras.core.v1x.models.rmc.rmc",
+            "rinokeras.core.v1x.models.rmc.rmc_cell",
+            "rinokeras.core.v1x.models.transformer",
+            "rinokeras.core.v1x.models.transformer.transformer",
+            "rinokeras.core.v1x.models.transformer.transformer_attention",
+            "rinokeras.core.v1x.models.transformer.transformer_decoder",
+            "rinokeras.core.v1x.models.transformer.transformer_embedding",
+            "rinokeras.core.v1x.models.transformer.transformer_encoder",
+            "rinokeras.core.v1x.models.transformer.transformer_ff",
+            "rinokeras.core.v1x.models.transformer.transformer_utils",
+            "rinokeras.core.v1x.rl",
+            "rinokeras.core.v1x.rl.LSTMPolicy",
+            "rinokeras.core.v1x.rl.RayPolicy",
+            "rinokeras.core.v1x.rl.RecurrentPolicy",
+            "rinokeras.core.v1x.rl.StandardPolicy",
+            "rinokeras.core.v1x.train",
+            "rinokeras.core.v1x.train.EagerGraph",
+            "rinokeras.core.v1x.train.Experiment",
+            "rinokeras.core.v1x.train.RinokerasGraph",
+            "rinokeras.core.v1x.train.TestGraph",
+            "rinokeras.core.v1x.train.TrainGraph",
+            "rinokeras.core.v1x.train.train_utils",
+            "rinokeras.core.v1x.utils",
+            "rinokeras.core.v1x.utils.keras",
+            "rinokeras.core.v1x.utils.masking",
+            "rinokeras.core.v1x.utils.metrics",
+            "rinokeras.core.v1x.utils.metrics.MetricsAccumulator",
+            "rinokeras.core.v1x.utils.metrics.accuracy",
+            "rinokeras.core.v1x.utils.metrics.bleu",
+            "rinokeras.core.v1x.utils.metrics.pyrouge",
+            "rinokeras.core.v1x.utils.metrics.rouge",
+            "rinokeras.core.v1x.utils.optim",
+            "rinokeras.core.v1x.utils.schedules",
+            "rinokeras.core.v1x.utils.tensors",
+            "rinokeras.layers",
+            "rinokeras.models",
+            "rinokeras.models.qanet",
+            "rinokeras.models.resnet",
+            "rinokeras.models.transformer",
+            "rinokeras.rl",
+            "rinokeras.testing",
+            "rinokeras.testing.utils",
+            "rinokeras.testing.utils.assertions",
+            "rinokeras.testing.utils.loading",
+            "rinokeras.testing.utils.regression",
+            "rinokeras.testing.utils.session",
+            "rinokeras.testing.utils.tensors",
+            "rinokeras.train",
+            "rinokeras.utils"
+        ],
+        "version": "1.0.0"
     },
     "rinse": {
         "cmdline": [],
@@ -77064,9 +77215,10 @@
     "road-agent": {
         "cmdline": [],
         "modules": [
-            "road_agent"
+            "road_agent",
+            "road_agent.router"
         ],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     "roadhouse": {
         "cmdline": [],
@@ -77309,7 +77461,7 @@
             "roberto.utils",
             "roberto.version"
         ],
-        "version": "1.5.0"
+        "version": "1.6.0"
     },
     "robertsons-rules": {
         "cmdline": [],
@@ -83425,7 +83577,7 @@
         "modules": [
             "RoboZap"
         ],
-        "version": "1.2.3"
+        "version": "1.2.6"
     },
     "robozilla": {
         "cmdline": [],
@@ -85093,6 +85245,17 @@
         "modules": [
             "rohan",
             "rohan.dandage",
+            "rohan.dandage.align",
+            "rohan.dandage.align.align_annot",
+            "rohan.dandage.curate",
+            "rohan.dandage.curate.gene_interactions",
+            "rohan.dandage.db",
+            "rohan.dandage.db.ensembl",
+            "rohan.dandage.db.go",
+            "rohan.dandage.db.uniprot",
+            "rohan.dandage.figs",
+            "rohan.dandage.figs.configure",
+            "rohan.dandage.figs.convert",
             "rohan.dandage.io_dfs",
             "rohan.dandage.io_dict",
             "rohan.dandage.io_files",
@@ -85103,7 +85266,7 @@
             "rohan.dandage.io_sys",
             "rohan.global_imports"
         ],
-        "version": "0.0.8"
+        "version": "0.0.9"
     },
     "rohc": {
         "cmdline": [],
@@ -88610,6 +88773,21 @@
         ],
         "version": "1.1.8"
     },
+    "rospkg-modules": {
+        "cmdline": [],
+        "modules": [
+            "rospkg",
+            "rospkg.common",
+            "rospkg.distro",
+            "rospkg.environment",
+            "rospkg.manifest",
+            "rospkg.os_detect",
+            "rospkg.rospack",
+            "rospkg.rosversion",
+            "rospkg.stack"
+        ],
+        "version": "1.1.8"
+    },
     "rospy-message-converter": {
         "cmdline": [],
         "modules": [
@@ -88873,10 +89051,15 @@
         "cmdline": [],
         "modules": [
             "roswire",
+            "roswire.bag",
+            "roswire.bag.core",
+            "roswire.bag.reader",
+            "roswire.bag.writer",
             "roswire.definitions",
             "roswire.definitions.action",
-            "roswire.definitions.bag",
             "roswire.definitions.base",
+            "roswire.definitions.decode",
+            "roswire.definitions.encode",
             "roswire.definitions.format",
             "roswire.definitions.msg",
             "roswire.definitions.package",
@@ -88899,7 +89082,7 @@
             "roswire.util",
             "roswire.version"
         ],
-        "version": "0.0.1"
+        "version": "0.0.2"
     },
     "rot": {
         "cmdline": [],
@@ -105340,7 +105523,7 @@
             "running_results_fetcher.spider_runner",
             "running_results_fetcher.stats"
         ],
-        "version": "0.2.0"
+        "version": "0.2.2"
     },
     "runningcalcs": {
         "cmdline": [],
@@ -105828,13 +106011,13 @@
         "cmdline": [],
         "modules": [
             "runway",
+            "runway.__version__",
             "runway.data_types",
             "runway.exceptions",
-            "runway.io",
             "runway.model",
             "runway.utils"
         ],
-        "version": "0.0.55"
+        "version": "0.0.57"
     },
     "runwith": {
         "cmdline": [],
@@ -107306,6 +107489,14 @@
             "rwslib.rwsobjects"
         ],
         "version": "1.2.3"
+    },
+    "rwsp": {
+        "cmdline": [],
+        "modules": [
+            "serverpilot",
+            "serverpilot.serverpilot"
+        ],
+        "version": "1.0.0"
     },
     "rwssl": {
         "cmdline": [],
