@@ -1120,6 +1120,13 @@
         ],
         "version": "2.0.1"
     },
+    "qbstyles": {
+        "cmdline": [],
+        "modules": [
+            "qbstyles"
+        ],
+        "version": "0.0.3"
+    },
     "qbuf": {
         "cmdline": [],
         "modules": [
@@ -1298,8 +1305,9 @@
             "qccproduct",
             "qccproduct.db",
             "qccproduct.db.mongo",
+            "qccproduct.extra_passport",
             "qccproduct.http_handler",
-            "qccproduct.http_handler.org_handler",
+            "qccproduct.http_handler.entrance_handler",
             "qccproduct.http_handler.product_handler",
             "qccproduct.routes",
             "qccproduct.routes.product",
@@ -1308,7 +1316,7 @@
             "qccproduct.service.async_wrap.ctrl_product",
             "qccproduct.service.ctrl_product"
         ],
-        "version": "0.0.11"
+        "version": "0.2.0"
     },
     "qcc-wallet": {
         "cmdline": [],
@@ -1316,9 +1324,10 @@
             "qccwallet",
             "qccwallet.db",
             "qccwallet.db.mongo",
+            "qccwallet.extra_passport",
             "qccwallet.http_handler",
             "qccwallet.http_handler.contract_handler",
-            "qccwallet.http_handler.org_handler",
+            "qccwallet.http_handler.entrance_handler",
             "qccwallet.http_handler.wallet_handler",
             "qccwallet.routes",
             "qccwallet.routes.wallet",
@@ -1338,7 +1347,7 @@
             "qccwallet.ws_handler",
             "qccwallet.ws_handler.dispatcher"
         ],
-        "version": "0.0.9"
+        "version": "0.2.0"
     },
     "qccodar": {
         "cmdline": [],
@@ -3817,7 +3826,7 @@
             "qdarkstyle.pyside_style_rc",
             "qdarkstyle.qtpy_style_rc"
         ],
-        "version": "2.6.5"
+        "version": "2.6.6"
     },
     "qdatastream": {
         "cmdline": [],
@@ -5556,9 +5565,11 @@
             "QiDataLoader.Quote",
             "QiDataLoader.Test",
             "QiDataLoader.TestTime",
-            "QiDataLoader.Tick"
+            "QiDataLoader.TestTradingDayHelper",
+            "QiDataLoader.Tick",
+            "QiDataLoader.TradingDayHelper"
         ],
-        "version": "1.1.3"
+        "version": "1.1.6"
     },
     "qidicom": {
         "cmdline": [
@@ -7804,28 +7815,47 @@
         "cmdline": [],
         "modules": [
             "qlibs",
+            "qlibs.collections",
             "qlibs.fileworks",
             "qlibs.gui",
+            "qlibs.gui.basic_shapes",
+            "qlibs.gui.constants",
+            "qlibs.gui.enums",
+            "qlibs.gui.helper",
+            "qlibs.gui.nodes",
+            "qlibs.gui.nodes.GuiNode",
+            "qlibs.gui.nodes.GuiNodeButton",
+            "qlibs.gui.nodes.GuiNodeHighlighted",
+            "qlibs.gui.nodes.GuiNodeIncrementalText",
+            "qlibs.gui.nodes.GuiNodeText",
+            "qlibs.gui.qgui",
             "qlibs.gui.window_provider",
             "qlibs.gui.window_provider.sdl2_based",
             "qlibs.gui.window_provider.window_provider",
+            "qlibs.logging_control",
             "qlibs.matrix",
             "qlibs.modelloader",
             "qlibs.modelrenderer",
             "qlibs.net",
             "qlibs.net.TCPlink",
             "qlibs.net.UDPlink",
+            "qlibs.net.asyncsocket",
             "qlibs.net.connection",
             "qlibs.net.qpacket",
             "qlibs.opt",
+            "qlibs.qopt",
+            "qlibs.qvec",
             "qlibs.resource_loader",
+            "qlibs.resource_manager",
+            "qlibs.test",
             "qlibs.test2",
             "qlibs.test3",
+            "qlibs.test4",
             "qlibs.testrunner",
             "qlibs.util",
             "qlibs.vec"
         ],
-        "version": "0.1.1"
+        "version": "0.1.2"
     },
     "qlik-script-tools": {
         "cmdline": [
@@ -11427,7 +11457,7 @@
             "qt4w.webview",
             "qt4w.webview.webview"
         ],
-        "version": "2.0.57"
+        "version": "2.0.58"
     },
     "qt5": {
         "cmdline": [],
@@ -11523,7 +11553,7 @@
             "tuia.wincontrols",
             "tuia.wintypes"
         ],
-        "version": "5.4.22"
+        "version": "5.4.25"
     },
     "qtalchemy": {
         "cmdline": [],
@@ -11626,7 +11656,7 @@
             "qtarmsim.window.preferencesdialog",
             "qtarmsim.window.runprogressbardialog"
         ],
-        "version": "0.4.11"
+        "version": "0.4.12"
     },
     "qtask": {
         "cmdline": [
@@ -12562,7 +12592,7 @@
             "qtorch.quant.quant_function",
             "qtorch.quant.quant_module"
         ],
-        "version": "0.0.1"
+        "version": "0.1.0"
     },
     "qtornado": {
         "cmdline": [],
@@ -13879,6 +13909,31 @@
             "quaerere_base_common.schema"
         ],
         "version": "0.1.0rc1"
+    },
+    "quaerere-base-flask": {
+        "cmdline": [],
+        "modules": [
+            "quaerere_base_flask",
+            "quaerere_base_flask.schemas",
+            "quaerere_base_flask.views",
+            "quaerere_base_flask.views.base"
+        ],
+        "version": "0.1.0a1"
+    },
+    "quaerere-willamette-client": {
+        "cmdline": [],
+        "modules": [
+            "willamette_client",
+            "willamette_client.api_v1",
+            "willamette_client.api_v1.models",
+            "willamette_client.api_v1.models.web_pages",
+            "willamette_client.api_v1.models.web_sites",
+            "willamette_client.api_v1.resources",
+            "willamette_client.api_v1.resources.web_pages",
+            "willamette_client.api_v1.resources.web_sites",
+            "willamette_client.client"
+        ],
+        "version": "0.1.0a0"
     },
     "quaerere-willamette-common": {
         "cmdline": [],
@@ -15844,7 +15899,7 @@
             "quantiphyse_basil.veasl_widgets",
             "quantiphyse_basil.widgets"
         ],
-        "version": "0.7.2.post5"
+        "version": "0.7.2.post8"
     },
     "quantiphyse-cest": {
         "cmdline": [],
@@ -15863,7 +15918,7 @@
             "quantiphyse_dce.process",
             "quantiphyse_dce.widgets"
         ],
-        "version": "0.7.2"
+        "version": "0.7.2.post1"
     },
     "quantiphyse-dsc": {
         "cmdline": [],
@@ -15873,7 +15928,7 @@
             "quantiphyse_dsc.process",
             "quantiphyse_dsc.widget"
         ],
-        "version": "0.7.1"
+        "version": "0.7.1.post1"
     },
     "quantiphyse-fabber": {
         "cmdline": [],
@@ -15900,7 +15955,7 @@
             "quantiphyse_fsl.tests",
             "quantiphyse_fsl.widget"
         ],
-        "version": "0.7.2.post1"
+        "version": "0.7.2.post4"
     },
     "quantiphyse-sv": {
         "cmdline": [],
@@ -15916,16 +15971,18 @@
             "quantiphyse_sv.tests",
             "quantiphyse_sv.widgets"
         ],
-        "version": "0.1.0.post1"
+        "version": "0.1.0.post2"
     },
     "quantiphyse-t1": {
         "cmdline": [],
         "modules": [
-            "quantiphyse_fabber_t1",
-            "quantiphyse_fabber_t1._version",
-            "quantiphyse_fabber_t1.widget"
+            "quantiphyse_t1",
+            "quantiphyse_t1._version",
+            "quantiphyse_t1.process",
+            "quantiphyse_t1.tests",
+            "quantiphyse_t1.widgets"
         ],
-        "version": "0.7.1"
+        "version": "0.7.1.post4"
     },
     "quantiprot": {
         "cmdline": [],
@@ -16489,8 +16546,6 @@
         "modules": [
             "quantpy",
             "quantpy.conftest",
-            "quantpy.ising.qubo",
-            "quantpy.ising.sqa",
             "quantpy.release",
             "quantpy.sympy",
             "quantpy.sympy.executor",
@@ -16505,7 +16560,7 @@
             "quantpy.sympy.gate_extension",
             "quantpy.sympy.qapply"
         ],
-        "version": "0.0.2.dev10"
+        "version": "0.0.2.dev11"
     },
     "quantpycupy": {
         "cmdline": [],
@@ -17824,6 +17879,7 @@
             "quarry.types.block",
             "quarry.types.buffer",
             "quarry.types.buffer.v1_13",
+            "quarry.types.buffer.v1_13_2",
             "quarry.types.buffer.v1_7",
             "quarry.types.buffer.v1_9",
             "quarry.types.chat",
@@ -17831,7 +17887,7 @@
             "quarry.types.nbt",
             "quarry.types.uuid"
         ],
-        "version": "1.1.1"
+        "version": "1.2"
     },
     "quarry-io": {
         "cmdline": [],
@@ -18020,11 +18076,17 @@
         "modules": [
             "quartet_integrations",
             "quartet_integrations.apps",
+            "quartet_integrations.divinci",
+            "quartet_integrations.divinci.parsing",
+            "quartet_integrations.divinci.steps",
             "quartet_integrations.models",
+            "quartet_integrations.sap",
+            "quartet_integrations.sap.parsing",
+            "quartet_integrations.sap.steps",
             "quartet_integrations.urls",
             "quartet_integrations.views"
         ],
-        "version": "1.0.1"
+        "version": "1.0.5"
     },
     "quartet-manifest": {
         "cmdline": [],
@@ -23714,7 +23776,7 @@
             "qupulse.utils.tree",
             "qupulse.utils.types"
         ],
-        "version": "0.3"
+        "version": "0.4"
     },
     "qupy": {
         "cmdline": [],
