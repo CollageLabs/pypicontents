@@ -1367,6 +1367,7 @@
             "register.forms.personal",
             "register.management",
             "register.management.commands",
+            "register.management.commands.badger_unregistered",
             "register.management.commands.populate_nights_meals",
             "register.migrations",
             "register.migrations.0001_initial",
@@ -1407,7 +1408,7 @@
             "volunteers.utils",
             "volunteers.views"
         ],
-        "version": "0.1.4"
+        "version": "0.1.5"
     },
     "wafer-map": {
         "cmdline": [],
@@ -1950,6 +1951,7 @@
             "wagtail.contrib.modeladmin.templatetags",
             "wagtail.contrib.modeladmin.templatetags.modeladmin_tags",
             "wagtail.contrib.modeladmin.tests",
+            "wagtail.contrib.modeladmin.tests.test_modeladmin_edit_handlers",
             "wagtail.contrib.modeladmin.tests.test_page_modeladmin",
             "wagtail.contrib.modeladmin.tests.test_simple_modeladmin",
             "wagtail.contrib.modeladmin.views",
@@ -2170,6 +2172,8 @@
             "wagtail.documents.models",
             "wagtail.documents.permissions",
             "wagtail.documents.rich_text",
+            "wagtail.documents.rich_text.contentstate",
+            "wagtail.documents.rich_text.editor_html",
             "wagtail.documents.signal_handlers",
             "wagtail.documents.tests",
             "wagtail.documents.tests.test_admin_views",
@@ -2203,12 +2207,17 @@
             "wagtail.embeds.migrations.0002_add_verbose_names",
             "wagtail.embeds.migrations.0003_capitalizeverbose",
             "wagtail.embeds.migrations.0004_embed_verbose_name_plural",
+            "wagtail.embeds.migrations.0005_specify_thumbnail_url_max_length",
             "wagtail.embeds.models",
             "wagtail.embeds.oembed_providers",
             "wagtail.embeds.rich_text",
+            "wagtail.embeds.rich_text.contentstate",
+            "wagtail.embeds.rich_text.editor_html",
             "wagtail.embeds.templatetags",
             "wagtail.embeds.templatetags.wagtailembeds_tags",
             "wagtail.embeds.tests",
+            "wagtail.embeds.tests.test_embeds",
+            "wagtail.embeds.tests.test_rich_text",
             "wagtail.embeds.urls",
             "wagtail.embeds.views",
             "wagtail.embeds.views.chooser",
@@ -2261,6 +2270,8 @@
             "wagtail.images.permissions",
             "wagtail.images.rect",
             "wagtail.images.rich_text",
+            "wagtail.images.rich_text.contentstate",
+            "wagtail.images.rich_text.editor_html",
             "wagtail.images.shortcuts",
             "wagtail.images.signal_handlers",
             "wagtail.images.templatetags",
@@ -2300,6 +2311,7 @@
             "wagtail.search.management.commands",
             "wagtail.search.management.commands.search_garbage_collect",
             "wagtail.search.management.commands.update_index",
+            "wagtail.search.management.commands.wagtail_update_index",
             "wagtail.search.migrations",
             "wagtail.search.migrations.0001_initial",
             "wagtail.search.migrations.0002_add_verbose_names",
@@ -2372,6 +2384,8 @@
             "wagtail.tests.modeladmintest.migrations.0003_publisher",
             "wagtail.tests.modeladmintest.migrations.0004_venuepage",
             "wagtail.tests.modeladmintest.migrations.0005_book_cover_image",
+            "wagtail.tests.modeladmintest.migrations.0006_contributor_person_visitor",
+            "wagtail.tests.modeladmintest.migrations.0007_friend",
             "wagtail.tests.modeladmintest.models",
             "wagtail.tests.modeladmintest.wagtail_hooks",
             "wagtail.tests.non_root_urls",
@@ -2443,6 +2457,8 @@
             "wagtail.tests.testapp.migrations.0038_singletonpageviamaxcount",
             "wagtail.tests.testapp.migrations.0039_customdocument_description",
             "wagtail.tests.testapp.migrations.0040_customdocument_file_hash",
+            "wagtail.tests.testapp.migrations.0041_secretpage",
+            "wagtail.tests.testapp.migrations.0042_simplechildpage_simpleparentpage",
             "wagtail.tests.testapp.models",
             "wagtail.tests.testapp.rich_text",
             "wagtail.tests.testapp.urls",
@@ -2500,7 +2516,7 @@
             "wagtail.utils.version",
             "wagtail.utils.widgets"
         ],
-        "version": "2.4"
+        "version": "2.5"
     },
     "wagtail-2fa": {
         "cmdline": [],
@@ -4477,7 +4493,7 @@
             "wagtailquickcreate.views",
             "wagtailquickcreate.wagtail_hooks"
         ],
-        "version": "1.0.1"
+        "version": "1.0.3"
     },
     "wagtail-react-streamfield": {
         "cmdline": [],
@@ -11485,7 +11501,7 @@
             "mbientlab.warble.gattchar",
             "mbientlab.warble.scanner"
         ],
-        "version": "1.1.0"
+        "version": "1.2.0"
     },
     "warc": {
         "cmdline": [],
@@ -11716,7 +11732,7 @@
             "warg.toaster",
             "warg.utilities"
         ],
-        "version": "0.1.20190422190750"
+        "version": "0.1.20190424180829"
     },
     "wargame": {
         "cmdline": [],
@@ -17868,7 +17884,7 @@
             "wcmatch.util",
             "wcmatch.wcmatch"
         ],
-        "version": "2.2"
+        "version": "2.2.1"
     },
     "wcolors": {
         "cmdline": [],
@@ -18658,7 +18674,7 @@
             "wdmtoolbox.wdmtoolbox",
             "wdmtoolbox.wdmutil"
         ],
-        "version": "10.9.7.7"
+        "version": "10.10.7.7"
     },
     "wdncrunch": {
         "cmdline": [],
@@ -19625,34 +19641,39 @@
             "webmother",
             "webmother.db",
             "webmother.db.mongo",
+            "webmother.employment",
+            "webmother.extra_passport",
             "webmother.http_handler",
+            "webmother.http_handler.app_handler",
             "webmother.http_handler.catalog_handler",
-            "webmother.http_handler.member_handler",
-            "webmother.http_handler.mine_handler",
+            "webmother.http_handler.entrance_handler",
             "webmother.http_handler.org_handler",
             "webmother.http_handler.passport_handler",
-            "webmother.identity",
+            "webmother.http_handler.person_handler",
+            "webmother.membership",
             "webmother.passport",
             "webmother.routes",
             "webmother.routes.catalog",
-            "webmother.routes.member",
-            "webmother.routes.mine",
+            "webmother.routes.entrance",
             "webmother.routes.org",
-            "webmother.routes.passport",
             "webmother.service",
             "webmother.service.async_wrap",
+            "webmother.service.async_wrap.ctrl_app",
             "webmother.service.async_wrap.ctrl_catalog",
-            "webmother.service.async_wrap.ctrl_member",
-            "webmother.service.async_wrap.ctrl_mine",
+            "webmother.service.async_wrap.ctrl_entrance",
             "webmother.service.async_wrap.ctrl_org",
             "webmother.service.async_wrap.ctrl_passport",
+            "webmother.service.async_wrap.ctrl_person",
+            "webmother.service.ctrl_app",
             "webmother.service.ctrl_catalog",
-            "webmother.service.ctrl_member",
-            "webmother.service.ctrl_mine",
+            "webmother.service.ctrl_entrance",
             "webmother.service.ctrl_org",
-            "webmother.service.ctrl_passport"
+            "webmother.service.ctrl_passport",
+            "webmother.service.ctrl_person",
+            "webmother.utils",
+            "webmother.utils.bson_util"
         ],
-        "version": "0.1.6"
+        "version": "0.2.2"
     },
     "web-office": {
         "cmdline": [],
@@ -19951,7 +19972,7 @@
             "ucenter.ws_handler",
             "ucenter.ws_handler.manage_handler"
         ],
-        "version": "0.1.3"
+        "version": "0.2.0"
     },
     "web-utils": {
         "cmdline": [],
@@ -20433,7 +20454,7 @@
             "web3.utils.windows",
             "web3.version"
         ],
-        "version": "4.9.1"
+        "version": "4.9.2"
     },
     "web3-gear": {
         "cmdline": [],
@@ -22503,7 +22524,7 @@
             "webdriver_test_tools.webdriver.support.expected_conditions",
             "webdriver_test_tools.webdriver.support.test"
         ],
-        "version": "2.9.2"
+        "version": "2.10.1"
     },
     "webdriver-wharf": {
         "cmdline": [],
@@ -25078,25 +25099,25 @@
         "modules": [
             "webpartners_users",
             "webpartners_users.admin",
-            "webpartners_users.api",
-            "webpartners_users.api.permissions",
-            "webpartners_users.api.permissions.v1",
-            "webpartners_users.api.routers",
-            "webpartners_users.api.routers.v1",
-            "webpartners_users.api.serializers",
-            "webpartners_users.api.serializers.v1",
-            "webpartners_users.api.views",
-            "webpartners_users.api.views.v1",
-            "webpartners_users.migrations",
-            "webpartners_users.migrations.0001_initial",
             "webpartners_users.models",
             "webpartners_users.settings",
-            "webpartners_users.tests",
-            "webpartners_users.tests.test_api_v1",
-            "webpartners_users.tests.test_jwt",
-            "webpartners_users.urls"
+            "webpartners_users.urls",
+            "webpartners_users/api",
+            "webpartners_users/api/permissions",
+            "webpartners_users/api/permissions.v1",
+            "webpartners_users/api/routers",
+            "webpartners_users/api/routers.v1",
+            "webpartners_users/api/serializers",
+            "webpartners_users/api/serializers.v1",
+            "webpartners_users/api/views",
+            "webpartners_users/api/views.v1",
+            "webpartners_users/migrations",
+            "webpartners_users/migrations.0001_initial",
+            "webpartners_users/tests",
+            "webpartners_users/tests.test_api_v1",
+            "webpartners_users/tests.test_jwt"
         ],
-        "version": "0.1.5"
+        "version": "0.2.0"
     },
     "webpattern": {
         "cmdline": [],
@@ -27881,7 +27902,7 @@
             "webweb.pygmlion",
             "webweb.webweb"
         ],
-        "version": "0.0.30"
+        "version": "0.0.31"
     },
     "webwhatsapi": {
         "cmdline": [],
@@ -32030,7 +32051,7 @@
             "wfnsympy",
             "wfnsympy.file_io"
         ],
-        "version": "0.1.4"
+        "version": "0.1.5"
     },
     "wfpc2tools": {
         "cmdline": [],
@@ -42321,7 +42342,7 @@
             "winter.schema.utils",
             "winter.type_utils"
         ],
-        "version": "1.6.0"
+        "version": "1.7.1"
     },
     "winternitz": {
         "cmdline": [],
@@ -43390,7 +43411,7 @@
             "wisdoms.pg_db",
             "wisdoms.utils"
         ],
-        "version": "0.0.25"
+        "version": "0.0.26"
     },
     "wise": {
         "cmdline": [
@@ -44689,10 +44710,12 @@
             "media_platform.media_platform_client",
             "media_platform.metadata",
             "media_platform.metadata.audio",
+            "media_platform.metadata.audio.attached_image",
             "media_platform.metadata.audio.audio_basic",
-            "media_platform.metadata.audio.audio_extra_metadata",
+            "media_platform.metadata.audio.audio_extra",
             "media_platform.metadata.audio.audio_format",
             "media_platform.metadata.audio.audio_stream",
+            "media_platform.metadata.audio.lyrics",
             "media_platform.metadata.audio_file_metadata",
             "media_platform.metadata.features",
             "media_platform.metadata.features.explicit_content",
@@ -44721,7 +44744,10 @@
             "media_platform.service.archive_service.create_archive_request",
             "media_platform.service.archive_service.extract_archive_request",
             "media_platform.service.audio_service",
+            "media_platform.service.audio_service.audio_extra_metadata",
             "media_platform.service.audio_service.audio_service",
+            "media_platform.service.audio_service.extract_metadata_request",
+            "media_platform.service.audio_service.replace_extra_metadata_request",
             "media_platform.service.callback",
             "media_platform.service.destination",
             "media_platform.service.file_descriptor",
@@ -44741,7 +44767,6 @@
             "media_platform.service.file_service.file_service",
             "media_platform.service.file_service.file_upload_callback_payload",
             "media_platform.service.file_service.import_file_request",
-            "media_platform.service.file_service.replace_extra_metadata_request",
             "media_platform.service.file_service.update_file_request",
             "media_platform.service.file_service.upload_configuration",
             "media_platform.service.file_service.upload_configuration_request",
@@ -44794,7 +44819,7 @@
             "media_platform.service.video_service.extract_storyboard_request",
             "media_platform.service.video_service.video_service"
         ],
-        "version": "1.9.0"
+        "version": "1.10.0"
     },
     "wix-py": {
         "cmdline": [
@@ -48991,7 +49016,7 @@
             "wn.synset",
             "wn.utils"
         ],
-        "version": "0.0.9"
+        "version": "0.0.19"
     },
     "wncc": {
         "cmdline": [],
@@ -54905,6 +54930,24 @@
         ],
         "version": "0.5.6"
     },
+    "wotan": {
+        "cmdline": [],
+        "modules": [
+            "wotan",
+            "wotan.cofiam",
+            "wotan.constants",
+            "wotan.flatten",
+            "wotan.gaps",
+            "wotan.gp",
+            "wotan.huber_spline",
+            "wotan.location_estimates",
+            "wotan.slider",
+            "wotan.t14",
+            "wotan.tests",
+            "wotan.version"
+        ],
+        "version": "1.0"
+    },
     "wotconsole": {
         "cmdline": [],
         "modules": [
@@ -58053,6 +58096,7 @@
             "wronganswer.client",
             "wronganswer.client.AOJ",
             "wronganswer.client.LC",
+            "wronganswer.client.POJ",
             "wronganswer.client.http",
             "wronganswer.credential",
             "wronganswer.http",
@@ -58064,7 +58108,7 @@
             "wronganswer.state.dbm",
             "wronganswer.state.user"
         ],
-        "version": "0.1.0"
+        "version": "0.1.1"
     },
     "wrtdk": {
         "cmdline": [],
@@ -60040,7 +60084,7 @@
             "wslink.uri",
             "wslink.websocket"
         ],
-        "version": "0.1.10"
+        "version": "0.1.11"
     },
     "wslogtail": {
         "cmdline": [],
@@ -60643,7 +60687,7 @@
         "modules": [
             "wszst_yaz0"
         ],
-        "version": "1.1.1.post1"
+        "version": "1.2.0"
     },
     "wt": {
         "cmdline": [],
@@ -63868,36 +63912,18 @@
             "wxviews.app",
             "wxviews.binding",
             "wxviews.binding.event",
-            "wxviews.binding.event_tests",
+            "wxviews.binding.modifiers",
+            "wxviews.containers",
             "wxviews.core",
             "wxviews.core.node",
-            "wxviews.modifiers",
-            "wxviews.modifiers_tests",
-            "wxviews.node",
-            "wxviews.node.containers",
-            "wxviews.node.containers_tests",
-            "wxviews.node.sizers",
-            "wxviews.node.sizers_tests",
-            "wxviews.node.styles",
-            "wxviews.node.widget",
-            "wxviews.node.widget_tests",
-            "wxviews.pipeline",
-            "wxviews.pipeline.common",
-            "wxviews.pipeline.common_tests",
-            "wxviews.pipeline.containers",
-            "wxviews.pipeline.containers_tests",
-            "wxviews.pipeline.menu",
-            "wxviews.pipeline.menu_tests",
-            "wxviews.pipeline.sizers",
-            "wxviews.pipeline.sizers_tests",
-            "wxviews.pipeline.styles",
-            "wxviews.pipeline.styles_tests",
-            "wxviews.pipeline.wx",
-            "wxviews.pipeline.wx_tests",
+            "wxviews.core.pipeline",
+            "wxviews.menus",
             "wxviews.rendering",
-            "wxviews.rendering_tests"
+            "wxviews.sizers",
+            "wxviews.styles",
+            "wxviews.widgets"
         ],
-        "version": "0.1.0"
+        "version": "0.1.1"
     },
     "wxvkmusic": {
         "cmdline": [
