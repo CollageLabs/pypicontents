@@ -9334,7 +9334,6 @@
             "falcon.routing.util",
             "falcon.status_codes",
             "falcon.testing",
-            "falcon.testing.base",
             "falcon.testing.client",
             "falcon.testing.helpers",
             "falcon.testing.resource",
@@ -9342,13 +9341,17 @@
             "falcon.testing.test_case",
             "falcon.uri",
             "falcon.util",
+            "falcon.util.compat",
             "falcon.util.misc",
             "falcon.util.structures",
             "falcon.util.time",
             "falcon.util.uri",
+            "falcon.vendor",
+            "falcon.vendor.mimeparse",
+            "falcon.vendor.mimeparse.mimeparse",
             "falcon.version"
         ],
-        "version": "1.4.1"
+        "version": "2.0.0"
     },
     "falcon-api": {
         "cmdline": [],
@@ -9442,7 +9445,9 @@
         "version": "0.2.3"
     },
     "falcon-core": {
-        "cmdline": [],
+        "cmdline": [
+            "falcon-core.py"
+        ],
         "modules": [
             "falcon_core",
             "falcon_core.config",
@@ -9461,7 +9466,7 @@
             "falcon_core.utils",
             "falcon_core.wsgi"
         ],
-        "version": "0.0.17"
+        "version": "0.0.18"
     },
     "falcon-cors": {
         "cmdline": [],
@@ -11301,7 +11306,7 @@
             "fandogh_cli.volume_commands",
             "fandogh_cli.workspace"
         ],
-        "version": "1.9.0"
+        "version": "1.10.0"
     },
     "fanery": {
         "cmdline": [],
@@ -13777,7 +13782,7 @@
             "fast_slic.crf",
             "fast_slic.fast_slic"
         ],
-        "version": "0.2.5"
+        "version": "0.3.0"
     },
     "fast-sparcc": {
         "cmdline": [
@@ -14013,6 +14018,7 @@
             "fastai.utils.collect_env",
             "fastai.utils.ipython",
             "fastai.utils.mem",
+            "fastai.utils.mod_display",
             "fastai.utils.pynvml_gate",
             "fastai.utils.show_install",
             "fastai.version",
@@ -14025,17 +14031,19 @@
             "fastai.vision.models",
             "fastai.vision.models.cadene_models",
             "fastai.vision.models.darknet",
+            "fastai.vision.models.presnet",
             "fastai.vision.models.unet",
             "fastai.vision.models.wrn",
             "fastai.vision.models.xception",
             "fastai.vision.models.xresnet",
+            "fastai.vision.models.xresnet2",
             "fastai.vision.transform",
             "fastai.vision.tta",
             "fastai.widgets",
             "fastai.widgets.image_cleaner",
             "fastai.widgets.image_downloader"
         ],
-        "version": "1.0.51"
+        "version": "1.0.52"
     },
     "fastai-bottleneck-1-1-1": {
         "cmdline": [],
@@ -14193,7 +14201,7 @@
             "fastapi.security.utils",
             "fastapi.utils"
         ],
-        "version": "0.18.0"
+        "version": "0.19.0"
     },
     "fastaq": {
         "cmdline": [],
@@ -15519,7 +15527,7 @@
     "fastobo": {
         "cmdline": [],
         "modules": [],
-        "version": "0.1.0.dev322"
+        "version": "0.1.0.dev329"
     },
     "fastools": {
         "cmdline": [],
@@ -15569,6 +15577,14 @@
             "fastparquet.writer"
         ],
         "version": "0.3.1"
+    },
+    "fastparse": {
+        "cmdline": [],
+        "modules": [
+            "fastparse",
+            "fastparse.fastparse"
+        ],
+        "version": "1.1"
     },
     "fastpay": {
         "cmdline": [],
@@ -19092,7 +19108,7 @@
             "fbs_runtime.licensing",
             "fbs_runtime.platform"
         ],
-        "version": "0.7.6"
+        "version": "0.7.7"
     },
     "fbscraper": {
         "cmdline": [],
@@ -32046,12 +32062,9 @@
         "modules": [
             "fifbucket",
             "fifbucket.client",
-            "fifbucket.fifbucket",
-            "fifbucket.version",
-            "tests",
-            "tests.test_functions"
+            "fifbucket.version"
         ],
-        "version": "0.9"
+        "version": "0.10.2"
     },
     "fifemon-probes-common": {
         "cmdline": [],
@@ -34576,6 +34589,15 @@
             "FileShares.server"
         ],
         "version": "2.0.2"
+    },
+    "fileshash": {
+        "cmdline": [],
+        "modules": [
+            "fileshash",
+            "fileshash.fileshash",
+            "fileshash.fileshash_cli"
+        ],
+        "version": "0.1.1"
     },
     "fileshelf": {
         "cmdline": [],
@@ -44669,7 +44691,7 @@
             "fixtopt",
             "fixtopt.fixtopt"
         ],
-        "version": "0.1.0"
+        "version": "0.1.2"
     },
     "fixtrate": {
         "cmdline": [],
@@ -45967,6 +45989,13 @@
         "modules": [],
         "version": ""
     },
+    "flake8-datetimez": {
+        "cmdline": [],
+        "modules": [
+            "flake8_datetimez"
+        ],
+        "version": "19.4.4.0"
+    },
     "flake8-debugger": {
         "cmdline": [],
         "modules": [
@@ -46978,6 +47007,45 @@
         "cmdline": [],
         "modules": [],
         "version": "0.6"
+    },
+    "flama": {
+        "cmdline": [],
+        "modules": [
+            "flama",
+            "flama.applications",
+            "flama.codecs",
+            "flama.codecs.base",
+            "flama.codecs.http",
+            "flama.codecs.http.jsondata",
+            "flama.codecs.http.multipart",
+            "flama.codecs.http.urlencoded",
+            "flama.codecs.websockets",
+            "flama.codecs.websockets.bytes",
+            "flama.codecs.websockets.json",
+            "flama.codecs.websockets.text",
+            "flama.components",
+            "flama.components.asgi",
+            "flama.components.base",
+            "flama.components.validation",
+            "flama.endpoints",
+            "flama.exceptions",
+            "flama.http",
+            "flama.injection",
+            "flama.negotiation",
+            "flama.pagination",
+            "flama.pagination.limit_offset",
+            "flama.pagination.page_number",
+            "flama.pagination.paginator",
+            "flama.resources",
+            "flama.responses",
+            "flama.routing",
+            "flama.schemas",
+            "flama.types",
+            "flama.utils",
+            "flama.validation",
+            "flama.websockets"
+        ],
+        "version": "0.8.0"
     },
     "flamboyantsshd": {
         "cmdline": [],
@@ -49086,9 +49154,11 @@
         "cmdline": [],
         "modules": [
             "flask_authoob",
-            "flask_authoob.email_provider"
+            "flask_authoob.email_provider",
+            "flask_authoob.hooks",
+            "flask_authoob.routes"
         ],
-        "version": "0.0.5"
+        "version": "0.0.8"
     },
     "flask-authority": {
         "cmdline": [],
@@ -52837,7 +52907,7 @@
         "modules": [
             "flask_gzip"
         ],
-        "version": "0.1"
+        "version": "0.2"
     },
     "flask-gzipbomb": {
         "cmdline": [],
@@ -56257,6 +56327,11 @@
         ],
         "version": "1.2.5"
     },
+    "flask-openid-python3": {
+        "cmdline": [],
+        "modules": [],
+        "version": ""
+    },
     "flask-openid-stateless": {
         "cmdline": [],
         "modules": [
@@ -57329,9 +57404,12 @@
     "flask-qrcode": {
         "cmdline": [],
         "modules": [
-            "flask_qrcode"
+            "flask_qrcode",
+            "tests",
+            "tests.server",
+            "tests.test_functional"
         ],
-        "version": "2.0.2"
+        "version": "3.0.0"
     },
     "flask-qssession": {
         "cmdline": [],
@@ -61619,7 +61697,7 @@
         "modules": [
             "flask_undoredo"
         ],
-        "version": "1.0.6"
+        "version": "1.0.7"
     },
     "flask-unsign": {
         "cmdline": [],
@@ -65906,7 +65984,7 @@
             "flerken.utils.losses",
             "flerken.video"
         ],
-        "version": "0.2.3.post2"
+        "version": "0.2.3.post3"
     },
     "flesh": {
         "cmdline": [],
@@ -66162,7 +66240,7 @@
             "flexer.utils",
             "flexer.validation"
         ],
-        "version": "1.6.4"
+        "version": "1.6.5"
     },
     "flexes-feed": {
         "cmdline": [],
@@ -67002,11 +67080,14 @@
             "flexx.ui._widget",
             "flexx.ui.layouts",
             "flexx.ui.layouts._form",
+            "flexx.ui.layouts._grid",
             "flexx.ui.layouts._hv",
             "flexx.ui.layouts._layout",
             "flexx.ui.layouts._pinboard",
             "flexx.ui.layouts._stack",
             "flexx.ui.layouts._tabs",
+            "flexx.ui.pywidgets",
+            "flexx.ui.pywidgets._filebrowser",
             "flexx.ui.widgets",
             "flexx.ui.widgets._bokeh",
             "flexx.ui.widgets._button",
@@ -67025,6 +67106,7 @@
             "flexx.ui.widgets._tree",
             "flexx.util",
             "flexx.util.config",
+            "flexx.util.freeze",
             "flexx.util.getresource",
             "flexx.util.logging",
             "flexx.util.minify",
@@ -67071,12 +67153,14 @@
             "flexxamples.howtos.python_in_js",
             "flexxamples.howtos.react_to_props",
             "flexxamples.howtos.redirect",
+            "flexxamples.howtos.scrollable",
             "flexxamples.howtos.send_data",
             "flexxamples.howtos.serve_data",
             "flexxamples.howtos.serve_multiple1",
             "flexxamples.howtos.serve_multiple2",
             "flexxamples.howtos.serve_ssl",
             "flexxamples.howtos.serve_with_aiohttp",
+            "flexxamples.howtos.serve_with_asgineer",
             "flexxamples.howtos.serve_with_flask",
             "flexxamples.howtos.splitters",
             "flexxamples.howtos.store",
@@ -67094,7 +67178,7 @@
             "flexxamples.testers.tricky_events",
             "flexxamples.testers.ws_speed"
         ],
-        "version": "0.7.1"
+        "version": "0.8.0"
     },
     "flfl": {
         "cmdline": [
@@ -72079,7 +72163,7 @@
             "fluidasserts.utils.decorators",
             "fluidasserts.utils.tracking"
         ],
-        "version": "19.4.36112"
+        "version": "19.4.36965"
     },
     "fluiddata": {
         "cmdline": [],
@@ -76873,7 +76957,7 @@
             "folia.helpers",
             "folia.main"
         ],
-        "version": "2.0.7"
+        "version": "2.0.8"
     },
     "folia-linguistic-annotation-tool": {
         "cmdline": [],
@@ -76914,6 +76998,7 @@
             "foliatools",
             "foliatools.alpino2folia",
             "foliatools.cgn2folia",
+            "foliatools.common",
             "foliatools.conllu2folia",
             "foliatools.dcoi2folia",
             "foliatools.folia2annotatedtxt",
@@ -76925,7 +77010,7 @@
             "foliatools.foliacat",
             "foliatools.foliacorrect",
             "foliatools.foliacount",
-            "foliatools.foliadiffeval",
+            "foliatools.foliaerase",
             "foliatools.foliaeval",
             "foliatools.foliafreqlist",
             "foliatools.foliaid",
@@ -76939,11 +77024,10 @@
             "foliatools.foliatree",
             "foliatools.foliaupgrade",
             "foliatools.foliavalidator",
-            "foliatools.markdown2folia",
             "foliatools.rst2folia",
             "foliatools.xslt"
         ],
-        "version": "2.0.6"
+        "version": "2.0.7"
     },
     "folia2alpino": {
         "cmdline": [],
@@ -77397,7 +77481,7 @@
             "followthemoney.types.url",
             "followthemoney.util"
         ],
-        "version": "1.11.18"
+        "version": "1.11.19"
     },
     "followthemoney-enrich": {
         "cmdline": [],
@@ -77411,7 +77495,7 @@
             "followthemoney_enrich.result",
             "followthemoney_enrich.util"
         ],
-        "version": "1.11.18"
+        "version": "1.11.19"
     },
     "followthemoney-integrate": {
         "cmdline": [],
@@ -77423,7 +77507,7 @@
             "followthemoney_integrate.util",
             "followthemoney_integrate.views"
         ],
-        "version": "1.11.18"
+        "version": "1.11.19"
     },
     "followthemoney-util": {
         "cmdline": [],
@@ -77442,7 +77526,7 @@
             "followthemoney_util.results",
             "followthemoney_util.util"
         ],
-        "version": "1.11.18"
+        "version": "1.11.19"
     },
     "folmon": {
         "cmdline": [],
@@ -85581,6 +85665,17 @@
             "framsreader._all"
         ],
         "version": "0.1.2"
+    },
+    "fran": {
+        "cmdline": [],
+        "modules": [
+            "fran",
+            "fran.constants",
+            "fran.events",
+            "fran.frames",
+            "fran.gui"
+        ],
+        "version": "0.1.0"
     },
     "france": {
         "cmdline": [],
@@ -94645,7 +94740,7 @@
             "fstpso.pso",
             "fstpso.surfaces"
         ],
-        "version": "1.4.10"
+        "version": "1.4.12"
     },
     "fsta": {
         "cmdline": [],
@@ -107568,7 +107663,7 @@
             "fzutils.time_utils",
             "fzutils.url_utils"
         ],
-        "version": "0.3.0.1"
+        "version": "0.3.0.6"
     },
     "fzysearch": {
         "cmdline": [],
