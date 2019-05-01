@@ -3463,11 +3463,13 @@
             "xbos_services_getter.lib.price_pb2_grpc",
             "xbos_services_getter.lib.schedules_pb2",
             "xbos_services_getter.lib.schedules_pb2_grpc",
+            "xbos_services_getter.lib.thermal_model_pb2",
+            "xbos_services_getter.lib.thermal_model_pb2_grpc",
             "xbos_services_getter.test",
             "xbos_services_getter.test.test",
             "xbos_services_getter.xbos_services_getter"
         ],
-        "version": "0.0.2.dev27"
+        "version": "0.0.2.dev30"
     },
     "xbos-services-utils2": {
         "cmdline": [],
@@ -5310,9 +5312,7 @@
         "version": "0.1.0"
     },
     "xdis": {
-        "cmdline": [
-            "pydisasm.py"
-        ],
+        "cmdline": [],
         "modules": [
             "xdis",
             "xdis.bytecode",
@@ -5326,7 +5326,6 @@
             "xdis.op_imports",
             "xdis.opcodes",
             "xdis.opcodes.base",
-            "xdis.opcodes.check-stackeffect",
             "xdis.opcodes.opcode_13",
             "xdis.opcodes.opcode_14",
             "xdis.opcodes.opcode_15",
@@ -5361,7 +5360,7 @@
             "xdis.version",
             "xdis.wordcode"
         ],
-        "version": "4.0.0"
+        "version": "4.0.1"
     },
     "xdistutils": {
         "cmdline": [],
@@ -13932,14 +13931,7 @@
         "version": "1.1.0.8"
     },
     "xnatutils": {
-        "cmdline": [
-            "xnat-get",
-            "xnat-ls",
-            "xnat-put",
-            "xnat-rename",
-            "xnat-varget",
-            "xnat-varput"
-        ],
+        "cmdline": [],
         "modules": [
             "xnatutils",
             "xnatutils.base",
@@ -13950,7 +13942,7 @@
             "xnatutils.put",
             "xnatutils.version_"
         ],
-        "version": "0.4.7"
+        "version": "0.4.9"
     },
     "xnatworkflowgather": {
         "cmdline": [
@@ -15004,7 +14996,7 @@
             "xosapi.version",
             "xosapi.xos_grpc_client"
         ],
-        "version": "3.2.3"
+        "version": "3.2.4"
     },
     "xosconfig": {
         "cmdline": [],
@@ -15014,7 +15006,7 @@
             "xosconfig.default",
             "xosconfig.version"
         ],
-        "version": "3.2.3"
+        "version": "3.2.4"
     },
     "xosgenx": {
         "cmdline": [
@@ -15029,7 +15021,7 @@
             "xosgenx.xos2jinja",
             "xosgenx.xosgen"
         ],
-        "version": "3.2.3"
+        "version": "3.2.4"
     },
     "xoskafka": {
         "cmdline": [],
@@ -15037,7 +15029,7 @@
             "xoskafka",
             "xoskafka.xoskafkaproducer"
         ],
-        "version": "3.2.3"
+        "version": "3.2.4"
     },
     "xosmigrate": {
         "cmdline": [
@@ -15047,7 +15039,7 @@
             "xosmigrate",
             "xosmigrate.main"
         ],
-        "version": "3.2.3"
+        "version": "3.2.4"
     },
     "xossynchronizer": {
         "cmdline": [],
@@ -15075,7 +15067,7 @@
             "xossynchronizer.steps.syncstep",
             "xossynchronizer.synchronizer"
         ],
-        "version": "3.2.3"
+        "version": "3.2.4"
     },
     "xost": {
         "cmdline": [],
@@ -15099,7 +15091,7 @@
             "xosutil.autoversion_setup",
             "xosutil.version"
         ],
-        "version": "3.2.3"
+        "version": "3.2.4"
     },
     "xotl-crdt": {
         "cmdline": [],
@@ -16939,39 +16931,163 @@
         "cmdline": [],
         "modules": [
             "larch",
+            "larch.apps",
+            "larch.bin",
             "larch.builtins",
+            "larch.closure",
+            "larch.epics",
+            "larch.epics.larchscan",
+            "larch.epics.spyk",
+            "larch.epics.xrf_detectors",
+            "larch.epics.xrfcontrol",
+            "larch.epics.xspress3",
             "larch.fitting",
             "larch.helpTopics",
             "larch.helper",
             "larch.inputText",
             "larch.interpreter",
+            "larch.io",
+            "larch.io.athena_project",
+            "larch.io.columnfile",
+            "larch.io.csvfiles",
+            "larch.io.epics_plugin",
+            "larch.io.export_modelresult",
+            "larch.io.fileutils",
+            "larch.io.gse_escan",
+            "larch.io.gse_mcafile",
+            "larch.io.gse_xdiscan",
+            "larch.io.hdf5group",
+            "larch.io.mda",
+            "larch.io.mergegroups",
+            "larch.io.save_restore",
+            "larch.io.specfile_reader",
+            "larch.io.stepscan_file",
+            "larch.io.tifffile",
+            "larch.io.xdi",
+            "larch.io.xrd_hdf5",
+            "larch.io.xrd_netcdf",
+            "larch.io.xrf_netcdf",
+            "larch.io.xsp3_hdf5",
             "larch.larchlib",
+            "larch.math",
+            "larch.math.convolution1D",
+            "larch.math.fitpeak",
+            "larch.math.gridxyz",
+            "larch.math.learn_regress",
+            "larch.math.lincombo_fitting",
+            "larch.math.lineshapes",
+            "larch.math.pca",
+            "larch.math.smoothing",
+            "larch.math.spline",
+            "larch.math.tomography",
+            "larch.math.transformations",
+            "larch.math.utils",
             "larch.shell",
             "larch.site_config",
             "larch.symboltable",
             "larch.utils",
-            "larch.utils.closure",
             "larch.utils.debugtime",
             "larch.utils.jsonutils",
-            "larch.utils.lineshapes",
-            "larch.utils.mathutils",
             "larch.utils.paths",
+            "larch.utils.physical_constants",
+            "larch.utils.shellutils",
+            "larch.utils.show",
             "larch.utils.strutils",
             "larch.version",
             "larch.wxlib",
             "larch.wxlib.allow_idle_macosx",
+            "larch.wxlib.athena_importer",
             "larch.wxlib.columnframe",
             "larch.wxlib.floats",
+            "larch.wxlib.gui_utils",
             "larch.wxlib.inputhook",
             "larch.wxlib.larchfilling",
             "larch.wxlib.larchframe",
+            "larch.wxlib.notebooks",
             "larch.wxlib.parameter",
+            "larch.wxlib.periodictable",
+            "larch.wxlib.plotter",
             "larch.wxlib.readlinetextctrl",
             "larch.wxlib.reportframe",
-            "larch.wxlib.utils",
-            "larch.xmlrpc_server"
+            "larch.wxlib.xafsplots",
+            "larch.wxlib.xrfdisplay",
+            "larch.wxlib.xrfdisplay_fitpeaks",
+            "larch.wxlib.xrfdisplay_utils",
+            "larch.wxmap",
+            "larch.wxmap.gse_dtcorrect",
+            "larch.wxmap.mapimageframe",
+            "larch.wxmap.mapmathpanel",
+            "larch.wxmap.maptomopanel",
+            "larch.wxmap.mapviewer",
+            "larch.wxxas",
+            "larch.wxxas.exafs_panel",
+            "larch.wxxas.lincombo_panel",
+            "larch.wxxas.pca_panel",
+            "larch.wxxas.prepeak_panel",
+            "larch.wxxas.regress_panel",
+            "larch.wxxas.taskpanel",
+            "larch.wxxas.xas_dialogs",
+            "larch.wxxas.xasgui",
+            "larch.wxxas.xasnorm_panel",
+            "larch.wxxrd",
+            "larch.wxxrd.ImageControlsFrame",
+            "larch.wxxrd.XRD1Dviewer",
+            "larch.wxxrd.XRD2Dviewer",
+            "larch.wxxrd.XRDCalibrationFrame",
+            "larch.wxxrd.XRDMaskFrame",
+            "larch.xafs",
+            "larch.xafs.autobk",
+            "larch.xafs.cauchy_wavelet",
+            "larch.xafs.deconvolve",
+            "larch.xafs.diffkk",
+            "larch.xafs.estimate_noise",
+            "larch.xafs.feff8lpath",
+            "larch.xafs.feffdat",
+            "larch.xafs.feffit",
+            "larch.xafs.feffrunner",
+            "larch.xafs.fluo",
+            "larch.xafs.mback",
+            "larch.xafs.pre_edge",
+            "larch.xafs.rebin_xafs",
+            "larch.xafs.sigma2_models",
+            "larch.xafs.xafsft",
+            "larch.xafs.xafsutils",
+            "larch.xmlrpc_server",
+            "larch.xray",
+            "larch.xray.background",
+            "larch.xray.chemparser",
+            "larch.xray.cromer_liberman",
+            "larch.xray.materials",
+            "larch.xray.xray",
+            "larch.xray.xraydb",
+            "larch.xrd",
+            "larch.xrd.cifdb",
+            "larch.xrd.xrd",
+            "larch.xrd.xrd_bgr",
+            "larch.xrd.xrd_cif",
+            "larch.xrd.xrd_files",
+            "larch.xrd.xrd_fitting",
+            "larch.xrd.xrd_pyFAI",
+            "larch.xrd.xrd_tools",
+            "larch.xrf",
+            "larch.xrf.deadtime",
+            "larch.xrf.mca",
+            "larch.xrf.roi",
+            "larch.xrf.xrf_bgr",
+            "larch.xrf.xrf_calib",
+            "larch.xrf.xrf_model",
+            "larch.xrf.xrf_peak",
+            "larch.xrmmap",
+            "larch.xrmmap.asciifiles",
+            "larch.xrmmap.configfile",
+            "larch.xrmmap.gsexrm_utils",
+            "larch.xrmmap.xrm_mapfile",
+            "larch.xsw",
+            "larch.xsw.SimpleParratt",
+            "larch.xsw.fluo_det",
+            "larch.xsw.multilayer_film"
         ],
-        "version": "0.9.37"
+        "version": "0.9.43"
     },
     "xrayphasemap": {
         "cmdline": [],
