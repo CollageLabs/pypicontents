@@ -2468,6 +2468,14 @@
         ],
         "version": "0.3.4"
     },
+    "radiance": {
+        "cmdline": [],
+        "modules": [
+            "radiance",
+            "radiance.light_output_node"
+        ],
+        "version": "0.1dev5"
+    },
     "radiant": {
         "cmdline": [
             "radiant"
@@ -11240,6 +11248,16 @@
         ],
         "version": "1.0.0"
     },
+    "randomvariables": {
+        "cmdline": [],
+        "modules": [
+            "randomvariables",
+            "randomvariables.Exponentialrandomvariable",
+            "randomvariables.Gaussianrandomvariable",
+            "randomvariables.Generalrandomvariable"
+        ],
+        "version": "0.1"
+    },
     "randomwordgenerator": {
         "cmdline": [],
         "modules": [
@@ -11292,7 +11310,6 @@
         "cmdline": [],
         "modules": [
             "randovania",
-            "randovania.binary_file",
             "randovania.bitpacking",
             "randovania.bitpacking.bitpacking",
             "randovania.cli",
@@ -11308,13 +11325,14 @@
             "randovania.game_description",
             "randovania.game_description.area",
             "randovania.game_description.area_location",
+            "randovania.game_description.assignment",
             "randovania.game_description.data_reader",
             "randovania.game_description.data_writer",
             "randovania.game_description.default_database",
             "randovania.game_description.dock",
-            "randovania.game_description.echoes_elevator",
             "randovania.game_description.game_description",
             "randovania.game_description.game_patches",
+            "randovania.game_description.hint",
             "randovania.game_description.item",
             "randovania.game_description.item.ammo",
             "randovania.game_description.item.item_category",
@@ -11322,20 +11340,45 @@
             "randovania.game_description.item.major_item",
             "randovania.game_description.node",
             "randovania.game_description.requirements",
-            "randovania.game_description.resource_type",
             "randovania.game_description.resources",
+            "randovania.game_description.resources.damage_resource_info",
+            "randovania.game_description.resources.logbook_asset",
+            "randovania.game_description.resources.pickup_entry",
+            "randovania.game_description.resources.pickup_index",
+            "randovania.game_description.resources.resource_database",
+            "randovania.game_description.resources.resource_info",
+            "randovania.game_description.resources.resource_type",
+            "randovania.game_description.resources.simple_resource_info",
+            "randovania.game_description.resources.translator_gate",
             "randovania.game_description.world",
             "randovania.game_description.world_list",
             "randovania.games",
             "randovania.games.prime",
             "randovania.games.prime.banner_patcher",
             "randovania.games.prime.binary_data",
-            "randovania.games.prime.claris_random",
             "randovania.games.prime.claris_randomizer",
             "randovania.games.prime.default_data",
             "randovania.games.prime.dol_patcher",
+            "randovania.games.prime.echoes_items",
             "randovania.games.prime.iso_packager",
             "randovania.games.prime.patcher_file",
+            "randovania.generator",
+            "randovania.generator.base_patches_factory",
+            "randovania.generator.elevator_distributor",
+            "randovania.generator.filler",
+            "randovania.generator.filler.filler_library",
+            "randovania.generator.filler.random_assumed",
+            "randovania.generator.filler.retcon",
+            "randovania.generator.filler.runner",
+            "randovania.generator.generator",
+            "randovania.generator.generator_reach",
+            "randovania.generator.item_pool",
+            "randovania.generator.item_pool.ammo",
+            "randovania.generator.item_pool.dark_temple_keys",
+            "randovania.generator.item_pool.major_items",
+            "randovania.generator.item_pool.pickup_creator",
+            "randovania.generator.item_pool.pool_creator",
+            "randovania.generator.item_pool.sky_temple_keys",
             "randovania.gui",
             "randovania.gui.background_task_mixin",
             "randovania.gui.collapsible_dialog",
@@ -11382,6 +11425,7 @@
             "randovania.layout.ammo_state",
             "randovania.layout.configuration_factory",
             "randovania.layout.game_patches_serializer",
+            "randovania.layout.hint_configuration",
             "randovania.layout.layout_configuration",
             "randovania.layout.layout_description",
             "randovania.layout.major_item_state",
@@ -11389,30 +11433,21 @@
             "randovania.layout.patcher_configuration",
             "randovania.layout.permalink",
             "randovania.layout.starting_location",
+            "randovania.layout.translator_configuration",
             "randovania.resolver",
             "randovania.resolver.bootstrap",
             "randovania.resolver.debug",
+            "randovania.resolver.event_pickup",
             "randovania.resolver.exceptions",
-            "randovania.resolver.filler",
-            "randovania.resolver.filler.random_assumed",
-            "randovania.resolver.filler.retcon",
-            "randovania.resolver.filler_library",
-            "randovania.resolver.generator",
-            "randovania.resolver.generator_reach",
-            "randovania.resolver.item_pool",
-            "randovania.resolver.item_pool.ammo",
-            "randovania.resolver.item_pool.dark_temple_keys",
-            "randovania.resolver.item_pool.major_items",
-            "randovania.resolver.item_pool.pickup_creator",
-            "randovania.resolver.item_pool.pool_creator",
-            "randovania.resolver.item_pool.sky_temple_keys",
             "randovania.resolver.logic",
             "randovania.resolver.random_lib",
             "randovania.resolver.resolver",
             "randovania.resolver.resolver_reach",
-            "randovania.resolver.state"
+            "randovania.resolver.state",
+            "test",
+            "test.conftest"
         ],
-        "version": "0.25.0"
+        "version": "0.26.1"
     },
     "randpw": {
         "cmdline": [],
@@ -82411,6 +82446,11 @@
         ],
         "version": "0.1dev"
     },
+    "rocketbase": {
+        "cmdline": [],
+        "modules": [],
+        "version": ""
+    },
     "rocketcea": {
         "cmdline": [],
         "modules": [
@@ -102647,6 +102687,11 @@
             "runcalc.cli"
         ],
         "version": "0.1.1"
+    },
+    "runcible": {
+        "cmdline": [],
+        "modules": [],
+        "version": ""
     },
     "runcli": {
         "cmdline": [],
