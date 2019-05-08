@@ -1513,6 +1513,13 @@
         "modules": [],
         "version": ""
     },
+    "earthgod": {
+        "cmdline": [],
+        "modules": [
+            "earthgod"
+        ],
+        "version": "1.1"
+    },
     "earthpic": {
         "cmdline": [],
         "modules": [
@@ -2789,6 +2796,14 @@
             "tests"
         ],
         "version": "1.0"
+    },
+    "easy-logging": {
+        "cmdline": [],
+        "modules": [
+            "easy_logging",
+            "easy_logging.easy_logger"
+        ],
+        "version": "0.0.1"
     },
     "easy-logging-config": {
         "cmdline": [],
@@ -4950,10 +4965,16 @@
         "cmdline": [],
         "modules": [
             "easygl",
-            "easygl.buffer",
             "easygl.camera",
             "easygl.framebuffer",
             "easygl.mesh",
+            "easygl.render",
+            "easygl.render.buffer",
+            "easygl.render.render_command",
+            "easygl.render3d",
+            "easygl.render3d.box3d",
+            "easygl.render3d.coord3d",
+            "easygl.render3d.plane",
             "easygl.scene",
             "easygl.scene3d",
             "easygl.scene3d.box3d",
@@ -4969,9 +4990,10 @@
             "easygl.transform",
             "easygl.util",
             "easygl.util.application",
-            "easygl.util.ui"
+            "easygl.util.ui",
+            "easygl.viewport"
         ],
-        "version": "0.0.1b5"
+        "version": "0.0.1b6"
     },
     "easygoogle": {
         "cmdline": [],
@@ -10078,7 +10100,7 @@
             "gribapi.errors",
             "gribapi.gribapi"
         ],
-        "version": "0.8.0"
+        "version": "0.9.0"
     },
     "eccontrib-sphinxdoc": {
         "cmdline": [],
@@ -10190,8 +10212,6 @@
     "ecd": {
         "cmdline": [],
         "modules": [
-            "demo_dir",
-            "demo_dir.demo_1",
             "ecd",
             "ecd.common_tools",
             "ecd.common_tools.create_logger",
@@ -10206,6 +10226,12 @@
             "ecd.db_tools.mongo_db",
             "ecd.db_tools.redis_db",
             "ecd.main",
+            "ecd.password_manage",
+            "ecd.password_manage.app",
+            "ecd.password_manage.app.clipboard_monitor",
+            "ecd.password_manage.app.handle_data",
+            "ecd.password_manage.app.password_web",
+            "ecd.password_manage.run",
             "ecd.send_email_attachments",
             "ecd.send_email_attachments.email_conf",
             "ecd.send_email_attachments.send_email",
@@ -10213,7 +10239,7 @@
             "ecd.spider_tools.get_proxy",
             "ecd.spider_tools.user_agents"
         ],
-        "version": "0.1.11"
+        "version": "0.1.196"
     },
     "ecdaa-python": {
         "cmdline": [],
@@ -11967,6 +11993,14 @@
             "econtent.test_read"
         ],
         "version": "1.4.6"
+    },
+    "econvert": {
+        "cmdline": [],
+        "modules": [
+            "econvert",
+            "econvert.econvert"
+        ],
+        "version": "0.0.1"
     },
     "ecopad": {
         "cmdline": [],
@@ -13875,7 +13909,7 @@
             "edc_dashboard.views.home_view",
             "edc_dashboard.views.listboard_view"
         ],
-        "version": "0.2.41"
+        "version": "0.2.42"
     },
     "edc-device": {
         "cmdline": [],
@@ -14962,7 +14996,7 @@
             "edc_permissions.utils.pii",
             "edc_permissions.utils.update"
         ],
-        "version": "0.1.29"
+        "version": "0.1.30"
     },
     "edc-pharmacy": {
         "cmdline": [],
@@ -15223,7 +15257,7 @@
             "edc_reports.tests.test_report",
             "edc_reports.urls"
         ],
-        "version": "0.1.9"
+        "version": "0.1.10"
     },
     "edc-rest": {
         "cmdline": [],
@@ -20271,23 +20305,66 @@
             "edx_proctoring.admin",
             "edx_proctoring.api",
             "edx_proctoring.apps",
+            "edx_proctoring.backends",
+            "edx_proctoring.backends.backend",
+            "edx_proctoring.backends.mock",
+            "edx_proctoring.backends.null",
+            "edx_proctoring.backends.rest",
+            "edx_proctoring.backends.software_secure",
+            "edx_proctoring.backends.tests",
+            "edx_proctoring.backends.tests.test_backend",
+            "edx_proctoring.backends.tests.test_rest",
+            "edx_proctoring.backends.tests.test_review_payload",
+            "edx_proctoring.backends.tests.test_software_secure",
             "edx_proctoring.callbacks",
             "edx_proctoring.constants",
             "edx_proctoring.decorators",
             "edx_proctoring.exceptions",
             "edx_proctoring.instructor_dashboard_exam_urls",
+            "edx_proctoring.management",
+            "edx_proctoring.management.commands",
+            "edx_proctoring.management.commands.set_attempt_status",
+            "edx_proctoring.management.commands.tests",
+            "edx_proctoring.management.commands.tests.test_set_attempt_status",
+            "edx_proctoring.migrations",
+            "edx_proctoring.migrations.0001_initial",
+            "edx_proctoring.migrations.0002_proctoredexamstudentattempt_is_status_acknowledged",
+            "edx_proctoring.migrations.0003_auto_20160101_0525",
+            "edx_proctoring.migrations.0004_auto_20160201_0523",
+            "edx_proctoring.migrations.0005_proctoredexam_hide_after_due",
+            "edx_proctoring.migrations.0006_allowed_time_limit_mins",
+            "edx_proctoring.migrations.0007_proctoredexam_backend",
+            "edx_proctoring.migrations.0008_auto_20181116_1551",
+            "edx_proctoring.migrations.0009_proctoredexamreviewpolicy_remove_rules",
+            "edx_proctoring.migrations.0010_update_backend",
             "edx_proctoring.models",
             "edx_proctoring.rules",
             "edx_proctoring.runtime",
             "edx_proctoring.serializers",
             "edx_proctoring.services",
+            "edx_proctoring.settings",
+            "edx_proctoring.settings.common",
+            "edx_proctoring.settings.production",
+            "edx_proctoring.settings.test",
             "edx_proctoring.signals",
             "edx_proctoring.statuses",
+            "edx_proctoring.tests",
+            "edx_proctoring.tests.test_api",
+            "edx_proctoring.tests.test_email",
+            "edx_proctoring.tests.test_models",
+            "edx_proctoring.tests.test_reviews",
+            "edx_proctoring.tests.test_serializer",
+            "edx_proctoring.tests.test_services",
+            "edx_proctoring.tests.test_student_view",
+            "edx_proctoring.tests.test_utils",
+            "edx_proctoring.tests.test_views",
+            "edx_proctoring.tests.test_workerconfig",
+            "edx_proctoring.tests.utils",
             "edx_proctoring.urls",
             "edx_proctoring.utils",
             "edx_proctoring.views"
         ],
-        "version": "2.0.0"
+        "version": "2.0.1"
     },
     "edx-proctoring-proctortrack": {
         "cmdline": [],
@@ -27138,7 +27215,7 @@
             "test.unit.test_validators",
             "test.unit.testvars"
         ],
-        "version": "5.7.5"
+        "version": "5.7.6"
     },
     "elasticsearch-django": {
         "cmdline": [],
@@ -40738,9 +40815,11 @@
             "enecodhutils.mail",
             "enecodhutils.mail.outlook",
             "enecodhutils.pipeline",
-            "enecodhutils.pipeline.dh_kafka"
+            "enecodhutils.pipeline.dh_kafka",
+            "enecodhutils.validations",
+            "enecodhutils.validations.dh_at"
         ],
-        "version": "2.3.2"
+        "version": "2.3.4"
     },
     "enerdata": {
         "cmdline": [],
@@ -57614,11 +57693,6 @@
         ],
         "version": "1.0"
     },
-    "es-vrp": {
-        "cmdline": [],
-        "modules": [],
-        "version": ""
-    },
     "es-wrapper": {
         "cmdline": [],
         "modules": [
@@ -60526,6 +60600,7 @@
             "esrally.log",
             "esrally.mechanic",
             "esrally.mechanic.cluster",
+            "esrally.mechanic.java_resolver",
             "esrally.mechanic.launcher",
             "esrally.mechanic.mechanic",
             "esrally.mechanic.provisioner",
@@ -60558,7 +60633,7 @@
             "esrally.utils.versions",
             "esrally.version"
         ],
-        "version": "1.0.4"
+        "version": "1.1.0"
     },
     "esrapy": {
         "cmdline": [],
@@ -62413,7 +62488,6 @@
         "modules": [
             "brownie",
             "brownie._config",
-            "brownie._registry",
             "brownie.cli",
             "brownie.cli.bake",
             "brownie.cli.compile",
@@ -62433,6 +62507,7 @@
             "brownie.gui.textbook",
             "brownie.network",
             "brownie.network.account",
+            "brownie.network.alert",
             "brownie.network.contract",
             "brownie.network.event",
             "brownie.network.history",
@@ -62440,19 +62515,17 @@
             "brownie.network.transaction",
             "brownie.network.web3",
             "brownie.project",
-            "brownie.project._build",
+            "brownie.project.build",
+            "brownie.project.compiler",
+            "brownie.project.sources",
             "brownie.test",
             "brownie.test.check",
             "brownie.test.coverage",
             "brownie.types",
             "brownie.types.convert",
-            "brownie.types.types",
-            "brownie.utils",
-            "brownie.utils.alert",
-            "brownie.utils.compiler",
-            "brownie.utils.sha_compare"
+            "brownie.types.types"
         ],
-        "version": "1.0.0b3"
+        "version": "1.0.0b4"
     },
     "eth-channel": {
         "cmdline": [],
@@ -66266,7 +66339,7 @@
             "euphorie.tests.test_decorators",
             "euphorie.tests.test_json"
         ],
-        "version": "10.1.10"
+        "version": "10.1.11"
     },
     "euplotid": {
         "cmdline": [],
@@ -74147,6 +74220,13 @@
         ],
         "version": "0.0.1"
     },
+    "example-pkg-brawndojo": {
+        "cmdline": [],
+        "modules": [
+            "example_pkg_BRAWNDOJO"
+        ],
+        "version": "0.0.2"
+    },
     "example-pkg-cloos": {
         "cmdline": [],
         "modules": [
@@ -78092,6 +78172,16 @@
         ],
         "version": "0.0.1"
     },
+    "expandpath": {
+        "cmdline": [],
+        "modules": [],
+        "version": ""
+    },
+    "expandvars": {
+        "cmdline": [],
+        "modules": [],
+        "version": "0.2"
+    },
     "expatriate": {
         "cmdline": [],
         "modules": [
@@ -81233,7 +81323,7 @@
             "extended_networkx_tools.Tools",
             "extended_networkx_tools.Visual"
         ],
-        "version": "0.16.0rc1"
+        "version": "0.16.1rc1"
     },
     "extended-pathlib": {
         "cmdline": [],
@@ -83640,11 +83730,10 @@
             "ezclimate.optimization",
             "ezclimate.storage_tree",
             "ezclimate.tools",
-            "ezclimate.tools-nonworking",
             "ezclimate.tree",
             "ezclimate.utility"
         ],
-        "version": "2.0.6"
+        "version": "2.0.7"
     },
     "ezcluster": {
         "cmdline": [],
