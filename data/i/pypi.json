@@ -18916,7 +18916,7 @@
             "imgio.pfm",
             "imgio.pnm"
         ],
-        "version": "0.5.0"
+        "version": "0.5.1"
     },
     "imgix": {
         "cmdline": [],
@@ -19862,9 +19862,9 @@
             "r33._settings",
             "tests",
             "tests.test_basic",
-            "tests.test_generate_roi"
+            "tests.test_roi"
         ],
-        "version": "0.3.10"
+        "version": "0.3.11"
     },
     "imi": {
         "cmdline": [],
@@ -20042,10 +20042,13 @@
             "imjoy.imjoyUtils",
             "imjoy.imjoyUtils3",
             "imjoy.imjoyWorkerTemplate",
+            "imjoy.util",
+            "imjoy.worker",
+            "imjoy.worker3",
             "tests",
             "tests.test_framework"
         ],
-        "version": "0.7.66"
+        "version": "0.7.68"
     },
     "imks": {
         "cmdline": [],
@@ -34087,62 +34090,60 @@
     "infi-asi": {
         "cmdline": [],
         "modules": [
-            "infi",
-            "infi.asi",
-            "infi.asi.__version__",
-            "infi.asi.aix",
-            "infi.asi.cdb",
-            "infi.asi.cdb.compare_and_write",
-            "infi.asi.cdb.control",
-            "infi.asi.cdb.diagnostic",
-            "infi.asi.cdb.diagnostic.ses_pages",
-            "infi.asi.cdb.diagnostic.ses_pages.configuration",
-            "infi.asi.cdb.diagnostic.ses_pages.element_descriptor",
-            "infi.asi.cdb.diagnostic.ses_pages.enclosure_status",
-            "infi.asi.cdb.diagnostic.ses_pages.supported_pages",
-            "infi.asi.cdb.diagnostic.ses_pages.unknown",
-            "infi.asi.cdb.diagnostic.ses_pages.vendor_0x80",
-            "infi.asi.cdb.inquiry",
-            "infi.asi.cdb.inquiry.standard",
-            "infi.asi.cdb.inquiry.vpd_pages",
-            "infi.asi.cdb.inquiry.vpd_pages.ata_information",
-            "infi.asi.cdb.inquiry.vpd_pages.block_limits",
-            "infi.asi.cdb.inquiry.vpd_pages.designators",
-            "infi.asi.cdb.inquiry.vpd_pages.device_identification",
-            "infi.asi.cdb.inquiry.vpd_pages.logical_block_provisioning",
-            "infi.asi.cdb.inquiry.vpd_pages.supported_pages",
-            "infi.asi.cdb.inquiry.vpd_pages.unit_serial_number",
-            "infi.asi.cdb.inquiry.vpd_pages.unknown",
-            "infi.asi.cdb.inquiry.vpd_pages.veritas",
-            "infi.asi.cdb.log_sense",
-            "infi.asi.cdb.operation_code",
-            "infi.asi.cdb.persist",
-            "infi.asi.cdb.persist.input",
-            "infi.asi.cdb.persist.output",
-            "infi.asi.cdb.persist.transport",
-            "infi.asi.cdb.read",
-            "infi.asi.cdb.read_capacity",
-            "infi.asi.cdb.receive_copy_operating_parameters",
-            "infi.asi.cdb.release",
-            "infi.asi.cdb.report_luns",
-            "infi.asi.cdb.reserve",
-            "infi.asi.cdb.rtpg",
-            "infi.asi.cdb.tur",
-            "infi.asi.cdb.unmap",
-            "infi.asi.cdb.write",
-            "infi.asi.cdb.write_same",
-            "infi.asi.coroutines",
-            "infi.asi.coroutines.sync_adapter",
-            "infi.asi.errors",
-            "infi.asi.executers",
-            "infi.asi.linux",
-            "infi.asi.sense",
-            "infi.asi.sense.asc",
-            "infi.asi.solaris",
-            "infi.asi.unix",
-            "infi.asi.win32"
+            "asi",
+            "asi.aix",
+            "asi.cdb",
+            "asi.cdb.compare_and_write",
+            "asi.cdb.control",
+            "asi.cdb.diagnostic",
+            "asi.cdb.diagnostic.ses_pages",
+            "asi.cdb.diagnostic.ses_pages.configuration",
+            "asi.cdb.diagnostic.ses_pages.element_descriptor",
+            "asi.cdb.diagnostic.ses_pages.enclosure_status",
+            "asi.cdb.diagnostic.ses_pages.supported_pages",
+            "asi.cdb.diagnostic.ses_pages.unknown",
+            "asi.cdb.diagnostic.ses_pages.vendor_0x80",
+            "asi.cdb.inquiry",
+            "asi.cdb.inquiry.standard",
+            "asi.cdb.inquiry.vpd_pages",
+            "asi.cdb.inquiry.vpd_pages.ata_information",
+            "asi.cdb.inquiry.vpd_pages.block_limits",
+            "asi.cdb.inquiry.vpd_pages.designators",
+            "asi.cdb.inquiry.vpd_pages.device_identification",
+            "asi.cdb.inquiry.vpd_pages.logical_block_provisioning",
+            "asi.cdb.inquiry.vpd_pages.supported_pages",
+            "asi.cdb.inquiry.vpd_pages.unit_serial_number",
+            "asi.cdb.inquiry.vpd_pages.unknown",
+            "asi.cdb.inquiry.vpd_pages.veritas",
+            "asi.cdb.log_sense",
+            "asi.cdb.operation_code",
+            "asi.cdb.persist",
+            "asi.cdb.persist.input",
+            "asi.cdb.persist.output",
+            "asi.cdb.persist.transport",
+            "asi.cdb.read",
+            "asi.cdb.read_capacity",
+            "asi.cdb.receive_copy_operating_parameters",
+            "asi.cdb.release",
+            "asi.cdb.report_luns",
+            "asi.cdb.reserve",
+            "asi.cdb.rtpg",
+            "asi.cdb.tur",
+            "asi.cdb.unmap",
+            "asi.cdb.write",
+            "asi.cdb.write_same",
+            "asi.coroutines",
+            "asi.coroutines.sync_adapter",
+            "asi.errors",
+            "asi.executers",
+            "asi.linux",
+            "asi.sense",
+            "asi.sense.asc",
+            "asi.solaris",
+            "asi.unix",
+            "asi.win32"
         ],
-        "version": "0.4.20"
+        "version": "0.4.21"
     },
     "infi-asi-utils": {
         "cmdline": [],
@@ -34464,21 +34465,19 @@
     "infi-gevent-utils": {
         "cmdline": [],
         "modules": [
-            "infi",
-            "infi.gevent_utils",
-            "infi.gevent_utils.__version__",
-            "infi.gevent_utils.deferred",
-            "infi.gevent_utils.gevent_loop",
-            "infi.gevent_utils.glob",
-            "infi.gevent_utils.json_utils",
-            "infi.gevent_utils.os",
-            "infi.gevent_utils.os.path",
-            "infi.gevent_utils.safe_greenlets",
-            "infi.gevent_utils.shutil",
-            "infi.gevent_utils.silent_greenlets",
-            "infi.gevent_utils.tempfile"
+            "gevent_utils",
+            "gevent_utils.deferred",
+            "gevent_utils.gevent_loop",
+            "gevent_utils.glob",
+            "gevent_utils.json_utils",
+            "gevent_utils.os",
+            "gevent_utils.os.path",
+            "gevent_utils.safe_greenlets",
+            "gevent_utils.shutil",
+            "gevent_utils.silent_greenlets",
+            "gevent_utils.tempfile"
         ],
-        "version": "0.2.6"
+        "version": "0.2.7"
     },
     "infi-git-mirror": {
         "cmdline": [],
@@ -34732,7 +34731,7 @@
             "multipathtools.service.tests",
             "multipathtools.simulator"
         ],
-        "version": "0.1.39"
+        "version": "0.1.40"
     },
     "infi-nose-html-output": {
         "cmdline": [],
@@ -34789,33 +34788,31 @@
     "infi-projector": {
         "cmdline": [],
         "modules": [
-            "infi",
-            "infi.projector",
-            "infi.projector.__version__",
-            "infi.projector.commandline_parser",
-            "infi.projector.helper",
-            "infi.projector.helper.assertions",
-            "infi.projector.helper.utils",
-            "infi.projector.helper.utils.package_sets",
-            "infi.projector.plugins",
-            "infi.projector.plugins.builtins",
-            "infi.projector.plugins.builtins.console_scripts",
-            "infi.projector.plugins.builtins.devenv",
-            "infi.projector.plugins.builtins.gui_scripts",
-            "infi.projector.plugins.builtins.isolated_python",
-            "infi.projector.plugins.builtins.js_requirements",
-            "infi.projector.plugins.builtins.package_data",
-            "infi.projector.plugins.builtins.package_scripts",
-            "infi.projector.plugins.builtins.repository",
-            "infi.projector.plugins.builtins.repository.skeleton",
-            "infi.projector.plugins.builtins.repository.skeleton.bootstrap",
-            "infi.projector.plugins.builtins.repository.skeleton.get-pip",
-            "infi.projector.plugins.builtins.requirements",
-            "infi.projector.plugins.builtins.submodules",
-            "infi.projector.plugins.builtins.version",
-            "infi.projector.scripts"
+            "projector",
+            "projector.commandline_parser",
+            "projector.helper",
+            "projector.helper.assertions",
+            "projector.helper.utils",
+            "projector.helper.utils.package_sets",
+            "projector.plugins",
+            "projector.plugins.builtins",
+            "projector.plugins.builtins.console_scripts",
+            "projector.plugins.builtins.devenv",
+            "projector.plugins.builtins.gui_scripts",
+            "projector.plugins.builtins.isolated_python",
+            "projector.plugins.builtins.js_requirements",
+            "projector.plugins.builtins.package_data",
+            "projector.plugins.builtins.package_scripts",
+            "projector.plugins.builtins.repository",
+            "projector.plugins.builtins.repository.skeleton",
+            "projector.plugins.builtins.repository.skeleton.bootstrap",
+            "projector.plugins.builtins.repository.skeleton.get-pip",
+            "projector.plugins.builtins.requirements",
+            "projector.plugins.builtins.submodules",
+            "projector.plugins.builtins.version",
+            "projector.scripts"
         ],
-        "version": "1.0.8"
+        "version": "1.0.9"
     },
     "infi-projector-plugins-sync": {
         "cmdline": [],
@@ -37915,98 +37912,98 @@
     "infi-storagemodel": {
         "cmdline": [],
         "modules": [
-            "infi",
-            "infi.storagemodel",
-            "infi.storagemodel.__version__",
-            "infi.storagemodel.aix",
-            "infi.storagemodel.aix.mount",
-            "infi.storagemodel.aix.native_multipath",
-            "infi.storagemodel.aix.rescan",
-            "infi.storagemodel.aix.scsi",
-            "infi.storagemodel.base",
-            "infi.storagemodel.base.diagnostic",
-            "infi.storagemodel.base.disk",
-            "infi.storagemodel.base.filesystem",
-            "infi.storagemodel.base.gevent_wrapper",
-            "infi.storagemodel.base.inquiry",
-            "infi.storagemodel.base.mount",
-            "infi.storagemodel.base.multipath",
-            "infi.storagemodel.base.partition",
-            "infi.storagemodel.base.scsi",
-            "infi.storagemodel.base.utils",
-            "infi.storagemodel.connectivity",
-            "infi.storagemodel.connectivity.tests",
-            "infi.storagemodel.errors",
-            "infi.storagemodel.examples",
-            "infi.storagemodel.examples.tests",
-            "infi.storagemodel.linux",
-            "infi.storagemodel.linux.block",
-            "infi.storagemodel.linux.disk",
-            "infi.storagemodel.linux.filesystem",
-            "infi.storagemodel.linux.iscsi",
-            "infi.storagemodel.linux.mount",
-            "infi.storagemodel.linux.native_multipath",
-            "infi.storagemodel.linux.partition",
-            "infi.storagemodel.linux.rescan_scsi_bus",
-            "infi.storagemodel.linux.rescan_scsi_bus.getters",
-            "infi.storagemodel.linux.rescan_scsi_bus.logic",
-            "infi.storagemodel.linux.rescan_scsi_bus.scsi",
-            "infi.storagemodel.linux.rescan_scsi_bus.tests",
-            "infi.storagemodel.linux.rescan_scsi_bus.utils",
-            "infi.storagemodel.linux.scsi",
-            "infi.storagemodel.linux.sysfs",
-            "infi.storagemodel.linux.veritas_multipath",
-            "infi.storagemodel.osx",
-            "infi.storagemodel.predicates",
-            "infi.storagemodel.predicates.tests",
-            "infi.storagemodel.solaris",
-            "infi.storagemodel.solaris.devicemanager",
-            "infi.storagemodel.solaris.devicemanager.kstat",
-            "infi.storagemodel.solaris.filesystem",
-            "infi.storagemodel.solaris.mount",
-            "infi.storagemodel.solaris.native_multipath",
-            "infi.storagemodel.solaris.scsi",
-            "infi.storagemodel.solaris.veritas_multipath",
-            "infi.storagemodel.unix",
-            "infi.storagemodel.unix.filesystem",
-            "infi.storagemodel.unix.mount",
-            "infi.storagemodel.unix.utils",
-            "infi.storagemodel.unix.veritas_multipath",
-            "infi.storagemodel.vendor",
-            "infi.storagemodel.vendor.infinidat",
-            "infi.storagemodel.vendor.infinidat.infinibox",
-            "infi.storagemodel.vendor.infinidat.infinibox.fc_port",
-            "infi.storagemodel.vendor.infinidat.infinibox.json_page",
-            "infi.storagemodel.vendor.infinidat.infinibox.mixin",
-            "infi.storagemodel.vendor.infinidat.infinibox.mixin.inquiry",
-            "infi.storagemodel.vendor.infinidat.infinibox.mixin.sophisticated",
-            "infi.storagemodel.vendor.infinidat.infinibox.mixin.tests",
-            "infi.storagemodel.vendor.infinidat.infinibox.mixin.volume",
-            "infi.storagemodel.vendor.infinidat.infinibox.naa",
-            "infi.storagemodel.vendor.infinidat.infinibox.naa.tests",
-            "infi.storagemodel.vendor.infinidat.infinibox.string_page",
-            "infi.storagemodel.vendor.infinidat.infinibox.wwn",
-            "infi.storagemodel.vendor.infinidat.predicates",
-            "infi.storagemodel.vendor.infinidat.shortcuts",
-            "infi.storagemodel.vendor.infinidat.tests",
-            "infi.storagemodel.vmware",
-            "infi.storagemodel.vmware.patches",
-            "infi.storagemodel.vmware.patches.hbaapi",
-            "infi.storagemodel.vmware.patches.iscsiapi",
-            "infi.storagemodel.vmware.patches.storagemodel",
-            "infi.storagemodel.windows",
-            "infi.storagemodel.windows.device_helpers",
-            "infi.storagemodel.windows.device_mixin",
-            "infi.storagemodel.windows.disk",
-            "infi.storagemodel.windows.filesystem",
-            "infi.storagemodel.windows.mount",
-            "infi.storagemodel.windows.native_multipath",
-            "infi.storagemodel.windows.partition",
-            "infi.storagemodel.windows.scsi",
-            "infi.storagemodel.windows.tests",
-            "infi.storagemodel.windows.utils"
+            "storagemodel",
+            "storagemodel.aix",
+            "storagemodel.aix.mount",
+            "storagemodel.aix.native_multipath",
+            "storagemodel.aix.rescan",
+            "storagemodel.aix.scsi",
+            "storagemodel.base",
+            "storagemodel.base.diagnostic",
+            "storagemodel.base.disk",
+            "storagemodel.base.filesystem",
+            "storagemodel.base.gevent_wrapper",
+            "storagemodel.base.inquiry",
+            "storagemodel.base.mount",
+            "storagemodel.base.multipath",
+            "storagemodel.base.partition",
+            "storagemodel.base.scsi",
+            "storagemodel.base.utils",
+            "storagemodel.connectivity",
+            "storagemodel.connectivity.tests",
+            "storagemodel.errors",
+            "storagemodel.examples",
+            "storagemodel.examples.tests",
+            "storagemodel.linux",
+            "storagemodel.linux.block",
+            "storagemodel.linux.disk",
+            "storagemodel.linux.filesystem",
+            "storagemodel.linux.iscsi",
+            "storagemodel.linux.mount",
+            "storagemodel.linux.native_multipath",
+            "storagemodel.linux.partition",
+            "storagemodel.linux.rescan_scsi_bus",
+            "storagemodel.linux.rescan_scsi_bus.getters",
+            "storagemodel.linux.rescan_scsi_bus.logic",
+            "storagemodel.linux.rescan_scsi_bus.scsi",
+            "storagemodel.linux.rescan_scsi_bus.tests",
+            "storagemodel.linux.rescan_scsi_bus.utils",
+            "storagemodel.linux.scsi",
+            "storagemodel.linux.sysfs",
+            "storagemodel.linux.veritas_multipath",
+            "storagemodel.osx",
+            "storagemodel.predicates",
+            "storagemodel.predicates.tests",
+            "storagemodel.solaris",
+            "storagemodel.solaris.devicemanager",
+            "storagemodel.solaris.devicemanager.kstat",
+            "storagemodel.solaris.filesystem",
+            "storagemodel.solaris.mount",
+            "storagemodel.solaris.native_multipath",
+            "storagemodel.solaris.scsi",
+            "storagemodel.solaris.veritas_multipath",
+            "storagemodel.unix",
+            "storagemodel.unix.filesystem",
+            "storagemodel.unix.mount",
+            "storagemodel.unix.multipath",
+            "storagemodel.unix.utils",
+            "storagemodel.unix.veritas_multipath",
+            "storagemodel.vendor",
+            "storagemodel.vendor.infinidat",
+            "storagemodel.vendor.infinidat.infinibox",
+            "storagemodel.vendor.infinidat.infinibox.connectivity",
+            "storagemodel.vendor.infinidat.infinibox.fc_port",
+            "storagemodel.vendor.infinidat.infinibox.json_page",
+            "storagemodel.vendor.infinidat.infinibox.mixin",
+            "storagemodel.vendor.infinidat.infinibox.mixin.inquiry",
+            "storagemodel.vendor.infinidat.infinibox.mixin.sophisticated",
+            "storagemodel.vendor.infinidat.infinibox.mixin.tests",
+            "storagemodel.vendor.infinidat.infinibox.mixin.volume",
+            "storagemodel.vendor.infinidat.infinibox.naa",
+            "storagemodel.vendor.infinidat.infinibox.naa.tests",
+            "storagemodel.vendor.infinidat.infinibox.string_page",
+            "storagemodel.vendor.infinidat.infinibox.wwn",
+            "storagemodel.vendor.infinidat.predicates",
+            "storagemodel.vendor.infinidat.shortcuts",
+            "storagemodel.vendor.infinidat.tests",
+            "storagemodel.vmware",
+            "storagemodel.vmware.patches",
+            "storagemodel.vmware.patches.hbaapi",
+            "storagemodel.vmware.patches.iscsiapi",
+            "storagemodel.vmware.patches.storagemodel",
+            "storagemodel.windows",
+            "storagemodel.windows.device_helpers",
+            "storagemodel.windows.device_mixin",
+            "storagemodel.windows.disk",
+            "storagemodel.windows.filesystem",
+            "storagemodel.windows.mount",
+            "storagemodel.windows.native_multipath",
+            "storagemodel.windows.partition",
+            "storagemodel.windows.scsi",
+            "storagemodel.windows.tests",
+            "storagemodel.windows.utils"
         ],
-        "version": "0.4.27"
+        "version": "0.4.28"
     },
     "infi-systray": {
         "cmdline": [],
@@ -38148,18 +38145,16 @@
     "infi-wmpio": {
         "cmdline": [],
         "modules": [
-            "infi",
-            "infi.wmpio",
-            "infi.wmpio.__version__",
-            "infi.wmpio.mpclaim",
-            "infi.wmpio.mpclaim.tests",
-            "infi.wmpio.scripts",
-            "infi.wmpio.wmi",
-            "infi.wmpio.wmi.model",
-            "infi.wmpio.wmi.model.tests",
-            "infi.wmpio.wmi.tests"
+            "wmpio",
+            "wmpio.mpclaim",
+            "wmpio.mpclaim.tests",
+            "wmpio.scripts",
+            "wmpio.wmi",
+            "wmpio.wmi.model",
+            "wmpio.wmi.model.tests",
+            "wmpio.wmi.tests"
         ],
-        "version": "0.1.29"
+        "version": "0.1.30"
     },
     "infi-zsi": {
         "cmdline": [],
@@ -44904,7 +44899,7 @@
             "tests.test_bot_unlike",
             "tests.test_variables"
         ],
-        "version": "0.37.0"
+        "version": "0.39.0"
     },
     "instabot-py": {
         "cmdline": [],
@@ -45052,6 +45047,16 @@
             "instadb.util"
         ],
         "version": "0.4.2"
+    },
+    "instadp": {
+        "cmdline": [
+            "instadp"
+        ],
+        "modules": [
+            "instadp",
+            "instadp.instadp"
+        ],
+        "version": "1.0.1"
     },
     "instafetch": {
         "cmdline": [],
@@ -45598,6 +45603,9 @@
             "instana.instrumentation.redis",
             "instana.instrumentation.sqlalchemy",
             "instana.instrumentation.sudsjurko",
+            "instana.instrumentation.tornado",
+            "instana.instrumentation.tornado.client",
+            "instana.instrumentation.tornado.server",
             "instana.instrumentation.urllib3",
             "instana.json_span",
             "instana.log",
@@ -45613,7 +45621,7 @@
             "instana.util",
             "instana.wsgi"
         ],
-        "version": "1.10.7"
+        "version": "1.11.1"
     },
     "instana-api": {
         "cmdline": [],
@@ -51831,6 +51839,9 @@
             "invana_bot.extractors.content",
             "invana_bot.extractors.images",
             "invana_bot.extractors.links",
+            "invana_bot.fields",
+            "invana_bot.fields.list",
+            "invana_bot.fields.single",
             "invana_bot.jobs",
             "invana_bot.jobs.base",
             "invana_bot.jobs.cti",
@@ -51840,9 +51851,6 @@
             "invana_bot.manifests.single",
             "invana_bot.settings",
             "invana_bot.settings.default",
-            "invana_bot.storage_index",
-            "invana_bot.storage_index.fields",
-            "invana_bot.storage_index.fields.default",
             "invana_bot.transformers",
             "invana_bot.transformers.default",
             "invana_bot.transformers.executors",
@@ -51858,7 +51866,7 @@
             "invana_bot.utils.selectors",
             "invana_bot.utils.url"
         ],
-        "version": "0.1.8"
+        "version": "0.1.10"
     },
     "invana-transformers": {
         "cmdline": [],
@@ -53752,13 +53760,28 @@
         "version": ""
     },
     "invirtualenv": {
-        "cmdline": [
-            "create_package",
-            "deploy_virtualenv",
-            "package_virtualenv_name"
+        "cmdline": [],
+        "modules": [
+            "invirtualenv",
+            "invirtualenv.cli",
+            "invirtualenv.config",
+            "invirtualenv.contextmanager",
+            "invirtualenv.deploy",
+            "invirtualenv.exceptions",
+            "invirtualenv.package",
+            "invirtualenv.plugin",
+            "invirtualenv.plugin_base",
+            "invirtualenv.utility",
+            "invirtualenv.virtualenv",
+            "invirtualenv_plugins",
+            "invirtualenv_plugins.docker",
+            "invirtualenv_plugins.parsedconfig",
+            "invirtualenv_plugins.rpm",
+            "invirtualenv_plugins.rpm_scripts",
+            "invirtualenv_plugins.rpm_scripts.post_install",
+            "invirtualenv_plugins.rpm_scripts.pre_uninstall"
         ],
-        "modules": [],
-        "version": "19.1.10"
+        "version": "19.1.13"
     },
     "invisible-ink": {
         "cmdline": [],
@@ -56291,9 +56314,10 @@
             "iopipe.report",
             "iopipe.send_report",
             "iopipe.signer",
-            "iopipe.system"
+            "iopipe.system",
+            "iopipe.timeout"
         ],
-        "version": "1.7.17"
+        "version": "1.7.18"
     },
     "iopipe-cli": {
         "cmdline": [],
@@ -56905,10 +56929,13 @@
         "cmdline": [],
         "modules": [
             "iot49connect",
-            "iot49connect.client",
-            "iot49connect.server"
+            "iot49connect.broadcast",
+            "iot49connect.default_settings",
+            "iot49connect.read_settings",
+            "iot49connect.server",
+            "iot49connect.version"
         ],
-        "version": "0.1.0"
+        "version": "0.3.0.dev0"
     },
     "iota": {
         "cmdline": [],
@@ -58276,7 +58303,7 @@
             "iotlabwscli.tests.parser_test",
             "iotlabwscli.websocket"
         ],
-        "version": "0.1.1"
+        "version": "0.2.0"
     },
     "iotloranode": {
         "cmdline": [],
@@ -58402,7 +58429,7 @@
             "iotrans.out",
             "iotrans.utils"
         ],
-        "version": "0.0.2"
+        "version": "0.0.3"
     },
     "iotrelay": {
         "cmdline": [],
@@ -60355,14 +60382,43 @@
         "modules": [
             "ipfsapi",
             "ipfsapi.client",
+            "ipfsapi.client.base",
             "ipfsapi.encoding",
             "ipfsapi.exceptions",
-            "ipfsapi.http",
-            "ipfsapi.multipart",
-            "ipfsapi.utils",
             "ipfsapi.version"
         ],
-        "version": "0.4.3"
+        "version": "0.4.4"
+    },
+    "ipfshttpclient": {
+        "cmdline": [],
+        "modules": [
+            "ipfshttpclient",
+            "ipfshttpclient.client",
+            "ipfshttpclient.client.base",
+            "ipfshttpclient.client.bitswap",
+            "ipfshttpclient.client.block",
+            "ipfshttpclient.client.bootstrap",
+            "ipfshttpclient.client.config",
+            "ipfshttpclient.client.dht",
+            "ipfshttpclient.client.files",
+            "ipfshttpclient.client.key",
+            "ipfshttpclient.client.miscellaneous",
+            "ipfshttpclient.client.name",
+            "ipfshttpclient.client.object",
+            "ipfshttpclient.client.pin",
+            "ipfshttpclient.client.pubsub",
+            "ipfshttpclient.client.repo",
+            "ipfshttpclient.client.swarm",
+            "ipfshttpclient.client.unstable",
+            "ipfshttpclient.encoding",
+            "ipfshttpclient.exceptions",
+            "ipfshttpclient.http",
+            "ipfshttpclient.multipart",
+            "ipfshttpclient.requests_wrapper",
+            "ipfshttpclient.utils",
+            "ipfshttpclient.version"
+        ],
+        "version": "0.4.11"
     },
     "ipgdrive": {
         "cmdline": [],
@@ -63133,7 +63189,7 @@
             "ipyparallel.tests.test_view",
             "ipyparallel.util"
         ],
-        "version": "6.2.3"
+        "version": "6.2.4"
     },
     "ipyparallel-mesos": {
         "cmdline": [],
