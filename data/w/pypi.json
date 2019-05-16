@@ -3043,7 +3043,7 @@
             "wagtailextras.templatetags",
             "wagtailextras.templatetags.wagtailextras_tags"
         ],
-        "version": "0.2.1"
+        "version": "0.2.4"
     },
     "wagtail-factories": {
         "cmdline": [],
@@ -7913,6 +7913,13 @@
             "waldur_ansible.python_management.urls",
             "waldur_ansible.python_management.utils",
             "waldur_ansible.python_management.views",
+            "waldur_auth_bcc",
+            "waldur_auth_bcc.apps",
+            "waldur_auth_bcc.client",
+            "waldur_auth_bcc.extension",
+            "waldur_auth_bcc.serializers",
+            "waldur_auth_bcc.urls",
+            "waldur_auth_bcc.views",
             "waldur_auth_openid",
             "waldur_auth_openid.apps",
             "waldur_auth_openid.auth",
@@ -8056,6 +8063,7 @@
             "waldur_core.core.migrations.0004_user_details",
             "waldur_core.core.migrations.0005_add_user_language_and_competence",
             "waldur_core.core.migrations.0005_user_backend_id",
+            "waldur_core.core.migrations.0006_extend_organization",
             "waldur_core.core.migrations.0006_user_is_support",
             "waldur_core.core.migrations.0007_user_token_lifetime",
             "waldur_core.core.migrations.0008_sshpublickey_is_shared",
@@ -8070,6 +8078,8 @@
             "waldur_core.core.serializers",
             "waldur_core.core.signals",
             "waldur_core.core.tasks",
+            "waldur_core.core.templatetags",
+            "waldur_core.core.templatetags.waldur_core",
             "waldur_core.core.test_runner",
             "waldur_core.core.utils",
             "waldur_core.core.validators",
@@ -8210,6 +8220,8 @@
             "waldur_core.structure.migrations.0005_customer_domain",
             "waldur_core.structure.migrations.0006_customer_backend_id",
             "waldur_core.structure.migrations.0007_customer_blocked",
+            "waldur_core.structure.migrations.0008_customer_division",
+            "waldur_core.structure.migrations.0009_project_is_removed",
             "waldur_core.structure.migrations.0022_init_global_count_quotas",
             "waldur_core.structure.migrations.0023_add_creation_state",
             "waldur_core.structure.migrations.0024_add_sugarcrm_to_settings",
@@ -8255,15 +8267,14 @@
             "waldur_core.users.admin",
             "waldur_core.users.filters",
             "waldur_core.users.migrations",
-            "waldur_core.users.migrations.0001_initial",
             "waldur_core.users.migrations.0001_squashed_0004",
-            "waldur_core.users.migrations.0002_invitation_error_message",
-            "waldur_core.users.migrations.0003_invitation_civil_number",
-            "waldur_core.users.migrations.0004_migrate_to_new_permissions_model",
+            "waldur_core.users.migrations.0002_add_user_details",
+            "waldur_core.users.migrations.0003_extend_organization",
             "waldur_core.users.models",
             "waldur_core.users.serializers",
             "waldur_core.users.tasks",
             "waldur_core.users.urls",
+            "waldur_core.users.utils",
             "waldur_core.users.views",
             "waldur_cost_planning",
             "waldur_cost_planning.admin",
@@ -8398,39 +8409,6 @@
             "waldur_mastermind.common.mixins",
             "waldur_mastermind.common.serializers",
             "waldur_mastermind.common.utils",
-            "waldur_mastermind.experts",
-            "waldur_mastermind.experts.admin",
-            "waldur_mastermind.experts.apps",
-            "waldur_mastermind.experts.extension",
-            "waldur_mastermind.experts.filters",
-            "waldur_mastermind.experts.handlers",
-            "waldur_mastermind.experts.log",
-            "waldur_mastermind.experts.management",
-            "waldur_mastermind.experts.management.commands",
-            "waldur_mastermind.experts.management.commands.update_expert_quota",
-            "waldur_mastermind.experts.managers",
-            "waldur_mastermind.experts.migrations",
-            "waldur_mastermind.experts.migrations.0001_initial",
-            "waldur_mastermind.experts.migrations.0002_expertrequest",
-            "waldur_mastermind.experts.migrations.0003_expertbid",
-            "waldur_mastermind.experts.migrations.0004_expertbid_description",
-            "waldur_mastermind.experts.migrations.0005_expert_contract",
-            "waldur_mastermind.experts.migrations.0006_expertrequest_issue",
-            "waldur_mastermind.experts.migrations.0007_add_details_to_expertrequest",
-            "waldur_mastermind.experts.migrations.0008_expertrequest_extra",
-            "waldur_mastermind.experts.migrations.0009_description_text_field",
-            "waldur_mastermind.experts.migrations.0010_preserve_deleted_project_data",
-            "waldur_mastermind.experts.migrations.0011_populate_project_cache",
-            "waldur_mastermind.experts.migrations.0012_expertprovider_enable_notifications",
-            "waldur_mastermind.experts.migrations.0013_expertcontract__file",
-            "waldur_mastermind.experts.migrations.0014_immutable_default_json",
-            "waldur_mastermind.experts.models",
-            "waldur_mastermind.experts.quotas",
-            "waldur_mastermind.experts.registrators",
-            "waldur_mastermind.experts.serializers",
-            "waldur_mastermind.experts.tasks",
-            "waldur_mastermind.experts.urls",
-            "waldur_mastermind.experts.views",
             "waldur_mastermind.invoices",
             "waldur_mastermind.invoices.admin",
             "waldur_mastermind.invoices.apps",
@@ -8470,6 +8448,7 @@
             "waldur_mastermind.invoices.migrations.0027_migrate_items",
             "waldur_mastermind.invoices.migrations.0028_delete_offering_and_openstack_item",
             "waldur_mastermind.invoices.migrations.0029_migrate_invoice_item_name",
+            "waldur_mastermind.invoices.migrations.0030_json_details_on_genericinvoiceitem",
             "waldur_mastermind.invoices.models",
             "waldur_mastermind.invoices.registrators",
             "waldur_mastermind.invoices.serializers",
@@ -8486,6 +8465,7 @@
             "waldur_mastermind.marketplace.extension",
             "waldur_mastermind.marketplace.filters",
             "waldur_mastermind.marketplace.handlers",
+            "waldur_mastermind.marketplace.log",
             "waldur_mastermind.marketplace.management",
             "waldur_mastermind.marketplace.management.commands",
             "waldur_mastermind.marketplace.management.commands.import_marketplace_orders",
@@ -8559,6 +8539,21 @@
             "waldur_mastermind.marketplace.migrations.0064_remove_resource_count_project_field",
             "waldur_mastermind.marketplace.migrations.0065_add_resource_cost_estimate",
             "waldur_mastermind.marketplace.migrations.0066_cartitem_cost",
+            "waldur_mastermind.marketplace.migrations.0067_offeringcomponent_disable_quotas",
+            "waldur_mastermind.marketplace.migrations.0068_componentusage_description",
+            "waldur_mastermind.marketplace.migrations.0069_componentusage_uuid",
+            "waldur_mastermind.marketplace.migrations.0070_componentusage_uuid_populate",
+            "waldur_mastermind.marketplace.migrations.0071_componentusage_uuid_unique",
+            "waldur_mastermind.marketplace.migrations.0072_offering_component_product_code",
+            "waldur_mastermind.marketplace.migrations.0073_plan_period_to_usage",
+            "waldur_mastermind.marketplace.migrations.0074_attribute_default",
+            "waldur_mastermind.marketplace.migrations.0075_plan_period_uuid",
+            "waldur_mastermind.marketplace.migrations.0076_plan_period_uuid_populate",
+            "waldur_mastermind.marketplace.migrations.0077_plan_period_uuid_unique",
+            "waldur_mastermind.marketplace.migrations.0078_fix_plan_component_amount",
+            "waldur_mastermind.marketplace.migrations.0079_orderitem_old_plan",
+            "waldur_mastermind.marketplace.migrations.0080_resource_name",
+            "waldur_mastermind.marketplace.migrations.0081_allow_ico_mime_type_for_images",
             "waldur_mastermind.marketplace.models",
             "waldur_mastermind.marketplace.permissions",
             "waldur_mastermind.marketplace.plugins",
@@ -8592,6 +8587,10 @@
             "waldur_mastermind.marketplace_slurm.apps",
             "waldur_mastermind.marketplace_slurm.extension",
             "waldur_mastermind.marketplace_slurm.handlers",
+            "waldur_mastermind.marketplace_slurm.management",
+            "waldur_mastermind.marketplace_slurm.management.commands",
+            "waldur_mastermind.marketplace_slurm.management.commands.import_allocations",
+            "waldur_mastermind.marketplace_slurm.management.commands.import_slurm_service_settings",
             "waldur_mastermind.marketplace_slurm.processor",
             "waldur_mastermind.marketplace_support",
             "waldur_mastermind.marketplace_support.apps",
@@ -8718,6 +8717,7 @@
             "waldur_mastermind.support_invoices.migrations",
             "waldur_mastermind.support_invoices.migrations.0001_initial",
             "waldur_mastermind.support_invoices.migrations.0002_delete_requestbasedoffering",
+            "waldur_mastermind.support_invoices.migrations.0003_expose_component_name",
             "waldur_mastermind.support_invoices.registrators",
             "waldur_mastermind.support_invoices.utils",
             "waldur_mastermind.zabbix_openstack",
@@ -8781,6 +8781,7 @@
             "waldur_openstack.openstack.migrations.0038_unique_spl_backend_id",
             "waldur_openstack.openstack.migrations.0039_immutable_default_json",
             "waldur_openstack.openstack.migrations.0040_unique_floating_ip",
+            "waldur_openstack.openstack.migrations.0041_tenant_default_volume_type_name",
             "waldur_openstack.openstack.models",
             "waldur_openstack.openstack.quotas",
             "waldur_openstack.openstack.serializers",
@@ -8841,6 +8842,10 @@
             "waldur_openstack.openstack_tenant.migrations.0037_internal_ip_settings",
             "waldur_openstack.openstack_tenant.migrations.0038_internal_ip_settings_non_null",
             "waldur_openstack.openstack_tenant.migrations.0039_forbid_blank_backend_id",
+            "waldur_openstack.openstack_tenant.migrations.0040_volume_type",
+            "waldur_openstack.openstack_tenant.migrations.0041_volume_type_field",
+            "waldur_openstack.openstack_tenant.migrations.0042_volume_availability_zone",
+            "waldur_openstack.openstack_tenant.migrations.0043_field_availability_zone",
             "waldur_openstack.openstack_tenant.models",
             "waldur_openstack.openstack_tenant.serializers",
             "waldur_openstack.openstack_tenant.tasks",
@@ -8926,7 +8931,7 @@
             "waldur_zabbix.utils",
             "waldur_zabbix.views"
         ],
-        "version": "3.4.0"
+        "version": "3.6.3"
     },
     "waldur-openstack": {
         "cmdline": [],
@@ -9890,7 +9895,7 @@
             "wallarmrasp.stream",
             "wallarmrasp.wallarmrasp"
         ],
-        "version": "0.0.3"
+        "version": "0.0.4"
     },
     "wallberry-uberpotato": {
         "cmdline": [],
@@ -11909,12 +11914,15 @@
             "benchmarks.pqp_benchmark",
             "benchmarks.returns_benchmark",
             "tests",
+            "tests.test_app_path",
             "tests.test_arguments",
             "tests.test_nod",
             "tests.test_pqp",
             "tests.test_sanity",
             "tests.test_toaster",
             "warg",
+            "warg.app_path",
+            "warg.app_path_utilities",
             "warg.arguments",
             "warg.auto_nod_return",
             "warg.exclude",
@@ -11927,7 +11935,7 @@
             "warg.utilities",
             "warg.version"
         ],
-        "version": "0.1.0"
+        "version": "0.1.1"
     },
     "wargame": {
         "cmdline": [],
@@ -23490,6 +23498,19 @@
         ],
         "version": "0.6.0"
     },
+    "webget": {
+        "cmdline": [],
+        "modules": [
+            "webget",
+            "webget.Constants",
+            "webget.MetaExtractor",
+            "webget.Regex",
+            "webget.Validator",
+            "webget.WebScraper",
+            "webget.webget"
+        ],
+        "version": "1.0"
+    },
     "webgme-bindings": {
         "cmdline": [],
         "modules": [
@@ -30480,7 +30501,7 @@
     "wemail": {
         "cmdline": [],
         "modules": [],
-        "version": "0.1.2"
+        "version": "0.1.3"
     },
     "wemake-python-styleguide": {
         "cmdline": [],
@@ -32081,6 +32102,13 @@
             "weylchamber.visualize"
         ],
         "version": "0.3.1"
+    },
+    "wf": {
+        "cmdline": [],
+        "modules": [
+            "wf"
+        ],
+        "version": "0.0.4"
     },
     "wf-api-client": {
         "cmdline": [],
@@ -33764,7 +33792,7 @@
     "whatsappening-cli": {
         "cmdline": [],
         "modules": [],
-        "version": "1.0.0"
+        "version": "1.1.0"
     },
     "whatsapptojson": {
         "cmdline": [],
@@ -36062,7 +36090,7 @@
             "whois._3_adjust",
             "whois.tld_regexpr"
         ],
-        "version": "0.7"
+        "version": "0.8"
     },
     "whois-oracle": {
         "cmdline": [],
@@ -37458,9 +37486,10 @@
             "wijisqs",
             "wijisqs.broker",
             "wijisqs.buffer",
+            "wijisqs.timer",
             "wijisqs.utils"
         ],
-        "version": "0.4.0"
+        "version": "0.4.1"
     },
     "wiki": {
         "cmdline": [],
@@ -39358,10 +39387,8 @@
     },
     "wikiwall": {
         "cmdline": [],
-        "modules": [
-            "wikiwall"
-        ],
-        "version": "0.1.0"
+        "modules": [],
+        "version": "0.2.1"
     },
     "wikiweb": {
         "cmdline": [],
@@ -39393,7 +39420,7 @@
             "wikiwho.structures",
             "wikiwho.wikiwho_simple"
         ],
-        "version": "1.1"
+        "version": "1.1.1"
     },
     "wikiwho-wrapper": {
         "cmdline": [],
@@ -39407,7 +39434,7 @@
             "wikiwho_wrapper.views",
             "wikiwho_wrapper.wikiwho"
         ],
-        "version": "1.6.1"
+        "version": "1.6.4"
     },
     "wikiwiki5-favorites": {
         "cmdline": [],
@@ -45461,7 +45488,7 @@
             "media_platform.service.video_service.extract_storyboard_request",
             "media_platform.service.video_service.video_service"
         ],
-        "version": "1.12.0"
+        "version": "1.13.0"
     },
     "wix-py": {
         "cmdline": [
@@ -45791,7 +45818,7 @@
             "wkcuber.vendor.dm3",
             "wkcuber.vendor.dm4"
         ],
-        "version": "0.2.10"
+        "version": "0.2.11"
     },
     "wkdfh": {
         "cmdline": [],
@@ -50765,13 +50792,12 @@
             "wonderbits.WBRfTelecontroller",
             "wonderbits.WBSignal",
             "wonderbits.WBUltrasonic",
-            "wonderbits.__version__",
             "wonderbits.core",
             "wonderbits.wbSerial",
             "wonderbits.wbTool",
             "wonderbits.wbits"
         ],
-        "version": "5.2.5"
+        "version": "5.2.7"
     },
     "wonderboy": {
         "cmdline": [],
@@ -51009,6 +51035,15 @@
             "woodcut.project"
         ],
         "version": "0.5.0"
+    },
+    "woodencrypto": {
+        "cmdline": [],
+        "modules": [
+            "WoodenCrypto",
+            "WoodenCrypto.woodenaes",
+            "WoodenCrypto.woodenrsa"
+        ],
+        "version": "0.0.8"
     },
     "woodenwaiter": {
         "cmdline": [],
@@ -55721,12 +55756,13 @@
             "wotan.iter_spline",
             "wotan.location_estimates",
             "wotan.pspline",
+            "wotan.slide_clipper",
             "wotan.slider",
             "wotan.t14",
             "wotan.tests",
             "wotan.version"
         ],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     "wotconsole": {
         "cmdline": [],
