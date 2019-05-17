@@ -3043,7 +3043,7 @@
             "wagtailextras.templatetags",
             "wagtailextras.templatetags.wagtailextras_tags"
         ],
-        "version": "0.2.4"
+        "version": "0.2.5"
     },
     "wagtail-factories": {
         "cmdline": [],
@@ -4952,6 +4952,15 @@
         ],
         "version": "0.1"
     },
+    "wagtail-snippet-image": {
+        "cmdline": [],
+        "modules": [
+            "wagtail_snippet_image",
+            "wagtail_snippet_image.attributes",
+            "wagtail_snippet_image.fields"
+        ],
+        "version": "0.1.1"
+    },
     "wagtail-spa-integration": {
         "cmdline": [],
         "modules": [
@@ -6852,7 +6861,7 @@
             "waiverdb.utils",
             "waiverdb.wsgi"
         ],
-        "version": "0.14.0"
+        "version": "1.1.0"
     },
     "wajiwaji": {
         "cmdline": [
@@ -9909,7 +9918,7 @@
             "wallberry.sensors",
             "wallberry.thermostat"
         ],
-        "version": "1.2.1"
+        "version": "1.2.3"
     },
     "wallclock": {
         "cmdline": [],
@@ -10455,7 +10464,6 @@
             "walt.client.doc.md",
             "walt.client.doc.mdtable",
             "walt.client.doc.pager",
-            "walt.client.doc.test",
             "walt.client.expose",
             "walt.client.filesystem",
             "walt.client.image",
@@ -10464,6 +10472,7 @@
             "walt.client.link",
             "walt.client.log",
             "walt.client.logo",
+            "walt.client.logs",
             "walt.client.myhelp",
             "walt.client.node",
             "walt.client.startup",
@@ -10471,7 +10480,7 @@
             "walt.client.tools",
             "walt.client.transfer"
         ],
-        "version": "2"
+        "version": "4"
     },
     "walt-common": {
         "cmdline": [],
@@ -10484,17 +10493,22 @@
             "walt.common.crypto",
             "walt.common.crypto.blowfish",
             "walt.common.crypto.dh",
+            "walt.common.daemon",
             "walt.common.devices",
+            "walt.common.devices.fake",
             "walt.common.devices.nodes",
             "walt.common.devices.nodes.fake",
             "walt.common.devices.nodes.rpi",
             "walt.common.devices.registry",
+            "walt.common.devices.rpi",
             "walt.common.devices.switches",
             "walt.common.devices.switches.netgear",
             "walt.common.evloop",
             "walt.common.fifo",
             "walt.common.info",
             "walt.common.io",
+            "walt.common.logs",
+            "walt.common.nodetypes",
             "walt.common.reusable",
             "walt.common.tcp",
             "walt.common.thread",
@@ -10504,7 +10518,7 @@
             "walt.common.update",
             "walt.common.version"
         ],
-        "version": "2"
+        "version": "4"
     },
     "walt-node": {
         "cmdline": [],
@@ -10512,32 +10526,85 @@
             "walt",
             "walt.node",
             "walt.node.const",
+            "walt.node.daemon",
             "walt.node.info",
+            "walt.node.install",
             "walt.node.logs",
             "walt.node.logs.cache",
             "walt.node.logs.daemon",
             "walt.node.logs.flow",
             "walt.node.logs.listener",
             "walt.node.logs.monitor",
+            "walt.node.monitor",
             "walt.node.serial",
             "walt.node.serial.autolog",
             "walt.node.setup",
-            "walt.node.setup.systemd"
+            "walt.node.setup.systemd",
+            "walt.node.spec",
+            "walt.node.tools"
         ],
-        "version": "2"
+        "version": "4"
     },
     "walt-server": {
         "cmdline": [],
         "modules": [
             "walt",
             "walt.server",
+            "walt.server.blocking",
             "walt.server.conf",
             "walt.server.const",
             "walt.server.daemon",
+            "walt.server.db",
+            "walt.server.devices",
+            "walt.server.devices.manager",
+            "walt.server.devices.topology",
             "walt.server.dhcpevent",
+            "walt.server.filesystem",
+            "walt.server.images",
+            "walt.server.images.clone",
+            "walt.server.images.copy",
+            "walt.server.images.cp",
+            "walt.server.images.duplicate",
+            "walt.server.images.filesystem",
+            "walt.server.images.fixowner",
+            "walt.server.images.image",
+            "walt.server.images.manager",
+            "walt.server.images.publish",
+            "walt.server.images.remove",
+            "walt.server.images.rename",
+            "walt.server.images.search",
+            "walt.server.images.shell",
+            "walt.server.images.show",
+            "walt.server.images.store",
             "walt.server.info",
+            "walt.server.interactive",
+            "walt.server.logs",
+            "walt.server.mydocker",
             "walt.server.netconfig",
+            "walt.server.network",
+            "walt.server.network.dhcpd",
+            "walt.server.network.nfs",
+            "walt.server.network.setup",
+            "walt.server.network.tools",
+            "walt.server.network.waltvlanconf",
+            "walt.server.nodes",
+            "walt.server.nodes.manager",
+            "walt.server.nodes.register",
+            "walt.server.nodes.show",
+            "walt.server.nodes.wait",
+            "walt.server.parallel",
+            "walt.server.platform",
             "walt.server.postgres",
+            "walt.server.server",
+            "walt.server.snmp",
+            "walt.server.snmp.base",
+            "walt.server.snmp.dhcp",
+            "walt.server.snmp.ipsetup",
+            "walt.server.snmp.lldp",
+            "walt.server.snmp.poe",
+            "walt.server.snmp.proxy",
+            "walt.server.snmp.vlan",
+            "walt.server.status",
             "walt.server.threads",
             "walt.server.threads.blocking",
             "walt.server.threads.blocking.images",
@@ -10617,10 +10684,14 @@
             "walt.server.threads.main.ui",
             "walt.server.threads.main.ui.manager",
             "walt.server.tools",
+            "walt.server.topology",
+            "walt.server.transfer",
+            "walt.server.tree",
             "walt.server.ui",
-            "walt.server.ui.console"
+            "walt.server.ui.console",
+            "walt.server.ui.manager"
         ],
-        "version": "2"
+        "version": "4"
     },
     "walt-virtual": {
         "cmdline": [],
@@ -10630,7 +10701,7 @@
             "walt.virtual.fakeipxenode",
             "walt.virtual.info"
         ],
-        "version": "2"
+        "version": "4"
     },
     "walter": {
         "cmdline": [],
@@ -11985,6 +12056,16 @@
             "warlock.model"
         ],
         "version": "1.3.0"
+    },
+    "warlock2": {
+        "cmdline": [],
+        "modules": [
+            "warlock",
+            "warlock.core",
+            "warlock.exceptions",
+            "warlock.model"
+        ],
+        "version": "1.3.1"
     },
     "warlocktest": {
         "cmdline": [],
@@ -31333,6 +31414,17 @@
         ],
         "version": "2.0"
     },
+    "werkzeug-graphql": {
+        "cmdline": [],
+        "modules": [
+            "tests",
+            "tests.conftest",
+            "tests.test_application",
+            "werkzeug_graphql",
+            "werkzeug_graphql.graphql_adapter"
+        ],
+        "version": "1.0.2"
+    },
     "werkzeug-raw": {
         "cmdline": [],
         "modules": [],
@@ -33792,7 +33884,7 @@
     "whatsappening-cli": {
         "cmdline": [],
         "modules": [],
-        "version": "1.1.0"
+        "version": "1.1.1"
     },
     "whatsapptojson": {
         "cmdline": [],
@@ -37478,7 +37570,7 @@
             "wiji.watchdog",
             "wiji.worker"
         ],
-        "version": "0.1.8"
+        "version": "0.1.9"
     },
     "wijisqs": {
         "cmdline": [],
@@ -41868,7 +41960,7 @@
             "wings_sanic.utils",
             "wings_sanic.views"
         ],
-        "version": "0.6.0"
+        "version": "0.7.0"
     },
     "wingspan": {
         "cmdline": [],
@@ -44912,7 +45004,7 @@
     "with-as-a-function": {
         "cmdline": [],
         "modules": [],
-        "version": "1.0.0.post3"
+        "version": "1.0.1"
     },
     "with-aws-config": {
         "cmdline": [
@@ -55740,7 +55832,7 @@
             "wot.tmap.transport_map_util",
             "wot.tmap.util"
         ],
-        "version": "1.0.1"
+        "version": "1.0.2"
     },
     "wotan": {
         "cmdline": [],
@@ -56321,10 +56413,9 @@
         "cmdline": [],
         "modules": [
             "wpathr",
-            "wpathr.args",
             "wpathr.wpathr"
         ],
-        "version": "0.3.1"
+        "version": "0.4.0"
     },
     "wpbackup": {
         "cmdline": [],
@@ -57991,7 +58082,7 @@
     "wrapanapi": {
         "cmdline": [],
         "modules": [],
-        "version": "3.1.6"
+        "version": "3.1.7"
     },
     "wrapapi": {
         "cmdline": [],
@@ -61229,7 +61320,7 @@
             "wsrpc_aiohttp.websocket.route",
             "wsrpc_aiohttp.websocket.tools"
         ],
-        "version": "2.2.1"
+        "version": "2.2.2"
     },
     "wsrpc-tornado": {
         "cmdline": [],
@@ -62247,7 +62338,7 @@
             "wtools.wcc",
             "wtools.wmake"
         ],
-        "version": "0.2.3"
+        "version": "0.2.4"
     },
     "wtop": {
         "cmdline": [],
