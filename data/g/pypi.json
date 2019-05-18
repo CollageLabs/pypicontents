@@ -1282,6 +1282,14 @@
         ],
         "version": "4.5.3"
     },
+    "gaecl": {
+        "cmdline": [],
+        "modules": [
+            "gaecl",
+            "gaecl.logger"
+        ],
+        "version": "0.1.0"
+    },
     "gaecookie": {
         "cmdline": [],
         "modules": [
@@ -5045,6 +5053,7 @@
             "gallery_dl.extractor.hentaifoundry",
             "gallery_dl.extractor.hentaifox",
             "gallery_dl.extractor.hentaihere",
+            "gallery_dl.extractor.hentainexus",
             "gallery_dl.extractor.hitomi",
             "gallery_dl.extractor.hypnohub",
             "gallery_dl.extractor.idolcomplex",
@@ -5078,6 +5087,7 @@
             "gallery_dl.extractor.nijie",
             "gallery_dl.extractor.oauth",
             "gallery_dl.extractor.paheal",
+            "gallery_dl.extractor.patreon",
             "gallery_dl.extractor.photobucket",
             "gallery_dl.extractor.piczel",
             "gallery_dl.extractor.pinterest",
@@ -5126,7 +5136,7 @@
             "gallery_dl.util",
             "gallery_dl.version"
         ],
-        "version": "1.8.3"
+        "version": "1.8.4"
     },
     "gallery-get": {
         "cmdline": [],
@@ -7090,7 +7100,7 @@
             "gamoto.views",
             "gamoto.wsgi"
         ],
-        "version": "0.0.9"
+        "version": "0.0.10"
     },
     "gampc": {
         "cmdline": [
@@ -9784,7 +9794,7 @@
             "gargoyle.templatetags.gargoyle_tags",
             "gargoyle.testutils"
         ],
-        "version": "2.1.0"
+        "version": "2.1.1"
     },
     "gargparse": {
         "cmdline": [],
@@ -16499,6 +16509,13 @@
         ],
         "version": "0.4"
     },
+    "gd-awsretry": {
+        "cmdline": [],
+        "modules": [
+            "awsretry"
+        ],
+        "version": "1.0.7"
+    },
     "gd-domob": {
         "cmdline": [],
         "modules": [
@@ -22121,7 +22138,7 @@
             "geneseekr.geneseekr",
             "geneseekr.parser"
         ],
-        "version": "0.3.3"
+        "version": "0.3.4"
     },
     "genesis": {
         "cmdline": [],
@@ -25511,9 +25528,10 @@
             "genmechanics.linkages",
             "genmechanics.loads",
             "genmechanics.tools",
+            "genmechanics.unidimensional",
             "genmechanics.version"
         ],
-        "version": "0.0.6"
+        "version": "0.0.7"
     },
     "genmenu": {
         "cmdline": [],
@@ -25713,7 +25731,7 @@
             "GenomeBrowser.Classes.DrawDataTracks",
             "GenomeBrowser.Classes.DrawFeatureTracks"
         ],
-        "version": "1.5"
+        "version": "1.6.1"
     },
     "genomedata": {
         "cmdline": [
@@ -26914,7 +26932,7 @@
             "test.test_gridsearch",
             "test.test_util"
         ],
-        "version": "0.2.2"
+        "version": "0.2.3"
     },
     "gentag": {
         "cmdline": [],
@@ -28640,21 +28658,46 @@
         "cmdline": [],
         "modules": [
             "longitude",
-            "longitude.auth",
-            "longitude.config",
-            "longitude.models",
-            "longitude.models.base_models",
-            "longitude.models.base_models.carto_model",
-            "longitude.models.base_models.database_base_model",
-            "longitude.models.base_models.postgres_model",
-            "longitude.models.user",
-            "longitude.models.user.abstract_user_model",
-            "longitude.models.user.carto_user_model",
-            "longitude.models.user.postgres_user_model",
-            "longitude.models.user_model",
-            "longitude.models.utils"
+            "longitude.core",
+            "longitude.core.caches",
+            "longitude.core.caches.base",
+            "longitude.core.caches.ram",
+            "longitude.core.caches.redis",
+            "longitude.core.common",
+            "longitude.core.common.exceptions",
+            "longitude.core.common.helpers",
+            "longitude.core.common.query_response",
+            "longitude.core.data_sources",
+            "longitude.core.data_sources.base",
+            "longitude.core.data_sources.base_async",
+            "longitude.core.data_sources.carto",
+            "longitude.core.data_sources.carto_async",
+            "longitude.core.data_sources.postgres",
+            "longitude.core.data_sources.postgres.common",
+            "longitude.core.data_sources.postgres.default",
+            "longitude.core.data_sources.postgres.sqlalchemy",
+            "longitude.core.tests",
+            "longitude.core.tests.test_cache_base",
+            "longitude.core.tests.test_cache_ram",
+            "longitude.core.tests.test_cache_redis",
+            "longitude.core.tests.test_data_source_carto",
+            "longitude.core.tests.test_data_source_postgres",
+            "longitude.core.tests.test_data_source_sqlalchemy",
+            "longitude.core.tests.test_helpers",
+            "longitude.core.tests.utils",
+            "longitude.samples",
+            "longitude.samples.carto_async_sample",
+            "longitude.samples.carto_sample",
+            "longitude.samples.carto_sample_with_ram_cache",
+            "longitude.samples.carto_sample_with_redis_cache",
+            "longitude.samples.config",
+            "longitude.samples.copy_from_sample",
+            "longitude.samples.flask_api_sample",
+            "longitude.samples.mixed_datasources",
+            "longitude.samples.postgres_sample",
+            "longitude.samples.sqlalchemy_sample"
         ],
-        "version": "0.2.0"
+        "version": "0.9.1"
     },
     "geographica-longitude-async": {
         "cmdline": [],
@@ -29791,6 +29834,23 @@
             "cartoasync.sql_client"
         ],
         "version": "0.0.4"
+    },
+    "geolibs-dator": {
+        "cmdline": [],
+        "modules": [
+            "dator",
+            "dator.datastorages",
+            "dator.datastorages.bigquery",
+            "dator.datastorages.carto",
+            "dator.datastorages.csv",
+            "dator.datastorages.postgresql",
+            "dator.schemas",
+            "dator.transformers",
+            "dator.transformers.bigquery",
+            "dator.transformers.pandas",
+            "dator.transformers.postgresql"
+        ],
+        "version": "0.0.3"
     },
     "geolink-formatter": {
         "cmdline": [],
@@ -31597,6 +31657,7 @@
             "geonum.mapping",
             "geonum.processing",
             "geonum.test",
+            "geonum.test.markers",
             "geonum.test.test_base_classes",
             "geonum.test.test_elevationprofile",
             "geonum.test.test_srtm_database",
@@ -31605,7 +31666,7 @@
             "geonum.topodata",
             "geonum.topodataaccess"
         ],
-        "version": "1.4.0"
+        "version": "1.4.2"
     },
     "geoopt": {
         "cmdline": [],
@@ -32292,7 +32353,7 @@
     "georinex": {
         "cmdline": [],
         "modules": [],
-        "version": "1.10.0"
+        "version": "1.10.1"
     },
     "georipe": {
         "cmdline": [
@@ -34092,6 +34153,7 @@
             "gestionatr.helpers.funcions",
             "gestionatr.input",
             "gestionatr.input.messages",
+            "gestionatr.input.messages.A12_26",
             "gestionatr.input.messages.A1_02",
             "gestionatr.input.messages.A1_03",
             "gestionatr.input.messages.A1_04",
@@ -34153,7 +34215,7 @@
             "tests.test_table_description",
             "tests.utils"
         ],
-        "version": "1.22.7"
+        "version": "1.23.0"
     },
     "gestpypay": {
         "cmdline": [],
@@ -34758,7 +34820,7 @@
         "modules": [
             "getbob"
         ],
-        "version": "1.0.3"
+        "version": "1.1.0"
     },
     "getbook": {
         "cmdline": [],
@@ -35230,8 +35292,10 @@
     },
     "getinstance": {
         "cmdline": [],
-        "modules": [],
-        "version": "0.2"
+        "modules": [
+            "getinstance"
+        ],
+        "version": "0.3"
     },
     "getiou": {
         "cmdline": [],
@@ -43943,6 +44007,13 @@
         ],
         "version": "0.2.0a1"
     },
+    "girder-metadata-links": {
+        "cmdline": [],
+        "modules": [
+            "girder_metadata_links"
+        ],
+        "version": "0.2.0"
+    },
     "girder-oauth": {
         "cmdline": [],
         "modules": [
@@ -50973,7 +51044,7 @@
             "gitone.cam",
             "gitone.camp"
         ],
-        "version": "0.0.26"
+        "version": "0.0.30"
     },
     "gitoo": {
         "cmdline": [],
@@ -54410,6 +54481,11 @@
         ],
         "version": "0.0.4"
     },
+    "glia": {
+        "cmdline": [],
+        "modules": [],
+        "version": "0.1.0.dev2"
+    },
     "gliaml": {
         "cmdline": [],
         "modules": [
@@ -56165,6 +56241,16 @@
             "glove.glove"
         ],
         "version": "1.0.2"
+    },
+    "glove-py": {
+        "cmdline": [],
+        "modules": [
+            "glove",
+            "glove.Glove",
+            "glove.pybind",
+            "glove.test"
+        ],
+        "version": "0.1.1"
     },
     "glove-python": {
         "cmdline": [],
@@ -61723,7 +61809,7 @@
             "gns3.version",
             "gns3.vnc_console"
         ],
-        "version": "2.1.16"
+        "version": "2.1.17"
     },
     "gns3-net-converter": {
         "cmdline": [],
@@ -62009,7 +62095,7 @@
             "tests.controller.test_topology",
             "tests.controller.test_udp_link"
         ],
-        "version": "2.1.16"
+        "version": "2.1.17"
     },
     "gnscli": {
         "cmdline": [],
@@ -70844,7 +70930,7 @@
             "google.cloud.bigquery_v2.proto.standard_sql_pb2_grpc",
             "google.cloud.bigquery_v2.types"
         ],
-        "version": "1.11.3"
+        "version": "1.12.0"
     },
     "google-cloud-bigquery-datatransfer": {
         "cmdline": [],
@@ -71136,7 +71222,7 @@
             "google.cloud.datastore_v1.proto.query_pb2_grpc",
             "google.cloud.datastore_v1.types"
         ],
-        "version": "1.7.4"
+        "version": "1.8.0"
     },
     "google-cloud-dlp": {
         "cmdline": [],
@@ -71177,36 +71263,38 @@
     "google-cloud-error-reporting": {
         "cmdline": [],
         "modules": [
-            "error_reporting",
-            "error_reporting._gapic",
-            "error_reporting._logging",
-            "error_reporting.client",
-            "error_reporting.util",
-            "errorreporting_v1beta1",
-            "errorreporting_v1beta1.gapic",
-            "errorreporting_v1beta1.gapic.enums",
-            "errorreporting_v1beta1.gapic.error_group_service_client",
-            "errorreporting_v1beta1.gapic.error_group_service_client_config",
-            "errorreporting_v1beta1.gapic.error_stats_service_client",
-            "errorreporting_v1beta1.gapic.error_stats_service_client_config",
-            "errorreporting_v1beta1.gapic.report_errors_service_client",
-            "errorreporting_v1beta1.gapic.report_errors_service_client_config",
-            "errorreporting_v1beta1.gapic.transports",
-            "errorreporting_v1beta1.gapic.transports.error_group_service_grpc_transport",
-            "errorreporting_v1beta1.gapic.transports.error_stats_service_grpc_transport",
-            "errorreporting_v1beta1.gapic.transports.report_errors_service_grpc_transport",
-            "errorreporting_v1beta1.proto",
-            "errorreporting_v1beta1.proto.common_pb2",
-            "errorreporting_v1beta1.proto.common_pb2_grpc",
-            "errorreporting_v1beta1.proto.error_group_service_pb2",
-            "errorreporting_v1beta1.proto.error_group_service_pb2_grpc",
-            "errorreporting_v1beta1.proto.error_stats_service_pb2",
-            "errorreporting_v1beta1.proto.error_stats_service_pb2_grpc",
-            "errorreporting_v1beta1.proto.report_errors_service_pb2",
-            "errorreporting_v1beta1.proto.report_errors_service_pb2_grpc",
-            "errorreporting_v1beta1.types"
+            "google",
+            "google.cloud",
+            "google.cloud.error_reporting",
+            "google.cloud.error_reporting._gapic",
+            "google.cloud.error_reporting._logging",
+            "google.cloud.error_reporting.client",
+            "google.cloud.error_reporting.util",
+            "google.cloud.errorreporting_v1beta1",
+            "google.cloud.errorreporting_v1beta1.gapic",
+            "google.cloud.errorreporting_v1beta1.gapic.enums",
+            "google.cloud.errorreporting_v1beta1.gapic.error_group_service_client",
+            "google.cloud.errorreporting_v1beta1.gapic.error_group_service_client_config",
+            "google.cloud.errorreporting_v1beta1.gapic.error_stats_service_client",
+            "google.cloud.errorreporting_v1beta1.gapic.error_stats_service_client_config",
+            "google.cloud.errorreporting_v1beta1.gapic.report_errors_service_client",
+            "google.cloud.errorreporting_v1beta1.gapic.report_errors_service_client_config",
+            "google.cloud.errorreporting_v1beta1.gapic.transports",
+            "google.cloud.errorreporting_v1beta1.gapic.transports.error_group_service_grpc_transport",
+            "google.cloud.errorreporting_v1beta1.gapic.transports.error_stats_service_grpc_transport",
+            "google.cloud.errorreporting_v1beta1.gapic.transports.report_errors_service_grpc_transport",
+            "google.cloud.errorreporting_v1beta1.proto",
+            "google.cloud.errorreporting_v1beta1.proto.common_pb2",
+            "google.cloud.errorreporting_v1beta1.proto.common_pb2_grpc",
+            "google.cloud.errorreporting_v1beta1.proto.error_group_service_pb2",
+            "google.cloud.errorreporting_v1beta1.proto.error_group_service_pb2_grpc",
+            "google.cloud.errorreporting_v1beta1.proto.error_stats_service_pb2",
+            "google.cloud.errorreporting_v1beta1.proto.error_stats_service_pb2_grpc",
+            "google.cloud.errorreporting_v1beta1.proto.report_errors_service_pb2",
+            "google.cloud.errorreporting_v1beta1.proto.report_errors_service_pb2_grpc",
+            "google.cloud.errorreporting_v1beta1.types"
         ],
-        "version": "0.30.1"
+        "version": "0.31.0"
     },
     "google-cloud-firestore": {
         "cmdline": [],
@@ -71669,7 +71757,7 @@
             "google.cloud.resource_manager.client",
             "google.cloud.resource_manager.project"
         ],
-        "version": "0.28.4"
+        "version": "0.29.0"
     },
     "google-cloud-runtimeconfig": {
         "cmdline": [],
@@ -71683,7 +71771,7 @@
             "google.cloud.runtimeconfig.config",
             "google.cloud.runtimeconfig.variable"
         ],
-        "version": "0.28.4"
+        "version": "0.29.0"
     },
     "google-cloud-scheduler": {
         "cmdline": [],
@@ -71836,7 +71924,7 @@
             "google.cloud.spanner_v1.transaction",
             "google.cloud.spanner_v1.types"
         ],
-        "version": "1.8.1"
+        "version": "1.9.0"
     },
     "google-cloud-speech": {
         "cmdline": [],
@@ -71884,7 +71972,7 @@
             "google.cloud.storage.iam",
             "google.cloud.storage.notification"
         ],
-        "version": "1.15.1"
+        "version": "1.16.0"
     },
     "google-cloud-talent": {
         "cmdline": [],
@@ -72080,7 +72168,7 @@
             "google.cloud.trace_v2.proto.tracing_pb2_grpc",
             "google.cloud.trace_v2.types"
         ],
-        "version": "0.20.3"
+        "version": "0.21.0"
     },
     "google-cloud-translate": {
         "cmdline": [],
@@ -72102,7 +72190,7 @@
             "google.cloud.translate_v3beta1.proto.translation_service_pb2_grpc",
             "google.cloud.translate_v3beta1.types"
         ],
-        "version": "1.4.1"
+        "version": "1.5.0"
     },
     "google-cloud-videointelligence": {
         "cmdline": [],
@@ -87615,18 +87703,23 @@
             "graphlearn01.utils.molecule",
             "graphlearn01.utils.monitor",
             "graphlearn01.utils.neighbors",
+            "graphlearn3",
             "graphlearn3.choose",
             "graphlearn3.lsgg",
             "graphlearn3.lsgg_cip",
+            "graphlearn3.lsgg_ego",
             "graphlearn3.lsgg_layered",
+            "graphlearn3.readmecode",
             "graphlearn3.sample",
             "graphlearn3.score",
             "graphlearn3.test.cycler",
             "graphlearn3.test.transformutil",
+            "graphlearn3.test_lsgg",
+            "graphlearn3.test_lsgg_ego",
             "graphlearn3.util.setoperations",
             "graphlearn3.util.util"
         ],
-        "version": "0.0.770"
+        "version": "0.0.792"
     },
     "graphlib": {
         "cmdline": [],
@@ -89195,7 +89288,7 @@
             "graphysio.types",
             "graphysio.utils"
         ],
-        "version": "0.104"
+        "version": "0.105"
     },
     "graphyte": {
         "cmdline": [],
@@ -89219,6 +89312,13 @@
             "tests.api_test"
         ],
         "version": "0.1.4"
+    },
+    "grapnel": {
+        "cmdline": [],
+        "modules": [
+            "grapnel"
+        ],
+        "version": "0.1.0"
     },
     "grappa": {
         "cmdline": [],
@@ -90085,6 +90185,18 @@
         ],
         "version": "0.3"
     },
+    "greasepaint": {
+        "cmdline": [],
+        "modules": [
+            "greasepaint",
+            "greasepaint._version",
+            "greasepaint.landmarks",
+            "greasepaint.presets",
+            "greasepaint.shadowing",
+            "greasepaint.utils"
+        ],
+        "version": "0.0.1"
+    },
     "great-circle-calculator": {
         "cmdline": [],
         "modules": [
@@ -90732,7 +90844,7 @@
             "greendns.session",
             "greendns.timer"
         ],
-        "version": "0.9.12"
+        "version": "0.9.13"
     },
     "greenenv": {
         "cmdline": [],
@@ -92778,6 +92890,7 @@
             "gridwxcomp",
             "gridwxcomp.calc_bias_ratios",
             "gridwxcomp.download_gridmet_ee",
+            "gridwxcomp.download_gridmet_opendap",
             "gridwxcomp.interpgdal",
             "gridwxcomp.plot",
             "gridwxcomp.prep_input",
@@ -92786,7 +92899,7 @@
             "gridwxcomp.spatial",
             "gridwxcomp.util"
         ],
-        "version": "0.0.68.post1"
+        "version": "0.0.68.post2"
     },
     "griffin": {
         "cmdline": [],
@@ -100400,6 +100513,7 @@
             "gs_quant.api.gs.assets",
             "gs_quant.api.gs.data",
             "gs_quant.api.gs.indices",
+            "gs_quant.api.gs.portfolios",
             "gs_quant.api.gs.risk",
             "gs_quant.api.risk",
             "gs_quant.base",
@@ -100430,9 +100544,12 @@
             "gs_quant.target",
             "gs_quant.target.assets",
             "gs_quant.target.common",
+            "gs_quant.target.content",
             "gs_quant.target.data",
             "gs_quant.target.indices",
             "gs_quant.target.instrument",
+            "gs_quant.target.portfolios",
+            "gs_quant.target.reports",
             "gs_quant.target.risk",
             "gs_quant.target.trades",
             "gs_quant.test",
@@ -100440,6 +100557,7 @@
             "gs_quant.test.api.test_assets",
             "gs_quant.test.api.test_data",
             "gs_quant.test.api.test_index",
+            "gs_quant.test.api.test_portfolios",
             "gs_quant.test.api.test_risk",
             "gs_quant.test.api.test_target",
             "gs_quant.test.data",
@@ -100471,7 +100589,7 @@
             "gs_quant.timeseries.statistics",
             "gs_quant.timeseries.technicals"
         ],
-        "version": "0.8.17"
+        "version": "0.8.18"
     },
     "gs-reply-bot": {
         "cmdline": [
@@ -102799,7 +102917,7 @@
             "gspread_pandas.exceptions",
             "gspread_pandas.util"
         ],
-        "version": "1.3.0"
+        "version": "1.3.1"
     },
     "gspread-public": {
         "cmdline": [],
