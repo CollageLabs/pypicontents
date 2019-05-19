@@ -1754,6 +1754,16 @@
         ],
         "version": "0.8.1"
     },
+    "wagalytics-tier": {
+        "cmdline": [],
+        "modules": [
+            "wagalytics",
+            "wagalytics.urls",
+            "wagalytics.views",
+            "wagalytics.wagtail_hooks"
+        ],
+        "version": "1.0rc1"
+    },
     "wagent": {
         "cmdline": [],
         "modules": [
@@ -4959,7 +4969,7 @@
             "wagtail_snippet_image.attributes",
             "wagtail_snippet_image.fields"
         ],
-        "version": "0.1.1"
+        "version": "0.1.4"
     },
     "wagtail-spa-integration": {
         "cmdline": [],
@@ -8126,7 +8136,6 @@
             "waldur_core.logging",
             "waldur_core.logging.admin",
             "waldur_core.logging.apps",
-            "waldur_core.logging.elasticsearch_client",
             "waldur_core.logging.filters",
             "waldur_core.logging.handlers",
             "waldur_core.logging.log",
@@ -8134,6 +8143,7 @@
             "waldur_core.logging.management",
             "waldur_core.logging.management.commands",
             "waldur_core.logging.management.commands.cleanup_stale_event_types",
+            "waldur_core.logging.management.commands.import_elasticsearch_dump",
             "waldur_core.logging.managers",
             "waldur_core.logging.middleware",
             "waldur_core.logging.migrations",
@@ -8145,6 +8155,7 @@
             "waldur_core.logging.migrations.0004_json_field",
             "waldur_core.logging.migrations.0005_add_alert_unique_together_constraint",
             "waldur_core.logging.migrations.0005_report",
+            "waldur_core.logging.migrations.0006_event_feed",
             "waldur_core.logging.migrations.0006_pushhook_systemnotification",
             "waldur_core.logging.migrations.0007_pushhook_unique_key",
             "waldur_core.logging.migrations.0008_pushhook_token",
@@ -8563,6 +8574,7 @@
             "waldur_mastermind.marketplace.migrations.0079_orderitem_old_plan",
             "waldur_mastermind.marketplace.migrations.0080_resource_name",
             "waldur_mastermind.marketplace.migrations.0081_allow_ico_mime_type_for_images",
+            "waldur_mastermind.marketplace.migrations.0082_orderitem_activated",
             "waldur_mastermind.marketplace.models",
             "waldur_mastermind.marketplace.permissions",
             "waldur_mastermind.marketplace.plugins",
@@ -8940,7 +8952,7 @@
             "waldur_zabbix.utils",
             "waldur_zabbix.views"
         ],
-        "version": "3.6.3"
+        "version": "3.6.4"
     },
     "waldur-openstack": {
         "cmdline": [],
@@ -12344,7 +12356,7 @@
             "warg.utilities",
             "warg.version"
         ],
-        "version": "0.1.1"
+        "version": "0.1.2"
     },
     "wargame": {
         "cmdline": [],
@@ -12454,7 +12466,7 @@
             "warmup4ie",
             "warmup4ie.warmup4ie"
         ],
-        "version": "0.1.4"
+        "version": "0.1.5"
     },
     "warn": {
         "cmdline": [],
@@ -12497,6 +12509,14 @@
         "cmdline": [],
         "modules": [],
         "version": "0.0.1"
+    },
+    "warp-pipe": {
+        "cmdline": [],
+        "modules": [
+            "pipe",
+            "pipe.pipe"
+        ],
+        "version": "0.1.0"
     },
     "warp-prism": {
         "cmdline": [],
@@ -14059,6 +14079,7 @@
             "watchme.client.init",
             "watchme.client.inspect",
             "watchme.client.ls",
+            "watchme.client.monitor",
             "watchme.client.protect",
             "watchme.client.remove",
             "watchme.client.run",
@@ -14075,9 +14096,11 @@
             "watchme.logger.progress",
             "watchme.logger.spinner",
             "watchme.tasks",
+            "watchme.tasks.decorators",
             "watchme.tasks.worker",
             "watchme.tests",
             "watchme.tests.test_client",
+            "watchme.tests.test_decorators",
             "watchme.tests.test_psutils_decorator",
             "watchme.tests.test_utils",
             "watchme.utils",
@@ -14097,7 +14120,7 @@
             "watchme.watchers.urls.helpers",
             "watchme.watchers.urls.tasks"
         ],
-        "version": "0.0.21"
+        "version": "0.0.25"
     },
     "watchmysass": {
         "cmdline": [],
@@ -20317,7 +20340,7 @@
             "webmother.utils.bson_util",
             "webmother.utils.user_auth"
         ],
-        "version": "0.2.5"
+        "version": "0.2.6"
     },
     "web-office": {
         "cmdline": [],
@@ -20562,15 +20585,31 @@
     "web-ucenter": {
         "cmdline": [],
         "modules": [
+            "mcenter",
+            "mcenter.channels",
+            "mcenter.channels.email",
+            "mcenter.channels.sms_5c",
+            "mcenter.channels.ws",
+            "mcenter.db",
+            "mcenter.db.mongo",
+            "mcenter.http_handler",
+            "mcenter.http_handler.msg_tpl_handler",
+            "mcenter.routes",
+            "mcenter.routes.msg_tpl",
+            "mcenter.routes.ws",
+            "mcenter.services",
+            "mcenter.services.async_wrap",
+            "mcenter.services.async_wrap.ctrl_msg_tpl",
+            "mcenter.services.async_wrap.messenger",
+            "mcenter.services.ctrl_msg_tpl",
+            "mcenter.services.messenger",
+            "mcenter.ws_handler",
+            "mcenter.ws_handler.msg_handler",
             "ucenter",
             "ucenter.db",
             "ucenter.db.mongo",
-            "ucenter.email_cfg",
             "ucenter.http_handler",
-            "ucenter.http_handler.index_handler",
             "ucenter.http_handler.user",
-            "ucenter.http_handler.user.code_email",
-            "ucenter.http_handler.user.code_sms",
             "ucenter.http_handler.user.code_verify",
             "ucenter.http_handler.user.identify",
             "ucenter.http_handler.user.login",
@@ -20580,6 +20619,7 @@
             "ucenter.http_handler.user.login.with_wxmp",
             "ucenter.http_handler.user.logout",
             "ucenter.http_handler.user.register",
+            "ucenter.http_handler.user.send_code",
             "ucenter.http_handler.user.update",
             "ucenter.http_handler.user.update.bind_with_code",
             "ucenter.http_handler.user.update.bind_with_weixin",
@@ -20591,32 +20631,24 @@
             "ucenter.http_handler.user_manage",
             "ucenter.http_handler.user_manage.user_handler",
             "ucenter.routes",
-            "ucenter.routes.index",
             "ucenter.routes.user",
-            "ucenter.routes.ws",
             "ucenter.services",
             "ucenter.services.async_wrap",
             "ucenter.services.async_wrap.ctrl_user",
-            "ucenter.services.code",
             "ucenter.services.cos",
             "ucenter.services.cos.sts",
             "ucenter.services.cos.sts_util",
             "ucenter.services.ctrl_user",
-            "ucenter.services.email",
-            "ucenter.services.notify",
             "ucenter.services.oss",
             "ucenter.services.oss.oss_util",
             "ucenter.services.permit",
-            "ucenter.services.sms",
             "ucenter.services.uid",
             "ucenter.services.user_indicate",
             "ucenter.services.verify_code",
             "ucenter.services.weixin",
-            "ucenter.services.weixin.wx_utils",
-            "ucenter.ws_handler",
-            "ucenter.ws_handler.manage_handler"
+            "ucenter.services.weixin.wx_utils"
         ],
-        "version": "0.2.4"
+        "version": "0.2.5"
     },
     "web-utils": {
         "cmdline": [],
@@ -30860,7 +30892,7 @@
             "wellspring",
             "wellspring.wellspring"
         ],
-        "version": "0.1.11"
+        "version": "0.1.13"
     },
     "welltestpy": {
         "cmdline": [],
@@ -37922,7 +37954,7 @@
             "wiji.watchdog",
             "wiji.worker"
         ],
-        "version": "0.1.9"
+        "version": "0.2.0"
     },
     "wijisqs": {
         "cmdline": [],
@@ -37933,7 +37965,7 @@
             "wijisqs.timer",
             "wijisqs.utils"
         ],
-        "version": "0.4.1"
+        "version": "0.4.3"
     },
     "wiki": {
         "cmdline": [],
@@ -53119,6 +53151,14 @@
             "wordcloud.wordcloud_cli"
         ],
         "version": "1.5.0"
+    },
+    "wordcloud-fa": {
+        "cmdline": [],
+        "modules": [
+            "wordcloud_fa",
+            "wordcloud_fa.WordCloudFa"
+        ],
+        "version": "0.1.2"
     },
     "wordcount": {
         "cmdline": [],
