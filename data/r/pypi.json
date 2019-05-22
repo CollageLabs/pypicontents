@@ -192,7 +192,7 @@
             "r2c.cli.network",
             "r2c.cli.util"
         ],
-        "version": "0.0.17"
+        "version": "0.0.18"
     },
     "r2c-lib": {
         "cmdline": [],
@@ -203,6 +203,7 @@
             "r2c.lib.constants",
             "r2c.lib.errors",
             "r2c.lib.filestore",
+            "r2c.lib.input",
             "r2c.lib.manifest",
             "r2c.lib.manifest_migrations",
             "r2c.lib.registry",
@@ -213,7 +214,7 @@
             "r2c.lib.util",
             "r2c.lib.versioned_analyzer"
         ],
-        "version": "0.0.12"
+        "version": "0.0.13"
     },
     "r2c1": {
         "cmdline": [],
@@ -4222,19 +4223,24 @@
         "cmdline": [],
         "modules": [
             "plugins",
-            "plugins.plug_bbc_radio_1",
+            "plugins.plug_64094",
+            "plugins.plug_94251",
             "radio",
             "radio.app",
-            "radio.buffers",
-            "radio.commands",
             "radio.config",
-            "radio.log",
-            "radio.models",
-            "radio.player",
-            "radio.styles",
-            "radio.tui"
+            "radio.core",
+            "radio.core.classes",
+            "radio.core.log",
+            "radio.core.player",
+            "radio.core.utils",
+            "radio.handlers",
+            "radio.handlers.exchange",
+            "radio.tui",
+            "radio.tui.buffers",
+            "radio.tui.commands",
+            "radio.tui.styles"
         ],
-        "version": "0.0.dev1"
+        "version": "0.0.dev3"
     },
     "radis": {
         "cmdline": [],
@@ -7260,7 +7266,7 @@
             "rak811.rak811",
             "rak811.serial"
         ],
-        "version": "0.6.2"
+        "version": "0.6.3"
     },
     "rakaia": {
         "cmdline": [],
@@ -9669,7 +9675,7 @@
             "ramltools.TestResult",
             "ramltools.TestRunner"
         ],
-        "version": "0.1.0.dev3"
+        "version": "0.1.0.dev4"
     },
     "ramlwrap": {
         "cmdline": [],
@@ -11927,9 +11933,9 @@
         "cmdline": [],
         "modules": [
             "ranium_reader",
-            "ranium_reader.test"
+            "ranium_reader.slack"
         ],
-        "version": "1.0.1"
+        "version": "1.0.2"
     },
     "ranium-test": {
         "cmdline": [],
@@ -15307,8 +15313,239 @@
     },
     "rasa": {
         "cmdline": [],
-        "modules": [],
-        "version": "0.1.1"
+        "modules": [
+            "cli",
+            "cli.conftest",
+            "cli.test_cli",
+            "cli.test_rasa_data",
+            "cli.test_rasa_init",
+            "cli.test_rasa_interactive",
+            "cli.test_rasa_run",
+            "cli.test_rasa_shell",
+            "cli.test_rasa_test",
+            "cli.test_rasa_train",
+            "cli.test_rasa_visualize",
+            "cli.test_rasa_x",
+            "cli.test_utils",
+            "core",
+            "core.conftest",
+            "core.test_actions",
+            "core.test_agent",
+            "core.test_broker",
+            "core.test_channels",
+            "core.test_config",
+            "core.test_data",
+            "core.test_dialogues",
+            "core.test_domain",
+            "core.test_dsl",
+            "core.test_ensemble",
+            "core.test_evaluation",
+            "core.test_events",
+            "core.test_examples",
+            "core.test_featurizer",
+            "core.test_graph",
+            "core.test_interactive",
+            "core.test_interpreter",
+            "core.test_model",
+            "core.test_nlg",
+            "core.test_policies",
+            "core.test_processor",
+            "core.test_restore",
+            "core.test_run",
+            "core.test_slots",
+            "core.test_tracker_stores",
+            "core.test_trackers",
+            "core.test_training",
+            "core.test_utils",
+            "core.test_visualization",
+            "core.utilities",
+            "examples",
+            "examples.concertbot",
+            "examples.concertbot.actions",
+            "examples.nlg_server",
+            "examples.nlg_server.nlg_server",
+            "examples.restaurantbot",
+            "examples.restaurantbot.actions",
+            "examples.restaurantbot.policy",
+            "examples.restaurantbot.run",
+            "nlu",
+            "nlu.base",
+            "nlu.base.test_components",
+            "nlu.base.test_config",
+            "nlu.base.test_emulators",
+            "nlu.base.test_evaluation",
+            "nlu.base.test_extractors",
+            "nlu.base.test_featurizers",
+            "nlu.base.test_interpreter",
+            "nlu.base.test_persistor",
+            "nlu.base.test_synonyms",
+            "nlu.base.test_tokenizers",
+            "nlu.base.test_training_data",
+            "nlu.base.test_utils",
+            "nlu.conftest",
+            "nlu.example_component",
+            "nlu.training",
+            "nlu.training.test_train",
+            "nlu.utilities",
+            "rasa",
+            "rasa.cli",
+            "rasa.cli.arguments",
+            "rasa.cli.arguments.data",
+            "rasa.cli.arguments.default_arguments",
+            "rasa.cli.arguments.interactive",
+            "rasa.cli.arguments.run",
+            "rasa.cli.arguments.shell",
+            "rasa.cli.arguments.test",
+            "rasa.cli.arguments.train",
+            "rasa.cli.arguments.visualize",
+            "rasa.cli.arguments.x",
+            "rasa.cli.data",
+            "rasa.cli.initial_project",
+            "rasa.cli.initial_project.actions",
+            "rasa.cli.interactive",
+            "rasa.cli.run",
+            "rasa.cli.scaffold",
+            "rasa.cli.shell",
+            "rasa.cli.test",
+            "rasa.cli.train",
+            "rasa.cli.utils",
+            "rasa.cli.visualize",
+            "rasa.cli.x",
+            "rasa.constants",
+            "rasa.core",
+            "rasa.core.actions",
+            "rasa.core.actions.action",
+            "rasa.core.agent",
+            "rasa.core.broker",
+            "rasa.core.channels",
+            "rasa.core.channels.botframework",
+            "rasa.core.channels.callback",
+            "rasa.core.channels.channel",
+            "rasa.core.channels.console",
+            "rasa.core.channels.facebook",
+            "rasa.core.channels.mattermost",
+            "rasa.core.channels.rasa_chat",
+            "rasa.core.channels.rocketchat",
+            "rasa.core.channels.slack",
+            "rasa.core.channels.socketio",
+            "rasa.core.channels.telegram",
+            "rasa.core.channels.twilio",
+            "rasa.core.channels.webexteams",
+            "rasa.core.config",
+            "rasa.core.constants",
+            "rasa.core.conversation",
+            "rasa.core.domain",
+            "rasa.core.evaluate",
+            "rasa.core.events",
+            "rasa.core.exceptions",
+            "rasa.core.featurizers",
+            "rasa.core.interpreter",
+            "rasa.core.jobs",
+            "rasa.core.nlg",
+            "rasa.core.nlg.callback",
+            "rasa.core.nlg.generator",
+            "rasa.core.nlg.template",
+            "rasa.core.policies",
+            "rasa.core.policies.embedding_policy",
+            "rasa.core.policies.ensemble",
+            "rasa.core.policies.fallback",
+            "rasa.core.policies.form_policy",
+            "rasa.core.policies.keras_policy",
+            "rasa.core.policies.mapping_policy",
+            "rasa.core.policies.memoization",
+            "rasa.core.policies.policy",
+            "rasa.core.policies.sklearn_policy",
+            "rasa.core.policies.tf_utils",
+            "rasa.core.policies.two_stage_fallback",
+            "rasa.core.processor",
+            "rasa.core.registry",
+            "rasa.core.restore",
+            "rasa.core.run",
+            "rasa.core.slots",
+            "rasa.core.test",
+            "rasa.core.tracker_store",
+            "rasa.core.trackers",
+            "rasa.core.train",
+            "rasa.core.training",
+            "rasa.core.training.data",
+            "rasa.core.training.dsl",
+            "rasa.core.training.generator",
+            "rasa.core.training.interactive",
+            "rasa.core.training.structures",
+            "rasa.core.training.visualization",
+            "rasa.core.utils",
+            "rasa.core.visualize",
+            "rasa.data",
+            "rasa.jupyter",
+            "rasa.model",
+            "rasa.nlu",
+            "rasa.nlu.classifiers",
+            "rasa.nlu.classifiers.embedding_intent_classifier",
+            "rasa.nlu.classifiers.keyword_intent_classifier",
+            "rasa.nlu.classifiers.mitie_intent_classifier",
+            "rasa.nlu.classifiers.sklearn_intent_classifier",
+            "rasa.nlu.components",
+            "rasa.nlu.config",
+            "rasa.nlu.constants",
+            "rasa.nlu.convert",
+            "rasa.nlu.emulators",
+            "rasa.nlu.emulators.dialogflow",
+            "rasa.nlu.emulators.luis",
+            "rasa.nlu.emulators.no_emulator",
+            "rasa.nlu.emulators.wit",
+            "rasa.nlu.evaluate",
+            "rasa.nlu.extractors",
+            "rasa.nlu.extractors.crf_entity_extractor",
+            "rasa.nlu.extractors.duckling_http_extractor",
+            "rasa.nlu.extractors.entity_synonyms",
+            "rasa.nlu.extractors.mitie_entity_extractor",
+            "rasa.nlu.extractors.spacy_entity_extractor",
+            "rasa.nlu.featurizers",
+            "rasa.nlu.featurizers.count_vectors_featurizer",
+            "rasa.nlu.featurizers.mitie_featurizer",
+            "rasa.nlu.featurizers.ngram_featurizer",
+            "rasa.nlu.featurizers.regex_featurizer",
+            "rasa.nlu.featurizers.spacy_featurizer",
+            "rasa.nlu.model",
+            "rasa.nlu.persistor",
+            "rasa.nlu.registry",
+            "rasa.nlu.run",
+            "rasa.nlu.test",
+            "rasa.nlu.tokenizers",
+            "rasa.nlu.tokenizers.jieba_tokenizer",
+            "rasa.nlu.tokenizers.mitie_tokenizer",
+            "rasa.nlu.tokenizers.spacy_tokenizer",
+            "rasa.nlu.tokenizers.whitespace_tokenizer",
+            "rasa.nlu.train",
+            "rasa.nlu.training_data",
+            "rasa.nlu.training_data.formats",
+            "rasa.nlu.training_data.formats.dialogflow",
+            "rasa.nlu.training_data.formats.luis",
+            "rasa.nlu.training_data.formats.markdown",
+            "rasa.nlu.training_data.formats.rasa",
+            "rasa.nlu.training_data.formats.readerwriter",
+            "rasa.nlu.training_data.formats.wit",
+            "rasa.nlu.training_data.loading",
+            "rasa.nlu.training_data.message",
+            "rasa.nlu.training_data.training_data",
+            "rasa.nlu.training_data.util",
+            "rasa.nlu.utils",
+            "rasa.nlu.utils.mitie_utils",
+            "rasa.nlu.utils.spacy_utils",
+            "rasa.run",
+            "rasa.server",
+            "rasa.skill",
+            "rasa.test",
+            "rasa.train",
+            "rasa.utils",
+            "rasa.utils.common",
+            "rasa.utils.endpoints",
+            "rasa.utils.io",
+            "rasa.version",
+            "rasa_core",
+            "rasa_nlu"
+        ],
+        "version": "1.0.1"
     },
     "rasa-addons": {
         "cmdline": [],
@@ -15770,7 +16007,7 @@
             "rasa_sdk.utils",
             "rasa_sdk.version"
         ],
-        "version": "1.0.0rc4"
+        "version": "1.0.0"
     },
     "rasahub": {
         "cmdline": [],
@@ -18651,7 +18888,7 @@
             "ravenpackapi.exceptions",
             "ravenpackapi.util"
         ],
-        "version": "1.0.28"
+        "version": "1.0.29"
     },
     "ravepaypysdk": {
         "cmdline": [],
@@ -20462,7 +20699,7 @@
             "rflint.rules.testcaseRules",
             "rflint.version"
         ],
-        "version": "1.8"
+        "version": "1.8.1"
     },
     "rbfopt": {
         "cmdline": [
@@ -20808,7 +21045,7 @@
             "rb.utils.rblogger",
             "rb.utils.utils"
         ],
-        "version": "0.2.3"
+        "version": "0.2.5"
     },
     "rbql": {
         "cmdline": [],
@@ -21730,7 +21967,7 @@
             "rcsb.db.utils.makePathList",
             "rcsb.db.utils.unescape"
         ],
-        "version": "0.61"
+        "version": "0.63"
     },
     "rcsb-utils-chemref": {
         "cmdline": [],
@@ -24162,7 +24399,7 @@
             "rever.activities",
             "rever.dag"
         ],
-        "version": "0.3.5"
+        "version": "0.3.6"
     },
     "re101": {
         "cmdline": [],
@@ -30524,7 +30761,7 @@
             "recurly.recurly_logging",
             "recurly.resource"
         ],
-        "version": "2.9.6"
+        "version": "2.9.7"
     },
     "recurprint": {
         "cmdline": [],
@@ -44308,6 +44545,12 @@
             "cli.generic",
             "cli.generic.forms",
             "cli.generic.forms.fields",
+            "cli.masternode",
+            "cli.masternode.cli",
+            "cli.masternode.forms",
+            "cli.masternode.help",
+            "cli.masternode.interfaces",
+            "cli.masternode.service",
             "cli.node",
             "cli.node.cli",
             "cli.node.forms",
@@ -44345,7 +44588,7 @@
             "cli.transaction.service",
             "cli.utils"
         ],
-        "version": "0.4.0"
+        "version": "0.5.0"
     },
     "remmina-password-exposer": {
         "cmdline": [],
@@ -46138,12 +46381,9 @@
             "renew._inspection",
             "renew._mold",
             "renew._py_lang",
-            "renew._renderer",
-            "renew._serializer",
-            "renew.renew",
-            "renew.test_renew"
+            "renew._serializer"
         ],
-        "version": "0.4.7"
+        "version": "0.5.0"
     },
     "renfe-cli": {
         "cmdline": [],
@@ -46483,7 +46723,7 @@
     "renumerate": {
         "cmdline": [],
         "modules": [],
-        "version": "1.0.7"
+        "version": "1.0.9"
     },
     "renuntius": {
         "cmdline": [],
@@ -47402,14 +47642,12 @@
         "version": "0.2.6"
     },
     "repo2data": {
-        "cmdline": [
-            "repo2data"
-        ],
+        "cmdline": [],
         "modules": [
             "repo2data",
             "repo2data.repo2data"
         ],
-        "version": "1.2"
+        "version": "1.3"
     },
     "repo2docker-pangeo": {
         "cmdline": [],
@@ -50457,6 +50695,9 @@
     "reprobench": {
         "cmdline": [],
         "modules": [
+            "bootstrap",
+            "bootstrap.client",
+            "bootstrap.server",
             "doi",
             "doi.base",
             "doi.zenodo",
@@ -50481,7 +50722,7 @@
             "tables.base",
             "tables.run"
         ],
-        "version": "0.9.2"
+        "version": "0.10.0"
     },
     "reproduce": {
         "cmdline": [],
@@ -51943,7 +52184,7 @@
             "requests_gssapi.exceptions",
             "requests_gssapi.gssapi_"
         ],
-        "version": "1.0.1"
+        "version": "1.1.0"
     },
     "requests-guard": {
         "cmdline": [],
@@ -56998,6 +57239,11 @@
         ],
         "version": "0.1.0"
     },
+    "restaurant-library-majkelskr": {
+        "cmdline": [],
+        "modules": [],
+        "version": ""
+    },
     "restaurant-service-client": {
         "cmdline": [],
         "modules": [
@@ -58835,6 +59081,13 @@
             "restrainer/constraints.utils"
         ],
         "version": "1.4"
+    },
+    "restream": {
+        "cmdline": [],
+        "modules": [
+            "restream"
+        ],
+        "version": "0.0.1"
     },
     "restrepl": {
         "cmdline": [],
@@ -62800,7 +63053,7 @@
     "rezip": {
         "cmdline": [],
         "modules": [],
-        "version": "0.3.2"
+        "version": "0.4.1"
     },
     "rezizer": {
         "cmdline": [],
@@ -62869,7 +63122,7 @@
             "rf_client.tests.main",
             "rf_client.utils"
         ],
-        "version": "0.1.3"
+        "version": "0.2.0"
     },
     "rf-django-envconfig": {
         "cmdline": [],
@@ -63470,7 +63723,7 @@
         "modules": [
             "rfGengou"
         ],
-        "version": "0.3"
+        "version": "0.4"
     },
     "rfhq": {
         "cmdline": [],
@@ -69404,7 +69657,7 @@
             "rios_preprocessor",
             "rios_preprocessor.rios_preprocessor"
         ],
-        "version": "0.2.1.post1"
+        "version": "0.2.2"
     },
     "riot-api": {
         "cmdline": [],
@@ -70458,7 +70711,7 @@
             "riptide.tests.unit.util",
             "riptide.util"
         ],
-        "version": "0.1.4"
+        "version": "0.1.5"
     },
     "riptide-proxy": {
         "cmdline": [],
@@ -71350,7 +71603,7 @@
             "rjango.core.settings.head",
             "rjango.core.utils"
         ],
-        "version": "0.1.33"
+        "version": "0.1.34"
     },
     "rjango-dev-tools": {
         "cmdline": [],
@@ -75510,6 +75763,16 @@
         ],
         "version": "0.4.3"
     },
+    "rmr": {
+        "cmdline": [],
+        "modules": [
+            "rmr",
+            "rmr.rmr",
+            "rmr.rmr_mocks",
+            "rmr.rmr_mocks.rmr_mocks"
+        ],
+        "version": "0.10.1"
+    },
     "rmr-django": {
         "cmdline": [],
         "modules": [
@@ -76307,6 +76570,16 @@
             "rnbgrader.tmpdirs"
         ],
         "version": "0.1.1"
+    },
+    "rnc-mlnd-distributions": {
+        "cmdline": [],
+        "modules": [
+            "rnc_mlnd_distributions",
+            "rnc_mlnd_distributions.Binomialdistribution",
+            "rnc_mlnd_distributions.Gaussiandistribution",
+            "rnc_mlnd_distributions.Generaldistribution"
+        ],
+        "version": "0.1"
     },
     "rnc2rng": {
         "cmdline": [],
@@ -80941,7 +81214,7 @@
             "ScapyLibrary.utils.baseclass",
             "ScapyLibrary.version"
         ],
-        "version": "0.1.4"
+        "version": "0.1.5"
     },
     "robotframework-scpcompat": {
         "cmdline": [],
@@ -84240,11 +84513,20 @@
         "modules": [
             "rockhound",
             "rockhound._version",
+            "rockhound.bedmap2",
+            "rockhound.etopo1",
+            "rockhound.prem",
+            "rockhound.registry",
+            "rockhound.seafloor",
             "rockhound.tests",
-            "rockhound.tests.test_placeholder",
+            "rockhound.tests.test_bedmap2",
+            "rockhound.tests.test_etopo1",
+            "rockhound.tests.test_prem",
+            "rockhound.tests.test_registry",
+            "rockhound.tests.test_seafloor",
             "rockhound.version"
         ],
-        "version": "0.0.1"
+        "version": "0.1.0"
     },
     "rockinglists": {
         "cmdline": [],
@@ -84577,7 +84859,7 @@
         "modules": [
             "roconfiguration"
         ],
-        "version": "1.0.3"
+        "version": "1.0.4"
     },
     "rocore": {
         "cmdline": [],
@@ -84726,7 +85008,7 @@
         "modules": [
             "rodi"
         ],
-        "version": "1.0.6"
+        "version": "1.0.7"
     },
     "rodong": {
         "cmdline": [],
@@ -88156,7 +88438,7 @@
             "ros2dev",
             "ros2dev.ros2_env"
         ],
-        "version": "0.1.2"
+        "version": "0.1.3"
     },
     "rosa": {
         "cmdline": [],
@@ -90381,7 +90663,7 @@
             "tests.test_utils",
             "tests.utils"
         ],
-        "version": "1.0.3"
+        "version": "1.0.4"
     },
     "rover-position-rjg": {
         "cmdline": [],
@@ -92149,7 +92431,7 @@
             "rpe.resources.gcp",
             "rpe.rpe"
         ],
-        "version": "0.1.16"
+        "version": "0.1.17"
     },
     "rpforest": {
         "cmdline": [],
@@ -93909,7 +94191,7 @@
     "rpnpy": {
         "cmdline": [],
         "modules": [],
-        "version": "1.0.14"
+        "version": "1.0.18"
     },
     "rpp": {
         "cmdline": [],
@@ -98020,7 +98302,7 @@
         "modules": [
             "rsp_jupyter"
         ],
-        "version": "1.2.1522"
+        "version": "1.2.1523"
     },
     "rsp1570serial-pp81381": {
         "cmdline": [],
