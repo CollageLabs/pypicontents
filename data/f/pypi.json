@@ -749,10 +749,11 @@
             "f90nml.findex",
             "f90nml.fpy",
             "f90nml.namelist",
+            "f90nml.old_parser",
             "f90nml.parser",
             "f90nml.tokenizer"
         ],
-        "version": "1.0.2"
+        "version": "1.1"
     },
     "f90wrap": {
         "cmdline": [],
@@ -12542,6 +12543,15 @@
         ],
         "version": "0.0.1018.dev1438"
     },
+    "faraday-spectra": {
+        "cmdline": [],
+        "modules": [
+            "faraday_spectra",
+            "faraday_spectra.__version__",
+            "faraday_spectra.generate_spectra"
+        ],
+        "version": "0.1.4"
+    },
     "faradayio": {
         "cmdline": [],
         "modules": [
@@ -13661,9 +13671,10 @@
             "fast_carpenter.summary.binning_config",
             "fast_carpenter.summary.import_aghast",
             "fast_carpenter.tree_wrapper",
-            "fast_carpenter.utils"
+            "fast_carpenter.utils",
+            "fast_carpenter.version"
         ],
-        "version": "0.10.0"
+        "version": "0.11.1"
     },
     "fast-cli": {
         "cmdline": [],
@@ -14820,7 +14831,7 @@
     "faster-than-walk": {
         "cmdline": [],
         "modules": [],
-        "version": "0.1"
+        "version": "0.5"
     },
     "fastergit": {
         "cmdline": [],
@@ -14881,7 +14892,7 @@
     "fastfilepackage": {
         "cmdline": [],
         "modules": [],
-        "version": "1.0.12"
+        "version": "1.0.13"
     },
     "fastfm": {
         "cmdline": [],
@@ -15536,23 +15547,12 @@
         "cmdline": [],
         "modules": [
             "fastNLP",
-            "fastNLP.api",
-            "fastNLP.api.api",
-            "fastNLP.api.converter",
-            "fastNLP.api.examples",
-            "fastNLP.api.pipeline",
-            "fastNLP.api.processor",
-            "fastNLP.api.utils",
-            "fastNLP.automl",
-            "fastNLP.automl.enas_controller",
-            "fastNLP.automl.enas_model",
-            "fastNLP.automl.enas_trainer",
-            "fastNLP.automl.enas_utils",
             "fastNLP.core",
             "fastNLP.core.batch",
             "fastNLP.core.callback",
+            "fastNLP.core.const",
             "fastNLP.core.dataset",
-            "fastNLP.core.fieldarray",
+            "fastNLP.core.field",
             "fastNLP.core.instance",
             "fastNLP.core.losses",
             "fastNLP.core.metrics",
@@ -15568,73 +15568,43 @@
             "fastNLP.io.config_io",
             "fastNLP.io.dataset_loader",
             "fastNLP.io.embed_loader",
-            "fastNLP.io.logger",
+            "fastNLP.io.file_reader",
             "fastNLP.io.model_io",
             "fastNLP.models",
             "fastNLP.models.base_model",
             "fastNLP.models.bert",
             "fastNLP.models.biaffine_parser",
-            "fastNLP.models.char_language_model",
             "fastNLP.models.cnn_text_classification",
             "fastNLP.models.enas_controller",
             "fastNLP.models.enas_model",
             "fastNLP.models.enas_trainer",
             "fastNLP.models.enas_utils",
-            "fastNLP.models.sequence_modeling",
+            "fastNLP.models.sequence_labeling",
             "fastNLP.models.snli",
             "fastNLP.models.star_transformer",
             "fastNLP.modules",
             "fastNLP.modules.aggregator",
             "fastNLP.modules.aggregator.attention",
-            "fastNLP.modules.aggregator.avg_pool",
-            "fastNLP.modules.aggregator.kmax_pool",
-            "fastNLP.modules.aggregator.max_pool",
-            "fastNLP.modules.aggregator.self_attention",
+            "fastNLP.modules.aggregator.pooling",
             "fastNLP.modules.decoder",
             "fastNLP.modules.decoder.CRF",
             "fastNLP.modules.decoder.MLP",
+            "fastNLP.modules.decoder.crf",
+            "fastNLP.modules.decoder.mlp",
+            "fastNLP.modules.decoder.utils",
             "fastNLP.modules.dropout",
             "fastNLP.modules.encoder",
-            "fastNLP.modules.encoder.char_embedding",
-            "fastNLP.modules.encoder.conv",
+            "fastNLP.modules.encoder.bert",
+            "fastNLP.modules.encoder.char_encoder",
             "fastNLP.modules.encoder.conv_maxpool",
             "fastNLP.modules.encoder.embedding",
-            "fastNLP.modules.encoder.linear",
             "fastNLP.modules.encoder.lstm",
-            "fastNLP.modules.encoder.masked_rnn",
             "fastNLP.modules.encoder.star_transformer",
             "fastNLP.modules.encoder.transformer",
             "fastNLP.modules.encoder.variational_rnn",
-            "fastNLP.modules.other_modules",
-            "fastNLP.modules.utils",
-            "reproduction",
-            "reproduction.CNN-sentence_classification",
-            "reproduction.CNN-sentence_classification.dataset",
-            "reproduction.CNN-sentence_classification.model",
-            "reproduction.CNN-sentence_classification.train",
-            "reproduction.Char-aware_NLM",
-            "reproduction.Char-aware_NLM.main",
-            "reproduction.Char-aware_NLM.model",
-            "reproduction.Char-aware_NLM.test",
-            "reproduction.Char-aware_NLM.train",
-            "reproduction.Char-aware_NLM.utilities",
-            "reproduction.Chinese_word_segmentation",
-            "reproduction.Chinese_word_segmentation.cws_io",
-            "reproduction.Chinese_word_segmentation.cws_io.cws_reader",
-            "reproduction.Chinese_word_segmentation.models",
-            "reproduction.Chinese_word_segmentation.models.cws_model",
-            "reproduction.Chinese_word_segmentation.models.cws_transformer",
-            "reproduction.Chinese_word_segmentation.process",
-            "reproduction.Chinese_word_segmentation.process.cws_processor",
-            "reproduction.Chinese_word_segmentation.process.span_converter",
-            "reproduction.Chinese_word_segmentation.utils",
-            "reproduction.HAN-document_classification",
-            "reproduction.HAN-document_classification.evaluate",
-            "reproduction.HAN-document_classification.model",
-            "reproduction.HAN-document_classification.preprocess",
-            "reproduction.HAN-document_classification.train"
+            "fastNLP.modules.utils"
         ],
-        "version": "0.3.3"
+        "version": "0.4.0"
     },
     "fastnumbers": {
         "cmdline": [],
@@ -16905,7 +16875,7 @@
             "tests.test_models",
             "tests.test_orm"
         ],
-        "version": "0.2.7"
+        "version": "0.2.8"
     },
     "fat": {
         "cmdline": [],
@@ -17338,7 +17308,7 @@
             "fault.verilog_utils",
             "fault.wrapper"
         ],
-        "version": "2.0.10"
+        "version": "2.0.11"
     },
     "fault-localization": {
         "cmdline": [],
@@ -29005,7 +28975,7 @@
         "modules": [
             "feuersoftware"
         ],
-        "version": "0.0.6"
+        "version": "0.0.7"
     },
     "feuerwerk": {
         "cmdline": [],
@@ -32396,9 +32366,10 @@
             "fiddler.dataset_yaml_generator",
             "fiddler.execute_cmd",
             "fiddler.explain_cmd",
-            "fiddler.import_cmd"
+            "fiddler.import_cmd",
+            "fiddler.sagemaker_endpoint_cmd"
         ],
-        "version": "0.2.2"
+        "version": "0.2.3"
     },
     "fiddler-client": {
         "cmdline": [],
@@ -32679,7 +32650,7 @@
             "book.urls",
             "book.views"
         ],
-        "version": "3.6.0"
+        "version": "3.6.1"
     },
     "fiduswriter-citation-api-import": {
         "cmdline": [],
@@ -32987,7 +32958,7 @@
             "tests",
             "tests.test_fifteenrock"
         ],
-        "version": "0.1.25"
+        "version": "0.1.26"
     },
     "fifth-package": {
         "cmdline": [],
@@ -38023,14 +37994,26 @@
         "cmdline": [],
         "modules": [
             "findit",
-            "findit.client",
             "findit.core",
             "findit.engine",
             "findit.logger",
             "findit.server",
+            "findit.server.config",
+            "findit.server.router",
+            "findit.server.utils",
             "findit.toolbox"
         ],
-        "version": "0.4.3"
+        "version": "0.4.4"
+    },
+    "findit-client": {
+        "cmdline": [],
+        "modules": [
+            "findit_client",
+            "findit_client.base",
+            "findit_client.mini",
+            "findit_client.standard"
+        ],
+        "version": "0.1.1"
     },
     "findjava": {
         "cmdline": [],
@@ -38439,7 +38422,7 @@
             "finetune.util.shapes",
             "finetune.util.text_generation"
         ],
-        "version": "0.6.4"
+        "version": "0.6.5"
     },
     "finger": {
         "cmdline": [],
@@ -39057,6 +39040,8 @@
             "finntk.emb.numberbatch",
             "finntk.emb.utils",
             "finntk.emb.word2vec",
+            "finntk.extr",
+            "finntk.extr.base",
             "finntk.finnpos",
             "finntk.omor",
             "finntk.omor.anlys",
@@ -39082,7 +39067,7 @@
             "finntk.wsd.lesk_pp",
             "finntk.wsd.nn"
         ],
-        "version": "0.0.37"
+        "version": "0.0.38"
     },
     "finny": {
         "cmdline": [],
@@ -41382,7 +41367,7 @@
             "dalmatian.schema",
             "dalmatian.wmanager"
         ],
-        "version": "0.0.9"
+        "version": "0.0.10"
     },
     "firectl": {
         "cmdline": [],
@@ -42692,7 +42677,7 @@
             "firex_flame.main_app",
             "firex_flame.web_app"
         ],
-        "version": "0.5"
+        "version": "0.6"
     },
     "firexapp": {
         "cmdline": [],
@@ -44162,7 +44147,7 @@
             "fitch.testcase",
             "fitch.utils"
         ],
-        "version": "0.3.3"
+        "version": "0.3.4"
     },
     "fitchain": {
         "cmdline": [],
@@ -44271,6 +44256,33 @@
         "cmdline": [],
         "modules": [],
         "version": "0.4.0"
+    },
+    "fitlog": {
+        "cmdline": [],
+        "modules": [
+            "fitlog",
+            "fitlog.fastcmd",
+            "fitlog.fastcmd.fit_cmd",
+            "fitlog.fastcmd.log_cmd",
+            "fitlog.fastgit",
+            "fitlog.fastgit.committer",
+            "fitlog.fastlog",
+            "fitlog.fastlog.log_read",
+            "fitlog.fastlog.logger",
+            "fitlog.fastserver",
+            "fitlog.fastserver.app",
+            "fitlog.fastserver.chart_app",
+            "fitlog.fastserver.server",
+            "fitlog.fastserver.server.app_utils",
+            "fitlog.fastserver.server.chart_utils",
+            "fitlog.fastserver.server.data_container",
+            "fitlog.fastserver.server.log_config_parser",
+            "fitlog.fastserver.server.server_config",
+            "fitlog.fastserver.server.table_utils",
+            "fitlog.fastserver.server.utils",
+            "fitlog.fastserver.table_app"
+        ],
+        "version": "0.1.0.2"
     },
     "fitna": {
         "cmdline": [],
@@ -45941,6 +45953,14 @@
         "modules": [],
         "version": ""
     },
+    "fizzbuzzy": {
+        "cmdline": [],
+        "modules": [
+            "fizzbuzz",
+            "fizzbuzz.fizzbuzz"
+        ],
+        "version": "0.0.1"
+    },
     "fizzgun": {
         "cmdline": [],
         "modules": [
@@ -47057,6 +47077,11 @@
         "cmdline": [],
         "modules": [],
         "version": "0.0.1"
+    },
+    "flake8-exceptions": {
+        "cmdline": [],
+        "modules": [],
+        "version": "0.0.1a0"
     },
     "flake8-expandtab": {
         "cmdline": [],
@@ -50292,7 +50317,7 @@
             "flask_authoob.hooks",
             "flask_authoob.routes"
         ],
-        "version": "0.0.18"
+        "version": "0.0.19"
     },
     "flask-authority": {
         "cmdline": [],
@@ -51431,6 +51456,14 @@
         ],
         "version": "0.3.1"
     },
+    "flask-censor": {
+        "cmdline": [],
+        "modules": [
+            "flask_censor",
+            "flask_censor.logic"
+        ],
+        "version": "0.1"
+    },
     "flask-cent": {
         "cmdline": [],
         "modules": [
@@ -52541,11 +52574,12 @@
             "flask_discord.configs",
             "flask_discord.exceptions",
             "flask_discord.models",
+            "flask_discord.models.base",
             "flask_discord.models.connections",
             "flask_discord.models.guild",
             "flask_discord.models.user"
         ],
-        "version": "0.0.9"
+        "version": "0.1.1"
     },
     "flask-discoverer": {
         "cmdline": [],
@@ -64113,7 +64147,7 @@
             "flask_wxpay.exceptions",
             "flask_wxpay.utils"
         ],
-        "version": "1.0.3"
+        "version": "1.0.5"
     },
     "flask-wysiwyg": {
         "cmdline": [],
@@ -64470,9 +64504,29 @@
         "modules": [
             "flaskapptestjw",
             "flaskapptestjw.config",
-            "flaskapptestjw.hello"
+            "flaskapptestjw.hello",
+            "flaskapptestjw.test1",
+            "flaskapptestjw.test10",
+            "flaskapptestjw.test11",
+            "flaskapptestjw.test12",
+            "flaskapptestjw.test13",
+            "flaskapptestjw.test14",
+            "flaskapptestjw.test15",
+            "flaskapptestjw.test16",
+            "flaskapptestjw.test17",
+            "flaskapptestjw.test18",
+            "flaskapptestjw.test19",
+            "flaskapptestjw.test2",
+            "flaskapptestjw.test20",
+            "flaskapptestjw.test3",
+            "flaskapptestjw.test4",
+            "flaskapptestjw.test5",
+            "flaskapptestjw.test6",
+            "flaskapptestjw.test7",
+            "flaskapptestjw.test8",
+            "flaskapptestjw.test9"
         ],
-        "version": "0.12"
+        "version": "0.13"
     },
     "flaskassets": {
         "cmdline": [],
@@ -69832,7 +69886,7 @@
         "modules": [
             "flirimageextractor"
         ],
-        "version": "0.1.1"
+        "version": "0.1.2"
     },
     "flirptu": {
         "cmdline": [],
@@ -70130,7 +70184,7 @@
             "floatview.tests.conftest",
             "floatview.tests.test_example"
         ],
-        "version": "0.1.12"
+        "version": "0.1.15"
     },
     "flock": {
         "cmdline": [],
@@ -73719,7 +73773,7 @@
             "fluidasserts.utils.generic",
             "fluidasserts.utils.tracking"
         ],
-        "version": "19.5.30406"
+        "version": "19.5.31527"
     },
     "fluiddata": {
         "cmdline": [],
@@ -78737,7 +78791,7 @@
             "folia.helpers",
             "folia.main"
         ],
-        "version": "2.0.8"
+        "version": "2.1.0"
     },
     "folia-linguistic-annotation-tool": {
         "cmdline": [],
@@ -78790,6 +78844,7 @@
             "foliatools.foliacat",
             "foliatools.foliacorrect",
             "foliatools.foliacount",
+            "foliatools.foliadiffeval",
             "foliatools.foliaerase",
             "foliatools.foliaeval",
             "foliatools.foliafreqlist",
@@ -78804,10 +78859,12 @@
             "foliatools.foliatree",
             "foliatools.foliaupgrade",
             "foliatools.foliavalidator",
+            "foliatools.markdown2folia",
             "foliatools.rst2folia",
+            "foliatools.tei2folia",
             "foliatools.xslt"
         ],
-        "version": "2.0.7"
+        "version": "2.1.0"
     },
     "folia2alpino": {
         "cmdline": [],
@@ -81693,7 +81750,7 @@
             "forecastlib.training.Metrics",
             "forecastlib.training.ModelAccuracy"
         ],
-        "version": "0.1.27"
+        "version": "0.1.28"
     },
     "foreground-app-info": {
         "cmdline": [],
@@ -82232,7 +82289,7 @@
             "event_chain.simulation",
             "event_chain.simulation.simulate"
         ],
-        "version": "0.26.17"
+        "version": "0.26.18"
     },
     "forge-python-sdk": {
         "cmdline": [],
@@ -82316,7 +82373,7 @@
             "test.rpc.test_rpc",
             "test.rpc.test_stats"
         ],
-        "version": "0.26.11"
+        "version": "0.26.18"
     },
     "forgehg": {
         "cmdline": [],
@@ -87279,7 +87336,9 @@
         "version": "0.0.3"
     },
     "framed": {
-        "cmdline": [],
+        "cmdline": [
+            "framed-deletions"
+        ],
         "modules": [
             "framed",
             "framed.bioreactor",
@@ -87301,8 +87360,6 @@
             "framed.cobra.variability",
             "framed.community",
             "framed.community.model",
-            "framed.community.smetana",
-            "framed.community.smetana_old",
             "framed.experimental",
             "framed.experimental.benchmark",
             "framed.experimental.elements",
@@ -87314,8 +87371,12 @@
             "framed.experimental.reduction",
             "framed.experimental.sampling",
             "framed.experimental.visualization",
+            "framed.experimental.visualization.KEGG",
+            "framed.experimental.visualization.escher_maps",
+            "framed.experimental.visualization.iPATH",
             "framed.io",
             "framed.io.bioopt",
+            "framed.io.cache",
             "framed.io.plaintext",
             "framed.io.sbml",
             "framed.kinetic",
@@ -87343,7 +87404,7 @@
             "framed.unittests.tests_cobra",
             "framed.unittests.tests_sbml"
         ],
-        "version": "0.5.1"
+        "version": "0.5.2"
     },
     "frameduino": {
         "cmdline": [],
@@ -92904,158 +92965,8 @@
     },
     "frimcla": {
         "cmdline": [],
-        "modules": [
-            "frimcla",
-            "frimcla.Comparing",
-            "frimcla.DenseNet",
-            "frimcla.DenseNet.cifar10",
-            "frimcla.DenseNet.cifar100",
-            "frimcla.DenseNet.densenet",
-            "frimcla.DenseNet.densenet_fast",
-            "frimcla.DenseNet.imagenet_inference",
-            "frimcla.DenseNet.subpixel",
-            "frimcla.DenseNet.tensorflow_backend",
-            "frimcla.DenseNet.theano_backend",
-            "frimcla.DenseNet.weights",
-            "frimcla.DenseNet.weights.weight_translation_121",
-            "frimcla.DenseNet.weights.weight_translation_161",
-            "frimcla.DenseNet.weights.weight_translation_169",
-            "frimcla.StatisticalAnalysis",
-            "frimcla.StatisticalAnalysis.multiprocessingTests",
-            "frimcla.StatisticalAnalysis.stac",
-            "frimcla.StatisticalAnalysis.stac.doc",
-            "frimcla.StatisticalAnalysis.stac.doc.source",
-            "frimcla.StatisticalAnalysis.stac.doc.source._themes",
-            "frimcla.StatisticalAnalysis.stac.doc.source._themes.sphinx_rtd_theme",
-            "frimcla.StatisticalAnalysis.stac.doc.source.conf",
-            "frimcla.StatisticalAnalysis.stac.nonparametric_tests",
-            "frimcla.StatisticalAnalysis.stac.parametric_tests",
-            "frimcla.StatisticalAnalysis.stac.unit_tests",
-            "frimcla.StatisticalAnalysis.statisticalAnalysis",
-            "frimcla.StatisticalComparison",
-            "frimcla.command_line",
-            "frimcla.comparebest",
-            "frimcla.extractor",
-            "frimcla.extractor.extractor",
-            "frimcla.fullAnalysis",
-            "frimcla.h5py2csv",
-            "frimcla.index_features",
-            "frimcla.indexer",
-            "frimcla.indexer.baseindexer",
-            "frimcla.indexer.indexer",
-            "frimcla.prediction",
-            "frimcla.pruebas",
-            "frimcla.pruebas.probatina",
-            "frimcla.pruebas.prueba",
-            "frimcla.shallowmodels",
-            "frimcla.shallowmodels.classificationModelFactory",
-            "frimcla.shallowmodels.classificationModels",
-            "frimcla.shallowmodels.modelFactory",
-            "frimcla.shallowmodels.models",
-            "frimcla.sklearn_theano",
-            "frimcla.sklearn_theano.base",
-            "frimcla.sklearn_theano.datasets",
-            "frimcla.sklearn_theano.datasets.asirra",
-            "frimcla.sklearn_theano.datasets.base",
-            "frimcla.sklearn_theano.datasets.generators",
-            "frimcla.sklearn_theano.datasets.images",
-            "frimcla.sklearn_theano.externals",
-            "frimcla.sklearn_theano.externals.google",
-            "frimcla.sklearn_theano.externals.google.protobuf",
-            "frimcla.sklearn_theano.externals.google.protobuf.descriptor",
-            "frimcla.sklearn_theano.externals.google.protobuf.descriptor_database",
-            "frimcla.sklearn_theano.externals.google.protobuf.descriptor_pb2",
-            "frimcla.sklearn_theano.externals.google.protobuf.descriptor_pool",
-            "frimcla.sklearn_theano.externals.google.protobuf.internal",
-            "frimcla.sklearn_theano.externals.google.protobuf.internal._parameterized",
-            "frimcla.sklearn_theano.externals.google.protobuf.internal.api_implementation",
-            "frimcla.sklearn_theano.externals.google.protobuf.internal.containers",
-            "frimcla.sklearn_theano.externals.google.protobuf.internal.decoder",
-            "frimcla.sklearn_theano.externals.google.protobuf.internal.descriptor_database_test",
-            "frimcla.sklearn_theano.externals.google.protobuf.internal.descriptor_pool_test",
-            "frimcla.sklearn_theano.externals.google.protobuf.internal.descriptor_pool_test1_pb2",
-            "frimcla.sklearn_theano.externals.google.protobuf.internal.descriptor_pool_test2_pb2",
-            "frimcla.sklearn_theano.externals.google.protobuf.internal.descriptor_test",
-            "frimcla.sklearn_theano.externals.google.protobuf.internal.encoder",
-            "frimcla.sklearn_theano.externals.google.protobuf.internal.enum_type_wrapper",
-            "frimcla.sklearn_theano.externals.google.protobuf.internal.factory_test1_pb2",
-            "frimcla.sklearn_theano.externals.google.protobuf.internal.factory_test2_pb2",
-            "frimcla.sklearn_theano.externals.google.protobuf.internal.generator_test",
-            "frimcla.sklearn_theano.externals.google.protobuf.internal.import_test_package",
-            "frimcla.sklearn_theano.externals.google.protobuf.internal.import_test_package.inner_pb2",
-            "frimcla.sklearn_theano.externals.google.protobuf.internal.import_test_package.outer_pb2",
-            "frimcla.sklearn_theano.externals.google.protobuf.internal.message_factory_test",
-            "frimcla.sklearn_theano.externals.google.protobuf.internal.message_listener",
-            "frimcla.sklearn_theano.externals.google.protobuf.internal.message_set_extensions_pb2",
-            "frimcla.sklearn_theano.externals.google.protobuf.internal.message_test",
-            "frimcla.sklearn_theano.externals.google.protobuf.internal.missing_enum_values_pb2",
-            "frimcla.sklearn_theano.externals.google.protobuf.internal.more_extensions_dynamic_pb2",
-            "frimcla.sklearn_theano.externals.google.protobuf.internal.more_extensions_pb2",
-            "frimcla.sklearn_theano.externals.google.protobuf.internal.more_messages_pb2",
-            "frimcla.sklearn_theano.externals.google.protobuf.internal.packed_field_test_pb2",
-            "frimcla.sklearn_theano.externals.google.protobuf.internal.proto_builder_test",
-            "frimcla.sklearn_theano.externals.google.protobuf.internal.python_message",
-            "frimcla.sklearn_theano.externals.google.protobuf.internal.reflection_test",
-            "frimcla.sklearn_theano.externals.google.protobuf.internal.service_reflection_test",
-            "frimcla.sklearn_theano.externals.google.protobuf.internal.symbol_database_test",
-            "frimcla.sklearn_theano.externals.google.protobuf.internal.test_bad_identifiers_pb2",
-            "frimcla.sklearn_theano.externals.google.protobuf.internal.test_util",
-            "frimcla.sklearn_theano.externals.google.protobuf.internal.text_encoding_test",
-            "frimcla.sklearn_theano.externals.google.protobuf.internal.text_format_test",
-            "frimcla.sklearn_theano.externals.google.protobuf.internal.type_checkers",
-            "frimcla.sklearn_theano.externals.google.protobuf.internal.unknown_fields_test",
-            "frimcla.sklearn_theano.externals.google.protobuf.internal.wire_format",
-            "frimcla.sklearn_theano.externals.google.protobuf.internal.wire_format_test",
-            "frimcla.sklearn_theano.externals.google.protobuf.map_unittest_pb2",
-            "frimcla.sklearn_theano.externals.google.protobuf.message",
-            "frimcla.sklearn_theano.externals.google.protobuf.message_factory",
-            "frimcla.sklearn_theano.externals.google.protobuf.proto_builder",
-            "frimcla.sklearn_theano.externals.google.protobuf.pyext",
-            "frimcla.sklearn_theano.externals.google.protobuf.pyext.cpp_message",
-            "frimcla.sklearn_theano.externals.google.protobuf.pyext.python_pb2",
-            "frimcla.sklearn_theano.externals.google.protobuf.reflection",
-            "frimcla.sklearn_theano.externals.google.protobuf.service",
-            "frimcla.sklearn_theano.externals.google.protobuf.service_reflection",
-            "frimcla.sklearn_theano.externals.google.protobuf.symbol_database",
-            "frimcla.sklearn_theano.externals.google.protobuf.text_encoding",
-            "frimcla.sklearn_theano.externals.google.protobuf.text_format",
-            "frimcla.sklearn_theano.externals.google.protobuf.unittest_arena_pb2",
-            "frimcla.sklearn_theano.externals.google.protobuf.unittest_custom_options_pb2",
-            "frimcla.sklearn_theano.externals.google.protobuf.unittest_import_pb2",
-            "frimcla.sklearn_theano.externals.google.protobuf.unittest_import_public_pb2",
-            "frimcla.sklearn_theano.externals.google.protobuf.unittest_mset_pb2",
-            "frimcla.sklearn_theano.externals.google.protobuf.unittest_mset_wire_format_pb2",
-            "frimcla.sklearn_theano.externals.google.protobuf.unittest_no_arena_import_pb2",
-            "frimcla.sklearn_theano.externals.google.protobuf.unittest_no_arena_pb2",
-            "frimcla.sklearn_theano.externals.google.protobuf.unittest_no_generic_services_pb2",
-            "frimcla.sklearn_theano.externals.google.protobuf.unittest_pb2",
-            "frimcla.sklearn_theano.externals.google.protobuf.unittest_proto3_arena_pb2",
-            "frimcla.sklearn_theano.feature_extraction",
-            "frimcla.sklearn_theano.feature_extraction.caffe",
-            "frimcla.sklearn_theano.feature_extraction.caffe.balanced_vgg",
-            "frimcla.sklearn_theano.feature_extraction.caffe.caffemodel",
-            "frimcla.sklearn_theano.feature_extraction.caffe.googlenet",
-            "frimcla.sklearn_theano.feature_extraction.caffe.googlenet_class_labels",
-            "frimcla.sklearn_theano.feature_extraction.caffe.googlenet_layer_names",
-            "frimcla.sklearn_theano.feature_extraction.caffe.vgg",
-            "frimcla.sklearn_theano.feature_extraction.overfeat",
-            "frimcla.sklearn_theano.feature_extraction.overfeat_class_labels",
-            "frimcla.sklearn_theano.feature_extraction.tests",
-            "frimcla.sklearn_theano.feature_extraction.tests.test_overfeat",
-            "frimcla.sklearn_theano.models",
-            "frimcla.sklearn_theano.models.bvlc_googlenet",
-            "frimcla.sklearn_theano.models.bvlc_googlenet.caffe_pb2",
-            "frimcla.sklearn_theano.tests",
-            "frimcla.sklearn_theano.tests.test_base",
-            "frimcla.sklearn_theano.utils",
-            "frimcla.sklearn_theano.utils.ports",
-            "frimcla.sklearn_theano.utils.validation",
-            "frimcla.train",
-            "frimcla.utils",
-            "frimcla.utils.conf",
-            "frimcla.utils.dataset"
-        ],
-        "version": "0.0.543"
+        "modules": [],
+        "version": "0.0.544"
     },
     "frink": {
         "cmdline": [],
@@ -93983,6 +93894,28 @@
             "foiidea.views"
         ],
         "version": "0.0.1"
+    },
+    "froide-payment": {
+        "cmdline": [],
+        "modules": [
+            "froide_payment",
+            "froide_payment.admin",
+            "froide_payment.apps",
+            "froide_payment.forms",
+            "froide_payment.migrations",
+            "froide_payment.migrations.0001_initial",
+            "froide_payment.migrations.0002_order_is_donation",
+            "froide_payment.migrations.0003_order_kind",
+            "froide_payment.migrations.0004_auto_20190416_1719",
+            "froide_payment.migrations.0005_auto_20190521_1351",
+            "froide_payment.models",
+            "froide_payment.provider",
+            "froide_payment.urls",
+            "froide_payment.utils",
+            "froide_payment.views",
+            "froide_payment.widgets"
+        ],
+        "version": "0.0.3"
     },
     "frojd-fabric": {
         "cmdline": [],
@@ -95091,7 +95024,7 @@
             "moysklad.urls",
             "moysklad.utils"
         ],
-        "version": "0.4.0"
+        "version": "0.4.1"
     },
     "fs-onedrivefs": {
         "cmdline": [],
@@ -98315,11 +98248,14 @@
             "ftw.addressblock.content.addressblock",
             "ftw.addressblock.geo",
             "ftw.addressblock.geo.adapters",
+            "ftw.addressblock.geo.behaviours",
             "ftw.addressblock.geo.upgrades",
             "ftw.addressblock.geo.upgrades.20160809110357_use_i_block_coordinates_behavior",
             "ftw.addressblock.geo.upgrades.20160809110357_use_i_block_coordinates_behavior.upgrade",
             "ftw.addressblock.geo.upgrades.20171127152734_enable_map_for_anonymous",
             "ftw.addressblock.geo.upgrades.20171127152734_enable_map_for_anonymous.upgrade",
+            "ftw.addressblock.geo.upgrades.20190402111714_add_map_preferences",
+            "ftw.addressblock.geo.upgrades.20190402111714_add_map_preferences.upgrade",
             "ftw.addressblock.interfaces",
             "ftw.addressblock.testing",
             "ftw.addressblock.tests",
@@ -98333,9 +98269,11 @@
             "ftw.addressblock.tests.test_schema",
             "ftw.addressblock.upgrades",
             "ftw.addressblock.upgrades.20160812140226_exclude_address_block_from_navigation",
-            "ftw.addressblock.upgrades.20160812140226_exclude_address_block_from_navigation.upgrade"
+            "ftw.addressblock.upgrades.20160812140226_exclude_address_block_from_navigation.upgrade",
+            "ftw.addressblock.upgrades.20190521172501_add_missing_permission_for_editing",
+            "ftw.addressblock.upgrades.20190521172501_add_missing_permission_for_editing.upgrade"
         ],
-        "version": "1.2.0"
+        "version": "1.2.1"
     },
     "ftw-autofeature": {
         "cmdline": [],
@@ -103887,7 +103825,7 @@
         "modules": [
             "funcargparse"
         ],
-        "version": "0.2.0"
+        "version": "0.2.1"
     },
     "funcat": {
         "cmdline": [],
@@ -104693,6 +104631,13 @@
             "fundamentals.download.extract_filename_from_url",
             "fundamentals.download.get_now_datetime_filestamp",
             "fundamentals.download.multiobject_download",
+            "fundamentals.download.tests",
+            "fundamentals.download.tests.test__dump_files_to_local_drive",
+            "fundamentals.download.tests.test__fetch",
+            "fundamentals.download.tests.test_append_now_datestamp_to_filename",
+            "fundamentals.download.tests.test_extract_filename_from_url",
+            "fundamentals.download.tests.test_get_now_datetime_filestamp",
+            "fundamentals.download.tests.test_multiobject_download",
             "fundamentals.files",
             "fundamentals.files.fileChunker",
             "fundamentals.files.list_of_dictionaries_to_mysql_inserts",
@@ -104745,7 +104690,7 @@
             "fundamentals.tools",
             "fundamentals.utKit"
         ],
-        "version": "1.6.3"
+        "version": "2.0.0"
     },
     "fundamentals-of-data-science": {
         "cmdline": [],
@@ -106402,9 +106347,11 @@
             "furniture",
             "furniture.animation",
             "furniture.geometry",
+            "furniture.renderer",
+            "furniture.shortcuts",
             "furniture.vfont"
         ],
-        "version": "0.1.0"
+        "version": "0.2.0"
     },
     "furniture-typo": {
         "cmdline": [],
