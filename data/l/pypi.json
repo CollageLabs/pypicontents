@@ -6484,7 +6484,7 @@
             "lantern_sl.utils.request",
             "lantern_sl.utils.time"
         ],
-        "version": "0.0.32"
+        "version": "0.0.33"
     },
     "lantz": {
         "cmdline": [
@@ -20514,7 +20514,7 @@
             "leaptask.task002",
             "leaptask.task101"
         ],
-        "version": "0.0.20"
+        "version": "0.0.21"
     },
     "leapy": {
         "cmdline": [],
@@ -24614,7 +24614,9 @@
             "lenstronomy.Cosmo.nfw_param",
             "lenstronomy.Data",
             "lenstronomy.Data.coord_transforms",
+            "lenstronomy.Data.image_noise",
             "lenstronomy.Data.imaging_data",
+            "lenstronomy.Data.pixel_grid",
             "lenstronomy.Data.psf",
             "lenstronomy.GalKin",
             "lenstronomy.GalKin.analytic_kinematics",
@@ -24629,15 +24631,22 @@
             "lenstronomy.GalKin.velocity_util",
             "lenstronomy.ImSim",
             "lenstronomy.ImSim.MultiBand",
+            "lenstronomy.ImSim.MultiBand.joint_linear",
             "lenstronomy.ImSim.MultiBand.multi_data_base",
-            "lenstronomy.ImSim.MultiBand.multi_exposures",
-            "lenstronomy.ImSim.MultiBand.multi_frame",
-            "lenstronomy.ImSim.MultiBand.multiband",
-            "lenstronomy.ImSim.MultiBand.multiband_multimodel",
+            "lenstronomy.ImSim.MultiBand.multi_linear",
+            "lenstronomy.ImSim.MultiBand.single_band_multi_model",
+            "lenstronomy.ImSim.Numerics",
+            "lenstronomy.ImSim.Numerics.adaptive_numerics",
+            "lenstronomy.ImSim.Numerics.convolution",
+            "lenstronomy.ImSim.Numerics.grid",
+            "lenstronomy.ImSim.Numerics.numba_convolution",
+            "lenstronomy.ImSim.Numerics.numerics",
+            "lenstronomy.ImSim.Numerics.partial_image",
+            "lenstronomy.ImSim.Numerics.point_source_rendering",
             "lenstronomy.ImSim.de_lens",
             "lenstronomy.ImSim.image2source_mapping",
+            "lenstronomy.ImSim.image_linear_solve",
             "lenstronomy.ImSim.image_model",
-            "lenstronomy.ImSim.image_numerics",
             "lenstronomy.LensModel",
             "lenstronomy.LensModel.Optimizer",
             "lenstronomy.LensModel.Optimizer.fixed_routines",
@@ -24722,6 +24731,7 @@
             "lenstronomy.PointSource.point_source_types",
             "lenstronomy.Sampling",
             "lenstronomy.Sampling.Likelihoods",
+            "lenstronomy.Sampling.Likelihoods.flux_ratio_likelihood",
             "lenstronomy.Sampling.Likelihoods.image_likelihood",
             "lenstronomy.Sampling.Likelihoods.position_likelihood",
             "lenstronomy.Sampling.Likelihoods.prior_likelihood",
@@ -24748,6 +24758,7 @@
             "lenstronomy.Util.kernel_util",
             "lenstronomy.Util.mask",
             "lenstronomy.Util.multi_gauss_expansion",
+            "lenstronomy.Util.numba_util",
             "lenstronomy.Util.param_util",
             "lenstronomy.Util.prob_density",
             "lenstronomy.Util.simulation_util",
@@ -24773,6 +24784,7 @@
             "test.test_Cosmo.test_nfw_param",
             "test.test_Data",
             "test.test_Data.test_coord_transforms",
+            "test.test_Data.test_image_noise",
             "test.test_Data.test_imaging_data",
             "test.test_Data.test_psf",
             "test.test_GalKin",
@@ -24784,14 +24796,18 @@
             "test.test_GalKin.test_multi_gauss_expansion",
             "test.test_ImSim",
             "test.test_ImSim.test_MultiBand",
-            "test.test_ImSim.test_MultiBand.test_multi_exposures",
-            "test.test_ImSim.test_MultiBand.test_multi_frame",
-            "test.test_ImSim.test_MultiBand.test_multiband",
-            "test.test_ImSim.test_MultiBand.test_multiband_multi_model",
+            "test.test_ImSim.test_MultiBand.test_joint_linear",
+            "test.test_ImSim.test_MultiBand.test_multi_linear",
+            "test.test_ImSim.test_Numerics",
+            "test.test_ImSim.test_Numerics.test_adaptive_grid",
+            "test.test_ImSim.test_Numerics.test_adaptive_numerics",
+            "test.test_ImSim.test_Numerics.test_convolution",
+            "test.test_ImSim.test_Numerics.test_numerics",
+            "test.test_ImSim.test_Numerics.test_partial_image",
+            "test.test_ImSim.test_Numerics.test_pixel_convolution",
             "test.test_ImSim.test_de_lens",
             "test.test_ImSim.test_image2soure_mapping",
             "test.test_ImSim.test_image_model",
-            "test.test_ImSim.test_image_numerics",
             "test.test_LensModel",
             "test.test_LensModel.test_Optimizer",
             "test.test_LensModel.test_Optimizer.test_multi_plane",
@@ -24893,7 +24909,7 @@
             "test.test_Workflow.test_fitting_sequence",
             "test.test_Workflow.test_psf_fitting"
         ],
-        "version": "0.7.0"
+        "version": "0.8.0"
     },
     "lenticrypt": {
         "cmdline": [],
@@ -32846,13 +32862,18 @@
             "libensemble.alloc_funcs.fast_alloc",
             "libensemble.alloc_funcs.fast_alloc_and_pausing",
             "libensemble.alloc_funcs.fast_alloc_to_aposmm",
+            "libensemble.alloc_funcs.give_pregenerated_work",
             "libensemble.alloc_funcs.give_sim_work_first",
             "libensemble.alloc_funcs.inverse_bayes_allocf",
             "libensemble.alloc_funcs.start_only_persistent",
             "libensemble.alloc_funcs.start_persistent_local_opt_gens",
             "libensemble.alloc_funcs.support",
             "libensemble.balsam_controller",
-            "libensemble.calc_info",
+            "libensemble.comms",
+            "libensemble.comms.comms",
+            "libensemble.comms.logs",
+            "libensemble.comms.mpi",
+            "libensemble.comms.tcp_mgr",
             "libensemble.controller",
             "libensemble.gen_funcs",
             "libensemble.gen_funcs.aposmm",
@@ -32862,16 +32883,15 @@
             "libensemble.gen_funcs.uniform_or_localopt",
             "libensemble.gen_funcs.uniform_sampling",
             "libensemble.history",
-            "libensemble.launcher",
             "libensemble.libE",
             "libensemble.libE_fields",
             "libensemble.libE_logger",
             "libensemble.libE_manager",
             "libensemble.libE_worker",
-            "libensemble.loc_stack",
             "libensemble.message_numbers",
             "libensemble.mpi_controller",
             "libensemble.mpi_resources",
+            "libensemble.node_resources",
             "libensemble.resources",
             "libensemble.sim_funcs",
             "libensemble.sim_funcs.branin",
@@ -32886,16 +32906,19 @@
             "libensemble.sim_funcs.six_hump_camel",
             "libensemble.tests",
             "libensemble.tests.regression_tests",
-            "libensemble.tests.regression_tests.not_correct_test_of_worker_exceptions",
+            "libensemble.tests.regression_tests.common",
+            "libensemble.tests.regression_tests.support",
             "libensemble.tests.regression_tests.test_1d_uniform_sampling",
             "libensemble.tests.regression_tests.test_6-hump_camel_active_persistent_worker_abort",
             "libensemble.tests.regression_tests.test_6-hump_camel_aposmm_LD_MMA",
             "libensemble.tests.regression_tests.test_6-hump_camel_elapsed_time_abort",
             "libensemble.tests.regression_tests.test_6-hump_camel_persistent_uniform_sampling",
+            "libensemble.tests.regression_tests.test_6-hump_camel_pregenerated_sample",
             "libensemble.tests.regression_tests.test_6-hump_camel_uniform_sampling",
             "libensemble.tests.regression_tests.test_6-hump_camel_uniform_sampling_with_persistent_localopt_gens",
             "libensemble.tests.regression_tests.test_6-hump_camel_with_different_nodes_uniform_sample",
-            "libensemble.tests.regression_tests.test_branin_aposmm",
+            "libensemble.tests.regression_tests.test_branin_aposmm_nlopt_and_then_scipy",
+            "libensemble.tests.regression_tests.test_calc_exception",
             "libensemble.tests.regression_tests.test_chwirut_aposmm_one_residual_at_a_time",
             "libensemble.tests.regression_tests.test_chwirut_pounders",
             "libensemble.tests.regression_tests.test_chwirut_uniform_sampling_one_residual_at_a_time",
@@ -32903,28 +32926,34 @@
             "libensemble.tests.regression_tests.test_fast_alloc",
             "libensemble.tests.regression_tests.test_inverse_bayes_example",
             "libensemble.tests.regression_tests.test_jobcontroller_hworld",
+            "libensemble.tests.regression_tests.test_mpi_comms",
             "libensemble.tests.regression_tests.test_nan_func_aposmm",
+            "libensemble.tests.regression_tests.test_worker_exceptions",
             "libensemble.tests.unit_tests",
             "libensemble.tests.unit_tests.launch_busy",
             "libensemble.tests.unit_tests.setup",
             "libensemble.tests.unit_tests.test_allocation_funcs",
             "libensemble.tests.unit_tests.test_aposmm_logic",
+            "libensemble.tests.unit_tests.test_comms",
             "libensemble.tests.unit_tests.test_history",
             "libensemble.tests.unit_tests.test_job_funcs",
             "libensemble.tests.unit_tests.test_jobcontroller",
             "libensemble.tests.unit_tests.test_launcher",
             "libensemble.tests.unit_tests.test_libE_main",
             "libensemble.tests.unit_tests.test_loc_stack",
-            "libensemble.tests.unit_tests.test_logger",
             "libensemble.tests.unit_tests.test_manager_main",
             "libensemble.tests.unit_tests.test_mpi4py",
             "libensemble.tests.unit_tests.test_resources",
             "libensemble.tests.unit_tests.test_scipy",
             "libensemble.tests.unit_tests.test_timer",
             "libensemble.tests.unit_tests.tofix__test_worker",
-            "libensemble.timer"
+            "libensemble.util",
+            "libensemble.util.forkpdb",
+            "libensemble.util.launcher",
+            "libensemble.util.loc_stack",
+            "libensemble.util.timer"
         ],
-        "version": "0.4.1"
+        "version": "0.5.0"
     },
     "libenum": {
         "cmdline": [],
@@ -37902,7 +37931,7 @@
     "libsonata": {
         "cmdline": [],
         "modules": [],
-        "version": "0.0.1"
+        "version": "0.0.2"
     },
     "libsoundtouch": {
         "cmdline": [],
@@ -57826,6 +57855,21 @@
         ],
         "version": "2.1.0"
     },
+    "lmfgg": {
+        "cmdline": [],
+        "modules": [
+            "lmfgg",
+            "lmfgg.common",
+            "lmfgg.ps",
+            "lmfgg.ps.common",
+            "lmfgg.table",
+            "lmfgg.table.common",
+            "lmfgg.table.etb",
+            "lmfgg.test",
+            "lmfgg.txt"
+        ],
+        "version": "1.0.5"
+    },
     "lmfhawq": {
         "cmdline": [],
         "modules": [
@@ -57998,7 +58042,7 @@
             "LMIPy.table",
             "LMIPy.utils"
         ],
-        "version": "0.1.15"
+        "version": "0.1.16"
     },
     "lmirror": {
         "cmdline": [],
@@ -70391,8 +70435,10 @@
     },
     "lowhaio": {
         "cmdline": [],
-        "modules": [],
-        "version": "0.0.65"
+        "modules": [
+            "lowhaio"
+        ],
+        "version": "0.0.66"
     },
     "lowhaio-aws-sigv4": {
         "cmdline": [],
@@ -72762,7 +72808,7 @@
             "tests.cli.test_init_command",
             "tests.test_create_app"
         ],
-        "version": "0.1.8"
+        "version": "0.1.9"
     },
     "lspackage": {
         "cmdline": [],
@@ -75773,7 +75819,7 @@
             "luma.core.util",
             "luma.core.virtual"
         ],
-        "version": "1.9.0"
+        "version": "1.10.0"
     },
     "luma-emulator": {
         "cmdline": [],
@@ -77096,6 +77142,7 @@
         "cmdline": [],
         "modules": [
             "lusid",
+            "lusid.__version__",
             "lusid.api",
             "lusid.api.aggregation_api",
             "lusid.api.analytics_stores_api",
@@ -77124,6 +77171,7 @@
             "lusid.exceptions",
             "lusid.models",
             "lusid.models.access_controlled_action",
+            "lusid.models.access_controlled_resource",
             "lusid.models.action_id",
             "lusid.models.add_transaction_property_response",
             "lusid.models.adjust_holding",
@@ -77136,7 +77184,6 @@
             "lusid.models.analytic_store",
             "lusid.models.analytic_store_key",
             "lusid.models.change",
-            "lusid.models.code_only_id_path_definition",
             "lusid.models.complete_portfolio",
             "lusid.models.configuration_recipe",
             "lusid.models.constituents_adjustment_header",
@@ -77147,7 +77194,6 @@
             "lusid.models.corporate_action_transition_component_request",
             "lusid.models.corporate_action_transition_request",
             "lusid.models.create_analytic_store_request",
-            "lusid.models.create_corporate_action",
             "lusid.models.create_corporate_action_source_request",
             "lusid.models.create_cut_label_definition_request",
             "lusid.models.create_data_type_request",
@@ -77173,7 +77219,6 @@
             "lusid.models.expanded_group",
             "lusid.models.field_schema",
             "lusid.models.file_response",
-            "lusid.models.full_id_path_definition",
             "lusid.models.get_instruments_response",
             "lusid.models.get_quotes_response",
             "lusid.models.get_reference_portfolio_constituents_response",
@@ -77181,7 +77226,8 @@
             "lusid.models.holdings_adjustment",
             "lusid.models.holdings_adjustment_header",
             "lusid.models.i_unit_definition_dto",
-            "lusid.models.id_path_definition",
+            "lusid.models.id_selector_definition",
+            "lusid.models.identifier_part_schema",
             "lusid.models.instrument",
             "lusid.models.instrument_analytic",
             "lusid.models.instrument_definition",
@@ -77228,6 +77274,7 @@
             "lusid.models.reference_portfolio_constituent",
             "lusid.models.reference_portfolio_constituent_request",
             "lusid.models.resource_id",
+            "lusid.models.resource_list_of_access_controlled_resource",
             "lusid.models.resource_list_of_analytic_store_key",
             "lusid.models.resource_list_of_change",
             "lusid.models.resource_list_of_constituents_adjustment_header",
@@ -77252,9 +77299,7 @@
             "lusid.models.result_data_schema",
             "lusid.models.results",
             "lusid.models.schema",
-            "lusid.models.scope_and_code_id_path_definition",
             "lusid.models.scope_definition",
-            "lusid.models.scope_id_path_definition",
             "lusid.models.stream",
             "lusid.models.target_tax_lot",
             "lusid.models.target_tax_lot_request",
@@ -77275,6 +77320,7 @@
             "lusid.models.update_portfolio_group_request",
             "lusid.models.update_portfolio_request",
             "lusid.models.update_property_definition_request",
+            "lusid.models.upsert_corporate_action_request",
             "lusid.models.upsert_corporate_actions_response",
             "lusid.models.upsert_instrument_properties_response",
             "lusid.models.upsert_instrument_property_request",
@@ -77296,7 +77342,7 @@
             "lusid.models.versioned_resource_list_of_transaction",
             "lusid.rest"
         ],
-        "version": "0.10.129"
+        "version": "0.10.148"
     },
     "lusid-tr-sdk": {
         "cmdline": [],
@@ -77788,7 +77834,7 @@
             "luwiji.xgboost._base",
             "luwiji.xgboost._illustration"
         ],
-        "version": "1.0.6"
+        "version": "1.0.7"
     },
     "lux": {
         "cmdline": [],
