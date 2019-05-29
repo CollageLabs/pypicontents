@@ -142,9 +142,10 @@
         "modules": [
             "qa_tech_basic",
             "qa_tech_basic.configuration",
-            "qa_tech_basic.regex_utils"
+            "qa_tech_basic.regex_utils",
+            "qa_tech_basic.time_utils"
         ],
-        "version": "0.0.1"
+        "version": "0.1.0"
     },
     "qa-tests": {
         "cmdline": [],
@@ -1633,12 +1634,22 @@
             "qcfractal.cli.manager_templates",
             "qcfractal.cli.manager_templates.dask_templates",
             "qcfractal.cli.manager_templates.parsl_templates",
+            "qcfractal.cli.qcfractal_dashboard",
             "qcfractal.cli.qcfractal_manager",
             "qcfractal.cli.qcfractal_server",
             "qcfractal.cli.qcfractal_template_generator",
             "qcfractal.cli.tests",
             "qcfractal.cli.tests.manager_template",
             "qcfractal.cli.tests.test_cli",
+            "qcfractal.dashboard",
+            "qcfractal.dashboard.app",
+            "qcfractal.dashboard.connection",
+            "qcfractal.dashboard.dash_managers",
+            "qcfractal.dashboard.dash_queue",
+            "qcfractal.dashboard.dash_service",
+            "qcfractal.dashboard.index",
+            "qcfractal.dashboard.navbar",
+            "qcfractal.dashboard.start_dashboard",
             "qcfractal.data",
             "qcfractal.extras",
             "qcfractal.interface",
@@ -1650,6 +1661,7 @@
             "qcfractal.interface.collections.fragment",
             "qcfractal.interface.collections.generic",
             "qcfractal.interface.collections.openffworkflow",
+            "qcfractal.interface.collections.optimization_dataset",
             "qcfractal.interface.collections.reaction_dataset",
             "qcfractal.interface.collections.torsiondrive_dataset",
             "qcfractal.interface.data",
@@ -1697,6 +1709,8 @@
             "qcfractal.storage_sockets",
             "qcfractal.storage_sockets.me_models",
             "qcfractal.storage_sockets.mongoengine_socket",
+            "qcfractal.storage_sockets.sql_models",
+            "qcfractal.storage_sockets.sqlalchemy_socket",
             "qcfractal.storage_sockets.storage_socket",
             "qcfractal.storage_sockets.storage_utils",
             "qcfractal.testing",
@@ -1711,10 +1725,12 @@
             "qcfractal.tests.test_procedures",
             "qcfractal.tests.test_server",
             "qcfractal.tests.test_services",
+            "qcfractal.tests.test_sqlalchemy",
             "qcfractal.tests.test_storage",
+            "qcfractal.tests.test_storage_sql",
             "qcfractal.web_handlers"
         ],
-        "version": "0.6.0"
+        "version": "0.7.1"
     },
     "qcgpu": {
         "cmdline": [],
@@ -3177,6 +3193,7 @@
             "qcodes.dataset.data_set",
             "qcodes.dataset.database",
             "qcodes.dataset.database_extract_runs",
+            "qcodes.dataset.database_fix_functions",
             "qcodes.dataset.dependencies",
             "qcodes.dataset.descriptions",
             "qcodes.dataset.experiment_container",
@@ -3355,6 +3372,7 @@
             "qcodes.instrument_drivers.tektronix.AWGFileParser",
             "qcodes.instrument_drivers.tektronix.Keithley_2000",
             "qcodes.instrument_drivers.tektronix.Keithley_2400",
+            "qcodes.instrument_drivers.tektronix.Keithley_2450",
             "qcodes.instrument_drivers.tektronix.Keithley_2600",
             "qcodes.instrument_drivers.tektronix.Keithley_2600_channels",
             "qcodes.instrument_drivers.tektronix.Keithley_2700",
@@ -3391,13 +3409,13 @@
             "qcodes.tests.dataset.temporary_databases",
             "qcodes.tests.dataset.test_database_creation_and_upgrading",
             "qcodes.tests.dataset.test_database_extract_runs",
-            "qcodes.tests.dataset.test_database_fixes",
             "qcodes.tests.dataset.test_datasaver",
             "qcodes.tests.dataset.test_dataset_basic",
             "qcodes.tests.dataset.test_dataset_loading",
             "qcodes.tests.dataset.test_dependencies",
             "qcodes.tests.dataset.test_descriptions",
             "qcodes.tests.dataset.test_experiment_container",
+            "qcodes.tests.dataset.test_fix_functions",
             "qcodes.tests.dataset.test_guids",
             "qcodes.tests.dataset.test_measurement_context_manager",
             "qcodes.tests.dataset.test_metadata",
@@ -3417,6 +3435,7 @@
             "qcodes.tests.drivers.AlazarTech.test_dll_wrapper",
             "qcodes.tests.drivers.auxiliary_files",
             "qcodes.tests.drivers.test_Agilent_E8527D",
+            "qcodes.tests.drivers.test_Keithley_2450",
             "qcodes.tests.drivers.test_Keysight_33XXX",
             "qcodes.tests.drivers.test_Keysight_M3201A",
             "qcodes.tests.drivers.test_MercuryiPS",
@@ -3484,11 +3503,12 @@
             "qcodes.utils.plotting",
             "qcodes.utils.slack",
             "qcodes.utils.threading",
+            "qcodes.utils.types",
             "qcodes.utils.validators",
             "qcodes.utils.zmq_helpers",
             "qcodes.version"
         ],
-        "version": "0.2.1"
+        "version": "0.3.0"
     },
     "qcompress": {
         "cmdline": [],
@@ -3619,6 +3639,7 @@
             "qcportal.collections.dataset",
             "qcportal.collections.generic",
             "qcportal.collections.openffworkflow",
+            "qcportal.collections.optimization_dataset",
             "qcportal.collections.reaction_dataset",
             "qcportal.collections.torsiondrive_dataset",
             "qcportal.data",
@@ -3648,7 +3669,7 @@
             "qcportal.tests.test_visualization",
             "qcportal.visualization"
         ],
-        "version": "0.6.0"
+        "version": "0.7.1"
     },
     "qcqp": {
         "cmdline": [],
@@ -11989,7 +12010,7 @@
             "qsyasm.parsetab",
             "qsyasm.program"
         ],
-        "version": "0.4.2"
+        "version": "0.4.3"
     },
     "qsymbolic": {
         "cmdline": [],
@@ -12028,7 +12049,7 @@
         "modules": [
             "qsystem"
         ],
-        "version": "1.0.0"
+        "version": "1.1.0"
     },
     "qt": {
         "cmdline": [],
@@ -12347,7 +12368,7 @@
             "webview.constant",
             "webview.qt"
         ],
-        "version": "0.0.39"
+        "version": "0.0.40"
     },
     "qt5-py": {
         "cmdline": [],
@@ -14819,7 +14840,7 @@
             "quaerere_base_client.model",
             "quaerere_base_client.resource"
         ],
-        "version": "0.1.0rc0"
+        "version": "0.1.0rc1"
     },
     "quaerere-base-common": {
         "cmdline": [],
@@ -14847,7 +14868,7 @@
             "willamette_client.api_v1.resources.web_sites",
             "willamette_client.client"
         ],
-        "version": "0.1.0a0"
+        "version": "0.1.0a1"
     },
     "quaerere-willamette-common": {
         "cmdline": [],
@@ -15596,6 +15617,19 @@
             "quandlpy.quandlpy"
         ],
         "version": "0.1.4"
+    },
+    "quandoo": {
+        "cmdline": [],
+        "modules": [
+            "quandoo",
+            "quandoo.Customer",
+            "quandoo.ErrorResponse",
+            "quandoo.Merchant",
+            "quandoo.QuandooModel",
+            "quandoo.Reservation",
+            "quandoo.config"
+        ],
+        "version": "1.2.3"
     },
     "quanfima": {
         "cmdline": [],
@@ -17727,7 +17761,7 @@
             "quantstats.stats",
             "quantstats.utils"
         ],
-        "version": "0.0.9"
+        "version": "0.0.10"
     },
     "quantstudio": {
         "cmdline": [],
@@ -21225,7 +21259,7 @@
             "quick_server",
             "quick_server.quick_server"
         ],
-        "version": "0.5.6"
+        "version": "0.5.7"
     },
     "quick-sqlite": {
         "cmdline": [],
@@ -22436,6 +22470,15 @@
         "modules": [],
         "version": ""
     },
+    "quiet-py": {
+        "cmdline": [],
+        "modules": [
+            "quiet",
+            "quiet.file_decoder",
+            "quiet.quiet"
+        ],
+        "version": "0.1"
+    },
     "quik": {
         "cmdline": [],
         "modules": [],
@@ -22593,33 +22636,48 @@
         "cmdline": [],
         "modules": [
             "quilt",
-            "quilt.admin",
-            "quilt.api",
-            "quilt.bucket",
-            "quilt.data_transfer",
-            "quilt.exceptions",
-            "quilt.formats",
+            "quilt.asa",
+            "quilt.asa.img",
+            "quilt.asa.pytorch",
+            "quilt.data",
             "quilt.imports",
-            "quilt.main",
-            "quilt.packages",
-            "quilt.search_util",
-            "quilt.session",
-            "quilt.util",
-            "quilt.xattr",
-            "tests",
-            "tests.conftest",
-            "tests.integration",
-            "tests.integration.test_packages",
-            "tests.test_api",
-            "tests.test_bucket",
-            "tests.test_cli",
-            "tests.test_data_transfer",
-            "tests.test_formats",
-            "tests.test_search",
-            "tests.test_util",
-            "tests.utils"
+            "quilt.nodes",
+            "quilt.team",
+            "quilt.test",
+            "quilt.test.gen_data",
+            "quilt.test.integration",
+            "quilt.test.test_asa_plot",
+            "quilt.test.test_asa_torch",
+            "quilt.test.test_build",
+            "quilt.test.test_checks",
+            "quilt.test.test_cli",
+            "quilt.test.test_command",
+            "quilt.test.test_gen_data",
+            "quilt.test.test_import",
+            "quilt.test.test_install",
+            "quilt.test.test_integration",
+            "quilt.test.test_push",
+            "quilt.test.test_signature",
+            "quilt.test.test_store",
+            "quilt.test.test_util",
+            "quilt.test.utils",
+            "quilt.tools",
+            "quilt.tools.build",
+            "quilt.tools.check_functions",
+            "quilt.tools.command",
+            "quilt.tools.compat",
+            "quilt.tools.const",
+            "quilt.tools.core",
+            "quilt.tools.data_transfer",
+            "quilt.tools.hashing",
+            "quilt.tools.main",
+            "quilt.tools.package",
+            "quilt.tools.sign",
+            "quilt.tools.store",
+            "quilt.tools.util",
+            "quilt.util"
         ],
-        "version": "3.0.0"
+        "version": "2.9.15"
     },
     "quilt-lang": {
         "cmdline": [],
@@ -25601,7 +25659,7 @@
             "qwert.salt",
             "qwert.text_fn"
         ],
-        "version": "2.3.1"
+        "version": "2.4.0"
     },
     "qwertasyx": {
         "cmdline": [],
