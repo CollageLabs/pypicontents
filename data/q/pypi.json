@@ -1114,15 +1114,17 @@
         "cmdline": [],
         "modules": [
             "qbertconfig",
-            "qbertconfig.Fetcher",
-            "qbertconfig.Kubeconfig",
-            "qbertconfig.QbertClient",
             "qbertconfig._version",
             "qbertconfig.cli",
-            "qbertconfig.cli.dispatcher",
-            "qbertconfig.cli.main"
+            "qbertconfig.cli.main",
+            "qbertconfig.cli.operation",
+            "qbertconfig.cli.operation.fetch",
+            "qbertconfig.cli.operation.help",
+            "qbertconfig.cli.operation.list_clusters",
+            "qbertconfig.kubeconfig",
+            "qbertconfig.qbertclient"
         ],
-        "version": "0.3.1"
+        "version": "0.3.2"
     },
     "qbirthday": {
         "cmdline": [],
@@ -1172,7 +1174,7 @@
             "qbittorrentapi.exceptions",
             "qbittorrentapi.objects"
         ],
-        "version": "0.2.5"
+        "version": "0.3"
     },
     "qborg": {
         "cmdline": [],
@@ -4055,14 +4057,18 @@
         "cmdline": [],
         "modules": [
             "qdarkstyle",
+            "qdarkstyle.palette",
             "qdarkstyle.pyqt5_style_rc",
             "qdarkstyle.pyqt_style_rc",
             "qdarkstyle.pyqtgraph_style_rc",
             "qdarkstyle.pyside2_style_rc",
             "qdarkstyle.pyside_style_rc",
-            "qdarkstyle.qtpy_style_rc"
+            "qdarkstyle.qtpy_style_rc",
+            "qdarkstyle.utils",
+            "qdarkstyle.utils.images",
+            "qdarkstyle.utils.scss"
         ],
-        "version": "2.6.8"
+        "version": "2.7"
     },
     "qdatastream": {
         "cmdline": [],
@@ -8526,6 +8532,11 @@
             "utils.hom_plot"
         ],
         "version": "1.1"
+    },
+    "qlc": {
+        "cmdline": [],
+        "modules": [],
+        "version": ""
     },
     "qlcompiler": {
         "cmdline": [],
@@ -14869,11 +14880,8 @@
     },
     "quaerere-base-common": {
         "cmdline": [],
-        "modules": [
-            "quaerere_base_common",
-            "quaerere_base_common.schema"
-        ],
-        "version": "0.1.0rc1"
+        "modules": [],
+        "version": "0.1.0rc2"
     },
     "quaerere-base-flask": {
         "cmdline": [],
@@ -15641,6 +15649,19 @@
             "quandlpy.quandlpy"
         ],
         "version": "0.1.4"
+    },
+    "quandoo": {
+        "cmdline": [],
+        "modules": [
+            "quandoo",
+            "quandoo.Customer",
+            "quandoo.Error",
+            "quandoo.Merchant",
+            "quandoo.QuandooModel",
+            "quandoo.Reservation",
+            "quandoo.config"
+        ],
+        "version": "1.2.6"
     },
     "quanfima": {
         "cmdline": [],
@@ -24056,76 +24077,71 @@
     "qulab": {
         "cmdline": [],
         "modules": [
-            "lab",
-            "lab._app",
-            "lab._bootstrap",
-            "lab._importer",
-            "lab._plot",
-            "lab._query",
-            "lab._rcmap",
-            "lab._unit",
-            "lab.admin",
-            "lab.base",
-            "lab.config",
-            "lab.db",
-            "lab.db.query",
-            "lab.db.schema",
-            "lab.db.schema.app",
-            "lab.db.schema.base",
-            "lab.db.schema.code_mod",
-            "lab.db.schema.drv_inst",
-            "lab.db.schema.record",
-            "lab.db.schema.user",
-            "lab.db.update",
-            "lab.db.utils",
-            "lab.device",
-            "lab.device._driver",
-            "lab.device._quant",
-            "lab.device.client",
-            "lab.device.protocol",
-            "lab.device.util",
-            "lab.server",
-            "lab.server.handlers",
-            "lab.server.server",
-            "lab.server.ui",
-            "lab.ui",
-            "lab.ui._app",
-            "lab.ui._query",
-            "lab.ui.utils",
-            "lab.util",
-            "lab.waveform",
             "qulab",
-            "qulab._app",
-            "qulab._driver",
+            "qulab._config",
             "qulab._version",
-            "qulab.client",
-            "qulab.config",
+            "qulab.bootstrap",
+            "qulab.cli",
+            "qulab.cli.dht",
+            "qulab.cli.instrument",
+            "qulab.cli.notebook",
+            "qulab.dht",
+            "qulab.dht.crawling",
+            "qulab.dht.network",
+            "qulab.dht.node",
+            "qulab.dht.protocol",
+            "qulab.dht.routing",
+            "qulab.dht.utils",
+            "qulab.driver",
             "qulab.drivers",
             "qulab.drivers.33120A",
             "qulab.drivers.AFG3102",
-            "qulab.drivers.AlazarTech_Digitizer",
-            "qulab.drivers.AlazarTech_Digitizer.AlazarApi",
-            "qulab.drivers.AlazarTech_Digitizer.AlazarCmd",
-            "qulab.drivers.AlazarTech_Digitizer.AlazarError",
-            "qulab.drivers.AlazarTech_Digitizer.AlazarTech_Digitizer",
-            "qulab.drivers.AlazarTech_Digitizer.AlazarTech_Wrapper",
+            "qulab.drivers.AlazarTechDigitizer",
+            "qulab.drivers.AlazarTechDigitizer.AlazarApi",
+            "qulab.drivers.AlazarTechDigitizer.AlazarTechWrapper",
+            "qulab.drivers.AlazarTechDigitizer.Driver",
+            "qulab.drivers.AlazarTechDigitizer.exception",
             "qulab.drivers.DG645",
             "qulab.drivers.DPO4104B",
             "qulab.drivers.DSA875",
             "qulab.drivers.HP81110A",
             "qulab.drivers.IT6302",
             "qulab.drivers.NetworkAnalyzer",
-            "qulab.drivers.PSG_SignalGenerator",
+            "qulab.drivers.PSG",
+            "qulab.drivers.RigolAWG",
+            "qulab.drivers.RsFSL",
             "qulab.drivers.SR620",
-            "qulab.drivers.Tek_AWG",
-            "qulab.drivers.wx_AWG",
-            "qulab.protocol",
-            "qulab.server",
-            "qulab.server.worker",
-            "qulab.util",
-            "qulab.waveform"
+            "qulab.drivers.TekAWG",
+            "qulab.drivers.TekAWG70000A",
+            "qulab.drivers.ZIuhfli",
+            "qulab.drivers.wxAWG",
+            "qulab.exceptions",
+            "qulab.job",
+            "qulab.loader",
+            "qulab.log",
+            "qulab.math",
+            "qulab.math.func",
+            "qulab.rpc",
+            "qulab.security",
+            "qulab.security.key_derive",
+            "qulab.serialize",
+            "qulab.service",
+            "qulab.storage",
+            "qulab.storage.connect",
+            "qulab.storage.memstorage",
+            "qulab.storage.schema",
+            "qulab.storage.schema.base",
+            "qulab.storage.schema.code",
+            "qulab.storage.schema.record",
+            "qulab.storage.utils",
+            "qulab.sugar",
+            "qulab.ui",
+            "qulab.ui.progressbar",
+            "qulab.ui.utils",
+            "qulab.umsgpack",
+            "qulab.utils"
         ],
-        "version": "0.4.0"
+        "version": "0.9.0"
     },
     "qulacs": {
         "cmdline": [],
