@@ -1018,7 +1018,7 @@
             "qbatch",
             "qbatch.qbatch"
         ],
-        "version": "2.1.1"
+        "version": "2.1.2"
     },
     "qbcodespecs": {
         "cmdline": [],
@@ -1718,6 +1718,8 @@
             "qcfractal.procedures.procedures_util",
             "qcfractal.queue",
             "qcfractal.queue.adapters",
+            "qcfractal.queue.balsm_adapter",
+            "qcfractal.queue.balsm_client",
             "qcfractal.queue.base_adapter",
             "qcfractal.queue.executor_adapter",
             "qcfractal.queue.fireworks_adapter",
@@ -1755,7 +1757,7 @@
             "qcfractal.tests.test_storage_sql",
             "qcfractal.web_handlers"
         ],
-        "version": "0.7.1"
+        "version": "0.7.2"
     },
     "qcgpu": {
         "cmdline": [],
@@ -6802,7 +6804,7 @@
             "qingcloud.cli.qs_client.actions.service",
             "qingcloud.cli.qs_client.constants"
         ],
-        "version": "1.3.6"
+        "version": "1.3.7"
     },
     "qingcloud-init": {
         "cmdline": [],
@@ -6860,7 +6862,7 @@
             "qingcloud.qingstor.multipart",
             "qingcloud.qingstor.util"
         ],
-        "version": "1.2.6"
+        "version": "1.2.7"
     },
     "qingcloudrc": {
         "cmdline": [],
@@ -10719,7 +10721,7 @@
     "qqt": {
         "cmdline": [],
         "modules": [],
-        "version": "1.0.0b3"
+        "version": "1.0.0b4"
     },
     "qquery": {
         "cmdline": [],
@@ -11139,7 +11141,7 @@
             "qreu.local",
             "qreu.sendcontext"
         ],
-        "version": "0.8.1"
+        "version": "0.8.2"
     },
     "qri": {
         "cmdline": [],
@@ -17997,6 +17999,8 @@
             "qsa.ext",
             "qsa.ext.ansible",
             "qsa.ext.ansible.abc",
+            "qsa.ext.ansible.cli",
+            "qsa.ext.ansible.cli.init",
             "qsa.ext.ansible.model",
             "qsa.ext.ansible.repo",
             "qsa.ext.ansible.repo.playbook",
@@ -18016,7 +18020,6 @@
             "qsa.ext.deployment.schema",
             "qsa.ext.docker",
             "qsa.ext.docker.schema",
-            "qsa.ext.helloworld",
             "qsa.ext.jenkins",
             "qsa.ext.jenkins.const",
             "qsa.ext.jenkins.schema",
@@ -18024,10 +18027,15 @@
             "qsa.ext.k8s.ansible",
             "qsa.ext.k8s.cli",
             "qsa.ext.k8s.cli.add_manifest",
+            "qsa.ext.k8s.cli.allow",
             "qsa.ext.k8s.cli.create",
             "qsa.ext.k8s.cli.create.certificate",
+            "qsa.ext.k8s.cli.create.clusteradmin",
             "qsa.ext.k8s.cli.create.clusterissuer",
+            "qsa.ext.k8s.cli.create.configmap",
             "qsa.ext.k8s.cli.create.dmz",
+            "qsa.ext.k8s.cli.create.ingress",
+            "qsa.ext.k8s.cli.create.lb",
             "qsa.ext.k8s.cli.create.nginx_ingress",
             "qsa.ext.k8s.cli.create.ns",
             "qsa.ext.k8s.cli.create.pairednetworkpolicy",
@@ -18039,6 +18047,7 @@
             "qsa.ext.k8s.network",
             "qsa.ext.k8s.repo",
             "qsa.ext.k8s.resources",
+            "qsa.ext.k8s.resources.abstractrolebinding",
             "qsa.ext.k8s.resources.base",
             "qsa.ext.k8s.resources.batch",
             "qsa.ext.k8s.resources.certificate",
@@ -18054,6 +18063,7 @@
             "qsa.ext.k8s.resources.namespace",
             "qsa.ext.k8s.resources.networkpolicy",
             "qsa.ext.k8s.resources.persistable",
+            "qsa.ext.k8s.resources.podsecuritypolicy",
             "qsa.ext.k8s.resources.prefixable",
             "qsa.ext.k8s.resources.service",
             "qsa.ext.k8s.resources.serviceaccount",
@@ -18068,7 +18078,10 @@
             "qsa.ext.lint.languages",
             "qsa.ext.make",
             "qsa.ext.make.model",
+            "qsa.ext.ops",
             "qsa.ext.project",
+            "qsa.ext.project.cli",
+            "qsa.ext.project.cli.init",
             "qsa.ext.project.schema",
             "qsa.ext.rdbms",
             "qsa.ext.rdbms.secrets",
@@ -18112,7 +18125,7 @@
             "qsa.spec",
             "qsa.tests"
         ],
-        "version": "1.0.4"
+        "version": "1.0.5"
     },
     "quantum-blackbird": {
         "cmdline": [],
@@ -22007,6 +22020,22 @@
         ],
         "version": "0.5"
     },
+    "quickmock": {
+        "cmdline": [],
+        "modules": [
+            "quickmock",
+            "quickmock.launcher",
+            "quickmock.server",
+            "quickmock.templating",
+            "quickmock.utils",
+            "quickmock.utils.colors",
+            "quickmock.utils.exceptions",
+            "quickmock.utils.launcher",
+            "quickmock.utils.mimetypes",
+            "quickmock.validation"
+        ],
+        "version": "0.3.0"
+    },
     "quickmysql": {
         "cmdline": [],
         "modules": [
@@ -22823,19 +22852,23 @@
         "version": "3.0.4"
     },
     "quimb": {
-        "cmdline": [],
+        "cmdline": [
+            "quimb-mpi-python"
+        ],
         "modules": [
             "quimb",
             "quimb._version",
             "quimb.calc",
             "quimb.core",
             "quimb.evo",
+            "quimb.gates",
             "quimb.gen",
             "quimb.gen.operators",
             "quimb.gen.rand",
             "quimb.gen.states",
             "quimb.linalg",
             "quimb.linalg.approx_spectral",
+            "quimb.linalg.autoblock",
             "quimb.linalg.base_linalg",
             "quimb.linalg.mpi_launcher",
             "quimb.linalg.numpy_linalg",
@@ -22843,7 +22876,11 @@
             "quimb.linalg.scipy_linalg",
             "quimb.linalg.slepc_linalg",
             "quimb.tensor",
+            "quimb.tensor.array_ops",
+            "quimb.tensor.circuit",
             "quimb.tensor.decomp",
+            "quimb.tensor.optimize_pytorch",
+            "quimb.tensor.optimize_tensorflow",
             "quimb.tensor.tensor_1d",
             "quimb.tensor.tensor_approx_spectral",
             "quimb.tensor.tensor_core",
@@ -22853,7 +22890,7 @@
             "quimb.tensor.tensor_tebd",
             "quimb.utils"
         ],
-        "version": "1.1.2"
+        "version": "1.2.0"
     },
     "quin": {
         "cmdline": [],
@@ -24392,14 +24429,6 @@
             "quoine.quoine"
         ],
         "version": "0.0.1"
-    },
-    "quoine-rest-api": {
-        "cmdline": [],
-        "modules": [
-            "quoine_rest_api",
-            "quoine_rest_api.quoine_rest_api"
-        ],
-        "version": "4.0.1"
     },
     "quoinex-client": {
         "cmdline": [],
