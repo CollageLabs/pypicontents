@@ -7766,14 +7766,20 @@
             "fairseq",
             "fairseq.binarizer",
             "fairseq.bleu",
+            "fairseq.checkpoint_utils",
             "fairseq.criterions",
             "fairseq.criterions.adaptive_loss",
+            "fairseq.criterions.binary_cross_entropy",
             "fairseq.criterions.composite_loss",
             "fairseq.criterions.cross_entropy",
             "fairseq.criterions.fairseq_criterion",
             "fairseq.criterions.label_smoothed_cross_entropy",
+            "fairseq.criterions.masked_lm_loss",
             "fairseq.data",
+            "fairseq.data.audio",
+            "fairseq.data.audio.raw_audio_dataset",
             "fairseq.data.backtranslation_dataset",
+            "fairseq.data.block_pair_dataset",
             "fairseq.data.concat_dataset",
             "fairseq.data.data_utils",
             "fairseq.data.dictionary",
@@ -7782,12 +7788,25 @@
             "fairseq.data.iterators",
             "fairseq.data.language_pair_dataset",
             "fairseq.data.lm_context_window_dataset",
+            "fairseq.data.masked_lm_dataset",
+            "fairseq.data.masked_lm_dictionary",
             "fairseq.data.monolingual_dataset",
+            "fairseq.data.multi_corpus_sampled_dataset",
             "fairseq.data.noising",
             "fairseq.data.round_robin_zip_datasets",
             "fairseq.data.token_block_dataset",
             "fairseq.data.transform_eos_dataset",
+            "fairseq.data.transform_eos_lang_pair_dataset",
+            "fairseq.data.transforms",
+            "fairseq.data.transforms.gpt2_bpe",
+            "fairseq.data.transforms.moses_tokenizer",
+            "fairseq.data.transforms.nltk_tokenizer",
+            "fairseq.data.transforms.sentencepiece_bpe",
+            "fairseq.data.transforms.space_tokenizer",
+            "fairseq.data.transforms.subword_nmt_bpe",
             "fairseq.distributed_utils",
+            "fairseq.file_utils",
+            "fairseq.hub_utils",
             "fairseq.legacy_distributed_data_parallel",
             "fairseq.meters",
             "fairseq.models",
@@ -7798,11 +7817,17 @@
             "fairseq.models.fairseq_incremental_decoder",
             "fairseq.models.fairseq_model",
             "fairseq.models.fconv",
+            "fairseq.models.fconv_lm",
             "fairseq.models.fconv_self_att",
             "fairseq.models.lightconv",
+            "fairseq.models.lightconv_lm",
             "fairseq.models.lstm",
+            "fairseq.models.masked_lm",
             "fairseq.models.multilingual_transformer",
             "fairseq.models.transformer",
+            "fairseq.models.transformer_from_pretrained_xlm",
+            "fairseq.models.transformer_lm",
+            "fairseq.models.wav2vec",
             "fairseq.modules",
             "fairseq.modules.adaptive_input",
             "fairseq.modules.adaptive_softmax",
@@ -7811,6 +7836,7 @@
             "fairseq.modules.conv_tbc",
             "fairseq.modules.downsampled_multihead_attention",
             "fairseq.modules.dynamic_convolution",
+            "fairseq.modules.gelu",
             "fairseq.modules.grad_multiply",
             "fairseq.modules.highway",
             "fairseq.modules.layer_norm",
@@ -7820,21 +7846,27 @@
             "fairseq.modules.logsumexp_moe",
             "fairseq.modules.mean_pool_gating_network",
             "fairseq.modules.multihead_attention",
+            "fairseq.modules.positional_embedding",
             "fairseq.modules.scalar_bias",
             "fairseq.modules.sinusoidal_positional_embedding",
-            "fairseq.modules.unfold1d",
+            "fairseq.modules.transformer_sentence_encoder",
+            "fairseq.modules.transformer_sentence_encoder_layer",
+            "fairseq.modules.unfold",
             "fairseq.optim",
             "fairseq.optim.adadelta",
             "fairseq.optim.adafactor",
             "fairseq.optim.adagrad",
             "fairseq.optim.adam",
+            "fairseq.optim.bmuf",
             "fairseq.optim.fairseq_optimizer",
             "fairseq.optim.fp16_optimizer",
+            "fairseq.optim.lamb",
             "fairseq.optim.lr_scheduler",
             "fairseq.optim.lr_scheduler.cosine_lr_scheduler",
             "fairseq.optim.lr_scheduler.fairseq_lr_scheduler",
             "fairseq.optim.lr_scheduler.fixed_schedule",
             "fairseq.optim.lr_scheduler.inverse_square_root_schedule",
+            "fairseq.optim.lr_scheduler.polynomial_decay_schedule",
             "fairseq.optim.lr_scheduler.reduce_lr_on_plateau",
             "fairseq.optim.lr_scheduler.triangular_lr_scheduler",
             "fairseq.optim.nag",
@@ -7842,14 +7874,20 @@
             "fairseq.options",
             "fairseq.pdb",
             "fairseq.progress_bar",
+            "fairseq.registry",
             "fairseq.search",
             "fairseq.sequence_generator",
             "fairseq.sequence_scorer",
             "fairseq.tasks",
+            "fairseq.tasks.audio_pretraining",
+            "fairseq.tasks.cross_lingual_lm",
             "fairseq.tasks.fairseq_task",
             "fairseq.tasks.language_modeling",
+            "fairseq.tasks.masked_lm",
             "fairseq.tasks.multilingual_translation",
+            "fairseq.tasks.semisupervised_translation",
             "fairseq.tasks.translation",
+            "fairseq.tasks.translation_from_pretrained_xlm",
             "fairseq.tasks.translation_moe",
             "fairseq.tokenizer",
             "fairseq.trainer",
@@ -7863,7 +7901,7 @@
             "fairseq_cli.setup",
             "fairseq_cli.train"
         ],
-        "version": "0.6.2"
+        "version": "0.7.1"
     },
     "fairseq35": {
         "cmdline": [],
@@ -11320,7 +11358,6 @@
             "fancyimpute",
             "fancyimpute.common",
             "fancyimpute.dictionary_helpers",
-            "fancyimpute.iterative_imputer",
             "fancyimpute.iterative_svd",
             "fancyimpute.keras_models",
             "fancyimpute.knn",
@@ -11332,7 +11369,7 @@
             "fancyimpute.soft_impute",
             "fancyimpute.solver"
         ],
-        "version": "0.4.3"
+        "version": "0.5.2"
     },
     "fancylogger": {
         "cmdline": [],
@@ -14223,7 +14260,7 @@
             "fast_autocomplete.misc",
             "fast_autocomplete.normalize"
         ],
-        "version": "0.4.1"
+        "version": "0.4.2"
     },
     "fast-bert": {
         "cmdline": [],
@@ -14971,7 +15008,7 @@
             "fastapi.security.utils",
             "fastapi.utils"
         ],
-        "version": "0.29.1"
+        "version": "0.30.0"
     },
     "fastaq": {
         "cmdline": [],
@@ -34387,7 +34424,7 @@
             "tests",
             "tests.test_fifteenrock"
         ],
-        "version": "0.1.41"
+        "version": "0.1.42"
     },
     "fifth-package": {
         "cmdline": [],
@@ -40447,7 +40484,7 @@
     "finlayscript6": {
         "cmdline": [],
         "modules": [],
-        "version": "1.0"
+        "version": "1.0.2"
     },
     "finley": {
         "cmdline": [],
@@ -40604,6 +40641,7 @@
             "finntk.data",
             "finntk.data.omorfi_normseg",
             "finntk.data.wiktionary_normseg",
+            "finntk.data.wordnet",
             "finntk.emb",
             "finntk.emb.autoextend",
             "finntk.emb.base",
@@ -40639,7 +40677,7 @@
             "finntk.wsd.lesk_pp",
             "finntk.wsd.nn"
         ],
-        "version": "0.0.46"
+        "version": "0.0.47"
     },
     "finny": {
         "cmdline": [],
@@ -46793,7 +46831,7 @@
             "fitsio.test",
             "fitsio.util"
         ],
-        "version": "1.0.4"
+        "version": "1.0.5"
     },
     "fitsiochunked": {
         "cmdline": [],
@@ -52404,7 +52442,7 @@
         "modules": [
             "flask_assetrev"
         ],
-        "version": "1.0.2"
+        "version": "1.0.4"
     },
     "flask-assets": {
         "cmdline": [],
@@ -61569,7 +61607,7 @@
             "flask_rest_api.spec.plugins",
             "flask_rest_api.utils"
         ],
-        "version": "0.15.1"
+        "version": "0.16.0"
     },
     "flask-rest-controller": {
         "cmdline": [],
@@ -78862,7 +78900,7 @@
             "tests.test_providers",
             "tests.test_storage"
         ],
-        "version": "2.0.1"
+        "version": "2.0.2"
     },
     "flywheel-migration": {
         "cmdline": [],
@@ -81885,7 +81923,7 @@
             "followthemoney.types.url",
             "followthemoney.util"
         ],
-        "version": "1.13.3"
+        "version": "1.13.4"
     },
     "followthemoney-enrich": {
         "cmdline": [],
@@ -81899,7 +81937,7 @@
             "followthemoney_enrich.result",
             "followthemoney_enrich.util"
         ],
-        "version": "1.13.3"
+        "version": "1.13.4"
     },
     "followthemoney-integrate": {
         "cmdline": [],
@@ -81911,7 +81949,7 @@
             "followthemoney_integrate.util",
             "followthemoney_integrate.views"
         ],
-        "version": "1.13.3"
+        "version": "1.13.4"
     },
     "followthemoney-util": {
         "cmdline": [],
@@ -81930,7 +81968,7 @@
             "followthemoney_util.results",
             "followthemoney_util.util"
         ],
-        "version": "1.13.3"
+        "version": "1.13.4"
     },
     "folmon": {
         "cmdline": [],
@@ -88392,10 +88430,14 @@
             "FoxDot.lib.Workspace.LineNumbers",
             "FoxDot.lib.Workspace.MenuBar",
             "FoxDot.lib.Workspace.Prompt",
+            "FoxDot.lib.Workspace.Simple",
+            "FoxDot.lib.Workspace.Simple.SimpleEditor",
+            "FoxDot.lib.Workspace.Simple.SimpleMenu",
+            "FoxDot.lib.Workspace.Simple.SimpleText",
             "FoxDot.lib.Workspace.TextBox",
             "FoxDot.lib.Workspace.tkimport"
         ],
-        "version": "0.7.29"
+        "version": "0.7.30"
     },
     "foxglove": {
         "cmdline": [],
@@ -100876,7 +100918,7 @@
             "ftr_classifier.models",
             "ftr_classifier.word_lists"
         ],
-        "version": "1.0.20"
+        "version": "1.0.25"
     },
     "ftrack-action-handler": {
         "cmdline": [],
@@ -107387,7 +107429,7 @@
         "modules": [
             "function_shield"
         ],
-        "version": "2.0.2"
+        "version": "2.0.3"
     },
     "function-timer": {
         "cmdline": [],
@@ -108151,7 +108193,7 @@
             "funguauniverse.utils.web.serviceclient",
             "funguauniverse.utils.web.threadpoolmixin"
         ],
-        "version": "0.1.9"
+        "version": "0.2"
     },
     "funguildtest": {
         "cmdline": [],
@@ -115518,6 +115560,7 @@
             "fylesdk.apis.refunds",
             "fylesdk.apis.reimbursements",
             "fylesdk.apis.reports",
+            "fylesdk.apis.settlements",
             "fylesdk.apis.transportation_booking_cancellations",
             "fylesdk.apis.transportation_bookings",
             "fylesdk.apis.transportation_requests",
@@ -115525,7 +115568,7 @@
             "fylesdk.exceptions",
             "fylesdk.fylesdk"
         ],
-        "version": "0.3.0"
+        "version": "0.5.0"
     },
     "fynance": {
         "cmdline": [],
