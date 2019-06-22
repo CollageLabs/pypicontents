@@ -2095,6 +2095,7 @@
             "habu.cli",
             "habu.cli.beta_cmd_bruteforce",
             "habu.cli.beta_cmd_certclone_chain",
+            "habu.cli.beta_cmd_crack_service",
             "habu.cli.beta_cmd_dhcp_server",
             "habu.cli.beta_cmd_dnsd",
             "habu.cli.beta_cmd_firewalk",
@@ -2117,7 +2118,8 @@
             "habu.cli.cmd_arp_sniff",
             "habu.cli.cmd_asydns",
             "habu.cli.cmd_b64",
-            "habu.cli.cmd_certclone",
+            "habu.cli.cmd_cert_clone",
+            "habu.cli.cmd_cert_names",
             "habu.cli.cmd_config_del",
             "habu.cli.cmd_config_set",
             "habu.cli.cmd_config_show",
@@ -2134,11 +2136,14 @@
             "habu.cli.cmd_dns_lookup_forward",
             "habu.cli.cmd_dns_lookup_reverse",
             "habu.cli.cmd_eicar",
+            "habu.cli.cmd_expand",
+            "habu.cli.cmd_extract_domain",
             "habu.cli.cmd_extract_email",
             "habu.cli.cmd_extract_hostname",
             "habu.cli.cmd_extract_ipv4",
             "habu.cli.cmd_fernet",
             "habu.cli.cmd_fernet_genkey",
+            "habu.cli.cmd_filter",
             "habu.cli.cmd_forkbomb",
             "habu.cli.cmd_gateway_find",
             "habu.cli.cmd_hasher",
@@ -2164,6 +2169,7 @@
             "habu.cli.cmd_server_ftp",
             "habu.cli.cmd_shodan",
             "habu.cli.cmd_shodan_open",
+            "habu.cli.cmd_shodan_query",
             "habu.cli.cmd_synflood",
             "habu.cli.cmd_tcpflags",
             "habu.cli.cmd_tcpscan",
@@ -2189,6 +2195,7 @@
             "habu.lib.delegator",
             "habu.lib.dns",
             "habu.lib.eicar",
+            "habu.lib.expand",
             "habu.lib.extract",
             "habu.lib.firewall",
             "habu.lib.firewall_iptables",
@@ -2197,9 +2204,11 @@
             "habu.lib.host",
             "habu.lib.htc",
             "habu.lib.http",
+            "habu.lib.identify",
             "habu.lib.iface",
             "habu.lib.ip",
             "habu.lib.ip2asn",
+            "habu.lib.libdns",
             "habu.lib.loadcfg",
             "habu.lib.portscan",
             "habu.lib.pscan",
@@ -2212,7 +2221,7 @@
             "habu.lib.web_tech",
             "habu.lib.xor"
         ],
-        "version": "0.1.22"
+        "version": "0.1.26"
     },
     "haburas": {
         "cmdline": [],
@@ -4854,7 +4863,7 @@
             "api.urls",
             "api.views"
         ],
-        "version": "0.1.34"
+        "version": "1.40"
     },
     "hackr": {
         "cmdline": [],
@@ -5380,7 +5389,7 @@
             "hafnian.reference",
             "hafnian.samples"
         ],
-        "version": "0.6.0"
+        "version": "0.6.1"
     },
     "hafsqlpublish": {
         "cmdline": [],
@@ -5512,6 +5521,7 @@
             "hagworm.extend.asyncio.file",
             "hagworm.extend.asyncio.future",
             "hagworm.extend.asyncio.net",
+            "hagworm.extend.asyncio.task",
             "hagworm.extend.base",
             "hagworm.extend.compile",
             "hagworm.extend.crypto",
@@ -5527,7 +5537,7 @@
             "hagworm.frame.tornado.web",
             "hagworm.static"
         ],
-        "version": "0.1.2"
+        "version": "0.2.0"
     },
     "haha": {
         "cmdline": [],
@@ -15051,10 +15061,11 @@
             "hatano.iam",
             "hatano.lmbda",
             "hatano.route53",
+            "hatano.s3",
             "hatano.update",
             "hatano.util"
         ],
-        "version": "1.0.1"
+        "version": "1.0.2"
     },
     "hatch": {
         "cmdline": [],
@@ -15481,9 +15492,41 @@
     "hathor-processing": {
         "cmdline": [],
         "modules": [
-            "hathorprocessing"
+            "hathorprocessing",
+            "hathorprocessing.allergies",
+            "hathorprocessing.apache_aps",
+            "hathorprocessing.apache_patient_result",
+            "hathorprocessing.apache_pred_var",
+            "hathorprocessing.care_plan_care_provider",
+            "hathorprocessing.care_plan_eol",
+            "hathorprocessing.care_plan_general",
+            "hathorprocessing.care_plan_goal",
+            "hathorprocessing.care_plan_infectious_disease",
+            "hathorprocessing.custom_lab",
+            "hathorprocessing.diagnosis",
+            "hathorprocessing.dna",
+            "hathorprocessing.drugs",
+            "hathorprocessing.dx",
+            "hathorprocessing.hospital",
+            "hathorprocessing.infusion_drug",
+            "hathorprocessing.intake_output",
+            "hathorprocessing.lab",
+            "hathorprocessing.medication",
+            "hathorprocessing.micro_lab",
+            "hathorprocessing.note",
+            "hathorprocessing.nurse_assessment",
+            "hathorprocessing.nurse_care",
+            "hathorprocessing.nurse_charting",
+            "hathorprocessing.past_history",
+            "hathorprocessing.patient",
+            "hathorprocessing.physical_exam",
+            "hathorprocessing.respiratory_care",
+            "hathorprocessing.respiratory_charting",
+            "hathorprocessing.treatment",
+            "hathorprocessing.vital_aperiodic",
+            "hathorprocessing.vital_periodic"
         ],
-        "version": "1.1.0.dev0"
+        "version": "1.2.0.dev0"
     },
     "hatom2atom": {
         "cmdline": [],
@@ -18247,7 +18290,7 @@
             "tests.utils",
             "tests.utils.test_utils"
         ],
-        "version": "0.8"
+        "version": "0.9"
     },
     "hcmidiasync": {
         "cmdline": [
@@ -20577,7 +20620,7 @@
             "healthchecker.settings",
             "healthchecker.utils"
         ],
-        "version": "0.8.2"
+        "version": "1.0.0"
     },
     "healthgraph-api": {
         "cmdline": [],
@@ -26625,6 +26668,14 @@
         ],
         "version": "0.45.0"
     },
+    "heptools": {
+        "cmdline": [],
+        "modules": [
+            "heptools",
+            "heptools.entry"
+        ],
+        "version": "1.0"
+    },
     "hepunits": {
         "cmdline": [],
         "modules": [
@@ -31412,6 +31463,15 @@
         ],
         "version": "0.1.0"
     },
+    "hic-selfish": {
+        "cmdline": [],
+        "modules": [
+            "selfish",
+            "selfish._version",
+            "selfish.selfish"
+        ],
+        "version": "1.0.0"
+    },
     "hic-straw": {
         "cmdline": [],
         "modules": [
@@ -31561,6 +31621,20 @@
             "HiCHap.matrixBuilding"
         ],
         "version": "0.1.4"
+    },
+    "hichip-peaks": {
+        "cmdline": [],
+        "modules": [
+            "hichip_peaks",
+            "hichip_peaks.bedgraph",
+            "hichip_peaks.diffpeaks",
+            "hichip_peaks.helpers",
+            "hichip_peaks.interaction_to_sparse",
+            "hichip_peaks.main",
+            "hichip_peaks.quality_report",
+            "hichip_peaks.sparse_to_peaks"
+        ],
+        "version": "0.1.0"
     },
     "hichipper": {
         "cmdline": [],
@@ -34932,7 +35006,7 @@
             "MyHist2D",
             "toolbox"
         ],
-        "version": "0.0.5.19"
+        "version": "0.0.5.20"
     },
     "histogramy": {
         "cmdline": [],
@@ -35999,6 +36073,20 @@
         "cmdline": [],
         "modules": [],
         "version": ""
+    },
+    "hive-bt": {
+        "cmdline": [],
+        "modules": [
+            "hive_bt",
+            "hive_bt.cli",
+            "hive_bt.commands",
+            "hive_bt.data",
+            "hive_bt.util",
+            "hive_bt.vcs",
+            "hive_bt.web",
+            "hive_bt.web.routes"
+        ],
+        "version": "0.0.1"
     },
     "hive-email-job": {
         "cmdline": [],
@@ -39358,7 +39446,7 @@
             "holodeck.spaces",
             "holodeck.util"
         ],
-        "version": "0.2.1"
+        "version": "0.2.2"
     },
     "holoext": {
         "cmdline": [],
@@ -39725,6 +39813,11 @@
         ],
         "version": "1.12.3"
     },
+    "holoviz": {
+        "cmdline": [],
+        "modules": [],
+        "version": "0.1.0"
+    },
     "holster": {
         "cmdline": [],
         "modules": [
@@ -39901,7 +39994,7 @@
         "modules": [
             "hass_frontend"
         ],
-        "version": "20190619.0"
+        "version": "20190620.0"
     },
     "home-electric-usage-recommendation-modules": {
         "cmdline": [],
@@ -47346,12 +47439,14 @@
         "version": "0.0.1"
     },
     "hostsed": {
-        "cmdline": [],
+        "cmdline": [
+            "hostsed"
+        ],
         "modules": [
             "hosts",
             "hosts.editor"
         ],
-        "version": "0.2.0"
+        "version": "0.3.0"
     },
     "hostsman": {
         "cmdline": [],
@@ -51096,7 +51191,7 @@
             "htexpr",
             "htexpr.htexpr"
         ],
-        "version": "0.0.2"
+        "version": "0.0.3"
     },
     "htf": {
         "cmdline": [],
@@ -53215,7 +53310,7 @@
             "tests.test_htrc_volumes",
             "tests.test_htrc_workset"
         ],
-        "version": "0.1.49"
+        "version": "0.1.50"
     },
     "htrc-feature-reader": {
         "cmdline": [],
@@ -54475,7 +54570,7 @@
             "http3/dispatch.threaded",
             "http3/dispatch.wsgi"
         ],
-        "version": "0.5.0"
+        "version": "0.6.1"
     },
     "http4store": {
         "cmdline": [],
@@ -66306,7 +66401,7 @@
             "hyperactive.simulated_annealing",
             "hyperactive.tabu_optimizer"
         ],
-        "version": "0.2.0"
+        "version": "0.2.1"
     },
     "hyperapi": {
         "cmdline": [],
@@ -69138,7 +69233,7 @@
             "hypothesis.vendor.pretty",
             "hypothesis.version"
         ],
-        "version": "4.24.3"
+        "version": "4.24.4"
     },
     "hypothesis-client": {
         "cmdline": [],
