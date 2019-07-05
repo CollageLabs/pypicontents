@@ -3324,7 +3324,7 @@
             "n_utils.utils",
             "n_utils.yuuuu3332111i1l1i"
         ],
-        "version": "1.88"
+        "version": "1.91"
     },
     "nameless-minimal": {
         "cmdline": [],
@@ -12916,6 +12916,14 @@
         ],
         "version": "0.3"
     },
+    "nbpdfexport": {
+        "cmdline": [],
+        "modules": [
+            "nbpdfexport",
+            "nbpdfexport.bundler"
+        ],
+        "version": "0.2.1"
+    },
     "nbplantuml": {
         "cmdline": [],
         "modules": [
@@ -21974,29 +21982,41 @@
         "cmdline": [],
         "modules": [
             "neodroid",
-            "neodroid.api",
-            "neodroid.api.batched_neodroid_environments",
-            "neodroid.api.environment",
-            "neodroid.api.neodroid_environments",
-            "neodroid.api.networking_environment",
-            "neodroid.api_wrappers",
-            "neodroid.api_wrappers.action_encoding_wrappers",
-            "neodroid.api_wrappers.ale_wrapper",
-            "neodroid.api_wrappers.ale_wrapper.ale_wrapper",
-            "neodroid.api_wrappers.curriculum_wrapper",
-            "neodroid.api_wrappers.curriculum_wrapper.curriculum_wrapper",
-            "neodroid.api_wrappers.formal_wrapper",
-            "neodroid.api_wrappers.formal_wrapper.formal_wrapper",
-            "neodroid.api_wrappers.gym_wrapper",
-            "neodroid.api_wrappers.gym_wrapper.gym_wrapper",
-            "neodroid.api_wrappers.observation_wrapper",
-            "neodroid.api_wrappers.observation_wrapper.observation_wrapper",
-            "neodroid.api_wrappers.rest_wrapper",
-            "neodroid.api_wrappers.rest_wrapper.flask_api_wrapper",
-            "neodroid.api_wrappers.single_environment_wrapper",
             "neodroid.cli",
+            "neodroid.environments",
+            "neodroid.environments.environment",
+            "neodroid.environments.neodroid_environments",
+            "neodroid.environments.networking_environment",
             "neodroid.exceptions",
             "neodroid.exceptions.exceptions",
+            "neodroid.factories",
+            "neodroid.factories.inference",
+            "neodroid.factories.multi_reaction_factory",
+            "neodroid.factories.single_reaction_factory",
+            "neodroid.interfaces",
+            "neodroid.interfaces.environment_models",
+            "neodroid.interfaces.environment_models.actor",
+            "neodroid.interfaces.environment_models.actuator",
+            "neodroid.interfaces.environment_models.configurable",
+            "neodroid.interfaces.environment_models.configuration",
+            "neodroid.interfaces.environment_models.displayable",
+            "neodroid.interfaces.environment_models.environment_description",
+            "neodroid.interfaces.environment_models.environment_snapshot",
+            "neodroid.interfaces.environment_models.motion",
+            "neodroid.interfaces.environment_models.range",
+            "neodroid.interfaces.environment_models.reaction",
+            "neodroid.interfaces.environment_models.reaction_parameters",
+            "neodroid.interfaces.environment_models.sensor",
+            "neodroid.interfaces.environment_models.simulator_configuration",
+            "neodroid.interfaces.environment_models.space",
+            "neodroid.interfaces.environment_models.unobservables",
+            "neodroid.interfaces.neodroid_standard_modules",
+            "neodroid.interfaces.neodroid_standard_modules.neodroid_camera",
+            "neodroid.interfaces.neodroid_standard_modules.neodroid_camera_extraction",
+            "neodroid.interfaces.spaces",
+            "neodroid.interfaces.spaces.action_space",
+            "neodroid.interfaces.spaces.observation_space",
+            "neodroid.interfaces.spaces.signal_space",
             "neodroid.messaging",
             "neodroid.messaging.exclude",
             "neodroid.messaging.exclude.pb",
@@ -22021,7 +22041,6 @@
             "neodroid.messaging.fbs.FBSModels.FEnvironmentDescription",
             "neodroid.messaging.fbs.FBSModels.FEulerTransform",
             "neodroid.messaging.fbs.FBSModels.FMotion",
-            "neodroid.messaging.fbs.FBSModels.FOBS",
             "neodroid.messaging.fbs.FBSModels.FObjective",
             "neodroid.messaging.fbs.FBSModels.FObservation",
             "neodroid.messaging.fbs.FBSModels.FQT",
@@ -22033,6 +22052,7 @@
             "neodroid.messaging.fbs.FBSModels.FReaction",
             "neodroid.messaging.fbs.FBSModels.FReactionParameters",
             "neodroid.messaging.fbs.FBSModels.FReactions",
+            "neodroid.messaging.fbs.FBSModels.FSensor",
             "neodroid.messaging.fbs.FBSModels.FSimulationType",
             "neodroid.messaging.fbs.FBSModels.FSimulatorConfiguration",
             "neodroid.messaging.fbs.FBSModels.FSingle",
@@ -22051,45 +22071,34 @@
             "neodroid.messaging.fbs.fbs_reaction_utilities",
             "neodroid.messaging.fbs.fbs_state_utilties",
             "neodroid.messaging.message_client",
-            "neodroid.models",
-            "neodroid.models.actor",
-            "neodroid.models.actuator",
-            "neodroid.models.configurable",
-            "neodroid.models.configuration",
-            "neodroid.models.displayable",
-            "neodroid.models.environment_description",
-            "neodroid.models.environment_state",
-            "neodroid.models.motion",
-            "neodroid.models.range",
-            "neodroid.models.reaction",
-            "neodroid.models.reaction_parameters",
-            "neodroid.models.sensor",
-            "neodroid.models.simulator_configuration",
-            "neodroid.models.space",
-            "neodroid.models.unobservables",
             "neodroid.utilities",
             "neodroid.utilities.launcher",
             "neodroid.utilities.launcher.download_utilities",
             "neodroid.utilities.launcher.download_utilities.download_environment",
             "neodroid.utilities.launcher.environment_launcher",
-            "neodroid.utilities.neodroid_standard_modules",
-            "neodroid.utilities.neodroid_standard_modules.action_space",
-            "neodroid.utilities.neodroid_standard_modules.neodroid_camera",
-            "neodroid.utilities.neodroid_standard_modules.neodroid_camera_extraction",
-            "neodroid.utilities.neodroid_standard_modules.observation_space",
-            "neodroid.utilities.neodroid_standard_modules.python_environment",
-            "neodroid.utilities.reaction_factories",
-            "neodroid.utilities.reaction_factories.multi_reaction_factory",
-            "neodroid.utilities.reaction_factories.single_reaction_factory",
-            "neodroid.utilities.reaction_factories.space_factories",
             "neodroid.utilities.transformations",
             "neodroid.utilities.transformations.action_transformations",
             "neodroid.utilities.transformations.encodings",
             "neodroid.version",
+            "neodroid.wrappers",
+            "neodroid.wrappers.action_encoding_wrappers",
+            "neodroid.wrappers.ale_wrapper",
+            "neodroid.wrappers.ale_wrapper.ale_wrapper",
+            "neodroid.wrappers.batched_neodroid_environments",
+            "neodroid.wrappers.curriculum_wrapper",
+            "neodroid.wrappers.curriculum_wrapper.curriculum_wrapper",
+            "neodroid.wrappers.formal_wrapper",
+            "neodroid.wrappers.formal_wrapper.formal_wrapper",
+            "neodroid.wrappers.gym_wrapper",
+            "neodroid.wrappers.gym_wrapper.gym_wrapper",
+            "neodroid.wrappers.observation_wrapper",
+            "neodroid.wrappers.observation_wrapper.observation_wrapper",
+            "neodroid.wrappers.python_environment",
+            "neodroid.wrappers.rest_wrapper",
+            "neodroid.wrappers.rest_wrapper.flask_api_wrapper",
+            "neodroid.wrappers.single_environment_wrapper",
             "samples",
             "samples.action_space_sampling",
-            "samples.collection",
-            "samples.collection.collect_state_action_pairs",
             "samples.experimental",
             "samples.experimental.batched_env_sampling",
             "samples.experimental.curriculum",
@@ -22131,7 +22140,7 @@
             "tests.wrappers.test_vector_gym",
             "tests.wrappers.wrappers"
         ],
-        "version": "0.3.1"
+        "version": "0.3.3"
     },
     "neodroidagent": {
         "cmdline": [],
@@ -22160,10 +22169,11 @@
             "agent.configs",
             "agent.configs.agent_test_configs",
             "agent.configs.agent_test_configs.base_test_config",
-            "agent.configs.agent_test_configs.cnn_dqn_test_config",
-            "agent.configs.agent_test_configs.cnn_pg_test_config",
             "agent.configs.agent_test_configs.ddpg_test_config",
             "agent.configs.agent_test_configs.dqn_test_config",
+            "agent.configs.agent_test_configs.experimental",
+            "agent.configs.agent_test_configs.experimental.cnn_dqn_test_config",
+            "agent.configs.agent_test_configs.experimental.cnn_pg_test_config",
             "agent.configs.agent_test_configs.gym_configs",
             "agent.configs.agent_test_configs.gym_configs.cartpole_test_config",
             "agent.configs.agent_test_configs.pg_test_config",
@@ -22177,6 +22187,7 @@
             "agent.exceptions",
             "agent.exceptions.exceptions",
             "agent.exploration",
+            "agent.exploration.curiousity_module",
             "agent.exploration.sampling",
             "agent.exploration.sampling.random_process",
             "agent.exploration.sampling.random_process.annealed_guassian",
@@ -22195,13 +22206,13 @@
             "agent.interfaces.partials.agents",
             "agent.interfaces.partials.agents.agent",
             "agent.interfaces.partials.agents.evo_agent",
-            "agent.interfaces.partials.agents.torch_agent",
             "agent.interfaces.partials.agents.torch_agents",
             "agent.interfaces.partials.agents.torch_agents.actor_critic_agent",
             "agent.interfaces.partials.agents.torch_agents.experimental",
             "agent.interfaces.partials.agents.torch_agents.experimental.dfo_agent",
             "agent.interfaces.partials.agents.torch_agents.experimental.imitation_agent",
             "agent.interfaces.partials.agents.torch_agents.policy_agent",
+            "agent.interfaces.partials.agents.torch_agents.torch_agent",
             "agent.interfaces.partials.agents.torch_agents.value_agent",
             "agent.interfaces.specifications",
             "agent.interfaces.specifications.architecture_specification",
@@ -22237,10 +22248,14 @@
             "agent.training.procedures.step_wise",
             "agent.training.train_agent",
             "agent.utilities",
+            "agent.utilities.discount",
+            "agent.utilities.extra_entry_points",
+            "agent.utilities.extra_entry_points.tensorboard_entry_point",
             "agent.utilities.objective_estimation",
             "agent.utilities.objective_estimation.objective_regressor",
             "agent.utilities.torch_utilities",
             "agent.utilities.torch_utilities.exclude",
+            "agent.utilities.torch_utilities.exclude.extraction",
             "agent.utilities.torch_utilities.exclude.parallel",
             "agent.utilities.torch_utilities.initialisation",
             "agent.utilities.torch_utilities.initialisation.atari_weight_init",
@@ -22254,8 +22269,6 @@
             "agent.utilities.torch_utilities.updates.copying",
             "agent.utilities.torch_utilities.updates.soft_update",
             "agent.utilities.transformation",
-            "agent.utilities.transformation.discount",
-            "agent.utilities.transformation.extraction",
             "agent.utilities.transformation.processing",
             "agent.version",
             "docs",
@@ -22290,15 +22303,17 @@
             "samples.rl.non_contextual",
             "samples.rl.non_contextual.ucb1_policy",
             "tests",
-            "tests.gym_runs",
-            "tests.gym_runs.test_agent_gym_runs",
-            "tests.memory",
-            "tests.memory.test_memory",
-            "tests.test_optimisation",
-            "tests.test_optimisation.test_agent_optimisation",
-            "tests.test_sanity"
+            "tests.gym_runs_tests",
+            "tests.gym_runs_tests.test_agent_gym_runs",
+            "tests.memory_tests",
+            "tests.memory_tests.test_memory",
+            "tests.optimisation_tests",
+            "tests.optimisation_tests.test_agent_optimisation",
+            "tests.test_sanity",
+            "tests.torch_utilities_tests",
+            "tests.torch_utilities_tests.test_to_tensor"
         ],
-        "version": "0.2.0"
+        "version": "0.2.2"
     },
     "neodroidflatbuffers": {
         "cmdline": [],
@@ -23195,7 +23210,7 @@
             "neox.css",
             "neox.locale"
         ],
-        "version": "5.0.23"
+        "version": "5.0.24"
     },
     "nep": {
         "cmdline": [],
@@ -24588,7 +24603,7 @@
             "neptunecontrib.viz.experiments",
             "neptunecontrib.viz.projects"
         ],
-        "version": "0.8.1"
+        "version": "0.9.0"
     },
     "neptune-lib": {
         "cmdline": [],
@@ -36847,47 +36862,6 @@
         ],
         "version": "0.9.3"
     },
-    "netdev-zklevsha": {
-        "cmdline": [],
-        "modules": [
-            "netdev",
-            "netdev.dispatcher",
-            "netdev.exceptions",
-            "netdev.logger",
-            "netdev.vendors",
-            "netdev.vendors.arista",
-            "netdev.vendors.arista.arista_eos",
-            "netdev.vendors.aruba",
-            "netdev.vendors.aruba.aruba_aos_6",
-            "netdev.vendors.aruba.aruba_aos_8",
-            "netdev.vendors.base",
-            "netdev.vendors.cisco",
-            "netdev.vendors.cisco.cisco_asa",
-            "netdev.vendors.cisco.cisco_ios",
-            "netdev.vendors.cisco.cisco_iosxr",
-            "netdev.vendors.cisco.cisco_nxos",
-            "netdev.vendors.comware_like",
-            "netdev.vendors.fujitsu",
-            "netdev.vendors.fujitsu.fujitsu_switch",
-            "netdev.vendors.hp",
-            "netdev.vendors.hp.hp_comware",
-            "netdev.vendors.hp.hp_comware_limited",
-            "netdev.vendors.infotecs",
-            "netdev.vendors.infotecs.HW1000",
-            "netdev.vendors.ios_like",
-            "netdev.vendors.juniper",
-            "netdev.vendors.juniper.juniper_junos",
-            "netdev.vendors.junos_like",
-            "netdev.vendors.mikrotik",
-            "netdev.vendors.mikrotik.mikrotik_routeros",
-            "netdev.vendors.terminal",
-            "netdev.vendors.terminal.terminal",
-            "netdev.vendors.ubiquiti",
-            "netdev.vendors.ubiquiti.ubiquity_edge",
-            "netdev.version"
-        ],
-        "version": "0.0.3"
-    },
     "netdevice": {
         "cmdline": [
             "demo.py"
@@ -44593,7 +44567,7 @@
             "neuromation.strings.parse",
             "neuromation.utils"
         ],
-        "version": "19.6.12"
+        "version": "19.7.4"
     },
     "neuromllite": {
         "cmdline": [],
@@ -50593,7 +50567,7 @@
             "newsworthycharts.storage",
             "newsworthycharts.utils"
         ],
-        "version": "1.3.2"
+        "version": "1.3.3"
     },
     "newsxy": {
         "cmdline": [],
@@ -54578,7 +54552,7 @@
             "nglview.widget",
             "nglview.widget_box"
         ],
-        "version": "2.2.0"
+        "version": "2.5.1"
     },
     "ngmaster": {
         "cmdline": [],
@@ -55362,9 +55336,7 @@
             "ngta.agent",
             "ngta.agent.app",
             "ngta.agent.executor",
-            "ngta.agent.resource",
             "ngta.agent.setting",
-            "ngta.agent.util",
             "ngta.assertions",
             "ngta.bench",
             "ngta.case",
@@ -55405,7 +55377,7 @@
             "ngta.util",
             "sample"
         ],
-        "version": "3.2.5"
+        "version": "4.0.0"
     },
     "ngtk": {
         "cmdline": [],
@@ -56692,19 +56664,6 @@
             "nicetypes.lists"
         ],
         "version": "0.4.0"
-    },
-    "nicevirus": {
-        "cmdline": [],
-        "modules": [
-            "nicevirus",
-            "nicevirus.app",
-            "nicevirus.backends",
-            "nicevirus.backends.base",
-            "nicevirus.backends.clamav",
-            "nicevirus.cli",
-            "nicevirus.scanner"
-        ],
-        "version": "0.0.7"
     },
     "niceware": {
         "cmdline": [],
@@ -58037,7 +57996,7 @@
             "NightingaleORM.fields",
             "NightingaleORM.pgsqlInterpreter"
         ],
-        "version": "0.9.17"
+        "version": "0.9.18"
     },
     "nightly": {
         "cmdline": [
@@ -64022,7 +63981,7 @@
             "n_vault.cli",
             "n_vault.vault"
         ],
-        "version": "0.35"
+        "version": "0.38"
     },
     "nitpick": {
         "cmdline": [],
@@ -67245,7 +67204,7 @@
             "nlp_model_gen",
             "nlp_model_gen.base"
         ],
-        "version": "0.1.13"
+        "version": "0.2.1"
     },
     "nlp-model-gen-plugins": {
         "cmdline": [],
@@ -67254,7 +67213,7 @@
             "nlp_model_gen_plugins.base",
             "nlp_model_gen_plugins.constants"
         ],
-        "version": "0.1.1"
+        "version": "0.1.2"
     },
     "nlp-modeller": {
         "cmdline": [],
@@ -68188,6 +68147,7 @@
             "nltk.corpus.reader.nps_chat",
             "nltk.corpus.reader.opinion_lexicon",
             "nltk.corpus.reader.panlex_lite",
+            "nltk.corpus.reader.panlex_swadesh",
             "nltk.corpus.reader.pl196x",
             "nltk.corpus.reader.plaintext",
             "nltk.corpus.reader.ppattach",
@@ -68449,7 +68409,7 @@
             "nltk.util",
             "nltk.wsd"
         ],
-        "version": "3.4.3"
+        "version": "3.4.4"
     },
     "nltk-tgrep": {
         "cmdline": [],
@@ -70712,7 +70672,7 @@
             "nnf.dimacs",
             "nnf.dsharp"
         ],
-        "version": "0.1.1"
+        "version": "0.1.2"
     },
     "nnfc": {
         "cmdline": [],
@@ -70919,7 +70879,7 @@
             "nni_trial_tool.trial_keeper",
             "nni_trial_tool.url_utils"
         ],
-        "version": "0.9"
+        "version": "0.9.1"
     },
     "nni-sdk": {
         "cmdline": [],
@@ -77584,7 +77544,7 @@
         "modules": [
             "node_buffer"
         ],
-        "version": "0.1.0"
+        "version": "0.4.0"
     },
     "node-enigma": {
         "cmdline": [],
@@ -77599,7 +77559,7 @@
         "modules": [
             "node_events"
         ],
-        "version": "0.6.2"
+        "version": "0.6.9"
     },
     "node-ext-directory": {
         "cmdline": [],
@@ -93597,10 +93557,16 @@
             "ntf.constants",
             "ntf.data",
             "ntf.debug",
+            "ntf.ex",
+            "ntf.ex.mnist",
+            "ntf.ex.test",
             "ntf.example",
             "ntf.example.mnist",
             "ntf.example.test",
             "ntf.graph",
+            "ntf.hooks",
+            "ntf.hooks.batch_hook",
+            "ntf.hooks.epoch_hook",
             "ntf.image",
             "ntf.metrics",
             "ntf.misc",
@@ -93622,7 +93588,7 @@
             "nth.etc",
             "nth.image"
         ],
-        "version": "0.10.8"
+        "version": "0.10.10"
     },
     "nuclear-tf": {
         "cmdline": [],
