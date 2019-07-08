@@ -803,7 +803,7 @@ tarfile.ReadError: not a gzip file
 [INFO] (camelcase) This package is up to date.
 [INFO] (camelipsum) This package is up to date.
 [INFO] (camelot) This package is up to date.
-[INFO] (camelot-py) This package is up to date.
+[INFO] (camelot-py) Data has been updated for this package.
 [INFO] (camelsplit) This package is up to date.
 [INFO] (camely) This package is up to date.
 [INFO] (cameo) This package is up to date.
@@ -1355,103 +1355,44 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [ERROR] (carnarvon) Could not extract data from this package. See below for details.
 "http://carnarvon.tigris.org/files/documents/4101/33110/carnarvon-0.7.4b.tar.gz" file could not be downloaded. See below for details.
 Traceback (most recent call last):
+  File "/usr/lib/python3.5/urllib/request.py", line 1254, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers)
+  File "/usr/lib/python3.5/http/client.py", line 1107, in request
+    self._send_request(method, url, body, headers)
+  File "/usr/lib/python3.5/http/client.py", line 1152, in _send_request
+    self.endheaders(body)
+  File "/usr/lib/python3.5/http/client.py", line 1103, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python3.5/http/client.py", line 934, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.5/http/client.py", line 877, in send
+    self.connect()
+  File "/usr/lib/python3.5/http/client.py", line 849, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "/usr/lib/python3.5/socket.py", line 712, in create_connection
+    raise err
+  File "/usr/lib/python3.5/socket.py", line 703, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
   File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 107, in download_tar
     f.write(urlopen(url=urlesc(pkgurl), timeout=10).read())
   File "/usr/lib/python3.5/urllib/request.py", line 163, in urlopen
     return opener.open(url, data, timeout)
-  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
-    response = meth(req, response)
-  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
-    'http', request, response, code, msg, hdrs)
-  File "/usr/lib/python3.5/urllib/request.py", line 504, in error
-    result = self._call_chain(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 466, in open
+    response = self._open(req, data)
+  File "/usr/lib/python3.5/urllib/request.py", line 484, in _open
+    '_open', req)
   File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
     result = func(*args)
-  File "/usr/lib/python3.5/urllib/request.py", line 696, in http_error_302
-    return self.parent.open(new, timeout=req.timeout)
-  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
-    response = meth(req, response)
-  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
-    'http', request, response, code, msg, hdrs)
-  File "/usr/lib/python3.5/urllib/request.py", line 504, in error
-    result = self._call_chain(*args)
-  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
-    result = func(*args)
-  File "/usr/lib/python3.5/urllib/request.py", line 696, in http_error_302
-    return self.parent.open(new, timeout=req.timeout)
-  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
-    response = meth(req, response)
-  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
-    'http', request, response, code, msg, hdrs)
-  File "/usr/lib/python3.5/urllib/request.py", line 504, in error
-    result = self._call_chain(*args)
-  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
-    result = func(*args)
-  File "/usr/lib/python3.5/urllib/request.py", line 696, in http_error_302
-    return self.parent.open(new, timeout=req.timeout)
-  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
-    response = meth(req, response)
-  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
-    'http', request, response, code, msg, hdrs)
-  File "/usr/lib/python3.5/urllib/request.py", line 504, in error
-    result = self._call_chain(*args)
-  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
-    result = func(*args)
-  File "/usr/lib/python3.5/urllib/request.py", line 696, in http_error_302
-    return self.parent.open(new, timeout=req.timeout)
-  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
-    response = meth(req, response)
-  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
-    'http', request, response, code, msg, hdrs)
-  File "/usr/lib/python3.5/urllib/request.py", line 504, in error
-    result = self._call_chain(*args)
-  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
-    result = func(*args)
-  File "/usr/lib/python3.5/urllib/request.py", line 696, in http_error_302
-    return self.parent.open(new, timeout=req.timeout)
-  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
-    response = meth(req, response)
-  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
-    'http', request, response, code, msg, hdrs)
-  File "/usr/lib/python3.5/urllib/request.py", line 504, in error
-    result = self._call_chain(*args)
-  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
-    result = func(*args)
-  File "/usr/lib/python3.5/urllib/request.py", line 696, in http_error_302
-    return self.parent.open(new, timeout=req.timeout)
-  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
-    response = meth(req, response)
-  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
-    'http', request, response, code, msg, hdrs)
-  File "/usr/lib/python3.5/urllib/request.py", line 504, in error
-    result = self._call_chain(*args)
-  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
-    result = func(*args)
-  File "/usr/lib/python3.5/urllib/request.py", line 696, in http_error_302
-    return self.parent.open(new, timeout=req.timeout)
-  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
-    response = meth(req, response)
-  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
-    'http', request, response, code, msg, hdrs)
-  File "/usr/lib/python3.5/urllib/request.py", line 504, in error
-    result = self._call_chain(*args)
-  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
-    result = func(*args)
-  File "/usr/lib/python3.5/urllib/request.py", line 696, in http_error_302
-    return self.parent.open(new, timeout=req.timeout)
-  File "/usr/lib/python3.5/urllib/request.py", line 472, in open
-    response = meth(req, response)
-  File "/usr/lib/python3.5/urllib/request.py", line 582, in http_response
-    'http', request, response, code, msg, hdrs)
-  File "/usr/lib/python3.5/urllib/request.py", line 504, in error
-    result = self._call_chain(*args)
-  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
-    result = func(*args)
-  File "/usr/lib/python3.5/urllib/request.py", line 686, in http_error_302
-    self.inf_msg + msg, headers, fp)
-urllib.error.HTTPError: HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.
-The last 30x error message was:
-Found
+  File "/usr/lib/python3.5/urllib/request.py", line 1282, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "/usr/lib/python3.5/urllib/request.py", line 1256, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno 111] Connection refused>
 
 [INFO] (carnifex) This package is up to date.
 [INFO] (carnivalmirror) This package is up to date.
@@ -1839,7 +1780,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (catalyst) This package is up to date.
 [INFO] (catalyze) This package is up to date.
 [INFO] (catan) This package is up to date.
-[INFO] (catan-controller) Data has been updated for this package.
+[INFO] (catan-controller) This package is up to date.
 [INFO] (catan-spectator) This package is up to date.
 [INFO] (catana) This package is up to date.
 [INFO] (catanlog) This package is up to date.
@@ -2092,6 +2033,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (cavia) This package is up to date.
 [INFO] (caviar) This package is up to date.
 [INFO] (cavitometer-deconvolve) This package is up to date.
+[INFO] (cavy) Data has been updated for this package.
 [INFO] (caws) This package is up to date.
 [ERROR] (caxes) Could not extract data from this package. See below for details.
 This package download URL does not point to a valid file: "http://sourceforge.net/projects/crablfs"
@@ -2324,7 +2266,7 @@ This package download URL does not point to a valid file: "http://mirrors.creati
 [INFO] (ccurl) This package is up to date.
 [INFO] (ccv) This package is up to date.
 [INFO] (ccv-numpy) This package is up to date.
-[INFO] (ccvsapi-client) Data has been updated for this package.
+[INFO] (ccvsapi-client) This package is up to date.
 [INFO] (ccw-get-forecast) This package is up to date.
 [INFO] (ccw-nester) This package is up to date.
 [INFO] (ccw-news-parser) This package is up to date.
@@ -2416,7 +2358,7 @@ zipfile.BadZipFile: File is not a zip file
 [INFO] (cdist) This package is up to date.
 [INFO] (cdisutils) This package is up to date.
 [INFO] (cdk) This package is up to date.
-[INFO] (cdk-watchful) This package is up to date.
+[INFO] (cdk-watchful) Data has been updated for this package.
 [INFO] (cdl-convert) This package is up to date.
 [INFO] (cdl2r) This package is up to date.
 [INFO] (cdlib) This package is up to date.
@@ -2448,7 +2390,7 @@ zipfile.BadZipFile: File is not a zip file
 [INFO] (cdplogger-client) This package is up to date.
 [INFO] (cdproj) This package is up to date.
 [INFO] (cdpybio) This package is up to date.
-[INFO] (cdqa) Data has been updated for this package.
+[INFO] (cdqa) This package is up to date.
 [INFO] (cdrouter) This package is up to date.
 [INFO] (cds) This package is up to date.
 [INFO] (cds-dojson) This package is up to date.
@@ -2791,7 +2733,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (censys-command-line) This package is up to date.
 [INFO] (cent) This package is up to date.
 [INFO] (centaur) This package is up to date.
-[INFO] (center-tk-window) Data has been updated for this package.
+[INFO] (center-tk-window) This package is up to date.
 [INFO] (centerline) This package is up to date.
 [INFO] (centiment-alpha) This package is up to date.
 [INFO] (centinel) This package is up to date.
@@ -2876,7 +2818,7 @@ Traceback (most recent call last):
     raise HTTPError(req.full_url, code, msg, hdrs, fp)
 urllib.error.HTTPError: HTTP Error 404: Not Found
 
-[INFO] (cerebro8) Data has been updated for this package.
+[INFO] (cerebro8) This package is up to date.
 [INFO] (cerebrod) This package is up to date.
 [INFO] (cerebrum) This package is up to date.
 [INFO] (ceremony) This package is up to date.
@@ -3977,7 +3919,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (chaton) This package is up to date.
 [INFO] (chatopera) This package is up to date.
 [INFO] (chatora-app-config) This package is up to date.
-[INFO] (chatora-confluent-kafka-ext) This package is up to date.
+[INFO] (chatora-confluent-kafka-ext) Data has been updated for this package.
 [INFO] (chatora-debezium-pg) This package is up to date.
 [INFO] (chatora-dispatch) This package is up to date.
 [INFO] (chatora-elasticsearch-ext) This package is up to date.
@@ -4682,7 +4624,7 @@ Unsupported package directory structure.
 [INFO] (choices-py) This package is up to date.
 [INFO] (choicesenum) This package is up to date.
 [INFO] (choir) This package is up to date.
-[INFO] (choix) Data has been updated for this package.
+[INFO] (choix) This package is up to date.
 [INFO] (choke) This package is up to date.
 [INFO] (chokola) This package is up to date.
 [INFO] (chomp) This package is up to date.
@@ -5002,7 +4944,7 @@ This package download URL does not point to a valid file: "http://bitbucket.org/
 [INFO] (cidaas-python-interceptor) This package is up to date.
 [INFO] (cidaasinterceptor) This package is up to date.
 [INFO] (cidadaobr) This package is up to date.
-[INFO] (cider) This package is up to date.
+[INFO] (cider) Data has been updated for this package.
 [INFO] (cidict) This package is up to date.
 [INFO] (cidl) This package is up to date.
 [INFO] (cidr-brewer) This package is up to date.
@@ -5217,6 +5159,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (cipher-longrequest) This package is up to date.
 [INFO] (cipher-session) This package is up to date.
 [INFO] (cipher-utils) This package is up to date.
+[INFO] (ciphercrack) Data has been updated for this package.
 [INFO] (cipherext) This package is up to date.
 [INFO] (cipherid) This package is up to date.
 [INFO] (cipherme) This package is up to date.
@@ -5594,7 +5537,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (cirrus-ngs) This package is up to date.
 [INFO] (cirruscluster) This package is up to date.
 [INFO] (ciruitpy) This package is up to date.
-[INFO] (cirve) Data has been updated for this package.
+[INFO] (cirve) This package is up to date.
 [INFO] (cis) This package is up to date.
 [INFO] (cis-crypto) This package is up to date.
 [INFO] (cis-interface) This package is up to date.
@@ -6066,7 +6009,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (clams) This package is up to date.
 [INFO] (clamservices) This package is up to date.
 [INFO] (clan) This package is up to date.
-[INFO] (clana) This package is up to date.
+[INFO] (clana) Data has been updated for this package.
 [INFO] (clancy) This package is up to date.
 [INFO] (clandestined) This package is up to date.
 [INFO] (clang) This package is up to date.
@@ -6594,7 +6537,7 @@ PermissionError: [Errno 13] Permission denied: '/Users'
 [INFO] (cligenerator) This package is up to date.
 [INFO] (cliggle) This package is up to date.
 [INFO] (cligj) This package is up to date.
-[INFO] (cliglue) Data has been updated for this package.
+[INFO] (cliglue) This package is up to date.
 [INFO] (cligraphy) This package is up to date.
 [ERROR] (cligui) Could not get a response from API for this package. See below for details.
 Traceback (most recent call last):
@@ -6668,6 +6611,27 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (clingy) This package is up to date.
 [ERROR] (clinica) Could not extract data from this package. See below for details.
 Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 89, in execute_wrapper
+    return json.loads(store.read()), ''
+  File "/usr/lib/python3.5/json/__init__.py", line 319, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.5/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.5/json/decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 89, in execute_wrapper
+    return json.loads(store.read()), ''
+  File "/usr/lib/python3.5/json/__init__.py", line 319, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.5/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.5/json/decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
   File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 82, in execute_wrapper
     stdout, stderr = p.communicate()
   File "/usr/lib/python3.5/subprocess.py", line 803, in communicate
@@ -6689,27 +6653,6 @@ Execution of /usr/bin/python2.7 -m pypicontents.wrapper /tmp/pypic-extract/clini
   File "/usr/local/lib/python2.7/dist-packages/pypicontents/core/patches.py", line 161, in false_open
     return _open(*args, **kwargs)
 TypeError: 'encoding' is an invalid keyword argument for this functionTraceback (most recent call last):
-  File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 89, in execute_wrapper
-    return json.loads(store.read()), ''
-  File "/usr/lib/python3.5/json/__init__.py", line 319, in loads
-    return _default_decoder.decode(s)
-  File "/usr/lib/python3.5/json/decoder.py", line 339, in decode
-    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
-  File "/usr/lib/python3.5/json/decoder.py", line 357, in raw_decode
-    raise JSONDecodeError("Expecting value", s, err.value) from None
-json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
-
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 89, in execute_wrapper
-    return json.loads(store.read()), ''
-  File "/usr/lib/python3.5/json/__init__.py", line 319, in loads
-    return _default_decoder.decode(s)
-  File "/usr/lib/python3.5/json/decoder.py", line 339, in decode
-    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
-  File "/usr/lib/python3.5/json/decoder.py", line 357, in raw_decode
-    raise JSONDecodeError("Expecting value", s, err.value) from None
-json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
-Traceback (most recent call last):
   File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 89, in execute_wrapper
     return json.loads(store.read()), ''
   File "/usr/lib/python3.5/json/__init__.py", line 319, in loads
@@ -6926,7 +6869,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (clocwalk) This package is up to date.
 [ERROR] (clod) Could not extract data from this package. See below for details.
 Unsupported package directory structure.
-[INFO] (clodius) This package is up to date.
+[INFO] (clodius) Data has been updated for this package.
 [INFO] (clodoo) This package is up to date.
 [INFO] (clodsa) This package is up to date.
 [INFO] (cloeepy) This package is up to date.
@@ -7269,7 +7212,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (cloudmunch-cli) This package is up to date.
 [INFO] (cloudnetpy) This package is up to date.
 [INFO] (cloudns) This package is up to date.
-[INFO] (cloudns-api) This package is up to date.
+[INFO] (cloudns-api) Data has been updated for this package.
 [INFO] (cloudnsapi) This package is up to date.
 [INFO] (cloudomate) This package is up to date.
 [INFO] (cloudooo) This package is up to date.
@@ -7313,7 +7256,7 @@ Traceback (most recent call last):
 urllib.error.HTTPError: HTTP Error 404: Not Found
 
 [INFO] (cloudscrape) This package is up to date.
-[INFO] (cloudscraper) This package is up to date.
+[INFO] (cloudscraper) Data has been updated for this package.
 [ERROR] (cloudsdk) Could not get a response from API for this package. See below for details.
 Traceback (most recent call last):
   File "/usr/local/lib/python3.5/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
@@ -7565,7 +7508,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (cluster-lensing) This package is up to date.
 [INFO] (cluster-logger) This package is up to date.
 [INFO] (cluster-searcher) This package is up to date.
-[INFO] (cluster-test-tool) This package is up to date.
+[INFO] (cluster-test-tool) Data has been updated for this package.
 [INFO] (cluster-tools) This package is up to date.
 [INFO] (cluster-vcf-records) This package is up to date.
 [INFO] (clusterapi) This package is up to date.
@@ -7767,7 +7710,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [ERROR] (cmdlnui) This package does not have downloadable releases.
 [ERROR] (cmdloop) Could not extract data from this package. See below for details.
 ".py" extension not supported.
-[INFO] (cmdlr) Data has been updated for this package.
+[INFO] (cmdlr) This package is up to date.
 [INFO] (cmdman) This package is up to date.
 [INFO] (cmdmenu) This package is up to date.
 [ERROR] (cmdmessenger) This package does not have downloadable releases.
@@ -8182,7 +8125,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (cnvcallertools) This package is up to date.
 [INFO] (cnvfinder) This package is up to date.
 [INFO] (cnvkit) This package is up to date.
-[INFO] (cnvrg) This package is up to date.
+[INFO] (cnvrg) Data has been updated for this package.
 [INFO] (cnx-archive) This package is up to date.
 [ERROR] (cnx-authoring) This package does not have downloadable releases.
 [INFO] (cnx-common) This package is up to date.
@@ -8369,7 +8312,7 @@ This package download URL does not point to a valid file: "http://code.google.co
 [INFO] (cocorahs-download-tool) This package is up to date.
 [INFO] (cocoricofm) This package is up to date.
 [INFO] (cocorpy27) This package is up to date.
-[INFO] (cocos) This package is up to date.
+[INFO] (cocos) Data has been updated for this package.
 [INFO] (cocos2d) This package is up to date.
 [INFO] (cocoscore) This package is up to date.
 [INFO] (cocotask) This package is up to date.
@@ -8610,7 +8553,7 @@ urllib.error.URLError: <urlopen error [Errno 99] Cannot assign requested address
 [INFO] (codepost-princeton-tools) This package is up to date.
 [INFO] (codepost-tools) This package is up to date.
 [INFO] (codepunks) This package is up to date.
-[INFO] (codepy) Data has been updated for this package.
+[INFO] (codepy) This package is up to date.
 [INFO] (codeq-nlp-api) This package is up to date.
 [INFO] (codequality) This package is up to date.
 [INFO] (coder) This package is up to date.
@@ -8977,7 +8920,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (coinmarketcapapi) This package is up to date.
 [INFO] (coinmarketcappy) This package is up to date.
 [INFO] (coinmate-api) This package is up to date.
-[INFO] (coinmetrics) Data has been updated for this package.
+[INFO] (coinmetrics) This package is up to date.
 [INFO] (coinnest-python-client) This package is up to date.
 [INFO] (coinop) This package is up to date.
 [ERROR] (coinor) This package does not have downloadable releases.
@@ -9017,6 +8960,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (coinsmarketcap) This package is up to date.
 [INFO] (coinspot-py) This package is up to date.
 [INFO] (coinsta) This package is up to date.
+[INFO] (coinstac-remote-pdb) Data has been updated for this package.
 [INFO] (coinswitchclient) This package is up to date.
 [INFO] (cointarbitrage) This package is up to date.
 [INFO] (cointiger-sdk) This package is up to date.
@@ -9034,6 +8978,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (colab-audiencias) This package is up to date.
 [INFO] (colab-discourse) This package is up to date.
 [INFO] (colab-edemocracia) This package is up to date.
+[INFO] (colab-env) Data has been updated for this package.
 [INFO] (colab-gitlab) This package is up to date.
 [INFO] (colab-mkdocs-tos) This package is up to date.
 [INFO] (colab-noosfero) This package is up to date.
@@ -10770,7 +10715,8 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (colout) This package is up to date.
 [INFO] (colout-fix) This package is up to date.
 [INFO] (colout2) This package is up to date.
-[INFO] (colp) Data has been updated for this package.
+[INFO] (colp) This package is up to date.
+[INFO] (colprint) Data has been updated for this package.
 [ERROR] (colpy) This package does not have downloadable releases.
 [INFO] (colr) This package is up to date.
 [INFO] (coltab) This package is up to date.
@@ -11006,7 +10952,7 @@ This package download URL does not point to a valid file: "http://icepick.info/p
 [INFO] (commentator) This package is up to date.
 [INFO] (commented-out-code) This package is up to date.
 [INFO] (commentfetcher) This package is up to date.
-[INFO] (commentjson) This package is up to date.
+[INFO] (commentjson) Data has been updated for this package.
 [INFO] (comments) This package is up to date.
 [INFO] (comments-wagtail-xtd) This package is up to date.
 [INFO] (commentsql) This package is up to date.
@@ -11155,8 +11101,8 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (company-graph) This package is up to date.
 [INFO] (company-matcher) This package is up to date.
 [INFO] (company-pinax-stripe) This package is up to date.
-[INFO] (company2country) Data has been updated for this package.
-[INFO] (company2country-by-wjt) Data has been updated for this package.
+[INFO] (company2country) This package is up to date.
+[INFO] (company2country-by-wjt) This package is up to date.
 [INFO] (companyparser) This package is up to date.
 [INFO] (companysim) This package is up to date.
 [INFO] (compapp) This package is up to date.
@@ -11535,7 +11481,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [ERROR] (conceptnet-a-practical-commonsense-reasoning-toolkit) Could not extract data from this package. See below for details.
 This package download URL does not point to a valid file: "http://web.media.mit.edu/~hugo/conceptnet/"
 [INFO] (conceptpower-api) This package is up to date.
-[INFO] (concepts) Data has been updated for this package.
+[INFO] (concepts) This package is up to date.
 [INFO] (conceptscript) This package is up to date.
 [INFO] (concerns) This package is up to date.
 [INFO] (concero) This package is up to date.
@@ -11793,7 +11739,7 @@ This package download URL does not point to a valid file: "https://pypi.python.o
 [INFO] (confight) This package is up to date.
 [INFO] (configi) This package is up to date.
 [INFO] (configify) This package is up to date.
-[INFO] (configirl) Data has been updated for this package.
+[INFO] (configirl) This package is up to date.
 [INFO] (configit) This package is up to date.
 [INFO] (configkeeper) This package is up to date.
 [INFO] (configless) This package is up to date.
@@ -12711,7 +12657,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (coopr-pysp) This package is up to date.
 [INFO] (coopr-solvers) This package is up to date.
 [INFO] (coopr-sucasa) This package is up to date.
-[INFO] (coopstarter-data) This package is up to date.
+[INFO] (coopstarter-data) Data has been updated for this package.
 [INFO] (coopy) This package is up to date.
 [INFO] (coorblimey) This package is up to date.
 [INFO] (coord-convert) This package is up to date.
@@ -12940,7 +12886,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (coretracker) This package is up to date.
 [ERROR] (coreuri) This package does not have downloadable releases.
 [INFO] (corevpn) This package is up to date.
-[INFO] (corewar42) Data has been updated for this package.
+[INFO] (corewar42) This package is up to date.
 [ERROR] (coreweb) This package does not have downloadable releases.
 [INFO] (corexcontinuous) This package is up to date.
 [INFO] (corexdiscrete) This package is up to date.
@@ -12956,7 +12902,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (corkscrew) This package is up to date.
 [INFO] (corlorprinter) This package is up to date.
 [INFO] (cormoran) This package is up to date.
-[INFO] (cornac) Data has been updated for this package.
+[INFO] (cornac) This package is up to date.
 [INFO] (cornel-movie-dialogs-corpus-storm) This package is up to date.
 [INFO] (corner) This package is up to date.
 [INFO] (cornerstone-browser) This package is up to date.
@@ -12994,7 +12940,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (corpus) This package is up to date.
 [INFO] (corpus-cleaner) This package is up to date.
 [INFO] (corpus-downloader) This package is up to date.
-[INFO] (corpus-middleware) This package is up to date.
+[INFO] (corpus-middleware) Data has been updated for this package.
 [INFO] (corpus2alpino) This package is up to date.
 [INFO] (corpus4classify) This package is up to date.
 [INFO] (corpushash) This package is up to date.
@@ -13731,10 +13677,10 @@ json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
 [INFO] (cpfile) This package is up to date.
 [INFO] (cpg) This package is up to date.
 [INFO] (cpgame) This package is up to date.
-[INFO] (cpgclientlib) This package is up to date.
+[INFO] (cpgclientlib) Data has been updated for this package.
 [INFO] (cpgen) This package is up to date.
 [INFO] (cpghstore) This package is up to date.
-[INFO] (cpgtools) This package is up to date.
+[INFO] (cpgtools) Data has been updated for this package.
 [INFO] (cpgw) This package is up to date.
 [INFO] (cphcttoolbox) This package is up to date.
 [INFO] (cpheadfirst) This package is up to date.
@@ -13917,7 +13863,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (cpyimagingmspec) This package is up to date.
 [INFO] (cpyjava) This package is up to date.
 [INFO] (cpylog) This package is up to date.
-[INFO] (cpymad) Data has been updated for this package.
+[INFO] (cpymad) This package is up to date.
 [INFO] (cpymodbus) This package is up to date.
 [INFO] (cpymspec) This package is up to date.
 [INFO] (cpyparsing) This package is up to date.
@@ -14109,7 +14055,7 @@ Unsupported package directory structure.
 [INFO] (crawler) This package is up to date.
 [INFO] (crawler-core) This package is up to date.
 [INFO] (crawler-detection) This package is up to date.
-[INFO] (crawler-framework) Data has been updated for this package.
+[INFO] (crawler-framework) This package is up to date.
 [INFO] (crawler-operation-for-youguowang) This package is up to date.
 [INFO] (crawler-py) This package is up to date.
 [INFO] (crawlera-session) This package is up to date.
@@ -14417,7 +14363,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (crockford) This package is up to date.
 [INFO] (croco) This package is up to date.
 [INFO] (crocodoc) This package is up to date.
-[INFO] (crocoite) Data has been updated for this package.
+[INFO] (crocoite) This package is up to date.
 [INFO] (crocpy3) This package is up to date.
 [INFO] (crocs) This package is up to date.
 [INFO] (crocus) This package is up to date.
@@ -14633,6 +14579,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 
 [INFO] (crowdtimeout) This package is up to date.
 [INFO] (crowdtruth) This package is up to date.
+[INFO] (crowdwiz) Data has been updated for this package.
 [INFO] (crowfood) This package is up to date.
 [INFO] (crowsetta) This package is up to date.
 [INFO] (crowsnest-capabilities) This package is up to date.
@@ -14762,6 +14709,7 @@ This package download URL does not point to a valid file: "http://trevp.net/cryp
 [INFO] (crypto-price-rss) This package is up to date.
 [ERROR] (crypto-primitives) This package does not have downloadable releases.
 [INFO] (crypto-py) This package is up to date.
+[INFO] (crypto-sum-alesanchezr) Data has been updated for this package.
 [INFO] (crypto-test) This package is up to date.
 [INFO] (crypto-wallet) This package is up to date.
 [INFO] (cryptoaddress) This package is up to date.
@@ -14796,7 +14744,7 @@ This package download URL does not point to a valid file: "http://trevp.net/cryp
 [INFO] (cryptodweet) This package is up to date.
 [INFO] (cryptoenv) This package is up to date.
 [INFO] (cryptoexchange) This package is up to date.
-[INFO] (cryptofeed) Data has been updated for this package.
+[INFO] (cryptofeed) This package is up to date.
 [INFO] (cryptofinance) This package is up to date.
 [INFO] (cryptofinder) This package is up to date.
 [INFO] (cryptogaphy) This package is up to date.
@@ -14847,7 +14795,7 @@ This package download URL does not point to a valid file: "https://sourceforge.n
 [INFO] (cryptos) This package is up to date.
 [INFO] (cryptoshop) This package is up to date.
 [INFO] (cryptosteganography) This package is up to date.
-[INFO] (cryptostore) Data has been updated for this package.
+[INFO] (cryptostore) This package is up to date.
 [INFO] (cryptostream) This package is up to date.
 [INFO] (cryptosyspki) This package is up to date.
 [INFO] (cryptotax) This package is up to date.
@@ -15050,7 +14998,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (cs207rbtree) This package is up to date.
 [INFO] (cs251tk) This package is up to date.
 [INFO] (cs5-trial-extender) This package is up to date.
-[INFO] (cs50) Data has been updated for this package.
+[INFO] (cs50) This package is up to date.
 [INFO] (cs601r-project1-dataset) This package is up to date.
 [INFO] (csa) This package is up to date.
 [INFO] (csample) This package is up to date.
@@ -15201,7 +15149,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 ".php" extension not supported.
 [INFO] (csnews) This package is up to date.
 [INFO] (csnews-multilingual) This package is up to date.
-[INFO] (csnl-vae-olaralex) Data has been updated for this package.
+[INFO] (csnl-vae-olaralex) This package is up to date.
 [INFO] (csnotifier) This package is up to date.
 [INFO] (cso-classifier) This package is up to date.
 [INFO] (csodium) This package is up to date.
@@ -15225,7 +15173,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (csplitb) This package is up to date.
 [INFO] (cspobject) This package is up to date.
 [INFO] (csputils) This package is up to date.
-[INFO] (cspy) Data has been updated for this package.
+[INFO] (cspy) This package is up to date.
 [INFO] (cspybase) This package is up to date.
 [INFO] (csquery) This package is up to date.
 [INFO] (csr-autoscaler-cli) This package is up to date.
@@ -15559,7 +15507,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (ctec-thrift-client) This package is up to date.
 [INFO] (ctec-utils) This package is up to date.
 [INFO] (cteclogstash) This package is up to date.
-[INFO] (cterm) This package is up to date.
+[INFO] (cterm) Data has been updated for this package.
 [INFO] (ctestgen) This package is up to date.
 [INFO] (ctext) This package is up to date.
 [ERROR] (ctf) Could not get a response from API for this package. See below for details.
@@ -15681,7 +15629,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (ctodd-python-lib-logging) This package is up to date.
 [INFO] (ctodd-python-lib-minio) This package is up to date.
 [INFO] (ctodo) This package is up to date.
-[INFO] (ctools) Data has been updated for this package.
+[INFO] (ctools) This package is up to date.
 [INFO] (ctop) This package is up to date.
 [INFO] (ctorrepr) This package is up to date.
 [INFO] (ctox) This package is up to date.
@@ -16005,7 +15953,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (cuculus) This package is up to date.
 [INFO] (cuculus-logging-client) This package is up to date.
 [INFO] (cucumber-json-to-junit-xml) This package is up to date.
-[INFO] (cucumber-tag-expressions) Data has been updated for this package.
+[INFO] (cucumber-tag-expressions) This package is up to date.
 [INFO] (cucutags) This package is up to date.
 [INFO] (cuda-device-ipython-magic) This package is up to date.
 [INFO] (cuda-friendly-vincenty) This package is up to date.
@@ -16197,6 +16145,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (curiousorm) This package is up to date.
 [INFO] (curitools) This package is up to date.
 [INFO] (curl-http) This package is up to date.
+[INFO] (curl-modifier) Data has been updated for this package.
 [ERROR] (curl-multi-stro) Could not extract data from this package. See below for details.
 "https://files.pythonhosted.org/packages/4d/e8/8bea90c16c3dfe45e837786fd50a58d7f1422035aebd2c2a0fe03c06ebb9/Curl%20Multi_stro-0.2.tar.gz" file could not be downloaded. See below for details.
 Traceback (most recent call last):
@@ -16390,7 +16339,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (curveball) This package is up to date.
 [INFO] (curveline) This package is up to date.
 [INFO] (curver) This package is up to date.
-[INFO] (curves) This package is up to date.
+[INFO] (curves) Data has been updated for this package.
 [INFO] (cus-pythonlib) This package is up to date.
 [INFO] (cuscatlan) This package is up to date.
 [INFO] (cushead) This package is up to date.
@@ -16464,7 +16413,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (customer-mlscrcom) This package is up to date.
 [INFO] (customerio) This package is up to date.
 [INFO] (customevent) This package is up to date.
-[INFO] (customeventfilters) Data has been updated for this package.
+[INFO] (customeventfilters) This package is up to date.
 [INFO] (customidenticon) This package is up to date.
 [INFO] (customizable-django-profiler) This package is up to date.
 [INFO] (customized-konlpy) This package is up to date.
@@ -16613,7 +16562,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (cvimage) This package is up to date.
 [INFO] (cvinemodel) This package is up to date.
 [INFO] (cvlab) This package is up to date.
-[INFO] (cvlib) This package is up to date.
+[INFO] (cvlib) Data has been updated for this package.
 [INFO] (cvloop) This package is up to date.
 [INFO] (cvlops) This package is up to date.
 [INFO] (cvml) This package is up to date.
@@ -17046,7 +16995,7 @@ This package download URL does not point to a valid file: "http://sourceforge.ne
 [INFO] (cythereal-magic) This package is up to date.
 [INFO] (cythereal-neomodel) This package is up to date.
 [INFO] (cythereal-vbsdk) This package is up to date.
-[INFO] (cython) This package is up to date.
+[INFO] (cython) Data has been updated for this package.
 [INFO] (cython-bbox) This package is up to date.
 [INFO] (cython-codegen) This package is up to date.
 [INFO] (cython-construct) This package is up to date.
@@ -17113,7 +17062,7 @@ Traceback (most recent call last):
     raise HTTPError(req.full_url, code, msg, hdrs, fp)
 urllib.error.HTTPError: HTTP Error 404: Not Found
 
-[INFO] (cyvlfeat) This package is up to date.
+[INFO] (cyvlfeat) Data has been updated for this package.
 [INFO] (cyw-bogus) This package is up to date.
 [INFO] (cyw-bogus-0-1-95) This package is up to date.
 [INFO] (cz-ip) This package is up to date.
@@ -17135,10 +17084,10 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (czutil) This package is up to date.
 [INFO] 
 [INFO] 
-[INFO] Total packages: 12763
-[INFO]     Packages processed: 12763
+[INFO] Total packages: 12771
+[INFO]     Packages processed: 12771
 [INFO]         Packages updated: 34
-[INFO]         Packages up-to-date: 11995
+[INFO]         Packages up-to-date: 12003
 [INFO]         Packages without response: 179
 [INFO]         Packages without urls: 0
 [INFO]         Packages without downloads: 443
