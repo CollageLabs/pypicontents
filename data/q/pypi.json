@@ -3430,17 +3430,33 @@
             "qcodes.dataset.database",
             "qcodes.dataset.database_extract_runs",
             "qcodes.dataset.database_fix_functions",
-            "qcodes.dataset.dependencies",
             "qcodes.dataset.descriptions",
+            "qcodes.dataset.descriptions.dependencies",
+            "qcodes.dataset.descriptions.param_spec",
+            "qcodes.dataset.descriptions.rundescriber",
+            "qcodes.dataset.descriptions.versioning",
+            "qcodes.dataset.descriptions.versioning.converters",
+            "qcodes.dataset.descriptions.versioning.serialization",
+            "qcodes.dataset.descriptions.versioning.v0",
             "qcodes.dataset.experiment_container",
             "qcodes.dataset.guids",
             "qcodes.dataset.json_exporter",
             "qcodes.dataset.legacy_import",
             "qcodes.dataset.measurements",
-            "qcodes.dataset.param_spec",
             "qcodes.dataset.plotting",
+            "qcodes.dataset.sqlite",
+            "qcodes.dataset.sqlite.connection",
+            "qcodes.dataset.sqlite.database",
+            "qcodes.dataset.sqlite.db_upgrades",
+            "qcodes.dataset.sqlite.db_upgrades.upgrade_2_to_3",
+            "qcodes.dataset.sqlite.db_upgrades.upgrade_3_to_4",
+            "qcodes.dataset.sqlite.db_upgrades.upgrade_5_to_6",
+            "qcodes.dataset.sqlite.db_upgrades.version",
+            "qcodes.dataset.sqlite.initial_schema",
+            "qcodes.dataset.sqlite.queries",
+            "qcodes.dataset.sqlite.query_helpers",
+            "qcodes.dataset.sqlite.settings",
             "qcodes.dataset.sqlite_base",
-            "qcodes.dataset.sqlite_settings",
             "qcodes.instrument",
             "qcodes.instrument.base",
             "qcodes.instrument.channel",
@@ -3502,6 +3518,14 @@
             "qcodes.instrument_drivers.Keysight.SD_common.SD_DIG",
             "qcodes.instrument_drivers.Keysight.SD_common.SD_Module",
             "qcodes.instrument_drivers.Keysight.keysight_b220x",
+            "qcodes.instrument_drivers.Keysight.keysightb1500",
+            "qcodes.instrument_drivers.Keysight.keysightb1500.KeysightB1500",
+            "qcodes.instrument_drivers.Keysight.keysightb1500.KeysightB1500_module",
+            "qcodes.instrument_drivers.Keysight.keysightb1500.KeysightB1517A",
+            "qcodes.instrument_drivers.Keysight.keysightb1500.KeysightB1520A",
+            "qcodes.instrument_drivers.Keysight.keysightb1500.KeysightB1530A",
+            "qcodes.instrument_drivers.Keysight.keysightb1500.constants",
+            "qcodes.instrument_drivers.Keysight.keysightb1500.message_builder",
             "qcodes.instrument_drivers.Keysight.private",
             "qcodes.instrument_drivers.Keysight.private.Keysight_344xxA",
             "qcodes.instrument_drivers.Keysight.private.Keysight_344xxA_submodules",
@@ -3606,6 +3630,7 @@
             "qcodes.instrument_drivers.tektronix.AWG70000A",
             "qcodes.instrument_drivers.tektronix.AWG70002A",
             "qcodes.instrument_drivers.tektronix.AWGFileParser",
+            "qcodes.instrument_drivers.tektronix.DPO7200xx",
             "qcodes.instrument_drivers.tektronix.Keithley_2000",
             "qcodes.instrument_drivers.tektronix.Keithley_2400",
             "qcodes.instrument_drivers.tektronix.Keithley_2450",
@@ -3642,6 +3667,7 @@
             "qcodes.tests.dataset",
             "qcodes.tests.dataset.dataset_fixtures",
             "qcodes.tests.dataset.helper_functions",
+            "qcodes.tests.dataset.interdeps_fixtures",
             "qcodes.tests.dataset.temporary_databases",
             "qcodes.tests.dataset.test_database_creation_and_upgrading",
             "qcodes.tests.dataset.test_database_extract_runs",
@@ -3670,6 +3696,14 @@
             "qcodes.tests.drivers.AlazarTech.test_alazar_buffer",
             "qcodes.tests.drivers.AlazarTech.test_dll_wrapper",
             "qcodes.tests.drivers.auxiliary_files",
+            "qcodes.tests.drivers.keysight_b1500",
+            "qcodes.tests.drivers.keysight_b1500.b1500_driver_tests",
+            "qcodes.tests.drivers.keysight_b1500.b1500_driver_tests.test_b1500",
+            "qcodes.tests.drivers.keysight_b1500.b1500_driver_tests.test_b1500_module",
+            "qcodes.tests.drivers.keysight_b1500.b1500_driver_tests.test_b1517a_smu",
+            "qcodes.tests.drivers.keysight_b1500.b1500_driver_tests.test_b1520a_cmu",
+            "qcodes.tests.drivers.keysight_b1500.test_MessageBuilder",
+            "qcodes.tests.drivers.keysight_b1500.test_commandList",
             "qcodes.tests.drivers.test_Agilent_E8527D",
             "qcodes.tests.drivers.test_Keithley_2450",
             "qcodes.tests.drivers.test_Keysight_33XXX",
@@ -3690,6 +3724,7 @@
             "qcodes.tests.drivers.test_tektronix_AWG5014C",
             "qcodes.tests.drivers.test_tektronix_AWG5208",
             "qcodes.tests.drivers.test_tektronix_AWG70000A",
+            "qcodes.tests.drivers.test_tektronix_dpo7200xx",
             "qcodes.tests.drivers.test_weinchel",
             "qcodes.tests.drivers.test_zihdawg8",
             "qcodes.tests.instrument_mocks",
@@ -3721,6 +3756,7 @@
             "qcodes.tests.test_plot_utils",
             "qcodes.tests.test_plots",
             "qcodes.tests.test_qcmatplotlib_functions",
+            "qcodes.tests.test_snapshot",
             "qcodes.tests.test_station",
             "qcodes.tests.test_sweep_values",
             "qcodes.tests.test_testutils",
@@ -3744,7 +3780,7 @@
             "qcodes.utils.zmq_helpers",
             "qcodes.version"
         ],
-        "version": "0.3.0"
+        "version": "0.4.0"
     },
     "qcompress": {
         "cmdline": [],
@@ -6125,7 +6161,7 @@
             "qichacha.client",
             "qichacha.exceptions"
         ],
-        "version": "0.0.8"
+        "version": "0.0.9"
     },
     "qicore": {
         "cmdline": [],
@@ -14689,7 +14725,7 @@
     "quadcelldetector": {
         "cmdline": [],
         "modules": [],
-        "version": "0.0.1.dev72"
+        "version": "0.0.1.dev122"
     },
     "quade": {
         "cmdline": [],
@@ -21535,6 +21571,15 @@
         ],
         "version": "0.3.1"
     },
+    "quick-cd": {
+        "cmdline": [
+            "qcd"
+        ],
+        "modules": [
+            "quick_cd"
+        ],
+        "version": "1.1.1"
+    },
     "quick-clojure": {
         "cmdline": [],
         "modules": [],
@@ -22789,7 +22834,7 @@
         "modules": [
             "quicktranslate"
         ],
-        "version": "1.0.3"
+        "version": "1.0.4"
     },
     "quickumls": {
         "cmdline": [],
@@ -24528,12 +24573,12 @@
     "qulacs": {
         "cmdline": [],
         "modules": [],
-        "version": "0.1.4"
+        "version": "0.1.4.1"
     },
     "qulacs-gpu": {
         "cmdline": [],
         "modules": [],
-        "version": "0.1.4"
+        "version": "0.1.4.1"
     },
     "qulo": {
         "cmdline": [],
@@ -25541,7 +25586,7 @@
             "qurro.tests.testing_utilities",
             "qurro.tests.update_js_test_jsons"
         ],
-        "version": "0.1.0"
+        "version": "0.2.0"
     },
     "qute": {
         "cmdline": [],
