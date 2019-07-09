@@ -4875,7 +4875,7 @@
         "modules": [
             "hackpy"
         ],
-        "version": "0.0.3"
+        "version": "0.0.6.1"
     },
     "hackr": {
         "cmdline": [],
@@ -5458,15 +5458,30 @@
         "version": "0.2.3"
     },
     "hagelslag": {
-        "cmdline": [],
+        "cmdline": [
+            "hscalibration",
+            "hsdata",
+            "hseval",
+            "hsforecast",
+            "hsncarpatch",
+            "hsplotter",
+            "hsstation",
+            "hswrf3d"
+        ],
         "modules": [
             "hagelslag",
             "hagelslag.data",
+            "hagelslag.data.HREFv2ModelGrid",
+            "hagelslag.data.HRRRModelGrid",
+            "hagelslag.data.HailForecastGrid",
             "hagelslag.data.MRMSGrid",
             "hagelslag.data.ModelGrid",
             "hagelslag.data.ModelOutput",
             "hagelslag.data.NCARModelGrid",
+            "hagelslag.data.NCARStormEventModelGrid",
             "hagelslag.data.SSEFModelGrid",
+            "hagelslag.data.VSEModelGrid",
+            "hagelslag.data.WRFModelGrid",
             "hagelslag.evaluation",
             "hagelslag.evaluation.ContingencyTable",
             "hagelslag.evaluation.GridEvaluator",
@@ -5484,15 +5499,24 @@
             "hagelslag.processing.TrackModeler",
             "hagelslag.processing.TrackProcessing",
             "hagelslag.processing.TrackSampler",
+            "hagelslag.processing.tracker",
             "hagelslag.util",
             "hagelslag.util.Config",
             "hagelslag.util.convert_mrms_grids",
+            "hagelslag.util.create_model_grid_us_mask",
+            "hagelslag.util.create_sector_grid_data",
+            "hagelslag.util.custom_grib_table",
+            "hagelslag.util.derived_vars",
             "hagelslag.util.make_proj_grids",
+            "hagelslag.util.merge_forecast_data",
             "hagelslag.util.munkres",
             "hagelslag.util.output_tree_ensembles",
-            "hagelslag.util.show_importance_ranks"
+            "hagelslag.util.show_importance_ranks",
+            "hagelslag.util.storm_patch_center_coords",
+            "hagelslag.util.test_size_distributions",
+            "hagelslag.util.testing_sector"
         ],
-        "version": "0.2"
+        "version": "0.3"
     },
     "haggis": {
         "cmdline": [],
@@ -6764,7 +6788,7 @@
             "halophot.halo_tools",
             "halophot.kephalophot"
         ],
-        "version": "0.7.0.5"
+        "version": "0.7.1.1"
     },
     "halopy": {
         "cmdline": [],
@@ -7325,7 +7349,7 @@
             "hamble.command",
             "hamble.hamble"
         ],
-        "version": "0.0.1"
+        "version": "0.0.2"
     },
     "hambot": {
         "cmdline": [],
@@ -18678,7 +18702,7 @@
             "hcsr04sensor",
             "hcsr04sensor.sensor"
         ],
-        "version": "1.5.3"
+        "version": "1.6"
     },
     "hcss": {
         "cmdline": [],
@@ -26157,11 +26181,15 @@
             "hep_rest_api.models.pay_cache_request",
             "hep_rest_api.models.pay_cache_response",
             "hep_rest_api.models.proof",
+            "hep_rest_api.models.proof_data",
             "hep_rest_api.models.proof_response",
+            "hep_rest_api.models.proof_reward",
             "hep_rest_api.models.receipt_field",
             "hep_rest_api.models.retrieve_oracle_response",
             "hep_rest_api.models.retrieve_proof_receipts_request",
             "hep_rest_api.models.retrieve_proof_receipts_response",
+            "hep_rest_api.models.retrieve_proof_rewards_request",
+            "hep_rest_api.models.retrieve_proof_rewards_response",
             "hep_rest_api.models.thing",
             "hep_rest_api.rest",
             "hep_rest_api.scenarios",
@@ -26188,15 +26216,19 @@
             "test.test_pay_cache_request",
             "test.test_pay_cache_response",
             "test.test_proof",
+            "test.test_proof_data",
             "test.test_proof_response",
+            "test.test_proof_reward",
             "test.test_receipt_field",
             "test.test_rest_api",
             "test.test_retrieve_oracle_response",
             "test.test_retrieve_proof_receipts_request",
             "test.test_retrieve_proof_receipts_response",
+            "test.test_retrieve_proof_rewards_request",
+            "test.test_retrieve_proof_rewards_response",
             "test.test_thing"
         ],
-        "version": "1.0.8"
+        "version": "1.0.9"
     },
     "hep-rfm": {
         "cmdline": [
@@ -31678,7 +31710,7 @@
             "hic2cool.hic2cool_updates",
             "hic2cool.hic2cool_utils"
         ],
-        "version": "0.7.2"
+        "version": "0.7.3"
     },
     "hicassembler": {
         "cmdline": [],
@@ -33055,7 +33087,7 @@
             "higlass.tilesets",
             "higlass.viewer"
         ],
-        "version": "0.1.11"
+        "version": "0.1.13"
     },
     "higra": {
         "cmdline": [],
@@ -33200,7 +33232,7 @@
             "hikari.net.status",
             "hikari.utils"
         ],
-        "version": "2019.7.6.538"
+        "version": "2019.7.8.556"
     },
     "hikecalc": {
         "cmdline": [],
@@ -35174,7 +35206,7 @@
             "histlite.heal",
             "histlite.termplot"
         ],
-        "version": "0.9.1"
+        "version": "0.9.2"
     },
     "histo": {
         "cmdline": [],
@@ -35681,24 +35713,6 @@
         ],
         "version": "19.5.1"
     },
-    "hit-btc": {
-        "cmdline": [],
-        "modules": [
-            "HitBTC",
-            "HitBTC.API",
-            "HitBTC.API.core",
-            "HitBTC.API.market",
-            "HitBTC.API.trading",
-            "HitBTC.WSS",
-            "HitBTC.WSS.core",
-            "HitBTC.WSS.market",
-            "HitBTC.WSS.trading",
-            "HitBTC.WSS.wss",
-            "HitBTC.exception",
-            "HitBTC.utils"
-        ],
-        "version": "0.41"
-    },
     "hit-csys": {
         "cmdline": [],
         "modules": [
@@ -35763,6 +35777,21 @@
             "hitbtcapi.utils"
         ],
         "version": "1.1.1"
+    },
+    "hitbtcmonster": {
+        "cmdline": [],
+        "modules": [
+            "HitBTCMonster",
+            "HitBTCMonster.api",
+            "HitBTCMonster.api.core",
+            "HitBTCMonster.api.market",
+            "HitBTCMonster.api.trading",
+            "HitBTCMonster.wss",
+            "HitBTCMonster.wss.core",
+            "HitBTCMonster.wss.market",
+            "HitBTCMonster.wss.trading"
+        ],
+        "version": "0.0.1"
     },
     "hitch": {
         "cmdline": [],
@@ -39231,9 +39260,15 @@
             "holdouts_generator.__version__",
             "holdouts_generator.chromosomal_holdout",
             "holdouts_generator.holdouts_generator",
-            "holdouts_generator.random_holdout"
+            "holdouts_generator.random_holdout",
+            "holdouts_generator.utils",
+            "holdouts_generator.utils.cache",
+            "holdouts_generator.utils.hash",
+            "holdouts_generator.utils.holdouts_description",
+            "holdouts_generator.utils.paths",
+            "holdouts_generator.utils.various"
         ],
-        "version": "0.0.13"
+        "version": "0.0.14"
     },
     "holdup": {
         "cmdline": [],
@@ -40095,12 +40130,8 @@
     },
     "holoviz": {
         "cmdline": [],
-        "modules": [
-            "holoviz",
-            "holoviz.tests",
-            "holoviz.tests.test_dummy"
-        ],
-        "version": "0.1.2"
+        "modules": [],
+        "version": "0.11.3"
     },
     "holster": {
         "cmdline": [],
@@ -51789,7 +51820,7 @@
         "modules": [
             "htm"
         ],
-        "version": "0.0.5"
+        "version": "0.0.6"
     },
     "htmap": {
         "cmdline": [],
@@ -54544,6 +54575,11 @@
         ],
         "version": "0.1"
     },
+    "http-constants": {
+        "cmdline": [],
+        "modules": [],
+        "version": "0.1.0"
+    },
     "http-crawler": {
         "cmdline": [],
         "modules": [
@@ -55046,7 +55082,7 @@
             "http3/dispatch.threaded",
             "http3/dispatch.wsgi"
         ],
-        "version": "0.6.6"
+        "version": "0.6.7"
     },
     "http4store": {
         "cmdline": [],
@@ -56345,7 +56381,7 @@
             "HttpTesting.web.view",
             "HttpTesting.web.view.views"
         ],
-        "version": "1.0.19"
+        "version": "1.0.20"
     },
     "httptestkit": {
         "cmdline": [],
@@ -60735,7 +60771,7 @@
             "hundo.hundo",
             "hundo.unite_classifier"
         ],
-        "version": "1.2.5"
+        "version": "1.2.6"
     },
     "hunester": {
         "cmdline": [],
@@ -61943,6 +61979,7 @@
             "hvac.adapters",
             "hvac.api",
             "hvac.api.auth_methods",
+            "hvac.api.auth_methods.aws",
             "hvac.api.auth_methods.azure",
             "hvac.api.auth_methods.gcp",
             "hvac.api.auth_methods.github",
@@ -61966,12 +62003,14 @@
             "hvac.api.system_backend",
             "hvac.api.system_backend.audit",
             "hvac.api.system_backend.auth",
+            "hvac.api.system_backend.capabilities",
             "hvac.api.system_backend.health",
             "hvac.api.system_backend.init",
             "hvac.api.system_backend.key",
             "hvac.api.system_backend.leader",
             "hvac.api.system_backend.lease",
             "hvac.api.system_backend.mount",
+            "hvac.api.system_backend.namespace",
             "hvac.api.system_backend.policy",
             "hvac.api.system_backend.seal",
             "hvac.api.system_backend.system_backend_mixin",
@@ -61991,7 +62030,7 @@
             "hvac.utils",
             "hvac.v1"
         ],
-        "version": "0.9.2"
+        "version": "0.9.3"
     },
     "hvac-cli": {
         "cmdline": [],
@@ -67105,34 +67144,32 @@
         "modules": [
             "hypercorn",
             "hypercorn.__about__",
-            "hypercorn.asgi",
-            "hypercorn.asgi.h11",
-            "hypercorn.asgi.h2",
-            "hypercorn.asgi.run",
-            "hypercorn.asgi.utils",
-            "hypercorn.asgi.wsproto",
             "hypercorn.asyncio",
-            "hypercorn.asyncio.base",
-            "hypercorn.asyncio.h11",
-            "hypercorn.asyncio.h2",
             "hypercorn.asyncio.lifespan",
             "hypercorn.asyncio.run",
-            "hypercorn.asyncio.wsproto",
+            "hypercorn.asyncio.server",
+            "hypercorn.asyncio.statsd",
             "hypercorn.config",
+            "hypercorn.events",
             "hypercorn.logging",
             "hypercorn.middleware",
+            "hypercorn.protocol",
+            "hypercorn.protocol.events",
+            "hypercorn.protocol.h11",
+            "hypercorn.protocol.h2",
+            "hypercorn.protocol.http_stream",
+            "hypercorn.protocol.ws_stream",
             "hypercorn.run",
+            "hypercorn.statsd",
             "hypercorn.trio",
-            "hypercorn.trio.base",
-            "hypercorn.trio.h11",
-            "hypercorn.trio.h2",
             "hypercorn.trio.lifespan",
             "hypercorn.trio.run",
-            "hypercorn.trio.wsproto",
+            "hypercorn.trio.server",
+            "hypercorn.trio.statsd",
             "hypercorn.typing",
             "hypercorn.utils"
         ],
-        "version": "0.6.0"
+        "version": "0.7.0"
     },
     "hypercouch": {
         "cmdline": [],
@@ -67287,7 +67324,7 @@
             "hyperdock.supervisor",
             "hyperdock.supervisor.main",
             "hyperdock.supervisor.search",
-            "hyperdock.supervisor.search.grid",
+            "hyperdock.supervisor.search.sampling",
             "hyperdock.supervisor.search.search",
             "hyperdock.supervisor.supervisor",
             "hyperdock.version",
@@ -67311,13 +67348,13 @@
             "tests.hyperdock_basetest",
             "tests.supervisor",
             "tests.supervisor.search",
-            "tests.supervisor.search.test_grid",
+            "tests.supervisor.search.test_sampling",
             "tests.supervisor.search.test_search",
             "tests.supervisor.test_supervisor",
             "tests.worker",
             "tests.worker.test_worker"
         ],
-        "version": "0.18.3"
+        "version": "0.19.1"
     },
     "hyperdrive": {
         "cmdline": [],
@@ -69767,7 +69804,7 @@
             "hypothesis.vendor.pretty",
             "hypothesis.version"
         ],
-        "version": "4.26.4"
+        "version": "4.27.0"
     },
     "hypothesis-client": {
         "cmdline": [],
