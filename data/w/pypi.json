@@ -8924,7 +8924,9 @@
             "waldur_mastermind.marketplace_vmware",
             "waldur_mastermind.marketplace_vmware.apps",
             "waldur_mastermind.marketplace_vmware.extension",
+            "waldur_mastermind.marketplace_vmware.handlers",
             "waldur_mastermind.marketplace_vmware.processors",
+            "waldur_mastermind.marketplace_vmware.registrators",
             "waldur_mastermind.packages",
             "waldur_mastermind.packages.admin",
             "waldur_mastermind.packages.apps",
@@ -9239,6 +9241,7 @@
             "waldur_slurm.utils",
             "waldur_slurm.views",
             "waldur_vmware",
+            "waldur_vmware.admin",
             "waldur_vmware.apps",
             "waldur_vmware.backend",
             "waldur_vmware.client",
@@ -9250,8 +9253,17 @@
             "waldur_vmware.migrations",
             "waldur_vmware.migrations.0001_initial",
             "waldur_vmware.migrations.0002_virtualmachine",
+            "waldur_vmware.migrations.0003_disk",
+            "waldur_vmware.migrations.0004_template",
+            "waldur_vmware.migrations.0005_virtualmachine_template",
+            "waldur_vmware.migrations.0006_cluster",
+            "waldur_vmware.migrations.0007_customer_cluster",
+            "waldur_vmware.migrations.0008_network",
+            "waldur_vmware.migrations.0009_customer_network",
+            "waldur_vmware.migrations.0010_virtualmachine_networks",
             "waldur_vmware.models",
             "waldur_vmware.serializers",
+            "waldur_vmware.signals",
             "waldur_vmware.urls",
             "waldur_vmware.views",
             "waldur_zabbix",
@@ -9273,7 +9285,7 @@
             "waldur_zabbix.utils",
             "waldur_zabbix.views"
         ],
-        "version": "3.7.9"
+        "version": "3.8.0"
     },
     "waldur-openstack": {
         "cmdline": [],
@@ -11373,7 +11385,7 @@
             "wand.sequence",
             "wand.version"
         ],
-        "version": "0.5.4"
+        "version": "0.5.5"
     },
     "wandb": {
         "cmdline": [],
@@ -11706,6 +11718,8 @@
             "wandb.keras",
             "wandb.kubeflow",
             "wandb.kubeflow.arena",
+            "wandb.magic",
+            "wandb.magic_impl",
             "wandb.meta",
             "wandb.retry",
             "wandb.run_manager",
@@ -11717,6 +11731,7 @@
             "wandb.tensorboard",
             "wandb.tensorboard.watcher",
             "wandb.tensorflow",
+            "wandb.trigger",
             "wandb.typedtable",
             "wandb.util",
             "wandb.wandb_config",
@@ -11746,7 +11761,7 @@
             "whaaaaat.separator",
             "whaaaaat.utils"
         ],
-        "version": "0.8.3"
+        "version": "0.8.4"
     },
     "wandb-testing": {
         "cmdline": [],
@@ -11992,7 +12007,7 @@
             "wangticketyes24.selenium_yes24",
             "wangticketyes24.yes24"
         ],
-        "version": "0.0.9"
+        "version": "0.0.10"
     },
     "wanguangqi": {
         "cmdline": [],
@@ -12711,6 +12726,23 @@
         "cmdline": [],
         "modules": [],
         "version": ""
+    },
+    "warfit-learn": {
+        "cmdline": [],
+        "modules": [
+            "warfit_learn",
+            "warfit_learn.datasets",
+            "warfit_learn.datasets.loader",
+            "warfit_learn.estimators",
+            "warfit_learn.estimators.estimators",
+            "warfit_learn.evaluation",
+            "warfit_learn.evaluation.evaluation",
+            "warfit_learn.metrics",
+            "warfit_learn.metrics.scoring",
+            "warfit_learn.preprocessing",
+            "warfit_learn.preprocessing.preprocessor"
+        ],
+        "version": "0.1"
     },
     "warframe-alerts-rss": {
         "cmdline": [],
@@ -17223,7 +17255,7 @@
             "wavefront_opentracing_sdk.span_context",
             "wavefront_opentracing_sdk.tracer"
         ],
-        "version": "1.1.0"
+        "version": "1.2"
     },
     "wavefront-pyformance": {
         "cmdline": [],
@@ -17269,9 +17301,10 @@
             "wavefront_sdk.entities.metrics.sender",
             "wavefront_sdk.entities.tracing",
             "wavefront_sdk.entities.tracing.sender",
+            "wavefront_sdk.entities.tracing.span_log",
             "wavefront_sdk.proxy"
         ],
-        "version": "1.1.1"
+        "version": "1.2"
     },
     "waveglida": {
         "cmdline": [],
@@ -20080,7 +20113,7 @@
             "wdl_lsp.tests.unit",
             "wdl_lsp.tests.unit.test_features"
         ],
-        "version": "0.0.50"
+        "version": "0.0.52"
     },
     "wdl-parser": {
         "cmdline": [],
@@ -20557,8 +20590,97 @@
     },
     "weasyprint": {
         "cmdline": [],
-        "modules": [],
-        "version": "47"
+        "modules": [
+            "weasyprint",
+            "weasyprint.css",
+            "weasyprint.css.computed_values",
+            "weasyprint.css.media_queries",
+            "weasyprint.css.properties",
+            "weasyprint.css.targets",
+            "weasyprint.css.utils",
+            "weasyprint.css.validation",
+            "weasyprint.css.validation.descriptors",
+            "weasyprint.css.validation.expanders",
+            "weasyprint.css.validation.properties",
+            "weasyprint.document",
+            "weasyprint.draw",
+            "weasyprint.fonts",
+            "weasyprint.formatting_structure",
+            "weasyprint.formatting_structure.boxes",
+            "weasyprint.formatting_structure.build",
+            "weasyprint.formatting_structure.counters",
+            "weasyprint.html",
+            "weasyprint.images",
+            "weasyprint.layout",
+            "weasyprint.layout.absolute",
+            "weasyprint.layout.backgrounds",
+            "weasyprint.layout.blocks",
+            "weasyprint.layout.columns",
+            "weasyprint.layout.flex",
+            "weasyprint.layout.float",
+            "weasyprint.layout.inlines",
+            "weasyprint.layout.markers",
+            "weasyprint.layout.min_max",
+            "weasyprint.layout.pages",
+            "weasyprint.layout.percentages",
+            "weasyprint.layout.preferred",
+            "weasyprint.layout.replaced",
+            "weasyprint.layout.tables",
+            "weasyprint.logger",
+            "weasyprint.pdf",
+            "weasyprint.stacking",
+            "weasyprint.tests",
+            "weasyprint.tests.test_acid2",
+            "weasyprint.tests.test_api",
+            "weasyprint.tests.test_boxes",
+            "weasyprint.tests.test_css",
+            "weasyprint.tests.test_css_descriptors",
+            "weasyprint.tests.test_css_validation",
+            "weasyprint.tests.test_draw",
+            "weasyprint.tests.test_draw.test_background",
+            "weasyprint.tests.test_draw.test_before_after",
+            "weasyprint.tests.test_draw.test_box",
+            "weasyprint.tests.test_draw.test_column",
+            "weasyprint.tests.test_draw.test_current_color",
+            "weasyprint.tests.test_draw.test_gradient",
+            "weasyprint.tests.test_draw.test_image",
+            "weasyprint.tests.test_draw.test_list",
+            "weasyprint.tests.test_draw.test_opacity",
+            "weasyprint.tests.test_draw.test_overflow",
+            "weasyprint.tests.test_draw.test_table",
+            "weasyprint.tests.test_draw.test_text",
+            "weasyprint.tests.test_draw.test_transform",
+            "weasyprint.tests.test_draw.test_visibility",
+            "weasyprint.tests.test_float",
+            "weasyprint.tests.test_fonts",
+            "weasyprint.tests.test_layout",
+            "weasyprint.tests.test_layout.test_block",
+            "weasyprint.tests.test_layout.test_column",
+            "weasyprint.tests.test_layout.test_flex",
+            "weasyprint.tests.test_layout.test_image",
+            "weasyprint.tests.test_layout.test_inline",
+            "weasyprint.tests.test_layout.test_inline_block",
+            "weasyprint.tests.test_layout.test_list",
+            "weasyprint.tests.test_layout.test_page",
+            "weasyprint.tests.test_layout.test_position",
+            "weasyprint.tests.test_layout.test_shrink_to_fit",
+            "weasyprint.tests.test_layout.test_table",
+            "weasyprint.tests.test_pdf",
+            "weasyprint.tests.test_presentational_hints",
+            "weasyprint.tests.test_stacking",
+            "weasyprint.tests.test_target",
+            "weasyprint.tests.test_text",
+            "weasyprint.tests.test_tools",
+            "weasyprint.tests.test_unicode",
+            "weasyprint.tests.test_variables",
+            "weasyprint.tests.testing_utils",
+            "weasyprint.text",
+            "weasyprint.tools",
+            "weasyprint.tools.navigator",
+            "weasyprint.tools.renderer",
+            "weasyprint.urls"
+        ],
+        "version": "48"
     },
     "weather": {
         "cmdline": [
@@ -57896,7 +58018,7 @@
             "wos.client",
             "wos.utils"
         ],
-        "version": "0.1.15"
+        "version": "0.2.3"
     },
     "wos-ls-config-manager": {
         "cmdline": [],
@@ -59047,7 +59169,7 @@
     "wpilib-controller": {
         "cmdline": [],
         "modules": [],
-        "version": "0.5.1"
+        "version": "0.5.2"
     },
     "wplay": {
         "cmdline": [],
@@ -61262,7 +61384,15 @@
             "wrktoolbox.web",
             "wrktoolbox.wrkoutput"
         ],
-        "version": "0.1.7"
+        "version": "0.1.8"
+    },
+    "wrktoolbox-xlsx": {
+        "cmdline": [],
+        "modules": [
+            "wrktoolboxxlsx",
+            "wrktoolboxxlsx.xlsx"
+        ],
+        "version": "0.0.1"
     },
     "wrlc": {
         "cmdline": [],
@@ -61382,7 +61512,7 @@
             "wrtdk.qt5.plots",
             "wrtdk.qt5.widgets"
         ],
-        "version": "1.0.6"
+        "version": "1.0.7"
     },
     "wrun": {
         "cmdline": [
