@@ -1440,7 +1440,7 @@
             "racengine.exceptions",
             "racengine.main"
         ],
-        "version": "0.1.21"
+        "version": "0.1.23"
     },
     "raceup-peeper": {
         "cmdline": [],
@@ -3314,6 +3314,7 @@
             "radical.saga.base",
             "radical.saga.configs",
             "radical.saga.configs.adaptors",
+            "radical.saga.configs.tests",
             "radical.saga.constants",
             "radical.saga.context",
             "radical.saga.engine",
@@ -3356,7 +3357,7 @@
             "radical.saga.utils.pty_shell_factory",
             "radical.saga.utils.test_config"
         ],
-        "version": "0.62.0"
+        "version": "0.70.0"
     },
     "radical-synapse": {
         "cmdline": [
@@ -3471,7 +3472,7 @@
             "radical.utils.zmq.queue",
             "radical.utils.zmq.utils"
         ],
-        "version": "0.62.0"
+        "version": "0.70.0"
     },
     "radicale": {
         "cmdline": [],
@@ -5588,25 +5589,20 @@
             "raiden.api.v1.resources",
             "raiden.app",
             "raiden.blockchain",
+            "raiden.blockchain.decode",
             "raiden.blockchain.events",
             "raiden.blockchain.state",
             "raiden.blockchain_events_handler",
             "raiden.connection_manager",
             "raiden.constants",
-            "raiden.encoding",
-            "raiden.encoding.encoders",
-            "raiden.encoding.format",
-            "raiden.encoding.messages",
             "raiden.exceptions",
             "raiden.log_config",
             "raiden.message_handler",
             "raiden.messages",
             "raiden.network",
             "raiden.network.blockchain_service",
-            "raiden.network.discovery",
             "raiden.network.pathfinding",
             "raiden.network.proxies",
-            "raiden.network.proxies.discovery",
             "raiden.network.proxies.payment_channel",
             "raiden.network.proxies.secret_registry",
             "raiden.network.proxies.service_registry",
@@ -5622,35 +5618,28 @@
             "raiden.network.rpc.middleware",
             "raiden.network.rpc.smartcontract_proxy",
             "raiden.network.rpc.transactions",
-            "raiden.network.sockfactory",
-            "raiden.network.stunsock",
-            "raiden.network.throttle",
             "raiden.network.transport",
             "raiden.network.transport.matrix",
             "raiden.network.transport.matrix.client",
             "raiden.network.transport.matrix.transport",
             "raiden.network.transport.matrix.utils",
-            "raiden.network.transport.udp",
-            "raiden.network.transport.udp.healthcheck",
-            "raiden.network.transport.udp.udp_transport",
-            "raiden.network.transport.udp.udp_utils",
-            "raiden.network.upnpsock",
+            "raiden.network.transport.utils",
             "raiden.network.utils",
             "raiden.raiden_event_handler",
             "raiden.raiden_service",
             "raiden.routing",
+            "raiden.services",
             "raiden.settings",
             "raiden.storage",
             "raiden.storage.migrations",
-            "raiden.storage.migrations.v16_to_v17",
-            "raiden.storage.migrations.v17_to_v18",
-            "raiden.storage.migrations.v18_to_v19",
-            "raiden.storage.migrations.v19_to_v20",
-            "raiden.storage.migrations.v20_to_v21",
-            "raiden.storage.migrations.v21_to_v22",
             "raiden.storage.restore",
-            "raiden.storage.serialize",
+            "raiden.storage.serialization",
+            "raiden.storage.serialization.cache",
+            "raiden.storage.serialization.fields",
+            "raiden.storage.serialization.serializer",
+            "raiden.storage.serialization.types",
             "raiden.storage.sqlite",
+            "raiden.storage.ulid",
             "raiden.storage.utils",
             "raiden.storage.versions",
             "raiden.storage.wal",
@@ -5660,6 +5649,7 @@
             "raiden.tests.benchmark.utils",
             "raiden.tests.conftest",
             "raiden.tests.fixtures",
+            "raiden.tests.fixtures.blockchain",
             "raiden.tests.fixtures.constants",
             "raiden.tests.fixtures.variables",
             "raiden.tests.integration",
@@ -5683,7 +5673,6 @@
             "raiden.tests.integration.long_running.test_token_networks",
             "raiden.tests.integration.network",
             "raiden.tests.integration.network.proxies",
-            "raiden.tests.integration.network.proxies.test_discovery",
             "raiden.tests.integration.network.proxies.test_payment_channel",
             "raiden.tests.integration.network.proxies.test_secret_registry",
             "raiden.tests.integration.network.proxies.test_service_registry",
@@ -5692,7 +5681,6 @@
             "raiden.tests.integration.network.proxies.test_token_network_registry",
             "raiden.tests.integration.network.transport",
             "raiden.tests.integration.network.transport.test_matrix_transport",
-            "raiden.tests.integration.network.transport.test_udp",
             "raiden.tests.integration.rpc",
             "raiden.tests.integration.rpc.test_client",
             "raiden.tests.integration.test_balance_proof_check",
@@ -5717,7 +5705,9 @@
             "raiden.tests.unit.conftest",
             "raiden.tests.unit.fixtures",
             "raiden.tests.unit.storage",
+            "raiden.tests.unit.storage.test_serialization",
             "raiden.tests.unit.storage.test_storage",
+            "raiden.tests.unit.storage.test_ulid",
             "raiden.tests.unit.storage.test_versions",
             "raiden.tests.unit.test_accounts",
             "raiden.tests.unit.test_binary_encoding",
@@ -5728,12 +5718,9 @@
             "raiden.tests.unit.test_matrix_presence",
             "raiden.tests.unit.test_matrix_transport",
             "raiden.tests.unit.test_messages",
-            "raiden.tests.unit.test_mock",
-            "raiden.tests.unit.test_mtree",
-            "raiden.tests.unit.test_namedbuffer",
             "raiden.tests.unit.test_node_queue",
-            "raiden.tests.unit.test_notifyingqueue",
             "raiden.tests.unit.test_operators",
+            "raiden.tests.unit.test_pending_locks",
             "raiden.tests.unit.test_pfs_integration",
             "raiden.tests.unit.test_raiden_event_handler",
             "raiden.tests.unit.test_rpc",
@@ -5742,26 +5729,34 @@
             "raiden.tests.unit.test_startup",
             "raiden.tests.unit.test_state",
             "raiden.tests.unit.test_tokennetwork",
-            "raiden.tests.unit.test_udp_transport",
             "raiden.tests.unit.test_upgrade",
             "raiden.tests.unit.test_utils",
             "raiden.tests.unit.test_version_check",
+            "raiden.tests.unit.test_waiting",
             "raiden.tests.unit.test_wal",
             "raiden.tests.unit.transfer",
             "raiden.tests.unit.transfer.mediated_transfer",
             "raiden.tests.unit.transfer.mediated_transfer.test_events",
             "raiden.tests.unit.transfer.mediated_transfer.test_initiatorstate",
+            "raiden.tests.unit.transfer.mediated_transfer.test_mediation_fee",
             "raiden.tests.unit.transfer.mediated_transfer.test_mediatorstate",
             "raiden.tests.unit.transfer.mediated_transfer.test_mediatorstate_regression",
+            "raiden.tests.unit.transfer.mediated_transfer.test_state_and_state_change",
             "raiden.tests.unit.transfer.mediated_transfer.test_targetstate",
+            "raiden.tests.unit.transfer.test_architecture",
             "raiden.tests.unit.transfer.test_channel",
+            "raiden.tests.unit.transfer.test_events",
             "raiden.tests.unit.transfer.test_node",
+            "raiden.tests.unit.transfer.test_source_routing",
             "raiden.tests.unit.transfer.test_state_diff",
             "raiden.tests.unit.transfer.test_utils",
+            "raiden.tests.unit.transfer.test_views",
             "raiden.tests.unit.utils",
-            "raiden.tests.unit.utils.upgrades",
+            "raiden.tests.unit.utils.test_filters",
+            "raiden.tests.unit.utils.test_upgrade_manager",
             "raiden.tests.utils",
             "raiden.tests.utils.app",
+            "raiden.tests.utils.ci",
             "raiden.tests.utils.client",
             "raiden.tests.utils.detect_failure",
             "raiden.tests.utils.eth_node",
@@ -5779,7 +5774,6 @@
             "raiden.tests.utils.transport",
             "raiden.transfer",
             "raiden.transfer.architecture",
-            "raiden.transfer.balance_proof",
             "raiden.transfer.channel",
             "raiden.transfer.events",
             "raiden.transfer.identifiers",
@@ -5787,12 +5781,14 @@
             "raiden.transfer.mediated_transfer.events",
             "raiden.transfer.mediated_transfer.initiator",
             "raiden.transfer.mediated_transfer.initiator_manager",
+            "raiden.transfer.mediated_transfer.mediation_fee",
             "raiden.transfer.mediated_transfer.mediator",
             "raiden.transfer.mediated_transfer.state",
             "raiden.transfer.mediated_transfer.state_change",
             "raiden.transfer.mediated_transfer.target",
-            "raiden.transfer.merkle_tree",
+            "raiden.transfer.mediated_transfer.tasks",
             "raiden.transfer.node",
+            "raiden.transfer.routes",
             "raiden.transfer.secret_registry",
             "raiden.transfer.state",
             "raiden.transfer.state_change",
@@ -5811,24 +5807,23 @@
             "raiden.ui.sync",
             "raiden.utils",
             "raiden.utils.cli",
+            "raiden.utils.debugging",
             "raiden.utils.echo_node",
             "raiden.utils.ethereum_clients",
             "raiden.utils.filters",
             "raiden.utils.gas_reserve",
             "raiden.utils.http",
-            "raiden.utils.notifying_queue",
+            "raiden.utils.packing",
             "raiden.utils.runnable",
-            "raiden.utils.serialization",
             "raiden.utils.signer",
             "raiden.utils.signing",
             "raiden.utils.smart_contracts",
-            "raiden.utils.solc",
             "raiden.utils.timeout",
             "raiden.utils.typing",
             "raiden.utils.upgrades",
             "raiden.waiting"
         ],
-        "version": "0.100.3"
+        "version": "0.100.4"
     },
     "raiden-contracts": {
         "cmdline": [],
@@ -5969,7 +5964,6 @@
         "cmdline": [],
         "modules": [
             "monitoring_service",
-            "monitoring_service.blockchain",
             "monitoring_service.cli",
             "monitoring_service.constants",
             "monitoring_service.database",
@@ -5979,59 +5973,36 @@
             "monitoring_service.states",
             "pathfinding_service",
             "pathfinding_service.api",
-            "pathfinding_service.api.rest",
+            "pathfinding_service.claim_fees",
             "pathfinding_service.cli",
             "pathfinding_service.config",
+            "pathfinding_service.database",
+            "pathfinding_service.exceptions",
             "pathfinding_service.middleware",
             "pathfinding_service.model",
             "pathfinding_service.model.channel_view",
+            "pathfinding_service.model.feedback",
+            "pathfinding_service.model.iou",
             "pathfinding_service.model.token_network",
             "pathfinding_service.service",
-            "pathfinding_service.utils",
-            "pathfinding_service.utils.blockchain_listener",
+            "pathfinding_service.typing",
             "raiden_libs",
-            "raiden_libs.contract",
-            "raiden_libs.exceptions",
+            "raiden_libs.blockchain",
+            "raiden_libs.cli",
+            "raiden_libs.contract_info",
+            "raiden_libs.database",
+            "raiden_libs.events",
             "raiden_libs.gevent_error_handler",
-            "raiden_libs.messages",
-            "raiden_libs.messages.balance_proof",
-            "raiden_libs.messages.deserializer",
-            "raiden_libs.messages.json_schema",
-            "raiden_libs.messages.message",
-            "raiden_libs.messages.monitor_request",
-            "raiden_libs.network",
-            "raiden_libs.network.matrix",
-            "raiden_libs.network.matrix.client",
-            "raiden_libs.network.matrix.room",
-            "raiden_libs.private_contract",
-            "raiden_libs.properties",
-            "raiden_libs.properties.address",
-            "raiden_libs.test",
-            "raiden_libs.test.fixtures",
-            "raiden_libs.test.fixtures.address",
-            "raiden_libs.test.fixtures.client",
-            "raiden_libs.test.fixtures.web3",
-            "raiden_libs.test.mocks",
-            "raiden_libs.test.mocks.blockchain",
-            "raiden_libs.test.mocks.client",
-            "raiden_libs.test.mocks.dummy_transport",
-            "raiden_libs.transport",
-            "raiden_libs.transport.matrix",
-            "raiden_libs.transport.transport",
-            "raiden_libs.types",
+            "raiden_libs.logging",
+            "raiden_libs.marshmallow",
+            "raiden_libs.matrix",
+            "raiden_libs.states",
             "raiden_libs.utils",
-            "raiden_libs.utils.contracts",
-            "raiden_libs.utils.merkle",
-            "raiden_libs.utils.private_key",
-            "raiden_libs.utils.signing",
             "request_collector",
             "request_collector.cli",
-            "request_collector.server",
-            "request_collector.state_db",
-            "request_collector.state_db.sqlite_db",
-            "request_collector.store_monitor_request"
+            "request_collector.server"
         ],
-        "version": "0.0.1"
+        "version": "0.1.0"
     },
     "raiden-webui": {
         "cmdline": [],
@@ -7310,7 +7281,7 @@
             "rak811.rak811",
             "rak811.serial"
         ],
-        "version": "0.7.0"
+        "version": "0.7.2"
     },
     "rakaia": {
         "cmdline": [],
@@ -18321,7 +18292,7 @@
             "rattail.win32.users",
             "rattail.wince"
         ],
-        "version": "0.9.87"
+        "version": "0.9.88"
     },
     "rattail-brdata": {
         "cmdline": [],
@@ -20012,6 +19983,13 @@
         "cmdline": [],
         "modules": [],
         "version": "2.0.0"
+    },
+    "rayanoos": {
+        "cmdline": [],
+        "modules": [
+            "rayanoos"
+        ],
+        "version": "2.0.4"
     },
     "raygun-django-middleware": {
         "cmdline": [],
@@ -24569,7 +24547,7 @@
     "rdopkg": {
         "cmdline": [],
         "modules": [],
-        "version": "0.52.0"
+        "version": "0.52.1"
     },
     "rdopts": {
         "cmdline": [],
@@ -27304,6 +27282,11 @@
         "modules": [],
         "version": "0.1"
     },
+    "realm-cli": {
+        "cmdline": [],
+        "modules": [],
+        "version": "0.0.1"
+    },
     "realmkeeper": {
         "cmdline": [],
         "modules": [
@@ -28184,7 +28167,7 @@
             "rebrand",
             "rebrand.rebrand"
         ],
-        "version": "0.0.6"
+        "version": "0.0.12"
     },
     "rebuild-audio-file": {
         "cmdline": [],
@@ -30610,6 +30593,7 @@
         "modules": [
             "recombinator",
             "recombinator.block_bootstrap",
+            "recombinator.bootstrap_cocos",
             "recombinator.iid_bootstrap",
             "recombinator.log_returns",
             "recombinator.optimal_block_length",
@@ -30619,7 +30603,7 @@
             "recombinator.tests.test_aggregate_multi_dimensional_log_returns",
             "recombinator.utilities"
         ],
-        "version": "0.0.1"
+        "version": "0.0.2"
     },
     "recommend-engine": {
         "cmdline": [],
@@ -32360,13 +32344,16 @@
             "redash_stmo.handlers.query_results",
             "redash_stmo.handlers.query_results.extension",
             "redash_stmo.handlers.query_results.parser",
+            "redash_stmo.integrations",
+            "redash_stmo.integrations.iodide",
+            "redash_stmo.integrations.iodide.extension",
             "redash_stmo.query_runner",
             "redash_stmo.query_runner.activedata",
             "redash_stmo.query_runner.presto",
             "redash_stmo.resources",
             "redash_stmo.settings"
         ],
-        "version": "2019.6.1"
+        "version": "2019.7.1"
     },
     "redash-stmo-swathi": {
         "cmdline": [],
@@ -35605,12 +35592,6 @@
     "redminecli": {
         "cmdline": [],
         "modules": [
-            "api",
-            "api.response",
-            "api.test_fetch",
-            "api.test_get",
-            "cli",
-            "cli.test_cli",
             "redmine",
             "redmine.cli",
             "redmine.cli.alias",
@@ -35626,16 +35607,9 @@
             "redmine.redmine",
             "redmine.tracker",
             "redmine.user",
-            "redmine.version",
-            "ui",
-            "ui.test_issue",
-            "ui.test_priority",
-            "ui.test_project",
-            "ui.test_query",
-            "ui.test_tracker",
-            "ui.test_user"
+            "redmine.version"
         ],
-        "version": "1.1.2"
+        "version": "1.1.3"
     },
     "redmodel": {
         "cmdline": [],
@@ -49303,6 +49277,16 @@
         "modules": [],
         "version": ""
     },
+    "reponetwork": {
+        "cmdline": [],
+        "modules": [
+            "reponetwork",
+            "reponetwork.GithubCrawler",
+            "reponetwork.GitlabCrawler",
+            "reponetwork.repos"
+        ],
+        "version": "1.0.0"
+    },
     "repool": {
         "cmdline": [],
         "modules": [
@@ -58125,7 +58109,7 @@
             "rest_helpers.validators",
             "rest_helpers.versioning"
         ],
-        "version": "1.12.1"
+        "version": "1.15"
     },
     "rest-jwt-permission": {
         "cmdline": [],
@@ -59051,7 +59035,7 @@
             "restfly.session",
             "restfly.utils"
         ],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     "restfmclient": {
         "cmdline": [],
@@ -65851,6 +65835,11 @@
         ],
         "version": "3.0.0"
     },
+    "rgbconv": {
+        "cmdline": [],
+        "modules": [],
+        "version": "1.1"
+    },
     "rgbkeyboards": {
         "cmdline": [],
         "modules": [
@@ -67401,6 +67390,22 @@
         "modules": [],
         "version": "0.9.7"
     },
+    "ria-remote": {
+        "cmdline": [
+            "git-annex-remote-ria"
+        ],
+        "modules": [
+            "ria_remote",
+            "ria_remote.remote",
+            "ria_remote.tests",
+            "ria_remote.tests.test_basics",
+            "ria_remote.tests.test_config",
+            "ria_remote.tests.test_gitannex",
+            "ria_remote.tests.utils",
+            "ria_remote.version"
+        ],
+        "version": "0.3"
+    },
     "riadiff": {
         "cmdline": [],
         "modules": [],
@@ -67785,7 +67790,7 @@
         "modules": [
             "riboflow"
         ],
-        "version": "1.0.0"
+        "version": "1.1.1"
     },
     "ribogadgets": {
         "cmdline": [],
@@ -71360,7 +71365,7 @@
             "rio_viz.templates",
             "rio_viz.templates.viewer"
         ],
-        "version": "0.0.1"
+        "version": "0.0.2"
     },
     "rioh": {
         "cmdline": [],
@@ -71657,6 +71662,28 @@
             "tests.unit_tests.test_pipeline_composer"
         ],
         "version": "0.0.1"
+    },
+    "rip-counter": {
+        "cmdline": [],
+        "modules": [
+            "rip_counter",
+            "rip_counter._version",
+            "rip_counter.bot",
+            "rip_counter.bot.bot",
+            "rip_counter.bot.utils",
+            "rip_counter.captcha_solver",
+            "rip_counter.captcha_solver.captchanet_solver",
+            "rip_counter.captcha_solver.manual_solver",
+            "rip_counter.scrap",
+            "rip_counter.scraper",
+            "rip_counter.scraper_utils",
+            "rip_counter.utils",
+            "rip_counter.utils.archive",
+            "rip_counter.utils.download",
+            "rip_counter.utils.system",
+            "rip_counter.utils.windows"
+        ],
+        "version": "0.2.0"
     },
     "ripa": {
         "cmdline": [],
@@ -72411,7 +72438,7 @@
             "riptide",
             "riptide.riptide"
         ],
-        "version": "2.0.5"
+        "version": "2.0.6"
     },
     "riptide-cli": {
         "cmdline": [],
@@ -73358,6 +73385,18 @@
             "rixs.tests.test_process2d"
         ],
         "version": "0.0.1"
+    },
+    "rize": {
+        "cmdline": [],
+        "modules": [
+            "rize",
+            "rize.block_creator",
+            "rize.blockly_files",
+            "rize.blocks",
+            "rize.nodes_manager",
+            "rize.rize"
+        ],
+        "version": "0.1.1.9"
     },
     "rj-nester": {
         "cmdline": [],
@@ -77432,6 +77471,13 @@
         ],
         "version": "0.2.1"
     },
+    "rmi2mid": {
+        "cmdline": [],
+        "modules": [
+            "rmi2mid"
+        ],
+        "version": "0.1"
+    },
     "rmidi": {
         "cmdline": [],
         "modules": [
@@ -78143,6 +78189,11 @@
             "rnaindel",
             "rnaindel.bambino_lib",
             "rnaindel.bambino_lib.bambino",
+            "rnaindel.nonsomatic_lib",
+            "rnaindel.nonsomatic_lib.annotate_recurrence",
+            "rnaindel.nonsomatic_lib.filterate_by_panel",
+            "rnaindel.nonsomatic_lib.make_non_somatic_panel",
+            "rnaindel.nonsomatic_lib.variant",
             "rnaindel.rnaindel",
             "rnaindel.rnaindel_lib",
             "rnaindel.rnaindel_lib.indel_annotator",
@@ -78159,6 +78210,7 @@
             "rnaindel.rnaindel_lib.indel_sequence",
             "rnaindel.rnaindel_lib.indel_sequence_processor",
             "rnaindel.rnaindel_lib.indel_snp_annotator",
+            "rnaindel.rnaindel_lib.indel_softclip_realigner",
             "rnaindel.rnaindel_lib.indel_vcf",
             "rnaindel.rnaindel_lib.indel_vcf_preprocessor",
             "rnaindel.rnaindel_lib.indel_vcf_writer",
@@ -78174,7 +78226,7 @@
             "rnaindel.training_lib.result_reporter",
             "rnaindel.version"
         ],
-        "version": "1.0.0"
+        "version": "2.0.0"
     },
     "rnapk": {
         "cmdline": [],
@@ -81757,6 +81809,15 @@
         ],
         "version": "0.0.2"
     },
+    "robotframework-excellibrary-xwfintech": {
+        "cmdline": [],
+        "modules": [
+            "ExcelLibrary",
+            "ExcelLibrary.ExcelLibrary",
+            "ExcelLibrary.version"
+        ],
+        "version": "0.0.3"
+    },
     "robotframework-extendedappiumlibrary": {
         "cmdline": [],
         "modules": [
@@ -82231,6 +82292,16 @@
             "MongoDBLibrary.version"
         ],
         "version": "0.3.4"
+    },
+    "robotframework-mongodblibrary-xwfintech": {
+        "cmdline": [],
+        "modules": [
+            "MongoDBLibrary",
+            "MongoDBLibrary.mongo_connection_manager",
+            "MongoDBLibrary.mongoquery",
+            "MongoDBLibrary.version"
+        ],
+        "version": "0.4"
     },
     "robotframework-mqttlibrary": {
         "cmdline": [],
@@ -82731,6 +82802,15 @@
         "version": "1.0.0a2"
     },
     "robotframework-redislibrary": {
+        "cmdline": [],
+        "modules": [
+            "RedisLibrary",
+            "RedisLibrary.RedisLibraryKeywords",
+            "RedisLibrary.version"
+        ],
+        "version": "0.3"
+    },
+    "robotframework-redislibrary-xwfintech": {
         "cmdline": [],
         "modules": [
             "RedisLibrary",
@@ -91706,6 +91786,7 @@
             "rotest.api.common",
             "rotest.api.common.models",
             "rotest.api.common.responses",
+            "rotest.api.consumers",
             "rotest.api.request_token",
             "rotest.api.resource_control",
             "rotest.api.resource_control.cleanup_user",
@@ -91719,8 +91800,6 @@
             "rotest.api.test_control.add_test_result",
             "rotest.api.test_control.get_statistics",
             "rotest.api.test_control.middleware",
-            "rotest.api.test_control.session_cleaner",
-            "rotest.api.test_control.set_timeout",
             "rotest.api.test_control.should_skip",
             "rotest.api.test_control.start_composite",
             "rotest.api.test_control.start_test",
@@ -91742,6 +91821,7 @@
             "rotest.common.django_utils.common",
             "rotest.common.django_utils.fields",
             "rotest.common.django_utils.fixtures",
+            "rotest.common.django_utils.routing",
             "rotest.common.django_utils.settings",
             "rotest.common.django_utils.static",
             "rotest.common.django_utils.urls",
@@ -91812,6 +91892,7 @@
             "rotest.management.client.manager",
             "rotest.management.client.result_client",
             "rotest.management.client.signatures_client",
+            "rotest.management.client.websocket_client",
             "rotest.management.common",
             "rotest.management.common.errors",
             "rotest.management.common.messages",
@@ -91847,7 +91928,7 @@
             "rotest.management.utils.resources_discoverer",
             "rotest.management.utils.shell"
         ],
-        "version": "7.7.0"
+        "version": "7.8.0"
     },
     "rotest-reportportal": {
         "cmdline": [],
@@ -93638,9 +93719,10 @@
             "royalnet.web.royalprints.profile",
             "royalnet.web.royalprints.tglogin",
             "royalnet.web.royalprints.wikiedit",
-            "royalnet.web.royalprints.wikiview"
+            "royalnet.web.royalprints.wikiview",
+            "royalnet.web.shortcuts"
         ],
-        "version": "5.0a27"
+        "version": "5.0a28"
     },
     "royalspells": {
         "cmdline": [],
@@ -100732,7 +100814,7 @@
         "modules": [
             "rsp_jupyter"
         ],
-        "version": "1.2.1555"
+        "version": "1.2.1558"
     },
     "rsp1570serial-pp81381": {
         "cmdline": [],
@@ -101206,7 +101288,7 @@
             "rsscrawler.version",
             "rsscrawler.web"
         ],
-        "version": "5.6.1"
+        "version": "5.6.2"
     },
     "rssd": {
         "cmdline": [],
@@ -102705,7 +102787,7 @@
     "rt-client": {
         "cmdline": [],
         "modules": [],
-        "version": "0.3.1"
+        "version": "0.3.2"
     },
     "rt-commands": {
         "cmdline": [],
@@ -102993,7 +103075,7 @@
             "rtbhouse_sdk",
             "rtbhouse_sdk.reports_api"
         ],
-        "version": "3.3.6"
+        "version": "3.3.7"
     },
     "rtbot": {
         "cmdline": [],
@@ -103169,7 +103251,7 @@
             "rtconfig.utils",
             "rtconfig.views"
         ],
-        "version": "0.1.4"
+        "version": "0.1.5"
     },
     "rtcsig": {
         "cmdline": [],
@@ -104861,7 +104943,7 @@
             "ruamel.yaml.tokens",
             "ruamel.yaml.util"
         ],
-        "version": "0.15.97"
+        "version": "0.15.98"
     },
     "ruamel-yaml-base": {
         "cmdline": [],
@@ -107528,6 +107610,14 @@
         ],
         "version": "0.0.1"
     },
+    "runecrypt": {
+        "cmdline": [],
+        "modules": [
+            "runecrypt",
+            "runecrypt.utils"
+        ],
+        "version": "0.1"
+    },
     "runehistory-api": {
         "cmdline": [],
         "modules": [
@@ -107810,6 +107900,13 @@
             "runipy.notebook_runner"
         ],
         "version": "0.1.5"
+    },
+    "runium": {
+        "cmdline": [],
+        "modules": [
+            "runium"
+        ],
+        "version": "0.0.1"
     },
     "runjenkins": {
         "cmdline": [],
@@ -108170,7 +108267,7 @@
             "tests.test_client",
             "tests.test_utils"
         ],
-        "version": "0.1.3"
+        "version": "0.1.7"
     },
     "runregistryclient": {
         "cmdline": [],
@@ -108608,7 +108705,7 @@
             "runway.model",
             "runway.utils"
         ],
-        "version": "0.2.0"
+        "version": "0.3.0"
     },
     "runwith": {
         "cmdline": [],
@@ -109201,6 +109298,11 @@
             "russiannames.reader"
         ],
         "version": "1.0"
+    },
+    "russianpodcast": {
+        "cmdline": [],
+        "modules": [],
+        "version": "0.1.2"
     },
     "russound": {
         "cmdline": [],
