@@ -2984,7 +2984,7 @@
             "nameko_http.server",
             "nameko_http.utils"
         ],
-        "version": "0.1.6"
+        "version": "0.1.7"
     },
     "nameko-log-context": {
         "cmdline": [],
@@ -7804,10 +7804,22 @@
         "modules": [
             "napari",
             "napari._qt",
-            "napari._qt.range_slider",
-            "napari._qt.range_slider.range_slider",
+            "napari._qt.event_loop",
+            "napari._qt.qt_base_layer",
+            "napari._qt.qt_controls",
+            "napari._qt.qt_dims",
+            "napari._qt.qt_image_layer",
+            "napari._qt.qt_labels_layer",
+            "napari._qt.qt_layer_buttons",
+            "napari._qt.qt_layerlist",
+            "napari._qt.qt_main_window",
+            "napari._qt.qt_points_layer",
+            "napari._qt.qt_range_slider",
+            "napari._qt.qt_shapes_layer",
+            "napari._qt.qt_vectors_layer",
+            "napari._qt.qt_viewer",
+            "napari._qt.util",
             "napari._version",
-            "napari._view",
             "napari._vispy",
             "napari._vispy.scene",
             "napari._vispy.scene.visuals",
@@ -7821,81 +7833,51 @@
             "napari._vispy.visuals.image",
             "napari._vispy.visuals.volume",
             "napari.components",
-            "napari.components._dims",
-            "napari.components._dims._constants",
-            "napari.components._dims.model",
-            "napari.components._dims.tests",
-            "napari.components._dims.tests.dims_tests",
-            "napari.components._dims.view",
-            "napari.components._layers_list",
-            "napari.components._layers_list.model",
-            "napari.components._layers_list.tests",
-            "napari.components._layers_list.tests.layers_list_tests",
-            "napari.components._layers_list.view",
-            "napari.components._viewer",
-            "napari.components._viewer.model",
-            "napari.components._viewer.view",
-            "napari.components._viewer.view.buttons",
-            "napari.components._viewer.view.controls",
-            "napari.components._viewer.view.main",
-            "napari.components._window",
-            "napari.components._window.view",
+            "napari.components.dims",
+            "napari.components.dims_constants",
+            "napari.components.layerlist",
+            "napari.components.viewer_model",
             "napari.layers",
-            "napari.layers._base_layer",
-            "napari.layers._base_layer._constants",
-            "napari.layers._base_layer._visual_wrapper",
-            "napari.layers._base_layer.model",
-            "napari.layers._base_layer.view",
-            "napari.layers._base_layer.view.controls",
-            "napari.layers._base_layer.view.properties",
-            "napari.layers._image_layer",
-            "napari.layers._image_layer._constants",
-            "napari.layers._image_layer.model",
-            "napari.layers._image_layer.view",
-            "napari.layers._image_layer.view.controls",
-            "napari.layers._image_layer.view.properties",
-            "napari.layers._labels_layer",
-            "napari.layers._labels_layer._constants",
-            "napari.layers._labels_layer.model",
-            "napari.layers._labels_layer.view",
-            "napari.layers._labels_layer.view.controls",
-            "napari.layers._labels_layer.view.properties",
-            "napari.layers._markers_layer",
-            "napari.layers._markers_layer._constants",
-            "napari.layers._markers_layer.model",
-            "napari.layers._markers_layer.view",
-            "napari.layers._markers_layer.view.controls",
-            "napari.layers._markers_layer.view.properties",
-            "napari.layers._pyramid_layer",
-            "napari.layers._pyramid_layer.model",
-            "napari.layers._shapes_layer",
-            "napari.layers._shapes_layer._constants",
-            "napari.layers._shapes_layer.mesh",
-            "napari.layers._shapes_layer.model",
-            "napari.layers._shapes_layer.shape_list",
-            "napari.layers._shapes_layer.shape_util",
-            "napari.layers._shapes_layer.shapes",
-            "napari.layers._shapes_layer.shapes.ellipse",
-            "napari.layers._shapes_layer.shapes.line",
-            "napari.layers._shapes_layer.shapes.path",
-            "napari.layers._shapes_layer.shapes.polygon",
-            "napari.layers._shapes_layer.shapes.rectangle",
-            "napari.layers._shapes_layer.shapes.shape",
-            "napari.layers._shapes_layer.view",
-            "napari.layers._shapes_layer.view.controls",
-            "napari.layers._shapes_layer.view.properties",
-            "napari.layers._vectors_layer",
-            "napari.layers._vectors_layer.model",
-            "napari.layers._vectors_layer.view",
-            "napari.layers._vectors_layer.view.properties",
-            "napari.layers.util",
+            "napari.layers.base",
+            "napari.layers.base._constants",
+            "napari.layers.base._visual_wrapper",
+            "napari.layers.base.base",
+            "napari.layers.image",
+            "napari.layers.image._constants",
+            "napari.layers.image.image",
+            "napari.layers.image.tests",
+            "napari.layers.image.tests.test_image",
+            "napari.layers.labels",
+            "napari.layers.labels._constants",
+            "napari.layers.labels.labels",
+            "napari.layers.points",
+            "napari.layers.points._constants",
+            "napari.layers.points.points",
+            "napari.layers.pyramid",
+            "napari.layers.pyramid.pyramid",
+            "napari.layers.shapes",
+            "napari.layers.shapes._constants",
+            "napari.layers.shapes.mesh",
+            "napari.layers.shapes.shape_list",
+            "napari.layers.shapes.shape_models",
+            "napari.layers.shapes.shape_models.ellipse",
+            "napari.layers.shapes.shape_models.line",
+            "napari.layers.shapes.shape_models.path",
+            "napari.layers.shapes.shape_models.polygon",
+            "napari.layers.shapes.shape_models.rectangle",
+            "napari.layers.shapes.shape_models.shape",
+            "napari.layers.shapes.shape_util",
+            "napari.layers.shapes.shapes",
+            "napari.layers.vectors",
+            "napari.layers.vectors.vectors",
+            "napari.layers.vectors.vectors_util",
+            "napari.main",
             "napari.resources",
             "napari.resources.build_icons",
             "napari.resources.icons",
             "napari.resources.qt",
             "napari.util",
             "napari.util._register",
-            "napari.util.app",
             "napari.util.colormaps",
             "napari.util.colormaps.colormaps",
             "napari.util.colormaps.vendored",
@@ -7906,6 +7888,8 @@
             "napari.util.colormaps.vendored.colorconv",
             "napari.util.colormaps.vendored.colors",
             "napari.util.event",
+            "napari.util.io",
+            "napari.util.keybindings",
             "napari.util.list",
             "napari.util.list._base",
             "napari.util.list._model",
@@ -7914,12 +7898,14 @@
             "napari.util.misc",
             "napari.util.naming",
             "napari.util.tests",
+            "napari.util.tests.test_keybindings",
             "napari.util.tests.test_misc",
             "napari.util.tests.test_naming",
             "napari.util.theme",
+            "napari.view_function",
             "napari.viewer"
         ],
-        "version": "0.0.9"
+        "version": "0.1.1"
     },
     "napari-gui": {
         "cmdline": [],
@@ -11077,7 +11063,7 @@
             "nb2xls.mdrenderer",
             "nb2xls.mdxlsstyles"
         ],
-        "version": "0.1.0"
+        "version": "0.1.1"
     },
     "nba": {
         "cmdline": [],
@@ -14765,27 +14751,14 @@
         "version": "0.0.42"
     },
     "ncluster": {
-        "cmdline": [],
-        "modules": [
+        "cmdline": [
             "ncluster",
-            "ncluster._version",
-            "ncluster.aws_backend",
-            "ncluster.aws_create_resources",
-            "ncluster.aws_delete_resources",
-            "ncluster.aws_util",
-            "ncluster.backend",
-            "ncluster.crash_python",
-            "ncluster.local_backend",
-            "ncluster.ncluster",
-            "ncluster.ncluster_cloud_setup",
-            "ncluster.ncluster_cloud_wipe",
-            "ncluster.ncluster_globals",
-            "ncluster.old_util",
-            "ncluster.test",
-            "ncluster.tmux_backend",
-            "ncluster.util"
+            "ncluster_cloud_setup.py",
+            "ncluster_cloud_wipe.py",
+            "nsync"
         ],
-        "version": "0.1.72"
+        "modules": [],
+        "version": "0.1.73"
     },
     "ncmbot": {
         "cmdline": [],
@@ -16180,13 +16153,16 @@
         "version": "0.1.0"
     },
     "ndexutil": {
-        "cmdline": [],
+        "cmdline": [
+            "ndexmisctools.py"
+        ],
         "modules": [
             "ndexutil",
             "ndexutil.config",
             "ndexutil.ebs",
             "ndexutil.ebs.ebs2cx",
             "ndexutil.exceptions",
+            "ndexutil.ndexmisctools",
             "ndexutil.tsv",
             "ndexutil.tsv.cx2ndex",
             "ndexutil.tsv.loaderutils",
@@ -16200,7 +16176,7 @@
             "tests.tsv.test_streamtsvloader",
             "tests.tsv.test_tsv2nicecx2"
         ],
-        "version": "0.5.0"
+        "version": "0.6.0"
     },
     "ndf": {
         "cmdline": [],
@@ -21011,6 +20987,7 @@
             "neo.io.winedrio",
             "neo.io.winwcpio",
             "neo.rawio",
+            "neo.rawio.axographrawio",
             "neo.rawio.axonrawio",
             "neo.rawio.baserawio",
             "neo.rawio.bci2000rawio",
@@ -21033,6 +21010,7 @@
             "neo.rawio.tests",
             "neo.rawio.tests.common_rawio_test",
             "neo.rawio.tests.rawio_compliance",
+            "neo.rawio.tests.test_axographrawio",
             "neo.rawio.tests.test_axonrawio",
             "neo.rawio.tests.test_bci2000rawio",
             "neo.rawio.tests.test_blackrockrawio",
@@ -21104,7 +21082,7 @@
             "neo.test.tools",
             "neo.version"
         ],
-        "version": "0.7.1"
+        "version": "0.7.2"
     },
     "neo-agent": {
         "cmdline": [],
@@ -23217,7 +23195,7 @@
             "nvr",
             "nvr.nvr"
         ],
-        "version": "2.1.7"
+        "version": "2.1.9"
     },
     "neowebdriver": {
         "cmdline": [],
@@ -23844,7 +23822,7 @@
             "nepsy",
             "nepsy.version"
         ],
-        "version": "0.1.1.4"
+        "version": "0.1.1.5"
     },
     "nept": {
         "cmdline": [],
@@ -24696,7 +24674,7 @@
             "tests.neptune_notebooks_plugin",
             "tests.neptune_notebooks_plugin.test_plugin"
         ],
-        "version": "0.0.6"
+        "version": "0.0.7"
     },
     "neptune-tensorboard": {
         "cmdline": [],
@@ -28283,8 +28261,10 @@
     },
     "nester-randhirm": {
         "cmdline": [],
-        "modules": [],
-        "version": "1.0.0"
+        "modules": [
+            "nester1440281986"
+        ],
+        "version": "1.1.0"
     },
     "nester-rc": {
         "cmdline": [],
@@ -30985,6 +30965,14 @@
             "nesterless"
         ],
         "version": "2.0.0"
+    },
+    "nesterlh": {
+        "cmdline": [],
+        "modules": [
+            "nesterlh",
+            "nesterlh.nesterlh"
+        ],
+        "version": "1.0.2"
     },
     "nesterlhb1": {
         "cmdline": [],
@@ -45331,7 +45319,7 @@
             "neurotic.utils",
             "neurotic.version"
         ],
-        "version": "0.5.1"
+        "version": "0.6.0"
     },
     "neurotools": {
         "cmdline": [],
@@ -51752,9 +51740,9 @@
         "cmdline": [],
         "modules": [
             "nfacct",
-            "nfacct.main"
+            "nfacct.nfacct"
         ],
-        "version": "0.4"
+        "version": "0.6"
     },
     "nfalqxis": {
         "cmdline": [],
@@ -56992,6 +56980,17 @@
         ],
         "version": "1.4.1"
     },
+    "nicobatty-flasgger": {
+        "cmdline": [],
+        "modules": [
+            "flasgger",
+            "flasgger.base",
+            "flasgger.constants",
+            "flasgger.marshmallow_apispec",
+            "flasgger.utils"
+        ],
+        "version": "0.9.3"
+    },
     "nicoerenkuk": {
         "cmdline": [],
         "modules": [],
@@ -57282,7 +57281,9 @@
         "version": "1.5.1"
     },
     "nifcloud": {
-        "cmdline": [],
+        "cmdline": [
+            "nifcloud-debugcli"
+        ],
         "modules": [
             "nifcloud",
             "nifcloud.auth",
@@ -57293,7 +57294,7 @@
             "nifcloud.serialize",
             "nifcloud.session"
         ],
-        "version": "0.1.8"
+        "version": "0.1.9"
     },
     "nifconverter": {
         "cmdline": [],
@@ -70878,10 +70879,12 @@
         "modules": [
             "nnf",
             "nnf.amc",
+            "nnf.cli",
             "nnf.dimacs",
-            "nnf.dsharp"
+            "nnf.dsharp",
+            "nnf.operators"
         ],
-        "version": "0.1.2"
+        "version": "0.2.0"
     },
     "nnfc": {
         "cmdline": [],
@@ -77677,7 +77680,7 @@
             "node.tests.test_utils",
             "node.utils"
         ],
-        "version": "0.9.23"
+        "version": "0.9.24"
     },
     "node-buffer": {
         "cmdline": [],
@@ -79141,7 +79144,7 @@
             "transports.grpc_auth",
             "transports.image_analytic_grpc_transport"
         ],
-        "version": "0.2.2"
+        "version": "0.2.3"
     },
     "nodefluxapis": {
         "cmdline": [],
@@ -83453,7 +83456,7 @@
             "picker.nose_plugin",
             "picker.sample_multiprocess_script"
         ],
-        "version": "0.5.4"
+        "version": "0.5.5"
     },
     "nose-printlog": {
         "cmdline": [],
@@ -97168,6 +97171,18 @@
         "modules": [],
         "version": ""
     },
+    "numdoclint": {
+        "cmdline": [],
+        "modules": [
+            "numdoclint",
+            "numdoclint.helper",
+            "numdoclint.py_module",
+            "tests",
+            "tests.test_helper",
+            "tests.test_py_module"
+        ],
+        "version": "0.0.7"
+    },
     "numecon": {
         "cmdline": [],
         "modules": [
@@ -97273,7 +97288,7 @@
             "numerapi.numerapi",
             "numerapi.utils"
         ],
-        "version": "1.5.5"
+        "version": "1.6.0"
     },
     "numerauto": {
         "cmdline": [],
@@ -99424,6 +99439,15 @@
         "cmdline": [],
         "modules": [],
         "version": "1.5.0"
+    },
+    "numpy-syncer": {
+        "cmdline": [],
+        "modules": [
+            "numpy_syncer",
+            "numpy_syncer.local_sync",
+            "numpy_syncer.numpy_sync"
+        ],
+        "version": "0.0.1"
     },
     "numpy-turtle": {
         "cmdline": [],
