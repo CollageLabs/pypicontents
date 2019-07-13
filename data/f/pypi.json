@@ -5350,7 +5350,7 @@
             "tmp.visualize_vgg_model",
             "tmp.visualize_vggface"
         ],
-        "version": "1.0.3"
+        "version": "1.0.4"
     },
     "facenet-pytorch": {
         "cmdline": [],
@@ -7486,6 +7486,9 @@
             "fair.constants.molwt",
             "fair.constants.preindconc",
             "fair.constants.radeff",
+            "fair.defaults",
+            "fair.defaults.carbon",
+            "fair.defaults.thermal",
             "fair.forcing",
             "fair.forcing.aerosols",
             "fair.forcing.bc_snow",
@@ -7496,6 +7499,7 @@
             "fair.forcing.ozone_st",
             "fair.forcing.ozone_tr",
             "fair.forward",
+            "fair.inverse",
             "fair.tools",
             "fair.tools.constrain",
             "fair.tools.ensemble",
@@ -7503,7 +7507,7 @@
             "fair.tools.magicc",
             "fair.tools.steady"
         ],
-        "version": "1.3.6"
+        "version": "1.4"
     },
     "fair-flow": {
         "cmdline": [],
@@ -9646,6 +9650,15 @@
         "cmdline": [],
         "modules": [],
         "version": "1.0.0a2"
+    },
+    "fakelogs": {
+        "cmdline": [],
+        "modules": [
+            "fakelogs",
+            "fakelogs.cli",
+            "fakelogs.log"
+        ],
+        "version": "0.1.0"
     },
     "fakemail-python": {
         "cmdline": [],
@@ -12419,9 +12432,13 @@
             "fandak.core.evaluators",
             "fandak.core.models",
             "fandak.core.trainers",
-            "fandak.helpers"
+            "fandak.utils",
+            "fandak.utils.config",
+            "fandak.utils.metrics",
+            "fandak.utils.misc",
+            "fandak.utils.torch"
         ],
-        "version": "0.1a1.dev2"
+        "version": "0.0.1a3"
     },
     "fandango": {
         "cmdline": [
@@ -15911,7 +15928,7 @@
             "fastapi.security.utils",
             "fastapi.utils"
         ],
-        "version": "0.31.0"
+        "version": "0.33.0"
     },
     "fastaq": {
         "cmdline": [],
@@ -16037,7 +16054,7 @@
             "fastavro.validation",
             "fastavro.write"
         ],
-        "version": "0.22.2"
+        "version": "0.22.3"
     },
     "fastavro-codecs": {
         "cmdline": [],
@@ -19172,6 +19189,31 @@
     "faust": {
         "cmdline": [],
         "modules": [
+            "accounts",
+            "accounts.agents",
+            "accounts.apps",
+            "accounts.migrations",
+            "accounts.migrations.0001_initial",
+            "accounts.models",
+            "assignor",
+            "assignor.test_copartitioned_assignor",
+            "cli",
+            "cli.test_agents",
+            "cli.test_base",
+            "cli.test_model",
+            "cli.test_models",
+            "drivers",
+            "drivers.test_aiokafka",
+            "examples",
+            "examples.concurrency",
+            "examples.hello_world",
+            "examples.leader",
+            "examples.livecheck",
+            "examples.tableofset",
+            "examples.tabletest",
+            "examples.task_queue",
+            "examples.withdrawals",
+            "examples.word_count",
             "faust",
             "faust._cython",
             "faust.agents",
@@ -19323,9 +19365,167 @@
             "faust.web.exceptions",
             "faust.web.views",
             "faust.windows",
-            "faust.worker"
+            "faust.worker",
+            "faustapp",
+            "faustapp.app",
+            "faustapp.apps",
+            "faustapp.migrations",
+            "proj",
+            "proj.settings",
+            "proj.urls",
+            "proj.wsgi",
+            "t",
+            "t.bench",
+            "t.bench.base",
+            "t.bench.baseline",
+            "t.bench.forward",
+            "t.conftest",
+            "t.consistency",
+            "t.consistency.consistency_checker",
+            "t.consistency.test_consistency",
+            "t.docs",
+            "t.docs.testing",
+            "t.docs.testing.test_figB_agent_to_agent",
+            "t.docs.testing.test_figC_windowed_table",
+            "t.functional",
+            "t.functional.agents",
+            "t.functional.agents.helpers",
+            "t.functional.agents.test_concurrency",
+            "t.functional.agents.test_current_agent",
+            "t.functional.agents.test_isolated_partitions",
+            "t.functional.conftest",
+            "t.functional.helpers",
+            "t.functional.sensors",
+            "t.functional.sensors.test_statsd",
+            "t.functional.serializers",
+            "t.functional.serializers.test_registry",
+            "t.functional.test_aiokafka",
+            "t.functional.test_app",
+            "t.functional.test_channels",
+            "t.functional.test_faust",
+            "t.functional.test_models",
+            "t.functional.test_streams",
+            "t.functional.web",
+            "t.functional.web.conftest",
+            "t.functional.web.test_cache",
+            "t.functional.web.test_tables",
+            "t.functional.web.test_views",
+            "t.helpers",
+            "t.old",
+            "t.old.app",
+            "t.old.test_simple",
+            "t.regression",
+            "t.regression.i323",
+            "t.regression.i323.conftest",
+            "t.regression.i323.proj323",
+            "t.regression.i323.proj323.faust",
+            "t.regression.i323.proj323.foo",
+            "t.regression.i323.proj323.foo.bar",
+            "t.regression.i323.proj323.foo.bar.baz",
+            "t.regression.i323.proj323.foo.bar.baz.commands",
+            "t.regression.i323.test_autodiscover",
+            "t.regression.i324",
+            "t.regression.i324.conftest",
+            "t.regression.i324.proj324",
+            "t.regression.i324.proj324.faust",
+            "t.regression.i324.proj324.foo",
+            "t.regression.i324.proj324.foo.bar",
+            "t.regression.i324.proj324.foo.bar.baz",
+            "t.regression.i324.proj324.foo.bar.baz.commands",
+            "t.regression.i324.proj324.foo.test_x",
+            "t.regression.i324.test_autodiscover",
+            "t.stress",
+            "t.stress.app",
+            "t.stress.config",
+            "t.stress.killer",
+            "t.stress.models",
+            "t.stress.producer",
+            "t.stress.reports",
+            "t.stress.reports.app",
+            "t.stress.reports.checks",
+            "t.stress.reports.collector",
+            "t.stress.reports.logging",
+            "t.stress.reports.models",
+            "t.stress.reports.states",
+            "t.stress.reports.web",
+            "t.stress.tests",
+            "t.stress.tests.forwarder",
+            "t.stress.tests.forwarder.app",
+            "t.stress.tests.simple",
+            "t.stress.tests.simple.app",
+            "t.stress.tests.tables",
+            "t.stress.tests.tables.app",
+            "t.unit",
+            "t.unit.agents",
+            "t.unit.agents.test_actor",
+            "t.unit.agents.test_agent",
+            "t.unit.agents.test_manager",
+            "t.unit.agents.test_replies",
+            "t.unit.cli",
+            "t.unit.cli.conftest",
+            "t.unit.cli.test_base",
+            "t.unit.cli.test_clean_versions",
+            "t.unit.cli.test_completion",
+            "t.unit.cli.test_env",
+            "t.unit.cli.test_params",
+            "t.unit.conftest",
+            "t.unit.fixups",
+            "t.unit.fixups.test_base",
+            "t.unit.fixups.test_django",
+            "t.unit.livecheck",
+            "t.unit.livecheck.conftest",
+            "t.unit.livecheck.test_app",
+            "t.unit.livecheck.test_case",
+            "t.unit.livecheck.test_locals",
+            "t.unit.livecheck.test_models",
+            "t.unit.livecheck.test_runners",
+            "t.unit.livecheck.test_signals",
+            "t.unit.sensors",
+            "t.unit.sensors.test_base",
+            "t.unit.sensors.test_datadog",
+            "t.unit.sensors.test_monitor",
+            "t.unit.sensors.test_statsd",
+            "t.unit.serializers",
+            "t.unit.serializers.test_codecs",
+            "t.unit.stores",
+            "t.unit.stores.test_base",
+            "t.unit.stores.test_memory",
+            "t.unit.stores.test_rocksdb",
+            "t.unit.tables",
+            "t.unit.tables.test_base",
+            "t.unit.tables.test_manager",
+            "t.unit.tables.test_objects",
+            "t.unit.tables.test_recovery",
+            "t.unit.tables.test_sets",
+            "t.unit.tables.test_table",
+            "t.unit.tables.test_wrappers",
+            "t.unit.test_auth",
+            "t.unit.test_events",
+            "t.unit.test_faust",
+            "t.unit.test_joins",
+            "t.unit.test_streams",
+            "t.unit.test_topics",
+            "t.unit.test_worker",
+            "t.unit.utils",
+            "t.unit.utils.terminal",
+            "t.unit.utils.terminal.test_spinners",
+            "t.unit.utils.terminal.test_tables",
+            "t.unit.utils.test_cron",
+            "t.unit.utils.test_functional",
+            "t.unit.utils.test_iso8601",
+            "t.unit.utils.test_json",
+            "t.unit.utils.test_urls",
+            "t.unit.utils.test_utils",
+            "t.unit.utils.test_venusian",
+            "t.unit.web",
+            "t.unit.web.drivers",
+            "t.unit.web.drivers.test_aiohttp",
+            "t.unit.web.test_base",
+            "t.unit.web.test_blueprints",
+            "t.unit.web.test_exceptions",
+            "t.unit.web.test_views"
         ],
-        "version": "1.7.1"
+        "version": "1.7.3"
     },
     "faux": {
         "cmdline": [],
@@ -31859,7 +32059,7 @@
             "ffmpeg_normalize._streams",
             "ffmpeg_normalize._version"
         ],
-        "version": "1.15.1"
+        "version": "1.15.2"
     },
     "ffmpeg-progress": {
         "cmdline": [],
@@ -46477,7 +46677,7 @@
     "firex-flame-ui": {
         "cmdline": [],
         "modules": [],
-        "version": "0.21.5"
+        "version": "0.21.7"
     },
     "firexapp": {
         "cmdline": [],
@@ -66599,22 +66799,14 @@
         "cmdline": [],
         "modules": [
             "flask_taxonomies",
-            "flask_taxonomies.app",
-            "flask_taxonomies.commands",
-            "flask_taxonomies.compat",
-            "flask_taxonomies.database",
-            "flask_taxonomies.extensions",
+            "flask_taxonomies.config",
+            "flask_taxonomies.ext",
+            "flask_taxonomies.managers",
             "flask_taxonomies.models",
-            "flask_taxonomies.settings",
-            "flask_taxonomies.views",
-            "tests",
-            "tests.conftest",
-            "tests.factories",
-            "tests.settings",
-            "tests.test_functional",
-            "tests.test_models"
+            "flask_taxonomies.version",
+            "flask_taxonomies.views"
         ],
-        "version": "1.0.0"
+        "version": "3.0.0"
     },
     "flask-telegram": {
         "cmdline": [],
@@ -71224,7 +71416,7 @@
             "flatpak_module_tools.module_locator",
             "flatpak_module_tools.utils"
         ],
-        "version": "0.9.3"
+        "version": "0.10.1"
     },
     "flatpakdev": {
         "cmdline": [],
@@ -76315,7 +76507,7 @@
             "flowbber.utils.filter",
             "flowbber.utils.git"
         ],
-        "version": "1.7.0"
+        "version": "1.8.0"
     },
     "flowcal": {
         "cmdline": [],
@@ -78486,7 +78678,7 @@
             "fluidasserts.utils.generic",
             "fluidasserts.utils.tracking"
         ],
-        "version": "19.7.15691"
+        "version": "19.7.17086"
     },
     "fluiddata": {
         "cmdline": [],
@@ -79335,6 +79527,15 @@
             "fluidsynth.fluidsynth"
         ],
         "version": "0.2"
+    },
+    "fluigi-monitor": {
+        "cmdline": [],
+        "modules": [
+            "fluigi_monitor",
+            "fluigi_monitor.fluigi_monitor",
+            "fluigi_monitor.luigi_monitor"
+        ],
+        "version": "1.1.5"
     },
     "flume": {
         "cmdline": [],
@@ -80463,7 +80664,7 @@
             "flyingcircus.util",
             "resources"
         ],
-        "version": "0.1.0.2"
+        "version": "0.1.0.4"
     },
     "flyingcloud": {
         "cmdline": [
@@ -86729,7 +86930,7 @@
             "forecastpy",
             "forecastpy.forecast"
         ],
-        "version": "1.0.1"
+        "version": "1.0.2"
     },
     "foreground-app-info": {
         "cmdline": [],
@@ -87012,7 +87213,7 @@
             "foremast.validate",
             "foremast.version"
         ],
-        "version": "3.56.1"
+        "version": "3.57.0"
     },
     "foreshadow": {
         "cmdline": [],
@@ -103086,7 +103287,9 @@
         "version": "1.0.0"
     },
     "ftp-cloudfs": {
-        "cmdline": [],
+        "cmdline": [
+            "ftpcloudfs"
+        ],
         "modules": [
             "ftpcloudfs",
             "ftpcloudfs.chunkobject",
@@ -103098,7 +103301,7 @@
             "ftpcloudfs.server",
             "ftpcloudfs.utils"
         ],
-        "version": "0.35"
+        "version": "0.36.1"
     },
     "ftp-pocetnik": {
         "cmdline": [],
@@ -117888,9 +118091,10 @@
             "fxcmrest",
             "fxcmrest.config",
             "fxcmrest.fxcmrest",
-            "fxcmrest.socketio"
+            "fxcmrest.socketio",
+            "fxcmrest.socketio_compat"
         ],
-        "version": "0.0.2a1"
+        "version": "0.0.2a3"
     },
     "fxcpy": {
         "cmdline": [],
@@ -118078,7 +118282,7 @@
             "fxq.ae.runner.service.run",
             "fxq.ae.runner.wsgi"
         ],
-        "version": "0.0.12"
+        "version": "0.0.13"
     },
     "fxq-core": {
         "cmdline": [],
@@ -118595,7 +118799,7 @@
             "fzutils.time_utils",
             "fzutils.url_utils"
         ],
-        "version": "0.3.4.3"
+        "version": "0.3.4.5"
     },
     "fzysearch": {
         "cmdline": [],
