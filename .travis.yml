@@ -47,9 +47,9 @@ before_script:
 script:
     - |
         if [ "${TRAVIS_EVENT_TYPE}" == "cron" ]; then
-            docker build -t dockershelf/pypicontents:2.7-3.5 docker/2.7-3.5
+            docker build -t dockershelf/pypicontents:2.7-3.7 docker/2.7-3.7
             docker run -v ${PWD}:${PWD} -w ${PWD} -u $(id -u):$(id -g) \
-                dockershelf/pypicontents:2.7-3.5 \
+                dockershelf/pypicontents:2.7-3.7 \
                     pypicontents pypi -o data/${LRANGE}/pypi.json \
                         -f logs/${LRANGE}/pypi.log -R ${LRANGE}
         fi
@@ -60,7 +60,7 @@ jobs:
           script:
             - |
                 if [ "${TRAVIS_EVENT_TYPE}" == "cron" ]; then
-                    for PYVER in 2.6 2.7 3.2 3.4 3.5 3.6; do
+                    for PYVER in 2.6 2.7 3.2 3.4 3.5 3.6 3.7 3.8; do
                         docker build -t dockershelf/pypicontents:${PYVER} docker/${PYVER}
                         docker run -v ${PWD}:${PWD} -w ${PWD} -u $(id -u):$(id -g) \
                             dockershelf/pypicontents:${PYVER} \
@@ -89,7 +89,7 @@ after_success:
 
             if [ -n "${STDLIB}" ]; then
                 COMMITMSG="Updating PyPIContents index (stdlib and merge)."
-                git reset 2de55c5f30021ddbda40b1a9a26ea84042566829
+                git reset dda4db045c0681483ea387dc0d7d67d89a2335dc
             fi
 
             git add --all .

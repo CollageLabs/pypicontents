@@ -1,5 +1,5 @@
 FROM dockershelf/python:2.7
-MAINTAINER Luis Alejandro Martínez Faneyth <luis@huntingbears.com.ve>
+LABEL maintainer="Luis Alejandro Martínez Faneyth <luis@luisalejandro.org>"
 
 RUN pip install pypicontents
 
