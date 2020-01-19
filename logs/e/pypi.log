@@ -77,7 +77,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (e3dc) This package is up to date.
 [INFO] (e3dump) This package is up to date.
 [INFO] (e3fp) This package is up to date.
-[INFO] (e3tools) This package is up to date.
+[INFO] (e3tools) Data has been updated for this package.
 [INFO] (e4client) This package is up to date.
 [INFO] (e4clim) This package is up to date.
 [INFO] (e4u) This package is up to date.
@@ -239,7 +239,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (earthy) This package is up to date.
 [INFO] (earwigbot) This package is up to date.
 [INFO] (eas) This package is up to date.
-[INFO] (eas-prediction) This package is up to date.
+[INFO] (eas-prediction) Data has been updated for this package.
 [INFO] (ease) This package is up to date.
 [INFO] (ease-grid) This package is up to date.
 [INFO] (ease-restapi) This package is up to date.
@@ -796,7 +796,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (easyredditbot) This package is up to date.
 [INFO] (easyrediscache) This package is up to date.
 [INFO] (easyregress) This package is up to date.
-[INFO] (easyrequest) Data has been updated for this package.
+[INFO] (easyrequest) This package is up to date.
 [INFO] (easyrest) This package is up to date.
 [INFO] (easyrocks) This package is up to date.
 [INFO] (easyrun) This package is up to date.
@@ -830,8 +830,102 @@ Unsupported package directory structure.
 [INFO] (easyshop-search) This package is up to date.
 [INFO] (easyshop-shipping) This package is up to date.
 [INFO] (easyshop-shop) This package is up to date.
-[INFO] (easyshop-stocks) This package is up to date.
-[INFO] (easyshop-taxes) This package is up to date.
+[ERROR] (easyshop-stocks) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/urllib/request.py", line 1319, in do_open
+    encode_chunked=req.has_header('Transfer-encoding'))
+  File "/usr/lib/python3.7/http/client.py", line 1252, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1298, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1247, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.7/http/client.py", line 966, in send
+    self.connect()
+  File "/usr/lib/python3.7/http/client.py", line 1422, in connect
+    server_hostname=server_hostname)
+  File "/usr/lib/python3.7/ssl.py", line 423, in wrap_socket
+    session=session
+  File "/usr/lib/python3.7/ssl.py", line 870, in _create
+    self.do_handshake()
+  File "/usr/lib/python3.7/ssl.py", line 1139, in do_handshake
+    self._sslobj.do_handshake()
+socket.timeout: _ssl.c:1059: The handshake operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.7/urllib/request.py", line 531, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.7/urllib/request.py", line 641, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.7/urllib/request.py", line 563, in error
+    result = self._call_chain(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 755, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+  File "/usr/lib/python3.7/urllib/request.py", line 525, in open
+    response = self._open(req, data)
+  File "/usr/lib/python3.7/urllib/request.py", line 543, in _open
+    '_open', req)
+  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 1362, in https_open
+    context=self._context, check_hostname=self._check_hostname)
+  File "/usr/lib/python3.7/urllib/request.py", line 1321, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error _ssl.c:1059: The handshake operation timed out>
+
+[ERROR] (easyshop-taxes) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/urllib/request.py", line 1319, in do_open
+    encode_chunked=req.has_header('Transfer-encoding'))
+  File "/usr/lib/python3.7/http/client.py", line 1252, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1298, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1247, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.7/http/client.py", line 966, in send
+    self.connect()
+  File "/usr/lib/python3.7/http/client.py", line 1414, in connect
+    super().connect()
+  File "/usr/lib/python3.7/http/client.py", line 938, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "/usr/lib/python3.7/socket.py", line 707, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/lib/python3.7/socket.py", line 752, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.7/urllib/request.py", line 525, in open
+    response = self._open(req, data)
+  File "/usr/lib/python3.7/urllib/request.py", line 543, in _open
+    '_open', req)
+  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 1362, in https_open
+    context=self._context, check_hostname=self._check_hostname)
+  File "/usr/lib/python3.7/urllib/request.py", line 1321, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
+
 [INFO] (easysms) This package is up to date.
 [INFO] (easysnmp) This package is up to date.
 [INFO] (easysnmptable) This package is up to date.
@@ -905,7 +999,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (easyvision) This package is up to date.
 [INFO] (easyvvuq) This package is up to date.
 [INFO] (easywatch) This package is up to date.
-[INFO] (easyweb3) Data has been updated for this package.
+[INFO] (easyweb3) This package is up to date.
 [INFO] (easywebassets) This package is up to date.
 [INFO] (easywebdav) This package is up to date.
 [INFO] (easywebdav2) This package is up to date.
@@ -1349,7 +1443,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (ecoaliface) This package is up to date.
 [INFO] (ecobici) This package is up to date.
 [INFO] (ecoclib) This package is up to date.
-[INFO] (ecode) Data has been updated for this package.
+[INFO] (ecode) This package is up to date.
 [INFO] (ecoe) This package is up to date.
 [INFO] (ecog) This package is up to date.
 [INFO] (ecog-decoding) This package is up to date.
@@ -1542,15 +1636,15 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (edback) This package is up to date.
 [INFO] (edbob) This package is up to date.
 [INFO] (edbot) This package is up to date.
-[INFO] (edc-action-item) Data has been updated for this package.
-[INFO] (edc-adverse-event) Data has been updated for this package.
+[INFO] (edc-action-item) This package is up to date.
+[INFO] (edc-adverse-event) This package is up to date.
 [INFO] (edc-appointment) This package is up to date.
 [INFO] (edc-auth) This package is up to date.
 [INFO] (edc-base) This package is up to date.
 [INFO] (edc-consent) This package is up to date.
 [INFO] (edc-constants) This package is up to date.
 [INFO] (edc-dashboard) This package is up to date.
-[INFO] (edc-data-manager) Data has been updated for this package.
+[INFO] (edc-data-manager) This package is up to date.
 [INFO] (edc-device) This package is up to date.
 [INFO] (edc-export) This package is up to date.
 [INFO] (edc-fabric) This package is up to date.
@@ -1567,7 +1661,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (edc-locator) This package is up to date.
 [INFO] (edc-metadata) This package is up to date.
 [INFO] (edc-metadata-rules) This package is up to date.
-[INFO] (edc-model) This package is up to date.
+[INFO] (edc-model) Data has been updated for this package.
 [INFO] (edc-model-admin) This package is up to date.
 [INFO] (edc-model-fields) This package is up to date.
 [INFO] (edc-model-wrapper) This package is up to date.
@@ -1580,7 +1674,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (edc-pharmacy-dashboard) This package is up to date.
 [INFO] (edc-prn) This package is up to date.
 [INFO] (edc-protocol) This package is up to date.
-[INFO] (edc-randomization) Data has been updated for this package.
+[INFO] (edc-randomization) This package is up to date.
 [INFO] (edc-reference) This package is up to date.
 [INFO] (edc-registration) This package is up to date.
 [INFO] (edc-reportable) This package is up to date.
@@ -1591,7 +1685,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (edc-search) This package is up to date.
 [INFO] (edc-selenium) This package is up to date.
 [INFO] (edc-sites) This package is up to date.
-[INFO] (edc-subject-dashboard) Data has been updated for this package.
+[INFO] (edc-subject-dashboard) This package is up to date.
 [INFO] (edc-subject-model-wrapper) This package is up to date.
 [INFO] (edc-subject-model-wrappers) This package is up to date.
 [INFO] (edc-sync) This package is up to date.
@@ -1937,7 +2031,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (edx-ace) This package is up to date.
 [INFO] (edx-analytics-data-api-client) This package is up to date.
 [INFO] (edx-api-client) This package is up to date.
-[INFO] (edx-api-doc-tools) Data has been updated for this package.
+[INFO] (edx-api-doc-tools) This package is up to date.
 [INFO] (edx-auth-backends) This package is up to date.
 [INFO] (edx-bulk-grades) This package is up to date.
 [INFO] (edx-ccx-keys) This package is up to date.
@@ -1981,7 +2075,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (edxdrfextensions) This package is up to date.
 [INFO] (edxenterprise) This package is up to date.
 [INFO] (edxi18ntools) This package is up to date.
-[INFO] (edxia) This package is up to date.
+[INFO] (edxia) Data has been updated for this package.
 [INFO] (edxml) This package is up to date.
 [INFO] (edxopaquekeys) This package is up to date.
 [INFO] (edxsearch) This package is up to date.
@@ -2000,16 +2094,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (eea-downloads) This package is up to date.
 [INFO] (eea-eggmonkey) This package is up to date.
 [INFO] (eea-eggmonkeytesttarget) This package is up to date.
-[INFO] (eea-epub) This package is up to date.
-[INFO] (eea-exhibit) This package is up to date.
-[INFO] (eea-faceted-blue) This package is up to date.
-[INFO] (eea-faceted-inheritance) This package is up to date.
-[INFO] (eea-faceted-tool) This package is up to date.
-[INFO] (eea-faceted-vocabularies) This package is up to date.
-[INFO] (eea-facetednavigation) This package is up to date.
-[INFO] (eea-facetednavigationtaxonomiccheckbox) This package is up to date.
-[INFO] (eea-flis-metadata) This package is up to date.
-[ERROR] (eea-forms) Could not get a response from API for this package. See below for details.
+[ERROR] (eea-epub) Could not get a response from API for this package. See below for details.
 Traceback (most recent call last):
   File "/usr/lib/python3.7/urllib/request.py", line 1319, in do_open
     encode_chunked=req.has_header('Transfer-encoding'))
@@ -2062,7 +2147,7 @@ Traceback (most recent call last):
     raise URLError(err)
 urllib.error.URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
 
-[ERROR] (eea-frame) Could not get a response from API for this package. See below for details.
+[ERROR] (eea-exhibit) Could not get a response from API for this package. See below for details.
 Traceback (most recent call last):
   File "/usr/lib/python3.7/urllib/request.py", line 1319, in do_open
     encode_chunked=req.has_header('Transfer-encoding'))
@@ -2105,6 +2190,15 @@ Traceback (most recent call last):
     raise URLError(err)
 urllib.error.URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
 
+[INFO] (eea-faceted-blue) This package is up to date.
+[INFO] (eea-faceted-inheritance) This package is up to date.
+[INFO] (eea-faceted-tool) This package is up to date.
+[INFO] (eea-faceted-vocabularies) This package is up to date.
+[INFO] (eea-facetednavigation) This package is up to date.
+[INFO] (eea-facetednavigationtaxonomiccheckbox) This package is up to date.
+[INFO] (eea-flis-metadata) This package is up to date.
+[INFO] (eea-forms) This package is up to date.
+[INFO] (eea-frame) This package is up to date.
 [INFO] (eea-geotags) This package is up to date.
 [INFO] (eea-google) This package is up to date.
 [INFO] (eea-googlecharts) This package is up to date.
@@ -2623,7 +2717,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (elasticpysearch) This package is up to date.
 [INFO] (elasticquery) This package is up to date.
 [INFO] (elasticroute) This package is up to date.
-[INFO] (elasticsearch) This package is up to date.
+[INFO] (elasticsearch) Data has been updated for this package.
 [INFO] (elasticsearch-async) This package is up to date.
 [INFO] (elasticsearch-bdoc) This package is up to date.
 [INFO] (elasticsearch-bundle) This package is up to date.
@@ -2832,7 +2926,7 @@ OSError: [Errno 13] Permission denied: '/tmp/pypic-extract/electron-inject-dark-
 [INFO] (electrum-scripting) This package is up to date.
 [INFO] (electrum-vtc) This package is up to date.
 [INFO] (electrumsv-secp256k1) This package is up to date.
-[INFO] (electrumx) This package is up to date.
+[INFO] (electrumx) Data has been updated for this package.
 [INFO] (electruth) This package is up to date.
 [INFO] (electsysapi) This package is up to date.
 [INFO] (electus) This package is up to date.
@@ -2857,135 +2951,9 @@ OSError: [Errno 13] Permission denied: '/tmp/pypic-extract/electron-inject-dark-
 [INFO] (elementai-python) This package is up to date.
 [INFO] (elementai-python-api) This package is up to date.
 [ERROR] (elemental) This package does not have downloadable releases.
-[ERROR] (elemental-core) Could not get a response from API for this package. See below for details.
-Traceback (most recent call last):
-  File "/usr/lib/python3.7/urllib/request.py", line 1319, in do_open
-    encode_chunked=req.has_header('Transfer-encoding'))
-  File "/usr/lib/python3.7/http/client.py", line 1252, in request
-    self._send_request(method, url, body, headers, encode_chunked)
-  File "/usr/lib/python3.7/http/client.py", line 1298, in _send_request
-    self.endheaders(body, encode_chunked=encode_chunked)
-  File "/usr/lib/python3.7/http/client.py", line 1247, in endheaders
-    self._send_output(message_body, encode_chunked=encode_chunked)
-  File "/usr/lib/python3.7/http/client.py", line 1026, in _send_output
-    self.send(msg)
-  File "/usr/lib/python3.7/http/client.py", line 966, in send
-    self.connect()
-  File "/usr/lib/python3.7/http/client.py", line 1414, in connect
-    super().connect()
-  File "/usr/lib/python3.7/http/client.py", line 938, in connect
-    (self.host,self.port), self.timeout, self.source_address)
-  File "/usr/lib/python3.7/socket.py", line 707, in create_connection
-    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
-  File "/usr/lib/python3.7/socket.py", line 752, in getaddrinfo
-    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
-socket.gaierror: [Errno -3] Temporary failure in name resolution
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
-    timeout=10).read()
-  File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
-    return opener.open(url, data, timeout)
-  File "/usr/lib/python3.7/urllib/request.py", line 525, in open
-    response = self._open(req, data)
-  File "/usr/lib/python3.7/urllib/request.py", line 543, in _open
-    '_open', req)
-  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
-    result = func(*args)
-  File "/usr/lib/python3.7/urllib/request.py", line 1362, in https_open
-    context=self._context, check_hostname=self._check_hostname)
-  File "/usr/lib/python3.7/urllib/request.py", line 1321, in do_open
-    raise URLError(err)
-urllib.error.URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
-
-[ERROR] (elementals) Could not get a response from API for this package. See below for details.
-Traceback (most recent call last):
-  File "/usr/lib/python3.7/urllib/request.py", line 1319, in do_open
-    encode_chunked=req.has_header('Transfer-encoding'))
-  File "/usr/lib/python3.7/http/client.py", line 1252, in request
-    self._send_request(method, url, body, headers, encode_chunked)
-  File "/usr/lib/python3.7/http/client.py", line 1298, in _send_request
-    self.endheaders(body, encode_chunked=encode_chunked)
-  File "/usr/lib/python3.7/http/client.py", line 1247, in endheaders
-    self._send_output(message_body, encode_chunked=encode_chunked)
-  File "/usr/lib/python3.7/http/client.py", line 1026, in _send_output
-    self.send(msg)
-  File "/usr/lib/python3.7/http/client.py", line 966, in send
-    self.connect()
-  File "/usr/lib/python3.7/http/client.py", line 1414, in connect
-    super().connect()
-  File "/usr/lib/python3.7/http/client.py", line 938, in connect
-    (self.host,self.port), self.timeout, self.source_address)
-  File "/usr/lib/python3.7/socket.py", line 707, in create_connection
-    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
-  File "/usr/lib/python3.7/socket.py", line 752, in getaddrinfo
-    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
-socket.gaierror: [Errno -3] Temporary failure in name resolution
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
-    timeout=10).read()
-  File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
-    return opener.open(url, data, timeout)
-  File "/usr/lib/python3.7/urllib/request.py", line 525, in open
-    response = self._open(req, data)
-  File "/usr/lib/python3.7/urllib/request.py", line 543, in _open
-    '_open', req)
-  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
-    result = func(*args)
-  File "/usr/lib/python3.7/urllib/request.py", line 1362, in https_open
-    context=self._context, check_hostname=self._check_hostname)
-  File "/usr/lib/python3.7/urllib/request.py", line 1321, in do_open
-    raise URLError(err)
-urllib.error.URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
-
-[ERROR] (elementapi) Could not get a response from API for this package. See below for details.
-Traceback (most recent call last):
-  File "/usr/lib/python3.7/urllib/request.py", line 1319, in do_open
-    encode_chunked=req.has_header('Transfer-encoding'))
-  File "/usr/lib/python3.7/http/client.py", line 1252, in request
-    self._send_request(method, url, body, headers, encode_chunked)
-  File "/usr/lib/python3.7/http/client.py", line 1298, in _send_request
-    self.endheaders(body, encode_chunked=encode_chunked)
-  File "/usr/lib/python3.7/http/client.py", line 1247, in endheaders
-    self._send_output(message_body, encode_chunked=encode_chunked)
-  File "/usr/lib/python3.7/http/client.py", line 1026, in _send_output
-    self.send(msg)
-  File "/usr/lib/python3.7/http/client.py", line 966, in send
-    self.connect()
-  File "/usr/lib/python3.7/http/client.py", line 1414, in connect
-    super().connect()
-  File "/usr/lib/python3.7/http/client.py", line 938, in connect
-    (self.host,self.port), self.timeout, self.source_address)
-  File "/usr/lib/python3.7/socket.py", line 707, in create_connection
-    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
-  File "/usr/lib/python3.7/socket.py", line 752, in getaddrinfo
-    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
-socket.gaierror: [Errno -3] Temporary failure in name resolution
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
-    timeout=10).read()
-  File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
-    return opener.open(url, data, timeout)
-  File "/usr/lib/python3.7/urllib/request.py", line 525, in open
-    response = self._open(req, data)
-  File "/usr/lib/python3.7/urllib/request.py", line 543, in _open
-    '_open', req)
-  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
-    result = func(*args)
-  File "/usr/lib/python3.7/urllib/request.py", line 1362, in https_open
-    context=self._context, check_hostname=self._check_hostname)
-  File "/usr/lib/python3.7/urllib/request.py", line 1321, in do_open
-    raise URLError(err)
-urllib.error.URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
-
+[INFO] (elemental-core) This package is up to date.
+[INFO] (elementals) This package is up to date.
+[INFO] (elementapi) This package is up to date.
 [INFO] (elementary-math) This package is up to date.
 [INFO] (elementflow) This package is up to date.
 [INFO] (elementium) This package is up to date.
@@ -3076,7 +3044,7 @@ This package download URL does not point to a valid file: "http://effbot.org/dow
 [INFO] (elisa-dnt) This package is up to date.
 [INFO] (elisa-patch) This package is up to date.
 [INFO] (elisctl) This package is up to date.
-[INFO] (elise) This package is up to date.
+[INFO] (elise) Data has been updated for this package.
 [INFO] (elisp) This package is up to date.
 [INFO] (elist) This package is up to date.
 [INFO] (elit) This package is up to date.
@@ -3159,7 +3127,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (elma) This package is up to date.
 [INFO] (elmoformanylangs) This package is up to date.
 [INFO] (elmsdk) This package is up to date.
-[INFO] (eln) This package is up to date.
+[INFO] (eln) Data has been updated for this package.
 [INFO] (elo) This package is up to date.
 [ERROR] (elo-sports) Could not get a response from API for this package. See below for details.
 Traceback (most recent call last):
@@ -3461,7 +3429,7 @@ This package download URL does not point to a valid file: "https://sourceforge.n
 [INFO] (embod-client) This package is up to date.
 [ERROR] (embodied) This package does not have downloadable releases.
 [INFO] (emborg) This package is up to date.
-[INFO] (embrion) This package is up to date.
+[INFO] (embrion) Data has been updated for this package.
 [INFO] (embryo) This package is up to date.
 [INFO] (embtest) This package is up to date.
 [INFO] (emby-exporter) This package is up to date.
@@ -3652,7 +3620,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (eml-parser) This package is up to date.
 [INFO] (eml2png) This package is up to date.
 [INFO] (emlearn) This package is up to date.
-[INFO] (emlib) This package is up to date.
+[INFO] (emlib) Data has been updated for this package.
 [INFO] (emlidtool) This package is up to date.
 [INFO] (emloop) This package is up to date.
 [INFO] (emloop-tensorflow) This package is up to date.
@@ -3713,8 +3681,65 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (emonoda) This package is up to date.
 [INFO] (emonpi-sensors) This package is up to date.
 [INFO] (emopt) This package is up to date.
-[INFO] (emopy) This package is up to date.
-[INFO] (emora-stdm) This package is up to date.
+[ERROR] (emopy) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.7/http/client.py", line 470, in read
+    s = self._safe_read(self.length)
+  File "/usr/lib/python3.7/http/client.py", line 620, in _safe_read
+    chunk = self.fp.read(min(amt, MAXAMOUNT))
+  File "/usr/lib/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/lib/python3.7/ssl.py", line 1071, in recv_into
+    return self.read(nbytes, buffer)
+  File "/usr/lib/python3.7/ssl.py", line 929, in read
+    return self._sslobj.read(len, buffer)
+socket.timeout: The read operation timed out
+
+[ERROR] (emora-stdm) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/urllib/request.py", line 1319, in do_open
+    encode_chunked=req.has_header('Transfer-encoding'))
+  File "/usr/lib/python3.7/http/client.py", line 1252, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1298, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1247, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.7/http/client.py", line 966, in send
+    self.connect()
+  File "/usr/lib/python3.7/http/client.py", line 1414, in connect
+    super().connect()
+  File "/usr/lib/python3.7/http/client.py", line 938, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "/usr/lib/python3.7/socket.py", line 707, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/lib/python3.7/socket.py", line 752, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.7/urllib/request.py", line 525, in open
+    response = self._open(req, data)
+  File "/usr/lib/python3.7/urllib/request.py", line 543, in _open
+    '_open', req)
+  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 1362, in https_open
+    context=self._context, check_hostname=self._check_hostname)
+  File "/usr/lib/python3.7/urllib/request.py", line 1321, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
+
 [INFO] (emores) This package is up to date.
 [INFO] (emosent-py) This package is up to date.
 [INFO] (emot) This package is up to date.
@@ -3894,7 +3919,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (emucorebrain) This package is up to date.
 [INFO] (emukit) This package is up to date.
 [INFO] (emulate-tornado-server) This package is up to date.
-[INFO] (emulated-roku) This package is up to date.
+[INFO] (emulated-roku) Data has been updated for this package.
 [INFO] (emulaterest) This package is up to date.
 [INFO] (emulator) This package is up to date.
 [INFO] (emulchem) This package is up to date.
@@ -4020,7 +4045,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (enczipstream) This package is up to date.
 [INFO] (end) This package is up to date.
 [INFO] (endermite) This package is up to date.
-[INFO] (endesive) This package is up to date.
+[INFO] (endesive) Data has been updated for this package.
 [ERROR] (endgame-singularity) Could not extract data from this package. See below for details.
 "http://endgame-singularity.googlecode.com/files/singularity_0.30.tar.gz" file could not be downloaded. See below for details.
 Traceback (most recent call last):
@@ -4110,7 +4135,7 @@ Traceback (most recent call last):
 urllib.error.HTTPError: HTTP Error 404: Not Found
 
 [INFO] (energycalc) This package is up to date.
-[INFO] (energycapsdk) Data has been updated for this package.
+[INFO] (energycapsdk) This package is up to date.
 [INFO] (energydram) This package is up to date.
 [INFO] (energyflow) This package is up to date.
 [INFO] (energyid) This package is up to date.
@@ -4377,34 +4402,6 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (ensure) This package is up to date.
 [INFO] (ensure-no-deps) This package is up to date.
 [INFO] (ensurecvs) This package is up to date.
-[ERROR] (ensurepip-vanilla) Could not get a response from API for this package. See below for details.
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
-    timeout=10).read()
-  File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
-    return opener.open(url, data, timeout)
-  File "/usr/lib/python3.7/urllib/request.py", line 531, in open
-    response = meth(req, response)
-  File "/usr/lib/python3.7/urllib/request.py", line 641, in http_response
-    'http', request, response, code, msg, hdrs)
-  File "/usr/lib/python3.7/urllib/request.py", line 563, in error
-    result = self._call_chain(*args)
-  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
-    result = func(*args)
-  File "/usr/lib/python3.7/urllib/request.py", line 755, in http_error_302
-    return self.parent.open(new, timeout=req.timeout)
-  File "/usr/lib/python3.7/urllib/request.py", line 531, in open
-    response = meth(req, response)
-  File "/usr/lib/python3.7/urllib/request.py", line 641, in http_response
-    'http', request, response, code, msg, hdrs)
-  File "/usr/lib/python3.7/urllib/request.py", line 569, in error
-    return self._call_chain(*args)
-  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
-    result = func(*args)
-  File "/usr/lib/python3.7/urllib/request.py", line 649, in http_error_default
-    raise HTTPError(req.full_url, code, msg, hdrs, fp)
-urllib.error.HTTPError: HTTP Error 404: Not Found
-
 [INFO] (ent) This package is up to date.
 [INFO] (entangle-python) This package is up to date.
 [ERROR] (entangled) Could not extract data from this package. See below for details.
@@ -4531,7 +4528,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (entrypoints) This package is up to date.
 [INFO] (entschachtler) This package is up to date.
 [INFO] (entsoe-py) This package is up to date.
-[INFO] (entur-api) Data has been updated for this package.
+[INFO] (entur-api) This package is up to date.
 [INFO] (enturclient) This package is up to date.
 [INFO] (entweet) This package is up to date.
 [INFO] (entwine) This package is up to date.
@@ -5017,49 +5014,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (epigeneticpacemaker) This package is up to date.
 [INFO] (epigrass) This package is up to date.
 [INFO] (epika-python2) This package is up to date.
-[ERROR] (epika-python3) Could not get a response from API for this package. See below for details.
-Traceback (most recent call last):
-  File "/usr/lib/python3.7/urllib/request.py", line 1319, in do_open
-    encode_chunked=req.has_header('Transfer-encoding'))
-  File "/usr/lib/python3.7/http/client.py", line 1252, in request
-    self._send_request(method, url, body, headers, encode_chunked)
-  File "/usr/lib/python3.7/http/client.py", line 1298, in _send_request
-    self.endheaders(body, encode_chunked=encode_chunked)
-  File "/usr/lib/python3.7/http/client.py", line 1247, in endheaders
-    self._send_output(message_body, encode_chunked=encode_chunked)
-  File "/usr/lib/python3.7/http/client.py", line 1026, in _send_output
-    self.send(msg)
-  File "/usr/lib/python3.7/http/client.py", line 966, in send
-    self.connect()
-  File "/usr/lib/python3.7/http/client.py", line 1414, in connect
-    super().connect()
-  File "/usr/lib/python3.7/http/client.py", line 938, in connect
-    (self.host,self.port), self.timeout, self.source_address)
-  File "/usr/lib/python3.7/socket.py", line 707, in create_connection
-    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
-  File "/usr/lib/python3.7/socket.py", line 752, in getaddrinfo
-    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
-socket.gaierror: [Errno -3] Temporary failure in name resolution
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
-    timeout=10).read()
-  File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
-    return opener.open(url, data, timeout)
-  File "/usr/lib/python3.7/urllib/request.py", line 525, in open
-    response = self._open(req, data)
-  File "/usr/lib/python3.7/urllib/request.py", line 543, in _open
-    '_open', req)
-  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
-    result = func(*args)
-  File "/usr/lib/python3.7/urllib/request.py", line 1362, in https_open
-    context=self._context, check_hostname=self._check_hostname)
-  File "/usr/lib/python3.7/urllib/request.py", line 1321, in do_open
-    raise URLError(err)
-urllib.error.URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
-
+[INFO] (epika-python3) This package is up to date.
 [INFO] (epimetheus) This package is up to date.
 [INFO] (epinephrine) This package is up to date.
 [INFO] (epio) This package is up to date.
@@ -5189,7 +5144,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (eprsim) This package is up to date.
 [INFO] (eps) This package is up to date.
 [INFO] (eps-entropy) This package is up to date.
-[INFO] (epsagon) This package is up to date.
+[INFO] (epsagon) Data has been updated for this package.
 [INFO] (epsg-ident) This package is up to date.
 [INFO] (epsie) This package is up to date.
 [INFO] (epsilon) This package is up to date.
@@ -5296,7 +5251,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (equilibrator-api) This package is up to date.
 [INFO] (equilibrator-assets) This package is up to date.
 [INFO] (equilibrator-cache) This package is up to date.
-[INFO] (equilibrator-pathway) Data has been updated for this package.
+[INFO] (equilibrator-pathway) This package is up to date.
 [ERROR] (equilibrium) This package does not have downloadable releases.
 [INFO] (equilid) This package is up to date.
 [ERROR] (equinix-client) Could not get a response from API for this package. See below for details.
@@ -5417,7 +5372,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (erdc-quest) This package is up to date.
 [INFO] (erddapy) This package is up to date.
 [INFO] (erdesktop) This package is up to date.
-[INFO] (erdos) This package is up to date.
+[INFO] (erdos) Data has been updated for this package.
 [INFO] (ereb) This package is up to date.
 [INFO] (erebo) This package is up to date.
 [ERROR] (erebus) This package does not have downloadable releases.
@@ -6122,9 +6077,135 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (etcmaint) This package is up to date.
 [INFO] (etcpack) This package is up to date.
 [INFO] (etcpy) This package is up to date.
-[INFO] (ete-dendrogram-purity) This package is up to date.
-[INFO] (ete2) This package is up to date.
-[INFO] (ete3) This package is up to date.
+[ERROR] (ete-dendrogram-purity) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/urllib/request.py", line 1319, in do_open
+    encode_chunked=req.has_header('Transfer-encoding'))
+  File "/usr/lib/python3.7/http/client.py", line 1252, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1298, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1247, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.7/http/client.py", line 966, in send
+    self.connect()
+  File "/usr/lib/python3.7/http/client.py", line 1414, in connect
+    super().connect()
+  File "/usr/lib/python3.7/http/client.py", line 938, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "/usr/lib/python3.7/socket.py", line 707, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/lib/python3.7/socket.py", line 752, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.7/urllib/request.py", line 525, in open
+    response = self._open(req, data)
+  File "/usr/lib/python3.7/urllib/request.py", line 543, in _open
+    '_open', req)
+  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 1362, in https_open
+    context=self._context, check_hostname=self._check_hostname)
+  File "/usr/lib/python3.7/urllib/request.py", line 1321, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
+
+[ERROR] (ete2) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/urllib/request.py", line 1319, in do_open
+    encode_chunked=req.has_header('Transfer-encoding'))
+  File "/usr/lib/python3.7/http/client.py", line 1252, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1298, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1247, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.7/http/client.py", line 966, in send
+    self.connect()
+  File "/usr/lib/python3.7/http/client.py", line 1414, in connect
+    super().connect()
+  File "/usr/lib/python3.7/http/client.py", line 938, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "/usr/lib/python3.7/socket.py", line 707, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/lib/python3.7/socket.py", line 752, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.7/urllib/request.py", line 525, in open
+    response = self._open(req, data)
+  File "/usr/lib/python3.7/urllib/request.py", line 543, in _open
+    '_open', req)
+  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 1362, in https_open
+    context=self._context, check_hostname=self._check_hostname)
+  File "/usr/lib/python3.7/urllib/request.py", line 1321, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
+
+[ERROR] (ete3) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/urllib/request.py", line 1319, in do_open
+    encode_chunked=req.has_header('Transfer-encoding'))
+  File "/usr/lib/python3.7/http/client.py", line 1252, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1298, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1247, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.7/http/client.py", line 966, in send
+    self.connect()
+  File "/usr/lib/python3.7/http/client.py", line 1414, in connect
+    super().connect()
+  File "/usr/lib/python3.7/http/client.py", line 938, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "/usr/lib/python3.7/socket.py", line 707, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/lib/python3.7/socket.py", line 752, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.7/urllib/request.py", line 525, in open
+    response = self._open(req, data)
+  File "/usr/lib/python3.7/urllib/request.py", line 543, in _open
+    '_open', req)
+  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 1362, in https_open
+    context=self._context, check_hostname=self._check_hostname)
+  File "/usr/lib/python3.7/urllib/request.py", line 1321, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
+
 [INFO] (etelemetry) This package is up to date.
 [INFO] (etemplator) This package is up to date.
 [INFO] (etepcl) This package is up to date.
@@ -6383,7 +6464,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (etltest) This package is up to date.
 [INFO] (etltools) This package is up to date.
 [INFO] (etlx) This package is up to date.
-[INFO] (etm-dgraham) This package is up to date.
+[INFO] (etm-dgraham) Data has been updated for this package.
 [INFO] (etm-i2t) This package is up to date.
 [ERROR] (etm-lib) Could not get a response from API for this package. See below for details.
 Traceback (most recent call last):
@@ -7009,79 +7090,8 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (evernotezimport) This package is up to date.
 [INFO] (eversign) This package is up to date.
 [INFO] (everstdin) This package is up to date.
-[ERROR] (everton) Could not get a response from API for this package. See below for details.
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
-    timeout=10).read()
-  File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
-    return opener.open(url, data, timeout)
-  File "/usr/lib/python3.7/urllib/request.py", line 525, in open
-    response = self._open(req, data)
-  File "/usr/lib/python3.7/urllib/request.py", line 543, in _open
-    '_open', req)
-  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
-    result = func(*args)
-  File "/usr/lib/python3.7/urllib/request.py", line 1362, in https_open
-    context=self._context, check_hostname=self._check_hostname)
-  File "/usr/lib/python3.7/urllib/request.py", line 1322, in do_open
-    r = h.getresponse()
-  File "/usr/lib/python3.7/http/client.py", line 1344, in getresponse
-    response.begin()
-  File "/usr/lib/python3.7/http/client.py", line 306, in begin
-    version, status, reason = self._read_status()
-  File "/usr/lib/python3.7/http/client.py", line 267, in _read_status
-    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
-  File "/usr/lib/python3.7/socket.py", line 589, in readinto
-    return self._sock.recv_into(b)
-  File "/usr/lib/python3.7/ssl.py", line 1071, in recv_into
-    return self.read(nbytes, buffer)
-  File "/usr/lib/python3.7/ssl.py", line 929, in read
-    return self._sslobj.read(len, buffer)
-socket.timeout: The read operation timed out
-
-[ERROR] (every) Could not get a response from API for this package. See below for details.
-Traceback (most recent call last):
-  File "/usr/lib/python3.7/urllib/request.py", line 1319, in do_open
-    encode_chunked=req.has_header('Transfer-encoding'))
-  File "/usr/lib/python3.7/http/client.py", line 1252, in request
-    self._send_request(method, url, body, headers, encode_chunked)
-  File "/usr/lib/python3.7/http/client.py", line 1298, in _send_request
-    self.endheaders(body, encode_chunked=encode_chunked)
-  File "/usr/lib/python3.7/http/client.py", line 1247, in endheaders
-    self._send_output(message_body, encode_chunked=encode_chunked)
-  File "/usr/lib/python3.7/http/client.py", line 1026, in _send_output
-    self.send(msg)
-  File "/usr/lib/python3.7/http/client.py", line 966, in send
-    self.connect()
-  File "/usr/lib/python3.7/http/client.py", line 1414, in connect
-    super().connect()
-  File "/usr/lib/python3.7/http/client.py", line 938, in connect
-    (self.host,self.port), self.timeout, self.source_address)
-  File "/usr/lib/python3.7/socket.py", line 707, in create_connection
-    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
-  File "/usr/lib/python3.7/socket.py", line 752, in getaddrinfo
-    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
-socket.gaierror: [Errno -3] Temporary failure in name resolution
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
-    timeout=10).read()
-  File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
-    return opener.open(url, data, timeout)
-  File "/usr/lib/python3.7/urllib/request.py", line 525, in open
-    response = self._open(req, data)
-  File "/usr/lib/python3.7/urllib/request.py", line 543, in _open
-    '_open', req)
-  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
-    result = func(*args)
-  File "/usr/lib/python3.7/urllib/request.py", line 1362, in https_open
-    context=self._context, check_hostname=self._check_hostname)
-  File "/usr/lib/python3.7/urllib/request.py", line 1321, in do_open
-    raise URLError(err)
-urllib.error.URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
-
+[INFO] (everton) This package is up to date.
+[INFO] (every) This package is up to date.
 [INFO] (everyapp-bootstrap) This package is up to date.
 [ERROR] (everybit-python) This package does not have downloadable releases.
 [INFO] (everyclient) This package is up to date.
@@ -8224,7 +8234,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (execnet) This package is up to date.
 [INFO] (execo) This package is up to date.
 [INFO] (execode) This package is up to date.
-[INFO] (execsql) This package is up to date.
+[INFO] (execsql) Data has been updated for this package.
 [INFO] (exectiming) This package is up to date.
 [ERROR] (exectree) Could not get a response from API for this package. See below for details.
 Traceback (most recent call last):
@@ -8774,6 +8784,7 @@ urllib.error.URLError: <urlopen error timed out>
 [INFO] (extender) This package is up to date.
 [INFO] (extendinto) This package is up to date.
 [INFO] (extendparser) This package is up to date.
+[INFO] (extends) Data has been updated for this package.
 [INFO] (extensible-provn) This package is up to date.
 [INFO] (extension) This package is up to date.
 [INFO] (extension-helpers) This package is up to date.
@@ -8962,6 +8973,7 @@ Unsupported package directory structure.
 [INFO] (eywa) This package is up to date.
 [INFO] (eyws) This package is up to date.
 [INFO] (ez) This package is up to date.
+[INFO] (ez-address-parser) Data has been updated for this package.
 [INFO] (ez-awssecretmanager) This package is up to date.
 [INFO] (ez-deploy) This package is up to date.
 [INFO] (ez-elb) This package is up to date.
@@ -9096,6 +9108,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (ezmap) This package is up to date.
 [INFO] (ezmarkdown) This package is up to date.
 [INFO] (ezmath) This package is up to date.
+[INFO] (ezml) Data has been updated for this package.
 [INFO] (ezmomi) This package is up to date.
 [INFO] (ezntfs) This package is up to date.
 [INFO] (ezo) This package is up to date.
@@ -9154,10 +9167,10 @@ This package download URL does not point to a valid file: "http://www.billbaxter
 [INFO] (ezzybot) This package is up to date.
 [INFO] 
 [INFO] 
-[INFO] Total packages: 5811
-[INFO]     Packages processed: 5811
-[INFO]         Packages updated: 13
-[INFO]         Packages up-to-date: 5428
+[INFO] Total packages: 5813
+[INFO]     Packages processed: 5813
+[INFO]         Packages updated: 20
+[INFO]         Packages up-to-date: 5423
 [INFO]         Packages without response: 143
 [INFO]         Packages without urls: 0
 [INFO]         Packages without downloads: 176
