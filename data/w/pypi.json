@@ -6062,7 +6062,7 @@
             "wagtail_tag_manager.webdriver",
             "wagtail_tag_manager.widgets"
         ],
-        "version": "0.21.3"
+        "version": "0.21.4"
     },
     "wagtail-textract": {
         "cmdline": [],
@@ -6776,7 +6776,7 @@
     "wagtailgatsby": {
         "cmdline": [],
         "modules": [],
-        "version": "0.0.2"
+        "version": "0.1.3"
     },
     "wagtailgeowidget": {
         "cmdline": [],
@@ -7641,7 +7641,7 @@
             "wagtailuiplus",
             "wagtailuiplus.wagtail_hooks"
         ],
-        "version": "1.3.9"
+        "version": "1.3.12"
     },
     "wagtailvideos": {
         "cmdline": [],
@@ -7717,99 +7717,155 @@
         "cmdline": [],
         "modules": [
             "wai.annotations",
-            "wai.annotations.adams_utils",
-            "wai.annotations.adams_utils.constants",
-            "wai.annotations.coco_utils",
-            "wai.annotations.coco_utils.configuration",
-            "wai.annotations.coco_utils.configuration._Annotation",
-            "wai.annotations.coco_utils.configuration._COCOFile",
-            "wai.annotations.coco_utils.configuration._Category",
-            "wai.annotations.coco_utils.configuration._Image",
-            "wai.annotations.coco_utils.configuration._Info",
-            "wai.annotations.coco_utils.configuration._License",
-            "wai.annotations.converters",
-            "wai.annotations.converters.adams",
-            "wai.annotations.converters.adams._FromADAMSReport",
-            "wai.annotations.converters.adams._ToADAMSReport",
-            "wai.annotations.converters.coco",
-            "wai.annotations.converters.coco._FromCOCO",
-            "wai.annotations.converters.coco._ToCOCO",
-            "wai.annotations.converters.roi",
-            "wai.annotations.converters.roi._FromROI",
-            "wai.annotations.converters.roi._ToROI",
-            "wai.annotations.converters.tfexample",
-            "wai.annotations.converters.tfexample._FromTensorflowExample",
-            "wai.annotations.converters.tfexample._ToTensorflowExample",
-            "wai.annotations.converters.vgg",
-            "wai.annotations.converters.vgg._FromVGG",
-            "wai.annotations.converters.vgg._ToVGG",
+            "wai.annotations.adams",
+            "wai.annotations.adams._format",
+            "wai.annotations.adams.constants",
+            "wai.annotations.adams.convert",
+            "wai.annotations.adams.convert._FromADAMSReport",
+            "wai.annotations.adams.convert._ToADAMSReport",
+            "wai.annotations.adams.io",
+            "wai.annotations.adams.io._ADAMSReportReader",
+            "wai.annotations.adams.io._ADAMSReportWriter",
+            "wai.annotations.adams.utils",
+            "wai.annotations.adams.utils._prefixes",
+            "wai.annotations.coco",
+            "wai.annotations.coco._format",
+            "wai.annotations.coco.configuration",
+            "wai.annotations.coco.configuration._Annotation",
+            "wai.annotations.coco.configuration._COCOFile",
+            "wai.annotations.coco.configuration._Category",
+            "wai.annotations.coco.configuration._Image",
+            "wai.annotations.coco.configuration._Info",
+            "wai.annotations.coco.configuration._License",
+            "wai.annotations.coco.convert",
+            "wai.annotations.coco.convert._FromCOCO",
+            "wai.annotations.coco.convert._ToCOCO",
+            "wai.annotations.coco.io",
+            "wai.annotations.coco.io._COCOReader",
+            "wai.annotations.coco.io._COCOWriter",
             "wai.annotations.core",
-            "wai.annotations.core._ArgumentConsumer",
             "wai.annotations.core._Converter",
+            "wai.annotations.core._DuplicateImageNames",
             "wai.annotations.core._ExternalFormatConverter",
             "wai.annotations.core._ImageFormat",
             "wai.annotations.core._ImageInfo",
+            "wai.annotations.core._InlineStreamProcessor",
+            "wai.annotations.core._InputChain",
             "wai.annotations.core._InternalFormatConverter",
-            "wai.annotations.core._PerImageReader",
             "wai.annotations.core._Reader",
             "wai.annotations.core._SeparateImageWriter",
+            "wai.annotations.core._Settings",
             "wai.annotations.core._Writer",
             "wai.annotations.core._typing",
-            "wai.annotations.core.constants",
-            "wai.annotations.core.external_formats",
-            "wai.annotations.core.external_formats._adams",
-            "wai.annotations.core.external_formats._coco",
-            "wai.annotations.core.external_formats._roi",
-            "wai.annotations.core.external_formats._tensorflow_examples",
-            "wai.annotations.core.external_formats._typing",
-            "wai.annotations.core.external_formats._vgg",
+            "wai.annotations.core.cli",
+            "wai.annotations.core.cli._CommandLineADAMSReportReaderFactory",
+            "wai.annotations.core.cli._CommandLineADAMSReportWriterFactory",
+            "wai.annotations.core.cli._CommandLineCOCOReaderFactory",
+            "wai.annotations.core.cli._CommandLineCOCOWriterFactory",
+            "wai.annotations.core.cli._CommandLineConverterFactory",
+            "wai.annotations.core.cli._CommandLineExternalFormatConverterFactory",
+            "wai.annotations.core.cli._CommandLineFactory",
+            "wai.annotations.core.cli._CommandLineFromADAMSReportFactory",
+            "wai.annotations.core.cli._CommandLineFromCOCOFactory",
+            "wai.annotations.core.cli._CommandLineFromROIFactory",
+            "wai.annotations.core.cli._CommandLineFromTensorflowExampleFactory",
+            "wai.annotations.core.cli._CommandLineFromVGGFactory",
+            "wai.annotations.core.cli._CommandLineInternalFormatConverterFactory",
+            "wai.annotations.core.cli._CommandLineROIReaderFactory",
+            "wai.annotations.core.cli._CommandLineROIWriterFactory",
+            "wai.annotations.core.cli._CommandLineReaderFactory",
+            "wai.annotations.core.cli._CommandLineSeparateImageWriterFactory",
+            "wai.annotations.core.cli._CommandLineTensorflowExampleReaderFactory",
+            "wai.annotations.core.cli._CommandLineTensorflowExampleWriterFactory",
+            "wai.annotations.core.cli._CommandLineToADAMSReportFactory",
+            "wai.annotations.core.cli._CommandLineToCOCOFactory",
+            "wai.annotations.core.cli._CommandLineToROIFactory",
+            "wai.annotations.core.cli._CommandLineToTensorflowExampleFactory",
+            "wai.annotations.core.cli._CommandLineToVGGFactory",
+            "wai.annotations.core.cli._CommandLineVGGReaderFactory",
+            "wai.annotations.core.cli._CommandLineVGGWriterFactory",
+            "wai.annotations.core.cli._CommandLineWriterFactory",
+            "wai.annotations.core.coercions",
+            "wai.annotations.core.coercions._BoxBoundsCoercion",
+            "wai.annotations.core.coercions._Coercion",
+            "wai.annotations.core.coercions._MaskBoundsCoercion",
+            "wai.annotations.core.logging",
+            "wai.annotations.core.logging._LoggingEnabled",
+            "wai.annotations.core.logging._StreamLogger",
+            "wai.annotations.core.logging._root_logger",
             "wai.annotations.core.utils",
+            "wai.annotations.core.utils._chain_map",
             "wai.annotations.core.utils._extension_to_regex",
+            "wai.annotations.core.utils._get_associated_image",
             "wai.annotations.core.utils._get_files_from_directory",
             "wai.annotations.core.utils._get_image_size",
-            "wai.annotations.core.utils._get_object_label",
-            "wai.annotations.core.utils._get_object_prefix",
-            "wai.annotations.io",
-            "wai.annotations.io.adams",
-            "wai.annotations.io.adams._ADAMSReportReader",
-            "wai.annotations.io.adams._ADAMSReportWriter",
-            "wai.annotations.io.coco",
-            "wai.annotations.io.coco._COCOReader",
-            "wai.annotations.io.coco._COCOWriter",
-            "wai.annotations.io.roi",
-            "wai.annotations.io.roi._ROIReader",
-            "wai.annotations.io.roi._ROIWriter",
-            "wai.annotations.io.tfexample",
-            "wai.annotations.io.tfexample._TensorflowExampleReader",
-            "wai.annotations.io.tfexample._TensorflowExampleWriter",
-            "wai.annotations.io.vgg",
-            "wai.annotations.io.vgg._VGGReader",
-            "wai.annotations.io.vgg._VGGWriter",
+            "wai.annotations.core.utils._metadata",
+            "wai.annotations.core.utils._read_file_list",
+            "wai.annotations.core.utils._recursive_iglob",
+            "wai.annotations.image_utils",
+            "wai.annotations.image_utils._image",
+            "wai.annotations.image_utils._masks",
             "wai.annotations.main",
-            "wai.annotations.main._coercions",
             "wai.annotations.main._components",
             "wai.annotations.main._main",
             "wai.annotations.main._parser",
-            "wai.annotations.roi_utils",
-            "wai.annotations.roi_utils._ROIObject",
-            "wai.annotations.roi_utils.constants",
-            "wai.annotations.tf_utils",
-            "wai.annotations.tf_utils._extract_feature",
-            "wai.annotations.tf_utils._make_feature",
-            "wai.annotations.tf_utils._open_sharded_output_tfrecords",
-            "wai.annotations.tf_utils._sharded_filenames",
-            "wai.annotations.vgg_utils",
-            "wai.annotations.vgg_utils.configuration",
-            "wai.annotations.vgg_utils.configuration._FileAttributes",
-            "wai.annotations.vgg_utils.configuration._Image",
-            "wai.annotations.vgg_utils.configuration._ImageQuality",
-            "wai.annotations.vgg_utils.configuration._PolygonShapeAttributes",
-            "wai.annotations.vgg_utils.configuration._RectShapeAttributes",
-            "wai.annotations.vgg_utils.configuration._Region",
-            "wai.annotations.vgg_utils.configuration._RegionAttributes",
-            "wai.annotations.vgg_utils.configuration._VGGFile"
+            "wai.annotations.roi",
+            "wai.annotations.roi._ROIObject",
+            "wai.annotations.roi._format",
+            "wai.annotations.roi.constants",
+            "wai.annotations.roi.convert",
+            "wai.annotations.roi.convert._FromROI",
+            "wai.annotations.roi.convert._ToROI",
+            "wai.annotations.roi.io",
+            "wai.annotations.roi.io._ROIReader",
+            "wai.annotations.roi.io._ROIWriter",
+            "wai.annotations.roi.utils",
+            "wai.annotations.roi.utils._combine_dicts",
+            "wai.annotations.roi.utils._filenames",
+            "wai.annotations.roi.utils._min_rect_from_roi_polygon",
+            "wai.annotations.roi.utils._polygon_from_roi_object",
+            "wai.annotations.roi.utils._roi_polygon",
+            "wai.annotations.tf",
+            "wai.annotations.tf._ensure_available",
+            "wai.annotations.tf._format",
+            "wai.annotations.tf.convert",
+            "wai.annotations.tf.convert._FromTensorflowExample",
+            "wai.annotations.tf.convert._ToTensorflowExample",
+            "wai.annotations.tf.io",
+            "wai.annotations.tf.io._TensorflowExampleReader",
+            "wai.annotations.tf.io._TensorflowExampleWriter",
+            "wai.annotations.tf.utils",
+            "wai.annotations.tf.utils._LabelMapAccumulator",
+            "wai.annotations.tf.utils._ShardCompactor",
+            "wai.annotations.tf.utils._extract_feature",
+            "wai.annotations.tf.utils._image_info_from_example",
+            "wai.annotations.tf.utils._make_feature",
+            "wai.annotations.tf.utils._mask_from_polygon",
+            "wai.annotations.tf.utils._negative_example",
+            "wai.annotations.tf.utils._open_sharded_output_tfrecords",
+            "wai.annotations.tf.utils._polygon_from_mask",
+            "wai.annotations.tf.utils._sharded_filenames",
+            "wai.annotations.vgg",
+            "wai.annotations.vgg._format",
+            "wai.annotations.vgg.configuration",
+            "wai.annotations.vgg.configuration._FileAttributes",
+            "wai.annotations.vgg.configuration._Image",
+            "wai.annotations.vgg.configuration._ImageQuality",
+            "wai.annotations.vgg.configuration._PolygonShapeAttributes",
+            "wai.annotations.vgg.configuration._RectShapeAttributes",
+            "wai.annotations.vgg.configuration._Region",
+            "wai.annotations.vgg.configuration._RegionAttributes",
+            "wai.annotations.vgg.configuration._VGGFile",
+            "wai.annotations.vgg.convert",
+            "wai.annotations.vgg.convert._FromVGG",
+            "wai.annotations.vgg.convert._ToVGG",
+            "wai.annotations.vgg.io",
+            "wai.annotations.vgg.io._VGGReader",
+            "wai.annotations.vgg.io._VGGWriter",
+            "wai.annotations.vgg.utils",
+            "wai.annotations.vgg.utils._shape_attributes"
         ],
-        "version": "0.0.4"
+        "version": "0.1.2"
     },
     "wai-common": {
         "cmdline": [],
@@ -7936,6 +7992,8 @@
             "wai.common.json.validator._JSONValidatorBase",
             "wai.common.json.validator._JSONValidatorClass",
             "wai.common.json.validator._JSONValidatorInstance",
+            "wai.common.logging",
+            "wai.common.logging._standard_logger",
             "wai.common.meta",
             "wai.common.meta._InstanceProperty",
             "wai.common.meta._functions",
@@ -7959,7 +8017,7 @@
             "wai.common.statistics",
             "wai.common.statistics._functions"
         ],
-        "version": "0.0.20"
+        "version": "0.0.21"
     },
     "wai-ma": {
         "cmdline": [],
@@ -8428,6 +8486,15 @@
         ],
         "version": "0.0.2"
     },
+    "wai-tfutils": {
+        "cmdline": [],
+        "modules": [
+            "wai.tfutils",
+            "wai.tfutils._graph",
+            "wai.tfutils._inference"
+        ],
+        "version": "0.0.1"
+    },
     "waifu": {
         "cmdline": [],
         "modules": [
@@ -8519,6 +8586,14 @@
         ],
         "modules": [],
         "version": "1.0.10"
+    },
+    "wait-notify": {
+        "cmdline": [],
+        "modules": [
+            "wait_notify",
+            "wait_notify.cli"
+        ],
+        "version": "0.1.0"
     },
     "wait-response": {
         "cmdline": [],
@@ -10246,6 +10321,7 @@
             "waldur_mastermind.marketplace.migrations.0008_remove_offering_enable_dynamic_components",
             "waldur_mastermind.marketplace.migrations.0009_offering_parent",
             "waldur_mastermind.marketplace.migrations.0010_allow_null_widget",
+            "waldur_mastermind.marketplace.migrations.0011_offering_datacite_doi",
             "waldur_mastermind.marketplace.models",
             "waldur_mastermind.marketplace.permissions",
             "waldur_mastermind.marketplace.plugins",
@@ -10483,6 +10559,14 @@
             "waldur_paypal.tasks",
             "waldur_paypal.urls",
             "waldur_paypal.views",
+            "waldur_pid",
+            "waldur_pid.apps",
+            "waldur_pid.backend",
+            "waldur_pid.exceptions",
+            "waldur_pid.extension",
+            "waldur_pid.mixins",
+            "waldur_pid.tasks",
+            "waldur_pid.utils",
             "waldur_rancher",
             "waldur_rancher.admin",
             "waldur_rancher.apps",
@@ -10611,7 +10695,7 @@
             "waldur_zabbix.utils",
             "waldur_zabbix.views"
         ],
-        "version": "4.3.7"
+        "version": "4.3.9"
     },
     "waldur-openstack": {
         "cmdline": [],
@@ -14357,6 +14441,7 @@
             "ward",
             "ward._ward_version",
             "ward.collect",
+            "ward.config",
             "ward.diff",
             "ward.errors",
             "ward.expect",
@@ -14368,7 +14453,7 @@
             "ward.testing",
             "ward.util"
         ],
-        "version": "0.25.0b0"
+        "version": "0.27.0b0"
     },
     "ward-metrics": {
         "cmdline": [],
@@ -14639,6 +14724,15 @@
     "warp": {
         "cmdline": [],
         "modules": [],
+        "version": "0.0.1"
+    },
+    "warp-loss": {
+        "cmdline": [],
+        "modules": [
+            "warp_loss",
+            "warp_loss._nbdev",
+            "warp_loss.losses"
+        ],
         "version": "0.0.1"
     },
     "warp-pipe": {
@@ -15752,7 +15846,7 @@
         "modules": [
             "wasdi"
         ],
-        "version": "0.1.34"
+        "version": "0.2.3"
     },
     "wasecatools": {
         "cmdline": [],
@@ -16580,7 +16674,7 @@
         "modules": [
             "watched_schema"
         ],
-        "version": "0.4.2"
+        "version": "0.5.1"
     },
     "watched-sdk": {
         "cmdline": [],
@@ -16597,7 +16691,7 @@
             "watched_sdk.test",
             "watched_sdk.views"
         ],
-        "version": "0.2.0"
+        "version": "0.2.1"
     },
     "watchedserial": {
         "cmdline": [],
@@ -16777,7 +16871,7 @@
             "watchlogs",
             "watchlogs.watchlogs"
         ],
-        "version": "0.1.3.13"
+        "version": "0.1.3.16"
     },
     "watchm8": {
         "cmdline": [],
@@ -16810,24 +16904,8 @@
     },
     "watchmaker": {
         "cmdline": [],
-        "modules": [
-            "watchmaker",
-            "watchmaker.cli",
-            "watchmaker.exceptions",
-            "watchmaker.logger",
-            "watchmaker.managers",
-            "watchmaker.managers.platform",
-            "watchmaker.managers.worker_manager",
-            "watchmaker.static",
-            "watchmaker.utils",
-            "watchmaker.utils.urllib",
-            "watchmaker.utils.urllib.request_handlers",
-            "watchmaker.workers",
-            "watchmaker.workers.base",
-            "watchmaker.workers.salt",
-            "watchmaker.workers.yum"
-        ],
-        "version": "0.16.7"
+        "modules": [],
+        "version": "0.17.0"
     },
     "watchman": {
         "cmdline": [],
@@ -19745,8 +19823,31 @@
     },
     "wavefront-cli-dev-test": {
         "cmdline": [],
-        "modules": [],
-        "version": ""
+        "modules": [
+            "wavefront_cli",
+            "wavefront_cli.cli",
+            "wavefront_cli.commands",
+            "wavefront_cli.commands.base",
+            "wavefront_cli.commands.configure",
+            "wavefront_cli.commands.hello",
+            "wavefront_cli.commands.install",
+            "wavefront_cli.commands.integration",
+            "wavefront_cli.integrations",
+            "wavefront_cli.integrations.base",
+            "wavefront_cli.integrations.example",
+            "wavefront_cli.integrations.statsd",
+            "wavefront_cli.integrations.wavefront",
+            "wavefront_cli.lib",
+            "wavefront_cli.lib.agent",
+            "wavefront_cli.lib.api",
+            "wavefront_cli.lib.auth",
+            "wavefront_cli.lib.aws",
+            "wavefront_cli.lib.message",
+            "wavefront_cli.lib.proxy",
+            "wavefront_cli.lib.system",
+            "wavefront_cli.lib.util"
+        ],
+        "version": "0.0.119"
     },
     "wavefront-cli-test": {
         "cmdline": [],
@@ -20405,14 +20506,45 @@
             "wavescli.logger",
             "wavescli.waves"
         ],
-        "version": "0.0.32"
+        "version": "0.0.33"
     },
     "waveshare-rpi": {
         "cmdline": [],
         "modules": [
             "waveshare"
         ],
-        "version": "0.1.2"
+        "version": "0.1.3"
+    },
+    "wavespec": {
+        "cmdline": [],
+        "modules": [
+            "wavespec",
+            "wavespec.Fourier",
+            "wavespec.Fourier.FFT",
+            "wavespec.Globals",
+            "wavespec.LombScargle",
+            "wavespec.LombScargle.LombScargle",
+            "wavespec.LombScargle._CFunctions",
+            "wavespec.Spectrogram",
+            "wavespec.Spectrogram.DetectGaps",
+            "wavespec.Spectrogram.GetWindows",
+            "wavespec.Spectrogram.PlotSpectrogram",
+            "wavespec.Spectrogram.Spectrogram",
+            "wavespec.Spectrogram.Spectrogram3D",
+            "wavespec.Test",
+            "wavespec.Test.TestLS",
+            "wavespec.Test.TestPolarization",
+            "wavespec.Test.TestSpectrogram",
+            "wavespec.Tests",
+            "wavespec.Tools",
+            "wavespec.Tools.ArrowLine",
+            "wavespec.Tools.PolArrow",
+            "wavespec.Tools.Polarization2D",
+            "wavespec.Tools.UTPlotLabel",
+            "wavespec.Tools.WindowFunctions",
+            "wavespec._CheckFirstImport"
+        ],
+        "version": "0.0.1"
     },
     "wavespectra": {
         "cmdline": [],
@@ -21618,7 +21750,7 @@
             "wbplot.utils.plots",
             "wbplot.wbplot"
         ],
-        "version": "1.0.8"
+        "version": "1.0.9"
     },
     "wbpy": {
         "cmdline": [],
@@ -21650,6 +21782,14 @@
             "polls.views"
         ],
         "version": "0.1"
+    },
+    "wbsv": {
+        "cmdline": [],
+        "modules": [
+            "wbsv",
+            "wbsv.Archive"
+        ],
+        "version": "0.0.4"
     },
     "wbswjc-greeting": {
         "cmdline": [],
@@ -22400,6 +22540,21 @@
             "wcpan.acd.controller"
         ],
         "version": "1.2.0"
+    },
+    "wcpan-drive-cli": {
+        "cmdline": [],
+        "modules": [],
+        "version": "1.0.0"
+    },
+    "wcpan-drive-core": {
+        "cmdline": [],
+        "modules": [],
+        "version": "1.0.0"
+    },
+    "wcpan-drive-crypt": {
+        "cmdline": [],
+        "modules": [],
+        "version": "1.0.0"
     },
     "wcpan-drive-google": {
         "cmdline": [],
@@ -24880,7 +25035,7 @@
             "web_skeleton3",
             "web_skeleton3.main"
         ],
-        "version": "1.7.9"
+        "version": "1.8.1"
     },
     "web-templates": {
         "cmdline": [],
@@ -25131,7 +25286,7 @@
             "web2ldap.web.session",
             "web2ldap.wsgi"
         ],
-        "version": "1.5.47"
+        "version": "1.5.48"
     },
     "web2pandas": {
         "cmdline": [],
@@ -27701,7 +27856,7 @@
             "webdriver_components.testutils",
             "webdriver_components.utils"
         ],
-        "version": "0.12.0"
+        "version": "0.13.0"
     },
     "webdriver-components-py2": {
         "cmdline": [],
@@ -29956,7 +30111,7 @@
             "webob.static",
             "webob.util"
         ],
-        "version": "1.8.5"
+        "version": "1.8.6"
     },
     "webob-graphql": {
         "cmdline": [],
@@ -31225,7 +31380,7 @@
             "WebRequest.iri2uri",
             "WebRequest.utility"
         ],
-        "version": "0.0.67"
+        "version": "0.0.68"
     },
     "webreview": {
         "cmdline": [],
@@ -31234,7 +31389,7 @@
             "webreview.test_auth",
             "webreview.webreview"
         ],
-        "version": "0.1.7"
+        "version": "0.1.8"
     },
     "webrpc": {
         "cmdline": [],
@@ -31844,7 +31999,7 @@
             "webscrapbook.server",
             "webscrapbook.util"
         ],
-        "version": "0.11.0"
+        "version": "0.12.0"
     },
     "webscraper": {
         "cmdline": [],
@@ -33622,7 +33777,7 @@
             "webviz_config.webviz_assets",
             "webviz_config.webviz_store"
         ],
-        "version": "0.0.43"
+        "version": "0.0.44"
     },
     "webviz-config-equinor": {
         "cmdline": [],
@@ -35577,7 +35732,7 @@
             "weishaupt_wcm_com",
             "weishaupt_wcm_com.heat_exchanger"
         ],
-        "version": "0.0.6"
+        "version": "0.0.7"
     },
     "weixin": {
         "cmdline": [],
@@ -38482,7 +38637,7 @@
         "modules": [
             "database_connection_honeycomb"
         ],
-        "version": "0.3.0"
+        "version": "0.4.0"
     },
     "wf-geom-render": {
         "cmdline": [],
@@ -38490,7 +38645,7 @@
             "geom_render",
             "geom_render.core"
         ],
-        "version": "0.2.0"
+        "version": "0.3.0"
     },
     "wf-gqlpycgen": {
         "cmdline": [],
@@ -38535,6 +38690,16 @@
         "modules": [
             "pose_tracking_3d",
             "pose_tracking_3d.core"
+        ],
+        "version": "0.1.0"
+    },
+    "wf-process-cuwb-data": {
+        "cmdline": [],
+        "modules": [
+            "process_cuwb_data",
+            "process_cuwb_data.core",
+            "process_cuwb_data.geom_render",
+            "process_cuwb_data.visualize"
         ],
         "version": "0.1.0"
     },
@@ -39005,7 +39170,7 @@
             "wfuzz.utils",
             "wfuzz.wfuzz"
         ],
-        "version": "2.4.4"
+        "version": "2.4.5"
     },
     "wfuzzer": {
         "cmdline": [],
@@ -42710,10 +42875,10 @@
             "whitepaper.core",
             "whitepaper.core.core",
             "whitepaper.google",
-            "whitepaper.google.GoogleChart",
+            "whitepaper.google.google",
             "whitepaper.version"
         ],
-        "version": "0.0.13"
+        "version": "0.0.31"
     },
     "whitepeaks": {
         "cmdline": [],
@@ -43756,8 +43921,13 @@
     },
     "whyclick": {
         "cmdline": [],
-        "modules": [],
-        "version": "0.0.5"
+        "modules": [
+            "whyclick",
+            "whyclick.chrome",
+            "whyclick.cli",
+            "whyclick.whyq"
+        ],
+        "version": "0.0.7"
     },
     "whydtogo": {
         "cmdline": [],
@@ -44540,6 +44710,52 @@
             "wificamera.wificamera"
         ],
         "version": "0.1.1"
+    },
+    "wifihunter": {
+        "cmdline": [
+            "wifihunter.py"
+        ],
+        "modules": [
+            "src",
+            "src.config",
+            "src.handlers",
+            "src.handlers.args",
+            "src.handlers.attack",
+            "src.handlers.client",
+            "src.handlers.color",
+            "src.handlers.crack",
+            "src.handlers.handshake",
+            "src.handlers.input",
+            "src.handlers.process",
+            "src.handlers.result",
+            "src.handlers.scanner",
+            "src.handlers.target",
+            "src.handlers.timer",
+            "src.plugins",
+            "src.plugins.aircrack",
+            "src.plugins.aireplay",
+            "src.plugins.airmon",
+            "src.plugins.airodump",
+            "src.plugins.bully",
+            "src.plugins.cowpatty",
+            "src.plugins.dependency",
+            "src.plugins.hashcat",
+            "src.plugins.ifconfig",
+            "src.plugins.iwconfig",
+            "src.plugins.john",
+            "src.plugins.macchanger",
+            "src.plugins.pyrit",
+            "src.plugins.reaver",
+            "src.plugins.tshark",
+            "src.plugins.wash",
+            "src.tools",
+            "src.tools.all",
+            "src.tools.pmkid",
+            "src.tools.wep",
+            "src.tools.wpa",
+            "src.tools.wps"
+        ],
+        "version": "1.0.0"
     },
     "wifiinfo": {
         "cmdline": [],
@@ -49158,6 +49374,11 @@
             "windeft"
         ],
         "version": "1.0.0"
+    },
+    "windel": {
+        "cmdline": [],
+        "modules": [],
+        "version": "0.0.1"
     },
     "windflow": {
         "cmdline": [],
@@ -58828,7 +59049,7 @@
             "wofrysrw.srw_object",
             "wofrysrw.version"
         ],
-        "version": "1.1.4"
+        "version": "1.1.5"
     },
     "wofrywise2": {
         "cmdline": [],
@@ -61724,7 +61945,7 @@
             "wordcloud_fa.WordCloudFa",
             "wordcloud_fa.test"
         ],
-        "version": "0.1.4"
+        "version": "0.1.5"
     },
     "wordcount": {
         "cmdline": [],
@@ -65012,6 +65233,13 @@
         ],
         "version": "0.19.0"
     },
+    "worldguess": {
+        "cmdline": [],
+        "modules": [
+            "worldguess_pkg"
+        ],
+        "version": "0.0.1"
+    },
     "worldmap": {
         "cmdline": [],
         "modules": [
@@ -66366,7 +66594,7 @@
             "wpiformat.version",
             "wpiformat.whitespace"
         ],
-        "version": "2020.21"
+        "version": "2020.28"
     },
     "wpilib": {
         "cmdline": [],
@@ -67219,7 +67447,7 @@
         "modules": [
             "wq"
         ],
-        "version": "1.1.0"
+        "version": "1.2.0"
     },
     "wq-app": {
         "cmdline": [],
@@ -67236,7 +67464,7 @@
             "wq.app.build.phonegap",
             "wq.app.build.setversion"
         ],
-        "version": "1.1.2"
+        "version": "1.2.0"
     },
     "wq-core": {
         "cmdline": [],
@@ -67346,7 +67574,7 @@
             "wq.start.projects",
             "wq.start.version"
         ],
-        "version": "1.1.1"
+        "version": "1.2.0"
     },
     "wqio": {
         "cmdline": [],
@@ -68538,6 +68766,7 @@
             "WrightTools.artists._helpers",
             "WrightTools.artists._interact",
             "WrightTools.artists._quick",
+            "WrightTools.artists._turbo",
             "WrightTools.collection",
             "WrightTools.collection._cary",
             "WrightTools.collection._collection",
@@ -68579,7 +68808,7 @@
             "WrightTools.kit._utilities",
             "WrightTools.units"
         ],
-        "version": "3.2.5"
+        "version": "3.2.6"
     },
     "wrimg": {
         "cmdline": [],
@@ -71197,7 +71426,7 @@
             "wspg.query_rules_rule_set_parser",
             "wspg.session"
         ],
-        "version": "1.14"
+        "version": "1.16"
     },
     "wspr": {
         "cmdline": [],
@@ -72915,12 +73144,15 @@
             "test",
             "test.env",
             "test.test",
+            "tests",
+            "tests.env",
+            "tests.test",
             "wudder",
             "wudder.errors",
             "wudder.utils",
             "wudder.wudder"
         ],
-        "version": "0.0.2b0"
+        "version": "0.0.5b0"
     },
     "wudi": {
         "cmdline": [],
@@ -72994,6 +73226,16 @@
             "wuguan"
         ],
         "version": "1.0.0"
+    },
+    "wuhan2019ncov": {
+        "cmdline": [],
+        "modules": [],
+        "version": "0.0.8"
+    },
+    "wuhanncov": {
+        "cmdline": [],
+        "modules": [],
+        "version": "0.0.1"
     },
     "wujietextproject": {
         "cmdline": [],
@@ -73821,7 +74063,7 @@
             "wwpdb.io.sftp.ArchiveIoBase",
             "wwpdb.io.sftp.ArchiveIoSftp"
         ],
-        "version": "0.10.dev2"
+        "version": "0.10"
     },
     "wwpdb-utils-align": {
         "cmdline": [],
@@ -73833,6 +74075,23 @@
             "wwpdb.utils.align.SequenceReferenceData"
         ],
         "version": "0.10"
+    },
+    "wwpdb-utils-cc-dict-util": {
+        "cmdline": [],
+        "modules": [
+            "wwpdb",
+            "wwpdb.utils",
+            "wwpdb.utils.cc_dict_util",
+            "wwpdb.utils.cc_dict_util.persist",
+            "wwpdb.utils.cc_dict_util.persist.PdbxChemCompCategoryDefinitions",
+            "wwpdb.utils.cc_dict_util.persist.PdbxChemCompConstants",
+            "wwpdb.utils.cc_dict_util.persist.PdbxChemCompDictIndex",
+            "wwpdb.utils.cc_dict_util.persist.PdbxChemCompDictUtil",
+            "wwpdb.utils.cc_dict_util.persist.PdbxChemCompPersist",
+            "wwpdb.utils.cc_dict_util.timeout",
+            "wwpdb.utils.cc_dict_util.timeout.TimeoutMultiProc"
+        ],
+        "version": "0.3.dev1"
     },
     "wwpdb-utils-config": {
         "cmdline": [],
@@ -73851,7 +74110,7 @@
             "wwpdb.utils.config.ConfigInfoShellExec",
             "wwpdb.utils.config.ConfigInfoSiteAccess"
         ],
-        "version": "0.7"
+        "version": "0.13"
     },
     "wwpdb-utils-detach": {
         "cmdline": [],
@@ -73879,7 +74138,7 @@
             "wwpdb.utils.session.WebRequest",
             "wwpdb.utils.session.WebUploadUtils"
         ],
-        "version": "0.8.dev3"
+        "version": "0.8"
     },
     "wwpdb-utils-testing": {
         "cmdline": [],
@@ -73937,7 +74196,7 @@
             "wwpdb.utils.ws_utils.ServiceWorkerBase",
             "wwpdb.utils.ws_utils.TokenUtils"
         ],
-        "version": "0.2.dev2"
+        "version": "0.2"
     },
     "wwr-api": {
         "cmdline": [],
