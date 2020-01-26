@@ -737,49 +737,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (hanyutools) This package is up to date.
 [INFO] (hanzi2pinyin) This package is up to date.
 [INFO] (hanziconv) This package is up to date.
-[ERROR] (hanzidentifier) Could not get a response from API for this package. See below for details.
-Traceback (most recent call last):
-  File "/usr/lib/python3.7/urllib/request.py", line 1319, in do_open
-    encode_chunked=req.has_header('Transfer-encoding'))
-  File "/usr/lib/python3.7/http/client.py", line 1252, in request
-    self._send_request(method, url, body, headers, encode_chunked)
-  File "/usr/lib/python3.7/http/client.py", line 1298, in _send_request
-    self.endheaders(body, encode_chunked=encode_chunked)
-  File "/usr/lib/python3.7/http/client.py", line 1247, in endheaders
-    self._send_output(message_body, encode_chunked=encode_chunked)
-  File "/usr/lib/python3.7/http/client.py", line 1026, in _send_output
-    self.send(msg)
-  File "/usr/lib/python3.7/http/client.py", line 966, in send
-    self.connect()
-  File "/usr/lib/python3.7/http/client.py", line 1414, in connect
-    super().connect()
-  File "/usr/lib/python3.7/http/client.py", line 938, in connect
-    (self.host,self.port), self.timeout, self.source_address)
-  File "/usr/lib/python3.7/socket.py", line 707, in create_connection
-    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
-  File "/usr/lib/python3.7/socket.py", line 752, in getaddrinfo
-    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
-socket.gaierror: [Errno -3] Temporary failure in name resolution
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
-    timeout=10).read()
-  File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
-    return opener.open(url, data, timeout)
-  File "/usr/lib/python3.7/urllib/request.py", line 525, in open
-    response = self._open(req, data)
-  File "/usr/lib/python3.7/urllib/request.py", line 543, in _open
-    '_open', req)
-  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
-    result = func(*args)
-  File "/usr/lib/python3.7/urllib/request.py", line 1362, in https_open
-    context=self._context, check_hostname=self._check_hostname)
-  File "/usr/lib/python3.7/urllib/request.py", line 1321, in do_open
-    raise URLError(err)
-urllib.error.URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
-
+[INFO] (hanzidentifier) This package is up to date.
 [INFO] (hanzigrid) This package is up to date.
 [INFO] (hanzilvlib) This package is up to date.
 [INFO] (hanzo-warc-tools) This package is up to date.
@@ -828,7 +786,49 @@ urllib.error.URLError: <urlopen error [Errno -3] Temporary failure in name resol
 [ERROR] (hapi-vendor-netriplex) This package does not have downloadable releases.
 [ERROR] (hapi-vendor-noip) This package does not have downloadable releases.
 [ERROR] (hapi-vendor-nsone) This package does not have downloadable releases.
-[INFO] (hapi-vendor-r53) This package is up to date.
+[ERROR] (hapi-vendor-r53) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/urllib/request.py", line 1319, in do_open
+    encode_chunked=req.has_header('Transfer-encoding'))
+  File "/usr/lib/python3.7/http/client.py", line 1252, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1298, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1247, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.7/http/client.py", line 966, in send
+    self.connect()
+  File "/usr/lib/python3.7/http/client.py", line 1422, in connect
+    server_hostname=server_hostname)
+  File "/usr/lib/python3.7/ssl.py", line 423, in wrap_socket
+    session=session
+  File "/usr/lib/python3.7/ssl.py", line 870, in _create
+    self.do_handshake()
+  File "/usr/lib/python3.7/ssl.py", line 1139, in do_handshake
+    self._sslobj.do_handshake()
+socket.timeout: _ssl.c:1059: The handshake operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.7/urllib/request.py", line 525, in open
+    response = self._open(req, data)
+  File "/usr/lib/python3.7/urllib/request.py", line 543, in _open
+    '_open', req)
+  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 1362, in https_open
+    context=self._context, check_hostname=self._check_hostname)
+  File "/usr/lib/python3.7/urllib/request.py", line 1321, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error _ssl.c:1059: The handshake operation timed out>
+
 [ERROR] (hapi-vendor-rackspace) This package does not have downloadable releases.
 [ERROR] (hapi-vendor-savvisdirect) This package does not have downloadable releases.
 [ERROR] (hapi-vendor-softlayer) This package does not have downloadable releases.
@@ -982,7 +982,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (harmony-discord) This package is up to date.
 [INFO] (harmony-pytorch) This package is up to date.
 [INFO] (harmony-tools) This package is up to date.
-[INFO] (harmony-transaction-generator) This package is up to date.
+[INFO] (harmony-transaction-generator) Data has been updated for this package.
 [INFO] (harmonypy) This package is up to date.
 [INFO] (harmonyqt) This package is up to date.
 [ERROR] (harmopy) Could not extract data from this package. See below for details.
@@ -1272,7 +1272,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (hawkeyelib) This package is up to date.
 [INFO] (hawking) This package is up to date.
 [INFO] (hawking-proto) This package is up to date.
-[INFO] (hawkmoth) This package is up to date.
+[INFO] (hawkmoth) Data has been updated for this package.
 [INFO] (hawkrest) This package is up to date.
 [INFO] (hawks) This package is up to date.
 [INFO] (hawktracer) This package is up to date.
@@ -1330,7 +1330,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (hazake1235) This package is up to date.
 [INFO] (haze) This package is up to date.
 [INFO] (hazel) This package is up to date.
-[INFO] (hazelbean) Data has been updated for this package.
+[INFO] (hazelbean) This package is up to date.
 [INFO] (hazelcast-python-client) This package is up to date.
 [INFO] (hazelcast-remote-controller) This package is up to date.
 [ERROR] (hazelinv) Could not get a response from API for this package. See below for details.
@@ -1375,7 +1375,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (hbi) This package is up to date.
 [INFO] (hbi-datagen) This package is up to date.
 [INFO] (hblock) This package is up to date.
-[INFO] (hbmqtt) This package is up to date.
+[INFO] (hbmqtt) Data has been updated for this package.
 [INFO] (hbmqtt-auth-home-assistant) This package is up to date.
 [INFO] (hbp-archive) This package is up to date.
 [INFO] (hbp-knowledge) This package is up to date.
@@ -1423,7 +1423,7 @@ Traceback (most recent call last):
     raise HTTPError(req.full_url, code, msg, hdrs, fp)
 urllib.error.HTTPError: HTTP Error 404: Not Found
 
-[INFO] (hca) Data has been updated for this package.
+[INFO] (hca) This package is up to date.
 [INFO] (hca-bundle-jsonld) This package is up to date.
 [INFO] (hca-cli) This package is up to date.
 [INFO] (hca-ingest) This package is up to date.
@@ -1715,7 +1715,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (headjack) This package is up to date.
 [INFO] (headless-pdfkit) This package is up to date.
 [INFO] (headlessvim) This package is up to date.
-[INFO] (headliner) Data has been updated for this package.
+[INFO] (headliner) This package is up to date.
 [INFO] (headlines) This package is up to date.
 [INFO] (headlock) This package is up to date.
 [INFO] (headnode-notifier) This package is up to date.
@@ -1838,7 +1838,49 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (heat-infoblox) This package is up to date.
 [INFO] (heat-tempest-plugin) This package is up to date.
 [INFO] (heat-translator) This package is up to date.
-[INFO] (heat1d) This package is up to date.
+[ERROR] (heat1d) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/urllib/request.py", line 1319, in do_open
+    encode_chunked=req.has_header('Transfer-encoding'))
+  File "/usr/lib/python3.7/http/client.py", line 1252, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1298, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1247, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.7/http/client.py", line 966, in send
+    self.connect()
+  File "/usr/lib/python3.7/http/client.py", line 1414, in connect
+    super().connect()
+  File "/usr/lib/python3.7/http/client.py", line 938, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "/usr/lib/python3.7/socket.py", line 707, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/lib/python3.7/socket.py", line 752, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.7/urllib/request.py", line 525, in open
+    response = self._open(req, data)
+  File "/usr/lib/python3.7/urllib/request.py", line 543, in _open
+    '_open', req)
+  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 1362, in https_open
+    context=self._context, check_hostname=self._check_hostname)
+  File "/usr/lib/python3.7/urllib/request.py", line 1321, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
+
 [INFO] (heatequation) This package is up to date.
 [INFO] (heater) This package is up to date.
 [INFO] (heatherr) This package is up to date.
@@ -2372,59 +2414,7 @@ Unsupported package directory structure.
 [INFO] (helloshahar) This package is up to date.
 [INFO] (helloshahar2) This package is up to date.
 [INFO] (helloshahar3) This package is up to date.
-[ERROR] (helloshopply) Could not get a response from API for this package. See below for details.
-Traceback (most recent call last):
-  File "/usr/lib/python3.7/urllib/request.py", line 1319, in do_open
-    encode_chunked=req.has_header('Transfer-encoding'))
-  File "/usr/lib/python3.7/http/client.py", line 1252, in request
-    self._send_request(method, url, body, headers, encode_chunked)
-  File "/usr/lib/python3.7/http/client.py", line 1298, in _send_request
-    self.endheaders(body, encode_chunked=encode_chunked)
-  File "/usr/lib/python3.7/http/client.py", line 1247, in endheaders
-    self._send_output(message_body, encode_chunked=encode_chunked)
-  File "/usr/lib/python3.7/http/client.py", line 1026, in _send_output
-    self.send(msg)
-  File "/usr/lib/python3.7/http/client.py", line 966, in send
-    self.connect()
-  File "/usr/lib/python3.7/http/client.py", line 1414, in connect
-    super().connect()
-  File "/usr/lib/python3.7/http/client.py", line 938, in connect
-    (self.host,self.port), self.timeout, self.source_address)
-  File "/usr/lib/python3.7/socket.py", line 728, in create_connection
-    raise err
-  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
-    sock.connect(sa)
-OSError: [Errno 99] Cannot assign requested address
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
-    timeout=10).read()
-  File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
-    return opener.open(url, data, timeout)
-  File "/usr/lib/python3.7/urllib/request.py", line 531, in open
-    response = meth(req, response)
-  File "/usr/lib/python3.7/urllib/request.py", line 641, in http_response
-    'http', request, response, code, msg, hdrs)
-  File "/usr/lib/python3.7/urllib/request.py", line 563, in error
-    result = self._call_chain(*args)
-  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
-    result = func(*args)
-  File "/usr/lib/python3.7/urllib/request.py", line 755, in http_error_302
-    return self.parent.open(new, timeout=req.timeout)
-  File "/usr/lib/python3.7/urllib/request.py", line 525, in open
-    response = self._open(req, data)
-  File "/usr/lib/python3.7/urllib/request.py", line 543, in _open
-    '_open', req)
-  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
-    result = func(*args)
-  File "/usr/lib/python3.7/urllib/request.py", line 1362, in https_open
-    context=self._context, check_hostname=self._check_hostname)
-  File "/usr/lib/python3.7/urllib/request.py", line 1321, in do_open
-    raise URLError(err)
-urllib.error.URLError: <urlopen error [Errno 99] Cannot assign requested address>
-
+[INFO] (helloshopply) This package is up to date.
 [INFO] (hellosign) This package is up to date.
 [INFO] (hellosign-python-sdk) This package is up to date.
 [INFO] (hellosign-python-sdk-custom) This package is up to date.
@@ -2665,7 +2655,36 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (helsonnester) This package is up to date.
 [INFO] (heluxup) This package is up to date.
 [INFO] (hem) This package is up to date.
-[INFO] (heman) This package is up to date.
+[ERROR] (heman) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.7/urllib/request.py", line 525, in open
+    response = self._open(req, data)
+  File "/usr/lib/python3.7/urllib/request.py", line 543, in _open
+    '_open', req)
+  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 1362, in https_open
+    context=self._context, check_hostname=self._check_hostname)
+  File "/usr/lib/python3.7/urllib/request.py", line 1322, in do_open
+    r = h.getresponse()
+  File "/usr/lib/python3.7/http/client.py", line 1344, in getresponse
+    response.begin()
+  File "/usr/lib/python3.7/http/client.py", line 306, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.7/http/client.py", line 267, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/lib/python3.7/ssl.py", line 1071, in recv_into
+    return self.read(nbytes, buffer)
+  File "/usr/lib/python3.7/ssl.py", line 929, in read
+    return self._sslobj.read(len, buffer)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
 [INFO] (hemapp) This package is up to date.
 [INFO] (hematite) This package is up to date.
 [INFO] (hematopy) This package is up to date.
@@ -2903,7 +2922,59 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (hesperides-cli) This package is up to date.
 [INFO] (hessianfree) This package is up to date.
 [INFO] (hessianpy) This package is up to date.
-[ERROR] (hester-zqing) This package does not have downloadable releases.
+[ERROR] (hester-zqing) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/urllib/request.py", line 1319, in do_open
+    encode_chunked=req.has_header('Transfer-encoding'))
+  File "/usr/lib/python3.7/http/client.py", line 1252, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1298, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1247, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.7/http/client.py", line 966, in send
+    self.connect()
+  File "/usr/lib/python3.7/http/client.py", line 1422, in connect
+    server_hostname=server_hostname)
+  File "/usr/lib/python3.7/ssl.py", line 423, in wrap_socket
+    session=session
+  File "/usr/lib/python3.7/ssl.py", line 870, in _create
+    self.do_handshake()
+  File "/usr/lib/python3.7/ssl.py", line 1139, in do_handshake
+    self._sslobj.do_handshake()
+socket.timeout: _ssl.c:1059: The handshake operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.7/urllib/request.py", line 531, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.7/urllib/request.py", line 641, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.7/urllib/request.py", line 563, in error
+    result = self._call_chain(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 755, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+  File "/usr/lib/python3.7/urllib/request.py", line 525, in open
+    response = self._open(req, data)
+  File "/usr/lib/python3.7/urllib/request.py", line 543, in _open
+    '_open', req)
+  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 1362, in https_open
+    context=self._context, check_hostname=self._check_hostname)
+  File "/usr/lib/python3.7/urllib/request.py", line 1321, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error _ssl.c:1059: The handshake operation timed out>
+
 [INFO] (hestia) This package is up to date.
 [INFO] (hestia-api) This package is up to date.
 [INFO] (hestiaapi) This package is up to date.
@@ -3023,7 +3094,7 @@ This package download URL does not point to a valid file: "http://sourceforge.ne
 [INFO] (hexotools) This package is up to date.
 [INFO] (hexpot) This package is up to date.
 [INFO] (hexprint) This package is up to date.
-[INFO] (hexpy) This package is up to date.
+[INFO] (hexpy) Data has been updated for this package.
 [ERROR] (hexrd) This package does not have downloadable releases.
 [INFO] (hexrec) This package is up to date.
 [INFO] (hexs) This package is up to date.
@@ -3511,7 +3582,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (highway-py) This package is up to date.
 [INFO] (highwayhash-cffi) This package is up to date.
 [INFO] (higlass-jupyter) This package is up to date.
-[INFO] (higlass-manage) Data has been updated for this package.
+[INFO] (higlass-manage) This package is up to date.
 [INFO] (higlass-python) This package is up to date.
 [INFO] (higra) This package is up to date.
 [INFO] (higrid) This package is up to date.
@@ -3756,7 +3827,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (histdata-downloader) This package is up to date.
 [INFO] (histimator) This package is up to date.
 [INFO] (histlite) This package is up to date.
-[INFO] (histmp) Data has been updated for this package.
+[INFO] (histmp) This package is up to date.
 [INFO] (histo) This package is up to date.
 [INFO] (histog) This package is up to date.
 [ERROR] (histogram) Could not extract data from this package. See below for details.
@@ -3817,7 +3888,7 @@ urllib.error.URLError: <urlopen error [Errno -5] No address associated with host
 [INFO] (histograms) This package is up to date.
 [INFO] (histograms-cottephi) This package is up to date.
 [INFO] (histogramy) This package is up to date.
-[INFO] (histomicstk) Data has been updated for this package.
+[INFO] (histomicstk) This package is up to date.
 [INFO] (histomicsui) This package is up to date.
 [INFO] (histopy) This package is up to date.
 [INFO] (historia) This package is up to date.
@@ -3939,7 +4010,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (hivclustering) This package is up to date.
 [ERROR] (hive) This package does not have downloadable releases.
 [INFO] (hive-bt) This package is up to date.
-[INFO] (hive-builder) Data has been updated for this package.
+[INFO] (hive-builder) This package is up to date.
 [INFO] (hive-email-job) This package is up to date.
 [INFO] (hive-executor-py) This package is up to date.
 [INFO] (hive-thrift-py) This package is up to date.
@@ -4090,7 +4161,49 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (hlsvdpro) This package is up to date.
 [INFO] (hlt-client) This package is up to date.
 [INFO] (hltc-preprocess) This package is up to date.
-[INFO] (hltex) This package is up to date.
+[ERROR] (hltex) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/urllib/request.py", line 1319, in do_open
+    encode_chunked=req.has_header('Transfer-encoding'))
+  File "/usr/lib/python3.7/http/client.py", line 1252, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1298, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1247, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.7/http/client.py", line 966, in send
+    self.connect()
+  File "/usr/lib/python3.7/http/client.py", line 1422, in connect
+    server_hostname=server_hostname)
+  File "/usr/lib/python3.7/ssl.py", line 423, in wrap_socket
+    session=session
+  File "/usr/lib/python3.7/ssl.py", line 870, in _create
+    self.do_handshake()
+  File "/usr/lib/python3.7/ssl.py", line 1139, in do_handshake
+    self._sslobj.do_handshake()
+socket.timeout: _ssl.c:1059: The handshake operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.7/urllib/request.py", line 525, in open
+    response = self._open(req, data)
+  File "/usr/lib/python3.7/urllib/request.py", line 543, in _open
+    '_open', req)
+  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 1362, in https_open
+    context=self._context, check_hostname=self._check_hostname)
+  File "/usr/lib/python3.7/urllib/request.py", line 1321, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error _ssl.c:1059: The handshake operation timed out>
+
 [INFO] (hltv-csgo-results) This package is up to date.
 [INFO] (hlupik) This package is up to date.
 [INFO] (hlvox) This package is up to date.
@@ -4172,7 +4285,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 
 [INFO] (hn) This package is up to date.
 [INFO] (hn-cli) This package is up to date.
-[INFO] (hn-pwa-api) Data has been updated for this package.
+[INFO] (hn-pwa-api) This package is up to date.
 [INFO] (hn-sum) This package is up to date.
 [INFO] (hn-test-num) This package is up to date.
 [INFO] (hn-test-sum) This package is up to date.
@@ -4510,8 +4623,8 @@ This package download URL does not point to a valid file: "http://netz.smurf.nor
 [INFO] (honeybadgerbft) This package is up to date.
 [INFO] (honeybadgermpc) This package is up to date.
 [INFO] (honeybee) This package is up to date.
-[INFO] (honeybee-core) This package is up to date.
-[INFO] (honeybee-energy) This package is up to date.
+[INFO] (honeybee-core) Data has been updated for this package.
+[INFO] (honeybee-energy) Data has been updated for this package.
 [INFO] (honeybee-energy-standards) This package is up to date.
 [INFO] (honeybee-radiance) This package is up to date.
 [INFO] (honeybee-radiance-command) This package is up to date.
@@ -4554,7 +4667,7 @@ This package download URL does not point to a valid file: "http://netz.smurf.nor
 [INFO] (hooks4git) This package is up to date.
 [INFO] (hookshot) This package is up to date.
 [INFO] (hookswitch) This package is up to date.
-[INFO] (hookt) Data has been updated for this package.
+[INFO] (hookt) This package is up to date.
 [INFO] (hooktest) This package is up to date.
 [INFO] (hooktools) This package is up to date.
 [INFO] (hooktrigger) This package is up to date.
@@ -4777,6 +4890,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (hottie) This package is up to date.
 [INFO] (hottings) This package is up to date.
 [INFO] (hotwatch) This package is up to date.
+[INFO] (hotwater) Data has been updated for this package.
 [INFO] (hotwing-cli) This package is up to date.
 [INFO] (hotwing-core) This package is up to date.
 [ERROR] (hotwire) Could not extract data from this package. See below for details.
@@ -4892,9 +5006,122 @@ This package download URL does not point to a valid file: "http://sourceforge.ne
 [INFO] (hpe3par-sdk) This package is up to date.
 [INFO] (hpecloudvolumes) This package is up to date.
 [INFO] (hpeixoto-letsencrypt-route53) This package is up to date.
-[INFO] (hpelm) This package is up to date.
-[INFO] (hpestorapi) This package is up to date.
-[INFO] (hpexome) This package is up to date.
+[ERROR] (hpelm) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.7/urllib/request.py", line 525, in open
+    response = self._open(req, data)
+  File "/usr/lib/python3.7/urllib/request.py", line 543, in _open
+    '_open', req)
+  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 1362, in https_open
+    context=self._context, check_hostname=self._check_hostname)
+  File "/usr/lib/python3.7/urllib/request.py", line 1322, in do_open
+    r = h.getresponse()
+  File "/usr/lib/python3.7/http/client.py", line 1344, in getresponse
+    response.begin()
+  File "/usr/lib/python3.7/http/client.py", line 306, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.7/http/client.py", line 267, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/lib/python3.7/ssl.py", line 1071, in recv_into
+    return self.read(nbytes, buffer)
+  File "/usr/lib/python3.7/ssl.py", line 929, in read
+    return self._sslobj.read(len, buffer)
+socket.timeout: The read operation timed out
+
+[ERROR] (hpestorapi) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/urllib/request.py", line 1319, in do_open
+    encode_chunked=req.has_header('Transfer-encoding'))
+  File "/usr/lib/python3.7/http/client.py", line 1252, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1298, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1247, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.7/http/client.py", line 966, in send
+    self.connect()
+  File "/usr/lib/python3.7/http/client.py", line 1414, in connect
+    super().connect()
+  File "/usr/lib/python3.7/http/client.py", line 938, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "/usr/lib/python3.7/socket.py", line 707, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/lib/python3.7/socket.py", line 752, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.7/urllib/request.py", line 525, in open
+    response = self._open(req, data)
+  File "/usr/lib/python3.7/urllib/request.py", line 543, in _open
+    '_open', req)
+  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 1362, in https_open
+    context=self._context, check_hostname=self._check_hostname)
+  File "/usr/lib/python3.7/urllib/request.py", line 1321, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
+
+[ERROR] (hpexome) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/urllib/request.py", line 1319, in do_open
+    encode_chunked=req.has_header('Transfer-encoding'))
+  File "/usr/lib/python3.7/http/client.py", line 1252, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1298, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1247, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.7/http/client.py", line 966, in send
+    self.connect()
+  File "/usr/lib/python3.7/http/client.py", line 1414, in connect
+    super().connect()
+  File "/usr/lib/python3.7/http/client.py", line 938, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "/usr/lib/python3.7/socket.py", line 707, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/lib/python3.7/socket.py", line 752, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.7/urllib/request.py", line 525, in open
+    response = self._open(req, data)
+  File "/usr/lib/python3.7/urllib/request.py", line 543, in _open
+    '_open', req)
+  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 1362, in https_open
+    context=self._context, check_hostname=self._check_hostname)
+  File "/usr/lib/python3.7/urllib/request.py", line 1321, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
+
 [INFO] (hpfeeds) This package is up to date.
 [INFO] (hpfeeds-logger) This package is up to date.
 [INFO] (hpfeeds-threatstream) This package is up to date.
@@ -5126,7 +5353,9 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (htimeseries) This package is up to date.
 [INFO] (htjs-apisdk) This package is up to date.
 [INFO] (htjs-k8s) This package is up to date.
+[INFO] (htk) Data has been updated for this package.
 [INFO] (htk-io) This package is up to date.
+[INFO] (htk-lite) Data has been updated for this package.
 [INFO] (htklite) This package is up to date.
 [INFO] (htm) This package is up to date.
 [INFO] (htm-pyx) This package is up to date.
@@ -5488,7 +5717,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (httpie-aws-auth) This package is up to date.
 [INFO] (httpie-aws-authv4) This package is up to date.
 [INFO] (httpie-consul) This package is up to date.
-[INFO] (httpie-credential-store) This package is up to date.
+[INFO] (httpie-credential-store) Data has been updated for this package.
 [INFO] (httpie-dag) This package is up to date.
 [INFO] (httpie-django-auth) This package is up to date.
 [INFO] (httpie-edgegrid) This package is up to date.
@@ -5526,8 +5755,9 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (httpio) This package is up to date.
 [INFO] (httpkie) This package is up to date.
 [INFO] (httpkit) This package is up to date.
+[INFO] (httpkom) Data has been updated for this package.
 [INFO] (httplaceholder) This package is up to date.
-[INFO] (httplib2) Data has been updated for this package.
+[INFO] (httplib2) This package is up to date.
 [INFO] (httplib2-ca-certs-locater) This package is up to date.
 [ERROR] (httplib2-ss) Could not extract data from this package. See below for details.
 "http://httplib2.googlecode.com/files/httplib2-0.9.tar.gz" file could not be downloaded. See below for details.
@@ -5681,7 +5911,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (huawei-b593-status) This package is up to date.
 [INFO] (huawei-lte-api) This package is up to date.
 [INFO] (huawei-modem-api-client) This package is up to date.
-[INFO] (huawei-modem-py-api-client-through-proxy) This package is up to date.
+[INFO] (huawei-modem-py-api-client-through-proxy) Data has been updated for this package.
 [INFO] (huaweicloud-python-sdk-core) This package is up to date.
 [INFO] (huaweicloud-sdk-python) This package is up to date.
 [INFO] (huaweicloud-sdk-python-modelarts-dataset) This package is up to date.
@@ -5708,6 +5938,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (hubdns) This package is up to date.
 [INFO] (huber) This package is up to date.
 [INFO] (hubhack) This package is up to date.
+[INFO] (hubitatmaker) Data has been updated for this package.
 [INFO] (hublib) This package is up to date.
 [INFO] (hubo) This package is up to date.
 [ERROR] (hubot-hangups) This package does not have downloadable releases.
@@ -5812,7 +6043,49 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (hug-authentication-ldap) This package is up to date.
 [INFO] (hug-explainable) This package is up to date.
 [INFO] (hug-kt) This package is up to date.
-[INFO] (hug-middleware-cors) This package is up to date.
+[ERROR] (hug-middleware-cors) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/urllib/request.py", line 1319, in do_open
+    encode_chunked=req.has_header('Transfer-encoding'))
+  File "/usr/lib/python3.7/http/client.py", line 1252, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1298, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1247, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.7/http/client.py", line 966, in send
+    self.connect()
+  File "/usr/lib/python3.7/http/client.py", line 1414, in connect
+    super().connect()
+  File "/usr/lib/python3.7/http/client.py", line 938, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "/usr/lib/python3.7/socket.py", line 728, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 99] Cannot assign requested address
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.7/urllib/request.py", line 525, in open
+    response = self._open(req, data)
+  File "/usr/lib/python3.7/urllib/request.py", line 543, in _open
+    '_open', req)
+  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 1362, in https_open
+    context=self._context, check_hostname=self._check_hostname)
+  File "/usr/lib/python3.7/urllib/request.py", line 1321, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno 99] Cannot assign requested address>
+
 [INFO] (hug-peewee) This package is up to date.
 [INFO] (hug-peewee-connect) This package is up to date.
 [INFO] (hug-raven) This package is up to date.
@@ -5823,7 +6096,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (hugo) This package is up to date.
 [INFO] (hugo-jupyter) This package is up to date.
 [INFO] (hugon) This package is up to date.
-[INFO] (hugophotoswipe) This package is up to date.
+[INFO] (hugophotoswipe) Data has been updated for this package.
 [INFO] (hugpee) This package is up to date.
 [INFO] (hugs) This package is up to date.
 [INFO] (huhu) This package is up to date.
@@ -5860,45 +6133,18 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (hulu-subs-downloader) This package is up to date.
 [INFO] (humaan-cli) This package is up to date.
 [ERROR] (human) This package does not have downloadable releases.
-[ERROR] (human-activity-recognition) Could not get a response from API for this package. See below for details.
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
-    timeout=10).read()
-  File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
-    return opener.open(url, data, timeout)
-  File "/usr/lib/python3.7/urllib/request.py", line 531, in open
-    response = meth(req, response)
-  File "/usr/lib/python3.7/urllib/request.py", line 641, in http_response
-    'http', request, response, code, msg, hdrs)
-  File "/usr/lib/python3.7/urllib/request.py", line 563, in error
-    result = self._call_chain(*args)
-  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
-    result = func(*args)
-  File "/usr/lib/python3.7/urllib/request.py", line 755, in http_error_302
-    return self.parent.open(new, timeout=req.timeout)
-  File "/usr/lib/python3.7/urllib/request.py", line 531, in open
-    response = meth(req, response)
-  File "/usr/lib/python3.7/urllib/request.py", line 641, in http_response
-    'http', request, response, code, msg, hdrs)
-  File "/usr/lib/python3.7/urllib/request.py", line 569, in error
-    return self._call_chain(*args)
-  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
-    result = func(*args)
-  File "/usr/lib/python3.7/urllib/request.py", line 649, in http_error_default
-    raise HTTPError(req.full_url, code, msg, hdrs, fp)
-urllib.error.HTTPError: HTTP Error 404: Not Found
-
 [INFO] (human-body-prior) This package is up to date.
 [INFO] (human-curl) This package is up to date.
 [INFO] (human-dates) This package is up to date.
 [INFO] (human-datetimedelta) This package is up to date.
-[INFO] (human-friendly-pedantic-timedelta) This package is up to date.
+[INFO] (human-friendly-pedantic-timedelta) Data has been updated for this package.
 [INFO] (human-json) This package is up to date.
 [INFO] (human-names) This package is up to date.
 [INFO] (human-security) This package is up to date.
 [INFO] (human-time-formatter) This package is up to date.
 [INFO] (human-word-indexes) This package is up to date.
 [INFO] (humanactivity) This package is up to date.
+[INFO] (humanactivityrecognition) Data has been updated for this package.
 [INFO] (humanapi) This package is up to date.
 [INFO] (humanbingo) This package is up to date.
 [ERROR] (humancheck) Could not get a response from API for this package. See below for details.
@@ -5962,7 +6208,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (humble) This package is up to date.
 [INFO] (humblebee) This package is up to date.
 [INFO] (humblebundle) This package is up to date.
-[INFO] (humblebundle-downloader) This package is up to date.
+[INFO] (humblebundle-downloader) Data has been updated for this package.
 [INFO] (humbleclient) This package is up to date.
 [INFO] (humbledb) This package is up to date.
 [INFO] (humblelion) This package is up to date.
@@ -6666,11 +6912,147 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (hyperbola) This package is up to date.
 [ERROR] (hyperbole) This package does not have downloadable releases.
 [INFO] (hyperbolic) This package is up to date.
-[INFO] (hyperborea) Data has been updated for this package.
+[INFO] (hyperborea) This package is up to date.
 [INFO] (hyperbuild) This package is up to date.
-[INFO] (hypercat-py) This package is up to date.
-[INFO] (hyperchamber) This package is up to date.
-[INFO] (hypercluster) Data has been updated for this package.
+[ERROR] (hypercat-py) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/urllib/request.py", line 1319, in do_open
+    encode_chunked=req.has_header('Transfer-encoding'))
+  File "/usr/lib/python3.7/http/client.py", line 1252, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1298, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1247, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.7/http/client.py", line 966, in send
+    self.connect()
+  File "/usr/lib/python3.7/http/client.py", line 1414, in connect
+    super().connect()
+  File "/usr/lib/python3.7/http/client.py", line 938, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "/usr/lib/python3.7/socket.py", line 707, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/lib/python3.7/socket.py", line 752, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.7/urllib/request.py", line 531, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.7/urllib/request.py", line 641, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.7/urllib/request.py", line 563, in error
+    result = self._call_chain(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 755, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+  File "/usr/lib/python3.7/urllib/request.py", line 525, in open
+    response = self._open(req, data)
+  File "/usr/lib/python3.7/urllib/request.py", line 543, in _open
+    '_open', req)
+  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 1362, in https_open
+    context=self._context, check_hostname=self._check_hostname)
+  File "/usr/lib/python3.7/urllib/request.py", line 1321, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
+
+[ERROR] (hyperchamber) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/urllib/request.py", line 1319, in do_open
+    encode_chunked=req.has_header('Transfer-encoding'))
+  File "/usr/lib/python3.7/http/client.py", line 1252, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1298, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1247, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.7/http/client.py", line 966, in send
+    self.connect()
+  File "/usr/lib/python3.7/http/client.py", line 1414, in connect
+    super().connect()
+  File "/usr/lib/python3.7/http/client.py", line 938, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "/usr/lib/python3.7/socket.py", line 707, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/lib/python3.7/socket.py", line 752, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.7/urllib/request.py", line 525, in open
+    response = self._open(req, data)
+  File "/usr/lib/python3.7/urllib/request.py", line 543, in _open
+    '_open', req)
+  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 1362, in https_open
+    context=self._context, check_hostname=self._check_hostname)
+  File "/usr/lib/python3.7/urllib/request.py", line 1321, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
+
+[ERROR] (hypercluster) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/urllib/request.py", line 1319, in do_open
+    encode_chunked=req.has_header('Transfer-encoding'))
+  File "/usr/lib/python3.7/http/client.py", line 1252, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1298, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1247, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.7/http/client.py", line 966, in send
+    self.connect()
+  File "/usr/lib/python3.7/http/client.py", line 1414, in connect
+    super().connect()
+  File "/usr/lib/python3.7/http/client.py", line 938, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "/usr/lib/python3.7/socket.py", line 707, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/lib/python3.7/socket.py", line 752, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.7/urllib/request.py", line 525, in open
+    response = self._open(req, data)
+  File "/usr/lib/python3.7/urllib/request.py", line 543, in _open
+    '_open', req)
+  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 1362, in https_open
+    context=self._context, check_hostname=self._check_hostname)
+  File "/usr/lib/python3.7/urllib/request.py", line 1321, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
+
 [INFO] (hypercode) This package is up to date.
 [INFO] (hyperconfig) This package is up to date.
 [INFO] (hypercore-crypto) This package is up to date.
@@ -6828,7 +7210,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (hypothesis-regex) This package is up to date.
 [INFO] (hypothesis-ros) This package is up to date.
 [INFO] (hypothesis-sqlalchemy) This package is up to date.
-[INFO] (hypothesis-trio) This package is up to date.
+[INFO] (hypothesis-trio) Data has been updated for this package.
 [INFO] (hypothesis-typed) This package is up to date.
 [INFO] (hypothesis-typing) This package is up to date.
 [INFO] (hypothesislegacysupport) This package is up to date.
@@ -6893,13 +7275,13 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (hzutils) This package is up to date.
 [INFO] 
 [INFO] 
-[INFO] Total packages: 4748
-[INFO]     Packages processed: 4748
-[INFO]         Packages updated: 15
-[INFO]         Packages up-to-date: 4386
-[INFO]         Packages without response: 101
+[INFO] Total packages: 4753
+[INFO]     Packages processed: 4753
+[INFO]         Packages updated: 21
+[INFO]         Packages up-to-date: 4377
+[INFO]         Packages without response: 110
 [INFO]         Packages without urls: 0
-[INFO]         Packages without downloads: 218
+[INFO]         Packages without downloads: 217
 [INFO]         Packages with data errors: 28
 [INFO]     Packages not processed: 0
 [INFO] 
