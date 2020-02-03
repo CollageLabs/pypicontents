@@ -170,7 +170,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (wagtail-blocks) This package is up to date.
 [INFO] (wagtail-blog) This package is up to date.
 [INFO] (wagtail-blog-app) This package is up to date.
-[INFO] (wagtail-cache) This package is up to date.
+[INFO] (wagtail-cache) Data has been updated for this package.
 [INFO] (wagtail-calendar) This package is up to date.
 [ERROR] (wagtail-carousel) This package does not have downloadable releases.
 [INFO] (wagtail-charcount) This package is up to date.
@@ -528,7 +528,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (waldur-digitalocean) This package is up to date.
 [INFO] (waldur-freeipa) This package is up to date.
 [INFO] (waldur-jira) This package is up to date.
-[INFO] (waldur-mastermind) This package is up to date.
+[INFO] (waldur-mastermind) Data has been updated for this package.
 [INFO] (waldur-openstack) This package is up to date.
 [INFO] (waldur-paypal) This package is up to date.
 [INFO] (waldur-slurm) This package is up to date.
@@ -836,7 +836,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (warcreader) This package is up to date.
 [INFO] (warcsigner) This package is up to date.
 [INFO] (warctools) This package is up to date.
-[INFO] (ward) Data has been updated for this package.
+[INFO] (ward) This package is up to date.
 [INFO] (ward-metrics) This package is up to date.
 [INFO] (warden) This package is up to date.
 [INFO] (wardenbot) This package is up to date.
@@ -868,20 +868,116 @@ Traceback (most recent call last):
     timeout=10).read()
   File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
     return opener.open(url, data, timeout)
-  File "/usr/lib/python3.7/urllib/request.py", line 531, in open
-    response = meth(req, response)
-  File "/usr/lib/python3.7/urllib/request.py", line 641, in http_response
-    'http', request, response, code, msg, hdrs)
-  File "/usr/lib/python3.7/urllib/request.py", line 569, in error
-    return self._call_chain(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 525, in open
+    response = self._open(req, data)
+  File "/usr/lib/python3.7/urllib/request.py", line 543, in _open
+    '_open', req)
   File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
     result = func(*args)
-  File "/usr/lib/python3.7/urllib/request.py", line 649, in http_error_default
-    raise HTTPError(req.full_url, code, msg, hdrs, fp)
-urllib.error.HTTPError: HTTP Error 404: Not Found
+  File "/usr/lib/python3.7/urllib/request.py", line 1362, in https_open
+    context=self._context, check_hostname=self._check_hostname)
+  File "/usr/lib/python3.7/urllib/request.py", line 1322, in do_open
+    r = h.getresponse()
+  File "/usr/lib/python3.7/http/client.py", line 1344, in getresponse
+    response.begin()
+  File "/usr/lib/python3.7/http/client.py", line 306, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.7/http/client.py", line 267, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/lib/python3.7/ssl.py", line 1071, in recv_into
+    return self.read(nbytes, buffer)
+  File "/usr/lib/python3.7/ssl.py", line 929, in read
+    return self._sslobj.read(len, buffer)
+socket.timeout: The read operation timed out
 
-[INFO] (warfit-learn) This package is up to date.
-[INFO] (warframe-alerts-rss) This package is up to date.
+[ERROR] (warfit-learn) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/urllib/request.py", line 1319, in do_open
+    encode_chunked=req.has_header('Transfer-encoding'))
+  File "/usr/lib/python3.7/http/client.py", line 1252, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1298, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1247, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.7/http/client.py", line 966, in send
+    self.connect()
+  File "/usr/lib/python3.7/http/client.py", line 1414, in connect
+    super().connect()
+  File "/usr/lib/python3.7/http/client.py", line 938, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "/usr/lib/python3.7/socket.py", line 707, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/lib/python3.7/socket.py", line 752, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.7/urllib/request.py", line 525, in open
+    response = self._open(req, data)
+  File "/usr/lib/python3.7/urllib/request.py", line 543, in _open
+    '_open', req)
+  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 1362, in https_open
+    context=self._context, check_hostname=self._check_hostname)
+  File "/usr/lib/python3.7/urllib/request.py", line 1321, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
+
+[ERROR] (warframe-alerts-rss) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/urllib/request.py", line 1319, in do_open
+    encode_chunked=req.has_header('Transfer-encoding'))
+  File "/usr/lib/python3.7/http/client.py", line 1252, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1298, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1247, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.7/http/client.py", line 966, in send
+    self.connect()
+  File "/usr/lib/python3.7/http/client.py", line 1414, in connect
+    super().connect()
+  File "/usr/lib/python3.7/http/client.py", line 938, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "/usr/lib/python3.7/socket.py", line 707, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/lib/python3.7/socket.py", line 752, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.7/urllib/request.py", line 525, in open
+    response = self._open(req, data)
+  File "/usr/lib/python3.7/urllib/request.py", line 543, in _open
+    '_open', req)
+  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 1362, in https_open
+    context=self._context, check_hostname=self._check_hostname)
+  File "/usr/lib/python3.7/urllib/request.py", line 1321, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
+
 [INFO] (warg) This package is up to date.
 [INFO] (wargame) This package is up to date.
 [INFO] (wargaming) This package is up to date.
@@ -931,7 +1027,24 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (warrant) This package is up to date.
 [INFO] (warrant-ext) This package is up to date.
 [INFO] (warrant-lite) This package is up to date.
-[INFO] (warrant-lite42) This package is up to date.
+[ERROR] (warrant-lite42) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.7/urllib/request.py", line 531, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.7/urllib/request.py", line 641, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.7/urllib/request.py", line 569, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 649, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+
 [ERROR] (warrapi) This package does not have downloadable releases.
 [INFO] (warren) This package is up to date.
 [INFO] (warrior-pytho-2) This package is up to date.
@@ -940,49 +1053,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (warriors) This package is up to date.
 [INFO] (warthog) This package is up to date.
 [INFO] (warthunder) This package is up to date.
-[ERROR] (warwick) Could not get a response from API for this package. See below for details.
-Traceback (most recent call last):
-  File "/usr/lib/python3.7/urllib/request.py", line 1319, in do_open
-    encode_chunked=req.has_header('Transfer-encoding'))
-  File "/usr/lib/python3.7/http/client.py", line 1252, in request
-    self._send_request(method, url, body, headers, encode_chunked)
-  File "/usr/lib/python3.7/http/client.py", line 1298, in _send_request
-    self.endheaders(body, encode_chunked=encode_chunked)
-  File "/usr/lib/python3.7/http/client.py", line 1247, in endheaders
-    self._send_output(message_body, encode_chunked=encode_chunked)
-  File "/usr/lib/python3.7/http/client.py", line 1026, in _send_output
-    self.send(msg)
-  File "/usr/lib/python3.7/http/client.py", line 966, in send
-    self.connect()
-  File "/usr/lib/python3.7/http/client.py", line 1414, in connect
-    super().connect()
-  File "/usr/lib/python3.7/http/client.py", line 938, in connect
-    (self.host,self.port), self.timeout, self.source_address)
-  File "/usr/lib/python3.7/socket.py", line 707, in create_connection
-    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
-  File "/usr/lib/python3.7/socket.py", line 752, in getaddrinfo
-    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
-socket.gaierror: [Errno -3] Temporary failure in name resolution
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
-    timeout=10).read()
-  File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
-    return opener.open(url, data, timeout)
-  File "/usr/lib/python3.7/urllib/request.py", line 525, in open
-    response = self._open(req, data)
-  File "/usr/lib/python3.7/urllib/request.py", line 543, in _open
-    '_open', req)
-  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
-    result = func(*args)
-  File "/usr/lib/python3.7/urllib/request.py", line 1362, in https_open
-    context=self._context, check_hostname=self._check_hostname)
-  File "/usr/lib/python3.7/urllib/request.py", line 1321, in do_open
-    raise URLError(err)
-urllib.error.URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
-
+[INFO] (warwick) This package is up to date.
 [INFO] (warzone) This package is up to date.
 [INFO] (wasabi) This package is up to date.
 [INFO] (wasabi-geom) This package is up to date.
@@ -1813,7 +1884,59 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (weather-underground-simple-wrapper) This package is up to date.
 [ERROR] (weather-util) This package does not have downloadable releases.
 [INFO] (weather2stats) This package is up to date.
-[INFO] (weatheralerts) This package is up to date.
+[ERROR] (weatheralerts) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/urllib/request.py", line 1319, in do_open
+    encode_chunked=req.has_header('Transfer-encoding'))
+  File "/usr/lib/python3.7/http/client.py", line 1252, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1298, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1247, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.7/http/client.py", line 966, in send
+    self.connect()
+  File "/usr/lib/python3.7/http/client.py", line 1414, in connect
+    super().connect()
+  File "/usr/lib/python3.7/http/client.py", line 938, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "/usr/lib/python3.7/socket.py", line 707, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/lib/python3.7/socket.py", line 752, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.7/urllib/request.py", line 531, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.7/urllib/request.py", line 641, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.7/urllib/request.py", line 563, in error
+    result = self._call_chain(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 755, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+  File "/usr/lib/python3.7/urllib/request.py", line 525, in open
+    response = self._open(req, data)
+  File "/usr/lib/python3.7/urllib/request.py", line 543, in _open
+    '_open', req)
+  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 1362, in https_open
+    context=self._context, check_hostname=self._check_hostname)
+  File "/usr/lib/python3.7/urllib/request.py", line 1321, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
+
 [INFO] (weatherapixu) This package is up to date.
 [INFO] (weatherapplication) This package is up to date.
 [INFO] (weatherapplication-arorarajat084) This package is up to date.
@@ -1934,7 +2057,7 @@ This package download URL does not point to a valid file: "http://www.pythonweb.
 [INFO] (web-utils) This package is up to date.
 [INFO] (web-walker) This package is up to date.
 [INFO] (web-wrapper) This package is up to date.
-[INFO] (web2ldap) Data has been updated for this package.
+[INFO] (web2ldap) This package is up to date.
 [INFO] (web2pandas) This package is up to date.
 [INFO] (web2py) This package is up to date.
 [INFO] (web2py-dal) This package is up to date.
@@ -2127,7 +2250,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (webdav-kerberos) This package is up to date.
 [INFO] (webdavclient) This package is up to date.
 [INFO] (webdavclient2) This package is up to date.
-[INFO] (webdavclient3) Data has been updated for this package.
+[INFO] (webdavclient3) This package is up to date.
 [INFO] (webdavconvert) This package is up to date.
 [INFO] (webdb) This package is up to date.
 [INFO] (webdepcompress) This package is up to date.
@@ -2179,135 +2302,9 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (webelement-highlighter) This package is up to date.
 [INFO] (webelemental) This package is up to date.
 [INFO] (webelements) This package is up to date.
-[ERROR] (webenchmark) Could not get a response from API for this package. See below for details.
-Traceback (most recent call last):
-  File "/usr/lib/python3.7/urllib/request.py", line 1319, in do_open
-    encode_chunked=req.has_header('Transfer-encoding'))
-  File "/usr/lib/python3.7/http/client.py", line 1252, in request
-    self._send_request(method, url, body, headers, encode_chunked)
-  File "/usr/lib/python3.7/http/client.py", line 1298, in _send_request
-    self.endheaders(body, encode_chunked=encode_chunked)
-  File "/usr/lib/python3.7/http/client.py", line 1247, in endheaders
-    self._send_output(message_body, encode_chunked=encode_chunked)
-  File "/usr/lib/python3.7/http/client.py", line 1026, in _send_output
-    self.send(msg)
-  File "/usr/lib/python3.7/http/client.py", line 966, in send
-    self.connect()
-  File "/usr/lib/python3.7/http/client.py", line 1414, in connect
-    super().connect()
-  File "/usr/lib/python3.7/http/client.py", line 938, in connect
-    (self.host,self.port), self.timeout, self.source_address)
-  File "/usr/lib/python3.7/socket.py", line 707, in create_connection
-    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
-  File "/usr/lib/python3.7/socket.py", line 752, in getaddrinfo
-    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
-socket.gaierror: [Errno -3] Temporary failure in name resolution
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
-    timeout=10).read()
-  File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
-    return opener.open(url, data, timeout)
-  File "/usr/lib/python3.7/urllib/request.py", line 525, in open
-    response = self._open(req, data)
-  File "/usr/lib/python3.7/urllib/request.py", line 543, in _open
-    '_open', req)
-  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
-    result = func(*args)
-  File "/usr/lib/python3.7/urllib/request.py", line 1362, in https_open
-    context=self._context, check_hostname=self._check_hostname)
-  File "/usr/lib/python3.7/urllib/request.py", line 1321, in do_open
-    raise URLError(err)
-urllib.error.URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
-
-[ERROR] (webencodings) Could not get a response from API for this package. See below for details.
-Traceback (most recent call last):
-  File "/usr/lib/python3.7/urllib/request.py", line 1319, in do_open
-    encode_chunked=req.has_header('Transfer-encoding'))
-  File "/usr/lib/python3.7/http/client.py", line 1252, in request
-    self._send_request(method, url, body, headers, encode_chunked)
-  File "/usr/lib/python3.7/http/client.py", line 1298, in _send_request
-    self.endheaders(body, encode_chunked=encode_chunked)
-  File "/usr/lib/python3.7/http/client.py", line 1247, in endheaders
-    self._send_output(message_body, encode_chunked=encode_chunked)
-  File "/usr/lib/python3.7/http/client.py", line 1026, in _send_output
-    self.send(msg)
-  File "/usr/lib/python3.7/http/client.py", line 966, in send
-    self.connect()
-  File "/usr/lib/python3.7/http/client.py", line 1414, in connect
-    super().connect()
-  File "/usr/lib/python3.7/http/client.py", line 938, in connect
-    (self.host,self.port), self.timeout, self.source_address)
-  File "/usr/lib/python3.7/socket.py", line 707, in create_connection
-    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
-  File "/usr/lib/python3.7/socket.py", line 752, in getaddrinfo
-    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
-socket.gaierror: [Errno -3] Temporary failure in name resolution
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
-    timeout=10).read()
-  File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
-    return opener.open(url, data, timeout)
-  File "/usr/lib/python3.7/urllib/request.py", line 525, in open
-    response = self._open(req, data)
-  File "/usr/lib/python3.7/urllib/request.py", line 543, in _open
-    '_open', req)
-  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
-    result = func(*args)
-  File "/usr/lib/python3.7/urllib/request.py", line 1362, in https_open
-    context=self._context, check_hostname=self._check_hostname)
-  File "/usr/lib/python3.7/urllib/request.py", line 1321, in do_open
-    raise URLError(err)
-urllib.error.URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
-
-[ERROR] (webenv) Could not get a response from API for this package. See below for details.
-Traceback (most recent call last):
-  File "/usr/lib/python3.7/urllib/request.py", line 1319, in do_open
-    encode_chunked=req.has_header('Transfer-encoding'))
-  File "/usr/lib/python3.7/http/client.py", line 1252, in request
-    self._send_request(method, url, body, headers, encode_chunked)
-  File "/usr/lib/python3.7/http/client.py", line 1298, in _send_request
-    self.endheaders(body, encode_chunked=encode_chunked)
-  File "/usr/lib/python3.7/http/client.py", line 1247, in endheaders
-    self._send_output(message_body, encode_chunked=encode_chunked)
-  File "/usr/lib/python3.7/http/client.py", line 1026, in _send_output
-    self.send(msg)
-  File "/usr/lib/python3.7/http/client.py", line 966, in send
-    self.connect()
-  File "/usr/lib/python3.7/http/client.py", line 1414, in connect
-    super().connect()
-  File "/usr/lib/python3.7/http/client.py", line 938, in connect
-    (self.host,self.port), self.timeout, self.source_address)
-  File "/usr/lib/python3.7/socket.py", line 707, in create_connection
-    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
-  File "/usr/lib/python3.7/socket.py", line 752, in getaddrinfo
-    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
-socket.gaierror: [Errno -3] Temporary failure in name resolution
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
-    timeout=10).read()
-  File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
-    return opener.open(url, data, timeout)
-  File "/usr/lib/python3.7/urllib/request.py", line 525, in open
-    response = self._open(req, data)
-  File "/usr/lib/python3.7/urllib/request.py", line 543, in _open
-    '_open', req)
-  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
-    result = func(*args)
-  File "/usr/lib/python3.7/urllib/request.py", line 1362, in https_open
-    context=self._context, check_hostname=self._check_hostname)
-  File "/usr/lib/python3.7/urllib/request.py", line 1321, in do_open
-    raise URLError(err)
-urllib.error.URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
-
+[INFO] (webenchmark) This package is up to date.
+[INFO] (webencodings) This package is up to date.
+[INFO] (webenv) This package is up to date.
 [ERROR] (webepy) Could not get a response from API for this package. See below for details.
 Traceback (most recent call last):
   File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
@@ -2927,7 +2924,7 @@ Traceback (most recent call last):
     raise HTTPError(req.full_url, code, msg, hdrs, fp)
 urllib.error.HTTPError: HTTP Error 404: Not Found
 
-[INFO] (webviz-config) This package is up to date.
+[INFO] (webviz-config) Data has been updated for this package.
 [INFO] (webviz-config-equinor) This package is up to date.
 [INFO] (webviz-core-components) This package is up to date.
 [INFO] (webviz-petech) This package is up to date.
@@ -3351,12 +3348,42 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (wf-cv-utils) This package is up to date.
 [INFO] (wf-database-connection) This package is up to date.
 [INFO] (wf-database-connection-honeycomb) This package is up to date.
-[INFO] (wf-geom-render) This package is up to date.
+[ERROR] (wf-geom-render) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.7/urllib/request.py", line 525, in open
+    response = self._open(req, data)
+  File "/usr/lib/python3.7/urllib/request.py", line 543, in _open
+    '_open', req)
+  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 1362, in https_open
+    context=self._context, check_hostname=self._check_hostname)
+  File "/usr/lib/python3.7/urllib/request.py", line 1322, in do_open
+    r = h.getresponse()
+  File "/usr/lib/python3.7/http/client.py", line 1344, in getresponse
+    response.begin()
+  File "/usr/lib/python3.7/http/client.py", line 306, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.7/http/client.py", line 267, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/lib/python3.7/ssl.py", line 1071, in recv_into
+    return self.read(nbytes, buffer)
+  File "/usr/lib/python3.7/ssl.py", line 929, in read
+    return self._sslobj.read(len, buffer)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
 [INFO] (wf-gqlpycgen) This package is up to date.
 [INFO] (wf-manager) This package is up to date.
-[INFO] (wf-minimal-honeycomb-python) Data has been updated for this package.
+[INFO] (wf-minimal-honeycomb-python) This package is up to date.
 [INFO] (wf-pose-tracking-3d) This package is up to date.
 [INFO] (wf-process-cuwb-data) This package is up to date.
+[INFO] (wf-process-pose-data) Data has been updated for this package.
 [INFO] (wf-pycat) This package is up to date.
 [INFO] (wf-shoe-sensor) This package is up to date.
 [INFO] (wf-smc-kalman) This package is up to date.
@@ -3726,7 +3753,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (whirlpool) This package is up to date.
 [INFO] (whirls) This package is up to date.
 [ERROR] (whirlwind) This package does not have downloadable releases.
-[INFO] (whirlwind-web) This package is up to date.
+[INFO] (whirlwind-web) Data has been updated for this package.
 [INFO] (whisker) This package is up to date.
 [INFO] (whisker-autonomic-analysis) This package is up to date.
 [INFO] (whisker-serial-order) This package is up to date.
@@ -4449,7 +4476,7 @@ This package download URL does not point to a valid file: "https://pypi.python.o
 [INFO] (windows-gui-automation) This package is up to date.
 [INFO] (windows-rbs-parser) This package is up to date.
 [INFO] (windows-spotlight-extractor) This package is up to date.
-[INFO] (windows-wifi-manager) This package is up to date.
+[INFO] (windows-wifi-manager) Data has been updated for this package.
 [ERROR] (windowsazure) Could not get a response from API for this package. See below for details.
 Traceback (most recent call last):
   File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
@@ -4482,7 +4509,8 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (windutil) This package is up to date.
 [INFO] (windutils) This package is up to date.
 [INFO] (windy) This package is up to date.
-[INFO] (windy-weather-crawler) Data has been updated for this package.
+[INFO] (windy-crawler) Data has been updated for this package.
+[INFO] (windy-weather-crawler) This package is up to date.
 [INFO] (windylib) This package is up to date.
 [INFO] (windypie) This package is up to date.
 [INFO] (windyquery) This package is up to date.
@@ -4582,6 +4610,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (winontop) This package is up to date.
 [INFO] (winot) This package is up to date.
 [INFO] (winpackit) This package is up to date.
+[INFO] (winpath) Data has been updated for this package.
 [INFO] (winpaths) This package is up to date.
 [INFO] (winpcapy) This package is up to date.
 [ERROR] (winpdb) Could not extract data from this package. See below for details.
@@ -5236,7 +5265,49 @@ This package download URL does not point to a valid file: "http://badcomputer.or
 [ERROR] (woodpecker) This package does not have downloadable releases.
 [INFO] (woodplotlib) This package is up to date.
 [INFO] (woodstock) This package is up to date.
-[INFO] (woodstove) This package is up to date.
+[ERROR] (woodstove) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/urllib/request.py", line 1319, in do_open
+    encode_chunked=req.has_header('Transfer-encoding'))
+  File "/usr/lib/python3.7/http/client.py", line 1252, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1298, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1247, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.7/http/client.py", line 966, in send
+    self.connect()
+  File "/usr/lib/python3.7/http/client.py", line 1414, in connect
+    super().connect()
+  File "/usr/lib/python3.7/http/client.py", line 938, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "/usr/lib/python3.7/socket.py", line 707, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/lib/python3.7/socket.py", line 752, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.7/urllib/request.py", line 525, in open
+    response = self._open(req, data)
+  File "/usr/lib/python3.7/urllib/request.py", line 543, in _open
+    '_open', req)
+  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 1362, in https_open
+    context=self._context, check_hostname=self._check_hostname)
+  File "/usr/lib/python3.7/urllib/request.py", line 1321, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
+
 [ERROR] (woody) This package does not have downloadable releases.
 [INFO] (wooey) This package is up to date.
 [INFO] (woof) This package is up to date.
@@ -5411,99 +5482,42 @@ urllib.error.HTTPError: HTTP Error 403: Forbidden
 [INFO] (wordpress2zinnia) This package is up to date.
 [INFO] (wordpresscheckversion) This package is up to date.
 [INFO] (wordpresspy) This package is up to date.
-[ERROR] (wordpresstools) Could not get a response from API for this package. See below for details.
-Traceback (most recent call last):
-  File "/usr/lib/python3.7/urllib/request.py", line 1319, in do_open
-    encode_chunked=req.has_header('Transfer-encoding'))
-  File "/usr/lib/python3.7/http/client.py", line 1252, in request
-    self._send_request(method, url, body, headers, encode_chunked)
-  File "/usr/lib/python3.7/http/client.py", line 1298, in _send_request
-    self.endheaders(body, encode_chunked=encode_chunked)
-  File "/usr/lib/python3.7/http/client.py", line 1247, in endheaders
-    self._send_output(message_body, encode_chunked=encode_chunked)
-  File "/usr/lib/python3.7/http/client.py", line 1026, in _send_output
-    self.send(msg)
-  File "/usr/lib/python3.7/http/client.py", line 966, in send
-    self.connect()
-  File "/usr/lib/python3.7/http/client.py", line 1414, in connect
-    super().connect()
-  File "/usr/lib/python3.7/http/client.py", line 938, in connect
-    (self.host,self.port), self.timeout, self.source_address)
-  File "/usr/lib/python3.7/socket.py", line 707, in create_connection
-    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
-  File "/usr/lib/python3.7/socket.py", line 752, in getaddrinfo
-    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
-socket.gaierror: [Errno -3] Temporary failure in name resolution
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
-    timeout=10).read()
-  File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
-    return opener.open(url, data, timeout)
-  File "/usr/lib/python3.7/urllib/request.py", line 525, in open
-    response = self._open(req, data)
-  File "/usr/lib/python3.7/urllib/request.py", line 543, in _open
-    '_open', req)
-  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
-    result = func(*args)
-  File "/usr/lib/python3.7/urllib/request.py", line 1362, in https_open
-    context=self._context, check_hostname=self._check_hostname)
-  File "/usr/lib/python3.7/urllib/request.py", line 1321, in do_open
-    raise URLError(err)
-urllib.error.URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
-
-[ERROR] (wordprexit) Could not get a response from API for this package. See below for details.
-Traceback (most recent call last):
-  File "/usr/lib/python3.7/urllib/request.py", line 1319, in do_open
-    encode_chunked=req.has_header('Transfer-encoding'))
-  File "/usr/lib/python3.7/http/client.py", line 1252, in request
-    self._send_request(method, url, body, headers, encode_chunked)
-  File "/usr/lib/python3.7/http/client.py", line 1298, in _send_request
-    self.endheaders(body, encode_chunked=encode_chunked)
-  File "/usr/lib/python3.7/http/client.py", line 1247, in endheaders
-    self._send_output(message_body, encode_chunked=encode_chunked)
-  File "/usr/lib/python3.7/http/client.py", line 1026, in _send_output
-    self.send(msg)
-  File "/usr/lib/python3.7/http/client.py", line 966, in send
-    self.connect()
-  File "/usr/lib/python3.7/http/client.py", line 1414, in connect
-    super().connect()
-  File "/usr/lib/python3.7/http/client.py", line 938, in connect
-    (self.host,self.port), self.timeout, self.source_address)
-  File "/usr/lib/python3.7/socket.py", line 707, in create_connection
-    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
-  File "/usr/lib/python3.7/socket.py", line 752, in getaddrinfo
-    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
-socket.gaierror: [Errno -3] Temporary failure in name resolution
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
-    timeout=10).read()
-  File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
-    return opener.open(url, data, timeout)
-  File "/usr/lib/python3.7/urllib/request.py", line 525, in open
-    response = self._open(req, data)
-  File "/usr/lib/python3.7/urllib/request.py", line 543, in _open
-    '_open', req)
-  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
-    result = func(*args)
-  File "/usr/lib/python3.7/urllib/request.py", line 1362, in https_open
-    context=self._context, check_hostname=self._check_hostname)
-  File "/usr/lib/python3.7/urllib/request.py", line 1321, in do_open
-    raise URLError(err)
-urllib.error.URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
-
+[INFO] (wordpresstools) This package is up to date.
+[INFO] (wordprexit) This package is up to date.
 [INFO] (wordpy) This package is up to date.
 [INFO] (words) This package is up to date.
 [ERROR] (words-cli) This package does not have downloadable releases.
 [INFO] (words-counter) This package is up to date.
 [INFO] (words2num) This package is up to date.
 [INFO] (wordscrape) This package is up to date.
-[INFO] (wordsearch) This package is up to date.
+[ERROR] (wordsearch) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.7/urllib/request.py", line 531, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.7/urllib/request.py", line 641, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.7/urllib/request.py", line 563, in error
+    result = self._call_chain(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 755, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+  File "/usr/lib/python3.7/urllib/request.py", line 531, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.7/urllib/request.py", line 641, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.7/urllib/request.py", line 569, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 649, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+
 [INFO] (wordsearchutils) This package is up to date.
 [INFO] (wordsegment) This package is up to date.
 [INFO] (wordsegmentation) This package is up to date.
@@ -5856,9 +5870,9 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [ERROR] (wphp) This package does not have downloadable releases.
 [INFO] (wpi) This package is up to date.
 [INFO] (wpiformat) This package is up to date.
-[INFO] (wpilib) This package is up to date.
+[INFO] (wpilib) Data has been updated for this package.
 [INFO] (wpilib-controller) This package is up to date.
-[INFO] (wpilib-kinematics) This package is up to date.
+[INFO] (wpilib-kinematics) Data has been updated for this package.
 [INFO] (wpkit) This package is up to date.
 [INFO] (wplay) This package is up to date.
 [INFO] (wplinks) This package is up to date.
@@ -6073,7 +6087,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (wrong) This package is up to date.
 [INFO] (wronganswer) This package is up to date.
 [INFO] (wronnay-search-lib) This package is up to date.
-[INFO] (wrpclient) Data has been updated for this package.
+[INFO] (wrpclient) This package is up to date.
 [INFO] (wrtdk) This package is up to date.
 [INFO] (wrun) This package is up to date.
 [INFO] (wryte) This package is up to date.
@@ -6555,7 +6569,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (wuppercodegen) This package is up to date.
 [INFO] (wupunci-test) This package is up to date.
 [INFO] (wuqiwei) This package is up to date.
-[INFO] (wurfapi) This package is up to date.
+[INFO] (wurfapi) Data has been updated for this package.
 [INFO] (wurfl-cloud) This package is up to date.
 [INFO] (wurfl-python) This package is up to date.
 [INFO] (wurl) This package is up to date.
@@ -6640,7 +6654,7 @@ This package download URL does not point to a valid file: "http://cheeseshop.pyt
 [INFO] (wwpdb-utils-config) This package is up to date.
 [INFO] (wwpdb-utils-detach) This package is up to date.
 [INFO] (wwpdb-utils-session) This package is up to date.
-[INFO] (wwpdb-utils-testing) Data has been updated for this package.
+[INFO] (wwpdb-utils-testing) This package is up to date.
 [INFO] (wwpdb-utils-wf) This package is up to date.
 [INFO] (wwpdb-utils-ws-utils) This package is up to date.
 [INFO] (wwr-api) This package is up to date.
@@ -6719,6 +6733,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (wxgnester) This package is up to date.
 [INFO] (wxgoodies) This package is up to date.
 [INFO] (wxiconsaver) This package is up to date.
+[INFO] (wxleaf) Data has been updated for this package.
 [ERROR] (wxlinuxprebuild) Could not get a response from API for this package. See below for details.
 Traceback (most recent call last):
   File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
@@ -6867,11 +6882,11 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (wztnester) This package is up to date.
 [INFO] 
 [INFO] 
-[INFO] Total packages: 4307
-[INFO]     Packages processed: 4307
-[INFO]         Packages updated: 10
-[INFO]         Packages up-to-date: 3977
-[INFO]         Packages without response: 104
+[INFO] Total packages: 4311
+[INFO]     Packages processed: 4311
+[INFO]         Packages updated: 15
+[INFO]         Packages up-to-date: 3975
+[INFO]         Packages without response: 105
 [INFO]         Packages without urls: 0
 [INFO]         Packages without downloads: 168
 [INFO]         Packages with data errors: 48
