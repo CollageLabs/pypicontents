@@ -1126,7 +1126,7 @@
             "labelme.widgets.unique_label_qlist_widget",
             "labelme.widgets.zoom_widget"
         ],
-        "version": "4.2.6"
+        "version": "4.2.7"
     },
     "labelme-test": {
         "cmdline": [],
@@ -4201,15 +4201,17 @@
             "lale.lib.autogen.truncated_svd",
             "lale.lib.lale",
             "lale.lib.lale.batching",
+            "lale.lib.lale.both",
             "lale.lib.lale.concat_features",
             "lale.lib.lale.grid_search_cv",
-            "lale.lib.lale.hyperopt_cv",
+            "lale.lib.lale.hyperopt",
+            "lale.lib.lale.identity_wrapper",
             "lale.lib.lale.keep_non_numbers",
             "lale.lib.lale.keep_numbers",
             "lale.lib.lale.no_op",
             "lale.lib.lale.project",
             "lale.lib.lale.sample_based_voting",
-            "lale.lib.lale.smac_cv",
+            "lale.lib.lale.smac",
             "lale.lib.lale.time_series_transformer",
             "lale.lib.lightgbm",
             "lale.lib.lightgbm.lgbm_classifier",
@@ -4218,6 +4220,9 @@
             "lale.lib.pytorch.bert_pretrained_encoder",
             "lale.lib.pytorch.resnet",
             "lale.lib.sklearn",
+            "lale.lib.sklearn.ada_boost_classifier",
+            "lale.lib.sklearn.ada_boost_regressor",
+            "lale.lib.sklearn.bagging_classifier",
             "lale.lib.sklearn.decision_tree_classifier",
             "lale.lib.sklearn.decision_tree_regressor",
             "lale.lib.sklearn.extra_trees_classifier",
@@ -4237,19 +4242,25 @@
             "lale.lib.sklearn.normalizer",
             "lale.lib.sklearn.nystroem",
             "lale.lib.sklearn.one_hot_encoder",
+            "lale.lib.sklearn.ordinal_encoder",
             "lale.lib.sklearn.passive_aggressive_classifier",
             "lale.lib.sklearn.pca",
             "lale.lib.sklearn.polynomial_features",
             "lale.lib.sklearn.quadratic_discriminant_analysis",
+            "lale.lib.sklearn.quantile_transformer",
             "lale.lib.sklearn.random_forest_classifier",
             "lale.lib.sklearn.random_forest_regressor",
             "lale.lib.sklearn.rfe",
             "lale.lib.sklearn.ridge",
             "lale.lib.sklearn.robust_scaler",
+            "lale.lib.sklearn.select_k_best",
+            "lale.lib.sklearn.sgd_classifier",
+            "lale.lib.sklearn.sgd_regressor",
             "lale.lib.sklearn.simple_imputer",
             "lale.lib.sklearn.standard_scaler",
             "lale.lib.sklearn.svc",
             "lale.lib.sklearn.tfidf_vectorizer",
+            "lale.lib.sklearn.voting_classifier",
             "lale.lib.spacy",
             "lale.lib.spacy.glove_embedding_encoder",
             "lale.lib.tensorflow",
@@ -4257,6 +4268,7 @@
             "lale.lib.xgboost",
             "lale.lib.xgboost.xgb_classifier",
             "lale.lib.xgboost.xgb_regressor",
+            "lale.operator_wrapper",
             "lale.operators",
             "lale.pretty_print",
             "lale.schema2enums",
@@ -4265,10 +4277,10 @@
             "lale.schema_utils",
             "lale.schemas",
             "lale.search",
-            "lale.search.HP",
             "lale.search.PGO",
-            "lale.search.SMAC",
             "lale.search.lale_grid_search_cv",
+            "lale.search.lale_hyperopt",
+            "lale.search.lale_smac",
             "lale.search.op2hp",
             "lale.search.schema2search_space",
             "lale.search.search_space",
@@ -4282,21 +4294,22 @@
             "lale.util.numpy_to_torch_dataset",
             "lale.visualize",
             "test",
+            "test.mock_custom_operators",
             "test.mock_module",
-            "test.test",
             "test.test_core_operators",
             "test.test_core_pipeline",
-            "test.test_custom_operators",
             "test.test_custom_schemas",
             "test.test_interoperability",
+            "test.test_json_pretty_viz",
             "test.test_nlp_operators",
             "test.test_notebooks",
             "test.test_optimizers",
             "test.test_pgo",
             "test.test_pipeline",
-            "test.test_sklearn_compat"
+            "test.test_sklearn_compat",
+            "test.test_type_checking"
         ],
-        "version": "0.3.2"
+        "version": "0.3.3"
     },
     "lalistadesinde-portlet": {
         "cmdline": [],
@@ -4837,6 +4850,19 @@
             "lambda_packages"
         ],
         "version": "0.20.0"
+    },
+    "lambda-packaging": {
+        "cmdline": [],
+        "modules": [
+            "lambda_packaging",
+            "lambda_packaging.components",
+            "lambda_packaging.config",
+            "lambda_packaging.docker",
+            "lambda_packaging.pip_requirements",
+            "lambda_packaging.utils",
+            "lambda_packaging.zip_package"
+        ],
+        "version": "0.1.0"
     },
     "lambda-parse-sqs": {
         "cmdline": [],
@@ -15485,6 +15511,19 @@
         ],
         "version": "1.4.14"
     },
+    "lavd": {
+        "cmdline": [],
+        "modules": [
+            "lavd",
+            "lavd.data",
+            "lavd.file_types",
+            "lavd.fs",
+            "lavd.log",
+            "lavd.server",
+            "lavd.version"
+        ],
+        "version": "0.1.1"
+    },
     "lavender": {
         "cmdline": [],
         "modules": [
@@ -15612,7 +15651,9 @@
         "version": "1.2.4"
     },
     "law": {
-        "cmdline": [],
+        "cmdline": [
+            "law"
+        ],
         "modules": [
             "law",
             "law.__version__",
@@ -15705,7 +15746,7 @@
             "law.workflow.local",
             "law.workflow.remote"
         ],
-        "version": "0.0.35"
+        "version": "0.0.36"
     },
     "lawes": {
         "cmdline": [],
@@ -28610,6 +28651,23 @@
         ],
         "version": "0.0.1"
     },
+    "lemiknow": {
+        "cmdline": [],
+        "modules": [
+            "lemiknow",
+            "lemiknow.desktop_sender",
+            "lemiknow.discord_sender",
+            "lemiknow.email_sender",
+            "lemiknow.matrix_sender",
+            "lemiknow.slack_sender",
+            "lemiknow.sms_sender",
+            "lemiknow.teams_sender",
+            "lemiknow.telegram_sender",
+            "lemiknow.tests",
+            "lemiknow.tests.test_senders"
+        ],
+        "version": "0.0.8"
+    },
     "lemity": {
         "cmdline": [],
         "modules": [
@@ -35656,7 +35714,7 @@
     "lgblkb-navigation": {
         "cmdline": [],
         "modules": [],
-        "version": "0.0.5"
+        "version": "0.0.6"
     },
     "lgblkb-tools": {
         "cmdline": [],
@@ -35678,6 +35736,47 @@
             "lgblkb_tools.telegram_notify"
         ],
         "version": "1.0.68"
+    },
+    "lgbsttracker": {
+        "cmdline": [],
+        "modules": [
+            "lgbsttracker",
+            "lgbsttracker.cli",
+            "lgbsttracker.db",
+            "lgbsttracker.entities",
+            "lgbsttracker.entities.experiment",
+            "lgbsttracker.errors",
+            "lgbsttracker.exceptions",
+            "lgbsttracker.services",
+            "lgbsttracker.services.store",
+            "lgbsttracker.services.store._experiment_registry",
+            "lgbsttracker.services.store._experiment_registry.registry",
+            "lgbsttracker.services.store._experiment_registry.service",
+            "lgbsttracker.services.store._experiment_registry.utils",
+            "lgbsttracker.services.store.registry",
+            "lgbsttracker.store",
+            "lgbsttracker.store.db",
+            "lgbsttracker.store.db.db_types",
+            "lgbsttracker.store.db.sql_background",
+            "lgbsttracker.store.db.sql_base",
+            "lgbsttracker.store.db.sql_crud_base",
+            "lgbsttracker.store.db.sql_database",
+            "lgbsttracker.store.db.utils",
+            "lgbsttracker.store.db_migrations.env",
+            "lgbsttracker.store.db_migrations.versions.ae2444ccb82a_initial_db",
+            "lgbsttracker.store.experiment",
+            "lgbsttracker.store.experiment.abstract_store",
+            "lgbsttracker.store.experiment.dbmodels",
+            "lgbsttracker.store.experiment.dbmodels.experiment",
+            "lgbsttracker.store.experiment.sqlachemy_store",
+            "lgbsttracker.utils",
+            "lgbsttracker.utils.env",
+            "lgbsttracker.utils.logging_utils",
+            "lgbsttracker.utils.uri",
+            "lgbsttracker.utils.validation",
+            "lgbsttracker.version"
+        ],
+        "version": "0.0.2"
     },
     "lgbtrainer": {
         "cmdline": [],
@@ -40441,6 +40540,16 @@
         ],
         "version": "0.1.0"
     },
+    "libgen-api": {
+        "cmdline": [],
+        "modules": [
+            "libgen_api",
+            "libgen_api.libgen_api_helpers",
+            "libgen_api.libgen_search",
+            "libgen_api.search_request"
+        ],
+        "version": "0.2.3"
+    },
     "libgen-py": {
         "cmdline": [],
         "modules": [],
@@ -42921,7 +43030,7 @@
             "libra_client.version",
             "libra_client.wallet_library"
         ],
-        "version": "0.7.2"
+        "version": "0.7.8"
     },
     "libra-core": {
         "cmdline": [],
@@ -42932,6 +43041,7 @@
             "libra.account_address",
             "libra.account_config",
             "libra.account_resource",
+            "libra.account_state",
             "libra.account_state_blob",
             "libra.block_info",
             "libra.block_metadata",
@@ -43034,7 +43144,7 @@
             "libra.vm_error",
             "libra.waypoint"
         ],
-        "version": "0.7.6"
+        "version": "0.7.8"
     },
     "libra-py": {
         "cmdline": [],
@@ -43225,6 +43335,35 @@
             "LibRadar.libradar"
         ],
         "version": "2.1.0"
+    },
+    "librair": {
+        "cmdline": [],
+        "modules": [
+            "librair",
+            "librair.catalogs",
+            "librair.catalogs.bvb",
+            "librair.catalogs.ddb",
+            "librair.catalogs.dnb",
+            "librair.catalogs.gbv",
+            "librair.catalogs.kalliope",
+            "librair.catalogs.mdz",
+            "librair.catalogs.zdb",
+            "librair.protocols",
+            "librair.protocols.http",
+            "librair.protocols.iiif",
+            "librair.protocols.oai",
+            "librair.protocols.sru",
+            "librair.queries",
+            "librair.queries.ddb",
+            "librair.queries.dnb",
+            "librair.queries.ead",
+            "librair.queries.pica",
+            "librair.queries.zdb",
+            "librair.schemas",
+            "librair.schemas.json",
+            "librair.schemas.xml"
+        ],
+        "version": "2020.2.9"
     },
     "libraptorq": {
         "cmdline": [],
@@ -47180,12 +47319,10 @@
         "modules": [
             "liburing",
             "liburing.helper",
-            "liburing.io_uring",
-            "liburing.liburing",
-            "liburing.prep",
+            "liburing.interface",
             "liburing.wrapper"
         ],
-        "version": "0.0.9"
+        "version": "2020.2.8"
     },
     "liburl": {
         "cmdline": [],
@@ -49183,7 +49320,7 @@
             "lifx_control_panel.utilities.keypress",
             "lifx_control_panel.utilities.utils"
         ],
-        "version": "1.7.5"
+        "version": "1.7.6"
     },
     "lifx-photons-core": {
         "cmdline": [],
@@ -50597,7 +50734,7 @@
             "lightkurve.utils",
             "lightkurve.version"
         ],
-        "version": "1.7.0"
+        "version": "1.8.0"
     },
     "lightlab": {
         "cmdline": [],
@@ -63637,6 +63774,11 @@
         ],
         "version": "0.1"
     },
+    "liquorice": {
+        "cmdline": [],
+        "modules": [],
+        "version": ""
+    },
     "liqupy": {
         "cmdline": [],
         "modules": [
@@ -71101,10 +71243,11 @@
             "llyfrau",
             "llyfrau._version",
             "llyfrau.cli",
+            "llyfrau.cli.tui",
             "llyfrau.data",
             "llyfrau.importers"
         ],
-        "version": "0.2.0"
+        "version": "0.3.0"
     },
     "llz-yunsuan-llz": {
         "cmdline": [],
@@ -77414,6 +77557,14 @@
         ],
         "version": "1.4"
     },
+    "logger-app": {
+        "cmdline": [],
+        "modules": [
+            "logger_app",
+            "logger_app.model"
+        ],
+        "version": "0.0.1.20020712"
+    },
     "logger-helper": {
         "cmdline": [],
         "modules": [
@@ -81606,6 +81757,14 @@
         "modules": [],
         "version": "0.2.3"
     },
+    "lojipath": {
+        "cmdline": [],
+        "modules": [
+            "lojipath",
+            "lojipath.lojipath"
+        ],
+        "version": "0.2"
+    },
     "lokai": {
         "cmdline": [
             "lk_export_node.py",
@@ -81950,6 +82109,11 @@
             "loktar.strategy_run"
         ],
         "version": "75"
+    },
+    "lokusiilycakaxpr": {
+        "cmdline": [],
+        "modules": [],
+        "version": "99.99.99"
     },
     "loky": {
         "cmdline": [],
@@ -94871,7 +95035,7 @@
             "luno_streams.server",
             "luno_streams.updater"
         ],
-        "version": "0.1.2"
+        "version": "0.1.3"
     },
     "lunr": {
         "cmdline": [],
@@ -95558,7 +95722,7 @@
             "lusid.utilities.api_configuration_loader",
             "lusid.utilities.refreshing_token"
         ],
-        "version": "0.10.1072"
+        "version": "0.10.1077"
     },
     "lusid-sdk-preview": {
         "cmdline": [],
@@ -95577,6 +95741,7 @@
             "lusid.api.instruments_api",
             "lusid.api.login_api",
             "lusid.api.orders_api",
+            "lusid.api.persons_api",
             "lusid.api.portfolio_groups_api",
             "lusid.api.portfolios_api",
             "lusid.api.property_definitions_api",
@@ -95694,6 +95859,7 @@
             "lusid.models.paged_resource_list_of_portfolio_search_result",
             "lusid.models.paged_resource_list_of_property_definition",
             "lusid.models.perpetual_property",
+            "lusid.models.person",
             "lusid.models.portfolio",
             "lusid.models.portfolio_details",
             "lusid.models.portfolio_group",
@@ -95783,6 +95949,7 @@
             "lusid.models.upsert_instruments_response",
             "lusid.models.upsert_order_properties_request",
             "lusid.models.upsert_order_properties_response",
+            "lusid.models.upsert_person_request",
             "lusid.models.upsert_portfolio_executions_response",
             "lusid.models.upsert_portfolio_transactions_response",
             "lusid.models.upsert_quote_access_metadata_rule_request",
@@ -95815,7 +95982,7 @@
             "lusid.utilities.lusid_retry",
             "lusid.utilities.refreshing_token"
         ],
-        "version": "0.10.1072"
+        "version": "0.10.1077"
     },
     "lusid-tr-sdk": {
         "cmdline": [],
