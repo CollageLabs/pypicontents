@@ -747,6 +747,7 @@ Traceback (most recent call last):
     raise HTTPError(req.full_url, code, msg, hdrs, fp)
 urllib.error.HTTPError: HTTP Error 404: Not Found
 
+[INFO] (vcpy) Data has been updated for this package.
 [INFO] (vcrpy) This package is up to date.
 [ERROR] (vcrpy-facebook) Could not get a response from API for this package. See below for details.
 Traceback (most recent call last):
@@ -831,9 +832,145 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (vdt-versionplugin-buildout) This package is up to date.
 [INFO] (vdt-versionplugin-debianize) This package is up to date.
 [INFO] (vdt-versionplugin-default) This package is up to date.
-[INFO] (vdt-versionplugin-fpm) This package is up to date.
-[INFO] (vdt-versionplugin-gitchain) This package is up to date.
-[INFO] (vdt-versionplugin-hotfix) This package is up to date.
+[ERROR] (vdt-versionplugin-fpm) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/urllib/request.py", line 1319, in do_open
+    encode_chunked=req.has_header('Transfer-encoding'))
+  File "/usr/lib/python3.7/http/client.py", line 1252, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1298, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1247, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.7/http/client.py", line 966, in send
+    self.connect()
+  File "/usr/lib/python3.7/http/client.py", line 1414, in connect
+    super().connect()
+  File "/usr/lib/python3.7/http/client.py", line 938, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "/usr/lib/python3.7/socket.py", line 707, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/lib/python3.7/socket.py", line 752, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.7/urllib/request.py", line 531, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.7/urllib/request.py", line 641, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.7/urllib/request.py", line 563, in error
+    result = self._call_chain(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 755, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+  File "/usr/lib/python3.7/urllib/request.py", line 525, in open
+    response = self._open(req, data)
+  File "/usr/lib/python3.7/urllib/request.py", line 543, in _open
+    '_open', req)
+  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 1362, in https_open
+    context=self._context, check_hostname=self._check_hostname)
+  File "/usr/lib/python3.7/urllib/request.py", line 1321, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
+
+[ERROR] (vdt-versionplugin-gitchain) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/urllib/request.py", line 1319, in do_open
+    encode_chunked=req.has_header('Transfer-encoding'))
+  File "/usr/lib/python3.7/http/client.py", line 1252, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1298, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1247, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.7/http/client.py", line 966, in send
+    self.connect()
+  File "/usr/lib/python3.7/http/client.py", line 1414, in connect
+    super().connect()
+  File "/usr/lib/python3.7/http/client.py", line 938, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "/usr/lib/python3.7/socket.py", line 707, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/lib/python3.7/socket.py", line 752, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.7/urllib/request.py", line 525, in open
+    response = self._open(req, data)
+  File "/usr/lib/python3.7/urllib/request.py", line 543, in _open
+    '_open', req)
+  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 1362, in https_open
+    context=self._context, check_hostname=self._check_hostname)
+  File "/usr/lib/python3.7/urllib/request.py", line 1321, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
+
+[ERROR] (vdt-versionplugin-hotfix) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/urllib/request.py", line 1319, in do_open
+    encode_chunked=req.has_header('Transfer-encoding'))
+  File "/usr/lib/python3.7/http/client.py", line 1252, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1298, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1247, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.7/http/client.py", line 966, in send
+    self.connect()
+  File "/usr/lib/python3.7/http/client.py", line 1414, in connect
+    super().connect()
+  File "/usr/lib/python3.7/http/client.py", line 938, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "/usr/lib/python3.7/socket.py", line 707, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/lib/python3.7/socket.py", line 752, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.7/urllib/request.py", line 525, in open
+    response = self._open(req, data)
+  File "/usr/lib/python3.7/urllib/request.py", line 543, in _open
+    '_open', req)
+  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 1362, in https_open
+    context=self._context, check_hostname=self._check_hostname)
+  File "/usr/lib/python3.7/urllib/request.py", line 1321, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
+
 [INFO] (vdt-versionplugin-puppetforge) This package is up to date.
 [INFO] (vdt-versionplugin-puppetmodule) This package is up to date.
 [INFO] (vdt-versionplugin-wheel) This package is up to date.
@@ -1028,7 +1165,7 @@ Traceback (most recent call last):
 urllib.error.HTTPError: HTTP Error 404: Not Found
 
 [INFO] (venc) This package is up to date.
-[INFO] (vencode) This package is up to date.
+[INFO] (vencode) Data has been updated for this package.
 [INFO] (vend) This package is up to date.
 [INFO] (vendor) This package is up to date.
 [INFO] (vendoring) This package is up to date.
@@ -1078,6 +1215,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (venvdotapp) This package is up to date.
 [INFO] (venvgit2) This package is up to date.
 [INFO] (venvm) This package is up to date.
+[INFO] (venvpkg) Data has been updated for this package.
 [INFO] (venvs) This package is up to date.
 [INFO] (venvstarter) This package is up to date.
 [INFO] (venvtools) This package is up to date.
@@ -2421,7 +2559,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (vk-api-boroda34) This package is up to date.
 [INFO] (vk-audio) This package is up to date.
 [INFO] (vk-bot) This package is up to date.
-[INFO] (vk-botting) Data has been updated for this package.
+[INFO] (vk-botting) This package is up to date.
 [INFO] (vk-client) This package is up to date.
 [INFO] (vk-eleven) This package is up to date.
 [INFO] (vk-facenet) This package is up to date.
@@ -2470,9 +2608,9 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (vkapipy) This package is up to date.
 [INFO] (vkappauth) This package is up to date.
 [INFO] (vkbeautify) This package is up to date.
-[INFO] (vkbee) Data has been updated for this package.
+[INFO] (vkbee) This package is up to date.
 [ERROR] (vkbot) This package does not have downloadable releases.
-[INFO] (vkbottle) This package is up to date.
+[INFO] (vkbottle) Data has been updated for this package.
 [INFO] (vkbottletest) This package is up to date.
 [INFO] (vkchatbot) This package is up to date.
 [INFO] (vkcoin) This package is up to date.
@@ -3152,7 +3290,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (vortexpy) This package is up to date.
 [INFO] (vos) This package is up to date.
 [INFO] (vose-alias-method) This package is up to date.
-[INFO] (vosk) Data has been updated for this package.
+[INFO] (vosk) This package is up to date.
 [INFO] (vostok) This package is up to date.
 [INFO] (vote) This package is up to date.
 [INFO] (vote4film) This package is up to date.
@@ -3165,7 +3303,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (voting) This package is up to date.
 [INFO] (vouched-python) This package is up to date.
 [INFO] (voucherify) This package is up to date.
-[INFO] (voussoirkit) This package is up to date.
+[INFO] (voussoirkit) Data has been updated for this package.
 [INFO] (vowcon-removal-helper) This package is up to date.
 [INFO] (vowel-versificon) This package is up to date.
 [INFO] (vowpal-porpoise) This package is up to date.
@@ -3324,12 +3462,12 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (vrpwrp) This package is up to date.
 [INFO] (vrsubtitlemaker) This package is up to date.
 [INFO] (vrt-generator) This package is up to date.
-[INFO] (vrt-lss-field-service) Data has been updated for this package.
-[INFO] (vrt-lss-lastmile) Data has been updated for this package.
-[INFO] (vrt-lss-lastmile-delivery) Data has been updated for this package.
-[INFO] (vrt-lss-lastmile-multidepot) Data has been updated for this package.
-[INFO] (vrt-lss-merchandiser) Data has been updated for this package.
-[INFO] (vrt-lss-routing) Data has been updated for this package.
+[INFO] (vrt-lss-field-service) This package is up to date.
+[INFO] (vrt-lss-lastmile) This package is up to date.
+[INFO] (vrt-lss-lastmile-delivery) This package is up to date.
+[INFO] (vrt-lss-lastmile-multidepot) This package is up to date.
+[INFO] (vrt-lss-merchandiser) This package is up to date.
+[INFO] (vrt-lss-routing) This package is up to date.
 [INFO] (vrt-spacy) This package is up to date.
 [INFO] (vrticl) This package is up to date.
 [INFO] (vrtneopixel) This package is up to date.
@@ -3574,7 +3712,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (vtpl-api-wrapper) This package is up to date.
 [INFO] (vtr-storages) This package is up to date.
 [INFO] (vtr-utils) This package is up to date.
-[INFO] (vtreat) Data has been updated for this package.
+[INFO] (vtreat) This package is up to date.
 [INFO] (vtrie) This package is up to date.
 [INFO] (vtrplot) This package is up to date.
 [INFO] (vtrtool) This package is up to date.
@@ -3723,11 +3861,11 @@ This package download URL does not point to a valid file: "http://code.google.co
 [INFO] (vzzual) This package is up to date.
 [INFO] 
 [INFO] 
-[INFO] Total packages: 2745
-[INFO]     Packages processed: 2745
-[INFO]         Packages updated: 11
-[INFO]         Packages up-to-date: 2568
-[INFO]         Packages without response: 45
+[INFO] Total packages: 2747
+[INFO]     Packages processed: 2747
+[INFO]         Packages updated: 6
+[INFO]         Packages up-to-date: 2572
+[INFO]         Packages without response: 48
 [INFO]         Packages without urls: 0
 [INFO]         Packages without downloads: 105
 [INFO]         Packages with data errors: 16
