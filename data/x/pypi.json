@@ -1621,8 +1621,10 @@
             "xain_fl.coordinator.coordinator_grpc",
             "xain_fl.coordinator.heartbeat",
             "xain_fl.coordinator.metrics_store",
+            "xain_fl.coordinator.participant_state_machine",
             "xain_fl.coordinator.participants",
             "xain_fl.coordinator.round",
+            "xain_fl.coordinator.scratch-notes",
             "xain_fl.coordinator.store",
             "xain_fl.fl",
             "xain_fl.fl.coordinator",
@@ -1633,7 +1635,7 @@
             "xain_fl.tools",
             "xain_fl.tools.exceptions"
         ],
-        "version": "0.4.0"
+        "version": "0.5.0"
     },
     "xain-proto": {
         "cmdline": [],
@@ -1642,26 +1644,26 @@
             "xain_proto.fl",
             "xain_proto.fl.coordinator_pb2",
             "xain_proto.fl.coordinator_pb2_grpc",
-            "xain_proto.fl.hellonumproto_pb2",
-            "xain_proto.fl.hellonumproto_pb2_grpc",
             "xain_proto.np",
             "xain_proto.np.ndarray_pb2",
             "xain_proto.np.ndarray_pb2_grpc",
             "xain_proto.np.utils"
         ],
-        "version": "0.4.0"
+        "version": "0.5.0"
     },
     "xain-sdk": {
         "cmdline": [],
         "modules": [
             "xain_sdk",
             "xain_sdk.__version__",
+            "xain_sdk.config",
+            "xain_sdk.config.schema",
             "xain_sdk.logger",
             "xain_sdk.participant",
             "xain_sdk.participant_state_machine",
             "xain_sdk.store"
         ],
-        "version": "0.4.0"
+        "version": "0.5.0"
     },
     "xako": {
         "cmdline": [],
@@ -7672,11 +7674,6 @@
         ],
         "version": "1.3.1"
     },
-    "xflask": {
-        "cmdline": [],
-        "modules": [],
-        "version": ""
-    },
     "xflat": {
         "cmdline": [],
         "modules": [
@@ -7958,7 +7955,7 @@
             "xgbtune",
             "xgbtune.tune"
         ],
-        "version": "0.1.1"
+        "version": "1.0.0"
     },
     "xgcm": {
         "cmdline": [],
@@ -8769,22 +8766,57 @@
         "version": "0.1.2"
     },
     "xiangqi-setup": {
-        "cmdline": [
-            "xiangqi-board",
-            "xiangqi-setup"
-        ],
+        "cmdline": [],
         "modules": [
             "xiangqi_board",
-            "xiangqi_board.cli",
             "xiangqi_board.painter",
             "xiangqi_setup",
-            "xiangqi_setup.cli",
             "xiangqi_setup.compose",
             "xiangqi_setup.license",
+            "xiangqi_setup.themes",
+            "xiangqi_setup.themes.board",
+            "xiangqi_setup.themes.board.a4_blank_2cm_margin",
+            "xiangqi_setup.themes.board.cambaluc_remake_nolegend",
+            "xiangqi_setup.themes.board.cambaluc_remake_nolegend_nogap",
+            "xiangqi_setup.themes.board.ccbridge_3_0_beta4_default_preview_remake",
+            "xiangqi_setup.themes.board.clean_alpha",
+            "xiangqi_setup.themes.board.clean_beta",
+            "xiangqi_setup.themes.board.commons_xiangqi_board_2008",
+            "xiangqi_setup.themes.board.commons_xiangqi_board_2008.original",
+            "xiangqi_setup.themes.board.commons_xiangqi_board_2008_bw_thin",
+            "xiangqi_setup.themes.board.commons_xiangqi_board_2008_bw_thin.original",
+            "xiangqi_setup.themes.board.dhtmlxq_2014_remake",
+            "xiangqi_setup.themes.board.latex_xq_remake",
+            "xiangqi_setup.themes.board.latex_xq_remake.original",
+            "xiangqi_setup.themes.board.minimal",
+            "xiangqi_setup.themes.board.minimal_chinese",
+            "xiangqi_setup.themes.board.minimal_chinese_arabic",
+            "xiangqi_setup.themes.board.playok_2014_remake",
+            "xiangqi_setup.themes.board.western_red_wine",
+            "xiangqi_setup.themes.board.xiexie_2_5_0_remake_minimal",
+            "xiangqi_setup.themes.pieces",
+            "xiangqi_setup.themes.pieces.ccbridge_3_0_beta4_default_preview_remake",
+            "xiangqi_setup.themes.pieces.commons_xiangqi_pieces_print_2010",
+            "xiangqi_setup.themes.pieces.commons_xiangqi_pieces_print_2010.original",
+            "xiangqi_setup.themes.pieces.commons_xiangqi_pieces_print_2010_bw_heavy",
+            "xiangqi_setup.themes.pieces.commons_xiangqi_pieces_print_2010_bw_heavy.original",
+            "xiangqi_setup.themes.pieces.euro_xiangqi_js",
+            "xiangqi_setup.themes.pieces.euro_xiangqi_js.original",
+            "xiangqi_setup.themes.pieces.euro_xiangqi_js.stickers",
+            "xiangqi_setup.themes.pieces.euro_xiangqi_js.stickers.first_round",
+            "xiangqi_setup.themes.pieces.latex_xqlarge_2006_chinese_autotrace",
+            "xiangqi_setup.themes.pieces.latex_xqlarge_2006_chinese_autotrace.original",
+            "xiangqi_setup.themes.pieces.latex_xqlarge_2006_chinese_potrace",
+            "xiangqi_setup.themes.pieces.latex_xqlarge_2006_chinese_potrace.original",
+            "xiangqi_setup.themes.pieces.playok_2014_chinese",
+            "xiangqi_setup.themes.pieces.playok_2014_chinese.original",
+            "xiangqi_setup.themes.pieces.playok_2014_chinese_noshadow",
+            "xiangqi_setup.themes.pieces.playok_2014_chinese_noshadow.original",
+            "xiangqi_setup.themes.pieces.retro_simple",
             "xiangqi_setup.version",
             "xiangqi_setup.wxf_format"
         ],
-        "version": "1.3"
+        "version": "1.5.0"
     },
     "xianshi": {
         "cmdline": [],
@@ -16953,7 +16985,7 @@
             "xoeuf.ui",
             "xoeuf.utils"
         ],
-        "version": "0.76.0"
+        "version": "0.77.0"
     },
     "xoinvader": {
         "cmdline": [],
