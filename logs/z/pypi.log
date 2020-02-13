@@ -449,122 +449,9 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (zbuild) This package is up to date.
 [INFO] (zbuilder) This package is up to date.
 [INFO] (zbus) This package is up to date.
-[ERROR] (zbuspy) Could not get a response from API for this package. See below for details.
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
-    timeout=10).read()
-  File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
-    return opener.open(url, data, timeout)
-  File "/usr/lib/python3.7/urllib/request.py", line 525, in open
-    response = self._open(req, data)
-  File "/usr/lib/python3.7/urllib/request.py", line 543, in _open
-    '_open', req)
-  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
-    result = func(*args)
-  File "/usr/lib/python3.7/urllib/request.py", line 1362, in https_open
-    context=self._context, check_hostname=self._check_hostname)
-  File "/usr/lib/python3.7/urllib/request.py", line 1322, in do_open
-    r = h.getresponse()
-  File "/usr/lib/python3.7/http/client.py", line 1344, in getresponse
-    response.begin()
-  File "/usr/lib/python3.7/http/client.py", line 306, in begin
-    version, status, reason = self._read_status()
-  File "/usr/lib/python3.7/http/client.py", line 267, in _read_status
-    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
-  File "/usr/lib/python3.7/socket.py", line 589, in readinto
-    return self._sock.recv_into(b)
-  File "/usr/lib/python3.7/ssl.py", line 1071, in recv_into
-    return self.read(nbytes, buffer)
-  File "/usr/lib/python3.7/ssl.py", line 929, in read
-    return self._sslobj.read(len, buffer)
-socket.timeout: The read operation timed out
-
-[ERROR] (zbx-dashboard) Could not get a response from API for this package. See below for details.
-Traceback (most recent call last):
-  File "/usr/lib/python3.7/urllib/request.py", line 1319, in do_open
-    encode_chunked=req.has_header('Transfer-encoding'))
-  File "/usr/lib/python3.7/http/client.py", line 1252, in request
-    self._send_request(method, url, body, headers, encode_chunked)
-  File "/usr/lib/python3.7/http/client.py", line 1298, in _send_request
-    self.endheaders(body, encode_chunked=encode_chunked)
-  File "/usr/lib/python3.7/http/client.py", line 1247, in endheaders
-    self._send_output(message_body, encode_chunked=encode_chunked)
-  File "/usr/lib/python3.7/http/client.py", line 1026, in _send_output
-    self.send(msg)
-  File "/usr/lib/python3.7/http/client.py", line 966, in send
-    self.connect()
-  File "/usr/lib/python3.7/http/client.py", line 1414, in connect
-    super().connect()
-  File "/usr/lib/python3.7/http/client.py", line 938, in connect
-    (self.host,self.port), self.timeout, self.source_address)
-  File "/usr/lib/python3.7/socket.py", line 707, in create_connection
-    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
-  File "/usr/lib/python3.7/socket.py", line 752, in getaddrinfo
-    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
-socket.gaierror: [Errno -3] Temporary failure in name resolution
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
-    timeout=10).read()
-  File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
-    return opener.open(url, data, timeout)
-  File "/usr/lib/python3.7/urllib/request.py", line 525, in open
-    response = self._open(req, data)
-  File "/usr/lib/python3.7/urllib/request.py", line 543, in _open
-    '_open', req)
-  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
-    result = func(*args)
-  File "/usr/lib/python3.7/urllib/request.py", line 1362, in https_open
-    context=self._context, check_hostname=self._check_hostname)
-  File "/usr/lib/python3.7/urllib/request.py", line 1321, in do_open
-    raise URLError(err)
-urllib.error.URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
-
-[ERROR] (zbx-statsd) Could not get a response from API for this package. See below for details.
-Traceback (most recent call last):
-  File "/usr/lib/python3.7/urllib/request.py", line 1319, in do_open
-    encode_chunked=req.has_header('Transfer-encoding'))
-  File "/usr/lib/python3.7/http/client.py", line 1252, in request
-    self._send_request(method, url, body, headers, encode_chunked)
-  File "/usr/lib/python3.7/http/client.py", line 1298, in _send_request
-    self.endheaders(body, encode_chunked=encode_chunked)
-  File "/usr/lib/python3.7/http/client.py", line 1247, in endheaders
-    self._send_output(message_body, encode_chunked=encode_chunked)
-  File "/usr/lib/python3.7/http/client.py", line 1026, in _send_output
-    self.send(msg)
-  File "/usr/lib/python3.7/http/client.py", line 966, in send
-    self.connect()
-  File "/usr/lib/python3.7/http/client.py", line 1414, in connect
-    super().connect()
-  File "/usr/lib/python3.7/http/client.py", line 938, in connect
-    (self.host,self.port), self.timeout, self.source_address)
-  File "/usr/lib/python3.7/socket.py", line 707, in create_connection
-    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
-  File "/usr/lib/python3.7/socket.py", line 752, in getaddrinfo
-    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
-socket.gaierror: [Errno -3] Temporary failure in name resolution
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
-    timeout=10).read()
-  File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
-    return opener.open(url, data, timeout)
-  File "/usr/lib/python3.7/urllib/request.py", line 525, in open
-    response = self._open(req, data)
-  File "/usr/lib/python3.7/urllib/request.py", line 543, in _open
-    '_open', req)
-  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
-    result = func(*args)
-  File "/usr/lib/python3.7/urllib/request.py", line 1362, in https_open
-    context=self._context, check_hostname=self._check_hostname)
-  File "/usr/lib/python3.7/urllib/request.py", line 1321, in do_open
-    raise URLError(err)
-urllib.error.URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
-
+[INFO] (zbuspy) This package is up to date.
+[INFO] (zbx-dashboard) This package is up to date.
+[INFO] (zbx-statsd) This package is up to date.
 [INFO] (zbx2slack) This package is up to date.
 [INFO] (zbxapi) This package is up to date.
 [INFO] (zbxnotifier) This package is up to date.
@@ -575,8 +462,8 @@ urllib.error.URLError: <urlopen error [Errno -3] Temporary failure in name resol
 [INFO] (zc-beforestorage) This package is up to date.
 [INFO] (zc-blist) This package is up to date.
 [INFO] (zc-botokeyring) This package is up to date.
-[INFO] (zc-buildout) Data has been updated for this package.
-[INFO] (zc-buildout-languageserver) This package is up to date.
+[INFO] (zc-buildout) This package is up to date.
+[INFO] (zc-buildout-languageserver) Data has been updated for this package.
 [INFO] (zc-buildoutsftp) This package is up to date.
 [INFO] (zc-cacheheaders) This package is up to date.
 [INFO] (zc-catalog) This package is up to date.
@@ -1217,7 +1104,7 @@ Unsupported package directory structure.
 [INFO] (zfit-physics) This package is up to date.
 [INFO] (zflearnpipw) This package is up to date.
 [INFO] (zflix) This package is up to date.
-[INFO] (zflow) Data has been updated for this package.
+[INFO] (zflow) This package is up to date.
 [INFO] (zfnew) This package is up to date.
 [INFO] (zforeach) This package is up to date.
 [INFO] (zformat) This package is up to date.
@@ -1374,7 +1261,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (zhihu-cli) This package is up to date.
 [INFO] (zhihu-oauth) This package is up to date.
 [INFO] (zhihu-py3) This package is up to date.
-[INFO] (zhihu-qrcode-login) Data has been updated for this package.
+[INFO] (zhihu-qrcode-login) This package is up to date.
 [INFO] (zhihu-question-autopass-thrift) This package is up to date.
 [INFO] (zhihuapi) This package is up to date.
 [INFO] (zhihutool) This package is up to date.
@@ -1499,7 +1386,7 @@ This package download URL does not point to a valid file: "http://code.google.co
 [INFO] (zimports) This package is up to date.
 [INFO] (zimpute) This package is up to date.
 [INFO] (zimscan) This package is up to date.
-[INFO] (zimscraperlib) This package is up to date.
+[INFO] (zimscraperlib) Data has been updated for this package.
 [INFO] (zimsoap) This package is up to date.
 [INFO] (zimupy) This package is up to date.
 [INFO] (zimuzu) This package is up to date.
@@ -1622,7 +1509,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (zippy-ip-scanner) This package is up to date.
 [INFO] (zippy-pipeline) This package is up to date.
 [INFO] (zippydoc) This package is up to date.
-[INFO] (zippyshare-generator) This package is up to date.
+[INFO] (zippyshare-generator) Data has been updated for this package.
 [INFO] (zipreport) This package is up to date.
 [INFO] (zipseeker) This package is up to date.
 [INFO] (zipstream) This package is up to date.
@@ -1637,7 +1524,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (ziroom-watcher) This package is up to date.
 [INFO] (zirpu-utils) This package is up to date.
 [INFO] (zisan) This package is up to date.
-[INFO] (zish) Data has been updated for this package.
+[INFO] (zish) This package is up to date.
 [INFO] (zish-antlr) This package is up to date.
 [INFO] (zisraw) This package is up to date.
 [INFO] (zissou) This package is up to date.
@@ -1745,6 +1632,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (zkw-z) This package is up to date.
 [INFO] (zlairflow) This package is up to date.
 [INFO] (zlapp) This package is up to date.
+[INFO] (zlc-get-time) Data has been updated for this package.
 [INFO] (zlest) This package is up to date.
 [INFO] (zlest1) This package is up to date.
 [INFO] (zlgg) This package is up to date.
@@ -1897,135 +1785,9 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (znz-spider) This package is up to date.
 [INFO] (zoauth) This package is up to date.
 [INFO] (zocalo) This package is up to date.
-[ERROR] (zocalo-dls) Could not get a response from API for this package. See below for details.
-Traceback (most recent call last):
-  File "/usr/lib/python3.7/urllib/request.py", line 1319, in do_open
-    encode_chunked=req.has_header('Transfer-encoding'))
-  File "/usr/lib/python3.7/http/client.py", line 1252, in request
-    self._send_request(method, url, body, headers, encode_chunked)
-  File "/usr/lib/python3.7/http/client.py", line 1298, in _send_request
-    self.endheaders(body, encode_chunked=encode_chunked)
-  File "/usr/lib/python3.7/http/client.py", line 1247, in endheaders
-    self._send_output(message_body, encode_chunked=encode_chunked)
-  File "/usr/lib/python3.7/http/client.py", line 1026, in _send_output
-    self.send(msg)
-  File "/usr/lib/python3.7/http/client.py", line 966, in send
-    self.connect()
-  File "/usr/lib/python3.7/http/client.py", line 1414, in connect
-    super().connect()
-  File "/usr/lib/python3.7/http/client.py", line 938, in connect
-    (self.host,self.port), self.timeout, self.source_address)
-  File "/usr/lib/python3.7/socket.py", line 707, in create_connection
-    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
-  File "/usr/lib/python3.7/socket.py", line 752, in getaddrinfo
-    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
-socket.gaierror: [Errno -3] Temporary failure in name resolution
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
-    timeout=10).read()
-  File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
-    return opener.open(url, data, timeout)
-  File "/usr/lib/python3.7/urllib/request.py", line 525, in open
-    response = self._open(req, data)
-  File "/usr/lib/python3.7/urllib/request.py", line 543, in _open
-    '_open', req)
-  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
-    result = func(*args)
-  File "/usr/lib/python3.7/urllib/request.py", line 1362, in https_open
-    context=self._context, check_hostname=self._check_hostname)
-  File "/usr/lib/python3.7/urllib/request.py", line 1321, in do_open
-    raise URLError(err)
-urllib.error.URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
-
-[ERROR] (zodb) Could not get a response from API for this package. See below for details.
-Traceback (most recent call last):
-  File "/usr/lib/python3.7/urllib/request.py", line 1319, in do_open
-    encode_chunked=req.has_header('Transfer-encoding'))
-  File "/usr/lib/python3.7/http/client.py", line 1252, in request
-    self._send_request(method, url, body, headers, encode_chunked)
-  File "/usr/lib/python3.7/http/client.py", line 1298, in _send_request
-    self.endheaders(body, encode_chunked=encode_chunked)
-  File "/usr/lib/python3.7/http/client.py", line 1247, in endheaders
-    self._send_output(message_body, encode_chunked=encode_chunked)
-  File "/usr/lib/python3.7/http/client.py", line 1026, in _send_output
-    self.send(msg)
-  File "/usr/lib/python3.7/http/client.py", line 966, in send
-    self.connect()
-  File "/usr/lib/python3.7/http/client.py", line 1414, in connect
-    super().connect()
-  File "/usr/lib/python3.7/http/client.py", line 938, in connect
-    (self.host,self.port), self.timeout, self.source_address)
-  File "/usr/lib/python3.7/socket.py", line 707, in create_connection
-    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
-  File "/usr/lib/python3.7/socket.py", line 752, in getaddrinfo
-    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
-socket.gaierror: [Errno -3] Temporary failure in name resolution
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
-    timeout=10).read()
-  File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
-    return opener.open(url, data, timeout)
-  File "/usr/lib/python3.7/urllib/request.py", line 525, in open
-    response = self._open(req, data)
-  File "/usr/lib/python3.7/urllib/request.py", line 543, in _open
-    '_open', req)
-  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
-    result = func(*args)
-  File "/usr/lib/python3.7/urllib/request.py", line 1362, in https_open
-    context=self._context, check_hostname=self._check_hostname)
-  File "/usr/lib/python3.7/urllib/request.py", line 1321, in do_open
-    raise URLError(err)
-urllib.error.URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
-
-[ERROR] (zodb-py3migrate) Could not get a response from API for this package. See below for details.
-Traceback (most recent call last):
-  File "/usr/lib/python3.7/urllib/request.py", line 1319, in do_open
-    encode_chunked=req.has_header('Transfer-encoding'))
-  File "/usr/lib/python3.7/http/client.py", line 1252, in request
-    self._send_request(method, url, body, headers, encode_chunked)
-  File "/usr/lib/python3.7/http/client.py", line 1298, in _send_request
-    self.endheaders(body, encode_chunked=encode_chunked)
-  File "/usr/lib/python3.7/http/client.py", line 1247, in endheaders
-    self._send_output(message_body, encode_chunked=encode_chunked)
-  File "/usr/lib/python3.7/http/client.py", line 1026, in _send_output
-    self.send(msg)
-  File "/usr/lib/python3.7/http/client.py", line 966, in send
-    self.connect()
-  File "/usr/lib/python3.7/http/client.py", line 1414, in connect
-    super().connect()
-  File "/usr/lib/python3.7/http/client.py", line 938, in connect
-    (self.host,self.port), self.timeout, self.source_address)
-  File "/usr/lib/python3.7/socket.py", line 707, in create_connection
-    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
-  File "/usr/lib/python3.7/socket.py", line 752, in getaddrinfo
-    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
-socket.gaierror: [Errno -3] Temporary failure in name resolution
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
-    timeout=10).read()
-  File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
-    return opener.open(url, data, timeout)
-  File "/usr/lib/python3.7/urllib/request.py", line 525, in open
-    response = self._open(req, data)
-  File "/usr/lib/python3.7/urllib/request.py", line 543, in _open
-    '_open', req)
-  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
-    result = func(*args)
-  File "/usr/lib/python3.7/urllib/request.py", line 1362, in https_open
-    context=self._context, check_hostname=self._check_hostname)
-  File "/usr/lib/python3.7/urllib/request.py", line 1321, in do_open
-    raise URLError(err)
-urllib.error.URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
-
+[INFO] (zocalo-dls) This package is up to date.
+[INFO] (zodb) This package is up to date.
+[INFO] (zodb-py3migrate) This package is up to date.
 [INFO] (zodb3) This package is up to date.
 [INFO] (zodbbrowser) This package is up to date.
 [INFO] (zodbcode) This package is up to date.
@@ -2548,7 +2310,7 @@ This package download URL does not point to a valid file: "http://www.procoders.
 [INFO] (zpy) This package is up to date.
 [INFO] (zpyshell) This package is up to date.
 [INFO] (zpython-tools) This package is up to date.
-[INFO] (zpytrading) Data has been updated for this package.
+[INFO] (zpytrading) This package is up to date.
 [INFO] (zpz) This package is up to date.
 [INFO] (zq) This package is up to date.
 [INFO] (zqifatools) This package is up to date.
@@ -2770,7 +2532,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (zvdata) This package is up to date.
 [INFO] (zvit) This package is up to date.
 [INFO] (zvmcloudconnector) This package is up to date.
-[INFO] (zvt) Data has been updated for this package.
+[INFO] (zvt) This package is up to date.
 [INFO] (zw) This package is up to date.
 [INFO] (zw-flink) This package is up to date.
 [INFO] (zw-jsmath) This package is up to date.
@@ -2965,11 +2727,11 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 
 [INFO] 
 [INFO] 
-[INFO] Total packages: 2145
-[INFO]     Packages processed: 2145
-[INFO]         Packages updated: 7
-[INFO]         Packages up-to-date: 2028
-[INFO]         Packages without response: 35
+[INFO] Total packages: 2146
+[INFO]     Packages processed: 2146
+[INFO]         Packages updated: 5
+[INFO]         Packages up-to-date: 2037
+[INFO]         Packages without response: 29
 [INFO]         Packages without urls: 0
 [INFO]         Packages without downloads: 66
 [INFO]         Packages with data errors: 9
