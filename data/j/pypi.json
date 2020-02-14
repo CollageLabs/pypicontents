@@ -15131,13 +15131,13 @@
     "jenkins-backup-restore-cli": {
         "cmdline": [],
         "modules": [
-            "jenkins",
-            "jenkins.backup",
-            "jenkins.restore",
             "main",
+            "main.jenkins",
+            "main.jenkins.backup",
+            "main.jenkins.restore",
             "main.jenkins_backup_restore_cli"
         ],
-        "version": "1.0.5"
+        "version": "1.0.8"
     },
     "jenkins-backup-s3": {
         "cmdline": [],
@@ -15967,7 +15967,7 @@
             "jepy.jepy_client",
             "jepy.jepy_exceptions"
         ],
-        "version": "0.1.16.0"
+        "version": "0.1.16.1"
     },
     "jeraconv": {
         "cmdline": [],
@@ -17166,16 +17166,21 @@
         "cmdline": [],
         "modules": [
             "cli",
+            "cli.test_apps",
             "cli.test_channels",
             "cli.test_datasets",
             "cli.test_filesets",
             "cli.test_keys",
+            "cli.test_policies",
             "cli.test_projects",
             "cli.test_relations",
             "cli.test_usersets",
             "jexia_cli",
             "jexia_cli.base",
             "jexia_cli.commands",
+            "jexia_cli.commands.apps",
+            "jexia_cli.commands.apps_deployments",
+            "jexia_cli.commands.apps_domains",
             "jexia_cli.commands.channels",
             "jexia_cli.commands.datasets",
             "jexia_cli.commands.datasets_fields",
@@ -17183,6 +17188,7 @@
             "jexia_cli.commands.filesets_fields",
             "jexia_cli.commands.keys",
             "jexia_cli.commands.login",
+            "jexia_cli.commands.policies",
             "jexia_cli.commands.projects",
             "jexia_cli.commands.relations",
             "jexia_cli.commands.use",
@@ -17192,7 +17198,7 @@
             "jexia_cli.shell",
             "jexia_cli.utils"
         ],
-        "version": "0.0.1.dev2"
+        "version": "0.0.1.dev5"
     },
     "jexia-sdk": {
         "cmdline": [],
@@ -17298,10 +17304,18 @@
     "jfaleiro-setup-scmversion": {
         "cmdline": [],
         "modules": [
+            "setup_scmversion",
+            "setup_scmversion._version",
+            "setup_scmversion.command",
+            "setup_scmversion.scm",
+            "setup_scmversion.scm.git",
+            "setup_scmversion.util",
             "test",
+            "test.test_argparse",
+            "test.test_command",
             "test.test_setup_scmversion"
         ],
-        "version": "0.0.1"
+        "version": "0.0.2"
     },
     "jfaleiro-setup-utility": {
         "cmdline": [],
@@ -23781,11 +23795,6 @@
         ],
         "version": "0.2019.4.10"
     },
-    "jkbase": {
-        "cmdline": [],
-        "modules": [],
-        "version": ""
-    },
     "jkbio": {
         "cmdline": [],
         "modules": [
@@ -26675,7 +26684,7 @@
     "jnrbase": {
         "cmdline": [],
         "modules": [],
-        "version": "1.2.1"
+        "version": "1.2.3"
     },
     "jnt-django-admin-tools": {
         "cmdline": [],
@@ -28351,6 +28360,18 @@
         ],
         "version": "0.3"
     },
+    "joker-geometry": {
+        "cmdline": [],
+        "modules": [
+            "joker",
+            "joker.geometry",
+            "joker.geometry.planar",
+            "joker.geometry.stats",
+            "joker.geometry.utils",
+            "joker.geometry.vectorial"
+        ],
+        "version": "0.1"
+    },
     "joker-masquerade": {
         "cmdline": [],
         "modules": [
@@ -28593,6 +28614,17 @@
             "jolly_github_toolbelt"
         ],
         "version": "2.1.0"
+    },
+    "jollyip": {
+        "cmdline": [],
+        "modules": [
+            "jollyip",
+            "jollyip.cli",
+            "jollyip.commands",
+            "jollyip.formatting",
+            "jollyip.types"
+        ],
+        "version": "0.0.3"
     },
     "jollyjumper": {
         "cmdline": [],
@@ -37156,6 +37188,14 @@
         ],
         "version": "0.1.2.0"
     },
+    "json-secret-diary": {
+        "cmdline": [],
+        "modules": [
+            "json_secret_diary",
+            "json_secret_diary.json_secret_diary"
+        ],
+        "version": "1.0.4.2"
+    },
     "json-section": {
         "cmdline": [],
         "modules": [
@@ -37211,7 +37251,7 @@
             "json_server.cli",
             "json_server.handlers"
         ],
-        "version": "0.1.2"
+        "version": "0.1.4"
     },
     "json-simple-validator": {
         "cmdline": [],
@@ -37347,7 +37387,7 @@
             "json_syntax.types",
             "json_syntax.unions"
         ],
-        "version": "2.3.0"
+        "version": "2.3.1"
     },
     "json-table-schema": {
         "cmdline": [],
@@ -37606,7 +37646,7 @@
             "json_websocket.server",
             "json_websocket.server.async_server"
         ],
-        "version": "0.2.1581520656"
+        "version": "0.2.1581602820"
     },
     "json262": {
         "cmdline": [],
@@ -41351,6 +41391,14 @@
             "jsonutils.minjson"
         ],
         "version": "0.1"
+    },
+    "jsonutils3": {
+        "cmdline": [],
+        "modules": [
+            "jsonutils",
+            "jsonutils.json_object"
+        ],
+        "version": "1.0.0"
     },
     "jsonv": {
         "cmdline": [],
@@ -46846,12 +46894,20 @@
         "modules": [
             "enterprise_gateway",
             "enterprise_gateway._version",
+            "enterprise_gateway.base",
+            "enterprise_gateway.base.handlers",
             "enterprise_gateway.client",
             "enterprise_gateway.client.gateway_client",
             "enterprise_gateway.enterprisegatewayapp",
+            "enterprise_gateway.mixins",
             "enterprise_gateway.services",
+            "enterprise_gateway.services.api",
+            "enterprise_gateway.services.api.handlers",
             "enterprise_gateway.services.kernels",
+            "enterprise_gateway.services.kernels.handlers",
             "enterprise_gateway.services.kernels.remotemanager",
+            "enterprise_gateway.services.kernelspecs",
+            "enterprise_gateway.services.kernelspecs.handlers",
             "enterprise_gateway.services.processproxies",
             "enterprise_gateway.services.processproxies.conductor",
             "enterprise_gateway.services.processproxies.container",
@@ -46861,9 +46917,11 @@
             "enterprise_gateway.services.processproxies.processproxy",
             "enterprise_gateway.services.processproxies.yarn",
             "enterprise_gateway.services.sessions",
-            "enterprise_gateway.services.sessions.kernelsessionmanager"
+            "enterprise_gateway.services.sessions.handlers",
+            "enterprise_gateway.services.sessions.kernelsessionmanager",
+            "enterprise_gateway.services.sessions.sessionmanager"
         ],
-        "version": "2.0.0"
+        "version": "2.1.0"
     },
     "jupyter-enterprise-gateway-kunliu": {
         "cmdline": [],
@@ -50966,7 +51024,7 @@
             "justblast.justblast_main",
             "justblast.utils"
         ],
-        "version": "2019.0.8"
+        "version": "2020.0.0"
     },
     "justblockchain": {
         "cmdline": [],
@@ -52484,7 +52542,7 @@
             "jwst_coronagraph_visibility.tests.test_gui",
             "jwst_coronagraph_visibility.tests.test_skyvec2ins"
         ],
-        "version": "0.4.2"
+        "version": "0.4.4"
     },
     "jwst-footprints": {
         "cmdline": [],
