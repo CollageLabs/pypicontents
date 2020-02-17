@@ -235,6 +235,19 @@
         ],
         "version": "0.2.1"
     },
+    "e-sic": {
+        "cmdline": [],
+        "modules": [
+            "E_Sic",
+            "E_Sic.pedidos_respostas",
+            "E_Sic.pedidos_respostas.conts",
+            "E_Sic.pedidos_respostas.exceptions",
+            "E_Sic.pedidos_respostas.parser",
+            "E_Sic.pedidos_respostas.search",
+            "E_Sic.pedidos_respostas.types"
+        ],
+        "version": "2020.2.15"
+    },
     "e-switch": {
         "cmdline": [],
         "modules": [
@@ -3568,7 +3581,7 @@
             "easy_gui.master_classes",
             "easy_gui.styles"
         ],
-        "version": "0.1.0"
+        "version": "0.1.4"
     },
     "easy-heroku-flask": {
         "cmdline": [
@@ -11970,6 +11983,8 @@
             "ebonite.core.objects.requirements",
             "ebonite.core.objects.wrapper",
             "ebonite.ext",
+            "ebonite.ext.aiohttp",
+            "ebonite.ext.aiohttp.server",
             "ebonite.ext.catboost",
             "ebonite.ext.catboost.model",
             "ebonite.ext.ext_loader",
@@ -11997,6 +12012,9 @@
             "ebonite.ext.tensorflow",
             "ebonite.ext.tensorflow.dataset",
             "ebonite.ext.tensorflow.model",
+            "ebonite.ext.tensorflow_v2",
+            "ebonite.ext.tensorflow_v2.dataset",
+            "ebonite.ext.tensorflow_v2.model",
             "ebonite.ext.torch",
             "ebonite.ext.torch.dataset",
             "ebonite.ext.torch.model",
@@ -12036,7 +12054,7 @@
             "ebonite.utils.module",
             "ebonite.utils.pickling"
         ],
-        "version": "0.3.5"
+        "version": "0.4.0"
     },
     "ebook": {
         "cmdline": [],
@@ -16195,13 +16213,6 @@
         "modules": [
             "econuy",
             "econuy.frequent",
-            "econuy.frequent.frequent",
-            "econuy.processing",
-            "econuy.processing.convert",
-            "econuy.processing.freqs",
-            "econuy.processing.index",
-            "econuy.processing.seasonal",
-            "econuy.processing.variations",
             "econuy.resources",
             "econuy.resources.columns",
             "econuy.resources.lstrings",
@@ -16210,16 +16221,15 @@
             "econuy.retrieval.commodity_index",
             "econuy.retrieval.cpi",
             "econuy.retrieval.fiscal_accounts",
-            "econuy.retrieval.fx_ff",
-            "econuy.retrieval.fx_spot_ff",
             "econuy.retrieval.labor",
             "econuy.retrieval.national_accounts",
             "econuy.retrieval.nxr",
-            "econuy.retrieval.reserves_chg",
+            "econuy.retrieval.reserves",
             "econuy.retrieval.rxr",
-            "econuy.session"
+            "econuy.session",
+            "econuy.transform"
         ],
-        "version": "0.3.2"
+        "version": "0.4.0"
     },
     "econvert": {
         "cmdline": [],
@@ -20886,7 +20896,7 @@
             "eden.sequence",
             "eden.util"
         ],
-        "version": "0.3.1331"
+        "version": "0.3.1335"
     },
     "edenchain-client-sdk": {
         "cmdline": [],
@@ -21774,7 +21784,7 @@
             "edgar.txtml",
             "edgar.xbrl"
         ],
-        "version": "5.1.10"
+        "version": "5.1.14"
     },
     "edgar3": {
         "cmdline": [],
@@ -26459,7 +26469,6 @@
             "enterprise.apps",
             "enterprise.constants",
             "enterprise.decorators",
-            "enterprise.django_compatibility",
             "enterprise.errors",
             "enterprise.forms",
             "enterprise.messages",
@@ -26507,7 +26516,7 @@
             "integrated_channels.xapi.models",
             "integrated_channels.xapi.utils"
         ],
-        "version": "2.3.8"
+        "version": "2.3.9"
     },
     "edx-enterprise-data": {
         "cmdline": [],
@@ -32746,7 +32755,7 @@
             "ejcli.http",
             "ejcli.http.base"
         ],
-        "version": "1.2.0"
+        "version": "1.2.1"
     },
     "ejemplojozuenikolas1": {
         "cmdline": [],
@@ -33781,23 +33790,9 @@
     "elang": {
         "cmdline": [],
         "modules": [
-            "elang",
-            "elang.plot",
-            "elang.plot.utils",
-            "elang.plot.utils.embedding",
-            "elang.word2vec",
-            "elang.word2vec.generatecorpus_00",
-            "elang.word2vec.generatecorpus_01",
-            "elang.word2vec.generatecorpus_02",
-            "elang.word2vec.parse_txt",
-            "elang.word2vec.simple_preprocess",
-            "elang.word2vec.simple_preprocess.bcapara",
-            "elang.word2vec.simple_preprocess.singlepara",
-            "elang.word2vec.utils",
-            "elang.word2vec.utils.cleansing",
-            "elang.word2vec.utils.combine_stopwords"
+            "elang"
         ],
-        "version": "0.0.4"
+        "version": "0.0.5"
     },
     "elanwriter": {
         "cmdline": [],
@@ -34992,12 +34987,38 @@
         "cmdline": [],
         "modules": [
             "elasticmock",
+            "elasticmock.behaviour",
+            "elasticmock.behaviour.server_failure",
+            "elasticmock.fake_cluster",
             "elasticmock.fake_elasticsearch",
+            "elasticmock.fake_indices",
             "elasticmock.utilities",
+            "elasticmock.utilities.decorator",
             "tests",
-            "tests.test_elasticmock"
+            "tests.fake_cluster",
+            "tests.fake_cluster.test_health",
+            "tests.fake_elasticsearch",
+            "tests.fake_elasticsearch.behaviour",
+            "tests.fake_elasticsearch.behaviour.test_server_failure",
+            "tests.fake_elasticsearch.test_bulk",
+            "tests.fake_elasticsearch.test_count",
+            "tests.fake_elasticsearch.test_delete",
+            "tests.fake_elasticsearch.test_exists",
+            "tests.fake_elasticsearch.test_get",
+            "tests.fake_elasticsearch.test_index",
+            "tests.fake_elasticsearch.test_info",
+            "tests.fake_elasticsearch.test_instance",
+            "tests.fake_elasticsearch.test_ping",
+            "tests.fake_elasticsearch.test_scroll",
+            "tests.fake_elasticsearch.test_search",
+            "tests.fake_elasticsearch.test_suggest",
+            "tests.fake_indices",
+            "tests.fake_indices.test_create",
+            "tests.fake_indices.test_delete",
+            "tests.fake_indices.test_exists",
+            "tests.fake_indices.test_refresh"
         ],
-        "version": "1.3.7"
+        "version": "1.5.0"
     },
     "elasticmodels": {
         "cmdline": [],
@@ -43633,7 +43654,7 @@
     "embrace": {
         "cmdline": [],
         "modules": [],
-        "version": "0.1.0"
+        "version": "1.0.0"
     },
     "embrace-sql": {
         "cmdline": [],
@@ -44893,6 +44914,16 @@
             "mypy_django_plugin.transformers.settings"
         ],
         "version": "0.12.0"
+    },
+    "emildecoster": {
+        "cmdline": [],
+        "modules": [
+            "emildecoster",
+            "emildecoster.cli",
+            "emildecoster.frac",
+            "emildecoster.mypackages"
+        ],
+        "version": "0.0.2"
     },
     "emilesu-nester": {
         "cmdline": [],
@@ -53755,12 +53786,13 @@
             "engage_scraper.scraper_logics.santamonica_scraper_seeds",
             "engage_scraper.scraper_utils",
             "engage_scraper.scraper_utils.dbutils",
+            "engage_scraper.scraper_utils.elasticsearch",
             "engage_scraper.scraper_utils.htmlutils",
             "engage_scraper.scraper_utils.textutils",
             "engage_scraper.scraper_utils.timeutils",
             "engage_scraper.scraper_utils.tweet"
         ],
-        "version": "0.0.29"
+        "version": "0.0.30"
     },
     "engagespark": {
         "cmdline": [],
@@ -56094,7 +56126,7 @@
             "enqueuer.specparse",
             "enqueuer.utils"
         ],
-        "version": "0.1.0"
+        "version": "0.1.6"
     },
     "enquiries": {
         "cmdline": [],
@@ -57620,6 +57652,13 @@
             "enterprython.tests"
         ],
         "version": "0.5.4"
+    },
+    "enterpy": {
+        "cmdline": [],
+        "modules": [
+            "enterpy"
+        ],
+        "version": "0.1.0"
     },
     "entertainer": {
         "cmdline": [],
@@ -59907,7 +59946,7 @@
             "envisage.unknown_extension_point",
             "envisage.version"
         ],
-        "version": "4.9.1"
+        "version": "4.9.2"
     },
     "envision": {
         "cmdline": [],
@@ -60647,7 +60686,7 @@
     "eo-learn": {
         "cmdline": [],
         "modules": [],
-        "version": "0.7.1"
+        "version": "0.7.2"
     },
     "eo-learn-core": {
         "cmdline": [],
@@ -60665,7 +60704,7 @@
             "eolearn.core.graph",
             "eolearn.core.utilities"
         ],
-        "version": "0.7.1"
+        "version": "0.7.2"
     },
     "eo-learn-coregistration": {
         "cmdline": [],
@@ -60705,7 +60744,7 @@
             "eolearn.geometry.superpixel",
             "eolearn.geometry.transformations"
         ],
-        "version": "0.7.0"
+        "version": "0.7.2"
     },
     "eo-learn-io": {
         "cmdline": [],
@@ -60717,7 +60756,7 @@
             "eolearn.io.processing_api",
             "eolearn.io.sentinelhub_service"
         ],
-        "version": "0.7.1"
+        "version": "0.7.2"
     },
     "eo-learn-mask": {
         "cmdline": [],
@@ -65689,6 +65728,14 @@
         ],
         "version": "0.0.7"
     },
+    "epub2html": {
+        "cmdline": [],
+        "modules": [
+            "epub2html",
+            "epub2html.epub2html"
+        ],
+        "version": "2.2.11"
+    },
     "epubaker": {
         "cmdline": [],
         "modules": [
@@ -67366,6 +67413,16 @@
         "cmdline": [],
         "modules": [],
         "version": "1"
+    },
+    "equitorium": {
+        "cmdline": [],
+        "modules": [
+            "equitorium",
+            "equitorium.customize",
+            "equitorium.finstat",
+            "equitorium.technical"
+        ],
+        "version": "0.0.2"
     },
     "equitweet": {
         "cmdline": [],
@@ -73761,6 +73818,11 @@
         ],
         "version": "1.1.1"
     },
+    "esewa-test-framework": {
+        "cmdline": [],
+        "modules": [],
+        "version": "0.0.1"
+    },
     "esf": {
         "cmdline": [],
         "modules": [],
@@ -76324,7 +76386,7 @@
             "espwrap.adaptors.sendgrid_v3",
             "espwrap.base"
         ],
-        "version": "2.0.3"
+        "version": "2.0.4"
     },
     "espy": {
         "cmdline": [
@@ -80995,6 +81057,14 @@
         ],
         "version": "0.0.2"
     },
+    "ethz-iam-webservice": {
+        "cmdline": [],
+        "modules": [
+            "ethz_iam_webservice",
+            "ethz_iam_webservice.main"
+        ],
+        "version": "0.0.4"
+    },
     "eti-django-page-cms": {
         "cmdline": [],
         "modules": [
@@ -81582,7 +81652,7 @@
             "ETL.trusted_tables",
             "ETL.utils"
         ],
-        "version": "1.41"
+        "version": "1.42"
     },
     "etl-manager": {
         "cmdline": [],
@@ -82148,7 +82218,7 @@
             "etnawrapper.main",
             "etnawrapper.watcher"
         ],
-        "version": "2.5.0"
+        "version": "2.6.0"
     },
     "etnlp": {
         "cmdline": [],
@@ -84434,6 +84504,7 @@
             "euphorie.deployment.upgrade.v23",
             "euphorie.deployment.upgrade.v24",
             "euphorie.deployment.upgrade.v25",
+            "euphorie.deployment.upgrade.v26",
             "euphorie.deployment.upgrade.v3",
             "euphorie.deployment.upgrade.v4",
             "euphorie.deployment.upgrade.v5",
@@ -84448,7 +84519,7 @@
             "euphorie.tests",
             "euphorie.tests.test_json"
         ],
-        "version": "11.1.14"
+        "version": "11.1.15"
     },
     "euplotid": {
         "cmdline": [],
@@ -84840,7 +84911,9 @@
         "version": "0.0.4"
     },
     "eurekaroom": {
-        "cmdline": [],
+        "cmdline": [
+            "ecmd"
+        ],
         "modules": [
             "eurekaroom",
             "eurekaroom.args",
@@ -84850,7 +84923,7 @@
             "eurekaroom.routes",
             "eurekaroom.video"
         ],
-        "version": "1.0.0"
+        "version": "1.0.2"
     },
     "eurekatrees": {
         "cmdline": [],
@@ -85659,7 +85732,7 @@
             "evalcache.lazyfile",
             "evalcache.util"
         ],
-        "version": "1.10.3"
+        "version": "1.11.0"
     },
     "evaldnn": {
         "cmdline": [],
@@ -88409,19 +88482,41 @@
             "events_protocol.client.exception.request_exception",
             "events_protocol.client.http",
             "events_protocol.core",
+            "events_protocol.core.builder",
             "events_protocol.core.context",
             "events_protocol.core.exception",
+            "events_protocol.core.logging",
+            "events_protocol.core.logging.mixins",
+            "events_protocol.core.logging.mixins.loggable",
+            "events_protocol.core.logging.supressor",
             "events_protocol.core.model",
+            "events_protocol.core.model.base",
             "events_protocol.core.model.event",
-            "events_protocol.core.model.event_error_type",
+            "events_protocol.core.model.event_type",
             "events_protocol.core.model.payload",
+            "events_protocol.core.utils",
+            "events_protocol.core.utils.sync",
+            "events_protocol.server",
+            "events_protocol.server.handler",
+            "events_protocol.server.handler.event_handler",
+            "events_protocol.server.handler.event_handler_discovery",
+            "events_protocol.server.handler.event_handler_registry",
+            "events_protocol.server.parser",
+            "events_protocol.server.parser.event_processor",
             "tests",
             "tests.client",
             "tests.client.test_event_client",
             "tests.client.test_http",
-            "tests.core"
+            "tests.core",
+            "tests.core.test_context",
+            "tests.server",
+            "tests.server.handler",
+            "tests.server.handler.test_event_handler_discovery",
+            "tests.server.handler.test_event_handler_registry",
+            "tests.server.parser",
+            "tests.server.parser.test_event_processor"
         ],
-        "version": "0.0.1"
+        "version": "0.1.0"
     },
     "events-sdk": {
         "cmdline": [],
@@ -90009,7 +90104,7 @@
             "evgraf.utils.rotation_matrix",
             "evgraf.utils.standardization"
         ],
-        "version": "0.1.4"
+        "version": "0.1.6"
     },
     "evidence": {
         "cmdline": [],
@@ -90936,7 +91031,7 @@
             "EvoMSA/tests.test_model_selection",
             "EvoMSA/tests.test_utils"
         ],
-        "version": "1.1.2"
+        "version": "1.1.3"
     },
     "evonik-apitest": {
         "cmdline": [],
@@ -95706,7 +95801,7 @@
             "tests.test_rpn.test_functions",
             "tests.test_utils"
         ],
-        "version": "0.1.16"
+        "version": "0.1.17"
     },
     "excel-lib-learning": {
         "cmdline": [],
@@ -96874,7 +96969,7 @@
             "execsql.py"
         ],
         "modules": [],
-        "version": "1.62.0"
+        "version": "1.63.0"
     },
     "exectiming": {
         "cmdline": [],
@@ -96945,11 +97040,9 @@
     "execution-asserts": {
         "cmdline": [],
         "modules": [
-            "execution-asserts",
-            "execution_asserts",
-            "execution_assets"
+            "execution-asserts"
         ],
-        "version": "0.0.2"
+        "version": "0.0.3"
     },
     "execution-pipeline": {
         "cmdline": [],
@@ -98443,18 +98536,18 @@
             "exonutils_common.console",
             "exonutils_common.database",
             "exonutils_common.process",
-            "exonutils_common.service"
+            "exonutils_common.service",
+            "exonutils_common.utils"
         ],
-        "version": "1.0"
+        "version": "1.1"
     },
     "exonutils-web": {
         "cmdline": [],
         "modules": [
             "exonutils_web",
-            "exonutils_web.services",
-            "exonutils_web.webserver"
+            "exonutils_web.REST"
         ],
-        "version": "1.0"
+        "version": "1.1"
     },
     "exoplanet": {
         "cmdline": [],
@@ -101049,6 +101142,7 @@
         "cmdline": [],
         "modules": [
             "explorepy",
+            "explorepy._exceptions",
             "explorepy.bt_client",
             "explorepy.cli",
             "explorepy.command",
@@ -101062,7 +101156,7 @@
             "explorepy.parser",
             "explorepy.tools"
         ],
-        "version": "0.5.0"
+        "version": "0.6.0"
     },
     "explorer": {
         "cmdline": [],
@@ -107636,7 +107730,7 @@
             "ezsub.mirrors",
             "ezsub.utils"
         ],
-        "version": "2019.11.8"
+        "version": "2020.2.17"
     },
     "ezt": {
         "cmdline": [],
