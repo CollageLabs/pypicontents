@@ -102,7 +102,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (labellio-cli) This package is up to date.
 [INFO] (labellio-cli2) This package is up to date.
 [INFO] (labelmaker) This package is up to date.
-[INFO] (labelme) Data has been updated for this package.
+[INFO] (labelme) This package is up to date.
 [INFO] (labelme-test) This package is up to date.
 [INFO] (labelme-v0-1) This package is up to date.
 [INFO] (labelme-v1) This package is up to date.
@@ -242,7 +242,7 @@ This package download URL does not point to a valid file: "http://www.lepied.com
 [INFO] (ladybug) This package is up to date.
 [INFO] (ladybug-comfort) This package is up to date.
 [INFO] (ladybug-geometry) This package is up to date.
-[INFO] (ladybug-geometry-polyskel) Data has been updated for this package.
+[INFO] (ladybug-geometry-polyskel) This package is up to date.
 [INFO] (laf-fabric) This package is up to date.
 [INFO] (lafabrique) This package is up to date.
 [INFO] (laforge) This package is up to date.
@@ -405,7 +405,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (lambda-local) This package is up to date.
 [INFO] (lambda-local-python) This package is up to date.
 [INFO] (lambda-packages) This package is up to date.
-[INFO] (lambda-packaging) Data has been updated for this package.
+[INFO] (lambda-packaging) This package is up to date.
 [INFO] (lambda-parse-sqs) This package is up to date.
 [INFO] (lambda-project-creator) This package is up to date.
 [INFO] (lambda-proxy) This package is up to date.
@@ -793,7 +793,7 @@ This package download URL does not point to a valid file: "http://gitorious.org/
 [INFO] (larpix-geometry) This package is up to date.
 [INFO] (larpix-web) This package is up to date.
 [INFO] (larq) This package is up to date.
-[INFO] (larq-compute-engine) This package is up to date.
+[INFO] (larq-compute-engine) Data has been updated for this package.
 [INFO] (larq-zoo) This package is up to date.
 [INFO] (larrabee-gelfclient) This package is up to date.
 [INFO] (larray) This package is up to date.
@@ -847,7 +847,7 @@ This package download URL does not point to a valid file: "http://gitorious.org/
 [INFO] (lastcast) This package is up to date.
 [ERROR] (lastfm) This package does not have downloadable releases.
 [INFO] (lastfm-backup) This package is up to date.
-[INFO] (lastfm-cg) Data has been updated for this package.
+[INFO] (lastfm-cg) This package is up to date.
 [INFO] (lastfm-now) This package is up to date.
 [INFO] (lastfm-vk-download) This package is up to date.
 [INFO] (lastfmapi) This package is up to date.
@@ -882,33 +882,20 @@ This package download URL does not point to a valid file: "http://gitorious.org/
 [ERROR] (latestvisitors) Could not extract data from this package. See below for details.
 "http://merlimat.net/files/LatestVisitors-0.1.zip" file could not be downloaded. See below for details.
 Traceback (most recent call last):
-  File "/usr/lib/python3.7/urllib/request.py", line 1319, in do_open
-    encode_chunked=req.has_header('Transfer-encoding'))
-  File "/usr/lib/python3.7/http/client.py", line 1252, in request
-    self._send_request(method, url, body, headers, encode_chunked)
-  File "/usr/lib/python3.7/http/client.py", line 1298, in _send_request
-    self.endheaders(body, encode_chunked=encode_chunked)
-  File "/usr/lib/python3.7/http/client.py", line 1247, in endheaders
-    self._send_output(message_body, encode_chunked=encode_chunked)
-  File "/usr/lib/python3.7/http/client.py", line 1026, in _send_output
-    self.send(msg)
-  File "/usr/lib/python3.7/http/client.py", line 966, in send
-    self.connect()
-  File "/usr/lib/python3.7/http/client.py", line 938, in connect
-    (self.host,self.port), self.timeout, self.source_address)
-  File "/usr/lib/python3.7/socket.py", line 707, in create_connection
-    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
-  File "/usr/lib/python3.7/socket.py", line 752, in getaddrinfo
-    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
-socket.gaierror: [Errno -2] Name or service not known
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
   File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 107, in download_tar
     f.write(urlopen(url=urlesc(pkgurl), timeout=10).read())
   File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
     return opener.open(url, data, timeout)
+  File "/usr/lib/python3.7/urllib/request.py", line 531, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.7/urllib/request.py", line 641, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.7/urllib/request.py", line 563, in error
+    result = self._call_chain(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 755, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
   File "/usr/lib/python3.7/urllib/request.py", line 525, in open
     response = self._open(req, data)
   File "/usr/lib/python3.7/urllib/request.py", line 543, in _open
@@ -917,9 +904,17 @@ Traceback (most recent call last):
     result = func(*args)
   File "/usr/lib/python3.7/urllib/request.py", line 1347, in http_open
     return self.do_open(http.client.HTTPConnection, req)
-  File "/usr/lib/python3.7/urllib/request.py", line 1321, in do_open
-    raise URLError(err)
-urllib.error.URLError: <urlopen error [Errno -2] Name or service not known>
+  File "/usr/lib/python3.7/urllib/request.py", line 1322, in do_open
+    r = h.getresponse()
+  File "/usr/lib/python3.7/http/client.py", line 1344, in getresponse
+    response.begin()
+  File "/usr/lib/python3.7/http/client.py", line 306, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.7/http/client.py", line 267, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
 
 [INFO] (latex) This package is up to date.
 [INFO] (latex-snippet) This package is up to date.
@@ -1044,7 +1039,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (lauda) This package is up to date.
 [INFO] (laudadriver) This package is up to date.
 [INFO] (laueagle) This package is up to date.
-[INFO] (lauetools) Data has been updated for this package.
+[INFO] (lauetools) This package is up to date.
 [INFO] (laufire) This package is up to date.
 [INFO] (laughs) This package is up to date.
 [INFO] (laulibrary) This package is up to date.
@@ -1326,7 +1321,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (lazyimport) This package is up to date.
 [INFO] (lazyiter) This package is up to date.
 [INFO] (lazyjson) This package is up to date.
-[INFO] (lazylfs) Data has been updated for this package.
+[INFO] (lazylfs) This package is up to date.
 [ERROR] (lazylights) This package does not have downloadable releases.
 [INFO] (lazylist) This package is up to date.
 [INFO] (lazyload) This package is up to date.
@@ -1457,6 +1452,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (lc-gns) This package is up to date.
 [INFO] (lc-morphology) This package is up to date.
 [INFO] (lc-py) This package is up to date.
+[INFO] (lc-structure) Data has been updated for this package.
 [INFO] (lc-tools) This package is up to date.
 [INFO] (lc3methodgen) This package is up to date.
 [INFO] (lc3vm) This package is up to date.
@@ -1978,7 +1974,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (ledger-utility) This package is up to date.
 [INFO] (ledgerblue) This package is up to date.
 [INFO] (ledgereth) This package is up to date.
-[INFO] (ledgerkeeper) Data has been updated for this package.
+[INFO] (ledgerkeeper) This package is up to date.
 [INFO] (ledgerpy) This package is up to date.
 [INFO] (ledgertools) This package is up to date.
 [INFO] (ledgerwallet) This package is up to date.
@@ -2318,7 +2314,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (lemon-tinymce) This package is up to date.
 [INFO] (lemon123456) This package is up to date.
 [INFO] (lemonade) This package is up to date.
-[INFO] (lemoncheesecake) Data has been updated for this package.
+[INFO] (lemoncheesecake) This package is up to date.
 [ERROR] (lemondrop) This package does not have downloadable releases.
 [INFO] (lemonframework) This package is up to date.
 [INFO] (lemongo) This package is up to date.
@@ -2794,7 +2790,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (levis) This package is up to date.
 [INFO] (levit-report) This package is up to date.
 [INFO] (levit-utils) This package is up to date.
-[INFO] (levitate) This package is up to date.
+[INFO] (levitate) Data has been updated for this package.
 [INFO] (levmar) This package is up to date.
 [INFO] (levmatch) This package is up to date.
 [INFO] (lewansoul-lx16a) This package is up to date.
@@ -2879,7 +2875,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (lfc-skel) This package is up to date.
 [INFO] (lfc-theme) This package is up to date.
 [INFO] (lfd) This package is up to date.
-[INFO] (lfdata) This package is up to date.
+[INFO] (lfdata) Data has been updated for this package.
 [INFO] (lfdeploy) This package is up to date.
 [INFO] (lfdfiles) This package is up to date.
 [INFO] (lfdocs-conf) This package is up to date.
@@ -2964,7 +2960,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (lh3api) This package is up to date.
 [INFO] (lhafile) This package is up to date.
 [INFO] (lhapdf) This package is up to date.
-[INFO] (lhc-python) This package is up to date.
+[INFO] (lhc-python) Data has been updated for this package.
 [INFO] (lhclient) This package is up to date.
 [INFO] (lhco-reader) This package is up to date.
 [INFO] (lhcsmapi) Data has been updated for this package.
@@ -3358,7 +3354,7 @@ Traceback (most recent call last):
 urllib.error.HTTPError: HTTP Error 404: Not Found
 
 [INFO] (libipa) This package is up to date.
-[INFO] (libis) This package is up to date.
+[INFO] (libis) Data has been updated for this package.
 [INFO] (libitu) This package is up to date.
 [INFO] (libjanus) This package is up to date.
 [ERROR] (libjio) This package does not have downloadable releases.
@@ -3384,7 +3380,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (libmagic) This package is up to date.
 [INFO] (libmaker) This package is up to date.
 [INFO] (libmaya) This package is up to date.
-[INFO] (libmc) Data has been updated for this package.
+[INFO] (libmc) This package is up to date.
 [INFO] (libmediainfo-cffi) This package is up to date.
 [ERROR] (libmetric) Could not extract data from this package. See below for details.
 Unsupported package directory structure.
@@ -3422,7 +3418,7 @@ Unsupported package directory structure.
 [INFO] (libnofi) This package is up to date.
 [INFO] (libnum) This package is up to date.
 [INFO] (liboauth2) This package is up to date.
-[INFO] (libobj) This package is up to date.
+[INFO] (libobj) Data has been updated for this package.
 [INFO] (libodin) This package is up to date.
 [INFO] (liboidcagent) This package is up to date.
 [INFO] (libolecf-python) This package is up to date.
@@ -4112,7 +4108,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (lifx) This package is up to date.
 [INFO] (lifx-cmd) This package is up to date.
 [INFO] (lifx-control-panel) This package is up to date.
-[INFO] (lifx-photons-core) Data has been updated for this package.
+[INFO] (lifx-photons-core) This package is up to date.
 [INFO] (lifx-photons-messages-generator) This package is up to date.
 [INFO] (lifx-sdk) This package is up to date.
 [INFO] (lifx-tools) This package is up to date.
@@ -4164,7 +4160,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (lightberry) This package is up to date.
 [ERROR] (lightblue) This package does not have downloadable releases.
 [INFO] (lightbox) This package is up to date.
-[INFO] (lightbringer) This package is up to date.
+[INFO] (lightbringer) Data has been updated for this package.
 [ERROR] (lightbulb) This package does not have downloadable releases.
 [INFO] (lightbulb-framework) This package is up to date.
 [INFO] (lightbus) This package is up to date.
@@ -4295,7 +4291,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (lightweb) This package is up to date.
 [INFO] (lightweight) This package is up to date.
 [INFO] (lightweightpush) This package is up to date.
-[INFO] (lightwood) This package is up to date.
+[INFO] (lightwood) Data has been updated for this package.
 [INFO] (lightwriter) This package is up to date.
 [INFO] (lightwsgi) This package is up to date.
 [INFO] (lightxin) This package is up to date.
@@ -4328,6 +4324,34 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (lijnester) This package is up to date.
 [INFO] (lijun-nest-list) This package is up to date.
 [INFO] (like) This package is up to date.
+[ERROR] (like-a-boss-2020-full-movie-download-720p-hd-filmywap) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.7/urllib/request.py", line 531, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.7/urllib/request.py", line 641, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.7/urllib/request.py", line 563, in error
+    result = self._call_chain(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 755, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+  File "/usr/lib/python3.7/urllib/request.py", line 531, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.7/urllib/request.py", line 641, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.7/urllib/request.py", line 569, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 649, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+
 [INFO] (like-spider) This package is up to date.
 [ERROR] (like01) This package does not have downloadable releases.
 [INFO] (likeminded) This package is up to date.
@@ -4395,7 +4419,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (lime) This package is up to date.
 [INFO] (lime-lang) This package is up to date.
 [INFO] (lime-python) This package is up to date.
-[INFO] (lime-stability) Data has been updated for this package.
+[INFO] (lime-stability) This package is up to date.
 [INFO] (limeade) This package is up to date.
 [INFO] (limeaid) This package is up to date.
 [INFO] (limecc) This package is up to date.
@@ -4474,7 +4498,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (linalg) This package is up to date.
 [INFO] (linalg-for-datasci) This package is up to date.
 [INFO] (linalg-simple) This package is up to date.
-[INFO] (linalgo) This package is up to date.
+[INFO] (linalgo) Data has been updated for this package.
 [INFO] (linaro-django-jsonfield) This package is up to date.
 [INFO] (linaro-django-pagination) This package is up to date.
 [INFO] (linaro-graphics-dashboard) This package is up to date.
@@ -4512,7 +4536,7 @@ Traceback (most recent call last):
     raise HTTPError(req.full_url, code, msg, hdrs, fp)
 urllib.error.HTTPError: HTTP Error 404: Not Found
 
-[INFO] (linder) This package is up to date.
+[INFO] (linder) Data has been updated for this package.
 [INFO] (lindh-jsondb) This package is up to date.
 [INFO] (lindh-jsonobject) This package is up to date.
 [INFO] (lindypy) This package is up to date.
@@ -4680,7 +4704,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (lineus) This package is up to date.
 [INFO] (lineusmusic) This package is up to date.
 [INFO] (lineviewer) This package is up to date.
-[INFO] (lineworks) Data has been updated for this package.
+[INFO] (lineworks) This package is up to date.
 [INFO] (linfa) This package is up to date.
 [INFO] (linfit) This package is up to date.
 [INFO] (lingam) This package is up to date.
@@ -5015,7 +5039,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [ERROR] (linode-api) This package does not have downloadable releases.
 [INFO] (linode-api3) This package is up to date.
 [INFO] (linode-api4) This package is up to date.
-[INFO] (linode-cli) This package is up to date.
+[INFO] (linode-cli) Data has been updated for this package.
 [INFO] (linode-deploy-experimental) This package is up to date.
 [INFO] (linode-dynamic-dns) This package is up to date.
 [INFO] (linode-python) This package is up to date.
@@ -5043,7 +5067,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (lins-asana) This package is up to date.
 [INFO] (lins-barcodeutils) This package is up to date.
 [INFO] (lins-cieloapi3) This package is up to date.
-[INFO] (lins-dbfields) This package is up to date.
+[INFO] (lins-dbfields) Data has been updated for this package.
 [INFO] (lins-dbmanagers) This package is up to date.
 [INFO] (lins-dbrouters) This package is up to date.
 [INFO] (lins-restapi) This package is up to date.
@@ -5055,7 +5079,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (linselect) This package is up to date.
 [INFO] (linsensors) This package is up to date.
 [INFO] (linshareapi) This package is up to date.
-[INFO] (linsharecli) Data has been updated for this package.
+[INFO] (linsharecli) This package is up to date.
 [INFO] (linsolve) This package is up to date.
 [ERROR] (linspector) Could not get a response from API for this package. See below for details.
 Traceback (most recent call last):
@@ -5225,8 +5249,8 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (liscraper) This package is up to date.
 [INFO] (lise) This package is up to date.
 [INFO] (lisense) This package is up to date.
-[INFO] (lisflood-lisvap) This package is up to date.
-[INFO] (lisflood-model) This package is up to date.
+[INFO] (lisflood-lisvap) Data has been updated for this package.
+[INFO] (lisflood-model) Data has been updated for this package.
 [INFO] (lisflood-utilities) This package is up to date.
 [INFO] (lishengangtools) This package is up to date.
 [INFO] (lishiyu) This package is up to date.
@@ -5542,7 +5566,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (literal) This package is up to date.
 [ERROR] (literals) This package does not have downloadable releases.
 [INFO] (literate) This package is up to date.
-[INFO] (literategit) Data has been updated for this package.
+[INFO] (literategit) This package is up to date.
 [INFO] (litereval) This package is up to date.
 [INFO] (literoticapi) This package is up to date.
 [INFO] (litesimple) This package is up to date.
@@ -5617,6 +5641,34 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (little-questions) This package is up to date.
 [INFO] (little-sandbox-py) This package is up to date.
 [ERROR] (little-snob) This package does not have downloadable releases.
+[ERROR] (little-women-2020-full-movie-download-720p-hd-filmywap) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.7/urllib/request.py", line 531, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.7/urllib/request.py", line 641, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.7/urllib/request.py", line 563, in error
+    result = self._call_chain(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 755, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+  File "/usr/lib/python3.7/urllib/request.py", line 531, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.7/urllib/request.py", line 641, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.7/urllib/request.py", line 569, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 649, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+
 [INFO] (littlebear) This package is up to date.
 [INFO] (littlebird) This package is up to date.
 [INFO] (littleblog) This package is up to date.
@@ -5721,7 +5773,7 @@ This package download URL does not point to a valid file: "http://code.google.co
 [INFO] (livedesktop) This package is up to date.
 [INFO] (livedoc) This package is up to date.
 [ERROR] (livedoor-auth) This package does not have downloadable releases.
-[INFO] (livedownload) Data has been updated for this package.
+[INFO] (livedownload) This package is up to date.
 [INFO] (livedumper) This package is up to date.
 [INFO] (livefyre) This package is up to date.
 [INFO] (livehtml) This package is up to date.
@@ -6045,7 +6097,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (lnac) This package is up to date.
 [INFO] (lnd) This package is up to date.
 [INFO] (lnd-grpc) This package is up to date.
-[INFO] (lnd-rpc) This package is up to date.
+[INFO] (lnd-rpc) Data has been updated for this package.
 [INFO] (lndconnect) This package is up to date.
 [INFO] (lndgrpc) This package is up to date.
 [INFO] (lndhub) This package is up to date.
@@ -6077,7 +6129,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (lo4-funiest2) This package is up to date.
 [INFO] (lo4container) This package is up to date.
 [INFO] (load) This package is up to date.
-[INFO] (load-confounds) This package is up to date.
+[INFO] (load-confounds) Data has been updated for this package.
 [INFO] (load-remote) This package is up to date.
 [INFO] (load-resources) This package is up to date.
 [INFO] (loadconfig) This package is up to date.
@@ -6149,6 +6201,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [ERROR] (local-pypi) Could not extract data from this package. See below for details.
 ".1" extension not supported.
 [INFO] (local-selenium-pool) This package is up to date.
+[INFO] (local-variable-manager) Data has been updated for this package.
 [INFO] (local-visualizer) This package is up to date.
 [INFO] (localalias) This package is up to date.
 [INFO] (localbitcoins) This package is up to date.
@@ -6200,7 +6253,7 @@ This package download URL does not point to a valid file: "http://pypi.python.or
 [INFO] (localsnap) This package is up to date.
 [INFO] (localstack) This package is up to date.
 [INFO] (localstack-client) This package is up to date.
-[INFO] (localstack-ext) This package is up to date.
+[INFO] (localstack-ext) Data has been updated for this package.
 [INFO] (localstackclient) This package is up to date.
 [INFO] (localstorage) This package is up to date.
 [INFO] (localstoragepy) This package is up to date.
@@ -6335,7 +6388,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (locust-influx) This package is up to date.
 [INFO] (locust-nest) This package is up to date.
 [INFO] (locust-plugins) This package is up to date.
-[INFO] (locust-swarm) This package is up to date.
+[INFO] (locust-swarm) Data has been updated for this package.
 [INFO] (locust-xmlrpc) This package is up to date.
 [INFO] (locustauto) This package is up to date.
 [INFO] (locustio) This package is up to date.
@@ -6554,7 +6607,7 @@ This package download URL does not point to a valid file: "http://bitbucket.org/
 [INFO] (loggendra-server) This package is up to date.
 [INFO] (logger) This package is up to date.
 [INFO] (logger-app) This package is up to date.
-[INFO] (logger-bundle) Data has been updated for this package.
+[INFO] (logger-bundle) This package is up to date.
 [INFO] (logger-helper) This package is up to date.
 [INFO] (logger-server) This package is up to date.
 [INFO] (logger-setup) This package is up to date.
@@ -6684,14 +6737,14 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (loghub) This package is up to date.
 [INFO] (logi-circle) This package is up to date.
 [INFO] (logic) This package is up to date.
-[INFO] (logic-circuit-dave22153) Data has been updated for this package.
+[INFO] (logic-circuit-dave22153) This package is up to date.
 [INFO] (logic-toolchain) This package is up to date.
 [INFO] (logical-func) This package is up to date.
 [INFO] (logical-lens) This package is up to date.
 [INFO] (logical-permissions) This package is up to date.
 [INFO] (logical-unification) This package is up to date.
 [INFO] (logicbit) This package is up to date.
-[INFO] (logicdrop-sparks-openapi) Data has been updated for this package.
+[INFO] (logicdrop-sparks-openapi) This package is up to date.
 [INFO] (logicgate) This package is up to date.
 [INFO] (logicgates) This package is up to date.
 [ERROR] (logicmail) Could not extract data from this package. See below for details.
@@ -6804,7 +6857,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (logmuse) This package is up to date.
 [INFO] (lognames) This package is up to date.
 [INFO] (logni) This package is up to date.
-[INFO] (lognplot) This package is up to date.
+[INFO] (lognplot) Data has been updated for this package.
 [INFO] (logo) This package is up to date.
 [INFO] (logocreator) This package is up to date.
 [INFO] (logomaker) This package is up to date.
@@ -7192,7 +7245,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (looptimer) This package is up to date.
 [INFO] (looptools) This package is up to date.
 [INFO] (loopy) This package is up to date.
-[INFO] (loopycryptor) This package is up to date.
+[INFO] (loopycryptor) Data has been updated for this package.
 [INFO] (loopytimer) This package is up to date.
 [INFO] (loopytools) This package is up to date.
 [INFO] (looqbox) This package is up to date.
@@ -7312,7 +7365,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (losd) This package is up to date.
 [INFO] (lose) This package is up to date.
 [INFO] (losetup) This package is up to date.
-[INFO] (losh) This package is up to date.
+[INFO] (losh) Data has been updated for this package.
 [INFO] (loslassa) This package is up to date.
 [INFO] (loss-landscapes) This package is up to date.
 [INFO] (losser) This package is up to date.
@@ -7504,7 +7557,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (lp37) This package is up to date.
 [INFO] (lpack) This package is up to date.
 [INFO] (lpais) This package is up to date.
-[INFO] (lpaste) Data has been updated for this package.
+[INFO] (lpaste) This package is up to date.
 [INFO] (lpbio) This package is up to date.
 [INFO] (lpbkg) This package is up to date.
 [INFO] (lpbm) This package is up to date.
@@ -7856,7 +7909,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (lts-workflows) This package is up to date.
 [INFO] (lts-workflows-sm-scrnaseq) This package is up to date.
 [INFO] (ltsa) This package is up to date.
-[INFO] (ltsfit) This package is up to date.
+[INFO] (ltsfit) Data has been updated for this package.
 [INFO] (ltspice) This package is up to date.
 [INFO] (ltst-midge) This package is up to date.
 [INFO] (ltst-noodles) This package is up to date.
@@ -8164,7 +8217,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (lumicks-pylake) This package is up to date.
 [INFO] (lumidatumclient) This package is up to date.
 [INFO] (lumigo-log-shipper) This package is up to date.
-[INFO] (lumigo-tracer) This package is up to date.
+[INFO] (lumigo-tracer) Data has been updated for this package.
 [INFO] (lumin) This package is up to date.
 [INFO] (luminati) This package is up to date.
 [ERROR] (luminescence) Could not extract data from this package. See below for details.
@@ -8258,8 +8311,8 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (lush-dw-lib) This package is up to date.
 [INFO] (lushdwlib) This package is up to date.
 [INFO] (lusid-jam) This package is up to date.
-[INFO] (lusid-sdk) This package is up to date.
-[INFO] (lusid-sdk-preview) This package is up to date.
+[INFO] (lusid-sdk) Data has been updated for this package.
+[INFO] (lusid-sdk-preview) Data has been updated for this package.
 [INFO] (lusid-tr-sdk) This package is up to date.
 [INFO] (lusidtools) This package is up to date.
 [ERROR] (lusikas) This package does not have downloadable releases.
@@ -8302,6 +8355,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (lvlup) This package is up to date.
 [INFO] (lvm-read) This package is up to date.
 [INFO] (lvm2py) This package is up to date.
+[INFO] (lvmanager) Data has been updated for this package.
 [INFO] (lvmcache2mqtt) This package is up to date.
 [INFO] (lvmify) This package is up to date.
 [INFO] (lvqnester) This package is up to date.
@@ -8310,6 +8364,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (lvsync) This package is up to date.
 [INFO] (lvxudong) This package is up to date.
 [INFO] (lw-nester) This package is up to date.
+[INFO] (lw-trv-proxy) Data has been updated for this package.
 [INFO] (lw12) This package is up to date.
 [INFO] (lwdnxu) This package is up to date.
 [INFO] (lwe-mapper) This package is up to date.
@@ -8513,7 +8568,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (lynxkite-fiber-python-api) This package is up to date.
 [INFO] (lynxkite-python-api) This package is up to date.
 [INFO] (lyon) This package is up to date.
-[INFO] (lyr) Data has been updated for this package.
+[INFO] (lyr) This package is up to date.
 [INFO] (lyra) This package is up to date.
 [INFO] (lyra2re) This package is up to date.
 [INFO] (lyra2re-hash) This package is up to date.
@@ -8560,6 +8615,7 @@ This package download URL does not point to a valid file: "https://bitbucket.org
 [INFO] (lyt) This package is up to date.
 [INFO] (lytebot) This package is up to date.
 [INFO] (lytest) This package is up to date.
+[INFO] (lyth) Data has been updated for this package.
 [ERROR] (lython) Could not extract data from this package. See below for details.
 "http://home.comcast.net/~faulkner612/programming/python/lython.zip" file could not be downloaded. See below for details.
 Traceback (most recent call last):
@@ -8657,11 +8713,11 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (lzy-nester1) This package is up to date.
 [INFO] 
 [INFO] 
-[INFO] Total packages: 6077
-[INFO]     Packages processed: 6077
-[INFO]         Packages updated: 23
-[INFO]         Packages up-to-date: 5653
-[INFO]         Packages without response: 102
+[INFO] Total packages: 6084
+[INFO]     Packages processed: 6084
+[INFO]         Packages updated: 33
+[INFO]         Packages up-to-date: 5648
+[INFO]         Packages without response: 104
 [INFO]         Packages without urls: 0
 [INFO]         Packages without downloads: 250
 [INFO]         Packages with data errors: 49
