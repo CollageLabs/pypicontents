@@ -2393,13 +2393,18 @@
         "modules": [
             "jai",
             "jai.arch",
-            "jai.container",
+            "jai.augments",
+            "jai.borrowed",
             "jai.datahandler",
             "jai.improc",
             "jai.kaggler",
+            "jai.kaggler.dataset",
+            "jai.kaggler.submitter",
+            "jai.logger",
+            "jai.trainer",
             "jai.utils"
         ],
-        "version": "0.0.0"
+        "version": "0.0.6"
     },
     "jaide": {
         "cmdline": [],
@@ -9022,9 +9027,10 @@
             "jcopdl.optim._radam",
             "jcopdl.optim._ralamb",
             "jcopdl.utils",
-            "jcopdl.utils.dataloader"
+            "jcopdl.utils.dataloader",
+            "jcopdl.utils.exception"
         ],
-        "version": "1.0.0"
+        "version": "1.1.0"
     },
     "jcopml": {
         "cmdline": [],
@@ -10301,6 +10307,40 @@
             "jdcloud_sdk.services.clouddnsservice.models.UserViewInput",
             "jdcloud_sdk.services.clouddnsservice.models.Userview",
             "jdcloud_sdk.services.clouddnsservice.models.ViewTree",
+            "jdcloud_sdk.services.cloudsign",
+            "jdcloud_sdk.services.cloudsign.apis",
+            "jdcloud_sdk.services.cloudsign.apis.DeleteContractRequest",
+            "jdcloud_sdk.services.cloudsign.apis.DeleteStampRequest",
+            "jdcloud_sdk.services.cloudsign.apis.DeleteTemplateRequest",
+            "jdcloud_sdk.services.cloudsign.apis.DescribeApplyStatusRequest",
+            "jdcloud_sdk.services.cloudsign.apis.DescribeContractListRequest",
+            "jdcloud_sdk.services.cloudsign.apis.DescribeStampListRequest",
+            "jdcloud_sdk.services.cloudsign.apis.DescribeTemplateListRequest",
+            "jdcloud_sdk.services.cloudsign.apis.DisableContractSaveRequest",
+            "jdcloud_sdk.services.cloudsign.apis.DownloadContractsRequest",
+            "jdcloud_sdk.services.cloudsign.apis.DownloadStampsRequest",
+            "jdcloud_sdk.services.cloudsign.apis.DownloadTemplatesRequest",
+            "jdcloud_sdk.services.cloudsign.apis.EnableContractSaveRequest",
+            "jdcloud_sdk.services.cloudsign.apis.SetKmsKeyIdRequest",
+            "jdcloud_sdk.services.cloudsign.apis.SignContractRequest",
+            "jdcloud_sdk.services.cloudsign.apis.UploadStampRequest",
+            "jdcloud_sdk.services.cloudsign.apis.UploadTemplateRequest",
+            "jdcloud_sdk.services.cloudsign.apis.VerifyContractRequest",
+            "jdcloud_sdk.services.cloudsign.client",
+            "jdcloud_sdk.services.cloudsign.client.CloudsignClient",
+            "jdcloud_sdk.services.cloudsign.models",
+            "jdcloud_sdk.services.cloudsign.models.ComStamp",
+            "jdcloud_sdk.services.cloudsign.models.ContractInfo",
+            "jdcloud_sdk.services.cloudsign.models.ContractSpec",
+            "jdcloud_sdk.services.cloudsign.models.ContractVerifySpec",
+            "jdcloud_sdk.services.cloudsign.models.PerStamp",
+            "jdcloud_sdk.services.cloudsign.models.SignItem",
+            "jdcloud_sdk.services.cloudsign.models.StampInfo",
+            "jdcloud_sdk.services.cloudsign.models.StampSpec",
+            "jdcloud_sdk.services.cloudsign.models.StatisticsInfo",
+            "jdcloud_sdk.services.cloudsign.models.TemplateInfo",
+            "jdcloud_sdk.services.cloudsign.models.TemplateSpec",
+            "jdcloud_sdk.services.cloudsign.models.VerifyInfo",
             "jdcloud_sdk.services.common",
             "jdcloud_sdk.services.common.client",
             "jdcloud_sdk.services.common.client.CommonClient",
@@ -10642,6 +10682,7 @@
             "jdcloud_sdk.services.disk.apis.CreateSnapshotRequest",
             "jdcloud_sdk.services.disk.apis.DeleteDiskRequest",
             "jdcloud_sdk.services.disk.apis.DeleteSnapshotRequest",
+            "jdcloud_sdk.services.disk.apis.DeleteSnapshotsRequest",
             "jdcloud_sdk.services.disk.apis.DescribeDiskRequest",
             "jdcloud_sdk.services.disk.apis.DescribeDisksRequest",
             "jdcloud_sdk.services.disk.apis.DescribeSnapshotRequest",
@@ -10655,6 +10696,7 @@
             "jdcloud_sdk.services.disk.models",
             "jdcloud_sdk.services.disk.models.Bind",
             "jdcloud_sdk.services.disk.models.Data",
+            "jdcloud_sdk.services.disk.models.DelSnapshot",
             "jdcloud_sdk.services.disk.models.Disk",
             "jdcloud_sdk.services.disk.models.DiskAttachment",
             "jdcloud_sdk.services.disk.models.DiskSpec",
@@ -10849,6 +10891,35 @@
             "jdcloud_sdk.services.elite.models.ReportOrderInfo",
             "jdcloud_sdk.services.elite.models.StoreServiceDetailVo",
             "jdcloud_sdk.services.elite.models.StoreServiceVo",
+            "jdcloud_sdk.services.es",
+            "jdcloud_sdk.services.es.apis",
+            "jdcloud_sdk.services.es.apis.CreateInstanceRequest",
+            "jdcloud_sdk.services.es.apis.DeleteInstanceRequest",
+            "jdcloud_sdk.services.es.apis.DescribeInstanceRequest",
+            "jdcloud_sdk.services.es.apis.DescribeInstancesRequest",
+            "jdcloud_sdk.services.es.apis.DisableDictsRequest",
+            "jdcloud_sdk.services.es.apis.ModifyInstanceSpecRequest",
+            "jdcloud_sdk.services.es.client",
+            "jdcloud_sdk.services.es.client.EsClient",
+            "jdcloud_sdk.services.es.models",
+            "jdcloud_sdk.services.es.models.AuthConfig",
+            "jdcloud_sdk.services.es.models.AutoSnapshot",
+            "jdcloud_sdk.services.es.models.AzConf",
+            "jdcloud_sdk.services.es.models.ConstraintsConf",
+            "jdcloud_sdk.services.es.models.IndexTemplateCron",
+            "jdcloud_sdk.services.es.models.IndexTemplateCronConf",
+            "jdcloud_sdk.services.es.models.Instance",
+            "jdcloud_sdk.services.es.models.InstanceClass",
+            "jdcloud_sdk.services.es.models.InstanceClassDetail",
+            "jdcloud_sdk.services.es.models.InstanceClassSpec",
+            "jdcloud_sdk.services.es.models.InstanceName",
+            "jdcloud_sdk.services.es.models.InstanceNode",
+            "jdcloud_sdk.services.es.models.InstanceSpec",
+            "jdcloud_sdk.services.es.models.InstanceSpecConf",
+            "jdcloud_sdk.services.es.models.InternalEndpoint",
+            "jdcloud_sdk.services.es.models.NodeConf",
+            "jdcloud_sdk.services.es.models.Snapshot",
+            "jdcloud_sdk.services.es.models.Tag",
             "jdcloud_sdk.services.function",
             "jdcloud_sdk.services.function.apis",
             "jdcloud_sdk.services.function.apis.AsyncInvokeRequest",
@@ -13870,7 +13941,7 @@
             "jdcloud_sdk.services.zfs.models.Tag",
             "jdcloud_sdk.services.zfs.models.TagFilter"
         ],
-        "version": "1.6.44"
+        "version": "1.6.45"
     },
     "jdcloud-sdk-core": {
         "cmdline": [],
@@ -15039,7 +15110,7 @@
             "jellyfin_mpv_shim.utils",
             "jellyfin_mpv_shim.win_utils"
         ],
-        "version": "1.3.9"
+        "version": "1.3.10"
     },
     "jellyfish": {
         "cmdline": [],
@@ -19700,7 +19771,7 @@
             "jill.utils.sys_utils",
             "jill.utils.version_utils"
         ],
-        "version": "0.6.2"
+        "version": "0.6.5"
     },
     "jim": {
         "cmdline": [],
@@ -26914,7 +26985,7 @@
     "jnrbase": {
         "cmdline": [],
         "modules": [],
-        "version": "1.2.3"
+        "version": "1.3.0"
     },
     "jnt-django-admin-tools": {
         "cmdline": [],
@@ -28546,11 +28617,11 @@
             "joker.broker.base",
             "joker.broker.default",
             "joker.broker.interfaces",
-            "joker.broker.interfaces.redis_",
+            "joker.broker.interfaces.redis",
             "joker.broker.interfaces.sequel",
             "joker.broker.interfaces.static"
         ],
-        "version": "0.3.0"
+        "version": "0.4.1"
     },
     "joker-cast": {
         "cmdline": [],
@@ -29927,10 +29998,12 @@
         "cmdline": [],
         "modules": [
             "joulescope",
+            "joulescope.array_storage",
             "joulescope.bootloader",
             "joulescope.calibration",
             "joulescope.data_recorder",
             "joulescope.datafile",
+            "joulescope.decimators",
             "joulescope.driver",
             "joulescope.entry_points",
             "joulescope.entry_points.capture",
@@ -29947,14 +30020,18 @@
             "joulescope.public_keys",
             "joulescope.span",
             "joulescope.test",
+            "joulescope.test.test_array_storage",
             "joulescope.test.test_calibration",
             "joulescope.test.test_data_recorder",
+            "joulescope.test.test_data_recorder_downsampled",
             "joulescope.test.test_datafile",
             "joulescope.test.test_device",
             "joulescope.test.test_file_replace",
+            "joulescope.test.test_filter_fir",
             "joulescope.test.test_parameter",
             "joulescope.test.test_pattern_buffer",
             "joulescope.test.test_span",
+            "joulescope.test.test_stats",
             "joulescope.test.test_stream_buffer",
             "joulescope.test.test_time",
             "joulescope.test.test_units",
@@ -29978,7 +30055,7 @@
             "joulescope.version",
             "joulescope.view"
         ],
-        "version": "0.7.0"
+        "version": "0.8.3"
     },
     "joulescope-ui": {
         "cmdline": [],
@@ -30074,7 +30151,7 @@
             "joulescope_ui.widgets.waveform_control",
             "joulescope_ui.widgets.waveform_control.waveform_control"
         ],
-        "version": "0.7.0"
+        "version": "0.8.3"
     },
     "jound": {
         "cmdline": [],
@@ -37399,7 +37476,7 @@
     "json-schema-for-humans": {
         "cmdline": [],
         "modules": [],
-        "version": "0.3.0"
+        "version": "0.3.1"
     },
     "json-schema-generator": {
         "cmdline": [
@@ -49322,7 +49399,7 @@
             "nativeauthenticator.tests.test_authenticator",
             "nativeauthenticator.tests.test_orm"
         ],
-        "version": "0.0.4"
+        "version": "0.0.5"
     },
     "jupyterhub-oauth-spawner": {
         "cmdline": [],
