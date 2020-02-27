@@ -5939,7 +5939,7 @@
             "kadalu_quotad.kadalulib",
             "kadalu_quotad.quotad"
         ],
-        "version": "0.5.0"
+        "version": "0.5.2"
     },
     "kademlia": {
         "cmdline": [],
@@ -10981,7 +10981,7 @@
             "kaldi_io",
             "kaldi_io.kaldi_io"
         ],
-        "version": "0.9.1"
+        "version": "0.9.3"
     },
     "kaldi-python-io": {
         "cmdline": [],
@@ -14525,11 +14525,15 @@
             "karateclub.node_embedding.attributed.sine",
             "karateclub.node_embedding.attributed.tadw",
             "karateclub.node_embedding.attributed.tene",
+            "karateclub.node_embedding.meta",
+            "karateclub.node_embedding.meta.neu",
             "karateclub.node_embedding.neighbourhood",
             "karateclub.node_embedding.neighbourhood.boostne",
             "karateclub.node_embedding.neighbourhood.deepwalk",
             "karateclub.node_embedding.neighbourhood.diff2vec",
             "karateclub.node_embedding.neighbourhood.grarep",
+            "karateclub.node_embedding.neighbourhood.hope",
+            "karateclub.node_embedding.neighbourhood.laplacianeigenmaps",
             "karateclub.node_embedding.neighbourhood.netmf",
             "karateclub.node_embedding.neighbourhood.nmfadmm",
             "karateclub.node_embedding.neighbourhood.walklets",
@@ -14541,7 +14545,7 @@
             "karateclub.utils.treefeatures",
             "karateclub.utils.walker"
         ],
-        "version": "0.45.24"
+        "version": "0.45.26"
     },
     "karatsuba": {
         "cmdline": [],
@@ -15188,7 +15192,7 @@
     "karp-backend-5": {
         "cmdline": [],
         "modules": [],
-        "version": "5.23.3"
+        "version": "5.24.1"
     },
     "karpet": {
         "cmdline": [],
@@ -18536,7 +18540,7 @@
             "kvirt.vsphere.helpers",
             "kvirt.web"
         ],
-        "version": "99.0.202002252105"
+        "version": "99.0.202002261757"
     },
     "kclient": {
         "cmdline": [],
@@ -18784,8 +18788,12 @@
     },
     "kcrw-apple-news": {
         "cmdline": [],
-        "modules": [],
-        "version": "0.1.0"
+        "modules": [
+            "kcrw.apple_news",
+            "kcrw.apple_news.api",
+            "kcrw.apple_news.command"
+        ],
+        "version": "0.2.2"
     },
     "kcrw-nprapi": {
         "cmdline": [],
@@ -20452,8 +20460,10 @@
             "kedro.config",
             "kedro.config.config",
             "kedro.config.default_logger",
+            "kedro.config.templated_config",
             "kedro.context",
             "kedro.context.context",
+            "kedro.context.hooks",
             "kedro.contrib",
             "kedro.contrib.colors",
             "kedro.contrib.colors.logging",
@@ -20469,7 +20479,7 @@
             "kedro.contrib.io.azure.csv_blob",
             "kedro.contrib.io.azure.json_blob",
             "kedro.contrib.io.bioinformatics",
-            "kedro.contrib.io.bioinformatics.sequence_dataset",
+            "kedro.contrib.io.bioinformatics.biosequence_local_dataset",
             "kedro.contrib.io.cached",
             "kedro.contrib.io.cached.cached_dataset",
             "kedro.contrib.io.catalog_with_default",
@@ -20482,8 +20492,8 @@
             "kedro.contrib.io.gcs.json_gcs",
             "kedro.contrib.io.gcs.parquet_gcs",
             "kedro.contrib.io.matplotlib",
+            "kedro.contrib.io.matplotlib.matplotlib_local_writer",
             "kedro.contrib.io.matplotlib.matplotlib_s3_writer",
-            "kedro.contrib.io.matplotlib.matplotlib_writer",
             "kedro.contrib.io.networkx",
             "kedro.contrib.io.networkx.networkx_local",
             "kedro.contrib.io.parquet",
@@ -20496,12 +20506,52 @@
             "kedro.contrib.io.transformers.transformers",
             "kedro.contrib.io.yaml_local",
             "kedro.contrib.io.yaml_local.yaml_local",
+            "kedro.extras",
+            "kedro.extras.datasets",
+            "kedro.extras.datasets.biosequence",
+            "kedro.extras.datasets.biosequence.biosequence_dataset",
+            "kedro.extras.datasets.dask",
+            "kedro.extras.datasets.dask.parquet_dataset",
+            "kedro.extras.datasets.matplotlib",
+            "kedro.extras.datasets.matplotlib.matplotlib_writer",
+            "kedro.extras.datasets.networkx",
+            "kedro.extras.datasets.networkx.networkx_dataset",
+            "kedro.extras.datasets.pandas",
+            "kedro.extras.datasets.pandas.csv_blob_dataset",
+            "kedro.extras.datasets.pandas.csv_dataset",
+            "kedro.extras.datasets.pandas.excel_dataset",
+            "kedro.extras.datasets.pandas.feather_dataset",
+            "kedro.extras.datasets.pandas.gbq_dataset",
+            "kedro.extras.datasets.pandas.hdf_dataset",
+            "kedro.extras.datasets.pandas.json_blob_dataset",
+            "kedro.extras.datasets.pandas.json_dataset",
+            "kedro.extras.datasets.pandas.parquet_dataset",
+            "kedro.extras.datasets.pandas.sql_dataset",
+            "kedro.extras.datasets.pickle",
+            "kedro.extras.datasets.pickle.pickle_dataset",
+            "kedro.extras.datasets.spark",
+            "kedro.extras.datasets.spark.spark_dataset",
+            "kedro.extras.datasets.spark.spark_hive_dataset",
+            "kedro.extras.datasets.spark.spark_jdbc_dataset",
+            "kedro.extras.datasets.text",
+            "kedro.extras.datasets.text.text_dataset",
+            "kedro.extras.datasets.yaml",
+            "kedro.extras.datasets.yaml.yaml_dataset",
+            "kedro.extras.decorators",
+            "kedro.extras.decorators.memory_profiler",
+            "kedro.extras.decorators.retry_node",
+            "kedro.extras.logging",
+            "kedro.extras.logging.color_logger",
+            "kedro.extras.transformers",
+            "kedro.extras.transformers.time_profiler",
             "kedro.io",
+            "kedro.io.cached_dataset",
             "kedro.io.core",
             "kedro.io.csv_http",
             "kedro.io.csv_local",
             "kedro.io.csv_s3",
             "kedro.io.data_catalog",
+            "kedro.io.data_catalog_with_default",
             "kedro.io.excel_local",
             "kedro.io.hdf_local",
             "kedro.io.hdf_s3",
@@ -20528,7 +20578,7 @@
             "kedro.versioning",
             "kedro.versioning.journal"
         ],
-        "version": "0.15.5"
+        "version": "0.15.7"
     },
     "kedro-airflow": {
         "cmdline": [],
@@ -30485,13 +30535,11 @@
             "kgd.cli",
             "kgd.common",
             "kgd.constants",
-            "kgd.core",
             "kgd.exceptions",
-            "kgd.parsing",
             "kgd.utils",
             "kgd.validators"
         ],
-        "version": "0.1.22"
+        "version": "0.1.25"
     },
     "kgddstools": {
         "cmdline": [],
@@ -35764,7 +35812,7 @@
             "tests.conftest",
             "tests.random_csv"
         ],
-        "version": "0.1.39"
+        "version": "0.1.40"
     },
     "kipartman": {
         "cmdline": [
@@ -44462,6 +44510,16 @@
         ],
         "version": "1.2.0"
     },
+    "knight-bus": {
+        "cmdline": [],
+        "modules": [
+            "knight_bus",
+            "knight_bus.Receiver",
+            "knight_bus.Sender",
+            "knight_bus.base"
+        ],
+        "version": "0.0.2"
+    },
     "knight-dialer": {
         "cmdline": [],
         "modules": [
@@ -45227,7 +45285,7 @@
             "knotty.meters",
             "knotty.registry"
         ],
-        "version": "0.0.1"
+        "version": "0.0.2"
     },
     "know-its-ok": {
         "cmdline": [],
@@ -45883,6 +45941,24 @@
         "modules": [],
         "version": ""
     },
+    "koala-crawler": {
+        "cmdline": [],
+        "modules": [
+            "koala_crawler",
+            "koala_crawler.crawlers",
+            "koala_crawler.crawlers.crawler_base",
+            "koala_crawler.crawlers.db",
+            "koala_crawler.crawlers.db.db_metadata",
+            "koala_crawler.crawlers.db.orcale_crawler",
+            "koala_crawler.crawlers.graph_objects",
+            "koala_crawler.crawlers.graph_objects.graph_edge",
+            "koala_crawler.crawlers.graph_objects.graph_node",
+            "koala_crawler.crawlers.graph_objects.graph_object_base",
+            "koala_crawler.exceptions",
+            "koala_crawler.exceptions.exceptions"
+        ],
+        "version": "0.0.2"
+    },
     "koala-html": {
         "cmdline": [],
         "modules": [
@@ -45890,6 +45966,16 @@
             "koala_html.table"
         ],
         "version": "0.0.2"
+    },
+    "koala-publisher": {
+        "cmdline": [],
+        "modules": [
+            "koala_publisher",
+            "koala_publisher.exceptions",
+            "koala_publisher.exceptions.exceptions",
+            "koala_publisher.graph_object_publisher"
+        ],
+        "version": "0.0.1"
     },
     "koala-serializer": {
         "cmdline": [
@@ -54138,7 +54224,7 @@
     "kotify-fabric": {
         "cmdline": [],
         "modules": [],
-        "version": "0.10.0"
+        "version": "0.11.0"
     },
     "kotlin-jupyter-kernel": {
         "cmdline": [],
@@ -55175,7 +55261,7 @@
             "kouyou.google.sheets",
             "kouyou.google.utils"
         ],
-        "version": "1.0.0"
+        "version": "1.0"
     },
     "koverse": {
         "cmdline": [],
@@ -58658,7 +58744,7 @@
             "kser.tracing.proxy",
             "kser.tracing.task"
         ],
-        "version": "0.8.20"
+        "version": "0.8.21"
     },
     "kser-crypto": {
         "cmdline": [],
@@ -60421,7 +60507,7 @@
             "kubectl_kadalu.storage_add",
             "kubectl_kadalu.utils"
         ],
-        "version": "0.5.0"
+        "version": "0.5.2"
     },
     "kubediag": {
         "cmdline": [
@@ -60699,9 +60785,10 @@
             "kubeflow.metadata",
             "kubeflow.metadata.metadata",
             "tests",
-            "tests.test_metadata"
+            "tests.test_metadata",
+            "tests.test_notebook"
         ],
-        "version": "0.3.0"
+        "version": "0.3.1"
     },
     "kubeflow-pytorchjob": {
         "cmdline": [],
@@ -62797,6 +62884,7 @@
             "kubernetes_asyncio.client.models.extensions_v1beta1_rolling_update_deployment",
             "kubernetes_asyncio.client.models.extensions_v1beta1_run_as_group_strategy_options",
             "kubernetes_asyncio.client.models.extensions_v1beta1_run_as_user_strategy_options",
+            "kubernetes_asyncio.client.models.extensions_v1beta1_runtime_class_strategy_options",
             "kubernetes_asyncio.client.models.extensions_v1beta1_scale",
             "kubernetes_asyncio.client.models.extensions_v1beta1_scale_spec",
             "kubernetes_asyncio.client.models.extensions_v1beta1_scale_status",
@@ -62822,6 +62910,7 @@
             "kubernetes_asyncio.client.models.policy_v1beta1_pod_security_policy_spec",
             "kubernetes_asyncio.client.models.policy_v1beta1_run_as_group_strategy_options",
             "kubernetes_asyncio.client.models.policy_v1beta1_run_as_user_strategy_options",
+            "kubernetes_asyncio.client.models.policy_v1beta1_runtime_class_strategy_options",
             "kubernetes_asyncio.client.models.policy_v1beta1_se_linux_strategy_options",
             "kubernetes_asyncio.client.models.policy_v1beta1_supplemental_groups_strategy_options",
             "kubernetes_asyncio.client.models.runtime_raw_extension",
@@ -63122,6 +63211,7 @@
             "kubernetes_asyncio.client.models.v1_vsphere_virtual_disk_volume_source",
             "kubernetes_asyncio.client.models.v1_watch_event",
             "kubernetes_asyncio.client.models.v1_weighted_pod_affinity_term",
+            "kubernetes_asyncio.client.models.v1_windows_security_context_options",
             "kubernetes_asyncio.client.models.v1alpha1_aggregation_rule",
             "kubernetes_asyncio.client.models.v1alpha1_audit_sink",
             "kubernetes_asyncio.client.models.v1alpha1_audit_sink_list",
@@ -63214,6 +63304,7 @@
             "kubernetes_asyncio.client.models.v1beta1_lease_list",
             "kubernetes_asyncio.client.models.v1beta1_lease_spec",
             "kubernetes_asyncio.client.models.v1beta1_local_subject_access_review",
+            "kubernetes_asyncio.client.models.v1beta1_mutating_webhook",
             "kubernetes_asyncio.client.models.v1beta1_mutating_webhook_configuration",
             "kubernetes_asyncio.client.models.v1beta1_mutating_webhook_configuration_list",
             "kubernetes_asyncio.client.models.v1beta1_network_policy",
@@ -63270,6 +63361,7 @@
             "kubernetes_asyncio.client.models.v1beta1_token_review_spec",
             "kubernetes_asyncio.client.models.v1beta1_token_review_status",
             "kubernetes_asyncio.client.models.v1beta1_user_info",
+            "kubernetes_asyncio.client.models.v1beta1_validating_webhook",
             "kubernetes_asyncio.client.models.v1beta1_validating_webhook_configuration",
             "kubernetes_asyncio.client.models.v1beta1_validating_webhook_configuration_list",
             "kubernetes_asyncio.client.models.v1beta1_volume_attachment",
@@ -63278,7 +63370,6 @@
             "kubernetes_asyncio.client.models.v1beta1_volume_attachment_spec",
             "kubernetes_asyncio.client.models.v1beta1_volume_attachment_status",
             "kubernetes_asyncio.client.models.v1beta1_volume_error",
-            "kubernetes_asyncio.client.models.v1beta1_webhook",
             "kubernetes_asyncio.client.models.v1beta2_controller_revision",
             "kubernetes_asyncio.client.models.v1beta2_controller_revision_list",
             "kubernetes_asyncio.client.models.v1beta2_daemon_set",
@@ -63376,7 +63467,7 @@
             "kubernetes_asyncio.watch.watch",
             "kubernetes_asyncio.watch.watch_test"
         ],
-        "version": "10.0.1"
+        "version": "11.0.0"
     },
     "kubernetes-cri": {
         "cmdline": [],
@@ -66068,17 +66159,29 @@
         "cmdline": [],
         "modules": [
             "mirai",
+            "mirai.command",
+            "mirai.context",
+            "mirai.event",
+            "mirai.event.builtins",
+            "mirai.event.external",
             "mirai.exceptions",
             "mirai.face",
             "mirai.friend",
             "mirai.group",
             "mirai.logger",
+            "mirai.message",
+            "mirai.message.base",
+            "mirai.message.chain",
+            "mirai.message.components",
+            "mirai.message.types",
             "mirai.misc",
             "mirai.network",
             "mirai.protocol",
+            "mirai.prototypes",
+            "mirai.prototypes.context",
             "mirai.session"
         ],
-        "version": "0.1.1"
+        "version": "0.1.6"
     },
     "kuro": {
         "cmdline": [],
@@ -67987,9 +68090,12 @@
         "modules": [
             "kwollect",
             "kwollect.kwollector",
-            "kwollect.kwollector_wattmetre"
+            "kwollect.kwollector_wattmetre",
+            "kwollect.tools",
+            "kwollect.tools.kwollect_setup_db",
+            "kwollect.tools.kwollect_setup_db_oar"
         ],
-        "version": "0.0.1"
+        "version": "0.0.2"
     },
     "kwonly": {
         "cmdline": [],
