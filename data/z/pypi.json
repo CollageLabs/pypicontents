@@ -69,6 +69,17 @@
         "modules": [],
         "version": ""
     },
+    "z0bug-odoo": {
+        "cmdline": [],
+        "modules": [
+            "z0bug_odoo",
+            "z0bug_odoo.create_test_env",
+            "z0bug_odoo.setup",
+            "z0bug_odoo.test_common",
+            "z0bug_odoo.z0bug_odoo_lib"
+        ],
+        "version": "0.1.0.2"
+    },
     "z0lib": {
         "cmdline": [],
         "modules": [
@@ -3533,7 +3544,7 @@
             "zabbixproto.config",
             "zabbixproto.proxypackets"
         ],
-        "version": "0.0.2"
+        "version": "0.0.3"
     },
     "zabbixproxysender": {
         "cmdline": [],
@@ -9141,9 +9152,48 @@
         "cmdline": [],
         "modules": [
             "zelos",
-            "zelos.core"
+            "zelos.api",
+            "zelos.api.memory_api",
+            "zelos.api.regs_api",
+            "zelos.api.zelos_api",
+            "zelos.config_gen",
+            "zelos.emulator",
+            "zelos.emulator.arm",
+            "zelos.emulator.base",
+            "zelos.emulator.mips",
+            "zelos.emulator.x86",
+            "zelos.emulator.x86_gdt",
+            "zelos.engine",
+            "zelos.enums",
+            "zelos.exceptions",
+            "zelos.file_system",
+            "zelos.handles",
+            "zelos.handles.base_handles",
+            "zelos.handles.pipe",
+            "zelos.hooks",
+            "zelos.manager",
+            "zelos.memory",
+            "zelos.modules",
+            "zelos.network",
+            "zelos.network.base_socket",
+            "zelos.network.dns",
+            "zelos.network.network",
+            "zelos.plugin",
+            "zelos.plugin.arg_base",
+            "zelos.plugin.loader_base",
+            "zelos.plugin.parser_base",
+            "zelos.plugin.plugin",
+            "zelos.plugin.syscall_manager_base",
+            "zelos.processes",
+            "zelos.scheduler",
+            "zelos.state",
+            "zelos.symbol_manager",
+            "zelos.threads",
+            "zelos.tracer",
+            "zelos.triggers",
+            "zelos.util"
         ],
-        "version": "0.0.0.dev0"
+        "version": "0.0.0"
     },
     "zelt": {
         "cmdline": [],
@@ -10296,7 +10346,7 @@
             "garmdown.reporter",
             "garmdown.sheets"
         ],
-        "version": "0.0.3"
+        "version": "0.0.4"
     },
     "zensols-grsync": {
         "cmdline": [],
@@ -13924,6 +13974,7 @@
             "zhaquirks.xiaomi.aqara",
             "zhaquirks.xiaomi.aqara.cube",
             "zhaquirks.xiaomi.aqara.cube_aqgl01",
+            "zhaquirks.xiaomi.aqara.illumination",
             "zhaquirks.xiaomi.aqara.magnet_aq2",
             "zhaquirks.xiaomi.aqara.motion_aq2",
             "zhaquirks.xiaomi.aqara.motion_aq2b",
@@ -13947,7 +13998,7 @@
             "zhaquirks.yale",
             "zhaquirks.yale.realliving"
         ],
-        "version": "0.0.33"
+        "version": "0.0.34"
     },
     "zhang": {
         "cmdline": [],
@@ -14359,7 +14410,7 @@
     "zhinst": {
         "cmdline": [],
         "modules": [],
-        "version": "19.5.65305"
+        "version": "20.1.1211"
     },
     "zhiqing": {
         "cmdline": [],
@@ -16840,6 +16891,12 @@
             "zinc_cli.commands.aws_util",
             "zinc_cli.commands.aws_util.aws_utils",
             "zinc_cli.commands.create",
+            "zinc_cli.commands.create.contact_api",
+            "zinc_cli.commands.create.contact_api.create_contact_api_cmd",
+            "zinc_cli.commands.create.contact_api.create_contact_api_request",
+            "zinc_cli.commands.create.crud_api",
+            "zinc_cli.commands.create.crud_api.create_crud_api_cmd",
+            "zinc_cli.commands.create.crud_api.create_crud_api_request",
             "zinc_cli.commands.create.domain",
             "zinc_cli.commands.create.domain.domain_manager",
             "zinc_cli.commands.create.domain.hosted_zone_manager",
@@ -16849,10 +16906,11 @@
             "zinc_cli.commands.create.static_site",
             "zinc_cli.commands.create.static_site.create_static_site_cmd",
             "zinc_cli.commands.create.static_site.create_static_site_request",
-            "zinc_cli.commands.zinc_create",
+            "zinc_cli.commands.create.zinc_create",
+            "zinc_cli.commands.create.zinc_create_request",
             "zinc_cli.commands.zinc_transform",
             "zinc_cli.infrastructure",
-            "zinc_cli.infrastructure.app",
+            "zinc_cli.infrastructure.infrastructure",
             "zinc_cli.infrastructure.models",
             "zinc_cli.infrastructure.models.infrastructure_service_field",
             "zinc_cli.infrastructure.models.infrastructure_service_model",
@@ -16861,18 +16919,20 @@
             "zinc_cli.infrastructure.services.bookings.cdk_bookings_stack",
             "zinc_cli.infrastructure.services.bookings.lambda",
             "zinc_cli.infrastructure.services.bookings.lambda.lambda_handler",
+            "zinc_cli.infrastructure.services.contact_api",
+            "zinc_cli.infrastructure.services.contact_api.cdk_contact_api_stack",
+            "zinc_cli.infrastructure.services.contact_api.lambda",
+            "zinc_cli.infrastructure.services.contact_api.lambda.lambda_handler",
+            "zinc_cli.infrastructure.services.crud_api",
+            "zinc_cli.infrastructure.services.crud_api.cdk_crud_stack",
+            "zinc_cli.infrastructure.services.crud_api.lambda",
+            "zinc_cli.infrastructure.services.crud_api.lambda.lambda_handler",
+            "zinc_cli.infrastructure.services.master_stack",
             "zinc_cli.infrastructure.services.static_site",
             "zinc_cli.infrastructure.services.static_site.cdk_static_site_stack",
-            "zinc_cli.models",
-            "zinc_cli.models.base_model",
-            "zinc_cli.models.project_definition",
-            "zinc_cli.models.project_definition.project_definition_model",
-            "zinc_cli.service",
-            "zinc_cli.service.create_project_table_ddb",
-            "zinc_cli.utils",
             "zinc_cli.zinc"
         ],
-        "version": "0.1.11"
+        "version": "0.1.12"
     },
     "zinc-dns": {
         "cmdline": [],
@@ -30386,6 +30446,7 @@
             "zou.app.services.scenes_service",
             "zou.app.services.schedule_service",
             "zou.app.services.shots_service",
+            "zou.app.services.stats_service",
             "zou.app.services.sync_service",
             "zou.app.services.tasks_service",
             "zou.app.services.time_spents_service",
@@ -30420,7 +30481,7 @@
             "zou.event_stream",
             "zou.job_settings"
         ],
-        "version": "0.11.25"
+        "version": "0.11.26"
     },
     "zouaho-nester": {
         "cmdline": [],
@@ -31312,24 +31373,22 @@
         "cmdline": [],
         "modules": [
             "zqpy",
-            "zqpy.__version__",
-            "zqpy.core",
-            "zqpy.pkg",
-            "zqpy.pkg.FileService",
-            "zqpy.pkg.HttpService",
-            "zqpy.pkg.LocallizeService",
-            "zqpy.pkg.LogService",
-            "zqpy.pkg.MailService",
-            "zqpy.pkg.QrCodeService",
-            "zqpy.pkg.RegexService",
-            "zqpy.pkg.StringService",
-            "zqpy.pkg.ThreadService",
-            "zqpy.pkg.TimeService",
-            "zqpy.pkg.ToolsService",
-            "zqpy.pkg.VideoDownloadService",
-            "zqpy.pkg.WaitExecutService"
+            "zqpy.FileService",
+            "zqpy.HttpService",
+            "zqpy.LocallizeService",
+            "zqpy.LogService",
+            "zqpy.MailService",
+            "zqpy.QrCodeService",
+            "zqpy.RegexService",
+            "zqpy.StringService",
+            "zqpy.ThreadService",
+            "zqpy.TimeService",
+            "zqpy.ToolsService",
+            "zqpy.VideoDownloadService",
+            "zqpy.WaitExecutService",
+            "zqpy.__version__"
         ],
-        "version": "0.1.12"
+        "version": "0.1.16"
     },
     "zquant": {
         "cmdline": [],
@@ -35884,14 +35943,6 @@
     "zxutil": {
         "cmdline": [],
         "modules": [
-            "pocket",
-            "pocket.pyencrypt",
-            "pocket.pyfile",
-            "pocket.pyimg",
-            "pocket.pyspider",
-            "pocket.pystr",
-            "pocket.pytime",
-            "pocket.pyurl",
             "tests",
             "tests.test_pyencrypt",
             "tests.test_pyfile",
@@ -35899,9 +35950,17 @@
             "tests.test_pyspider",
             "tests.test_pystr",
             "tests.test_pytime",
-            "tests.test_pyurl"
+            "tests.test_pyurl",
+            "zxutil",
+            "zxutil.pyencrypt",
+            "zxutil.pyfile",
+            "zxutil.pyimg",
+            "zxutil.pyspider",
+            "zxutil.pystr",
+            "zxutil.pytime",
+            "zxutil.pyurl"
         ],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     "zxwei-nester": {
         "cmdline": [],
