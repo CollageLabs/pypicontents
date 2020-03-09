@@ -535,7 +535,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (karabo-bridge) This package is up to date.
 [INFO] (karabo-data) This package is up to date.
 [INFO] (karait) This package is up to date.
-[INFO] (karajan) This package is up to date.
+[INFO] (karajan) Data has been updated for this package.
 [INFO] (karakuri) This package is up to date.
 [INFO] (karamel) This package is up to date.
 [INFO] (karanpdf) This package is up to date.
@@ -1029,6 +1029,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [ERROR] (kedpm) This package does not have downloadable releases.
 [INFO] (kedro) This package is up to date.
 [INFO] (kedro-airflow) This package is up to date.
+[INFO] (kedro-argo) Data has been updated for this package.
 [INFO] (kedro-docker) This package is up to date.
 [INFO] (kedro-viz) This package is up to date.
 [INFO] (kedsort) This package is up to date.
@@ -1045,6 +1046,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (keep-password) This package is up to date.
 [INFO] (keep-passwords) This package is up to date.
 [INFO] (keep-running) This package is up to date.
+[INFO] (keep-sabbath) Data has been updated for this package.
 [INFO] (keepa) This package is up to date.
 [INFO] (keepachangelog) This package is up to date.
 [INFO] (keepahpy) This package is up to date.
@@ -1300,6 +1302,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (keras-complex) This package is up to date.
 [INFO] (keras-coordconv) This package is up to date.
 [INFO] (keras-datasets) This package is up to date.
+[INFO] (keras-dense-sparse-matmul) Data has been updated for this package.
 [INFO] (keras-diagram) This package is up to date.
 [INFO] (keras-ding) This package is up to date.
 [INFO] (keras-drop-block) This package is up to date.
@@ -1376,6 +1379,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (keras-self-attention) This package is up to date.
 [INFO] (keras-sequential-ascii) This package is up to date.
 [INFO] (keras-sklearn-multihead-classifier) This package is up to date.
+[INFO] (keras-sparsity-pattern) Data has been updated for this package.
 [INFO] (keras-spatial) This package is up to date.
 [INFO] (keras-squeezenet) This package is up to date.
 [INFO] (keras-succ-reg-wrapper) This package is up to date.
@@ -1401,7 +1405,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (keras-utils) This package is up to date.
 [INFO] (keras-vgg-buddy) This package is up to date.
 [INFO] (keras-vggface) This package is up to date.
-[INFO] (keras-video-generators) This package is up to date.
+[INFO] (keras-video-generators) Data has been updated for this package.
 [INFO] (keras-vis) This package is up to date.
 [INFO] (keras-vis-temp) This package is up to date.
 [INFO] (keras-word-char-embd) This package is up to date.
@@ -2227,44 +2231,21 @@ urllib.error.HTTPError: HTTP Error 308: Permanent Redirect
 [ERROR] (kirbybase) Could not extract data from this package. See below for details.
 "http://www.netpromi.com/files/KirbyBase_Python_1.9.zip" file could not be downloaded. See below for details.
 Traceback (most recent call last):
-  File "/usr/lib/python3.8/urllib/request.py", line 1319, in do_open
-    h.request(req.get_method(), req.selector, req.data, headers,
-  File "/usr/lib/python3.8/http/client.py", line 1230, in request
-    self._send_request(method, url, body, headers, encode_chunked)
-  File "/usr/lib/python3.8/http/client.py", line 1276, in _send_request
-    self.endheaders(body, encode_chunked=encode_chunked)
-  File "/usr/lib/python3.8/http/client.py", line 1225, in endheaders
-    self._send_output(message_body, encode_chunked=encode_chunked)
-  File "/usr/lib/python3.8/http/client.py", line 1004, in _send_output
-    self.send(msg)
-  File "/usr/lib/python3.8/http/client.py", line 944, in send
-    self.connect()
-  File "/usr/lib/python3.8/http/client.py", line 915, in connect
-    self.sock = self._create_connection(
-  File "/usr/lib/python3.8/socket.py", line 787, in create_connection
-    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
-  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
-    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
-socket.gaierror: [Errno -3] Temporary failure in name resolution
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
   File "/usr/local/lib/python3.8/dist-packages/pypicontents/api/pypi.py", line 107, in download_tar
     f.write(urlopen(url=urlesc(pkgurl), timeout=10).read())
   File "/usr/lib/python3.8/urllib/request.py", line 222, in urlopen
     return opener.open(url, data, timeout)
-  File "/usr/lib/python3.8/urllib/request.py", line 525, in open
-    response = self._open(req, data)
-  File "/usr/lib/python3.8/urllib/request.py", line 542, in _open
-    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "/usr/lib/python3.8/urllib/request.py", line 531, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.8/urllib/request.py", line 640, in http_response
+    response = self.parent.error(
+  File "/usr/lib/python3.8/urllib/request.py", line 569, in error
+    return self._call_chain(*args)
   File "/usr/lib/python3.8/urllib/request.py", line 502, in _call_chain
     result = func(*args)
-  File "/usr/lib/python3.8/urllib/request.py", line 1348, in http_open
-    return self.do_open(http.client.HTTPConnection, req)
-  File "/usr/lib/python3.8/urllib/request.py", line 1322, in do_open
-    raise URLError(err)
-urllib.error.URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
+  File "/usr/lib/python3.8/urllib/request.py", line 649, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 403: Forbidden
 
 [INFO] (kirin) This package is up to date.
 [INFO] (kirjava) This package is up to date.
@@ -2344,7 +2325,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (kisspack) This package is up to date.
 [INFO] (kissxml) This package is up to date.
 [INFO] (kisters-network-store-client-network) This package is up to date.
-[INFO] (kisters-network-store-model-library) This package is up to date.
+[INFO] (kisters-network-store-model-library) Data has been updated for this package.
 [INFO] (kisters-network-store-model-library-water) This package is up to date.
 [INFO] (kisters-water-hydraulic-network-client) This package is up to date.
 [INFO] (kisters-water-hydraulic-network-models) This package is up to date.
@@ -2394,7 +2375,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (kitconcept-richpage) This package is up to date.
 [INFO] (kitconcept-seo) This package is up to date.
 [INFO] (kitconcept-timeline) This package is up to date.
-[INFO] (kitconcept-volto) This package is up to date.
+[INFO] (kitconcept-volto) Data has been updated for this package.
 [INFO] (kitconcept-voltodemo) This package is up to date.
 [ERROR] (kite) Could not get a response from API for this package. See below for details.
 Traceback (most recent call last):
@@ -3250,6 +3231,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (knowledge) This package is up to date.
 [ERROR] (knowledge-app) This package does not have downloadable releases.
 [INFO] (knowledge-repo) This package is up to date.
+[INFO] (knowledgedistillation) Data has been updated for this package.
 [INFO] (knowledgelab) This package is up to date.
 [INFO] (knowledgeowl) This package is up to date.
 [INFO] (knowlify) This package is up to date.
@@ -3343,7 +3325,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (kode256) This package is up to date.
 [INFO] (kodesmil-common) This package is up to date.
 [ERROR] (kodetest) This package does not have downloadable releases.
-[INFO] (kodi-addon-checker) This package is up to date.
+[INFO] (kodi-addon-checker) Data has been updated for this package.
 [INFO] (kodi-json) This package is up to date.
 [INFO] (kodi-nfo-generator) This package is up to date.
 [INFO] (kodi-voice) This package is up to date.
@@ -3582,7 +3564,7 @@ Unsupported package directory structure.
 [INFO] (kopf) This package is up to date.
 [INFO] (kopi) This package is up to date.
 [INFO] (koppeltaal) This package is up to date.
-[INFO] (kopper) Data has been updated for this package.
+[INFO] (kopper) This package is up to date.
 [INFO] (kopt) This package is up to date.
 [INFO] (koptool) This package is up to date.
 [INFO] (kopy) This package is up to date.
@@ -3664,7 +3646,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (kosimpletax) This package is up to date.
 [INFO] (koslab-messengerbot) This package is up to date.
 [INFO] (koslab-recipe-zipapp) This package is up to date.
-[INFO] (kosmorro) This package is up to date.
+[INFO] (kosmorro) Data has been updated for this package.
 [INFO] (kostal-ardexa) This package is up to date.
 [INFO] (kostalplenticore) This package is up to date.
 [INFO] (kostalpyko) This package is up to date.
@@ -4294,7 +4276,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (kubernetes-py) This package is up to date.
 [INFO] (kubernetes-redjohn) This package is up to date.
 [INFO] (kubernetes-resource-monitor) This package is up to date.
-[INFO] (kubernetes-square) This package is up to date.
+[INFO] (kubernetes-square) Data has been updated for this package.
 [INFO] (kubernetes-utils) This package is up to date.
 [INFO] (kubernetes-validate) This package is up to date.
 [INFO] (kubernetify) This package is up to date.
@@ -4465,7 +4447,7 @@ This package download URL does not point to a valid file: "http://code.google.co
 [INFO] (kurama) This package is up to date.
 [INFO] (kurator) This package is up to date.
 [INFO] (kurdish) This package is up to date.
-[INFO] (kuriyama) Data has been updated for this package.
+[INFO] (kuriyama) This package is up to date.
 [INFO] (kuro) This package is up to date.
 [INFO] (kurobako) This package is up to date.
 [INFO] (kuroko) This package is up to date.
@@ -4649,7 +4631,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (kwikapi-django) This package is up to date.
 [INFO] (kwikapi-tornado) This package is up to date.
 [INFO] (kwiklib) This package is up to date.
-[INFO] (kwimage) This package is up to date.
+[INFO] (kwimage) Data has been updated for this package.
 [INFO] (kwipy) This package is up to date.
 [INFO] (kwiver) This package is up to date.
 [ERROR] (kwl) Could not extract data from this package. See below for details.
@@ -4698,7 +4680,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (kylileo) This package is up to date.
 [INFO] (kylin) This package is up to date.
 [INFO] (kylin-client) This package is up to date.
-[INFO] (kylinpy) This package is up to date.
+[INFO] (kylinpy) Data has been updated for this package.
 [INFO] (kylinwumodules) This package is up to date.
 [INFO] (kymatio) This package is up to date.
 [INFO] (kyoka) This package is up to date.
@@ -4763,10 +4745,10 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (kzzcrawl) This package is up to date.
 [INFO] 
 [INFO] 
-[INFO] Total packages: 3436
-[INFO]     Packages processed: 3436
-[INFO]         Packages updated: 4
-[INFO]         Packages up-to-date: 3240
+[INFO] Total packages: 3441
+[INFO]     Packages processed: 3441
+[INFO]         Packages updated: 16
+[INFO]         Packages up-to-date: 3233
 [INFO]         Packages without response: 59
 [INFO]         Packages without urls: 0
 [INFO]         Packages without downloads: 115
