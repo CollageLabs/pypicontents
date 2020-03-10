@@ -3424,7 +3424,7 @@
             "ladybug_rhino.text",
             "ladybug_rhino.togeometry"
         ],
-        "version": "1.1.0"
+        "version": "1.2.0"
     },
     "laf-fabric": {
         "cmdline": [],
@@ -36713,7 +36713,7 @@
             "lgblkb_tools.telegram_notify",
             "lgblkb_tools.vectorize"
         ],
-        "version": "1.1.9"
+        "version": "1.1.10"
     },
     "lgbsttracker": {
         "cmdline": [],
@@ -37040,15 +37040,18 @@
             "lhc.binf.genomic_coordinate.genomic_interval",
             "lhc.binf.genomic_coordinate.genomic_position",
             "lhc.binf.genomic_coordinate.nested_genomic_interval",
-            "lhc.binf.genomic_coordinate.nested_genomic_interval_factory",
             "lhc.binf.identifier",
             "lhc.binf.iupac",
             "lhc.binf.kmer",
             "lhc.binf.loci",
-            "lhc.binf.loci.loci_file",
+            "lhc.binf.loci.make_loci",
             "lhc.binf.loci.tools",
+            "lhc.binf.loci.tools.closest",
             "lhc.binf.loci.tools.extend",
             "lhc.binf.loci.tools.filter",
+            "lhc.binf.loci.tools.generate",
+            "lhc.binf.loci.tools.query",
+            "lhc.binf.loci.tools.stat",
             "lhc.binf.loci.tools.view",
             "lhc.binf.sequence",
             "lhc.binf.sequence.dicodonshuffle",
@@ -37059,6 +37062,8 @@
             "lhc.binf.sequence.sequence_generator",
             "lhc.binf.sequence.tools",
             "lhc.binf.sequence.tools.extract",
+            "lhc.binf.sequence.tools.filter",
+            "lhc.binf.sequence.tools.get",
             "lhc.binf.skew",
             "lhc.collections",
             "lhc.collections.inorder_access_interval_set",
@@ -37086,12 +37091,6 @@
             "lhc.intervaltools",
             "lhc.intervaltools.set",
             "lhc.io",
-            "lhc.io.bam",
-            "lhc.io.bam.iterator",
-            "lhc.io.bed",
-            "lhc.io.bgzf",
-            "lhc.io.bgzf.tools",
-            "lhc.io.bgzf.tools.inspect",
             "lhc.io.cut",
             "lhc.io.fasta",
             "lhc.io.fasta.index",
@@ -37114,17 +37113,16 @@
             "lhc.io.gbk.tools",
             "lhc.io.gbk.tools.extract",
             "lhc.io.gbk.tools.split",
-            "lhc.io.gff",
-            "lhc.io.gtf",
+            "lhc.io.loci",
+            "lhc.io.loci.bed",
+            "lhc.io.loci.gff",
+            "lhc.io.loci.gtf",
+            "lhc.io.loci.loci_file",
+            "lhc.io.loci.region",
+            "lhc.io.loci.repeat_masker",
             "lhc.io.maf",
             "lhc.io.maf.index",
             "lhc.io.maf.iterator",
-            "lhc.io.region",
-            "lhc.io.repeat_masker",
-            "lhc.io.sam",
-            "lhc.io.sam.clip",
-            "lhc.io.sam.filter",
-            "lhc.io.sam.iterator",
             "lhc.io.txt",
             "lhc.io.txt.filter",
             "lhc.io.txt.format_parser",
@@ -37158,6 +37156,7 @@
             "lhc.io.vcf.tools.trim_alt",
             "lhc.itertools",
             "lhc.itertools.chunked_iterator",
+            "lhc.itertools.merge_sorted",
             "lhc.itertools.sorted_iterator_merger",
             "lhc.math",
             "lhc.misc",
@@ -37171,7 +37170,7 @@
             "lhc.tools.sorter",
             "lhc.tools.tokeniser"
         ],
-        "version": "2.1.7"
+        "version": "2.1.8"
     },
     "lhclient": {
         "cmdline": [],
@@ -37307,13 +37306,14 @@
             "lhcsmapi.metadata.qps_crate",
             "lhcsmapi.pyedsl",
             "lhcsmapi.pyedsl.AssertionBuilder",
-            "lhcsmapi.pyedsl.CalsDbSignalQueryBuilder",
-            "lhcsmapi.pyedsl.DbQueryBuilderUtils",
             "lhcsmapi.pyedsl.FeatureBuilder",
-            "lhcsmapi.pyedsl.NxcalsDbSignalQueryBuilder",
-            "lhcsmapi.pyedsl.PmDbEventQueryBuilder",
-            "lhcsmapi.pyedsl.PmDbSignalQueryBuilder",
             "lhcsmapi.pyedsl.QueryBuilder",
+            "lhcsmapi.pyedsl.dbquery",
+            "lhcsmapi.pyedsl.dbquery.CalsDbSignalQueryBuilder",
+            "lhcsmapi.pyedsl.dbquery.DbQueryBuilderUtils",
+            "lhcsmapi.pyedsl.dbquery.NxcalsDbSignalQueryBuilder",
+            "lhcsmapi.pyedsl.dbquery.PmDbEventQueryBuilder",
+            "lhcsmapi.pyedsl.dbquery.PmDbSignalQueryBuilder",
             "lhcsmapi.reference",
             "lhcsmapi.reference.Reference",
             "lhcsmapi.reference.ee",
@@ -37376,7 +37376,7 @@
             "test.test_reference",
             "test.test_reference.test_Reference"
         ],
-        "version": "1.3.4"
+        "version": "1.3.12"
     },
     "lhdata": {
         "cmdline": [],
@@ -39978,6 +39978,15 @@
         "cmdline": [],
         "modules": [
             "libcnmc",
+            "libcnmc.audit_6181",
+            "libcnmc.audit_6181.CTS",
+            "libcnmc.audit_6181.DES",
+            "libcnmc.audit_6181.FIA",
+            "libcnmc.audit_6181.LAT",
+            "libcnmc.audit_6181.LBT",
+            "libcnmc.audit_6181.MAQ",
+            "libcnmc.audit_6181.POS",
+            "libcnmc.audit_6181.SE",
             "libcnmc.checker",
             "libcnmc.cir_3_2015",
             "libcnmc.cir_3_2015.F3",
@@ -40007,6 +40016,7 @@
             "libcnmc.cli_4666",
             "libcnmc.cli_4667",
             "libcnmc.cli_4_2015",
+            "libcnmc.cli_6181",
             "libcnmc.core",
             "libcnmc.core.backend",
             "libcnmc.core.cnmc_inventari",
@@ -40121,7 +40131,7 @@
             "libcnmc.res_4771.SUB",
             "libcnmc.utils"
         ],
-        "version": "0.20.2"
+        "version": "0.20.3"
     },
     "libcnmc1048": {
         "cmdline": [],
@@ -44428,7 +44438,7 @@
             "libra.vm_error",
             "libra.waypoint"
         ],
-        "version": "0.7.11"
+        "version": "0.7.12"
     },
     "libra-py": {
         "cmdline": [],
@@ -48866,7 +48876,7 @@
     "libvirt-python": {
         "cmdline": [],
         "modules": [],
-        "version": "6.0.0"
+        "version": "6.1.0"
     },
     "libvirt-test-api": {
         "cmdline": [],
@@ -53420,6 +53430,7 @@
             "lightwood.mixers.helpers.plinear",
             "lightwood.mixers.helpers.ranger",
             "lightwood.mixers.helpers.shapes",
+            "lightwood.mixers.helpers.transform_corss_entropy_loss",
             "lightwood.mixers.helpers.transformer",
             "lightwood.mixers.nn",
             "lightwood.mixers.nn.nn",
@@ -53431,7 +53442,7 @@
             "lightwood.model_building.basic_ax_optimizer",
             "lightwood.model_building.basic_ax_optimizer.basic_ax_optimizer"
         ],
-        "version": "0.17.2"
+        "version": "0.18.0"
     },
     "lightwriter": {
         "cmdline": [
@@ -54712,7 +54723,7 @@
             "lime_comb.validators.email",
             "lime_comb.validators.file"
         ],
-        "version": "0.0.14"
+        "version": "0.0.16"
     },
     "lime-lang": {
         "cmdline": [],
@@ -54973,7 +54984,7 @@
             "limic.test",
             "limic.util"
         ],
-        "version": "0.0.6"
+        "version": "0.1.2"
     },
     "limier": {
         "cmdline": [],
@@ -63786,7 +63797,7 @@
             "lins_asana",
             "lins_asana.api_asana"
         ],
-        "version": "1.4.1.19"
+        "version": "1.5.0.24"
     },
     "lins-barcodeutils": {
         "cmdline": [],
@@ -64895,7 +64906,7 @@
     "lion": {
         "cmdline": [],
         "modules": [],
-        "version": "0.2.0"
+        "version": "0.3.0"
     },
     "lioness": {
         "cmdline": [],
@@ -65128,7 +65139,7 @@
             "liputils",
             "liputils.liputils"
         ],
-        "version": "0.12"
+        "version": "0.13"
     },
     "lipy-notify": {
         "cmdline": [],
@@ -71389,7 +71400,7 @@
             "lixi._xml_to_json",
             "lixi._xslt_transform"
         ],
-        "version": "0.1.17"
+        "version": "0.1.18"
     },
     "lixi-ammar": {
         "cmdline": [],
@@ -81703,9 +81714,10 @@
             "logicqubit.hilbert",
             "logicqubit.logic",
             "logicqubit.qubits",
-            "logicqubit.utils"
+            "logicqubit.utils",
+            "logicqubit.zhegalkin"
         ],
-        "version": "1.2.4"
+        "version": "1.2.6"
     },
     "logify": {
         "cmdline": [],
@@ -82414,8 +82426,10 @@
     },
     "logjson": {
         "cmdline": [],
-        "modules": [],
-        "version": "2018.5.1"
+        "modules": [
+            "logjson"
+        ],
+        "version": "2020.3.1"
     },
     "logkeeper": {
         "cmdline": [],
@@ -98335,7 +98349,7 @@
             "lusid.utilities.api_configuration_loader",
             "lusid.utilities.refreshing_token"
         ],
-        "version": "0.10.1166"
+        "version": "0.10.1172"
     },
     "lusid-sdk-preview": {
         "cmdline": [],
@@ -98598,9 +98612,10 @@
             "lusid.utilities.api_configuration",
             "lusid.utilities.api_configuration_loader",
             "lusid.utilities.lusid_retry",
+            "lusid.utilities.proxy_config",
             "lusid.utilities.refreshing_token"
         ],
-        "version": "0.10.1166"
+        "version": "0.10.1172"
     },
     "lusid-tr-sdk": {
         "cmdline": [],
@@ -101430,9 +101445,28 @@
         "cmdline": [],
         "modules": [
             "lyrebird_api_coverage",
-            "lyrebird_api_coverage.app_ui"
+            "lyrebird_api_coverage.api",
+            "lyrebird_api_coverage.client",
+            "lyrebird_api_coverage.client.config",
+            "lyrebird_api_coverage.client.context",
+            "lyrebird_api_coverage.client.event_subscibe",
+            "lyrebird_api_coverage.client.filter_url",
+            "lyrebird_api_coverage.client.format_url",
+            "lyrebird_api_coverage.client.jsonscheme",
+            "lyrebird_api_coverage.client.load_base",
+            "lyrebird_api_coverage.client.merge_algorithm",
+            "lyrebird_api_coverage.client.report",
+            "lyrebird_api_coverage.client.url_compare",
+            "lyrebird_api_coverage.handlers",
+            "lyrebird_api_coverage.handlers.base_source_handler",
+            "lyrebird_api_coverage.handlers.filter_handler",
+            "lyrebird_api_coverage.handlers.import_file_handler",
+            "lyrebird_api_coverage.handlers.result_handler",
+            "lyrebird_api_coverage.interceptor",
+            "lyrebird_api_coverage.manifest",
+            "lyrebird_api_coverage.version"
         ],
-        "version": "0.2.8"
+        "version": "0.3.0"
     },
     "lyrebird-bugit": {
         "cmdline": [],
