@@ -433,7 +433,7 @@
             "v3io_frames.pbutils",
             "v3io_frames.pdutils"
         ],
-        "version": "0.6.12"
+        "version": "0.6.13"
     },
     "v3n0m": {
         "cmdline": [],
@@ -1919,6 +1919,15 @@
             "vaknl_image.Image"
         ],
         "version": "1.1.6"
+    },
+    "vaknl-user": {
+        "cmdline": [],
+        "modules": [
+            "vaknl_user",
+            "vaknl_user.Event",
+            "vaknl_user.User"
+        ],
+        "version": "1.0.2"
     },
     "vaksana-proto": {
         "cmdline": [],
@@ -8226,6 +8235,21 @@
         ],
         "version": "0.1"
     },
+    "vcd": {
+        "cmdline": [],
+        "modules": [
+            "vcd",
+            "vcd.core",
+            "vcd.poly2d",
+            "vcd.proto",
+            "vcd.sanity",
+            "vcd.schema",
+            "vcd.serializer",
+            "vcd.types",
+            "vcd.utils"
+        ],
+        "version": "4.0.0"
+    },
     "vcd-api-schemas-type": {
         "cmdline": [],
         "modules": [],
@@ -11392,6 +11416,7 @@
             "vectorio.vector.shapefile.decorators",
             "vectorio.vector.shapefile.decorators.shapefile_as_rar",
             "vectorio.vector.shapefile.decorators.shapefile_as_zip",
+            "vectorio.vector.shapefile.encodings",
             "vectorio.vector.shapefile.file_required_by_extension",
             "vectorio.vector.shapefile.interfaces",
             "vectorio.vector.shapefile.interfaces.ifile_required_by_extension",
@@ -11406,7 +11431,7 @@
             "vectorio.vector.wkt.interfaces.igeom_type_factory",
             "vectorio.vector.wkt.wkt"
         ],
-        "version": "1.2.3"
+        "version": "1.2.4"
     },
     "vectorize": {
         "cmdline": [],
@@ -12550,32 +12575,42 @@
         "modules": [
             "velo_payments",
             "velo_payments.api",
-            "velo_payments.api.auth_api",
             "velo_payments.api.countries_api",
             "velo_payments.api.currencies_api",
             "velo_payments.api.funding_manager_api",
+            "velo_payments.api.funding_manager_private_api",
             "velo_payments.api.get_payout_api",
             "velo_payments.api.instruct_payout_api",
+            "velo_payments.api.login_api",
             "velo_payments.api.payee_invitation_api",
             "velo_payments.api.payees_api",
             "velo_payments.api.payment_audit_service_api",
-            "velo_payments.api.payor_applications_api",
             "velo_payments.api.payors_api",
+            "velo_payments.api.payors_private_api",
             "velo_payments.api.payout_history_api",
             "velo_payments.api.quote_payout_api",
             "velo_payments.api.submit_payout_api",
+            "velo_payments.api.tokens_api",
+            "velo_payments.api.users_api",
             "velo_payments.api.withdraw_payout_api",
             "velo_payments.api_client",
             "velo_payments.configuration",
             "velo_payments.exceptions",
             "velo_payments.models",
+            "velo_payments.models.accepted_payment",
+            "velo_payments.models.access_token_response",
+            "velo_payments.models.access_token_validation_request",
             "velo_payments.models.auth_response",
             "velo_payments.models.auto_top_up_config",
             "velo_payments.models.challenge",
+            "velo_payments.models.company",
+            "velo_payments.models.company2",
             "velo_payments.models.company_response",
             "velo_payments.models.company_v1",
+            "velo_payments.models.create_funding_account_request",
             "velo_payments.models.create_individual",
             "velo_payments.models.create_individual2",
+            "velo_payments.models.create_individual2_name",
             "velo_payments.models.create_payee",
             "velo_payments.models.create_payee2",
             "velo_payments.models.create_payee_address",
@@ -12584,20 +12619,23 @@
             "velo_payments.models.create_payees_csv_request2",
             "velo_payments.models.create_payees_csv_response",
             "velo_payments.models.create_payees_csv_response2",
+            "velo_payments.models.create_payees_csv_response_rejected_csv_rows",
             "velo_payments.models.create_payees_request",
             "velo_payments.models.create_payees_request2",
             "velo_payments.models.create_payment_channel",
             "velo_payments.models.create_payment_channel2",
+            "velo_payments.models.create_payor_link_request",
             "velo_payments.models.create_payout_request",
+            "velo_payments.models.currency_type",
             "velo_payments.models.error",
             "velo_payments.models.error_response",
             "velo_payments.models.failed_submission",
+            "velo_payments.models.failed_submission2",
+            "velo_payments.models.funding_account_response",
             "velo_payments.models.funding_audit",
-            "velo_payments.models.funding_delta",
-            "velo_payments.models.funding_delta_response",
-            "velo_payments.models.funding_delta_response_links",
             "velo_payments.models.funding_event",
             "velo_payments.models.funding_event_type",
+            "velo_payments.models.funding_payor_status_audit_response",
             "velo_payments.models.funding_request_v1",
             "velo_payments.models.funding_request_v2",
             "velo_payments.models.fx_summary_v3",
@@ -12613,28 +12651,51 @@
             "velo_payments.models.get_payouts_response_v3",
             "velo_payments.models.get_payouts_response_v3_links",
             "velo_payments.models.get_payouts_response_v3_page",
-            "velo_payments.models.get_payouts_response_v3_summary",
             "velo_payments.models.get_payouts_response_v4",
+            "velo_payments.models.individual",
+            "velo_payments.models.individual2",
             "velo_payments.models.individual_response",
             "velo_payments.models.individual_v1",
             "velo_payments.models.individual_v1_name",
+            "velo_payments.models.inline_response400",
+            "velo_payments.models.inline_response400_errors",
+            "velo_payments.models.inline_response401",
+            "velo_payments.models.inline_response401_errors",
+            "velo_payments.models.inline_response403",
+            "velo_payments.models.inline_response403_errors",
+            "velo_payments.models.inline_response409",
+            "velo_payments.models.inline_response409_errors",
             "velo_payments.models.invitation_status",
             "velo_payments.models.invitation_status_response",
             "velo_payments.models.invite_payee_request",
+            "velo_payments.models.invite_payee_request2",
+            "velo_payments.models.invite_user_request",
+            "velo_payments.models.kyc_state",
             "velo_payments.models.language",
+            "velo_payments.models.language2",
+            "velo_payments.models.link_for_response",
+            "velo_payments.models.list_funding_accounts_response",
             "velo_payments.models.list_payments_response",
             "velo_payments.models.list_payments_response_page",
-            "velo_payments.models.list_payments_response_summary",
+            "velo_payments.models.list_payments_response_v4",
             "velo_payments.models.list_source_account_response",
             "velo_payments.models.list_source_account_response_links",
             "velo_payments.models.list_source_account_response_page",
             "velo_payments.models.list_source_account_response_v2",
-            "velo_payments.models.list_source_account_response_v2_page",
+            "velo_payments.models.location_type",
             "velo_payments.models.marketing_opt_in",
+            "velo_payments.models.mfa_details",
+            "velo_payments.models.mfa_type",
             "velo_payments.models.notifications",
             "velo_payments.models.ofac_status",
+            "velo_payments.models.ofac_status2",
             "velo_payments.models.onboarded_status",
+            "velo_payments.models.onboarded_status2",
+            "velo_payments.models.page_for_response",
+            "velo_payments.models.page_resource_funding_payor_status_audit_response_funding_payor_status_audit_response",
             "velo_payments.models.paged_payee_invitation_status_response",
+            "velo_payments.models.paged_payee_invitation_status_response2",
+            "velo_payments.models.paged_payee_invitation_status_response_page",
             "velo_payments.models.paged_payee_response",
             "velo_payments.models.paged_payee_response2",
             "velo_payments.models.paged_payee_response2_summary",
@@ -12643,19 +12704,33 @@
             "velo_payments.models.paged_payee_response_summary",
             "velo_payments.models.paged_response",
             "velo_payments.models.paged_response_page",
+            "velo_payments.models.paged_user_response",
+            "velo_payments.models.paged_user_response_links",
+            "velo_payments.models.paged_user_response_page",
+            "velo_payments.models.password_request",
             "velo_payments.models.payee",
+            "velo_payments.models.payee2",
             "velo_payments.models.payee_address",
+            "velo_payments.models.payee_address2",
             "velo_payments.models.payee_delta",
+            "velo_payments.models.payee_delta2",
             "velo_payments.models.payee_delta_response",
+            "velo_payments.models.payee_delta_response2",
+            "velo_payments.models.payee_delta_response2_links",
             "velo_payments.models.payee_delta_response_links",
             "velo_payments.models.payee_delta_response_page",
             "velo_payments.models.payee_invitation_status",
             "velo_payments.models.payee_invitation_status_response",
+            "velo_payments.models.payee_invitation_status_response2",
             "velo_payments.models.payee_payment_channel",
+            "velo_payments.models.payee_payment_channel2",
             "velo_payments.models.payee_payor_ref",
-            "velo_payments.models.payee_payor_ref2",
+            "velo_payments.models.payee_payor_ref_v2",
+            "velo_payments.models.payee_payor_ref_v3",
             "velo_payments.models.payee_response",
             "velo_payments.models.payee_response2",
+            "velo_payments.models.payee_response_v2",
+            "velo_payments.models.payee_response_v3",
             "velo_payments.models.payee_type",
             "velo_payments.models.payment_audit_currency_v3",
             "velo_payments.models.payment_audit_currency_v4",
@@ -12667,12 +12742,14 @@
             "velo_payments.models.payment_event_response_v3",
             "velo_payments.models.payment_event_response_v4",
             "velo_payments.models.payment_instruction",
+            "velo_payments.models.payment_rails",
             "velo_payments.models.payment_response_v3",
             "velo_payments.models.payment_response_v4",
             "velo_payments.models.payment_response_v4_payout",
-            "velo_payments.models.payment_status",
             "velo_payments.models.payor_address",
             "velo_payments.models.payor_address_v2",
+            "velo_payments.models.payor_aml_transaction_v3",
+            "velo_payments.models.payor_aml_transaction_v4",
             "velo_payments.models.payor_branding_response",
             "velo_payments.models.payor_create_api_key_request",
             "velo_payments.models.payor_create_api_key_response",
@@ -12693,9 +12770,18 @@
             "velo_payments.models.payout_summary_response",
             "velo_payments.models.payout_type_v4",
             "velo_payments.models.query_batch_response",
+            "velo_payments.models.query_batch_response2",
             "velo_payments.models.quote_fx_summary",
             "velo_payments.models.quote_response",
+            "velo_payments.models.region",
+            "velo_payments.models.register_sms_request",
             "velo_payments.models.rejected_payment",
+            "velo_payments.models.resend_token_request",
+            "velo_payments.models.reset_password_request",
+            "velo_payments.models.role",
+            "velo_payments.models.role_update_request",
+            "velo_payments.models.self_mfa_type_unregister_request",
+            "velo_payments.models.self_update_password_request",
             "velo_payments.models.set_notifications_request",
             "velo_payments.models.source_account",
             "velo_payments.models.source_account_response",
@@ -12703,14 +12789,27 @@
             "velo_payments.models.source_account_summary_v3",
             "velo_payments.models.source_account_summary_v4",
             "velo_payments.models.supported_countries_response",
+            "velo_payments.models.supported_countries_response2",
             "velo_payments.models.supported_country",
+            "velo_payments.models.supported_country2",
             "velo_payments.models.supported_currency",
             "velo_payments.models.supported_currency_response",
+            "velo_payments.models.transfer_request",
+            "velo_payments.models.unregister_mfa_request",
             "velo_payments.models.update_remote_id_request",
+            "velo_payments.models.user_details_update_request",
+            "velo_payments.models.user_info",
+            "velo_payments.models.user_response",
+            "velo_payments.models.user_response2",
+            "velo_payments.models.user_response2_roles",
+            "velo_payments.models.user_status",
+            "velo_payments.models.user_type",
+            "velo_payments.models.user_type2",
+            "velo_payments.models.validate_password_response",
             "velo_payments.models.watchlist_status",
             "velo_payments.rest"
         ],
-        "version": "2.17.8b2"
+        "version": "2.20.29b1"
     },
     "velociraptor": {
         "cmdline": [],
@@ -12816,6 +12915,54 @@
             "velox.wrapper"
         ],
         "version": "0.5.1"
+    },
+    "veloxchem": {
+        "cmdline": [
+            "vlx"
+        ],
+        "modules": [
+            "veloxchem",
+            "veloxchem.aodensitymatrix",
+            "veloxchem.aofockmatrix",
+            "veloxchem.blockdavidson",
+            "veloxchem.c2diis",
+            "veloxchem.c6solver",
+            "veloxchem.cppsolver",
+            "veloxchem.denguess",
+            "veloxchem.errorhandler",
+            "veloxchem.excitondriver",
+            "veloxchem.inputparser",
+            "veloxchem.loprop",
+            "veloxchem.lreigensolver",
+            "veloxchem.lrmatvecdriver",
+            "veloxchem.lrsolver",
+            "veloxchem.main",
+            "veloxchem.mointsdriver",
+            "veloxchem.molecularbasis",
+            "veloxchem.molecularorbitals",
+            "veloxchem.molecule",
+            "veloxchem.mp2driver",
+            "veloxchem.mpitask",
+            "veloxchem.outputstream",
+            "veloxchem.polembed",
+            "veloxchem.pulsedrsp",
+            "veloxchem.qqscheme",
+            "veloxchem.rspabsorption",
+            "veloxchem.rspc6",
+            "veloxchem.rspcdspec",
+            "veloxchem.rspdriver",
+            "veloxchem.rsplinabscross",
+            "veloxchem.rsppolarizability",
+            "veloxchem.rspproperty",
+            "veloxchem.scfdriver",
+            "veloxchem.scfrestdriver",
+            "veloxchem.scfunrestdriver",
+            "veloxchem.subcommunicators",
+            "veloxchem.tdaexcidriver",
+            "veloxchem.veloxchemlib",
+            "veloxchem.visualizationdriver"
+        ],
+        "version": "1.0rc1.post1"
     },
     "velplot": {
         "cmdline": [
@@ -26593,7 +26740,7 @@
     "virtualenv": {
         "cmdline": [],
         "modules": [],
-        "version": "20.0.9"
+        "version": "20.0.10"
     },
     "virtualenv-activator": {
         "cmdline": [],
@@ -31141,6 +31288,13 @@
         ],
         "version": "0.2.2"
     },
+    "visualizer": {
+        "cmdline": [],
+        "modules": [
+            "visualizer"
+        ],
+        "version": "0.0.1"
+    },
     "visualmath": {
         "cmdline": [
             "visma"
@@ -33730,6 +33884,15 @@
             "vk_handle_bot.bot"
         ],
         "version": "1.0.2"
+    },
+    "vk-messages": {
+        "cmdline": [],
+        "modules": [
+            "vk_messages",
+            "vk_messages.utils",
+            "vk_messages.vk_messages"
+        ],
+        "version": "0.2"
     },
     "vk-music": {
         "cmdline": [],
@@ -39949,7 +40112,7 @@
             "volapi.utils",
             "volapi.volapi"
         ],
-        "version": "5.17.0"
+        "version": "5.18.0"
     },
     "volatildap": {
         "cmdline": [],
@@ -51823,7 +51986,7 @@
         "modules": [
             "vswhere"
         ],
-        "version": "1.1.2"
+        "version": "1.2.0"
     },
     "vswmc-cli": {
         "cmdline": [],
@@ -52947,12 +53110,13 @@
         "modules": [
             "vtreat",
             "vtreat.cross_plan",
+            "vtreat.stats_utils",
             "vtreat.transform",
             "vtreat.util",
             "vtreat.vtreat_api",
             "vtreat.vtreat_impl"
         ],
-        "version": "0.4.1"
+        "version": "0.4.3"
     },
     "vtrie": {
         "cmdline": [],
