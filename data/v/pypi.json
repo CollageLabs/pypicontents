@@ -326,7 +326,7 @@
             "v2ray_util.util_core.v2ray",
             "v2ray_util.util_core.writer"
         ],
-        "version": "3.7.7.5"
+        "version": "3.7.7.6"
     },
     "v2rayr": {
         "cmdline": [],
@@ -2347,7 +2347,7 @@
             "valid.model",
             "valid.utils"
         ],
-        "version": "1.0.5"
+        "version": "1.0.6"
     },
     "valid-edtf": {
         "cmdline": [],
@@ -7152,6 +7152,17 @@
             "vault_anyconfig.vault_anyconfig"
         ],
         "version": "0.3.1"
+    },
+    "vault-aws-login": {
+        "cmdline": [],
+        "modules": [
+            "aws_credentials_merge",
+            "vault_aws_login",
+            "vault_aws_login.consul_template",
+            "vault_aws_login.context",
+            "vault_aws_login.vault"
+        ],
+        "version": "0.0.4"
     },
     "vault-ca": {
         "cmdline": [
@@ -18128,11 +18139,13 @@
             "vesper.birdvox.birdvoxdetect_0_1_a0.birdvoxdetect.core",
             "vesper.birdvox.birdvoxdetect_0_1_a0.birdvoxdetect.version",
             "vesper.birdvox.birdvoxdetect_0_1_a0.detector",
+            "vesper.birdvox.birdvoxdetect_0_2",
+            "vesper.birdvox.birdvoxdetect_0_2.detector",
             "vesper.birdvox.soundfile",
             "vesper.command",
+            "vesper.command.add_recording_audio_files_command",
             "vesper.command.adjust_clips_command",
             "vesper.command.annotator",
-            "vesper.command.archive_data_importer",
             "vesper.command.classify_command",
             "vesper.command.clip_audio_files_exporter",
             "vesper.command.clips_hdf5_file_exporter",
@@ -18151,14 +18164,16 @@
             "vesper.command.job_logging_manager",
             "vesper.command.job_manager",
             "vesper.command.job_runner",
+            "vesper.command.metadata_importer",
             "vesper.command.recording_importer",
             "vesper.command.recording_utils",
+            "vesper.command.refresh_recording_audio_file_paths_command",
             "vesper.command.station_name_aliases_preset",
             "vesper.command.test_command",
             "vesper.command.transfer_call_classifications_command",
-            "vesper.command.update_recording_file_paths_command",
             "vesper.django",
             "vesper.django.app",
+            "vesper.django.app.add_recording_audio_files_form",
             "vesper.django.app.adjust_clips_form",
             "vesper.django.app.admin",
             "vesper.django.app.annotation_utils",
@@ -18173,23 +18188,26 @@
             "vesper.django.app.delete_recordings_form",
             "vesper.django.app.detect_form",
             "vesper.django.app.execute_deferred_actions_form",
-            "vesper.django.app.export_clip_audio_files_form",
-            "vesper.django.app.export_clips_csv_file_form",
-            "vesper.django.app.export_clips_hdf5_file_form",
+            "vesper.django.app.export_clip_metadata_to_csv_file_form",
+            "vesper.django.app.export_clips_to_audio_files_form",
+            "vesper.django.app.export_clips_to_hdf5_file_form",
             "vesper.django.app.form_utils",
-            "vesper.django.app.import_archive_data_form",
+            "vesper.django.app.import_metadata_form",
             "vesper.django.app.import_recordings_form",
+            "vesper.django.app.management",
+            "vesper.django.app.management.commands",
+            "vesper.django.app.management.commands.createarchive",
             "vesper.django.app.migrations",
             "vesper.django.app.migrations.0001_initial",
             "vesper.django.app.model_utils",
             "vesper.django.app.models",
             "vesper.django.app.name_converter",
+            "vesper.django.app.refresh_recording_audio_file_paths_form",
             "vesper.django.app.serve_static_files",
             "vesper.django.app.templatetags",
             "vesper.django.app.templatetags.vesper_extras",
             "vesper.django.app.tests",
             "vesper.django.app.transfer_call_classifications_form",
-            "vesper.django.app.update_recording_file_paths_form",
             "vesper.django.app.urls",
             "vesper.django.app.views",
             "vesper.django.manage",
@@ -18204,8 +18222,9 @@
             "vesper.ephem.usno_rise_set_table",
             "vesper.ephem.usno_table_class_utils",
             "vesper.ephem.usno_table_utils",
+            "vesper.external_urls",
             "vesper.mpg_ranch",
-            "vesper.mpg_ranch.clips_csv_file_exporter",
+            "vesper.mpg_ranch.clip_metadata_csv_file_exporter",
             "vesper.mpg_ranch.coarse_classifier",
             "vesper.mpg_ranch.nfc_coarse_classifier_2_1",
             "vesper.mpg_ranch.nfc_coarse_classifier_2_1.classifier",
@@ -18217,12 +18236,25 @@
             "vesper.mpg_ranch.nfc_coarse_classifier_3_0.classifier_utils",
             "vesper.mpg_ranch.nfc_coarse_classifier_3_0.dataset_utils",
             "vesper.mpg_ranch.nfc_coarse_classifier_3_0.train_classifier",
+            "vesper.mpg_ranch.nfc_coarse_classifier_4_0",
+            "vesper.mpg_ranch.nfc_coarse_classifier_4_0.classifier",
+            "vesper.mpg_ranch.nfc_coarse_classifier_4_0.classifier_utils",
+            "vesper.mpg_ranch.nfc_coarse_classifier_4_0.dataset_utils",
+            "vesper.mpg_ranch.nfc_coarse_classifier_4_0.train_classifier",
             "vesper.mpg_ranch.nfc_detector_0_0",
             "vesper.mpg_ranch.nfc_detector_0_0.detector",
+            "vesper.mpg_ranch.nfc_detector_0_1",
+            "vesper.mpg_ranch.nfc_detector_0_1.detector",
+            "vesper.mpg_ranch.nfc_detector_1_0",
+            "vesper.mpg_ranch.nfc_detector_1_0.detector",
+            "vesper.mpg_ranch.nfc_detector_low_score_classifier_1_0",
+            "vesper.mpg_ranch.nfc_detector_low_score_classifier_1_0.classifier",
             "vesper.mpg_ranch.outside_classifier",
             "vesper.mpg_ranch.recording_file_parser",
             "vesper.mpg_ranch.species_classifier",
             "vesper.old_bird",
+            "vesper.old_bird.add_old_bird_clip_start_indices_command",
+            "vesper.old_bird.add_old_bird_clip_start_indices_form",
             "vesper.old_bird.clip_count_utils",
             "vesper.old_bird.clip_importer",
             "vesper.old_bird.export_clip_counts_csv_file_form",
@@ -18232,6 +18264,7 @@
             "vesper.old_bird.old_bird_detector_redux_1_1",
             "vesper.old_bird.old_bird_detector_redux_1_1_mt",
             "vesper.old_bird.old_bird_detector_runner",
+            "vesper.old_bird.recording_reader",
             "vesper.pnf",
             "vesper.pnf.pnf_2018_baseline_detector_1_0",
             "vesper.pnf.pnf_energy_detector_1_0",
@@ -18239,6 +18272,7 @@
             "vesper.scripts",
             "vesper.scripts.play_recorder_test_signal",
             "vesper.scripts.show_audio_input_devices",
+            "vesper.scripts.test_mpg_ranch_tseep_detector",
             "vesper.scripts.vesper_recorder",
             "vesper.scripts.vesper_recorder_service",
             "vesper.scripts.vesper_test_service",
@@ -18254,6 +18288,7 @@
             "vesper.signal.multichannel_array_signal",
             "vesper.signal.multichannel_signal",
             "vesper.signal.named_sequence",
+            "vesper.signal.resampling_utils",
             "vesper.signal.signal",
             "vesper.signal.signal_base",
             "vesper.signal.time_axis",
@@ -18309,9 +18344,10 @@
             "vesper.util.time_utils",
             "vesper.util.vesper_recorder",
             "vesper.util.yaml_preset",
-            "vesper.util.yaml_utils"
+            "vesper.util.yaml_utils",
+            "vesper.version"
         ],
-        "version": "0.4.7"
+        "version": "0.4.8"
     },
     "vessel": {
         "cmdline": [],
@@ -21893,7 +21929,7 @@
             "viewclust.use_suite",
             "viewclust.viol_plot"
         ],
-        "version": "0.1.4"
+        "version": "0.1.5"
     },
     "viewflow": {
         "cmdline": [],
@@ -25278,9 +25314,10 @@
             "viresclient.commands.common",
             "viresclient.commands.configuration",
             "viresclient.commands.upload",
-            "viresclient.commands.viresclient"
+            "viresclient.commands.viresclient",
+            "viresclient.merge_cdf_files"
         ],
-        "version": "0.5.0"
+        "version": "0.6.0"
     },
     "virga": {
         "cmdline": [
@@ -28658,7 +28695,7 @@
             "vise.util.tests.test_structure_handler",
             "vise.util.tools"
         ],
-        "version": "0.1.9"
+        "version": "0.1.10"
     },
     "vise-yuuukuma": {
         "cmdline": [],
@@ -29535,16 +29572,12 @@
         "cmdline": [],
         "modules": [
             "Viso",
-            "Viso.Entity",
-            "Viso.Entity.Bound",
-            "Viso.Entity.BoxFeaturesBound",
-            "Viso.Entity.MatrixBound",
-            "Viso.Helper",
-            "Viso.Helper.Helper",
-            "Viso.Model",
-            "test"
+            "Viso.DataFactory",
+            "Viso.DataFactory.DataBuilder",
+            "Viso.Layout",
+            "Viso.Layout.LayoutBuilder"
         ],
-        "version": "5"
+        "version": "11"
     },
     "visonicalarm": {
         "cmdline": [],
@@ -41135,7 +41168,7 @@
             "volcano.poller.time_tools",
             "volcano.poller.tools"
         ],
-        "version": "1.3.1"
+        "version": "1.4.0"
     },
     "volcano-test": {
         "cmdline": [],
@@ -52759,21 +52792,16 @@
             "vtorch",
             "vtorch.common",
             "vtorch.common.checks",
-            "vtorch.common.file_utils",
-            "vtorch.common.from_params",
             "vtorch.common.loading",
-            "vtorch.common.params",
-            "vtorch.common.registrable",
             "vtorch.common.tqdm",
             "vtorch.common.utils",
             "vtorch.configs",
             "vtorch.configs.config",
+            "vtorch.configs.config_with_saving",
             "vtorch.data",
             "vtorch.data.dataset",
             "vtorch.data.dataset_readers",
             "vtorch.data.dataset_readers.dataset_reader",
-            "vtorch.data.dataset_readers.json_reader_bert",
-            "vtorch.data.dataset_readers.test_dataset_reader",
             "vtorch.data.fields",
             "vtorch.data.fields.categorical_field",
             "vtorch.data.fields.field",
@@ -52787,27 +52815,17 @@
             "vtorch.data.iterators.bucket_iterator",
             "vtorch.data.iterators.bucket_iterator_optimized",
             "vtorch.data.iterators.data_iterator",
+            "vtorch.data.preprocessors",
+            "vtorch.data.preprocessors.default",
             "vtorch.data.tokenizers",
             "vtorch.data.tokenizers.base_tokenizer",
-            "vtorch.data.tokenizers.extended_tokenizer",
             "vtorch.data.tokenizers.tokenizer",
             "vtorch.data.vocabulary",
             "vtorch.models",
-            "vtorch.models.archival",
-            "vtorch.models.mixed_rnn",
             "vtorch.models.model",
-            "vtorch.models.transformer_bert_model",
-            "vtorch.modules",
-            "vtorch.modules.text_field_embedders",
-            "vtorch.modules.text_field_embedders.basic_text_field_embedder",
-            "vtorch.modules.text_field_embedders.text_field_embedder",
-            "vtorch.modules.time_distributed",
-            "vtorch.modules.token_embedders",
-            "vtorch.modules.token_embedders.embedding",
-            "vtorch.modules.token_embedders.token_embedder",
+            "vtorch.models.model_parameters",
             "vtorch.nn",
             "vtorch.nn.layers",
-            "vtorch.nn.layers.activation",
             "vtorch.nn.layers.aggregation",
             "vtorch.nn.layers.attention",
             "vtorch.nn.layers.pooling",
@@ -52820,26 +52838,21 @@
             "vtorch.nn.packed_sequence",
             "vtorch.nn.utils",
             "vtorch.predictors",
-            "vtorch.predictors.multiclass_classifier",
-            "vtorch.predictors.multilabel_classifier",
             "vtorch.predictors.predictor",
             "vtorch.training",
             "vtorch.training.callbacks",
             "vtorch.training.callbacks.callbacks",
             "vtorch.training.callbacks.early_stopping",
             "vtorch.training.callbacks.tensorboard_logger",
-            "vtorch.training.losses",
             "vtorch.training.metrics",
             "vtorch.training.metrics.fbeta_measure",
             "vtorch.training.metrics.metric",
-            "vtorch.training.optimizers",
-            "vtorch.training.schedulers",
             "vtorch.training.trainer",
             "vtorch.training.trainer_base",
             "vtorch.training.util",
             "vtorch.version"
         ],
-        "version": "0.1.69"
+        "version": "0.2.0"
     },
     "vtp-elastic-apm": {
         "cmdline": [],
