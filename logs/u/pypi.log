@@ -143,7 +143,49 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (uberpy) This package is up to date.
 [INFO] (ubersicht) This package is up to date.
 [INFO] (ubersmith) This package is up to date.
-[INFO] (ubersmith-remote-module-server) This package is up to date.
+[ERROR] (ubersmith-remote-module-server) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/urllib/request.py", line 1319, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "/usr/lib/python3.8/http/client.py", line 1230, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib/python3.8/http/client.py", line 1276, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.8/http/client.py", line 1225, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.8/http/client.py", line 1004, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.8/http/client.py", line 944, in send
+    self.connect()
+  File "/usr/lib/python3.8/http/client.py", line 1399, in connect
+    self.sock = self._context.wrap_socket(self.sock,
+  File "/usr/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/usr/lib/python3.8/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/usr/lib/python3.8/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/pypicontents/api/pypi.py", line 263, in get_pkgdata
+    pkgjsonraw = urlopen(url='{0}/pypi/{1}/json'.format(pypiurl, pkgname),
+  File "/usr/lib/python3.8/urllib/request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.8/urllib/request.py", line 525, in open
+    response = self._open(req, data)
+  File "/usr/lib/python3.8/urllib/request.py", line 542, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "/usr/lib/python3.8/urllib/request.py", line 502, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.8/urllib/request.py", line 1362, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+  File "/usr/lib/python3.8/urllib/request.py", line 1322, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno 104] Connection reset by peer>
+
 [INFO] (uberspace-takeout) This package is up to date.
 [INFO] (uberspace-templates) This package is up to date.
 [INFO] (ubgrade) This package is up to date.
@@ -600,7 +642,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (udiskie) This package is up to date.
 [INFO] (udkanbun) This package is up to date.
 [INFO] (udkm1dsim) This package is up to date.
-[INFO] (udkundoku) Data has been updated for this package.
+[INFO] (udkundoku) This package is up to date.
 [ERROR] (udl) Could not extract data from this package. See below for details.
 "https://github.com/Arpitbhawar/Udacity-Course-Downloader.git/tarball/master" file could not be downloaded. See below for details.
 Traceback (most recent call last):
@@ -659,7 +701,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (ue-schedule) This package is up to date.
 [INFO] (ue4-ci-helpers) This package is up to date.
 [INFO] (ue4-docker) This package is up to date.
-[INFO] (ue4cli) Data has been updated for this package.
+[INFO] (ue4cli) This package is up to date.
 [INFO] (uea-ucr-datasets) This package is up to date.
 [INFO] (ueagle) This package is up to date.
 [INFO] (ueberzug) This package is up to date.
@@ -733,7 +775,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (ufl) This package is up to date.
 [ERROR] (uflacs) This package does not have downloadable releases.
 [INFO] (uflash) This package is up to date.
-[INFO] (ufload) Data has been updated for this package.
+[INFO] (ufload) This package is up to date.
 [INFO] (ufma-scrapper) This package is up to date.
 [INFO] (ufma-scrapperpy) This package is up to date.
 [INFO] (ufo) This package is up to date.
@@ -744,7 +786,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (ufobit) This package is up to date.
 [INFO] (ufodiff) This package is up to date.
 [INFO] (ufolib) This package is up to date.
-[INFO] (ufolib2) Data has been updated for this package.
+[INFO] (ufolib2) This package is up to date.
 [INFO] (ufolint) This package is up to date.
 [INFO] (ufonormalizer) This package is up to date.
 [INFO] (ufoprocessor) This package is up to date.
@@ -782,8 +824,8 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (ugapi) This package is up to date.
 [INFO] (ugc-sentiment) This package is up to date.
 [INFO] (ugd) This package is up to date.
-[INFO] (uge-drmaa2) Data has been updated for this package.
-[INFO] (uge-pycl) Data has been updated for this package.
+[INFO] (uge-drmaa2) This package is up to date.
+[INFO] (uge-pycl) This package is up to date.
 [INFO] (ugentbiblio) This package is up to date.
 [INFO] (ugetcli) This package is up to date.
 [INFO] (ugh) This package is up to date.
@@ -1489,7 +1531,7 @@ This package download URL does not point to a valid file: "https://sourceforge.n
 [INFO] (unide-python) This package is up to date.
 [INFO] (unidecode) This package is up to date.
 [INFO] (unidic) This package is up to date.
-[INFO] (unidic2ud) Data has been updated for this package.
+[INFO] (unidic2ud) This package is up to date.
 [INFO] (unidiff) This package is up to date.
 [INFO] (unidip) This package is up to date.
 [INFO] (unidist) This package is up to date.
@@ -1500,7 +1542,7 @@ This package download URL does not point to a valid file: "https://sourceforge.n
 [INFO] (unifi) This package is up to date.
 [INFO] (unifi-api) This package is up to date.
 [INFO] (unifi-client) This package is up to date.
-[INFO] (unifi-python-api) Data has been updated for this package.
+[INFO] (unifi-python-api) This package is up to date.
 [INFO] (unifi-sh) This package is up to date.
 [INFO] (unifi-video) This package is up to date.
 [INFO] (unification) This package is up to date.
@@ -1559,7 +1601,7 @@ This package download URL does not point to a valid file: "https://sourceforge.n
 [INFO] (unipacker) This package is up to date.
 [INFO] (unipad) This package is up to date.
 [INFO] (unipag) This package is up to date.
-[INFO] (uniparser) Data has been updated for this package.
+[INFO] (uniparser) This package is up to date.
 [INFO] (unipath) This package is up to date.
 [INFO] (unipdgest-portlet-navigation) This package is up to date.
 [INFO] (uniphy) This package is up to date.
@@ -2605,7 +2647,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (urxvt-tabbed) This package is up to date.
 [INFO] (us) This package is up to date.
 [INFO] (us-census) This package is up to date.
-[INFO] (us-elections) This package is up to date.
+[INFO] (us-elections) Data has been updated for this package.
 [INFO] (us-geo-helper) This package is up to date.
 [INFO] (us-netview-non-major) This package is up to date.
 [INFO] (us-news) This package is up to date.
@@ -2738,7 +2780,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (user-agents-next) This package is up to date.
 [INFO] (user-api) This package is up to date.
 [INFO] (user-auth) This package is up to date.
-[INFO] (user-authentication) Data has been updated for this package.
+[INFO] (user-authentication) This package is up to date.
 [INFO] (user-behavior) This package is up to date.
 [INFO] (user-blueprint) This package is up to date.
 [INFO] (user-config) This package is up to date.
@@ -3198,7 +3240,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (utrunner) This package is up to date.
 [INFO] (uts) This package is up to date.
 [INFO] (utsessions) This package is up to date.
-[INFO] (utt) This package is up to date.
+[INFO] (utt) Data has been updated for this package.
 [INFO] (utter) This package is up to date.
 [INFO] (utter-more) This package is up to date.
 [INFO] (utterson) This package is up to date.
@@ -3404,7 +3446,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (uwstyle) This package is up to date.
 [INFO] (uwtools) This package is up to date.
 [INFO] (uwu) This package is up to date.
-[INFO] (uwuify) Data has been updated for this package.
+[INFO] (uwuify) This package is up to date.
 [INFO] (uwygtfvjha) This package is up to date.
 [INFO] (ux) This package is up to date.
 [INFO] (uxadt) This package is up to date.
@@ -3423,9 +3465,9 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] 
 [INFO] Total packages: 2414
 [INFO]     Packages processed: 2414
-[INFO]         Packages updated: 12
-[INFO]         Packages up-to-date: 2272
-[INFO]         Packages without response: 43
+[INFO]         Packages updated: 3
+[INFO]         Packages up-to-date: 2280
+[INFO]         Packages without response: 44
 [INFO]         Packages without urls: 0
 [INFO]         Packages without downloads: 65
 [INFO]         Packages with data errors: 22
