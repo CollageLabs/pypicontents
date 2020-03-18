@@ -3265,7 +3265,7 @@
             "wagtail_code_blog.migrations.0003_auto_20200307_0845",
             "wagtail_code_blog.models"
         ],
-        "version": "0.0.9"
+        "version": "0.0.10"
     },
     "wagtail-comments-xtd": {
         "cmdline": [],
@@ -6273,6 +6273,9 @@
             "wagtail_transfer.field_adapters",
             "wagtail_transfer.files",
             "wagtail_transfer.locators",
+            "wagtail_transfer.management",
+            "wagtail_transfer.management.commands",
+            "wagtail_transfer.management.commands.preseed_transfer_table",
             "wagtail_transfer.migrations",
             "wagtail_transfer.migrations.0001_initial",
             "wagtail_transfer.migrations.0002_importedfile",
@@ -6297,7 +6300,7 @@
             "wagtail_transfer.views",
             "wagtail_transfer.wagtail_hooks"
         ],
-        "version": "0.1"
+        "version": "0.2"
     },
     "wagtail-treemodeladmin": {
         "cmdline": [],
@@ -7831,7 +7834,7 @@
             "wagtailvideos.wagtail_hooks",
             "wagtailvideos.widgets"
         ],
-        "version": "2.4.1"
+        "version": "2.8.0"
     },
     "wah-cade": {
         "cmdline": [],
@@ -7862,6 +7865,7 @@
         "modules": [
             "wai.annotations",
             "wai.annotations.adams",
+            "wai.annotations.adams._ADAMSFormatSpecifier",
             "wai.annotations.adams._format",
             "wai.annotations.adams.constants",
             "wai.annotations.adams.convert",
@@ -7873,6 +7877,7 @@
             "wai.annotations.adams.utils",
             "wai.annotations.adams.utils._prefixes",
             "wai.annotations.coco",
+            "wai.annotations.coco._COCOFormatSpecifier",
             "wai.annotations.coco._format",
             "wai.annotations.coco.configuration",
             "wai.annotations.coco.configuration._Annotation",
@@ -7888,51 +7893,67 @@
             "wai.annotations.coco.io._COCOReader",
             "wai.annotations.coco.io._COCOWriter",
             "wai.annotations.core",
-            "wai.annotations.core._Converter",
+            "wai.annotations.core._DimensionDiscarder",
             "wai.annotations.core._DuplicateImageNames",
-            "wai.annotations.core._ExternalFormatConverter",
+            "wai.annotations.core._FormatSpecifier",
             "wai.annotations.core._ImageFormat",
             "wai.annotations.core._ImageInfo",
-            "wai.annotations.core._InlineStreamProcessor",
             "wai.annotations.core._InputChain",
-            "wai.annotations.core._InternalFormatConverter",
-            "wai.annotations.core._JSONWriter",
-            "wai.annotations.core._Reader",
-            "wai.annotations.core._SeparateImageWriter",
-            "wai.annotations.core._Settings",
-            "wai.annotations.core._Writer",
-            "wai.annotations.core._ZeroAreaDiscarder",
+            "wai.annotations.core._InternalFormat",
+            "wai.annotations.core._LibrarySettings",
             "wai.annotations.core._typing",
-            "wai.annotations.core.cli",
-            "wai.annotations.core.cli._ADAMSReportReaderCLIFactory",
-            "wai.annotations.core.cli._ADAMSReportWriterCLIFactory",
-            "wai.annotations.core.cli._COCOReaderCLIFactory",
-            "wai.annotations.core.cli._COCOWriterCLIFactory",
-            "wai.annotations.core.cli._FromADAMSReportCLIFactory",
-            "wai.annotations.core.cli._FromCOCOCLIFactory",
-            "wai.annotations.core.cli._FromROICLIFactory",
-            "wai.annotations.core.cli._FromTensorflowExampleCLIFactory",
-            "wai.annotations.core.cli._FromVGGCLIFactory",
-            "wai.annotations.core.cli._ROIReaderCLIFactory",
-            "wai.annotations.core.cli._ROIWriterCLIFactory",
-            "wai.annotations.core.cli._TensorflowExampleReaderCLIFactory",
-            "wai.annotations.core.cli._TensorflowExampleWriterCLIFactory",
-            "wai.annotations.core.cli._ToADAMSReportCLIFactory",
-            "wai.annotations.core.cli._ToCOCOCLIFactory",
-            "wai.annotations.core.cli._ToROICLIFactory",
-            "wai.annotations.core.cli._ToTensorflowExampleCLIFactory",
-            "wai.annotations.core.cli._ToVGGCLIFactory",
-            "wai.annotations.core.cli._VGGReaderCLIFactory",
-            "wai.annotations.core.cli._VGGWriterCLIFactory",
             "wai.annotations.core.cli.__gen-cli__",
             "wai.annotations.core.coercions",
             "wai.annotations.core.coercions._BoxBoundsCoercion",
             "wai.annotations.core.coercions._Coercion",
             "wai.annotations.core.coercions._MaskBoundsCoercion",
+            "wai.annotations.core.components",
+            "wai.annotations.core.components._ExternalFormatConverter",
+            "wai.annotations.core.components._InternalFormatConverter",
+            "wai.annotations.core.components._JSONWriter",
+            "wai.annotations.core.components._Reader",
+            "wai.annotations.core.components._SeparateImageWriter",
+            "wai.annotations.core.components._Writer",
             "wai.annotations.core.logging",
             "wai.annotations.core.logging._LoggingEnabled",
             "wai.annotations.core.logging._StreamLogger",
             "wai.annotations.core.logging._root_logger",
+            "wai.annotations.core.plugin",
+            "wai.annotations.core.plugin._check_registry",
+            "wai.annotations.core.plugin._generate_factories",
+            "wai.annotations.core.plugin._registry",
+            "wai.annotations.core.plugin._util",
+            "wai.annotations.core.plugin.constants",
+            "wai.annotations.core.plugin.error",
+            "wai.annotations.core.plugin.error._BadFormatSpecifier",
+            "wai.annotations.core.plugin.error._MultiplyDefinedFormats",
+            "wai.annotations.core.plugin.factories",
+            "wai.annotations.core.plugin.factories._ADAMSReportReaderCLIFactory",
+            "wai.annotations.core.plugin.factories._ADAMSReportWriterCLIFactory",
+            "wai.annotations.core.plugin.factories._COCOReaderCLIFactory",
+            "wai.annotations.core.plugin.factories._COCOWriterCLIFactory",
+            "wai.annotations.core.plugin.factories._FromADAMSReportCLIFactory",
+            "wai.annotations.core.plugin.factories._FromCOCOCLIFactory",
+            "wai.annotations.core.plugin.factories._FromROICLIFactory",
+            "wai.annotations.core.plugin.factories._FromTensorflowExampleCLIFactory",
+            "wai.annotations.core.plugin.factories._FromVGGCLIFactory",
+            "wai.annotations.core.plugin.factories._ROIReaderCLIFactory",
+            "wai.annotations.core.plugin.factories._ROIWriterCLIFactory",
+            "wai.annotations.core.plugin.factories._TensorflowExampleReaderCLIFactory",
+            "wai.annotations.core.plugin.factories._TensorflowExampleWriterCLIFactory",
+            "wai.annotations.core.plugin.factories._ToADAMSReportCLIFactory",
+            "wai.annotations.core.plugin.factories._ToCOCOCLIFactory",
+            "wai.annotations.core.plugin.factories._ToROICLIFactory",
+            "wai.annotations.core.plugin.factories._ToTensorflowExampleCLIFactory",
+            "wai.annotations.core.plugin.factories._ToVGGCLIFactory",
+            "wai.annotations.core.plugin.factories._VGGReaderCLIFactory",
+            "wai.annotations.core.plugin.factories._VGGWriterCLIFactory",
+            "wai.annotations.core.plugin.registry",
+            "wai.annotations.core.plugin.registry._PluginRegistry",
+            "wai.annotations.core.plugin.registry._RegistryEntry",
+            "wai.annotations.core.stream",
+            "wai.annotations.core.stream._Converter",
+            "wai.annotations.core.stream._InlineStreamProcessor",
             "wai.annotations.core.utils",
             "wai.annotations.core.utils._chain_map",
             "wai.annotations.core.utils._extension_to_regex",
@@ -7940,16 +7961,20 @@
             "wai.annotations.core.utils._get_files_from_directory",
             "wai.annotations.core.utils._get_image_size",
             "wai.annotations.core.utils._metadata",
+            "wai.annotations.core.utils._polygon_from_rectangle",
+            "wai.annotations.core.utils._polygon_to_poly_array",
             "wai.annotations.core.utils._read_file_list",
             "wai.annotations.core.utils._recursive_iglob",
+            "wai.annotations.core.utils._render_annotations_onto_image",
             "wai.annotations.image_utils",
             "wai.annotations.image_utils._image",
             "wai.annotations.image_utils._masks",
             "wai.annotations.main",
-            "wai.annotations.main._components",
+            "wai.annotations.main._MainParserConfigurer",
+            "wai.annotations.main._MainSettings",
             "wai.annotations.main._main",
-            "wai.annotations.main._parser",
             "wai.annotations.roi",
+            "wai.annotations.roi._ROIFormatSpecifier",
             "wai.annotations.roi._ROIObject",
             "wai.annotations.roi._format",
             "wai.annotations.roi.constants",
@@ -7963,9 +7988,10 @@
             "wai.annotations.roi.utils._combine_dicts",
             "wai.annotations.roi.utils._filenames",
             "wai.annotations.roi.utils._min_rect_from_roi_polygon",
-            "wai.annotations.roi.utils._polygon_from_roi_object",
+            "wai.annotations.roi.utils._normalisation",
             "wai.annotations.roi.utils._roi_polygon",
             "wai.annotations.tf",
+            "wai.annotations.tf._TFFormatSpecifier",
             "wai.annotations.tf._ensure_available",
             "wai.annotations.tf._format",
             "wai.annotations.tf.compat",
@@ -7991,6 +8017,7 @@
             "wai.annotations.tf.utils._polygon_from_mask",
             "wai.annotations.tf.utils._sharded_filenames",
             "wai.annotations.vgg",
+            "wai.annotations.vgg._VGGFormatSpecifier",
             "wai.annotations.vgg._format",
             "wai.annotations.vgg.configuration",
             "wai.annotations.vgg.configuration._FileAttributes",
@@ -8010,7 +8037,7 @@
             "wai.annotations.vgg.utils",
             "wai.annotations.vgg.utils._shape_attributes"
         ],
-        "version": "0.2.2"
+        "version": "0.3.1"
     },
     "wai-common": {
         "cmdline": [],
@@ -8170,7 +8197,7 @@
             "wai.common.statistics",
             "wai.common.statistics._functions"
         ],
-        "version": "0.0.28"
+        "version": "0.0.29"
     },
     "wai-json": {
         "cmdline": [],
@@ -8229,7 +8256,7 @@
             "wai.json.validator._JSONValidator",
             "wai.json.validator._StaticJSONValidator"
         ],
-        "version": "0.0.4"
+        "version": "0.0.5"
     },
     "wai-ma": {
         "cmdline": [],
@@ -16370,7 +16397,7 @@
         "modules": [
             "wasmtime"
         ],
-        "version": "0.12.0"
+        "version": "0.60.0"
     },
     "wasp": {
         "cmdline": [],
@@ -16929,6 +16956,7 @@
         "modules": [
             "watchdogs",
             "watchdogs.app",
+            "watchdogs.background",
             "watchdogs.callbacks",
             "watchdogs.config",
             "watchdogs.crawler",
@@ -16937,7 +16965,7 @@
             "watchdogs.settings",
             "watchdogs.utils"
         ],
-        "version": "1.3.7"
+        "version": "1.4.0"
     },
     "watched": {
         "cmdline": [],
@@ -17325,6 +17353,11 @@
             "watchtower.django"
         ],
         "version": "0.7.3"
+    },
+    "watchui": {
+        "cmdline": [],
+        "modules": [],
+        "version": "0.1.15"
     },
     "watchvideo": {
         "cmdline": [],
@@ -22727,7 +22760,7 @@
             "wc_utils.workbook.core",
             "wc_utils.workbook.io"
         ],
-        "version": "0.0.14"
+        "version": "0.0.15"
     },
     "wc-web": {
         "cmdline": [],
@@ -25030,7 +25063,7 @@
         "modules": [
             "web_2_album"
         ],
-        "version": "0.0.9"
+        "version": "0.0.12"
     },
     "web-assist": {
         "cmdline": [],
@@ -27804,13 +27837,16 @@
         "cmdline": [],
         "modules": [
             "webdataset",
+            "webdataset.autodecode",
             "webdataset.checks",
             "webdataset.dataset",
+            "webdataset.filters",
             "webdataset.io",
             "webdataset.tenbin",
+            "webdataset.webdataset",
             "webdataset.writer"
         ],
-        "version": "0.1.3"
+        "version": "0.1.14"
     },
     "webdav": {
         "cmdline": [],
@@ -36125,7 +36161,7 @@
         "modules": [
             "weibo_2_album"
         ],
-        "version": "0.0.5"
+        "version": "0.0.9"
     },
     "weibo-api": {
         "cmdline": [],
@@ -37842,6 +37878,32 @@
             "wenjuanpro.print_str",
             "wenjuantest44",
             "wenjuantest44.print_str"
+        ],
+        "version": "0.0.1"
+    },
+    "wenjuantest55": {
+        "cmdline": [],
+        "modules": [
+            "wenjuanpro",
+            "wenjuanpro.print_str",
+            "wenjuantest44",
+            "wenjuantest44.print_str",
+            "wenjuantest55",
+            "wenjuantest55.print_str"
+        ],
+        "version": "0.0.1"
+    },
+    "wenjuantest66": {
+        "cmdline": [],
+        "modules": [
+            "wenjuanpro",
+            "wenjuanpro.print_str",
+            "wenjuantest44",
+            "wenjuantest44.print_str",
+            "wenjuantest55",
+            "wenjuantest55.print_str",
+            "wenjuantest66",
+            "wenjuantest66.print_str"
         ],
         "version": "0.0.1"
     },
@@ -39575,12 +39637,14 @@
         "cmdline": [],
         "modules": [
             "cv_utils",
+            "cv_utils.calibration",
+            "cv_utils.calibration.geom",
             "cv_utils.color",
             "cv_utils.core",
             "cv_utils.drawing",
             "cv_utils.video"
         ],
-        "version": "0.3.2"
+        "version": "0.4.0"
     },
     "wf-database-connection": {
         "cmdline": [],
@@ -56474,7 +56538,7 @@
             "wled.models",
             "wled.wled"
         ],
-        "version": "0.2.1"
+        "version": "0.3.0"
     },
     "wledpy-pctechjon": {
         "cmdline": [],
@@ -61638,7 +61702,7 @@
             "ampy.files",
             "ampy.pyboard"
         ],
-        "version": "1.1.4"
+        "version": "1.1.5"
     },
     "wonderboy": {
         "cmdline": [],
@@ -64734,19 +64798,6 @@
         ],
         "version": "0.0.2"
     },
-    "wordutils": {
-        "cmdline": [],
-        "modules": [
-            "WordUtils",
-            "WordUtils.dawg",
-            "WordUtils.release",
-            "WordUtils.tree",
-            "test",
-            "test.dawgtests",
-            "test.treetests"
-        ],
-        "version": "0.8.0"
-    },
     "wordvecpy": {
         "cmdline": [],
         "modules": [
@@ -67115,6 +67166,18 @@
             "worldmap.worldmap"
         ],
         "version": "0.1.6"
+    },
+    "worldmeter": {
+        "cmdline": [],
+        "modules": [
+            "worldmeter",
+            "worldmeter.co2",
+            "worldmeter.coronavirus",
+            "worldmeter.death",
+            "worldmeter.population",
+            "worldmeter.util"
+        ],
+        "version": "0.1"
     },
     "worldmill": {
         "cmdline": [],
@@ -72165,6 +72228,15 @@
             "wsgi_liveserver"
         ],
         "version": "0.3.1"
+    },
+    "wsgi-microservice-middleware": {
+        "cmdline": [],
+        "modules": [
+            "wsgi_microservice_middleware",
+            "wsgi_microservice_middleware.cors",
+            "wsgi_microservice_middleware.request_id"
+        ],
+        "version": "0.1.2"
     },
     "wsgi-middleware": {
         "cmdline": [],
