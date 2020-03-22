@@ -39,7 +39,7 @@
 [INFO] (i2py) This package is up to date.
 [INFO] (i2ssh) This package is up to date.
 [INFO] (i2t) This package is up to date.
-[INFO] (i3-battery-block-vgg) Data has been updated for this package.
+[INFO] (i3-battery-block-vgg) This package is up to date.
 [INFO] (i3-config-builder) This package is up to date.
 [INFO] (i3-cycle) This package is up to date.
 [INFO] (i3-dstatus) This package is up to date.
@@ -222,7 +222,7 @@ Traceback (most recent call last):
 urllib.error.HTTPError: HTTP Error 404: Not Found
 
 [INFO] (iansface) This package is up to date.
-[INFO] (iap) Data has been updated for this package.
+[INFO] (iap) This package is up to date.
 [INFO] (iap-auth) This package is up to date.
 [INFO] (iap-local-receipt) This package is up to date.
 [INFO] (iapp) This package is up to date.
@@ -460,7 +460,34 @@ This package download URL does not point to a valid file: "http://ibpy.googlecod
 [ERROR] (ibvp) This package does not have downloadable releases.
 [INFO] (ibytes) This package is up to date.
 [INFO] (ic-desktop-api) This package is up to date.
-[INFO] (ic-utils) This package is up to date.
+[ERROR] (ic-utils) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/pypicontents/api/pypi.py", line 263, in get_pkgdata
+    pkgjsonraw = urlopen(url='{0}/pypi/{1}/json'.format(pypiurl, pkgname),
+  File "/usr/lib/python3.8/urllib/request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.8/urllib/request.py", line 531, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.8/urllib/request.py", line 640, in http_response
+    response = self.parent.error(
+  File "/usr/lib/python3.8/urllib/request.py", line 563, in error
+    result = self._call_chain(*args)
+  File "/usr/lib/python3.8/urllib/request.py", line 502, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.8/urllib/request.py", line 755, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+  File "/usr/lib/python3.8/urllib/request.py", line 531, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.8/urllib/request.py", line 640, in http_response
+    response = self.parent.error(
+  File "/usr/lib/python3.8/urllib/request.py", line 569, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.8/urllib/request.py", line 502, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.8/urllib/request.py", line 649, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+
 [INFO] (ica) This package is up to date.
 [INFO] (ica-infomax) This package is up to date.
 [INFO] (ica-mrn) This package is up to date.
@@ -471,7 +498,7 @@ This package download URL does not point to a valid file: "http://ibpy.googlecod
 [INFO] (ical2orgpy) This package is up to date.
 [INFO] (ical2vdir) This package is up to date.
 [INFO] (icalcli) This package is up to date.
-[INFO] (icalendar) This package is up to date.
+[INFO] (icalendar) Data has been updated for this package.
 [INFO] (icalendar-light) This package is up to date.
 [INFO] (icalevents) This package is up to date.
 [INFO] (icall) This package is up to date.
@@ -838,21 +865,44 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [ERROR] (id3repair) Could not extract data from this package. See below for details.
 "http://nirs.freeshell.org/files/id3repair-1.0.tar.gz" file could not be downloaded. See below for details.
 Traceback (most recent call last):
+  File "/usr/lib/python3.8/urllib/request.py", line 1319, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "/usr/lib/python3.8/http/client.py", line 1230, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib/python3.8/http/client.py", line 1276, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.8/http/client.py", line 1225, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.8/http/client.py", line 1004, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.8/http/client.py", line 944, in send
+    self.connect()
+  File "/usr/lib/python3.8/http/client.py", line 915, in connect
+    self.sock = self._create_connection(
+  File "/usr/lib/python3.8/socket.py", line 808, in create_connection
+    raise err
+  File "/usr/lib/python3.8/socket.py", line 796, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
   File "/usr/local/lib/python3.8/dist-packages/pypicontents/api/pypi.py", line 107, in download_tar
     f.write(urlopen(url=urlesc(pkgurl), timeout=10).read())
   File "/usr/lib/python3.8/urllib/request.py", line 222, in urlopen
     return opener.open(url, data, timeout)
-  File "/usr/lib/python3.8/urllib/request.py", line 531, in open
-    response = meth(req, response)
-  File "/usr/lib/python3.8/urllib/request.py", line 640, in http_response
-    response = self.parent.error(
-  File "/usr/lib/python3.8/urllib/request.py", line 569, in error
-    return self._call_chain(*args)
+  File "/usr/lib/python3.8/urllib/request.py", line 525, in open
+    response = self._open(req, data)
+  File "/usr/lib/python3.8/urllib/request.py", line 542, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
   File "/usr/lib/python3.8/urllib/request.py", line 502, in _call_chain
     result = func(*args)
-  File "/usr/lib/python3.8/urllib/request.py", line 649, in http_error_default
-    raise HTTPError(req.full_url, code, msg, hdrs, fp)
-urllib.error.HTTPError: HTTP Error 404: Not Found
+  File "/usr/lib/python3.8/urllib/request.py", line 1348, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "/usr/lib/python3.8/urllib/request.py", line 1322, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno 111] Connection refused>
 
 [INFO] (id3tree) This package is up to date.
 [INFO] (id4me-rp-client) This package is up to date.
@@ -959,7 +1009,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (identidad-sms) This package is up to date.
 [INFO] (identifai) This package is up to date.
 [INFO] (identifiers) This package is up to date.
-[INFO] (identify) This package is up to date.
+[INFO] (identify) Data has been updated for this package.
 [INFO] (identinum) This package is up to date.
 [INFO] (identity-auth-iipmobile-model-creator-form) This package is up to date.
 [INFO] (identity-toolkit-python-client) This package is up to date.
@@ -992,7 +1042,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (ideskeleton) This package is up to date.
 [INFO] (idesolver) This package is up to date.
 [INFO] (idevops) This package is up to date.
-[INFO] (idf-analysis) This package is up to date.
+[INFO] (idf-analysis) Data has been updated for this package.
 [INFO] (idf-tags) This package is up to date.
 [INFO] (idfim) This package is up to date.
 [INFO] (idfx) This package is up to date.
@@ -1275,7 +1325,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (ig) This package is up to date.
 [INFO] (ig-cpp) This package is up to date.
 [ERROR] (ig-pg-utils) This package does not have downloadable releases.
-[INFO] (ig-profile) Data has been updated for this package.
+[INFO] (ig-profile) This package is up to date.
 [INFO] (ig-rest-client) This package is up to date.
 [INFO] (ig-scraper) This package is up to date.
 [INFO] (ig-streaming-client) This package is up to date.
@@ -1342,7 +1392,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (igeads) This package is up to date.
 [INFO] (igeappsflyer) This package is up to date.
 [INFO] (igebullet) This package is up to date.
-[INFO] (igecore) Data has been updated for this package.
+[INFO] (igecore) This package is up to date.
 [INFO] (igedlibextern) This package is up to date.
 [INFO] (igefirebase) This package is up to date.
 [INFO] (igegamesservices) This package is up to date.
@@ -1369,7 +1419,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (iglo) This package is up to date.
 [INFO] (igloo) This package is up to date.
 [INFO] (igloo-python) This package is up to date.
-[INFO] (iglovikov-helper-functions) Data has been updated for this package.
+[INFO] (iglovikov-helper-functions) This package is up to date.
 [INFO] (iglsynth) This package is up to date.
 [INFO] (igmod) This package is up to date.
 [INFO] (igni) This package is up to date.
@@ -1449,7 +1499,7 @@ This package download URL does not point to a valid file: "aewsome!"
 [INFO] (ihextools) This package is up to date.
 [INFO] (ihm) This package is up to date.
 [INFO] (ihpip) This package is up to date.
-[INFO] (ihsm-analytics) Data has been updated for this package.
+[INFO] (ihsm-analytics) This package is up to date.
 [INFO] (ihtml) This package is up to date.
 [INFO] (ihttp) This package is up to date.
 [INFO] (ii) This package is up to date.
@@ -2137,7 +2187,7 @@ This package download URL does not point to a valid file: "http://wojas.vvtp.tud
 [INFO] (img-percent-diff) This package is up to date.
 [INFO] (img-pipe) This package is up to date.
 [INFO] (img-proof) This package is up to date.
-[INFO] (img-renamer) Data has been updated for this package.
+[INFO] (img-renamer) This package is up to date.
 [INFO] (img-resizer) This package is up to date.
 [INFO] (img-rotate) This package is up to date.
 [INFO] (img-serv) This package is up to date.
@@ -2189,7 +2239,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (imgbot) This package is up to date.
 [INFO] (imgc) This package is up to date.
 [INFO] (imgcaption) This package is up to date.
-[INFO] (imgcat) Data has been updated for this package.
+[INFO] (imgcat) This package is up to date.
 [INFO] (imgcompare) This package is up to date.
 [INFO] (imgcomparely) This package is up to date.
 [INFO] (imgconverter) This package is up to date.
@@ -2266,7 +2316,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [ERROR] (imgview) Could not extract data from this package. See below for details.
 ".py" extension not supported.
 [INFO] (imgviz) This package is up to date.
-[INFO] (imgwrench) This package is up to date.
+[INFO] (imgwrench) Data has been updated for this package.
 [INFO] (imgz-cli) This package is up to date.
 [INFO] (imhdsk) This package is up to date.
 [INFO] (imhotep) This package is up to date.
@@ -3019,7 +3069,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (indicngramlib) This package is up to date.
 [INFO] (indicnlp) This package is up to date.
 [INFO] (indico) This package is up to date.
-[INFO] (indico-client) Data has been updated for this package.
+[INFO] (indico-client) This package is up to date.
 [INFO] (indico-fonts) This package is up to date.
 [INFO] (indico-install) This package is up to date.
 [INFO] (indico-migrate) This package is up to date.
@@ -3119,34 +3169,6 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (ineqpy) This package is up to date.
 [INFO] (inequality) This package is up to date.
 [INFO] (inequality-coefficients) This package is up to date.
-[ERROR] (inertia) Could not get a response from API for this package. See below for details.
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.8/dist-packages/pypicontents/api/pypi.py", line 263, in get_pkgdata
-    pkgjsonraw = urlopen(url='{0}/pypi/{1}/json'.format(pypiurl, pkgname),
-  File "/usr/lib/python3.8/urllib/request.py", line 222, in urlopen
-    return opener.open(url, data, timeout)
-  File "/usr/lib/python3.8/urllib/request.py", line 531, in open
-    response = meth(req, response)
-  File "/usr/lib/python3.8/urllib/request.py", line 640, in http_response
-    response = self.parent.error(
-  File "/usr/lib/python3.8/urllib/request.py", line 563, in error
-    result = self._call_chain(*args)
-  File "/usr/lib/python3.8/urllib/request.py", line 502, in _call_chain
-    result = func(*args)
-  File "/usr/lib/python3.8/urllib/request.py", line 755, in http_error_302
-    return self.parent.open(new, timeout=req.timeout)
-  File "/usr/lib/python3.8/urllib/request.py", line 531, in open
-    response = meth(req, response)
-  File "/usr/lib/python3.8/urllib/request.py", line 640, in http_response
-    response = self.parent.error(
-  File "/usr/lib/python3.8/urllib/request.py", line 569, in error
-    return self._call_chain(*args)
-  File "/usr/lib/python3.8/urllib/request.py", line 502, in _call_chain
-    result = func(*args)
-  File "/usr/lib/python3.8/urllib/request.py", line 649, in http_error_default
-    raise HTTPError(req.full_url, code, msg, hdrs, fp)
-urllib.error.HTTPError: HTTP Error 404: Not Found
-
 [INFO] (inertia-django) This package is up to date.
 [INFO] (ines) This package is up to date.
 [INFO] (inester) This package is up to date.
@@ -3846,7 +3868,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (ino-vibe-sdk) This package is up to date.
 [INFO] (inoa) This package is up to date.
 [INFO] (inodecalculator) This package is up to date.
-[INFO] (inoftvocal) Data has been updated for this package.
+[INFO] (inoftvocal) This package is up to date.
 [INFO] (inol-rest) This package is up to date.
 [INFO] (inomial-smile-graphql-interface) This package is up to date.
 [INFO] (inoon-lora-packet) This package is up to date.
@@ -4084,7 +4106,7 @@ This package download URL does not point to a valid file: "http://www.inqvista.c
 [INFO] (inspectortiger) This package is up to date.
 [INFO] (inspectr) This package is up to date.
 [INFO] (inspectshow) This package is up to date.
-[INFO] (inspecttools) Data has been updated for this package.
+[INFO] (inspecttools) This package is up to date.
 [INFO] (inspektor) This package is up to date.
 [INFO] (inspetor) This package is up to date.
 [INFO] (inspie) This package is up to date.
@@ -4095,7 +4117,7 @@ This package download URL does not point to a valid file: "http://www.inqvista.c
 [INFO] (inspire-json-merger) This package is up to date.
 [INFO] (inspire-matcher) This package is up to date.
 [INFO] (inspire-mitmproxy) This package is up to date.
-[INFO] (inspire-query-parser) Data has been updated for this package.
+[INFO] (inspire-query-parser) This package is up to date.
 [INFO] (inspire-schemas) This package is up to date.
 [INFO] (inspire-service-orcid) This package is up to date.
 [INFO] (inspire-utils) This package is up to date.
@@ -4209,7 +4231,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (install-binaries) This package is up to date.
 [INFO] (install-composer) This package is up to date.
 [INFO] (install-freedesktop) This package is up to date.
-[INFO] (install-jdk) Data has been updated for this package.
+[INFO] (install-jdk) This package is up to date.
 [INFO] (install-party) This package is up to date.
 [INFO] (install-qt-binding) This package is up to date.
 [INFO] (install-requires) This package is up to date.
@@ -4872,7 +4894,7 @@ This package download URL does not point to a valid file: "https://pypi.python.o
 [INFO] (invenio-sse) This package is up to date.
 [INFO] (invenio-stats) This package is up to date.
 [INFO] (invenio-testing) This package is up to date.
-[INFO] (invenio-theme) Data has been updated for this package.
+[INFO] (invenio-theme) This package is up to date.
 [INFO] (invenio-trends) This package is up to date.
 [INFO] (invenio-trends-ui) This package is up to date.
 [INFO] (invenio-unapi) This package is up to date.
@@ -5073,6 +5095,7 @@ Unsupported package directory structure.
 [ERROR] (iolax) This package does not have downloadable releases.
 [INFO] (iologger) This package is up to date.
 [INFO] (ioloop) This package is up to date.
+[INFO] (iomanage) Data has been updated for this package.
 [INFO] (iomanager) This package is up to date.
 [INFO] (iomed) This package is up to date.
 [INFO] (iomidi) This package is up to date.
@@ -5201,7 +5224,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (iota-auth) This package is up to date.
 [INFO] (iota-balance-change-alert) This package is up to date.
 [INFO] (iota-mnemonic) This package is up to date.
-[INFO] (iotanbo-py-utils) Data has been updated for this package.
+[INFO] (iotanbo-py-utils) This package is up to date.
 [INFO] (iotapay) This package is up to date.
 [INFO] (iotapy) This package is up to date.
 [INFO] (iotawallet) This package is up to date.
@@ -5253,7 +5276,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (iotile-ship) This package is up to date.
 [INFO] (iotile-support-con-nrf52832-2) This package is up to date.
 [INFO] (iotile-support-con-nrf52832-3) This package is up to date.
-[INFO] (iotile-support-con-nrf52832-4) Data has been updated for this package.
+[INFO] (iotile-support-con-nrf52832-4) This package is up to date.
 [INFO] (iotile-support-firm-accelerometer-2) This package is up to date.
 [INFO] (iotile-support-firm-arduino-bridge-0) This package is up to date.
 [INFO] (iotile-support-firm-env-1) This package is up to date.
@@ -5274,7 +5297,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (iotk) This package is up to date.
 [ERROR] (iotkit) This package does not have downloadable releases.
 [INFO] (iotlab-radio-test) This package is up to date.
-[INFO] (iotlabcli) Data has been updated for this package.
+[INFO] (iotlabcli) This package is up to date.
 [ERROR] (iotlabclient) Could not get a response from API for this package. See below for details.
 Traceback (most recent call last):
   File "/usr/local/lib/python3.8/dist-packages/pypicontents/api/pypi.py", line 263, in get_pkgdata
@@ -5864,7 +5887,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (ipyiiif) This package is up to date.
 [INFO] (ipyjana) This package is up to date.
 [INFO] (ipyk) This package is up to date.
-[INFO] (ipykernel) This package is up to date.
+[INFO] (ipykernel) Data has been updated for this package.
 [INFO] (ipylab) This package is up to date.
 [INFO] (ipyleaflet) This package is up to date.
 [INFO] (ipylogger) This package is up to date.
@@ -5883,7 +5906,36 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (ipymsa) This package is up to date.
 [ERROR] (ipynata) This package does not have downloadable releases.
 [INFO] (ipynb) This package is up to date.
-[INFO] (ipynb-format) This package is up to date.
+[ERROR] (ipynb-format) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/pypicontents/api/pypi.py", line 263, in get_pkgdata
+    pkgjsonraw = urlopen(url='{0}/pypi/{1}/json'.format(pypiurl, pkgname),
+  File "/usr/lib/python3.8/urllib/request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.8/urllib/request.py", line 525, in open
+    response = self._open(req, data)
+  File "/usr/lib/python3.8/urllib/request.py", line 542, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "/usr/lib/python3.8/urllib/request.py", line 502, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.8/urllib/request.py", line 1362, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+  File "/usr/lib/python3.8/urllib/request.py", line 1323, in do_open
+    r = h.getresponse()
+  File "/usr/lib/python3.8/http/client.py", line 1322, in getresponse
+    response.begin()
+  File "/usr/lib/python3.8/http/client.py", line 303, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.8/http/client.py", line 264, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/lib/python3.8/ssl.py", line 1241, in recv_into
+    return self.read(nbytes, buffer)
+  File "/usr/lib/python3.8/ssl.py", line 1099, in read
+    return self._sslobj.read(len, buffer)
+socket.timeout: The read operation timed out
+
 [INFO] (ipynb-function) This package is up to date.
 [INFO] (ipynb-py-convert) This package is up to date.
 [INFO] (ipynb-tests) This package is up to date.
@@ -5917,7 +5969,36 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (ipysankeywidget) This package is up to date.
 [INFO] (ipyscales) This package is up to date.
 [INFO] (ipyselect2) This package is up to date.
-[INFO] (ipysh) This package is up to date.
+[ERROR] (ipysh) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/pypicontents/api/pypi.py", line 263, in get_pkgdata
+    pkgjsonraw = urlopen(url='{0}/pypi/{1}/json'.format(pypiurl, pkgname),
+  File "/usr/lib/python3.8/urllib/request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.8/urllib/request.py", line 525, in open
+    response = self._open(req, data)
+  File "/usr/lib/python3.8/urllib/request.py", line 542, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "/usr/lib/python3.8/urllib/request.py", line 502, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.8/urllib/request.py", line 1362, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+  File "/usr/lib/python3.8/urllib/request.py", line 1323, in do_open
+    r = h.getresponse()
+  File "/usr/lib/python3.8/http/client.py", line 1322, in getresponse
+    response.begin()
+  File "/usr/lib/python3.8/http/client.py", line 303, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.8/http/client.py", line 264, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/lib/python3.8/ssl.py", line 1241, in recv_into
+    return self.read(nbytes, buffer)
+  File "/usr/lib/python3.8/ssl.py", line 1099, in read
+    return self._sslobj.read(len, buffer)
+socket.timeout: The read operation timed out
+
 [INFO] (ipysheet) This package is up to date.
 [INFO] (ipysheet-sg) This package is up to date.
 [INFO] (ipysigma) This package is up to date.
@@ -5990,9 +6071,9 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (ipyvisus) This package is up to date.
 [INFO] (ipyviz) This package is up to date.
 [INFO] (ipyvolume) This package is up to date.
-[INFO] (ipyvue) Data has been updated for this package.
+[INFO] (ipyvue) This package is up to date.
 [INFO] (ipyvuedraggable) This package is up to date.
-[INFO] (ipyvuetify) Data has been updated for this package.
+[INFO] (ipyvuetify) This package is up to date.
 [INFO] (ipywe) This package is up to date.
 [INFO] (ipywebrtc) This package is up to date.
 [INFO] (ipywidget-pivot-table) This package is up to date.
@@ -6030,7 +6111,7 @@ Unsupported package directory structure.
 [INFO] (ir-fds) This package is up to date.
 [INFO] (ir-jageo) This package is up to date.
 [INFO] (ir-kit) This package is up to date.
-[INFO] (ir-ldr) Data has been updated for this package.
+[INFO] (ir-ldr) This package is up to date.
 [INFO] (ir-ldr-mingjie) This package is up to date.
 [INFO] (iraccgateway-python) This package is up to date.
 [INFO] (irace) This package is up to date.
@@ -6167,7 +6248,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (irisclient) This package is up to date.
 [INFO] (irisett) This package is up to date.
 [INFO] (irisflower) This package is up to date.
-[INFO] (irispy) This package is up to date.
+[INFO] (irispy) Data has been updated for this package.
 [INFO] (irispyc) This package is up to date.
 [INFO] (irisreader) This package is up to date.
 [INFO] (irisrelay) This package is up to date.
@@ -6232,8 +6313,62 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (ironpipe) This package is up to date.
 [INFO] (ironproject) This package is up to date.
 [INFO] (ironpycompiler) This package is up to date.
-[INFO] (irons-test) This package is up to date.
-[INFO] (irons-toolbox) This package is up to date.
+[ERROR] (irons-test) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/pypicontents/api/pypi.py", line 263, in get_pkgdata
+    pkgjsonraw = urlopen(url='{0}/pypi/{1}/json'.format(pypiurl, pkgname),
+  File "/usr/lib/python3.8/urllib/request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.8/urllib/request.py", line 531, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.8/urllib/request.py", line 640, in http_response
+    response = self.parent.error(
+  File "/usr/lib/python3.8/urllib/request.py", line 563, in error
+    result = self._call_chain(*args)
+  File "/usr/lib/python3.8/urllib/request.py", line 502, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.8/urllib/request.py", line 755, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+  File "/usr/lib/python3.8/urllib/request.py", line 531, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.8/urllib/request.py", line 640, in http_response
+    response = self.parent.error(
+  File "/usr/lib/python3.8/urllib/request.py", line 569, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.8/urllib/request.py", line 502, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.8/urllib/request.py", line 649, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+
+[ERROR] (irons-toolbox) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/pypicontents/api/pypi.py", line 263, in get_pkgdata
+    pkgjsonraw = urlopen(url='{0}/pypi/{1}/json'.format(pypiurl, pkgname),
+  File "/usr/lib/python3.8/urllib/request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.8/urllib/request.py", line 531, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.8/urllib/request.py", line 640, in http_response
+    response = self.parent.error(
+  File "/usr/lib/python3.8/urllib/request.py", line 563, in error
+    result = self._call_chain(*args)
+  File "/usr/lib/python3.8/urllib/request.py", line 502, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.8/urllib/request.py", line 755, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+  File "/usr/lib/python3.8/urllib/request.py", line 531, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.8/urllib/request.py", line 640, in http_response
+    response = self.parent.error(
+  File "/usr/lib/python3.8/urllib/request.py", line 569, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.8/urllib/request.py", line 502, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.8/urllib/request.py", line 649, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+
 [INFO] (ironsourceatom) This package is up to date.
 [INFO] (ironworker) This package is up to date.
 [INFO] (irori) This package is up to date.
@@ -6502,7 +6637,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (iskalko-otzyvy-ru) This package is up to date.
 [INFO] (iskra-audiofile) This package is up to date.
 [INFO] (iskra-cli) This package is up to date.
-[INFO] (isla) This package is up to date.
+[INFO] (isla) Data has been updated for this package.
 [INFO] (islack) This package is up to date.
 [INFO] (islam) This package is up to date.
 [INFO] (island) This package is up to date.
@@ -6587,7 +6722,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (isomyr) This package is up to date.
 [INFO] (isonasacs) This package is up to date.
 [INFO] (isonclust) This package is up to date.
-[INFO] (isoncorrect) This package is up to date.
+[INFO] (isoncorrect) Data has been updated for this package.
 [INFO] (isonline) This package is up to date.
 [INFO] (isoparser) This package is up to date.
 [INFO] (isopass) This package is up to date.
@@ -7038,6 +7173,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (itnetworks) This package is up to date.
 [INFO] (itng) This package is up to date.
 [INFO] (itolapi) This package is up to date.
+[INFO] (itomate) Data has been updated for this package.
 [INFO] (itoolkit) This package is up to date.
 [INFO] (itools) This package is up to date.
 [INFO] (itop-cli) This package is up to date.
@@ -7134,8 +7270,36 @@ Traceback (most recent call last):
 urllib.error.HTTPError: HTTP Error 404: Not Found
 
 [INFO] (itweet) This package is up to date.
-[ERROR] (itws) Could not extract data from this package. See below for details.
-This package download URL does not point to a valid file: "http://download.hforge.org/itws/1.1/"
+[ERROR] (itws) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/pypicontents/api/pypi.py", line 263, in get_pkgdata
+    pkgjsonraw = urlopen(url='{0}/pypi/{1}/json'.format(pypiurl, pkgname),
+  File "/usr/lib/python3.8/urllib/request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.8/urllib/request.py", line 525, in open
+    response = self._open(req, data)
+  File "/usr/lib/python3.8/urllib/request.py", line 542, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "/usr/lib/python3.8/urllib/request.py", line 502, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.8/urllib/request.py", line 1362, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+  File "/usr/lib/python3.8/urllib/request.py", line 1323, in do_open
+    r = h.getresponse()
+  File "/usr/lib/python3.8/http/client.py", line 1322, in getresponse
+    response.begin()
+  File "/usr/lib/python3.8/http/client.py", line 303, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.8/http/client.py", line 264, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/lib/python3.8/ssl.py", line 1241, in recv_into
+    return self.read(nbytes, buffer)
+  File "/usr/lib/python3.8/ssl.py", line 1099, in read
+    return self._sslobj.read(len, buffer)
+socket.timeout: The read operation timed out
+
 [INFO] (ityou-astream) This package is up to date.
 [INFO] (ityou-bluetheme) This package is up to date.
 [INFO] (ityou-dragdrop) This package is up to date.
@@ -7419,14 +7583,14 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (izzy) This package is up to date.
 [INFO] 
 [INFO] 
-[INFO] Total packages: 5325
-[INFO]     Packages processed: 5325
-[INFO]         Packages updated: 22
-[INFO]         Packages up-to-date: 5035
-[INFO]         Packages without response: 92
+[INFO] Total packages: 5326
+[INFO]     Packages processed: 5326
+[INFO]         Packages updated: 12
+[INFO]         Packages up-to-date: 5042
+[INFO]         Packages without response: 97
 [INFO]         Packages without urls: 0
 [INFO]         Packages without downloads: 133
-[INFO]         Packages with data errors: 43
+[INFO]         Packages with data errors: 42
 [INFO]     Packages not processed: 0
 [INFO] 
 [INFO] 
