@@ -260,7 +260,7 @@ This package download URL does not point to a valid file: "http://www.lepied.com
 [INFO] (lago) This package is up to date.
 [INFO] (lagom) This package is up to date.
 [INFO] (lagomorph) This package is up to date.
-[INFO] (lagoon) Data has been updated for this package.
+[INFO] (lagoon) This package is up to date.
 [ERROR] (lagou-mining) Could not get a response from API for this package. See below for details.
 Traceback (most recent call last):
   File "/usr/local/lib/python3.8/dist-packages/pypicontents/api/pypi.py", line 263, in get_pkgdata
@@ -357,7 +357,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (laio) This package is up to date.
 [INFO] (lair) This package is up to date.
 [INFO] (lair3) This package is up to date.
-[INFO] (lairucrem) This package is up to date.
+[INFO] (lairucrem) Data has been updated for this package.
 [INFO] (laix) This package is up to date.
 [INFO] (laiye-python-third-proto) This package is up to date.
 [INFO] (laizy) This package is up to date.
@@ -899,44 +899,31 @@ This package download URL does not point to a valid file: "http://gitorious.org/
 [ERROR] (latestvisitors) Could not extract data from this package. See below for details.
 "http://merlimat.net/files/LatestVisitors-0.1.zip" file could not be downloaded. See below for details.
 Traceback (most recent call last):
-  File "/usr/lib/python3.8/urllib/request.py", line 1319, in do_open
-    h.request(req.get_method(), req.selector, req.data, headers,
-  File "/usr/lib/python3.8/http/client.py", line 1230, in request
-    self._send_request(method, url, body, headers, encode_chunked)
-  File "/usr/lib/python3.8/http/client.py", line 1276, in _send_request
-    self.endheaders(body, encode_chunked=encode_chunked)
-  File "/usr/lib/python3.8/http/client.py", line 1225, in endheaders
-    self._send_output(message_body, encode_chunked=encode_chunked)
-  File "/usr/lib/python3.8/http/client.py", line 1004, in _send_output
-    self.send(msg)
-  File "/usr/lib/python3.8/http/client.py", line 944, in send
-    self.connect()
-  File "/usr/lib/python3.8/http/client.py", line 915, in connect
-    self.sock = self._create_connection(
-  File "/usr/lib/python3.8/socket.py", line 808, in create_connection
-    raise err
-  File "/usr/lib/python3.8/socket.py", line 796, in create_connection
-    sock.connect(sa)
-socket.timeout: timed out
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
   File "/usr/local/lib/python3.8/dist-packages/pypicontents/api/pypi.py", line 107, in download_tar
     f.write(urlopen(url=urlesc(pkgurl), timeout=10).read())
   File "/usr/lib/python3.8/urllib/request.py", line 222, in urlopen
     return opener.open(url, data, timeout)
-  File "/usr/lib/python3.8/urllib/request.py", line 525, in open
-    response = self._open(req, data)
-  File "/usr/lib/python3.8/urllib/request.py", line 542, in _open
-    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "/usr/lib/python3.8/urllib/request.py", line 531, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.8/urllib/request.py", line 640, in http_response
+    response = self.parent.error(
+  File "/usr/lib/python3.8/urllib/request.py", line 563, in error
+    result = self._call_chain(*args)
   File "/usr/lib/python3.8/urllib/request.py", line 502, in _call_chain
     result = func(*args)
-  File "/usr/lib/python3.8/urllib/request.py", line 1348, in http_open
-    return self.do_open(http.client.HTTPConnection, req)
-  File "/usr/lib/python3.8/urllib/request.py", line 1322, in do_open
-    raise URLError(err)
-urllib.error.URLError: <urlopen error timed out>
+  File "/usr/lib/python3.8/urllib/request.py", line 755, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+  File "/usr/lib/python3.8/urllib/request.py", line 531, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.8/urllib/request.py", line 640, in http_response
+    response = self.parent.error(
+  File "/usr/lib/python3.8/urllib/request.py", line 569, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.8/urllib/request.py", line 502, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.8/urllib/request.py", line 649, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
 
 [INFO] (latex) This package is up to date.
 [INFO] (latex-snippet) This package is up to date.
@@ -946,7 +933,7 @@ urllib.error.URLError: <urlopen error timed out>
 [INFO] (latex2excel) This package is up to date.
 [INFO] (latex2markdown) This package is up to date.
 [INFO] (latex2markdown-bbsmp) This package is up to date.
-[INFO] (latex2mathml) This package is up to date.
+[INFO] (latex2mathml) Data has been updated for this package.
 [INFO] (latex2plos) This package is up to date.
 [ERROR] (latex2ply) Could not get a response from API for this package. See below for details.
 Traceback (most recent call last):
@@ -1062,7 +1049,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (latvianstemmer) This package is up to date.
 [INFO] (lauda) This package is up to date.
 [INFO] (laudadriver) This package is up to date.
-[INFO] (laue-crystallography) Data has been updated for this package.
+[INFO] (laue-crystallography) This package is up to date.
 [INFO] (laueagle) This package is up to date.
 [INFO] (lauetools) This package is up to date.
 [INFO] (laufire) This package is up to date.
@@ -1270,6 +1257,7 @@ Traceback (most recent call last):
     raise HTTPError(req.full_url, code, msg, hdrs, fp)
 urllib.error.HTTPError: HTTP Error 404: Not Found
 
+[INFO] (lazy-async) Data has been updated for this package.
 [INFO] (lazy-build) This package is up to date.
 [INFO] (lazy-command) This package is up to date.
 [INFO] (lazy-consul) This package is up to date.
@@ -1467,8 +1455,8 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (lbsoftconfdb2server) This package is up to date.
 [INFO] (lbsoftconfdbmigration) This package is up to date.
 [INFO] (lbt-dragonfly) This package is up to date.
-[INFO] (lbt-honeybee) This package is up to date.
-[INFO] (lbt-ladybug) This package is up to date.
+[INFO] (lbt-honeybee) Data has been updated for this package.
+[INFO] (lbt-ladybug) Data has been updated for this package.
 [INFO] (lbuild) Data has been updated for this package.
 [INFO] (lbwmath) This package is up to date.
 [INFO] (lc) This package is up to date.
@@ -1546,36 +1534,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (lcom) This package is up to date.
 [INFO] (lcommit-hook) This package is up to date.
 [INFO] (lconf) This package is up to date.
-[ERROR] (lcopt) Could not get a response from API for this package. See below for details.
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.8/dist-packages/pypicontents/api/pypi.py", line 263, in get_pkgdata
-    pkgjsonraw = urlopen(url='{0}/pypi/{1}/json'.format(pypiurl, pkgname),
-  File "/usr/lib/python3.8/urllib/request.py", line 222, in urlopen
-    return opener.open(url, data, timeout)
-  File "/usr/lib/python3.8/urllib/request.py", line 525, in open
-    response = self._open(req, data)
-  File "/usr/lib/python3.8/urllib/request.py", line 542, in _open
-    result = self._call_chain(self.handle_open, protocol, protocol +
-  File "/usr/lib/python3.8/urllib/request.py", line 502, in _call_chain
-    result = func(*args)
-  File "/usr/lib/python3.8/urllib/request.py", line 1362, in https_open
-    return self.do_open(http.client.HTTPSConnection, req,
-  File "/usr/lib/python3.8/urllib/request.py", line 1323, in do_open
-    r = h.getresponse()
-  File "/usr/lib/python3.8/http/client.py", line 1322, in getresponse
-    response.begin()
-  File "/usr/lib/python3.8/http/client.py", line 303, in begin
-    version, status, reason = self._read_status()
-  File "/usr/lib/python3.8/http/client.py", line 264, in _read_status
-    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
-  File "/usr/lib/python3.8/socket.py", line 669, in readinto
-    return self._sock.recv_into(b)
-  File "/usr/lib/python3.8/ssl.py", line 1241, in recv_into
-    return self.read(nbytes, buffer)
-  File "/usr/lib/python3.8/ssl.py", line 1099, in read
-    return self._sslobj.read(len, buffer)
-socket.timeout: The read operation timed out
-
+[INFO] (lcopt) This package is up to date.
 [INFO] (lcopt-cv) This package is up to date.
 [INFO] (lcopt-dev) This package is up to date.
 [INFO] (lcoptview) This package is up to date.
@@ -1806,7 +1765,7 @@ urllib.error.URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certifica
 [INFO] (le-pycaption) This package is up to date.
 [INFO] (le-trebuchet) This package is up to date.
 [INFO] (le-utils) This package is up to date.
-[INFO] (lea) This package is up to date.
+[INFO] (lea) Data has been updated for this package.
 [INFO] (leachdeniropdf) This package is up to date.
 [ERROR] (lead-lag) Could not get a response from API for this package. See below for details.
 Traceback (most recent call last):
@@ -2497,29 +2456,17 @@ Traceback (most recent call last):
     result = func(*args)
   File "/usr/lib/python3.8/urllib/request.py", line 755, in http_error_302
     return self.parent.open(new, timeout=req.timeout)
-  File "/usr/lib/python3.8/urllib/request.py", line 525, in open
-    response = self._open(req, data)
-  File "/usr/lib/python3.8/urllib/request.py", line 542, in _open
-    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "/usr/lib/python3.8/urllib/request.py", line 531, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.8/urllib/request.py", line 640, in http_response
+    response = self.parent.error(
+  File "/usr/lib/python3.8/urllib/request.py", line 569, in error
+    return self._call_chain(*args)
   File "/usr/lib/python3.8/urllib/request.py", line 502, in _call_chain
     result = func(*args)
-  File "/usr/lib/python3.8/urllib/request.py", line 1362, in https_open
-    return self.do_open(http.client.HTTPSConnection, req,
-  File "/usr/lib/python3.8/urllib/request.py", line 1323, in do_open
-    r = h.getresponse()
-  File "/usr/lib/python3.8/http/client.py", line 1322, in getresponse
-    response.begin()
-  File "/usr/lib/python3.8/http/client.py", line 303, in begin
-    version, status, reason = self._read_status()
-  File "/usr/lib/python3.8/http/client.py", line 264, in _read_status
-    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
-  File "/usr/lib/python3.8/socket.py", line 669, in readinto
-    return self._sock.recv_into(b)
-  File "/usr/lib/python3.8/ssl.py", line 1241, in recv_into
-    return self.read(nbytes, buffer)
-  File "/usr/lib/python3.8/ssl.py", line 1099, in read
-    return self._sslobj.read(len, buffer)
-socket.timeout: The read operation timed out
+  File "/usr/lib/python3.8/urllib/request.py", line 649, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
 
 [INFO] (lens) This package is up to date.
 [INFO] (lens-bson) This package is up to date.
@@ -2974,7 +2921,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (lfortran) This package is up to date.
 [INFO] (lfp-reader) This package is up to date.
 [INFO] (lfpsimpy) This package is up to date.
-[INFO] (lfpy) Data has been updated for this package.
+[INFO] (lfpy) This package is up to date.
 [INFO] (lfs-compropago) This package is up to date.
 [INFO] (lfs-contact) This package is up to date.
 [INFO] (lfs-criterion-extra) This package is up to date.
@@ -3048,10 +2995,10 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (lh3api) This package is up to date.
 [INFO] (lhafile) This package is up to date.
 [INFO] (lhapdf) This package is up to date.
-[INFO] (lhc-python) This package is up to date.
+[INFO] (lhc-python) Data has been updated for this package.
 [INFO] (lhclient) This package is up to date.
 [INFO] (lhco-reader) This package is up to date.
-[INFO] (lhcsmapi) Data has been updated for this package.
+[INFO] (lhcsmapi) This package is up to date.
 [INFO] (lhdata) This package is up to date.
 [INFO] (lhe2sqlite) This package is up to date.
 [INFO] (lhereader) This package is up to date.
@@ -3409,7 +3356,7 @@ This package download URL does not point to a valid file: "http://code.google.co
 [INFO] (libhikvision) This package is up to date.
 [INFO] (libhockey) This package is up to date.
 [INFO] (libhoney) This package is up to date.
-[INFO] (libhreels) Data has been updated for this package.
+[INFO] (libhreels) This package is up to date.
 [INFO] (libhttp) This package is up to date.
 [INFO] (libhttpcam) This package is up to date.
 [INFO] (libhttpdna) This package is up to date.
@@ -3912,7 +3859,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (libsubmit) This package is up to date.
 [INFO] (libsul) This package is up to date.
 [INFO] (libsutd) This package is up to date.
-[INFO] (libsvm) This package is up to date.
+[INFO] (libsvm) Data has been updated for this package.
 [INFO] (libsvm2csv) This package is up to date.
 [INFO] (libt3) This package is up to date.
 [INFO] (libtado) This package is up to date.
@@ -4307,6 +4254,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (lightfly) This package is up to date.
 [INFO] (lightfm) This package is up to date.
 [INFO] (lightgbm) This package is up to date.
+[INFO] (lighthive) Data has been updated for this package.
 [INFO] (lighthouse) This package is up to date.
 [INFO] (lightify) This package is up to date.
 [INFO] (lightifypy) This package is up to date.
@@ -4350,7 +4298,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (lightpush) This package is up to date.
 [ERROR] (lightpy) This package does not have downloadable releases.
 [INFO] (lightqueue) This package is up to date.
-[INFO] (lightrdf) Data has been updated for this package.
+[INFO] (lightrdf) This package is up to date.
 [INFO] (lightreasoning) This package is up to date.
 [INFO] (lightroom-export-organizer) This package is up to date.
 [ERROR] (lights) This package does not have downloadable releases.
@@ -4396,7 +4344,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (lightweb) This package is up to date.
 [INFO] (lightweight) This package is up to date.
 [INFO] (lightweightpush) This package is up to date.
-[INFO] (lightwood) This package is up to date.
+[INFO] (lightwood) Data has been updated for this package.
 [INFO] (lightwriter) This package is up to date.
 [INFO] (lightwsgi) This package is up to date.
 [INFO] (lightxin) This package is up to date.
@@ -4436,7 +4384,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (liketest) This package is up to date.
 [INFO] (liknorm) This package is up to date.
 [INFO] (liko) This package is up to date.
-[INFO] (lil-pwny) This package is up to date.
+[INFO] (lil-pwny) Data has been updated for this package.
 [INFO] (lila) This package is up to date.
 [INFO] (lilac) This package is up to date.
 [INFO] (lilcom) This package is up to date.
@@ -4641,7 +4589,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (line-pay-sdk) This package is up to date.
 [INFO] (line-profiler) This package is up to date.
 [INFO] (line-protocol-parser) This package is up to date.
-[INFO] (line-sticker-dl) Data has been updated for this package.
+[INFO] (line-sticker-dl) This package is up to date.
 [INFO] (line-tools) This package is up to date.
 [INFO] (lineage) This package is up to date.
 [INFO] (lineage-controlpanels) This package is up to date.
@@ -5174,8 +5122,8 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (linseed) This package is up to date.
 [INFO] (linselect) This package is up to date.
 [INFO] (linsensors) This package is up to date.
-[INFO] (linshareapi) This package is up to date.
-[INFO] (linsharecli) This package is up to date.
+[INFO] (linshareapi) Data has been updated for this package.
+[INFO] (linsharecli) Data has been updated for this package.
 [INFO] (linsj) This package is up to date.
 [INFO] (linsolve) This package is up to date.
 [ERROR] (linspector) Could not get a response from API for this package. See below for details.
@@ -5260,7 +5208,7 @@ This package download URL does not point to a valid file: "http://live.gnome.org
 [INFO] (lios) This package is up to date.
 [INFO] (liota) This package is up to date.
 [INFO] (lip) This package is up to date.
-[INFO] (lipd) Data has been updated for this package.
+[INFO] (lipd) This package is up to date.
 [INFO] (lipidconverter) This package is up to date.
 [ERROR] (lipisha) This package does not have downloadable releases.
 [INFO] (lipo2pol) This package is up to date.
@@ -5280,7 +5228,7 @@ This package download URL does not point to a valid file: "http://live.gnome.org
 [INFO] (liquer-framework) This package is up to date.
 [INFO] (liqueur) This package is up to date.
 [INFO] (liqui) This package is up to date.
-[INFO] (liquibase) Data has been updated for this package.
+[INFO] (liquibase) This package is up to date.
 [INFO] (liquicomun) This package is up to date.
 [ERROR] (liquid) This package does not have downloadable releases.
 [INFO] (liquid4m) This package is up to date.
@@ -5653,7 +5601,46 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (litecore) This package is up to date.
 [INFO] (litedb) This package is up to date.
 [INFO] (litefeel-pycommon) This package is up to date.
-[INFO] (liteflow-core) This package is up to date.
+[ERROR] (liteflow-core) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/pypicontents/api/pypi.py", line 263, in get_pkgdata
+    pkgjsonraw = urlopen(url='{0}/pypi/{1}/json'.format(pypiurl, pkgname),
+  File "/usr/lib/python3.8/urllib/request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.8/urllib/request.py", line 531, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.8/urllib/request.py", line 640, in http_response
+    response = self.parent.error(
+  File "/usr/lib/python3.8/urllib/request.py", line 563, in error
+    result = self._call_chain(*args)
+  File "/usr/lib/python3.8/urllib/request.py", line 502, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.8/urllib/request.py", line 755, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+  File "/usr/lib/python3.8/urllib/request.py", line 525, in open
+    response = self._open(req, data)
+  File "/usr/lib/python3.8/urllib/request.py", line 542, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "/usr/lib/python3.8/urllib/request.py", line 502, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.8/urllib/request.py", line 1362, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+  File "/usr/lib/python3.8/urllib/request.py", line 1323, in do_open
+    r = h.getresponse()
+  File "/usr/lib/python3.8/http/client.py", line 1322, in getresponse
+    response.begin()
+  File "/usr/lib/python3.8/http/client.py", line 303, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.8/http/client.py", line 264, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/lib/python3.8/ssl.py", line 1241, in recv_into
+    return self.read(nbytes, buffer)
+  File "/usr/lib/python3.8/ssl.py", line 1099, in read
+    return self._sslobj.read(len, buffer)
+socket.timeout: The read operation timed out
+
 [INFO] (liteflow-providers-azure) This package is up to date.
 [INFO] (liteflow-providers-mongo) This package is up to date.
 [INFO] (litefs) This package is up to date.
@@ -5865,7 +5852,7 @@ This package download URL does not point to a valid file: "http://code.google.co
 [INFO] (livelossplot) This package is up to date.
 [INFO] (lively) This package is up to date.
 [INFO] (lively-lights) This package is up to date.
-[INFO] (livemetrics) This package is up to date.
+[INFO] (livemetrics) Data has been updated for this package.
 [INFO] (livemonitor) This package is up to date.
 [INFO] (liveodds) This package is up to date.
 [INFO] (livepandas) This package is up to date.
@@ -6121,7 +6108,36 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (lmctl) This package is up to date.
 [INFO] (lmdb) This package is up to date.
 [INFO] (lmdb-embeddings) This package is up to date.
-[INFO] (lmdb-sessions) This package is up to date.
+[ERROR] (lmdb-sessions) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/pypicontents/api/pypi.py", line 263, in get_pkgdata
+    pkgjsonraw = urlopen(url='{0}/pypi/{1}/json'.format(pypiurl, pkgname),
+  File "/usr/lib/python3.8/urllib/request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.8/urllib/request.py", line 525, in open
+    response = self._open(req, data)
+  File "/usr/lib/python3.8/urllib/request.py", line 542, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "/usr/lib/python3.8/urllib/request.py", line 502, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.8/urllib/request.py", line 1362, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+  File "/usr/lib/python3.8/urllib/request.py", line 1323, in do_open
+    r = h.getresponse()
+  File "/usr/lib/python3.8/http/client.py", line 1322, in getresponse
+    response.begin()
+  File "/usr/lib/python3.8/http/client.py", line 303, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.8/http/client.py", line 264, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/lib/python3.8/ssl.py", line 1241, in recv_into
+    return self.read(nbytes, buffer)
+  File "/usr/lib/python3.8/ssl.py", line 1099, in read
+    return self._sslobj.read(len, buffer)
+socket.timeout: The read operation timed out
+
 [INFO] (lmdiag) This package is up to date.
 [INFO] (lmdo) This package is up to date.
 [INFO] (lme) This package is up to date.
@@ -6195,7 +6211,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (lnkfile) This package is up to date.
 [INFO] (lnkparse3) This package is up to date.
 [INFO] (lnkr) This package is up to date.
-[INFO] (lnmc) Data has been updated for this package.
+[INFO] (lnmc) This package is up to date.
 [INFO] (lnoise) This package is up to date.
 [INFO] (lnpay-py) This package is up to date.
 [INFO] (lnproxy) This package is up to date.
@@ -6337,7 +6353,7 @@ This package download URL does not point to a valid file: "http://pypi.python.or
 [INFO] (localsnap) This package is up to date.
 [INFO] (localstack) This package is up to date.
 [INFO] (localstack-client) This package is up to date.
-[INFO] (localstack-ext) Data has been updated for this package.
+[INFO] (localstack-ext) This package is up to date.
 [INFO] (localstackclient) This package is up to date.
 [INFO] (localstorage) This package is up to date.
 [INFO] (localstoragepy) This package is up to date.
@@ -6484,7 +6500,36 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (lod-domedi) This package is up to date.
 [INFO] (lod-executor) This package is up to date.
 [INFO] (lod-tools) This package is up to date.
-[INFO] (lodash) This package is up to date.
+[ERROR] (lodash) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/pypicontents/api/pypi.py", line 263, in get_pkgdata
+    pkgjsonraw = urlopen(url='{0}/pypi/{1}/json'.format(pypiurl, pkgname),
+  File "/usr/lib/python3.8/urllib/request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.8/urllib/request.py", line 525, in open
+    response = self._open(req, data)
+  File "/usr/lib/python3.8/urllib/request.py", line 542, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "/usr/lib/python3.8/urllib/request.py", line 502, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.8/urllib/request.py", line 1362, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+  File "/usr/lib/python3.8/urllib/request.py", line 1323, in do_open
+    r = h.getresponse()
+  File "/usr/lib/python3.8/http/client.py", line 1322, in getresponse
+    response.begin()
+  File "/usr/lib/python3.8/http/client.py", line 303, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.8/http/client.py", line 264, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/lib/python3.8/ssl.py", line 1241, in recv_into
+    return self.read(nbytes, buffer)
+  File "/usr/lib/python3.8/ssl.py", line 1099, in read
+    return self._sslobj.read(len, buffer)
+socket.timeout: The read operation timed out
+
 [INFO] (lode) This package is up to date.
 [INFO] (lode-runner) This package is up to date.
 [INFO] (lodestar) This package is up to date.
@@ -6629,7 +6674,36 @@ This package download URL does not point to a valid file: "http://bitbucket.org/
 [INFO] (logbot) This package is up to date.
 [INFO] (logbot-telegram) This package is up to date.
 [ERROR] (logbridge) This package does not have downloadable releases.
-[INFO] (logbuddy) This package is up to date.
+[ERROR] (logbuddy) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/pypicontents/api/pypi.py", line 263, in get_pkgdata
+    pkgjsonraw = urlopen(url='{0}/pypi/{1}/json'.format(pypiurl, pkgname),
+  File "/usr/lib/python3.8/urllib/request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.8/urllib/request.py", line 525, in open
+    response = self._open(req, data)
+  File "/usr/lib/python3.8/urllib/request.py", line 542, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "/usr/lib/python3.8/urllib/request.py", line 502, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.8/urllib/request.py", line 1362, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+  File "/usr/lib/python3.8/urllib/request.py", line 1323, in do_open
+    r = h.getresponse()
+  File "/usr/lib/python3.8/http/client.py", line 1322, in getresponse
+    response.begin()
+  File "/usr/lib/python3.8/http/client.py", line 303, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.8/http/client.py", line 264, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/lib/python3.8/ssl.py", line 1241, in recv_into
+    return self.read(nbytes, buffer)
+  File "/usr/lib/python3.8/ssl.py", line 1099, in read
+    return self._sslobj.read(len, buffer)
+socket.timeout: The read operation timed out
+
 [ERROR] (logbuilder) This package does not have downloadable releases.
 [INFO] (logcabin) This package is up to date.
 [INFO] (logcat-color) This package is up to date.
@@ -6863,7 +6937,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (logicoma) This package is up to date.
 [INFO] (logicparser) This package is up to date.
 [INFO] (logicqubit) This package is up to date.
-[INFO] (logicqubit-gpu) Data has been updated for this package.
+[INFO] (logicqubit-gpu) This package is up to date.
 [INFO] (logify) This package is up to date.
 [INFO] (logilab-astng) This package is up to date.
 [INFO] (logilab-common) This package is up to date.
@@ -6950,6 +7024,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (lognplot) This package is up to date.
 [INFO] (logo) This package is up to date.
 [INFO] (logocreator) This package is up to date.
+[INFO] (logolas) Data has been updated for this package.
 [INFO] (logomaker) This package is up to date.
 [ERROR] (logon) This package does not have downloadable releases.
 [INFO] (logone) This package is up to date.
@@ -7105,7 +7180,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (lol-beautify-gdocs) This package is up to date.
 [INFO] (lol-clarity) This package is up to date.
 [INFO] (lol-emile2016) This package is up to date.
-[INFO] (lol-id-tools) This package is up to date.
+[INFO] (lol-id-tools) Data has been updated for this package.
 [INFO] (lol-scraper) This package is up to date.
 [INFO] (lola) This package is up to date.
 [INFO] (lolaml) This package is up to date.
@@ -7250,7 +7325,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (lookup) This package is up to date.
 [ERROR] (lookup-table) Could not extract data from this package. See below for details.
 ".py" extension not supported.
-[INFO] (lookuper) Data has been updated for this package.
+[INFO] (lookuper) This package is up to date.
 [INFO] (lookups) This package is up to date.
 [INFO] (lookupy) This package is up to date.
 [INFO] (lookupy-unmanaged) This package is up to date.
@@ -7585,7 +7660,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (louvain) This package is up to date.
 [INFO] (louvain-github) This package is up to date.
 [INFO] (lov2pi) This package is up to date.
-[INFO] (lovage) Data has been updated for this package.
+[INFO] (lovage) This package is up to date.
 [INFO] (lovd) This package is up to date.
 [INFO] (love) This package is up to date.
 [INFO] (loveallufev-crawler) This package is up to date.
@@ -8471,7 +8546,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (lurklib) This package is up to date.
 [INFO] (lurklite) This package is up to date.
 [INFO] (lurkmoar) This package is up to date.
-[INFO] (lurlene) Data has been updated for this package.
+[INFO] (lurlene) This package is up to date.
 [INFO] (lurrn) This package is up to date.
 [INFO] (lush-dw-lib) This package is up to date.
 [INFO] (lushdwlib) This package is up to date.
@@ -8516,7 +8591,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (luxx-communication) This package is up to date.
 [INFO] (luyiba) This package is up to date.
 [INFO] (luz) This package is up to date.
-[INFO] (lv-athena-pkg) This package is up to date.
+[INFO] (lv-athena-pkg) Data has been updated for this package.
 [INFO] (lvappbuilder) This package is up to date.
 [ERROR] (lvicent) This package does not have downloadable releases.
 [INFO] (lvis) This package is up to date.
@@ -8831,7 +8906,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (lytspel) This package is up to date.
 [INFO] (lyw-msg) This package is up to date.
 [INFO] (lyw1-msg) This package is up to date.
-[INFO] (lywsd02) Data has been updated for this package.
+[INFO] (lywsd02) This package is up to date.
 [INFO] (lyx) This package is up to date.
 [INFO] (lyy-life) This package is up to date.
 [INFO] (lyymath) This package is up to date.
@@ -8885,11 +8960,11 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (lzy-nester1) This package is up to date.
 [INFO] 
 [INFO] 
-[INFO] Total packages: 6220
-[INFO]     Packages processed: 6220
-[INFO]         Packages updated: 21
-[INFO]         Packages up-to-date: 5795
-[INFO]         Packages without response: 105
+[INFO] Total packages: 6223
+[INFO]     Packages processed: 6223
+[INFO]         Packages updated: 22
+[INFO]         Packages up-to-date: 5794
+[INFO]         Packages without response: 108
 [INFO]         Packages without urls: 0
 [INFO]         Packages without downloads: 250
 [INFO]         Packages with data errors: 49
