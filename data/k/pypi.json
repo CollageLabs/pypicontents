@@ -6566,18 +6566,13 @@
             "kaf_pas.ckk",
             "kaf_pas.ckk.management",
             "kaf_pas.ckk.management.commands",
-            "kaf_pas.ckk.management.commands.check_complex_items",
             "kaf_pas.ckk.management.commands.check_item_cicular_refs",
-            "kaf_pas.ckk.management.commands.combine_item",
-            "kaf_pas.ckk.management.commands.combine_materials",
-            "kaf_pas.ckk.management.commands.fill_item_refs_hierarcy",
-            "kaf_pas.ckk.management.commands.fill_section_num",
             "kaf_pas.ckk.management.commands.load_material_askon",
-            "kaf_pas.ckk.management.commands.make_items",
-            "kaf_pas.ckk.management.commands.rebase_cdw_items",
             "kaf_pas.ckk.management.commands.rebase_free_items",
+            "kaf_pas.ckk.management.commands.set_confirm_prop",
             "kaf_pas.ckk.management.commands.test",
-            "kaf_pas.ckk.management.commands.test_full_name_items_refs",
+            "kaf_pas.ckk.management.commands.test_upload_document_tmp_table",
+            "kaf_pas.ckk.management.commands.test_upload_tmp_table",
             "kaf_pas.ckk.migrations",
             "kaf_pas.ckk.migrations.0001_initial",
             "kaf_pas.ckk.migrations.0002_auto_20190327_0703",
@@ -6797,6 +6792,7 @@
             "kaf_pas.ckk.migrations.0216_auto_20200326_1512",
             "kaf_pas.ckk.migrations.0217_auto_20200326_1536",
             "kaf_pas.ckk.migrations.0218_auto_20200326_1857",
+            "kaf_pas.ckk.migrations.0219_tmp_item_operations_view_tmp_item_refs_tmp_item_view",
             "kaf_pas.ckk.models",
             "kaf_pas.ckk.models.attr_type",
             "kaf_pas.ckk.models.combineItems",
@@ -6825,6 +6821,9 @@
             "kaf_pas.ckk.models.material_type_view",
             "kaf_pas.ckk.models.materials",
             "kaf_pas.ckk.models.status",
+            "kaf_pas.ckk.models.tmp_item_operations_view",
+            "kaf_pas.ckk.models.tmp_item_refs",
+            "kaf_pas.ckk.models.tmp_item_view",
             "kaf_pas.ckk.tests",
             "kaf_pas.ckk.tests.test_attr_type",
             "kaf_pas.ckk.urls",
@@ -6925,6 +6924,7 @@
             "kaf_pas.kd",
             "kaf_pas.kd.management",
             "kaf_pas.kd.management.commands",
+            "kaf_pas.kd.management.commands.get_m_view",
             "kaf_pas.kd.management.commands.refresh_kd_documents_attributes",
             "kaf_pas.kd.management.commands.refresh_kd_documents_thumb",
             "kaf_pas.kd.management.commands.test",
@@ -7074,6 +7074,7 @@
             "kaf_pas.kd.migrations.0143_auto_20200318_1337",
             "kaf_pas.kd.migrations.0144_uploades_props",
             "kaf_pas.kd.migrations.0145_auto_20200326_1924",
+            "kaf_pas.kd.migrations.0146_auto_20200329_0329",
             "kaf_pas.kd.models",
             "kaf_pas.kd.models.cdw_attrs",
             "kaf_pas.kd.models.cdws",
@@ -7109,7 +7110,6 @@
             "kaf_pas.kd.models.uploades_log",
             "kaf_pas.kd.routing",
             "kaf_pas.kd.tests",
-            "kaf_pas.kd.tests.test_documents",
             "kaf_pas.kd.tests.test_pathes",
             "kaf_pas.kd.tests.test_read_kompas_documents_disp",
             "kaf_pas.kd.urls",
@@ -7166,7 +7166,7 @@
             "kaf_pas.kd.views.document_attributes_SPC_CLM_NAME",
             "kaf_pas.kd.views.document_attributes_SPC_CLM_NOTE",
             "kaf_pas.kd.views.document_attributes_SPC_CLM_POS",
-            "kaf_pas.kd.views.document_attributes_SPC_CLM_USER_",
+            "kaf_pas.kd.views.document_attributes_SPC_CLM_USER",
             "kaf_pas.kd.views.document_attributes_SPC_CLM_ZONE",
             "kaf_pas.kd.views.document_attributes_STMP_1",
             "kaf_pas.kd.views.document_attributes_STMP_120",
@@ -7923,7 +7923,7 @@
             "kaf_pas.system.views",
             "kaf_pas.system.views.contants"
         ],
-        "version": "0.0.93"
+        "version": "0.0.94"
     },
     "kafe": {
         "cmdline": [],
@@ -10099,7 +10099,7 @@
             "kaishi.tabular.filters.duplicate_rows_each_dataframe",
             "kaishi.tabular.filters.invalid_file_extensions"
         ],
-        "version": "0.11"
+        "version": "0.12"
     },
     "kaiso": {
         "cmdline": [],
@@ -16056,7 +16056,7 @@
             "kashgari.tokenizer.jieba_tokenizer",
             "kashgari.utils"
         ],
-        "version": "1.1.2"
+        "version": "1.1.3"
     },
     "kashgari-tf": {
         "cmdline": [],
@@ -18955,7 +18955,7 @@
             "kvirt.vsphere.helpers",
             "kvirt.web"
         ],
-        "version": "99.0.202003271426"
+        "version": "99.0.202003291407"
     },
     "kclient": {
         "cmdline": [],
@@ -19445,7 +19445,7 @@
             "kcweb/utill/rediss.sentinel",
             "kcweb/utill/rediss.utils"
         ],
-        "version": "2.3.6"
+        "version": "2.3.8"
     },
     "kd-infra": {
         "cmdline": [],
@@ -25983,7 +25983,7 @@
             "keras_synthetic_genome_sequence.utils.generate_synthetic_gaps",
             "keras_synthetic_genome_sequence.utils.get_gaps_statistics"
         ],
-        "version": "1.1.3"
+        "version": "1.1.4"
     },
     "keras-targeted-dropout": {
         "cmdline": [],
@@ -26894,7 +26894,7 @@
             "kerastroke.pruning",
             "kerastroke.stroke"
         ],
-        "version": "2.0.3"
+        "version": "2.0.4"
     },
     "kerastuner": {
         "cmdline": [],
@@ -34240,6 +34240,11 @@
         ],
         "version": "0.0.1"
     },
+    "kill-timeout": {
+        "cmdline": [],
+        "modules": [],
+        "version": "0.0.3"
+    },
     "kill601160": {
         "cmdline": [],
         "modules": [
@@ -34678,7 +34683,7 @@
             "test.test_user_entity",
             "test.test_version"
         ],
-        "version": "0.2.1"
+        "version": "0.2.3"
     },
     "kimboot": {
         "cmdline": [],
@@ -35146,12 +35151,15 @@
             "kines.stream_util",
             "kines.util",
             "tests",
-            "tests.test_boto3_client_responses",
+            "tests.aws_client_mocks",
+            "tests.boto3_api_responses",
+            "tests.test_constants",
             "tests.test_kines_cli",
             "tests.test_metrics",
+            "tests.test_read_util",
             "tests.test_util"
         ],
-        "version": "0.0.10"
+        "version": "1.0.0"
     },
     "kinesis": {
         "cmdline": [],
@@ -35833,10 +35841,9 @@
         "cmdline": [],
         "modules": [
             "kinliuren",
-            "kinliuren.kinliuren",
-            "kinliuren.kinliuren_dict"
+            "kinliuren.kinliuren"
         ],
-        "version": "0.0.4.4"
+        "version": "0.0.4.6"
     },
     "kinms": {
         "cmdline": [],
@@ -36476,7 +36483,7 @@
     "kinto": {
         "cmdline": [],
         "modules": [],
-        "version": "13.6.3"
+        "version": "13.6.4"
     },
     "kinto-algolia": {
         "cmdline": [],
@@ -41412,7 +41419,7 @@
         "modules": [
             "kiwipiepy"
         ],
-        "version": "0.7.6"
+        "version": "0.8.0"
     },
     "kiwipy": {
         "cmdline": [],
@@ -43986,7 +43993,7 @@
             "klib.ingest",
             "klib.preprocess"
         ],
-        "version": "0.0.52"
+        "version": "0.0.56"
     },
     "kliff": {
         "cmdline": [
@@ -44231,6 +44238,17 @@
         "cmdline": [],
         "modules": [],
         "version": ""
+    },
+    "klon": {
+        "cmdline": [],
+        "modules": [
+            "klon",
+            "klon.compatibility",
+            "klon.klon",
+            "klon.lxml",
+            "klon.version"
+        ],
+        "version": "1.0.0"
     },
     "klotan": {
         "cmdline": [],
@@ -44757,9 +44775,11 @@
         "modules": [
             "km3io",
             "km3io.daq",
-            "km3io.offline"
+            "km3io.gseagen",
+            "km3io.offline",
+            "km3io.tools"
         ],
-        "version": "0.9.0"
+        "version": "0.9.1"
     },
     "km3learn": {
         "cmdline": [],
@@ -47272,7 +47292,7 @@
             "ko_notification_utils.response",
             "ko_notification_utils.work_weixin"
         ],
-        "version": "0.0.10"
+        "version": "0.0.11"
     },
     "ko-po-check": {
         "cmdline": [
@@ -58944,6 +58964,14 @@
         "modules": [],
         "version": "0.6"
     },
+    "krozark-json-include": {
+        "cmdline": [],
+        "modules": [
+            "json_include",
+            "json_include.json_include"
+        ],
+        "version": "3.1.1"
+    },
     "krpc": {
         "cmdline": [],
         "modules": [
@@ -60225,7 +60253,7 @@
             "kscore.vendored.six",
             "kscore.waiter"
         ],
-        "version": "1.3.29"
+        "version": "1.3.30"
     },
     "ksc-sdk-python-new": {
         "cmdline": [],
@@ -61006,7 +61034,7 @@
             "ksub.utils",
             "ksub.zimuku"
         ],
-        "version": "1.3.19"
+        "version": "1.3.20"
     },
     "ksui": {
         "cmdline": [],
@@ -67064,7 +67092,7 @@
             "kujenga",
             "kujenga.kujenga"
         ],
-        "version": "0.1.0"
+        "version": "0.2.0"
     },
     "kukibanshee": {
         "cmdline": [],
@@ -67951,7 +67979,7 @@
             "mirai.utilles",
             "mirai.utilles.dependencies"
         ],
-        "version": "0.2.25"
+        "version": "0.2.26"
     },
     "kuro": {
         "cmdline": [],
