@@ -6179,6 +6179,15 @@
         ],
         "version": "0.0.6"
     },
+    "qf-common": {
+        "cmdline": [],
+        "modules": [
+            "qf_common",
+            "qf_common.data",
+            "qf_common.test"
+        ],
+        "version": "0.5"
+    },
     "qface": {
         "cmdline": [],
         "modules": [
@@ -7075,6 +7084,16 @@
             "qhsdk.utils.token_process"
         ],
         "version": "0.1.2"
+    },
+    "qhub": {
+        "cmdline": [],
+        "modules": [
+            "qhub",
+            "qhub.tljh",
+            "qhub.tljh.digitalocean",
+            "qhub.utils"
+        ],
+        "version": "0.0.1"
     },
     "qhue": {
         "cmdline": [],
@@ -9420,7 +9439,7 @@
     "qiskit": {
         "cmdline": [],
         "modules": [],
-        "version": "0.17.0"
+        "version": "0.18.0"
     },
     "qiskit-addon-jku": {
         "cmdline": [],
@@ -9502,7 +9521,7 @@
             "aer.utils.qobj_utils",
             "aer.version"
         ],
-        "version": "0.4.1"
+        "version": "0.5.0"
     },
     "qiskit-aer-gpu": {
         "cmdline": [],
@@ -10112,8 +10131,13 @@
     "qiskit-ignis": {
         "cmdline": [],
         "modules": [
+            "docs.conf",
             "qiskit.ignis",
             "qiskit.ignis.characterization",
+            "qiskit.ignis.characterization.calibrations",
+            "qiskit.ignis.characterization.calibrations.fitters",
+            "qiskit.ignis.characterization.calibrations.ibmq_utils",
+            "qiskit.ignis.characterization.calibrations.pulse_schedules",
             "qiskit.ignis.characterization.characterization_utils",
             "qiskit.ignis.characterization.coherence",
             "qiskit.ignis.characterization.coherence.circuits",
@@ -10127,24 +10151,42 @@
             "qiskit.ignis.characterization.hamiltonian.fitters",
             "qiskit.ignis.logging",
             "qiskit.ignis.logging.ignis_logging",
+            "qiskit.ignis.measurement",
+            "qiskit.ignis.measurement.discriminator",
+            "qiskit.ignis.measurement.discriminator.discriminators",
+            "qiskit.ignis.measurement.discriminator.filters",
+            "qiskit.ignis.measurement.discriminator.iq_discriminators",
             "qiskit.ignis.mitigation",
             "qiskit.ignis.mitigation.measurement",
             "qiskit.ignis.mitigation.measurement.circuits",
             "qiskit.ignis.mitigation.measurement.filters",
             "qiskit.ignis.mitigation.measurement.fitters",
+            "qiskit.ignis.utils",
             "qiskit.ignis.verification",
+            "qiskit.ignis.verification.accreditation",
+            "qiskit.ignis.verification.accreditation.circuits",
+            "qiskit.ignis.verification.accreditation.fitters",
+            "qiskit.ignis.verification.accreditation.qotp",
+            "qiskit.ignis.verification.entanglement",
+            "qiskit.ignis.verification.entanglement.analysis",
+            "qiskit.ignis.verification.entanglement.linear",
+            "qiskit.ignis.verification.entanglement.parallelize",
             "qiskit.ignis.verification.quantum_volume",
             "qiskit.ignis.verification.quantum_volume.circuits",
             "qiskit.ignis.verification.quantum_volume.fitters",
             "qiskit.ignis.verification.randomized_benchmarking",
             "qiskit.ignis.verification.randomized_benchmarking.Clifford",
+            "qiskit.ignis.verification.randomized_benchmarking.basic_utils",
             "qiskit.ignis.verification.randomized_benchmarking.circuits",
             "qiskit.ignis.verification.randomized_benchmarking.clifford_utils",
+            "qiskit.ignis.verification.randomized_benchmarking.dihedral",
+            "qiskit.ignis.verification.randomized_benchmarking.dihedral_utils",
             "qiskit.ignis.verification.randomized_benchmarking.fitters",
             "qiskit.ignis.verification.randomized_benchmarking.rb_utils",
             "qiskit.ignis.verification.tomography",
             "qiskit.ignis.verification.tomography.basis",
             "qiskit.ignis.verification.tomography.basis.circuits",
+            "qiskit.ignis.verification.tomography.basis.gatesetbasis",
             "qiskit.ignis.verification.tomography.basis.paulibasis",
             "qiskit.ignis.verification.tomography.basis.sicbasis",
             "qiskit.ignis.verification.tomography.basis.tomographybasis",
@@ -10152,6 +10194,7 @@
             "qiskit.ignis.verification.tomography.fitters",
             "qiskit.ignis.verification.tomography.fitters.base_fitter",
             "qiskit.ignis.verification.tomography.fitters.cvx_fit",
+            "qiskit.ignis.verification.tomography.fitters.gateset_fitter",
             "qiskit.ignis.verification.tomography.fitters.lstsq_fit",
             "qiskit.ignis.verification.tomography.fitters.process_fitter",
             "qiskit.ignis.verification.tomography.fitters.state_fitter",
@@ -10161,7 +10204,7 @@
             "qiskit.ignis.version",
             "tools.build_aer"
         ],
-        "version": "0.2.0"
+        "version": "0.3.0"
     },
     "qiskit-jku-provider": {
         "cmdline": [],
@@ -10191,17 +10234,29 @@
             "qiskit.assembler.assemble_circuits",
             "qiskit.assembler.assemble_schedules",
             "qiskit.assembler.disassemble",
-            "qiskit.assembler.models",
             "qiskit.assembler.run_config",
             "qiskit.circuit",
             "qiskit.circuit.add_control",
             "qiskit.circuit.bit",
             "qiskit.circuit.classicalregister",
             "qiskit.circuit.controlledgate",
+            "qiskit.circuit.equivalence",
+            "qiskit.circuit.equivalence_library",
             "qiskit.circuit.exceptions",
             "qiskit.circuit.gate",
             "qiskit.circuit.instruction",
             "qiskit.circuit.instructionset",
+            "qiskit.circuit.library",
+            "qiskit.circuit.library.arithmetic",
+            "qiskit.circuit.library.arithmetic.functional_pauli_rotations",
+            "qiskit.circuit.library.arithmetic.integer_comparator",
+            "qiskit.circuit.library.arithmetic.linear_pauli_rotations",
+            "qiskit.circuit.library.arithmetic.piecewise_linear_pauli_rotations",
+            "qiskit.circuit.library.arithmetic.polynomial_pauli_rotations",
+            "qiskit.circuit.library.arithmetic.weighted_adder",
+            "qiskit.circuit.library.boolean_logic",
+            "qiskit.circuit.library.fourier_checking",
+            "qiskit.circuit.library.quantum_volume",
             "qiskit.circuit.measure",
             "qiskit.circuit.parameter",
             "qiskit.circuit.parameterexpression",
@@ -10228,18 +10283,26 @@
             "qiskit.dagcircuit.dagcircuit",
             "qiskit.dagcircuit.dagnode",
             "qiskit.dagcircuit.exceptions",
+            "qiskit.dagcircuit.networkx_dagcircuit",
+            "qiskit.dagcircuit.retworkx_dagcircuit",
             "qiskit.exceptions",
             "qiskit.execute",
             "qiskit.extensions",
             "qiskit.extensions.exceptions",
             "qiskit.extensions.quantum_initializer",
             "qiskit.extensions.quantum_initializer.diag",
+            "qiskit.extensions.quantum_initializer.diagonal",
             "qiskit.extensions.quantum_initializer.initializer",
             "qiskit.extensions.quantum_initializer.isometry",
             "qiskit.extensions.quantum_initializer.mcg_up_to_diagonal",
             "qiskit.extensions.quantum_initializer.squ",
+            "qiskit.extensions.quantum_initializer.uc",
+            "qiskit.extensions.quantum_initializer.uc_pauli_rot",
             "qiskit.extensions.quantum_initializer.ucg",
             "qiskit.extensions.quantum_initializer.ucrot",
+            "qiskit.extensions.quantum_initializer.ucrx",
+            "qiskit.extensions.quantum_initializer.ucry",
+            "qiskit.extensions.quantum_initializer.ucrz",
             "qiskit.extensions.quantum_initializer.ucx",
             "qiskit.extensions.quantum_initializer.ucy",
             "qiskit.extensions.quantum_initializer.ucz",
@@ -10247,6 +10310,7 @@
             "qiskit.extensions.simulator.snapshot",
             "qiskit.extensions.standard",
             "qiskit.extensions.standard.barrier",
+            "qiskit.extensions.standard.boolean_logical_gates",
             "qiskit.extensions.standard.ccx",
             "qiskit.extensions.standard.ch",
             "qiskit.extensions.standard.crx",
@@ -10258,18 +10322,22 @@
             "qiskit.extensions.standard.cx",
             "qiskit.extensions.standard.cy",
             "qiskit.extensions.standard.cz",
+            "qiskit.extensions.standard.dcx",
+            "qiskit.extensions.standard.equivalence_library",
             "qiskit.extensions.standard.h",
+            "qiskit.extensions.standard.i",
             "qiskit.extensions.standard.iden",
+            "qiskit.extensions.standard.iswap",
             "qiskit.extensions.standard.ms",
             "qiskit.extensions.standard.multi_control_rotation_gates",
             "qiskit.extensions.standard.multi_control_toffoli_gate",
-            "qiskit.extensions.standard.multi_control_u1_gate",
             "qiskit.extensions.standard.r",
-            "qiskit.extensions.standard.relative_phase_toffoli",
             "qiskit.extensions.standard.rx",
             "qiskit.extensions.standard.rxx",
             "qiskit.extensions.standard.ry",
+            "qiskit.extensions.standard.ryy",
             "qiskit.extensions.standard.rz",
+            "qiskit.extensions.standard.rzx",
             "qiskit.extensions.standard.rzz",
             "qiskit.extensions.standard.s",
             "qiskit.extensions.standard.swap",
@@ -10304,11 +10372,6 @@
             "qiskit.providers.providerutils",
             "qiskit.pulse",
             "qiskit.pulse.channels",
-            "qiskit.pulse.channels.channels",
-            "qiskit.pulse.channels.pulse_channel_spec",
-            "qiskit.pulse.channels.pulse_channels",
-            "qiskit.pulse.channels.qubit",
-            "qiskit.pulse.cmd_def",
             "qiskit.pulse.commands",
             "qiskit.pulse.commands.acquire",
             "qiskit.pulse.commands.command",
@@ -10318,25 +10381,34 @@
             "qiskit.pulse.commands.meas_opts",
             "qiskit.pulse.commands.parametric_pulses",
             "qiskit.pulse.commands.persistent_value",
-            "qiskit.pulse.commands.pulse_command",
             "qiskit.pulse.commands.pulse_decorators",
             "qiskit.pulse.commands.sample_pulse",
             "qiskit.pulse.commands.snapshot",
             "qiskit.pulse.configuration",
             "qiskit.pulse.exceptions",
             "qiskit.pulse.instruction_schedule_map",
+            "qiskit.pulse.instructions",
+            "qiskit.pulse.instructions.acquire",
+            "qiskit.pulse.instructions.delay",
+            "qiskit.pulse.instructions.frequency",
+            "qiskit.pulse.instructions.instruction",
+            "qiskit.pulse.instructions.phase",
+            "qiskit.pulse.instructions.play",
+            "qiskit.pulse.instructions.snapshot",
             "qiskit.pulse.interfaces",
             "qiskit.pulse.parser",
             "qiskit.pulse.pulse_lib",
             "qiskit.pulse.pulse_lib.continuous",
             "qiskit.pulse.pulse_lib.discrete",
+            "qiskit.pulse.pulse_lib.parametric_pulses",
+            "qiskit.pulse.pulse_lib.pulse",
+            "qiskit.pulse.pulse_lib.sample_pulse",
             "qiskit.pulse.pulse_lib.samplers",
             "qiskit.pulse.pulse_lib.samplers.decorators",
             "qiskit.pulse.pulse_lib.samplers.strategies",
             "qiskit.pulse.reschedule",
             "qiskit.pulse.schedule",
             "qiskit.pulse.timeslots",
-            "qiskit.pulse.utils",
             "qiskit.qasm",
             "qiskit.qasm.exceptions",
             "qiskit.qasm.node",
@@ -10368,6 +10440,8 @@
             "qiskit.qasm.node.reset",
             "qiskit.qasm.node.unaryoperator",
             "qiskit.qasm.node.universalunitary",
+            "qiskit.qasm.pygments",
+            "qiskit.qasm.pygments.lexer",
             "qiskit.qasm.qasm",
             "qiskit.qasm.qasmlexer",
             "qiskit.qasm.qasmparser",
@@ -10378,8 +10452,8 @@
             "qiskit.qobj.models",
             "qiskit.qobj.models.base",
             "qiskit.qobj.models.pulse",
-            "qiskit.qobj.models.qasm",
-            "qiskit.qobj.qobj",
+            "qiskit.qobj.pulse_qobj",
+            "qiskit.qobj.qasm_qobj",
             "qiskit.qobj.utils",
             "qiskit.quantum_info",
             "qiskit.quantum_info.analysis",
@@ -10397,22 +10471,34 @@
             "qiskit.quantum_info.operators.channel.stinespring",
             "qiskit.quantum_info.operators.channel.superop",
             "qiskit.quantum_info.operators.channel.transformations",
+            "qiskit.quantum_info.operators.custom_iterator",
             "qiskit.quantum_info.operators.measures",
             "qiskit.quantum_info.operators.operator",
             "qiskit.quantum_info.operators.pauli",
             "qiskit.quantum_info.operators.predicates",
             "qiskit.quantum_info.operators.quaternion",
+            "qiskit.quantum_info.operators.random",
+            "qiskit.quantum_info.operators.scalar_op",
+            "qiskit.quantum_info.operators.symplectic",
+            "qiskit.quantum_info.operators.symplectic.clifford",
+            "qiskit.quantum_info.operators.symplectic.clifford_circuits",
+            "qiskit.quantum_info.operators.symplectic.pauli_table",
+            "qiskit.quantum_info.operators.symplectic.pauli_utils",
+            "qiskit.quantum_info.operators.symplectic.random",
+            "qiskit.quantum_info.operators.symplectic.sparse_pauli_op",
+            "qiskit.quantum_info.operators.symplectic.stabilizer_table",
             "qiskit.quantum_info.random",
-            "qiskit.quantum_info.random.utils",
             "qiskit.quantum_info.states",
             "qiskit.quantum_info.states.counts",
             "qiskit.quantum_info.states.densitymatrix",
             "qiskit.quantum_info.states.measures",
             "qiskit.quantum_info.states.quantum_state",
+            "qiskit.quantum_info.states.random",
             "qiskit.quantum_info.states.states",
             "qiskit.quantum_info.states.statevector",
             "qiskit.quantum_info.states.utils",
             "qiskit.quantum_info.synthesis",
+            "qiskit.quantum_info.synthesis.clifford_decompose",
             "qiskit.quantum_info.synthesis.ion_decompose",
             "qiskit.quantum_info.synthesis.local_invariance",
             "qiskit.quantum_info.synthesis.one_qubit_decompose",
@@ -10489,6 +10575,7 @@
             "qiskit.tools.jupyter.job_watcher",
             "qiskit.tools.jupyter.job_widgets",
             "qiskit.tools.jupyter.jupyter_magics",
+            "qiskit.tools.jupyter.library",
             "qiskit.tools.jupyter.progressbar",
             "qiskit.tools.jupyter.version_table",
             "qiskit.tools.jupyter.watcher_monitor",
@@ -10505,7 +10592,6 @@
             "qiskit.transpiler.exceptions",
             "qiskit.transpiler.fencedobjs",
             "qiskit.transpiler.layout",
-            "qiskit.transpiler.models",
             "qiskit.transpiler.passes",
             "qiskit.transpiler.passes.analysis",
             "qiskit.transpiler.passes.analysis.count_ops",
@@ -10544,9 +10630,14 @@
             "qiskit.transpiler.passes.optimization.remove_diagonal_gates_before_measure",
             "qiskit.transpiler.passes.optimization.remove_reset_in_zero_state",
             "qiskit.transpiler.passes.routing",
+            "qiskit.transpiler.passes.routing.algorithms",
+            "qiskit.transpiler.passes.routing.algorithms.token_swapper",
+            "qiskit.transpiler.passes.routing.algorithms.types",
+            "qiskit.transpiler.passes.routing.algorithms.util",
             "qiskit.transpiler.passes.routing.basic_swap",
             "qiskit.transpiler.passes.routing.cython",
             "qiskit.transpiler.passes.routing.cython.stochastic_swap",
+            "qiskit.transpiler.passes.routing.layout_transformation",
             "qiskit.transpiler.passes.routing.lookahead_swap",
             "qiskit.transpiler.passes.routing.stochastic_swap",
             "qiskit.transpiler.passes.utils",
@@ -10559,6 +10650,7 @@
             "qiskit.transpiler.passes.utils.merge_adjacent_barriers",
             "qiskit.transpiler.passes.utils.remove_final_measurements",
             "qiskit.transpiler.passmanager",
+            "qiskit.transpiler.passmanager_config",
             "qiskit.transpiler.preset_passmanagers",
             "qiskit.transpiler.preset_passmanagers.level0",
             "qiskit.transpiler.preset_passmanagers.level1",
@@ -10568,8 +10660,6 @@
             "qiskit.transpiler.runningpassmanager",
             "qiskit.transpiler.synthesis",
             "qiskit.transpiler.synthesis.graysynth",
-            "qiskit.transpiler.transpile_circuit",
-            "qiskit.transpiler.transpile_config",
             "qiskit.user_config",
             "qiskit.util",
             "qiskit.validation",
@@ -10611,9 +10701,10 @@
             "qiskit.visualization.text",
             "qiskit.visualization.tools",
             "qiskit.visualization.tools.pi_check",
+            "qiskit.visualization.transition_visualization",
             "qiskit.visualization.utils"
         ],
-        "version": "0.12.0"
+        "version": "0.13.0"
     },
     "qisquick": {
         "cmdline": [],
@@ -15458,9 +15549,11 @@
         "cmdline": [],
         "modules": [
             "qt_thread_updater",
-            "qt_thread_updater.__meta__"
+            "qt_thread_updater.__meta__",
+            "qt_thread_updater.global_utils",
+            "qt_thread_updater.thread_updater"
         ],
-        "version": "0.0.1"
+        "version": "1.0.0"
     },
     "qt-widgetstyler": {
         "cmdline": [],
@@ -16925,7 +17018,7 @@
             "qtoggleserver.web.quicontext",
             "qtoggleserver.web.server"
         ],
-        "version": "0.17.0"
+        "version": "0.17.1"
     },
     "qtoggleserver-dallastemp": {
         "cmdline": [],
@@ -16962,7 +17055,7 @@
             "qtoggleserver.paradox.ports.typing",
             "qtoggleserver.paradox.ports.zone"
         ],
-        "version": "1.1.9"
+        "version": "1.2.0"
     },
     "qtoggleserver-pushover": {
         "cmdline": [],
@@ -20074,6 +20167,7 @@
             "QUANTAXIS.QAFetch.QAKQ",
             "QUANTAXIS.QAFetch.QAOKEx",
             "QUANTAXIS.QAFetch.QAQAWEB",
+            "QUANTAXIS.QAFetch.QAQUANTAXISWEB",
             "QUANTAXIS.QAFetch.QAQuery",
             "QUANTAXIS.QAFetch.QAQuery_Advance",
             "QUANTAXIS.QAFetch.QAQuery_Async",
@@ -20176,7 +20270,7 @@
             "QUANTAXIS.QAUtil.QAcrypto",
             "QUANTAXIS.QAUtil.host"
         ],
-        "version": "1.9.12"
+        "version": "1.9.14"
     },
     "quantaxis-crawly": {
         "cmdline": [],
@@ -24046,6 +24140,19 @@
             "quasildr.version"
         ],
         "version": "0.2.1"
+    },
+    "quasimodo": {
+        "cmdline": [],
+        "modules": [
+            "quasimodo",
+            "quasimodo._version",
+            "quasimodo.amqp",
+            "quasimodo.base",
+            "quasimodo.hunchback",
+            "quasimodo.mqtt_websocket",
+            "quasimodo.stubs"
+        ],
+        "version": "0.6.2"
     },
     "quasinet": {
         "cmdline": [],
@@ -29472,7 +29579,7 @@
             "quisk.softrock.widgets_tx",
             "quisk.softrock_tune_vfo"
         ],
-        "version": "4.1.55"
+        "version": "4.1.56"
     },
     "quisk-lppan-k3": {
         "cmdline": [],
