@@ -3462,11 +3462,17 @@
             "jamboree.handlers.abstracted.search.meta",
             "jamboree.handlers.base",
             "jamboree.handlers.complex",
-            "jamboree.handlers.complex.backtest",
+            "jamboree.handlers.complex.backtestable",
+            "jamboree.handlers.complex.backtestable.db",
+            "jamboree.handlers.complex.backtestable.default",
+            "jamboree.handlers.complex.backtestable.default.db",
+            "jamboree.handlers.complex.backtestable.default.files",
+            "jamboree.handlers.complex.backtestable.files",
+            "jamboree.handlers.complex.engines",
+            "jamboree.handlers.complex.engines.files",
             "jamboree.handlers.complex.meta",
             "jamboree.handlers.complex.metric",
             "jamboree.handlers.complex.model",
-            "jamboree.handlers.complex.requirements",
             "jamboree.handlers.default",
             "jamboree.handlers.default.blob",
             "jamboree.handlers.default.data",
@@ -3480,11 +3486,14 @@
             "jamboree.middleware",
             "jamboree.middleware.procedures",
             "jamboree.middleware.procedures.core",
+            "jamboree.middleware.procedures.management",
+            "jamboree.middleware.procedures.management.models",
+            "jamboree.middleware.procedures.management.strategy",
             "jamboree.middleware.procedures.models",
-            "jamboree.middleware.procedures.models.cremey",
-            "jamboree.middleware.procedures.models.learn",
-            "jamboree.middleware.procedures.models.ptorch",
-            "jamboree.middleware.procedures.models.tfkeras",
+            "jamboree.middleware.procedures.models._creme",
+            "jamboree.middleware.procedures.models._flow",
+            "jamboree.middleware.procedures.models._sklearn",
+            "jamboree.middleware.procedures.models._torch",
             "jamboree.middleware.processors",
             "jamboree.middleware.processors.base",
             "jamboree.middleware.processors.resample",
@@ -3504,8 +3513,10 @@
             "jamboree.utils.context.main",
             "jamboree.utils.core",
             "jamboree.utils.core.fhash",
+            "jamboree.utils.core.ordefault",
             "jamboree.utils.helper",
             "jamboree.utils.manipulators",
+            "jamboree.utils.settings",
             "jamboree.utils.support",
             "jamboree.utils.support.events.cereal",
             "jamboree.utils.support.events.clock",
@@ -3524,7 +3535,7 @@
             "jamboree.utils.support.storage.cereal",
             "jamboree.utils.support.storage.checksums"
         ],
-        "version": "0.5.6"
+        "version": "0.5.8"
     },
     "jamdict": {
         "cmdline": [],
@@ -8359,9 +8370,11 @@
             "jax.api_util",
             "jax.config",
             "jax.core",
+            "jax.custom_derivatives",
             "jax.dlpack",
             "jax.dtypes",
             "jax.experimental",
+            "jax.experimental.callback",
             "jax.experimental.jet",
             "jax.experimental.loops",
             "jax.experimental.ode",
@@ -8397,6 +8410,7 @@
             "jax.numpy.fft",
             "jax.numpy.lax_numpy",
             "jax.numpy.linalg",
+            "jax.numpy.polynomial",
             "jax.numpy.vectorize",
             "jax.ops",
             "jax.ops.scatter",
@@ -8406,6 +8420,9 @@
             "jax.scipy",
             "jax.scipy.linalg",
             "jax.scipy.ndimage",
+            "jax.scipy.signal",
+            "jax.scipy.sparse",
+            "jax.scipy.sparse.linalg",
             "jax.scipy.special",
             "jax.scipy.stats",
             "jax.scipy.stats.bernoulli",
@@ -8432,7 +8449,7 @@
             "jax.util",
             "jax.version"
         ],
-        "version": "0.1.62"
+        "version": "0.1.63"
     },
     "jax-fixedpoint": {
         "cmdline": [],
@@ -8738,6 +8755,14 @@
             "jb.recipe.supervisor"
         ],
         "version": "0.0.1"
+    },
+    "jb4jupyter": {
+        "cmdline": [],
+        "modules": [
+            "jb4jupyter",
+            "jb4jupyter.plotpretty"
+        ],
+        "version": "0.13"
     },
     "jbaker-gaeutils": {
         "cmdline": [],
@@ -9186,7 +9211,7 @@
             "tests.test_xml",
             "tests.test_yaml"
         ],
-        "version": "1.10.3"
+        "version": "1.10.4"
     },
     "jc-pytools": {
         "cmdline": [],
@@ -15845,7 +15870,7 @@
             "jekyllnb.jekyllnb",
             "jekyllnb.preprocessor"
         ],
-        "version": "0.2.0"
+        "version": "0.3.0"
     },
     "jelapi": {
         "cmdline": [],
@@ -15878,7 +15903,7 @@
             "tests.test_create_json",
             "tests.test_main"
         ],
-        "version": "1.2.4"
+        "version": "1.2.5"
     },
     "jelly": {
         "cmdline": [],
@@ -21066,7 +21091,7 @@
             "jiminy_py.state",
             "jiminy_py.viewer"
         ],
-        "version": "1.2.14"
+        "version": "1.2.16"
     },
     "jimit": {
         "cmdline": [],
@@ -21940,7 +21965,7 @@
             "jinja2.utils",
             "jinja2.visitor"
         ],
-        "version": "2.11.1"
+        "version": "2.11.2"
     },
     "jinja2-alchemy-starter": {
         "cmdline": [],
@@ -34031,9 +34056,10 @@
             "jqi.error",
             "jqi.eval",
             "jqi.lexer",
-            "jqi.parser"
+            "jqi.parser",
+            "jqi.pattern"
         ],
-        "version": "0.0.12"
+        "version": "0.0.13"
     },
     "jqk": {
         "cmdline": [],
@@ -40234,7 +40260,7 @@
             "json_tricks.np_utils",
             "json_tricks.utils"
         ],
-        "version": "3.15.1"
+        "version": "3.15.2"
     },
     "json-trim": {
         "cmdline": [],
@@ -42698,21 +42724,8 @@
     },
     "jsonpickle": {
         "cmdline": [],
-        "modules": [
-            "jsonpickle",
-            "jsonpickle.backend",
-            "jsonpickle.compat",
-            "jsonpickle.ext",
-            "jsonpickle.ext.numpy",
-            "jsonpickle.ext.pandas",
-            "jsonpickle.handlers",
-            "jsonpickle.pickler",
-            "jsonpickle.tags",
-            "jsonpickle.unpickler",
-            "jsonpickle.util",
-            "jsonpickle.version"
-        ],
-        "version": "1.3"
+        "modules": [],
+        "version": "1.4"
     },
     "jsonpickler": {
         "cmdline": [],
