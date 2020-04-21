@@ -6830,6 +6830,10 @@
             "kaf_pas.ckk.migrations.0220_auto_20200330_1356",
             "kaf_pas.ckk.migrations.0221_item_qty",
             "kaf_pas.ckk.migrations.0222_auto_20200413_1454",
+            "kaf_pas.ckk.migrations.0223_item_qty_view",
+            "kaf_pas.ckk.migrations.0224_auto_20200417_1420",
+            "kaf_pas.ckk.migrations.0225_item_document",
+            "kaf_pas.ckk.migrations.0226_auto_20200421_1007",
             "kaf_pas.ckk.models",
             "kaf_pas.ckk.models.attr_type",
             "kaf_pas.ckk.models.combineItems",
@@ -6839,6 +6843,7 @@
             "kaf_pas.ckk.models.item",
             "kaf_pas.ckk.models.item_cdw_pdf_view",
             "kaf_pas.ckk.models.item_complex_view",
+            "kaf_pas.ckk.models.item_document",
             "kaf_pas.ckk.models.item_flat_view",
             "kaf_pas.ckk.models.item_image_refs",
             "kaf_pas.ckk.models.item_line",
@@ -6846,6 +6851,7 @@
             "kaf_pas.ckk.models.item_location",
             "kaf_pas.ckk.models.item_operations_view",
             "kaf_pas.ckk.models.item_qty",
+            "kaf_pas.ckk.models.item_qty_view",
             "kaf_pas.ckk.models.item_refs",
             "kaf_pas.ckk.models.item_refs_hierarcy",
             "kaf_pas.ckk.models.item_view",
@@ -6869,11 +6875,13 @@
             "kaf_pas.ckk.urls.ed_izm",
             "kaf_pas.ckk.urls.files_askon",
             "kaf_pas.ckk.urls.item",
+            "kaf_pas.ckk.urls.item_document",
             "kaf_pas.ckk.urls.item_flat_view",
             "kaf_pas.ckk.urls.item_image_refs",
             "kaf_pas.ckk.urls.item_line",
             "kaf_pas.ckk.urls.item_location",
             "kaf_pas.ckk.urls.item_qty",
+            "kaf_pas.ckk.urls.item_qty_view",
             "kaf_pas.ckk.urls.item_refs",
             "kaf_pas.ckk.urls.item_refs_hierarcy",
             "kaf_pas.ckk.urls.item_view",
@@ -6889,11 +6897,13 @@
             "kaf_pas.ckk.views.ed_izm",
             "kaf_pas.ckk.views.files_askon",
             "kaf_pas.ckk.views.item",
+            "kaf_pas.ckk.views.item_document",
             "kaf_pas.ckk.views.item_flat_view",
             "kaf_pas.ckk.views.item_image_refs",
             "kaf_pas.ckk.views.item_line",
             "kaf_pas.ckk.views.item_location",
             "kaf_pas.ckk.views.item_qty",
+            "kaf_pas.ckk.views.item_qty_view",
             "kaf_pas.ckk.views.item_refs",
             "kaf_pas.ckk.views.item_refs_hierarcy",
             "kaf_pas.ckk.views.item_view",
@@ -6965,9 +6975,13 @@
             "kaf_pas.kd.management",
             "kaf_pas.kd.management.commands",
             "kaf_pas.kd.management.commands.get_m_view",
+            "kaf_pas.kd.management.commands.make_cdw",
             "kaf_pas.kd.management.commands.make_lotsman_m_view",
+            "kaf_pas.kd.management.commands.make_pdf",
+            "kaf_pas.kd.management.commands.make_spw",
             "kaf_pas.kd.management.commands.refresh_kd_documents_attributes",
             "kaf_pas.kd.management.commands.refresh_kd_documents_thumb",
+            "kaf_pas.kd.management.commands.replace_attr_with_whitespace",
             "kaf_pas.kd.management.commands.test",
             "kaf_pas.kd.migrations",
             "kaf_pas.kd.migrations.0001_initial",
@@ -7122,7 +7136,6 @@
             "kaf_pas.kd.models.document_attr_cross",
             "kaf_pas.kd.models.document_attributes",
             "kaf_pas.kd.models.document_attributes_view",
-            "kaf_pas.kd.models.document_attrs",
             "kaf_pas.kd.models.document_attrs_view",
             "kaf_pas.kd.models.documents",
             "kaf_pas.kd.models.documents_ext",
@@ -7175,6 +7188,7 @@
             "kaf_pas.kd.urls.document_attributes_STMP_120",
             "kaf_pas.kd.urls.document_attributes_STMP_2",
             "kaf_pas.kd.urls.document_attributes__Version",
+            "kaf_pas.kd.urls.document_attrs_view",
             "kaf_pas.kd.urls.documents",
             "kaf_pas.kd.urls.documents_history",
             "kaf_pas.kd.urls.documents_mview",
@@ -7213,6 +7227,7 @@
             "kaf_pas.kd.views.document_attributes_STMP_120",
             "kaf_pas.kd.views.document_attributes_STMP_2",
             "kaf_pas.kd.views.document_attributes__Version",
+            "kaf_pas.kd.views.document_attrs_view",
             "kaf_pas.kd.views.documents",
             "kaf_pas.kd.views.documents_history",
             "kaf_pas.kd.views.documents_mview",
@@ -7964,7 +7979,7 @@
             "kaf_pas.system.views",
             "kaf_pas.system.views.contants"
         ],
-        "version": "0.0.97"
+        "version": "0.0.98"
     },
     "kafe": {
         "cmdline": [],
@@ -8350,22 +8365,6 @@
             "kafka_client_decorators.kafka.producer_parameter"
         ],
         "version": "0.9.6"
-    },
-    "kafka-client-decorators-cdsedson": {
-        "cmdline": [],
-        "modules": [
-            "kafka_client_decorators",
-            "kafka_client_decorators.decorators",
-            "kafka_client_decorators.kafka",
-            "kafka_client_decorators.kafka.client",
-            "kafka_client_decorators.kafka.connection_parameter",
-            "kafka_client_decorators.kafka.consumer_job",
-            "kafka_client_decorators.kafka.consumer_parameter",
-            "kafka_client_decorators.kafka.logging_helper",
-            "kafka_client_decorators.kafka.producer",
-            "kafka_client_decorators.kafka.producer_parameter"
-        ],
-        "version": "0.0.1"
     },
     "kafka-connect-healthcheck": {
         "cmdline": [],
@@ -13857,6 +13856,16 @@
         ],
         "version": "0.4.5"
     },
+    "kanowandasync": {
+        "cmdline": [],
+        "modules": [
+            "kanowandasync",
+            "kanowandasync.constants",
+            "kanowandasync.shop",
+            "kanowandasync.wand"
+        ],
+        "version": "0.1"
+    },
     "kanpai": {
         "cmdline": [],
         "modules": [
@@ -14301,7 +14310,7 @@
             "tests.test_vault",
             "tests.test_version"
         ],
-        "version": "0.27.1"
+        "version": "0.27.2"
     },
     "kaplanmeier": {
         "cmdline": [],
@@ -15015,7 +15024,7 @@
             "karateclub.utils.treefeatures",
             "karateclub.utils.walker"
         ],
-        "version": "0.45.31"
+        "version": "1.0.0"
     },
     "karatsuba": {
         "cmdline": [],
@@ -15767,7 +15776,7 @@
             "kart.miners",
             "kart.renderers"
         ],
-        "version": "0.4.3"
+        "version": "0.5.0"
     },
     "karta": {
         "cmdline": [],
@@ -17351,7 +17360,7 @@
             "katversion.build",
             "katversion.version"
         ],
-        "version": "0.9"
+        "version": "1.0"
     },
     "katzj-test": {
         "cmdline": [],
@@ -18876,7 +18885,7 @@
         "modules": [
             "kbg"
         ],
-        "version": "0.0.4"
+        "version": "0.0.5"
     },
     "kbhmap": {
         "cmdline": [],
@@ -19168,7 +19177,7 @@
         "modules": [
             "kcleaner"
         ],
-        "version": "0.3.2"
+        "version": "0.3.3"
     },
     "kcli": {
         "cmdline": [],
@@ -26594,7 +26603,7 @@
             "keras_trainer.run",
             "keras_trainer.trainer"
         ],
-        "version": "1.1.1"
+        "version": "1.2.2"
     },
     "keras-trans-mask": {
         "cmdline": [],
@@ -31973,6 +31982,14 @@
         ],
         "version": "5.0"
     },
+    "kgbase": {
+        "cmdline": [],
+        "modules": [
+            "kgbase",
+            "kgbase.Query"
+        ],
+        "version": "0.17"
+    },
     "kgd": {
         "cmdline": [],
         "modules": [
@@ -34391,6 +34408,14 @@
         ],
         "version": "0.2.0"
     },
+    "kigo": {
+        "cmdline": [],
+        "modules": [
+            "kigo",
+            "kigo.service"
+        ],
+        "version": "0.0.7"
+    },
     "kii": {
         "cmdline": [],
         "modules": [
@@ -34742,12 +34767,13 @@
             "kikit.defs",
             "kikit.doc",
             "kikit.export",
+            "kikit.modify",
             "kikit.panelize",
             "kikit.present",
             "kikit.substrate",
             "kikit.ui"
         ],
-        "version": "0.2.4"
+        "version": "0.3"
     },
     "kikola": {
         "cmdline": [],
@@ -36506,9 +36532,10 @@
         "cmdline": [],
         "modules": [
             "kinliuren",
-            "kinliuren.kinliuren"
+            "kinliuren.kinliuren",
+            "kinliuren.liurendict"
         ],
-        "version": "0.0.5.0"
+        "version": "0.0.6.2"
     },
     "kinms": {
         "cmdline": [],
@@ -42426,9 +42453,10 @@
     "kiwixstorage": {
         "cmdline": [],
         "modules": [
-            "kiwixstorage"
+            "kiwixstorage",
+            "kiwixstorage.test_credentials"
         ],
-        "version": "0.1"
+        "version": "0.2"
     },
     "kiwizen": {
         "cmdline": [],
@@ -47237,7 +47265,7 @@
             "knoema.api_definitions",
             "knoema.data_reader"
         ],
-        "version": "1.0.23b1"
+        "version": "1.0.23"
     },
     "knopt": {
         "cmdline": [],
@@ -49303,7 +49331,7 @@
             "kodexa_cloud",
             "kodexa_cloud.model"
         ],
-        "version": "1.1.131"
+        "version": "1.1.135"
     },
     "kodi-addon-checker": {
         "cmdline": [],
@@ -49757,9 +49785,10 @@
             "koji_cli.commands",
             "koji_cli.lib",
             "koji_cli_plugins.runroot",
-            "koji_cli_plugins.save_failed_tree"
+            "koji_cli_plugins.save_failed_tree",
+            "koji_cli_plugins.sidetag_cli"
         ],
-        "version": "1.20.1"
+        "version": "1.21.0"
     },
     "koji-simple-calculator": {
         "cmdline": [],
@@ -54210,24 +54239,35 @@
     "konduit": {
         "cmdline": [],
         "modules": [
+            "cli",
+            "examples",
             "konduit",
+            "konduit.base_inference",
             "konduit.client",
             "konduit.inference",
             "konduit.json_utils",
+            "konduit.load",
             "konduit.server",
             "konduit.utils",
             "tests",
+            "tests.simple",
             "tests.test_bert_serving",
             "tests.test_client",
             "tests.test_client_serde",
+            "tests.test_docs",
             "tests.test_json",
             "tests.test_json_utils",
+            "tests.test_load_yaml",
+            "tests.test_pid_storage",
             "tests.test_python_serving",
-            "tests.test_start",
+            "tests.test_python_serving_file",
+            "tests.test_setup_and_run",
+            "tests.test_tf_yaml_inference",
             "tests.test_transform_process",
-            "tests.test_transform_process_arrow"
+            "tests.test_utils",
+            "tests.utils"
         ],
-        "version": "0.1.2"
+        "version": "0.1.5"
     },
     "kondunite": {
         "cmdline": [],
@@ -54273,7 +54313,7 @@
             "konectipy",
             "konectipy.konectipy"
         ],
-        "version": "0.0.4"
+        "version": "0.0.5"
     },
     "konekuta": {
         "cmdline": [],
@@ -56044,31 +56084,37 @@
             "kornia",
             "kornia.augmentation",
             "kornia.augmentation.augmentation",
-            "kornia.augmentation.erasing",
             "kornia.augmentation.functional",
-            "kornia.augmentation.param_gen",
+            "kornia.augmentation.random_generator",
+            "kornia.augmentation.types",
             "kornia.augmentation.utils",
             "kornia.color",
             "kornia.color.adjust",
             "kornia.color.core",
             "kornia.color.gray",
+            "kornia.color.histogram",
             "kornia.color.hls",
             "kornia.color.hsv",
+            "kornia.color.luv",
             "kornia.color.normalize",
             "kornia.color.rgb",
+            "kornia.color.xyz",
             "kornia.color.ycbcr",
             "kornia.color.yuv",
+            "kornia.constants",
             "kornia.contrib",
             "kornia.contrib.extract_patches",
             "kornia.contrib.max_blur_pool",
             "kornia.feature",
             "kornia.feature.affine_shape",
+            "kornia.feature.hardnet",
             "kornia.feature.laf",
             "kornia.feature.nms",
             "kornia.feature.orientation",
             "kornia.feature.responses",
             "kornia.feature.scale_space_detector",
             "kornia.feature.siftdesc",
+            "kornia.feature.sosnet",
             "kornia.filters",
             "kornia.filters.blur",
             "kornia.filters.filter",
@@ -56096,6 +56142,7 @@
             "kornia.geometry.warp",
             "kornia.geometry.warp.depth_warper",
             "kornia.geometry.warp.homography_warper",
+            "kornia.jit",
             "kornia.losses",
             "kornia.losses.depth_smooth",
             "kornia.losses.dice",
@@ -56116,7 +56163,7 @@
             "kornia.utils.pointcloud_io",
             "kornia.version"
         ],
-        "version": "0.2.0"
+        "version": "0.2.1"
     },
     "kornounextractor": {
         "cmdline": [],
@@ -58569,6 +58616,7 @@
             "Kqlmagic.fernet_crypto",
             "Kqlmagic.help",
             "Kqlmagic.help_html",
+            "Kqlmagic.ipython_api",
             "Kqlmagic.kql_engine",
             "Kqlmagic.kql_magic",
             "Kqlmagic.kql_magic_core",
@@ -58590,7 +58638,7 @@
             "Kqlmagic.sso_storage",
             "Kqlmagic.version"
         ],
-        "version": "0.1.111.post11"
+        "version": "0.1.111.post13"
     },
     "kqueen": {
         "cmdline": [],
@@ -59407,7 +59455,7 @@
     "krcg": {
         "cmdline": [],
         "modules": [],
-        "version": "0.20"
+        "version": "0.22"
     },
     "kreagroup-jsi18n": {
         "cmdline": [],
@@ -61221,7 +61269,7 @@
             "kscore.vendored.six",
             "kscore.waiter"
         ],
-        "version": "1.3.30"
+        "version": "1.3.31"
     },
     "ksc-sdk-python-new": {
         "cmdline": [],
@@ -62708,7 +62756,7 @@
             "ktrain.vision.preprocessor",
             "ktrain.vision.wrn"
         ],
-        "version": "0.14.1"
+        "version": "0.14.2"
     },
     "ktransit": {
         "cmdline": [],
@@ -69896,7 +69944,7 @@
     "kvlog": {
         "cmdline": [],
         "modules": [],
-        "version": "0.3"
+        "version": "0.4"
     },
     "kvm": {
         "cmdline": [],
@@ -71086,7 +71134,7 @@
             "kwola.tests.test_end_to_end",
             "kwola.tests.test_training_loop"
         ],
-        "version": "0.0.54"
+        "version": "0.1.0"
     },
     "kwollect": {
         "cmdline": [],
