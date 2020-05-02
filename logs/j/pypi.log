@@ -94,25 +94,17 @@ Traceback (most recent call last):
     f.write(urlopen(url=urlesc(pkgurl), timeout=10).read())
   File "/usr/lib/python3.8/urllib/request.py", line 222, in urlopen
     return opener.open(url, data, timeout)
-  File "/usr/lib/python3.8/urllib/request.py", line 525, in open
-    response = self._open(req, data)
-  File "/usr/lib/python3.8/urllib/request.py", line 542, in _open
-    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "/usr/lib/python3.8/urllib/request.py", line 531, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.8/urllib/request.py", line 640, in http_response
+    response = self.parent.error(
+  File "/usr/lib/python3.8/urllib/request.py", line 569, in error
+    return self._call_chain(*args)
   File "/usr/lib/python3.8/urllib/request.py", line 502, in _call_chain
     result = func(*args)
-  File "/usr/lib/python3.8/urllib/request.py", line 1379, in http_open
-    return self.do_open(http.client.HTTPConnection, req)
-  File "/usr/lib/python3.8/urllib/request.py", line 1354, in do_open
-    r = h.getresponse()
-  File "/usr/lib/python3.8/http/client.py", line 1332, in getresponse
-    response.begin()
-  File "/usr/lib/python3.8/http/client.py", line 303, in begin
-    version, status, reason = self._read_status()
-  File "/usr/lib/python3.8/http/client.py", line 264, in _read_status
-    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
-  File "/usr/lib/python3.8/socket.py", line 669, in readinto
-    return self._sock.recv_into(b)
-socket.timeout: timed out
+  File "/usr/lib/python3.8/urllib/request.py", line 649, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 500: Internal Server Error
 
 [INFO] (jabba) This package is up to date.
 [INFO] (jabba-analysis) This package is up to date.
@@ -356,7 +348,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (jadi) This package is up to date.
 [INFO] (jadlog) This package is up to date.
 [INFO] (jadm) This package is up to date.
-[INFO] (jadn) This package is up to date.
+[INFO] (jadn) Data has been updated for this package.
 [INFO] (jaeger) This package is up to date.
 [INFO] (jaeger-browser) This package is up to date.
 [INFO] (jaeger-client) This package is up to date.
@@ -411,7 +403,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 
 [INFO] (jak) This package is up to date.
 [INFO] (jakarto-datasets) This package is up to date.
-[INFO] (jake) Data has been updated for this package.
+[INFO] (jake) This package is up to date.
 [INFO] (jake-drivers) This package is up to date.
 [INFO] (jake-test-package) This package is up to date.
 [INFO] (jakecipher) This package is up to date.
@@ -658,7 +650,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (jaraco-ui) This package is up to date.
 [INFO] (jaraco-util) This package is up to date.
 [INFO] (jaraco-video) This package is up to date.
-[INFO] (jaraco-windows) This package is up to date.
+[INFO] (jaraco-windows) Data has been updated for this package.
 [INFO] (jaraco-xkcd) This package is up to date.
 [INFO] (jaracofunctools) This package is up to date.
 [INFO] (jaradtransformers) This package is up to date.
@@ -956,7 +948,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (jax-fixedpoint-test-manueldelverme) This package is up to date.
 [INFO] (jax-flows) This package is up to date.
 [INFO] (jax-loss) This package is up to date.
-[INFO] (jax-md) Data has been updated for this package.
+[INFO] (jax-md) This package is up to date.
 [ERROR] (jax-test) Could not get a response from API for this package. See below for details.
 Traceback (most recent call last):
   File "/usr/local/lib/python3.8/dist-packages/pypicontents/api/pypi.py", line 263, in get_pkgdata
@@ -1037,7 +1029,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (jbtools) This package is up to date.
 [INFO] (jbxapi) This package is up to date.
 [INFO] (jbzd-imgcat) This package is up to date.
-[INFO] (jc) Data has been updated for this package.
+[INFO] (jc) This package is up to date.
 [INFO] (jc-pytools) This package is up to date.
 [INFO] (jcache) This package is up to date.
 [INFO] (jcake) This package is up to date.
@@ -1237,7 +1229,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (jedha) This package is up to date.
 [INFO] (jedhy) This package is up to date.
 [INFO] (jedi) This package is up to date.
-[INFO] (jedi-language-server) Data has been updated for this package.
+[INFO] (jedi-language-server) This package is up to date.
 [INFO] (jedi-toolz) Data has been updated for this package.
 [INFO] (jedopo-py) This package is up to date.
 [INFO] (jeecf-cli) This package is up to date.
@@ -1336,7 +1328,7 @@ tarfile.ReadError: not a gzip file
 [INFO] (jellyfin-apiclient-python) This package is up to date.
 [INFO] (jellyfin-build) This package is up to date.
 [INFO] (jellyfin-cli) This package is up to date.
-[INFO] (jellyfin-mpv-shim) Data has been updated for this package.
+[INFO] (jellyfin-mpv-shim) This package is up to date.
 [INFO] (jellyfish) This package is up to date.
 [INFO] (jellyfish-wheel) This package is up to date.
 [INFO] (jellypy-pycipapi) This package is up to date.
@@ -1417,6 +1409,7 @@ tarfile.ReadError: not a gzip file
 [INFO] (jenkviz) This package is up to date.
 [ERROR] (jenkyns) This package does not have downloadable releases.
 [INFO] (jennifer) This package is up to date.
+[INFO] (jenny-udacity-distributions) Data has been updated for this package.
 [INFO] (jenskipper) This package is up to date.
 [INFO] (jeon) This package is up to date.
 [INFO] (jep) This package is up to date.
@@ -1436,7 +1429,7 @@ tarfile.ReadError: not a gzip file
 [INFO] (jerrypackage) This package is up to date.
 [INFO] (jersey) This package is up to date.
 [INFO] (jes12132018-assetinspectionapps) This package is up to date.
-[INFO] (jesse) Data has been updated for this package.
+[INFO] (jesse) This package is up to date.
 [INFO] (jessica) This package is up to date.
 [INFO] (jest) This package is up to date.
 [INFO] (jestalt) This package is up to date.
@@ -1675,7 +1668,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (jhproxy) This package is up to date.
 [INFO] (jhpy) This package is up to date.
 [ERROR] (jhrpython-nester) This package does not have downloadable releases.
-[INFO] (jhsingle-native-proxy) This package is up to date.
+[INFO] (jhsingle-native-proxy) Data has been updated for this package.
 [INFO] (jhsitemapgenerator) This package is up to date.
 [INFO] (jhtalib) This package is up to date.
 [INFO] (jhu-primitives) This package is up to date.
@@ -1901,7 +1894,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (jinja2-fnmatch-extension) This package is up to date.
 [INFO] (jinja2-fsloader) This package is up to date.
 [INFO] (jinja2-getenv-extension) This package is up to date.
-[INFO] (jinja2-git) This package is up to date.
+[INFO] (jinja2-git) Data has been updated for this package.
 [INFO] (jinja2-github) This package is up to date.
 [INFO] (jinja2-hamlpy) This package is up to date.
 [INFO] (jinja2-highlight) This package is up to date.
@@ -2298,7 +2291,7 @@ This package download URL does not point to a valid file: "http://www.defuze.org
 [INFO] (jlim-distributions) This package is up to date.
 [INFO] (jlle) This package is up to date.
 [INFO] (jlm) This package is up to date.
-[INFO] (jlod) Data has been updated for this package.
+[INFO] (jlod) This package is up to date.
 [INFO] (jlog) This package is up to date.
 [INFO] (jlogin) This package is up to date.
 [INFO] (jloglevel) This package is up to date.
@@ -2484,7 +2477,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 
 [INFO] (jnestert) This package is up to date.
 [INFO] (jni) This package is up to date.
-[INFO] (jnitrace) This package is up to date.
+[INFO] (jnitrace) Data has been updated for this package.
 [INFO] (jnius) This package is up to date.
 [INFO] (jnius-indra) This package is up to date.
 [INFO] (jniusx) This package is up to date.
@@ -2545,7 +2538,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (jobhub) This package is up to date.
 [INFO] (jobid) This package is up to date.
 [INFO] (joblib) This package is up to date.
-[INFO] (joblib-windower) This package is up to date.
+[INFO] (joblib-windower) Data has been updated for this package.
 [INFO] (joblibs3) This package is up to date.
 [INFO] (joblibspark) This package is up to date.
 [INFO] (joblist) This package is up to date.
@@ -2724,7 +2717,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (jollyjumper) This package is up to date.
 [INFO] (jolokia) This package is up to date.
 [INFO] (jolt) This package is up to date.
-[INFO] (jomini) Data has been updated for this package.
+[INFO] (jomini) This package is up to date.
 [ERROR] (jomvst) This package does not have downloadable releases.
 [INFO] (jonah) This package is up to date.
 [INFO] (jonathan-nester) This package is up to date.
@@ -2957,7 +2950,7 @@ This package download URL does not point to a valid file: "http://oodt.jpl.nasa.
 [INFO] (jpytools) This package is up to date.
 [INFO] (jpyutils) This package is up to date.
 [ERROR] (jpywidgets) This package does not have downloadable releases.
-[INFO] (jq) This package is up to date.
+[INFO] (jq) Data has been updated for this package.
 [INFO] (jqdatasdk) This package is up to date.
 [INFO] (jqfactor-analyzer) This package is up to date.
 [INFO] (jqfpy) This package is up to date.
@@ -3003,6 +2996,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (jr-data-science) This package is up to date.
 [INFO] (jr-nester) This package is up to date.
 [INFO] (jr-tools) This package is up to date.
+[INFO] (jr100emulib) Data has been updated for this package.
 [INFO] (jrc) This package is up to date.
 [INFO] (jrdb) This package is up to date.
 [INFO] (jrdbparser) This package is up to date.
@@ -3013,7 +3007,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (jrfork-kegbot-pycore) This package is up to date.
 [INFO] (jrimgtools) This package is up to date.
 [INFO] (jrkg2modulepi) This package is up to date.
-[INFO] (jrnl) This package is up to date.
+[INFO] (jrnl) Data has been updated for this package.
 [INFO] (jrnl-mw) This package is up to date.
 [INFO] (jrnr) This package is up to date.
 [INFO] (jrpc) This package is up to date.
@@ -3471,7 +3465,7 @@ Traceback (most recent call last):
     raise HTTPError(req.full_url, code, msg, hdrs, fp)
 urllib.error.HTTPError: HTTP Error 404: Not Found
 
-[INFO] (json-conf-autoref) Data has been updated for this package.
+[INFO] (json-conf-autoref) This package is up to date.
 [INFO] (json-config) This package is up to date.
 [INFO] (json-config-expander) This package is up to date.
 [INFO] (json-config-parser) This package is up to date.
@@ -3531,7 +3525,7 @@ Traceback (most recent call last):
 urllib.error.HTTPError: HTTP Error 404: Not Found
 
 [INFO] (json-get) This package is up to date.
-[INFO] (json-graph-lite) Data has been updated for this package.
+[INFO] (json-graph-lite) This package is up to date.
 [INFO] (json-home-client) This package is up to date.
 [ERROR] (json-hyper-schema) This package does not have downloadable releases.
 [INFO] (json-import) This package is up to date.
@@ -3769,7 +3763,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (jsoncompare) This package is up to date.
 [INFO] (jsoncompare3) This package is up to date.
 [INFO] (jsoncomparedeep) This package is up to date.
-[INFO] (jsoncomparison) Data has been updated for this package.
+[INFO] (jsoncomparison) This package is up to date.
 [ERROR] (jsoncompute) This package does not have downloadable releases.
 [INFO] (jsonconf) This package is up to date.
 [INFO] (jsonconfig) This package is up to date.
@@ -3783,8 +3777,8 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (jsonconvert) This package is up to date.
 [INFO] (jsoncsv) This package is up to date.
 [INFO] (jsoncut) This package is up to date.
-[INFO] (jsond) This package is up to date.
-[INFO] (jsondaora) This package is up to date.
+[INFO] (jsond) Data has been updated for this package.
+[INFO] (jsondaora) Data has been updated for this package.
 [INFO] (jsondata) This package is up to date.
 [INFO] (jsondata2asn1) This package is up to date.
 [INFO] (jsondata2xml) This package is up to date.
@@ -3905,34 +3899,6 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (jsonlog) This package is up to date.
 [INFO] (jsonlog-cli) This package is up to date.
 [INFO] (jsonlogformatter) This package is up to date.
-[ERROR] (jsonlogger) Could not get a response from API for this package. See below for details.
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.8/dist-packages/pypicontents/api/pypi.py", line 263, in get_pkgdata
-    pkgjsonraw = urlopen(url='{0}/pypi/{1}/json'.format(pypiurl, pkgname),
-  File "/usr/lib/python3.8/urllib/request.py", line 222, in urlopen
-    return opener.open(url, data, timeout)
-  File "/usr/lib/python3.8/urllib/request.py", line 531, in open
-    response = meth(req, response)
-  File "/usr/lib/python3.8/urllib/request.py", line 640, in http_response
-    response = self.parent.error(
-  File "/usr/lib/python3.8/urllib/request.py", line 563, in error
-    result = self._call_chain(*args)
-  File "/usr/lib/python3.8/urllib/request.py", line 502, in _call_chain
-    result = func(*args)
-  File "/usr/lib/python3.8/urllib/request.py", line 755, in http_error_302
-    return self.parent.open(new, timeout=req.timeout)
-  File "/usr/lib/python3.8/urllib/request.py", line 531, in open
-    response = meth(req, response)
-  File "/usr/lib/python3.8/urllib/request.py", line 640, in http_response
-    response = self.parent.error(
-  File "/usr/lib/python3.8/urllib/request.py", line 569, in error
-    return self._call_chain(*args)
-  File "/usr/lib/python3.8/urllib/request.py", line 502, in _call_chain
-    result = func(*args)
-  File "/usr/lib/python3.8/urllib/request.py", line 649, in http_error_default
-    raise HTTPError(req.full_url, code, msg, hdrs, fp)
-urllib.error.HTTPError: HTTP Error 404: Not Found
-
 [INFO] (jsonlogging) This package is up to date.
 [INFO] (jsonlookup) This package is up to date.
 [INFO] (jsonm) This package is up to date.
@@ -3959,7 +3925,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (jsonparser) This package is up to date.
 [INFO] (jsonpatch) This package is up to date.
 [INFO] (jsonpath) This package is up to date.
-[INFO] (jsonpath-extractor) This package is up to date.
+[INFO] (jsonpath-extractor) Data has been updated for this package.
 [INFO] (jsonpath-flatten) This package is up to date.
 [INFO] (jsonpath-ng) This package is up to date.
 [INFO] (jsonpath-rw) This package is up to date.
@@ -3991,7 +3957,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (jsonref) This package is up to date.
 [INFO] (jsonref-ap) This package is up to date.
 [INFO] (jsonreference) This package is up to date.
-[INFO] (jsonreme) Data has been updated for this package.
+[INFO] (jsonreme) This package is up to date.
 [INFO] (jsonrequester) This package is up to date.
 [INFO] (jsonresolver) This package is up to date.
 [INFO] (jsonresume-validator) This package is up to date.
@@ -4040,7 +4006,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (jsonrpclient) This package is up to date.
 [INFO] (jsonrpcparts) This package is up to date.
 [INFO] (jsonrpcproxy) This package is up to date.
-[INFO] (jsonrpcserver) This package is up to date.
+[INFO] (jsonrpcserver) Data has been updated for this package.
 [INFO] (jsonrpctool) This package is up to date.
 [INFO] (jsonrpyc) This package is up to date.
 [INFO] (jsons) This package is up to date.
@@ -4172,6 +4138,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (jspack) This package is up to date.
 [INFO] (jspcap) This package is up to date.
 [INFO] (jspcapy) This package is up to date.
+[INFO] (jspline) Data has been updated for this package.
 [INFO] (jsplit) This package is up to date.
 [INFO] (jspp) This package is up to date.
 [INFO] (jspy) This package is up to date.
@@ -4588,6 +4555,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (junkfileorganizer) This package is up to date.
 [INFO] (junkie) This package is up to date.
 [INFO] (junkmodule) This package is up to date.
+[INFO] (junky) Data has been updated for this package.
 [INFO] (junkyard) This package is up to date.
 [INFO] (junmozinester) This package is up to date.
 [INFO] (juno) This package is up to date.
@@ -4741,7 +4709,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (jupyter-innotater) This package is up to date.
 [INFO] (jupyter-installer) This package is up to date.
 [INFO] (jupyter-interval-widget) This package is up to date.
-[INFO] (jupyter-io) Data has been updated for this package.
+[INFO] (jupyter-io) This package is up to date.
 [INFO] (jupyter-jaeger) This package is up to date.
 [INFO] (jupyter-js-widgets-nbextension) This package is up to date.
 [INFO] (jupyter-kernel-chapel) This package is up to date.
@@ -4754,7 +4722,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (jupyter-kernel-polymake) This package is up to date.
 [INFO] (jupyter-kernel-singular) This package is up to date.
 [INFO] (jupyter-kernel-test) This package is up to date.
-[INFO] (jupyter-kite) Data has been updated for this package.
+[INFO] (jupyter-kite) This package is up to date.
 [INFO] (jupyter-lab-serverless) This package is up to date.
 [INFO] (jupyter-latex-envs) This package is up to date.
 [INFO] (jupyter-launcher-shortcuts) This package is up to date.
@@ -5136,7 +5104,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (justag) This package is up to date.
 [INFO] (justamodel) This package is up to date.
 [INFO] (justatest) This package is up to date.
-[INFO] (justbackoff) This package is up to date.
+[INFO] (justbackoff) Data has been updated for this package.
 [INFO] (justbases) This package is up to date.
 [INFO] (justbases-gui) This package is up to date.
 [INFO] (justbases-string) This package is up to date.
@@ -5182,7 +5150,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (justrpc) This package is up to date.
 [INFO] (justsendmail) This package is up to date.
 [INFO] (justupdate) This package is up to date.
-[INFO] (justvpn) Data has been updated for this package.
+[INFO] (justvpn) This package is up to date.
 [INFO] (justwatch) This package is up to date.
 [ERROR] (justworkpip1160) Could not get a response from API for this package. See below for details.
 Traceback (most recent call last):
@@ -5417,11 +5385,11 @@ Unsupported package directory structure.
 [INFO] (jzstock) This package is up to date.
 [INFO] 
 [INFO] 
-[INFO] Total packages: 3810
-[INFO]     Packages processed: 3810
-[INFO]         Packages updated: 18
-[INFO]         Packages up-to-date: 3580
-[INFO]         Packages without response: 64
+[INFO] Total packages: 3813
+[INFO]     Packages processed: 3813
+[INFO]         Packages updated: 20
+[INFO]         Packages up-to-date: 3582
+[INFO]         Packages without response: 63
 [INFO]         Packages without urls: 0
 [INFO]         Packages without downloads: 118
 [INFO]         Packages with data errors: 30
