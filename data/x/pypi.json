@@ -2156,6 +2156,7 @@
             "Xana.detectors.eiger500k",
             "Xana.helper",
             "Xana.misc",
+            "Xana.misc.add_colorbar",
             "Xana.misc.history",
             "Xana.misc.imgkicker",
             "Xana.misc.loadid10monitor",
@@ -2167,7 +2168,7 @@
             "Xana.misc.toolbox",
             "Xana.misc.xsave"
         ],
-        "version": "0.0.8"
+        "version": "0.0.10"
     },
     "xanadu": {
         "cmdline": [],
@@ -2250,7 +2251,7 @@
             "tictactoe",
             "tictactoe.engine"
         ],
-        "version": "0.0.1"
+        "version": "0.0.2"
     },
     "xandr": {
         "cmdline": [],
@@ -10455,12 +10456,13 @@
         "modules": [
             "xingapi",
             "xingapi.api",
+            "xingapi.api.log",
             "xingapi.api.res",
             "xingapi.api.xaquery",
             "xingapi.api.xareal",
             "xingapi.api.xasession"
         ],
-        "version": "1.0.3"
+        "version": "1.1.0"
     },
     "xinge": {
         "cmdline": [],
@@ -11319,6 +11321,7 @@
         "cmdline": [],
         "modules": [
             "xknx",
+            "xknx.__version__",
             "xknx.core",
             "xknx.core.config",
             "xknx.core.stateupdater",
@@ -11337,23 +11340,26 @@
             "xknx.devices.fan",
             "xknx.devices.light",
             "xknx.devices.notification",
-            "xknx.devices.remote_value",
-            "xknx.devices.remote_value_1count",
-            "xknx.devices.remote_value_color_rgb",
-            "xknx.devices.remote_value_color_rgbw",
-            "xknx.devices.remote_value_dpt_2_byte_unsigned",
-            "xknx.devices.remote_value_dpt_value_1_ucount",
-            "xknx.devices.remote_value_scaling",
-            "xknx.devices.remote_value_scene_number",
-            "xknx.devices.remote_value_sensor",
-            "xknx.devices.remote_value_step",
-            "xknx.devices.remote_value_switch",
-            "xknx.devices.remote_value_temp",
-            "xknx.devices.remote_value_updown",
             "xknx.devices.scene",
             "xknx.devices.sensor",
             "xknx.devices.switch",
             "xknx.devices.travelcalculator",
+            "xknx.dpt",
+            "xknx.dpt.dpt",
+            "xknx.dpt.dpt_1byte_signed",
+            "xknx.dpt.dpt_1byte_uint",
+            "xknx.dpt.dpt_2byte_float",
+            "xknx.dpt.dpt_2byte_signed",
+            "xknx.dpt.dpt_2byte_uint",
+            "xknx.dpt.dpt_4byte_float",
+            "xknx.dpt.dpt_4byte_int",
+            "xknx.dpt.dpt_date",
+            "xknx.dpt.dpt_datetime",
+            "xknx.dpt.dpt_hvac_contr_mode",
+            "xknx.dpt.dpt_hvac_mode",
+            "xknx.dpt.dpt_scaling",
+            "xknx.dpt.dpt_string",
+            "xknx.dpt.dpt_time",
             "xknx.exceptions",
             "xknx.exceptions.exception",
             "xknx.io",
@@ -11368,25 +11374,6 @@
             "xknx.io.tunnel",
             "xknx.io.tunnelling",
             "xknx.io.udp_client",
-            "xknx.knx",
-            "xknx.knx.address",
-            "xknx.knx.address_filter",
-            "xknx.knx.dpt",
-            "xknx.knx.dpt_1byte_signed",
-            "xknx.knx.dpt_1byte_uint",
-            "xknx.knx.dpt_2byte_float",
-            "xknx.knx.dpt_2byte_signed",
-            "xknx.knx.dpt_2byte_uint",
-            "xknx.knx.dpt_4byte_float",
-            "xknx.knx.dpt_4byte_int",
-            "xknx.knx.dpt_date",
-            "xknx.knx.dpt_datetime",
-            "xknx.knx.dpt_hvac_contr_mode",
-            "xknx.knx.dpt_hvac_mode",
-            "xknx.knx.dpt_scaling",
-            "xknx.knx.dpt_string",
-            "xknx.knx.dpt_time",
-            "xknx.knx.telegram",
             "xknx.knxip",
             "xknx.knxip.body",
             "xknx.knxip.cemi_frame",
@@ -11406,9 +11393,28 @@
             "xknx.knxip.search_response",
             "xknx.knxip.tunnelling_ack",
             "xknx.knxip.tunnelling_request",
+            "xknx.remote_value",
+            "xknx.remote_value.remote_value",
+            "xknx.remote_value.remote_value_1count",
+            "xknx.remote_value.remote_value_color_rgb",
+            "xknx.remote_value.remote_value_color_rgbw",
+            "xknx.remote_value.remote_value_dpt_2_byte_unsigned",
+            "xknx.remote_value.remote_value_dpt_value_1_ucount",
+            "xknx.remote_value.remote_value_scaling",
+            "xknx.remote_value.remote_value_scene_number",
+            "xknx.remote_value.remote_value_sensor",
+            "xknx.remote_value.remote_value_step",
+            "xknx.remote_value.remote_value_string",
+            "xknx.remote_value.remote_value_switch",
+            "xknx.remote_value.remote_value_temp",
+            "xknx.remote_value.remote_value_updown",
+            "xknx.telegram",
+            "xknx.telegram.address",
+            "xknx.telegram.address_filter",
+            "xknx.telegram.telegram",
             "xknx.xknx"
         ],
-        "version": "0.11.2"
+        "version": "0.11.3"
     },
     "xkpa": {
         "cmdline": [],
@@ -12857,6 +12863,11 @@
             "xlwings.ext.sql",
             "xlwings.mac_dict",
             "xlwings.main",
+            "xlwings.pro",
+            "xlwings.pro.embedded_code",
+            "xlwings.pro.reports",
+            "xlwings.pro.reports.main",
+            "xlwings.pro.utils",
             "xlwings.rest",
             "xlwings.rest.api",
             "xlwings.rest.serializers",
@@ -12864,7 +12875,7 @@
             "xlwings.udfs",
             "xlwings.utils"
         ],
-        "version": "0.18.0"
+        "version": "0.19.0"
     },
     "xlwings-pro": {
         "cmdline": [],
@@ -22593,7 +22604,7 @@
     "xsdata": {
         "cmdline": [],
         "modules": [],
-        "version": "20.4.2"
+        "version": "20.5"
     },
     "xsdb": {
         "cmdline": [],
