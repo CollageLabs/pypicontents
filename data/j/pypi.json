@@ -2086,9 +2086,10 @@
             "jadn.codec.format_serialize_json",
             "jadn.codec.format_validate",
             "jadn.convert",
-            "jadn.convert.w_jas",
-            "jadn.convert.w_jidl",
-            "jadn.convert.w_table",
+            "jadn.convert.html",
+            "jadn.convert.jas_w",
+            "jadn.convert.jidl_w",
+            "jadn.convert.table_w",
             "jadn.core",
             "jadn.definitions",
             "jadn.transform",
@@ -2098,7 +2099,7 @@
             "jadn.translate.w_jsonschema",
             "jadn.utils"
         ],
-        "version": "0.5.1"
+        "version": "0.5.2"
     },
     "jaeger": {
         "cmdline": [],
@@ -6432,6 +6433,14 @@
         ],
         "version": "1.0.0"
     },
+    "jarvicsdk": {
+        "cmdline": [],
+        "modules": [
+            "JarvicSDK",
+            "JarvicSDK.utilities"
+        ],
+        "version": "0.0.0"
+    },
     "jarvis": {
         "cmdline": [],
         "modules": [
@@ -6881,7 +6890,7 @@
             "jarviscore.telemetry",
             "jarviscore.user"
         ],
-        "version": "0.1.1.181"
+        "version": "0.1.1.196"
     },
     "jarvispatrick": {
         "cmdline": [],
@@ -7492,7 +7501,7 @@
             "jason_gnss.jason",
             "jason_gnss.main"
         ],
-        "version": "1.4.1"
+        "version": "1.6.0"
     },
     "jason-s-demo": {
         "cmdline": [],
@@ -12179,6 +12188,7 @@
             "jdcloud_sdk.services.iotcore.apis",
             "jdcloud_sdk.services.iotcore.apis.AddDeviceLinksRequest",
             "jdcloud_sdk.services.iotcore.apis.AddDeviceRequest",
+            "jdcloud_sdk.services.iotcore.apis.AddLooDeviceRequest",
             "jdcloud_sdk.services.iotcore.apis.CreateProductRequest",
             "jdcloud_sdk.services.iotcore.apis.CreateProductTopicRequest",
             "jdcloud_sdk.services.iotcore.apis.DeleteProductRequest",
@@ -12192,10 +12202,13 @@
             "jdcloud_sdk.services.iotcore.apis.InvokeThingTopicRequest",
             "jdcloud_sdk.services.iotcore.apis.ListProductAbilitiesRequest",
             "jdcloud_sdk.services.iotcore.apis.ListProductsRequest",
+            "jdcloud_sdk.services.iotcore.apis.LoongrayQueryPageRequest",
             "jdcloud_sdk.services.iotcore.apis.QueryDeviceDetailRequest",
             "jdcloud_sdk.services.iotcore.apis.QueryDevicePageRequest",
             "jdcloud_sdk.services.iotcore.apis.RemoveDeviceRequest",
+            "jdcloud_sdk.services.iotcore.apis.RemoveLoongrayDeviceRequest",
             "jdcloud_sdk.services.iotcore.apis.UpdateDeviceRequest",
+            "jdcloud_sdk.services.iotcore.apis.UpdateLooDeviceRequest",
             "jdcloud_sdk.services.iotcore.apis.UpdateProductRequest",
             "jdcloud_sdk.services.iotcore.apis.UpdateThingShadowRequest",
             "jdcloud_sdk.services.iotcore.client",
@@ -12205,6 +12218,7 @@
             "jdcloud_sdk.services.iotcore.models.Azs",
             "jdcloud_sdk.services.iotcore.models.Batch",
             "jdcloud_sdk.services.iotcore.models.BatchDevice",
+            "jdcloud_sdk.services.iotcore.models.CheckCustomerResuleVO",
             "jdcloud_sdk.services.iotcore.models.ChildDevices",
             "jdcloud_sdk.services.iotcore.models.ChildModules",
             "jdcloud_sdk.services.iotcore.models.CustomizedTemplateProduct",
@@ -12216,6 +12230,7 @@
             "jdcloud_sdk.services.iotcore.models.DeviceCommandVO",
             "jdcloud_sdk.services.iotcore.models.DeviceCredential",
             "jdcloud_sdk.services.iotcore.models.DeviceEnrollVO",
+            "jdcloud_sdk.services.iotcore.models.DeviceLoonGeryCredential",
             "jdcloud_sdk.services.iotcore.models.DeviceVO",
             "jdcloud_sdk.services.iotcore.models.EdgeInfoVO",
             "jdcloud_sdk.services.iotcore.models.EdgePageVo",
@@ -12224,21 +12239,28 @@
             "jdcloud_sdk.services.iotcore.models.HubInstanceBo",
             "jdcloud_sdk.services.iotcore.models.InstanceInfoAsAdminVO",
             "jdcloud_sdk.services.iotcore.models.InstanceinfoVO",
+            "jdcloud_sdk.services.iotcore.models.IotcoreInstance",
             "jdcloud_sdk.services.iotcore.models.ModulePageVo",
             "jdcloud_sdk.services.iotcore.models.MonitorIotCoreInstance",
             "jdcloud_sdk.services.iotcore.models.OmPropVo",
             "jdcloud_sdk.services.iotcore.models.OnlineInfo",
             "jdcloud_sdk.services.iotcore.models.PageinfoVO",
+            "jdcloud_sdk.services.iotcore.models.PreOrders",
             "jdcloud_sdk.services.iotcore.models.Product",
             "jdcloud_sdk.services.iotcore.models.ProductAbility",
             "jdcloud_sdk.services.iotcore.models.ProductCategory",
             "jdcloud_sdk.services.iotcore.models.ProductProperty",
             "jdcloud_sdk.services.iotcore.models.ProductService",
             "jdcloud_sdk.services.iotcore.models.ProductTopic",
+            "jdcloud_sdk.services.iotcore.models.ReadRegisterValue",
             "jdcloud_sdk.services.iotcore.models.RegionInfo",
+            "jdcloud_sdk.services.iotcore.models.RegisterInfo",
+            "jdcloud_sdk.services.iotcore.models.RegisterValue",
             "jdcloud_sdk.services.iotcore.models.Resource",
             "jdcloud_sdk.services.iotcore.models.RuleBaseInfo",
             "jdcloud_sdk.services.iotcore.models.Service",
+            "jdcloud_sdk.services.iotcore.models.ServiceUser",
+            "jdcloud_sdk.services.iotcore.models.ServiceUsers",
             "jdcloud_sdk.services.iotcore.models.SharedUserPage",
             "jdcloud_sdk.services.iotcore.models.SharedUsers",
             "jdcloud_sdk.services.iotcore.models.ThingModelTemplate",
@@ -13881,6 +13903,7 @@
             "jdcloud_sdk.services.nativecontainer.models.SecurityGroupSimple",
             "jdcloud_sdk.services.nativecontainer.models.Tag",
             "jdcloud_sdk.services.nativecontainer.models.TagFilter",
+            "jdcloud_sdk.services.nativecontainer.models.UserConfigure",
             "jdcloud_sdk.services.nativecontainer.models.VolumeMount",
             "jdcloud_sdk.services.nativecontainer.models.VolumeMountSpec",
             "jdcloud_sdk.services.nc",
@@ -14149,6 +14172,7 @@
             "jdcloud_sdk.services.pod.models.TagFilter",
             "jdcloud_sdk.services.pod.models.TcpSocket",
             "jdcloud_sdk.services.pod.models.TcpSocketSpec",
+            "jdcloud_sdk.services.pod.models.UserConfigure",
             "jdcloud_sdk.services.pod.models.Volume",
             "jdcloud_sdk.services.pod.models.VolumeMount",
             "jdcloud_sdk.services.pod.models.VolumeMountSpec",
@@ -15103,7 +15127,7 @@
             "jdcloud_sdk.services.zfs.models.Tag",
             "jdcloud_sdk.services.zfs.models.TagFilter"
         ],
-        "version": "1.6.58"
+        "version": "1.6.59"
     },
     "jdcloud-sdk-core": {
         "cmdline": [],
@@ -15378,7 +15402,7 @@
             "jdMinecraftLauncher.gui.ProfileWindow",
             "jdMinecraftLauncher.jdMinecraftLauncher"
         ],
-        "version": "2.1"
+        "version": "2.2"
     },
     "jdna": {
         "cmdline": [],
@@ -17681,6 +17705,7 @@
             "jesse.indicators.adosc",
             "jesse.indicators.adx",
             "jesse.indicators.adxr",
+            "jesse.indicators.ao",
             "jesse.indicators.apo",
             "jesse.indicators.aroon",
             "jesse.indicators.aroonosc",
@@ -17872,7 +17897,7 @@
             "tests.test_strategy_utils",
             "tests.test_trade"
         ],
-        "version": "0.4.0"
+        "version": "0.4.2"
     },
     "jessica": {
         "cmdline": [],
@@ -19794,6 +19819,20 @@
             "jfx_bridge_ida.server.jfx_bridge_ida_server_shutdown"
         ],
         "version": "0.0.1"
+    },
+    "jfx-bridge-jeb": {
+        "cmdline": [],
+        "modules": [
+            "jfx_bridge_jeb",
+            "jfx_bridge_jeb.install_server",
+            "jfx_bridge_jeb.jfx_bridge_jeb",
+            "jfx_bridge_jeb.server",
+            "jfx_bridge_jeb.server.jfx_bridge_jeb_port",
+            "jfx_bridge_jeb.server.jfx_bridge_jeb_server",
+            "jfx_bridge_jeb.server.jfx_bridge_jeb_server_shutdown",
+            "jfx_bridge_jeb.test_jfx_bridge_jeb"
+        ],
+        "version": "0.0.2"
     },
     "jfxsnester": {
         "cmdline": [],
@@ -26222,6 +26261,10 @@
             "jk_utils.async.TabularWriterMediaWiki",
             "jk_utils.async.TabularWriterSTDOUT",
             "jk_utils.async.queues",
+            "jk_utils.color",
+            "jk_utils.color.RGB",
+            "jk_utils.color.RGBSpectrum",
+            "jk_utils.color.RGBSpectrumBuilder",
             "jk_utils.datanodes",
             "jk_utils.datatypes",
             "jk_utils.datetime",
@@ -26251,11 +26294,12 @@
             "jk_utils.tokenizer2.Token",
             "jk_utils.tokenizer2.TokenPattern",
             "jk_utils.tokenizer2.TokenPatternAlternatives",
+            "jk_utils.tokenizer2.TokenPatternDelimLoop",
             "jk_utils.tokenizer2.TokenPatternRepeat",
             "jk_utils.tokenizer2.TokenPatternSequence",
             "jk_utils.users"
         ],
-        "version": "0.2020.4.20"
+        "version": "0.2020.5.14"
     },
     "jk-version": {
         "cmdline": [],
@@ -29911,10 +29955,11 @@
             "job_offer_classifier",
             "job_offer_classifier._nbdev",
             "job_offer_classifier.merge_datasets",
+            "job_offer_classifier.multiclass",
             "job_offer_classifier.pipeline_classifier",
             "job_offer_classifier.validations"
         ],
-        "version": "0.0.5"
+        "version": "0.0.6"
     },
     "job-queue": {
         "cmdline": [],
@@ -30508,9 +30553,11 @@
         "cmdline": [],
         "modules": [
             "jobpy",
-            "jobpy.cb_job_search"
+            "jobpy.cb_job_search",
+            "jobpy.files",
+            "jobpy.files.converter"
         ],
-        "version": "0.0.6"
+        "version": "0.0.7"
     },
     "jobqueues": {
         "cmdline": [],
@@ -30533,7 +30580,7 @@
             "jobqueues.util",
             "jobqueues.version"
         ],
-        "version": "0.3.9"
+        "version": "0.4.0"
     },
     "jobrunner": {
         "cmdline": [],
@@ -34175,6 +34222,20 @@
         ],
         "version": "0.1dev"
     },
+    "jpntextgen": {
+        "cmdline": [],
+        "modules": [
+            "jpntextgen",
+            "jpntextgen.address_provider",
+            "jpntextgen.constants",
+            "jpntextgen.date_provider",
+            "jpntextgen.engine",
+            "jpntextgen.name_provider",
+            "jpntextgen.utils",
+            "jpntextgen.utils.constants"
+        ],
+        "version": "2.1"
+    },
     "jpostcode-python": {
         "cmdline": [],
         "modules": [
@@ -34716,7 +34777,7 @@
     "jq": {
         "cmdline": [],
         "modules": [],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     "jqdatasdk": {
         "cmdline": [],
@@ -39843,6 +39904,11 @@
         ],
         "version": "0.4.4"
     },
+    "json-encoders": {
+        "cmdline": [],
+        "modules": [],
+        "version": "1.0"
+    },
     "json-environ": {
         "cmdline": [],
         "modules": [
@@ -39984,6 +40050,22 @@
             "jsoninspectlib"
         ],
         "version": "0.1.6"
+    },
+    "json-kit": {
+        "cmdline": [],
+        "modules": [
+            "json_kit",
+            "json_kit._constants",
+            "json_kit.encoder",
+            "json_kit.encoder.AllRefJSONEncoder",
+            "json_kit.encoder.RefJSONEncoder",
+            "json_kit.encoder.SimpleJSONEncoder",
+            "json_kit.encoder.utils",
+            "json_kit.loader",
+            "json_kit.loader.load_json_file",
+            "json_kit.loader.utils"
+        ],
+        "version": "1.0.1"
     },
     "json-lines": {
         "cmdline": [],
@@ -41016,6 +41098,14 @@
         ],
         "version": "0.15"
     },
+    "json-to-swagger": {
+        "cmdline": [],
+        "modules": [
+            "json_to_swagger",
+            "json_to_swagger.converter"
+        ],
+        "version": "0.0.1"
+    },
     "json-to-ubl-xml-transformer": {
         "cmdline": [],
         "modules": [
@@ -41186,7 +41276,7 @@
             "json_websocket.tests",
             "json_websocket.tests.test_basic"
         ],
-        "version": "0.3.1589396966"
+        "version": "0.3.1589471975"
     },
     "json262": {
         "cmdline": [],
@@ -54049,7 +54139,21 @@
         "modules": [
             "jupyterlab_media_capture"
         ],
-        "version": "0.2.7"
+        "version": "0.2.8"
+    },
+    "jupyterlab-nbconvert-nocode": {
+        "cmdline": [],
+        "modules": [
+            "jupyterlab_nbconvert_nocode",
+            "jupyterlab_nbconvert_nocode._version",
+            "jupyterlab_nbconvert_nocode.nbconvert_functions",
+            "jupyterlab_nbconvert_nocode.nbconvert_functions.hideinput",
+            "jupyterlab_nbconvert_nocode.nbconvert_functions.hideinput.exporters",
+            "jupyterlab_nbconvert_nocode.nbconvert_functions.hideinput.utils",
+            "jupyterlab_nbconvert_nocode.tests",
+            "jupyterlab_nbconvert_nocode.tests.test_all"
+        ],
+        "version": "0.1.0"
     },
     "jupyterlab-nvdashboard": {
         "cmdline": [],
@@ -56210,10 +56314,9 @@
             "jutge.toolkit.compilers",
             "jutge.toolkit.problems",
             "jutge.toolkit.quizzes",
-            "jutge.toolkit.start",
-            "jutge.toolkit.util"
+            "jutge.toolkit.start"
         ],
-        "version": "2.3.0"
+        "version": "2.4.0"
     },
     "jutil": {
         "cmdline": [],
@@ -58193,7 +58296,7 @@
             "jyinterface.common.common_pb2_grpc",
             "jyinterface.interface"
         ],
-        "version": "1.0.14"
+        "version": "1.0.15"
     },
     "jyivnqxd5x": {
         "cmdline": [],
