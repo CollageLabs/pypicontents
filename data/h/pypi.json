@@ -2755,11 +2755,10 @@
         "modules": [
             "habu",
             "habu.cli",
-            "habu.cli.beta_cmd_bruteforce",
-            "habu.cli.beta_cmd_certclone_chain",
             "habu.cli.beta_cmd_crack_service",
             "habu.cli.beta_cmd_dhcp_server",
             "habu.cli.beta_cmd_dnsd",
+            "habu.cli.beta_cmd_file_entropy",
             "habu.cli.beta_cmd_firewalk",
             "habu.cli.beta_cmd_firewall",
             "habu.cli.beta_cmd_https_server",
@@ -2781,63 +2780,60 @@
             "habu.cli.cmd_asydns",
             "habu.cli.cmd_b64",
             "habu.cli.cmd_cert_clone",
+            "habu.cli.cmd_cert_crtsh",
             "habu.cli.cmd_cert_names",
             "habu.cli.cmd_config_del",
             "habu.cli.cmd_config_set",
             "habu.cli.cmd_config_show",
-            "habu.cli.cmd_contest",
             "habu.cli.cmd_crack_luhn",
             "habu.cli.cmd_crack_snmp",
-            "habu.cli.cmd_crtsh",
-            "habu.cli.cmd_cve_2018_9995",
-            "habu.cli.cmd_cymon_ip",
-            "habu.cli.cmd_cymon_ip_timeline",
+            "habu.cli.cmd_crypto_fernet",
+            "habu.cli.cmd_crypto_fernet_genkey",
+            "habu.cli.cmd_crypto_gppref",
+            "habu.cli.cmd_crypto_hasher",
+            "habu.cli.cmd_crypto_xor",
+            "habu.cli.cmd_data_enrich",
             "habu.cli.cmd_data_extract_domain",
             "habu.cli.cmd_data_extract_email",
             "habu.cli.cmd_data_extract_fqdn",
             "habu.cli.cmd_data_extract_ipv4",
             "habu.cli.cmd_data_filter",
-            "habu.cli.cmd_decrypt_gppref",
+            "habu.cli.cmd_data_select",
             "habu.cli.cmd_dhcp_discover",
             "habu.cli.cmd_dhcp_starvation",
             "habu.cli.cmd_dns_lookup_forward",
             "habu.cli.cmd_dns_lookup_reverse",
             "habu.cli.cmd_eicar",
-            "habu.cli.cmd_expand",
-            "habu.cli.cmd_fernet",
-            "habu.cli.cmd_fernet_genkey",
             "habu.cli.cmd_forkbomb",
             "habu.cli.cmd_fqdn_finder",
             "habu.cli.cmd_gateway_find",
-            "habu.cli.cmd_h1_scope",
-            "habu.cli.cmd_hasher",
             "habu.cli.cmd_host",
             "habu.cli.cmd_http_headers",
             "habu.cli.cmd_http_options",
             "habu.cli.cmd_http_tech",
-            "habu.cli.cmd_interfaces",
-            "habu.cli.cmd_ip",
-            "habu.cli.cmd_ip2asn",
+            "habu.cli.cmd_icmp_ping",
+            "habu.cli.cmd_ip_asn",
             "habu.cli.cmd_ip_geolocation",
             "habu.cli.cmd_ip_internal",
-            "habu.cli.cmd_isn",
+            "habu.cli.cmd_ip_public",
             "habu.cli.cmd_jshell",
             "habu.cli.cmd_karma",
             "habu.cli.cmd_karma_bulk",
             "habu.cli.cmd_land",
             "habu.cli.cmd_nc",
+            "habu.cli.cmd_net_contest",
+            "habu.cli.cmd_net_interfaces",
             "habu.cli.cmd_nmap_excluded",
             "habu.cli.cmd_nmap_open",
             "habu.cli.cmd_nmap_ports",
-            "habu.cli.cmd_ping",
             "habu.cli.cmd_protoscan",
-            "habu.cli.cmd_select",
             "habu.cli.cmd_server_ftp",
             "habu.cli.cmd_shodan",
             "habu.cli.cmd_shodan_query",
-            "habu.cli.cmd_synflood",
-            "habu.cli.cmd_tcpflags",
-            "habu.cli.cmd_tcpscan",
+            "habu.cli.cmd_tcp_flags",
+            "habu.cli.cmd_tcp_isn",
+            "habu.cli.cmd_tcp_scan",
+            "habu.cli.cmd_tcp_synflood",
             "habu.cli.cmd_traceroute",
             "habu.cli.cmd_usercheck",
             "habu.cli.cmd_version",
@@ -2847,7 +2843,6 @@
             "habu.cli.cmd_web_screenshot",
             "habu.cli.cmd_whois_domain",
             "habu.cli.cmd_whois_ip",
-            "habu.cli.cmd_xor",
             "habu.config",
             "habu.lib",
             "habu.lib.arpoison",
@@ -2861,7 +2856,7 @@
             "habu.lib.dns",
             "habu.lib.eicar",
             "habu.lib.enrich",
-            "habu.lib.expand",
+            "habu.lib.enrich_not_work",
             "habu.lib.extract",
             "habu.lib.firewall",
             "habu.lib.firewall_iptables",
@@ -2877,6 +2872,7 @@
             "habu.lib.iface",
             "habu.lib.ip",
             "habu.lib.ip2asn",
+            "habu.lib.ip_reputation",
             "habu.lib.libdns",
             "habu.lib.loadcfg",
             "habu.lib.portscan",
@@ -2892,7 +2888,7 @@
             "habu.lib.web_screenshot",
             "habu.lib.xor"
         ],
-        "version": "0.1.33"
+        "version": "0.1.36"
     },
     "haburas": {
         "cmdline": [],
@@ -2944,7 +2940,7 @@
             "gamelib.Structures",
             "gamelib.Utils"
         ],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     "hacheck": {
         "cmdline": [],
@@ -5115,7 +5111,7 @@
             "hackingtools.modules.web.sqlinjection",
             "hackingtools.modules.web.sqlinjection.ht_sqlinjection"
         ],
-        "version": "3.0.0.53"
+        "version": "3.0.0.62"
     },
     "hackintosh": {
         "cmdline": [],
@@ -5401,7 +5397,7 @@
             "hacs_frontend",
             "hacs_frontend.version"
         ],
-        "version": "20200515221151"
+        "version": "20200517183021"
     },
     "hacspec": {
         "cmdline": [],
@@ -7286,7 +7282,7 @@
             "halo_aws.providers.cloud.aws.ses",
             "halo_aws.providers.cloud.aws.settingsx"
         ],
-        "version": "0.11.28"
+        "version": "0.11.29"
     },
     "halo-bian": {
         "cmdline": [],
@@ -7300,7 +7296,7 @@
             "halo_bian.bian.exceptions",
             "halo_bian.bian.mixin_err_msg"
         ],
-        "version": "0.11.69"
+        "version": "0.11.70"
     },
     "halo-flask": {
         "cmdline": [],
@@ -7343,7 +7339,7 @@
             "halo_flask.ssm",
             "halo_flask.sys_util"
         ],
-        "version": "0.15.75"
+        "version": "0.15.76"
     },
     "halo-splunk": {
         "cmdline": [],
@@ -15478,7 +15474,7 @@
             "hashcrack_jtr.john",
             "hashcrack_jtr.version"
         ],
-        "version": "20.5.10"
+        "version": "20.5.17"
     },
     "hashdate": {
         "cmdline": [],
@@ -24526,11 +24522,6 @@
             "hdy_pypi_test"
         ],
         "version": "1.1.0"
-    },
-    "hdyndns": {
-        "cmdline": [],
-        "modules": [],
-        "version": "0.0.7"
     },
     "he": {
         "cmdline": [],
@@ -36146,7 +36137,7 @@
             "hestia_earth",
             "hestia_earth.schema"
         ],
-        "version": "0.0.1"
+        "version": "0.0.2"
     },
     "hestia-earth-validation": {
         "cmdline": [],
@@ -39302,7 +39293,7 @@
         "modules": [
             "hgext3rd.hgwebplus"
         ],
-        "version": "0.4.0"
+        "version": "0.5.2"
     },
     "hgwin": {
         "cmdline": [],
@@ -45369,7 +45360,7 @@
             "hitchkey.languagestrings",
             "hitchkey.utils"
         ],
-        "version": "0.5.3"
+        "version": "0.6.1"
     },
     "hitchmemcache": {
         "cmdline": [],
@@ -46822,19 +46813,96 @@
     "hkube-python-wrapper": {
         "cmdline": [],
         "modules": [
+            "communication",
+            "communication.DataRequest",
+            "communication.DataServer",
+            "communication.zmq",
+            "communication.zmq.ZMQRequest",
+            "communication.zmq.ZMQServer",
             "hkube_python_wrapper",
-            "hkube_python_wrapper.__version__",
+            "hkube_python_wrapper.codeApi",
+            "hkube_python_wrapper.codeApi.execution",
+            "hkube_python_wrapper.codeApi.hkube_api",
+            "hkube_python_wrapper.codeApi.waitFor",
+            "hkube_python_wrapper.communication",
+            "hkube_python_wrapper.communication.DataRequest",
+            "hkube_python_wrapper.communication.DataServer",
+            "hkube_python_wrapper.communication.zmq",
+            "hkube_python_wrapper.communication.zmq.ZMQRequest",
+            "hkube_python_wrapper.communication.zmq.ZMQServer",
+            "hkube_python_wrapper.data_adapter",
             "hkube_python_wrapper.execution",
             "hkube_python_wrapper.hkube_api",
             "hkube_python_wrapper.messages",
             "hkube_python_wrapper.methods",
+            "hkube_python_wrapper.storage",
+            "hkube_python_wrapper.storage.base_storage_manager",
+            "hkube_python_wrapper.storage.fs_adapter",
+            "hkube_python_wrapper.storage.s3_adapter",
+            "hkube_python_wrapper.storage.storage_manager",
+            "hkube_python_wrapper.storage.task_output_manager",
+            "hkube_python_wrapper.util",
+            "hkube_python_wrapper.util.decorators",
+            "hkube_python_wrapper.util.encoding",
+            "hkube_python_wrapper.util.object_path",
+            "hkube_python_wrapper.util.type_check",
             "hkube_python_wrapper.waitFor",
             "hkube_python_wrapper.wc",
             "hkube_python_wrapper.wrapper",
-            "test_alg",
-            "test_alg.test_alg1"
+            "hkube_python_wrapper.wrapper.algorunner",
+            "hkube_python_wrapper.wrapper.data_adapter",
+            "hkube_python_wrapper.wrapper.messages",
+            "hkube_python_wrapper.wrapper.methods",
+            "hkube_python_wrapper.wrapper.wc",
+            "storage",
+            "storage.base_storage_manager",
+            "storage.fsAdapter",
+            "storage.s3Adapter",
+            "storage.storage_manager",
+            "storage.task_output_manager",
+            "tests",
+            "tests.DataRequestRunner",
+            "tests.DataServerRunner",
+            "tests.configs",
+            "tests.configs.config",
+            "tests.conftest",
+            "tests.data_server",
+            "tests.mock_data",
+            "tests.mock_data.mocks",
+            "tests.mock_data_server1",
+            "tests.mock_data_server2",
+            "tests.mock_ws_server",
+            "tests.mocks",
+            "tests.mocks.mockdata",
+            "tests.mocks.test_alg",
+            "tests.mocks.test_alg.main",
+            "tests.test",
+            "tests.test_alg",
+            "tests.test_alg.hkube_api",
+            "tests.test_alg.main",
+            "tests.test_alg.test_alg",
+            "tests.test_communication",
+            "tests.test_data_adapter",
+            "tests.test_encoding",
+            "tests.test_hkube_api",
+            "tests.test_storage_manager",
+            "tests.test_storage_manager_fs",
+            "tests.test_storage_manager_s3",
+            "tests.test_utils_getpath",
+            "tests.test_wrapper",
+            "tests.test_ws",
+            "tests.xtest_communication",
+            "tests.xtest_encoding",
+            "tests.xtest_hkube_api",
+            "tests.xtest_wrapper",
+            "tests.xtest_ws",
+            "util",
+            "util.decorators",
+            "util.encoding",
+            "util.object_path",
+            "util.type_check"
         ],
-        "version": "0.3.6"
+        "version": "1.0.0"
     },
     "hkube-websocket-client": {
         "cmdline": [
@@ -56053,7 +56121,7 @@
             "tests.cli.sky_cli_test",
             "tests.cli.sunpath_cli_test"
         ],
-        "version": "1.17.2"
+        "version": "1.17.3"
     },
     "honeybee-radiance-command": {
         "cmdline": [],
@@ -56093,7 +56161,7 @@
             "honeybee_radiance_folder.folder",
             "honeybee_radiance_folder.folderutil"
         ],
-        "version": "2.0.0"
+        "version": "2.0.1"
     },
     "honeybee-schema": {
         "cmdline": [],
@@ -62610,7 +62678,7 @@
             "my.twitter.twint",
             "my.vk"
         ],
-        "version": "0.2.20200514"
+        "version": "0.2.20200517"
     },
     "hpicsp": {
         "cmdline": [],
@@ -66511,7 +66579,7 @@
             "htmlcreator",
             "htmlcreator.document"
         ],
-        "version": "0.3.0"
+        "version": "0.4.0"
     },
     "htmlcssinclude": {
         "cmdline": [],
@@ -66787,6 +66855,15 @@
             "htmlgrab.core"
         ],
         "version": "0.0.3-alpha"
+    },
+    "htmlib": {
+        "cmdline": [],
+        "modules": [
+            "htmlib",
+            "htmlib.htmelement",
+            "htmlib.main"
+        ],
+        "version": "0.1"
     },
     "htmlie": {
         "cmdline": [],
@@ -70406,7 +70483,7 @@
             "httprunner.utils",
             "httprunner.utils_test"
         ],
-        "version": "3.0.2"
+        "version": "3.0.3"
     },
     "https": {
         "cmdline": [],
@@ -70646,6 +70723,25 @@
         "cmdline": [],
         "modules": [],
         "version": ""
+    },
+    "httpsuite": {
+        "cmdline": [],
+        "modules": [
+            "httpsuite",
+            "httpsuite.httpsuite",
+            "httpsuite.info",
+            "httpsuite.interfaces",
+            "httpsuite.specifications",
+            "tests",
+            "tests.interfaces",
+            "tests.interfaces.test_headers",
+            "tests.interfaces.test_interfaces",
+            "tests.interfaces.test_item",
+            "tests.test_message",
+            "tests.test_request",
+            "tests.test_response"
+        ],
+        "version": "0.1.6"
     },
     "httpsweet": {
         "cmdline": [
@@ -74960,10 +75056,9 @@
             "humblebundle_downloader",
             "humblebundle_downloader._version",
             "humblebundle_downloader.cli",
-            "humblebundle_downloader.download_library",
-            "humblebundle_downloader.generate_cookie"
+            "humblebundle_downloader.download_library"
         ],
-        "version": "0.3.0"
+        "version": "0.3.1"
     },
     "humbleclient": {
         "cmdline": [
@@ -78219,73 +78314,9 @@
         "version": "0.2"
     },
     "hwrt": {
-        "cmdline": [
-            "hwrt"
-        ],
-        "modules": [
-            "hwrt",
-            "hwrt.analyze_data",
-            "hwrt.classify",
-            "hwrt.create_ffiles",
-            "hwrt.create_model",
-            "hwrt.data_analyzation_metrics",
-            "hwrt.data_multiplication",
-            "hwrt.datasets",
-            "hwrt.datasets.crohme_convert",
-            "hwrt.datasets.crohme_eval",
-            "hwrt.datasets.expressmatch",
-            "hwrt.datasets.inkml",
-            "hwrt.datasets.mathbrush",
-            "hwrt.datasets.mfrdb",
-            "hwrt.datasets.mfrdb_eval",
-            "hwrt.datasets.mfrdb_import",
-            "hwrt.datasets.scg_ink",
-            "hwrt.download",
-            "hwrt.features",
-            "hwrt.features_plugin",
-            "hwrt.filter_dataset",
-            "hwrt.geometry",
-            "hwrt.handwritten_data",
-            "hwrt.language_model",
-            "hwrt.language_model.language_model",
-            "hwrt.language_model.utils",
-            "hwrt.latex",
-            "hwrt.partitions",
-            "hwrt.preprocess_dataset",
-            "hwrt.preprocessing",
-            "hwrt.segmentation",
-            "hwrt.segmentation.beam",
-            "hwrt.segmentation.segmentation",
-            "hwrt.selfcheck",
-            "hwrt.serve",
-            "hwrt.spacial_relationship",
-            "hwrt.test",
-            "hwrt.train",
-            "hwrt.utils",
-            "hwrt.view",
-            "tests",
-            "tests.analyze_data_test",
-            "tests.create_ffiles_test",
-            "tests.create_model_test",
-            "tests.data_analyzation_test",
-            "tests.data_multiplication_test",
-            "tests.datasets_test",
-            "tests.download_test",
-            "tests.feature_extraction_test",
-            "tests.feature_test",
-            "tests.filter_datasets_test",
-            "tests.geometry_test",
-            "tests.handwritten_data_test",
-            "tests.preprocess_dataset_test",
-            "tests.preprocessing_test",
-            "tests.segmentation_test",
-            "tests.selfcheck_test",
-            "tests.serve_test",
-            "tests.testhelper",
-            "tests.utils_test",
-            "tests.view_test"
-        ],
-        "version": "0.1.224"
+        "cmdline": [],
+        "modules": [],
+        "version": "0.2.0"
     },
     "hwt": {
         "cmdline": [],
@@ -78464,7 +78495,7 @@
             "hwt.synthesizer.utils",
             "hwt.synthesizer.vectorUtils"
         ],
-        "version": "3.1"
+        "version": "3.2"
     },
     "hwtgraph": {
         "cmdline": [],
@@ -87331,7 +87362,7 @@
             "hypothesmith.cst",
             "hypothesmith.syntactic"
         ],
-        "version": "0.1.0"
+        "version": "0.1.2"
     },
     "hypothetical": {
         "cmdline": [],
@@ -87701,7 +87732,7 @@
             "hyron.rules.rule",
             "hyron.rules.rule_set"
         ],
-        "version": "0.0.2"
+        "version": "0.0.4"
     },
     "hyrule-builder": {
         "cmdline": [],
