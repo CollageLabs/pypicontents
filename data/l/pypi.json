@@ -2993,6 +2993,20 @@
         ],
         "version": "0.6.3"
     },
+    "labthings-client": {
+        "cmdline": [],
+        "modules": [
+            "labthings_client",
+            "labthings_client.affordances",
+            "labthings_client.discovery",
+            "labthings_client.json_typing",
+            "labthings_client.tasks",
+            "labthings_client.td_parsers",
+            "labthings_client.thing",
+            "labthings_client.utilities"
+        ],
+        "version": "0.1.0"
+    },
     "labtoolkit": {
         "cmdline": [],
         "modules": [
@@ -12355,7 +12369,7 @@
             "lastfmcache",
             "lastfmcache.lastfmcache"
         ],
-        "version": "1.2.1"
+        "version": "1.2.3"
     },
     "lastfmclient": {
         "cmdline": [],
@@ -16454,7 +16468,7 @@
             "launchpy",
             "launchpy.launchpy"
         ],
-        "version": "0.1.0"
+        "version": "0.1.1"
     },
     "launchr": {
         "cmdline": [],
@@ -29812,7 +29826,7 @@
         "modules": [
             "legitindicators"
         ],
-        "version": "0.0.28"
+        "version": "0.0.29"
     },
     "leglight": {
         "cmdline": [],
@@ -38870,7 +38884,7 @@
             "lgblkb_tools.vectorize",
             "lgblkb_tools.visualize"
         ],
-        "version": "1.1.18"
+        "version": "1.1.21"
     },
     "lgbsttracker": {
         "cmdline": [],
@@ -43454,52 +43468,65 @@
         "modules": [
             "libensemble",
             "libensemble.alloc_funcs",
+            "libensemble.alloc_funcs.defaults",
             "libensemble.alloc_funcs.fast_alloc",
             "libensemble.alloc_funcs.fast_alloc_and_pausing",
             "libensemble.alloc_funcs.fast_alloc_to_aposmm",
             "libensemble.alloc_funcs.give_pregenerated_work",
             "libensemble.alloc_funcs.give_sim_work_first",
             "libensemble.alloc_funcs.inverse_bayes_allocf",
+            "libensemble.alloc_funcs.only_one_gen_alloc",
             "libensemble.alloc_funcs.persistent_aposmm_alloc",
+            "libensemble.alloc_funcs.start_fd_persistent",
             "libensemble.alloc_funcs.start_only_persistent",
             "libensemble.alloc_funcs.start_persistent_local_opt_gens",
-            "libensemble.alloc_funcs.support",
-            "libensemble.balsam_controller",
             "libensemble.comms",
             "libensemble.comms.comms",
             "libensemble.comms.logs",
             "libensemble.comms.mpi",
             "libensemble.comms.tcp_mgr",
-            "libensemble.controller",
-            "libensemble.env_resources",
+            "libensemble.executors",
+            "libensemble.executors.balsam_executor",
+            "libensemble.executors.executor",
+            "libensemble.executors.mpi_executor",
+            "libensemble.executors.mpi_runner",
             "libensemble.gen_funcs",
-            "libensemble.gen_funcs.aposmm",
+            "libensemble.gen_funcs.aposmm_localopt_support",
+            "libensemble.gen_funcs.old_aposmm",
             "libensemble.gen_funcs.persistent_aposmm",
+            "libensemble.gen_funcs.persistent_deap_nsga2",
+            "libensemble.gen_funcs.persistent_fd_param_finder",
             "libensemble.gen_funcs.persistent_inverse_bayes",
+            "libensemble.gen_funcs.persistent_tasmanian",
             "libensemble.gen_funcs.persistent_uniform_sampling",
             "libensemble.gen_funcs.sampling",
-            "libensemble.gen_funcs.support",
             "libensemble.gen_funcs.uniform_or_localopt",
+            "libensemble.gen_funcs.vtmop",
             "libensemble.history",
             "libensemble.libE",
             "libensemble.libE_logger",
             "libensemble.libE_manager",
             "libensemble.libE_worker",
             "libensemble.message_numbers",
-            "libensemble.mpi_controller",
-            "libensemble.mpi_resources",
-            "libensemble.node_resources",
             "libensemble.resources",
+            "libensemble.resources.env_resources",
+            "libensemble.resources.mpi_resources",
+            "libensemble.resources.node_resources",
+            "libensemble.resources.resources",
             "libensemble.sim_funcs",
+            "libensemble.sim_funcs.borehole",
             "libensemble.sim_funcs.branin",
             "libensemble.sim_funcs.branin.branin",
             "libensemble.sim_funcs.branin.branin_obj",
             "libensemble.sim_funcs.chwirut1",
             "libensemble.sim_funcs.comms_testing",
+            "libensemble.sim_funcs.executor_hworld",
             "libensemble.sim_funcs.helloworld",
             "libensemble.sim_funcs.inverse_bayes",
-            "libensemble.sim_funcs.job_control_hworld",
+            "libensemble.sim_funcs.mop_funcs",
+            "libensemble.sim_funcs.noisy_vector_mapping",
             "libensemble.sim_funcs.one_d_func",
+            "libensemble.sim_funcs.periodic_func",
             "libensemble.sim_funcs.six_hump_camel",
             "libensemble.tests",
             "libensemble.tests.regression_tests",
@@ -43508,62 +43535,85 @@
             "libensemble.tests.regression_tests.support",
             "libensemble.tests.regression_tests.test_1d_sampling",
             "libensemble.tests.regression_tests.test_1d_uniform_sampling_with_comm_dup",
-            "libensemble.tests.regression_tests.test_6-hump_camel_active_persistent_worker_abort",
-            "libensemble.tests.regression_tests.test_6-hump_camel_aposmm_LD_MMA",
-            "libensemble.tests.regression_tests.test_6-hump_camel_elapsed_time_abort",
-            "libensemble.tests.regression_tests.test_6-hump_camel_persistent_aposmm_1",
-            "libensemble.tests.regression_tests.test_6-hump_camel_persistent_aposmm_2",
-            "libensemble.tests.regression_tests.test_6-hump_camel_persistent_aposmm_3",
-            "libensemble.tests.regression_tests.test_6-hump_camel_persistent_aposmm_4",
-            "libensemble.tests.regression_tests.test_6-hump_camel_persistent_uniform_sampling",
-            "libensemble.tests.regression_tests.test_6-hump_camel_pregenerated_sample",
-            "libensemble.tests.regression_tests.test_6-hump_camel_uniform_sampling",
-            "libensemble.tests.regression_tests.test_6-hump_camel_uniform_sampling_with_persistent_localopt_gens",
-            "libensemble.tests.regression_tests.test_6-hump_camel_with_different_nodes_uniform_sample",
-            "libensemble.tests.regression_tests.test_branin_aposmm_nlopt_and_then_scipy",
+            "libensemble.tests.regression_tests.test_1d_with_profile_sampling",
+            "libensemble.tests.regression_tests.test_active_persistent_worker_abort",
             "libensemble.tests.regression_tests.test_calc_exception",
-            "libensemble.tests.regression_tests.test_chwirut_aposmm_one_residual_at_a_time",
-            "libensemble.tests.regression_tests.test_chwirut_pounders",
-            "libensemble.tests.regression_tests.test_chwirut_pounders_persistent",
-            "libensemble.tests.regression_tests.test_chwirut_pounders_splitcomm",
-            "libensemble.tests.regression_tests.test_chwirut_pounders_subcomm",
-            "libensemble.tests.regression_tests.test_chwirut_uniform_sampling_one_residual_at_a_time",
             "libensemble.tests.regression_tests.test_comms",
+            "libensemble.tests.regression_tests.test_deap_nsga2",
+            "libensemble.tests.regression_tests.test_elapsed_time_abort",
+            "libensemble.tests.regression_tests.test_evaluate_existing_sample",
+            "libensemble.tests.regression_tests.test_executor_hworld",
             "libensemble.tests.regression_tests.test_fast_alloc",
             "libensemble.tests.regression_tests.test_inverse_bayes_example",
-            "libensemble.tests.regression_tests.test_jobcontroller_hworld",
             "libensemble.tests.regression_tests.test_mpi_comms",
-            "libensemble.tests.regression_tests.test_nan_func_aposmm",
+            "libensemble.tests.regression_tests.test_mpi_runners",
+            "libensemble.tests.regression_tests.test_nan_func_old_aposmm",
+            "libensemble.tests.regression_tests.test_old_aposmm_one_residual_at_a_time",
+            "libensemble.tests.regression_tests.test_old_aposmm_pounders",
+            "libensemble.tests.regression_tests.test_old_aposmm_pounders_splitcomm",
+            "libensemble.tests.regression_tests.test_old_aposmm_pounders_subcomm",
+            "libensemble.tests.regression_tests.test_old_aposmm_sim_dirs",
+            "libensemble.tests.regression_tests.test_old_aposmm_with_gradients",
+            "libensemble.tests.regression_tests.test_persistent_aposmm_dfols",
+            "libensemble.tests.regression_tests.test_persistent_aposmm_exception",
+            "libensemble.tests.regression_tests.test_persistent_aposmm_external_localopt",
+            "libensemble.tests.regression_tests.test_persistent_aposmm_nlopt",
+            "libensemble.tests.regression_tests.test_persistent_aposmm_periodic",
+            "libensemble.tests.regression_tests.test_persistent_aposmm_pounders",
+            "libensemble.tests.regression_tests.test_persistent_aposmm_scipy",
+            "libensemble.tests.regression_tests.test_persistent_aposmm_tao_blmvm",
+            "libensemble.tests.regression_tests.test_persistent_aposmm_tao_nm",
+            "libensemble.tests.regression_tests.test_persistent_aposmm_timeout",
+            "libensemble.tests.regression_tests.test_persistent_aposmm_with_grad",
+            "libensemble.tests.regression_tests.test_persistent_fd_param_finder",
+            "libensemble.tests.regression_tests.test_persistent_tasmanian",
+            "libensemble.tests.regression_tests.test_persistent_uniform_sampling",
+            "libensemble.tests.regression_tests.test_sim_dirs_per_calc",
+            "libensemble.tests.regression_tests.test_sim_dirs_per_worker",
+            "libensemble.tests.regression_tests.test_sim_dirs_with_exception",
+            "libensemble.tests.regression_tests.test_sim_input_dir_option",
+            "libensemble.tests.regression_tests.test_uniform_sampling",
+            "libensemble.tests.regression_tests.test_uniform_sampling_one_residual_at_a_time",
+            "libensemble.tests.regression_tests.test_uniform_sampling_then_persistent_localopt_runs",
+            "libensemble.tests.regression_tests.test_uniform_sampling_with_different_resources",
+            "libensemble.tests.regression_tests.test_vtmop",
             "libensemble.tests.regression_tests.test_worker_exceptions",
             "libensemble.tests.unit_tests",
             "libensemble.tests.unit_tests.launch_busy",
             "libensemble.tests.unit_tests.setup",
             "libensemble.tests.unit_tests.test_allocation_funcs",
-            "libensemble.tests.unit_tests.test_aposmm_logic",
             "libensemble.tests.unit_tests.test_comms",
             "libensemble.tests.unit_tests.test_env_resources",
+            "libensemble.tests.unit_tests.test_executor",
             "libensemble.tests.unit_tests.test_history",
-            "libensemble.tests.unit_tests.test_job_funcs",
-            "libensemble.tests.unit_tests.test_jobcontroller",
             "libensemble.tests.unit_tests.test_launcher",
             "libensemble.tests.unit_tests.test_libE_main",
             "libensemble.tests.unit_tests.test_loc_stack",
             "libensemble.tests.unit_tests.test_manager_main",
             "libensemble.tests.unit_tests.test_mpi4py",
             "libensemble.tests.unit_tests.test_node_resources",
+            "libensemble.tests.unit_tests.test_old_aposmm_logic",
             "libensemble.tests.unit_tests.test_persistent_aposmm",
             "libensemble.tests.unit_tests.test_resources",
             "libensemble.tests.unit_tests.test_scipy",
+            "libensemble.tests.unit_tests.test_sim_dir_properties",
+            "libensemble.tests.unit_tests.test_task_funcs",
             "libensemble.tests.unit_tests.test_timer",
             "libensemble.tests.unit_tests.tofix__test_worker",
-            "libensemble.util",
-            "libensemble.util.forkpdb",
-            "libensemble.util.launcher",
-            "libensemble.util.loc_stack",
-            "libensemble.util.timer",
-            "libensemble.utils"
+            "libensemble.tools",
+            "libensemble.tools.alloc_support",
+            "libensemble.tools.check_inputs",
+            "libensemble.tools.fields_keys",
+            "libensemble.tools.forkable_pdb",
+            "libensemble.tools.gen_support",
+            "libensemble.tools.parse_args",
+            "libensemble.tools.tools",
+            "libensemble.utils",
+            "libensemble.utils.launcher",
+            "libensemble.utils.loc_stack",
+            "libensemble.utils.timer"
         ],
-        "version": "0.6.0"
+        "version": "0.7.0"
     },
     "libenum": {
         "cmdline": [],
@@ -46722,6 +46772,14 @@
         ],
         "version": "0.2"
     },
+    "libpythonpro2": {
+        "cmdline": [],
+        "modules": [
+            "libpythonpro2",
+            "libpythonpro2.github_api"
+        ],
+        "version": "0.3"
+    },
     "libpythonproh": {
         "cmdline": [],
         "modules": [
@@ -48850,7 +48908,7 @@
             "libsast.exceptions",
             "libsast.scanner"
         ],
-        "version": "1.0.3"
+        "version": "1.0.4"
     },
     "libsbgnpy": {
         "cmdline": [],
@@ -53135,9 +53193,10 @@
             "life_line_chart.MarkdownParser",
             "life_line_chart.ReadGedcom",
             "life_line_chart.SimpleSVGItems",
+            "life_line_chart.Translation",
             "life_line_chart._autogenerate_data"
         ],
-        "version": "1.3.5"
+        "version": "1.3.6"
     },
     "life-prolonging": {
         "cmdline": [
@@ -59393,6 +59452,11 @@
             "linchpin.version"
         ],
         "version": "2.0.1"
+    },
+    "linchpin-testpip": {
+        "cmdline": [],
+        "modules": [],
+        "version": ""
     },
     "lincon": {
         "cmdline": [],
@@ -76391,6 +76455,21 @@
         ],
         "version": "1.0.27"
     },
+    "llamalogsdev": {
+        "cmdline": [],
+        "modules": [
+            "LlamaLogsDev",
+            "LlamaLogsDev.aggregateLog",
+            "LlamaLogsDev.helpers",
+            "LlamaLogsDev.llamaLogs",
+            "LlamaLogsDev.llamaProxy",
+            "LlamaLogsDev.log",
+            "LlamaLogsDev.logAggregator",
+            "LlamaLogsDev.returnLog",
+            "LlamaLogsDev.stat"
+        ],
+        "version": "0.1.7"
+    },
     "llamicron-i": {
         "cmdline": [
             "run"
@@ -77930,7 +78009,7 @@
             "LMIPy.table",
             "LMIPy.utils"
         ],
-        "version": "0.3.27"
+        "version": "0.3.29"
     },
     "lmirror": {
         "cmdline": [],
@@ -79131,14 +79210,6 @@
         "cmdline": [],
         "modules": [],
         "version": "1.0.0"
-    },
-    "loadflownr": {
-        "cmdline": [],
-        "modules": [
-            "loadflowNR",
-            "loadflowNR.classNRmethod"
-        ],
-        "version": "1.0.3"
     },
     "loadify": {
         "cmdline": [],
@@ -80747,6 +80818,16 @@
         "modules": [],
         "version": "1.0.0"
     },
+    "localsql": {
+        "cmdline": [
+            "lsql"
+        ],
+        "modules": [
+            "localsql",
+            "localsql.localsql"
+        ],
+        "version": "0.2.2"
+    },
     "localstack": {
         "cmdline": [
             "localstack",
@@ -80874,6 +80955,7 @@
             "localstack_ext.bootstrap.cli",
             "localstack_ext.bootstrap.dashboard",
             "localstack_ext.bootstrap.dashboard.dashboard_extended",
+            "localstack_ext.bootstrap.ftp_server",
             "localstack_ext.bootstrap.install",
             "localstack_ext.bootstrap.licensing",
             "localstack_ext.bootstrap.local_daemon",
@@ -80882,7 +80964,7 @@
             "localstack_ext.constants",
             "localstack_ext.plugins"
         ],
-        "version": "0.11.14.4"
+        "version": "0.11.15.1"
     },
     "localstackclient": {
         "cmdline": [],
@@ -101205,6 +101287,7 @@
     },
     "luechenbresse": {
         "cmdline": [
+            "lb-btci",
             "luechenbresse"
         ],
         "modules": [
@@ -101218,7 +101301,7 @@
             "luechenbresse.text",
             "luechenbresse.zdf-heute"
         ],
-        "version": "0.0.5"
+        "version": "0.0.6"
     },
     "luein": {
         "cmdline": [],
@@ -103031,7 +103114,7 @@
             "LumoPackage",
             "LumoPackage.RandomCube"
         ],
-        "version": "2.2020.5.23"
+        "version": "2.2020.5.24"
     },
     "lumos": {
         "cmdline": [],
@@ -107772,6 +107855,22 @@
     "lyricsearch": {
         "cmdline": [],
         "modules": [],
+        "version": "0.2.1"
+    },
+    "lyricsfandom": {
+        "cmdline": [],
+        "modules": [
+            "lyricsfandom",
+            "lyricsfandom.api",
+            "lyricsfandom.connect",
+            "lyricsfandom.meta",
+            "lyricsfandom.music",
+            "lyricsfandom.music.album",
+            "lyricsfandom.music.artist",
+            "lyricsfandom.music.song",
+            "lyricsfandom.scrape",
+            "lyricsfandom.utils"
+        ],
         "version": "0.2.1"
     },
     "lyricsfinder": {
