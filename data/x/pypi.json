@@ -2629,7 +2629,7 @@
             "xarray_behave.metrics",
             "xarray_behave.xarray_behave"
         ],
-        "version": "0.7.4"
+        "version": "0.7.5"
     },
     "xarray-custom": {
         "cmdline": [],
@@ -2644,7 +2644,7 @@
             "xarray_custom.typing",
             "xarray_custom.utils"
         ],
-        "version": "0.4.0"
+        "version": "0.4.1"
     },
     "xarray-events": {
         "cmdline": [],
@@ -4865,9 +4865,12 @@
     "xbrlassembler": {
         "cmdline": [],
         "modules": [
-            "xbrlassembler"
+            "xbrlassembler",
+            "xbrlassembler.assembler",
+            "xbrlassembler.enums",
+            "xbrlassembler.error"
         ],
-        "version": "0.1"
+        "version": "0.2"
     },
     "xbrr": {
         "cmdline": [],
@@ -5914,7 +5917,7 @@
             "tests.dar_tests",
             "tests.engine_tests"
         ],
-        "version": "0.9.3"
+        "version": "0.10.4"
     },
     "xcore": {
         "cmdline": [],
@@ -6921,6 +6924,13 @@
             "xdot/ui.window"
         ],
         "version": "1.1"
+    },
+    "xdotoolwrapper": {
+        "cmdline": [],
+        "modules": [
+            "XDoToolWrapper"
+        ],
+        "version": "0.0.1"
     },
     "xdow": {
         "cmdline": [],
@@ -8133,7 +8143,7 @@
             "xes.weather",
             "xes.word"
         ],
-        "version": "0.1.24"
+        "version": "0.1.25"
     },
     "xesmf": {
         "cmdline": [],
@@ -11940,53 +11950,100 @@
             "xl_tensorflow.models.vision.classification.utils.serving_api",
             "xl_tensorflow.models.vision.classification.utils.tfrecord",
             "xl_tensorflow.models.vision.detection",
+            "xl_tensorflow.models.vision.detection.architecture",
+            "xl_tensorflow.models.vision.detection.architecture.factory",
+            "xl_tensorflow.models.vision.detection.architecture.fpn",
+            "xl_tensorflow.models.vision.detection.architecture.heads",
+            "xl_tensorflow.models.vision.detection.architecture.identity",
+            "xl_tensorflow.models.vision.detection.architecture.nn_ops",
+            "xl_tensorflow.models.vision.detection.architecture.resnet",
             "xl_tensorflow.models.vision.detection.body",
             "xl_tensorflow.models.vision.detection.body.aggregation",
+            "xl_tensorflow.models.vision.detection.body.base_model",
+            "xl_tensorflow.models.vision.detection.body.checkpoint_utils",
             "xl_tensorflow.models.vision.detection.body.common",
+            "xl_tensorflow.models.vision.detection.body.factory",
+            "xl_tensorflow.models.vision.detection.body.learning_rates",
+            "xl_tensorflow.models.vision.detection.body.maskrcnn_model",
+            "xl_tensorflow.models.vision.detection.body.optimizers",
+            "xl_tensorflow.models.vision.detection.body.retinanet_model",
             "xl_tensorflow.models.vision.detection.body.yolo",
             "xl_tensorflow.models.vision.detection.configs",
+            "xl_tensorflow.models.vision.detection.configs.base_config_rcnn",
             "xl_tensorflow.models.vision.detection.configs.common",
+            "xl_tensorflow.models.vision.detection.configs.efficientdet_config",
+            "xl_tensorflow.models.vision.detection.configs.factory",
+            "xl_tensorflow.models.vision.detection.configs.maskrcnn_config",
+            "xl_tensorflow.models.vision.detection.configs.retinanet_config",
             "xl_tensorflow.models.vision.detection.configs.yolo_config",
             "xl_tensorflow.models.vision.detection.dataloader",
             "xl_tensorflow.models.vision.detection.dataloader.augment",
             "xl_tensorflow.models.vision.detection.dataloader.augment.autoaugment",
             "xl_tensorflow.models.vision.detection.dataloader.augment.autoaugment_test",
             "xl_tensorflow.models.vision.detection.dataloader.augment.hparams_config",
-            "xl_tensorflow.models.vision.detection.dataloader.common",
-            "xl_tensorflow.models.vision.detection.dataloader.common.anchor_rcnn",
-            "xl_tensorflow.models.vision.detection.dataloader.common.anchors_yolo",
-            "xl_tensorflow.models.vision.detection.dataloader.common.box_list",
-            "xl_tensorflow.models.vision.detection.dataloader.common.box_utils",
-            "xl_tensorflow.models.vision.detection.dataloader.common.input_utils",
-            "xl_tensorflow.models.vision.detection.dataloader.common.preprocessor",
-            "xl_tensorflow.models.vision.detection.dataloader.common.tf_example_decoder",
             "xl_tensorflow.models.vision.detection.dataloader.factory",
             "xl_tensorflow.models.vision.detection.dataloader.input_reader",
+            "xl_tensorflow.models.vision.detection.dataloader.maskrcnn_parser",
+            "xl_tensorflow.models.vision.detection.dataloader.retinanet_parser",
+            "xl_tensorflow.models.vision.detection.dataloader.utils",
+            "xl_tensorflow.models.vision.detection.dataloader.utils.anchor_rcnn",
+            "xl_tensorflow.models.vision.detection.dataloader.utils.anchors_yolo",
+            "xl_tensorflow.models.vision.detection.dataloader.utils.argmax_matcher",
+            "xl_tensorflow.models.vision.detection.dataloader.utils.balanced_positive_negative_sampler",
+            "xl_tensorflow.models.vision.detection.dataloader.utils.box_coder",
+            "xl_tensorflow.models.vision.detection.dataloader.utils.box_list",
+            "xl_tensorflow.models.vision.detection.dataloader.utils.box_list_ops",
+            "xl_tensorflow.models.vision.detection.dataloader.utils.box_utils",
+            "xl_tensorflow.models.vision.detection.dataloader.utils.class_utils",
+            "xl_tensorflow.models.vision.detection.dataloader.utils.faster_rcnn_box_coder",
+            "xl_tensorflow.models.vision.detection.dataloader.utils.input_utils",
+            "xl_tensorflow.models.vision.detection.dataloader.utils.mask_utils",
+            "xl_tensorflow.models.vision.detection.dataloader.utils.matcher",
+            "xl_tensorflow.models.vision.detection.dataloader.utils.minibatch_sampler",
+            "xl_tensorflow.models.vision.detection.dataloader.utils.mode_keys",
+            "xl_tensorflow.models.vision.detection.dataloader.utils.ops",
+            "xl_tensorflow.models.vision.detection.dataloader.utils.preprocessor",
+            "xl_tensorflow.models.vision.detection.dataloader.utils.region_similarity_calculator",
+            "xl_tensorflow.models.vision.detection.dataloader.utils.shape_utils",
+            "xl_tensorflow.models.vision.detection.dataloader.utils.shapemask_parser",
+            "xl_tensorflow.models.vision.detection.dataloader.utils.target_assigner",
+            "xl_tensorflow.models.vision.detection.dataloader.utils.tf_example_decoder",
             "xl_tensorflow.models.vision.detection.dataloader.yolo_loader",
             "xl_tensorflow.models.vision.detection.dataloader.yolo_parser",
+            "xl_tensorflow.models.vision.detection.evaluation",
+            "xl_tensorflow.models.vision.detection.evaluation.coco_evaluator",
+            "xl_tensorflow.models.vision.detection.evaluation.coco_utils",
+            "xl_tensorflow.models.vision.detection.evaluation.factory",
             "xl_tensorflow.models.vision.detection.inference",
             "xl_tensorflow.models.vision.detection.inference.yolo_inference",
             "xl_tensorflow.models.vision.detection.loss",
+            "xl_tensorflow.models.vision.detection.loss.losses",
             "xl_tensorflow.models.vision.detection.loss.yolo_loss",
+            "xl_tensorflow.models.vision.detection.ops",
+            "xl_tensorflow.models.vision.detection.ops.nms",
+            "xl_tensorflow.models.vision.detection.ops.postprocess_ops",
+            "xl_tensorflow.models.vision.detection.ops.roi_ops",
+            "xl_tensorflow.models.vision.detection.ops.spatial_transform_ops",
+            "xl_tensorflow.models.vision.detection.ops.target_ops",
             "xl_tensorflow.models.vision.detection.training",
             "xl_tensorflow.models.vision.detection.training.yolo_training",
             "xl_tensorflow.models.vision.detection.utils",
             "xl_tensorflow.models.vision.detection.utils.drawing",
+            "xl_tensorflow.models.vision.detection.utils.efficientdet_utils",
             "xl_tensorflow.models.vision.detection.utils.tfrecord",
             "xl_tensorflow.models.vision.detection.utils.yolo_utils",
             "xl_tensorflow.preprocessing",
             "xl_tensorflow.preprocessing.annotation",
-            "xl_tensorflow.test_aggregation",
-            "xl_tensorflow.test_tfrecord",
             "xl_tensorflow.utils",
             "xl_tensorflow.utils.base_config",
             "xl_tensorflow.utils.base_config_test",
             "xl_tensorflow.utils.common",
             "xl_tensorflow.utils.deploy",
+            "xl_tensorflow.utils.hparams_config",
             "xl_tensorflow.utils.params_dict",
             "xl_tensorflow.utils.params_dict_test"
         ],
-        "version": "0.3.9"
+        "version": "0.4.3"
     },
     "xl-tool": {
         "cmdline": [],
@@ -12005,7 +12062,7 @@
             "xl_tool.xl_general",
             "xl_tool.xl_io"
         ],
-        "version": "0.1.1"
+        "version": "0.1.6"
     },
     "xl-url-convert": {
         "cmdline": [],
@@ -12098,7 +12155,6 @@
         "cmdline": [],
         "modules": [
             "tests",
-            "tests.formulas",
             "tests.functions",
             "tests.functions.abs_test",
             "tests.functions.average_test",
@@ -12124,6 +12180,7 @@
             "tests.functions.sqrt_test",
             "tests.functions.sum_test",
             "tests.functions.sumproduct_test",
+            "tests.functions.test_logical",
             "tests.functions.vdb_test",
             "tests.functions.vlookup_test",
             "tests.functions.xnpv_test",
@@ -12147,7 +12204,7 @@
             "xlcalculator.utils",
             "xlcalculator.xltypes"
         ],
-        "version": "0.1.0"
+        "version": "0.2.1"
     },
     "xlcompose": {
         "cmdline": [],
@@ -12292,6 +12349,9 @@
             "tests.test_statistics",
             "tests.test_text",
             "tests.test_xl",
+            "tests.test_xlcriteria",
+            "tests.test_xlerrors",
+            "tests.test_xltypes",
             "xlfunctions",
             "xlfunctions.date",
             "xlfunctions.financial",
@@ -12301,9 +12361,13 @@
             "xlfunctions.operator",
             "xlfunctions.statistics",
             "xlfunctions.text",
-            "xlfunctions.xl"
+            "xlfunctions.utils",
+            "xlfunctions.xl",
+            "xlfunctions.xlcriteria",
+            "xlfunctions.xlerrors",
+            "xlfunctions.xltypes"
         ],
-        "version": "0.1.0"
+        "version": "0.2.0"
     },
     "xlhelper": {
         "cmdline": [],
@@ -15619,6 +15683,7 @@
         "cmdline": [],
         "modules": [
             "xmlschema",
+            "xmlschema.cli",
             "xmlschema.codepoints",
             "xmlschema.compat",
             "xmlschema.converters",
@@ -15633,7 +15698,7 @@
             "xmlschema.resources",
             "xmlschema.xpath"
         ],
-        "version": "1.1.3"
+        "version": "1.2.0"
     },
     "xmlschema-acue": {
         "cmdline": [],
@@ -16255,7 +16320,7 @@
         "modules": [
             "xmrto_wrapper"
         ],
-        "version": "0.1.0"
+        "version": "0.1.1"
     },
     "xms-client": {
         "cmdline": [],
@@ -19824,7 +19889,7 @@
             "xoto3.utils.pipe_multiprocessing",
             "xoto3.utils.tree_map"
         ],
-        "version": "1.0.3"
+        "version": "1.1.0"
     },
     "xotron": {
         "cmdline": [],
@@ -20197,7 +20262,7 @@
             "xpattern._xobject",
             "xpattern._xpattern"
         ],
-        "version": "0.3.0"
+        "version": "0.4.0"
     },
     "xpaw": {
         "cmdline": [],
@@ -20511,7 +20576,7 @@
             "xpore.utils.misc",
             "xpore.utils.stats"
         ],
-        "version": "0.3.0"
+        "version": "0.4.4"
     },
     "xport": {
         "cmdline": [],
@@ -23267,7 +23332,7 @@
             "xsamtools.samtools",
             "xsamtools.vcf"
         ],
-        "version": "0.1.1"
+        "version": "0.2.0"
     },
     "xsanio-server": {
         "cmdline": [],
@@ -23713,6 +23778,35 @@
             "xshg"
         ],
         "version": "1.0.0"
+    },
+    "xshinnosuke": {
+        "cmdline": [],
+        "modules": [
+            "xshinnosuke",
+            "xshinnosuke.layers",
+            "xshinnosuke.layers.base",
+            "xshinnosuke.layers.convolutional",
+            "xshinnosuke.layers.embeddings",
+            "xshinnosuke.layers.linear",
+            "xshinnosuke.layers.normalize",
+            "xshinnosuke.layers.recurrent",
+            "xshinnosuke.layers.wrappers",
+            "xshinnosuke.models",
+            "xshinnosuke.nn",
+            "xshinnosuke.nn.core",
+            "xshinnosuke.nn.functional",
+            "xshinnosuke.nn.global_graph",
+            "xshinnosuke.nn.grad_fn",
+            "xshinnosuke.utils",
+            "xshinnosuke.utils.activators",
+            "xshinnosuke.utils.initializers",
+            "xshinnosuke.utils.objectives",
+            "xshinnosuke.utils.optimizers",
+            "xshinnosuke.utils.preprocess",
+            "xshinnosuke.utils.regularizers",
+            "xshinnosuke.utils.toolkit"
+        ],
+        "version": "0.0.1"
     },
     "xsiftx": {
         "cmdline": [],
@@ -27725,7 +27819,7 @@
             "XX.funclib",
             "XX.utils"
         ],
-        "version": "2.1.2"
+        "version": "2.1.3"
     },
     "xxdiff-scripts": {
         "cmdline": [],
