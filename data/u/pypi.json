@@ -4225,6 +4225,8 @@
             "SwissKnife.avro.AvroTransformer",
             "SwissKnife.avro.AvroWriter",
             "SwissKnife.avro.types",
+            "SwissKnife.calendar",
+            "SwissKnife.calendar.WeekUtils",
             "SwissKnife.gcloud",
             "SwissKnife.gcloud.GCloudStorage",
             "SwissKnife.gcloud.GCloudStreaming",
@@ -4235,6 +4237,8 @@
             "tests.avro",
             "tests.avro.test_AvroTransformer",
             "tests.avro.test_AvroWriter",
+            "tests.calendar",
+            "tests.calendar.test_WeekUtils",
             "tests.gcloud",
             "tests.gcloud.test_GCloudStorage",
             "tests.gcloud.test_GCloudStreaming",
@@ -4244,7 +4248,7 @@
             "tests.info.test_ExecutionEnvironment",
             "tests.test_utils"
         ],
-        "version": "0.6.0"
+        "version": "0.6.2"
     },
     "udata": {
         "cmdline": [],
@@ -6026,6 +6030,10 @@
             "uengine.models.submodel",
             "uengine.profilers",
             "uengine.queue",
+            "uengine.queue.abstract_queue",
+            "uengine.queue.mongo_queue",
+            "uengine.queue.redis_queue",
+            "uengine.queue.task",
             "uengine.sessions",
             "uengine.tests",
             "uengine.tests.mongo_mock",
@@ -6036,7 +6044,7 @@
             "uengine.tests.test_submodel",
             "uengine.utils"
         ],
-        "version": "3.5.0"
+        "version": "3.5.1"
     },
     "uesgraphs": {
         "cmdline": [],
@@ -6995,7 +7003,7 @@
             "test.test_integration_di_Nayatoke1",
             "test.test_integration_digraph",
             "test.test_integration_graph",
-            "test.test_marov_walk_util",
+            "test.test_markov_walk_util",
             "test.test_resources",
             "test.test_resources.citation_example_graph",
             "test.test_resources.graphs_two_restriction_sets",
@@ -7009,6 +7017,7 @@
             "test.test_user_interface",
             "test.test_util",
             "test.test_util.json_citation_read_in",
+            "test.test_util_and_helpfunctions",
             "ugd",
             "ugd.help_function",
             "ugd.help_function.control_functions_digraph",
@@ -7023,6 +7032,9 @@
             "ugd.high_level_interface.time_mixing_evaluation",
             "ugd.high_level_interface.user_interface",
             "ugd.high_level_interface.validation",
+            "ugd.locally_most_powerful_stat",
+            "ugd.locally_most_powerful_stat.lcl_mst_pwf_stat_statsmodels",
+            "ugd.locally_most_powerful_stat.util",
             "ugd.markov_walk",
             "ugd.markov_walk.constraint_violation_check",
             "ugd.markov_walk.markov_walk",
@@ -7039,7 +7051,7 @@
             "ugd.schlaufen_construction.schlaufen_construction",
             "ugd.schlaufen_construction.schlaufen_construction_util"
         ],
-        "version": "0.5.1"
+        "version": "0.6.2"
     },
     "uge-drmaa2": {
         "cmdline": [],
@@ -7696,7 +7708,7 @@
     "uiautomator2": {
         "cmdline": [],
         "modules": [],
-        "version": "2.9.0"
+        "version": "2.9.1"
     },
     "uiautomatorplug": {
         "cmdline": [],
@@ -12536,7 +12548,7 @@
             "UncELMe.elm_ensemble",
             "UncELMe.elm_estimator"
         ],
-        "version": "0.3"
+        "version": "0.4"
     },
     "uncertain-panda": {
         "cmdline": [],
@@ -16217,7 +16229,7 @@
             "unidic2ud.spacy.unidic2spacy",
             "unidic2ud.unidic2ud"
         ],
-        "version": "2.1.3"
+        "version": "2.1.4"
     },
     "unidiff": {
         "cmdline": [
@@ -20915,9 +20927,11 @@
             "pyknp.knp.rel",
             "pyknp.knp.syngraph",
             "pyknp.knp.tag",
-            "pyknp.knp.tlist"
+            "pyknp.knp.tlist",
+            "tests",
+            "tests.test_main"
         ],
-        "version": "0.4.1"
+        "version": "0.4.2"
     },
     "unofficial-superset": {
         "cmdline": [
@@ -22790,14 +22804,15 @@
             "feedback.cpp.compile_examiner",
             "feedback.general",
             "feedback.general.constants",
+            "feedback.general.py_eval_util",
             "feedback.general.result",
             "feedback.general.result_watchdog",
             "feedback.general.util",
+            "feedback.general.validation",
             "feedback.py",
-            "feedback.py.py_eval_util",
             "feedback.signature"
         ],
-        "version": "0.7.3"
+        "version": "0.7.4"
     },
     "uonet-request-signer": {
         "cmdline": [],
@@ -25777,7 +25792,30 @@
         "modules": [
             "uproot4",
             "uproot4._util",
+            "uproot4.behaviors",
+            "uproot4.behaviors.TBranch",
+            "uproot4.behaviors.TTree",
             "uproot4.cache",
+            "uproot4.compression",
+            "uproot4.const",
+            "uproot4.deserialization",
+            "uproot4.model",
+            "uproot4.models",
+            "uproot4.models.RNTuple",
+            "uproot4.models.TArray",
+            "uproot4.models.TAtt",
+            "uproot4.models.TBasket",
+            "uproot4.models.TBranch",
+            "uproot4.models.THashList",
+            "uproot4.models.TLeaf",
+            "uproot4.models.TList",
+            "uproot4.models.TNamed",
+            "uproot4.models.TObjArray",
+            "uproot4.models.TObjString",
+            "uproot4.models.TObject",
+            "uproot4.models.TString",
+            "uproot4.models.TTree",
+            "uproot4.reading",
             "uproot4.source",
             "uproot4.source.chunk",
             "uproot4.source.cursor",
@@ -25785,9 +25823,10 @@
             "uproot4.source.futures",
             "uproot4.source.http",
             "uproot4.source.memmap",
-            "uproot4.source.xrootd"
+            "uproot4.source.xrootd",
+            "uproot4.streamers"
         ],
-        "version": "0.0.3"
+        "version": "0.0.4"
     },
     "uproxy": {
         "cmdline": [],
@@ -26240,7 +26279,7 @@
             "uptodate.tests.test_TablePrinter",
             "uptodate.tests.test_UpToDate"
         ],
-        "version": "0.2.3"
+        "version": "0.2.4"
     },
     "uptool": {
         "cmdline": [],
@@ -27566,8 +27605,11 @@
             "urduhack.command",
             "urduhack.command.cli",
             "urduhack.command.cmd_download",
+            "urduhack.command.cmd_info",
             "urduhack.config",
             "urduhack.datasets",
+            "urduhack.datasets.image",
+            "urduhack.datasets.image.hand_written",
             "urduhack.datasets.text",
             "urduhack.datasets.text.imdb_urdu",
             "urduhack.errors",
@@ -27600,13 +27642,14 @@
             "urduhack.utils",
             "urduhack.utils.arabic",
             "urduhack.utils.io",
+            "urduhack.utils.resources",
             "urduhack.utils.tests",
             "urduhack.utils.tests.test_arabic",
             "urduhack.utils.tests.test_io",
             "urduhack.utils.tests.test_text",
             "urduhack.utils.text"
         ],
-        "version": "0.3.1"
+        "version": "0.3.2"
     },
     "ureactme": {
         "cmdline": [],
@@ -35258,7 +35301,7 @@
             "utilpack.util.time_util",
             "utilpack.util.vis_util"
         ],
-        "version": "1.4.1"
+        "version": "1.4.2"
     },
     "utilpy": {
         "cmdline": [],
@@ -38505,10 +38548,6 @@
     "uwsgiconf": {
         "cmdline": [],
         "modules": [
-            "tests",
-            "tests.conftest",
-            "tests.test_config",
-            "tests.test_utils",
             "uwsgiconf",
             "uwsgiconf.base",
             "uwsgiconf.cli",
@@ -38573,11 +38612,9 @@
             "uwsgiconf.presets.nice",
             "uwsgiconf.runtime",
             "uwsgiconf.runtime.alarms",
-            "uwsgiconf.runtime.async",
             "uwsgiconf.runtime.asynced",
             "uwsgiconf.runtime.caching",
             "uwsgiconf.runtime.control",
-            "uwsgiconf.runtime.environ",
             "uwsgiconf.runtime.locking",
             "uwsgiconf.runtime.logging",
             "uwsgiconf.runtime.monitoring",
@@ -38591,11 +38628,12 @@
             "uwsgiconf.runtime.websockets",
             "uwsgiconf.settings",
             "uwsgiconf.sysinit",
+            "uwsgiconf.typehints",
             "uwsgiconf.utils",
             "uwsgiconf.uwsgi",
             "uwsgiconf.uwsgi_stub"
         ],
-        "version": "0.20.1"
+        "version": "0.21.0"
     },
     "uwsgidecorators": {
         "cmdline": [],
@@ -39048,10 +39086,17 @@
         "cmdline": [],
         "modules": [
             "uzautoprom",
+            "uzautoprom.abc",
+            "uzautoprom.abc.database",
+            "uzautoprom.abc.field",
+            "uzautoprom.abc.loader",
             "uzautoprom.cfield",
-            "uzautoprom.imdb"
+            "uzautoprom.imdb",
+            "uzautoprom.sloader",
+            "uzautoprom.sloader.browser_tab",
+            "uzautoprom.sloader.sloader"
         ],
-        "version": "1.0"
+        "version": "1.1"
     },
     "uzkchemtem": {
         "cmdline": [],
