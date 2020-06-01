@@ -810,7 +810,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (qoo) This package is up to date.
 [INFO] (qoob) This package is up to date.
 [INFO] (qooxdoocherrypyjsonrpc) This package is up to date.
-[INFO] (qop) Data has been updated for this package.
+[INFO] (qop) This package is up to date.
 [INFO] (qopen) This package is up to date.
 [INFO] (qopenvpn) This package is up to date.
 [INFO] (qordoba) This package is up to date.
@@ -1310,7 +1310,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (qtpylib) This package is up to date.
 [INFO] (qtpynodeeditor) This package is up to date.
 [INFO] (qtpyvcp) This package is up to date.
-[INFO] (qtrade) Data has been updated for this package.
+[INFO] (qtrade) This package is up to date.
 [ERROR] (qtreactor) This package does not have downloadable releases.
 [INFO] (qtree) This package is up to date.
 [INFO] (qtrename) This package is up to date.
@@ -1507,6 +1507,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (quantdsl) This package is up to date.
 [INFO] (quantecon) This package is up to date.
 [INFO] (quanter) This package is up to date.
+[INFO] (quantfeed) Data has been updated for this package.
 [INFO] (quantfns) This package is up to date.
 [INFO] (quantfolio) This package is up to date.
 [INFO] (quantgen) This package is up to date.
@@ -1739,8 +1740,8 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [ERROR] (queen) This package does not have downloadable releases.
 [INFO] (queen-pkg) This package is up to date.
 [INFO] (queen8) This package is up to date.
-[INFO] (queenbee) Data has been updated for this package.
-[INFO] (queenbee-luigi) Data has been updated for this package.
+[INFO] (queenbee) This package is up to date.
+[INFO] (queenbee-luigi) This package is up to date.
 [INFO] (queenbee-pollination) This package is up to date.
 [ERROR] (queenin) This package does not have downloadable releases.
 [INFO] (quelfilm-chatbot-app) This package is up to date.
@@ -1952,7 +1953,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (quicklog) This package is up to date.
 [INFO] (quicklogger) This package is up to date.
 [INFO] (quicklogging) This package is up to date.
-[INFO] (quickly) Data has been updated for this package.
+[INFO] (quickly) This package is up to date.
 [INFO] (quickmail) This package is up to date.
 [INFO] (quickml) This package is up to date.
 [INFO] (quickmock) This package is up to date.
@@ -2014,7 +2015,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (quickspin) This package is up to date.
 [INFO] (quicksplit) This package is up to date.
 [INFO] (quickstart) This package is up to date.
-[INFO] (quickstart-rhy) Data has been updated for this package.
+[INFO] (quickstart-rhy) This package is up to date.
 [INFO] (quickstartlog) This package is up to date.
 [INFO] (quickstartup) This package is up to date.
 [INFO] (quickstartutil) This package is up to date.
@@ -2040,23 +2041,38 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (quickweb) This package is up to date.
 [INFO] (quickwiki) This package is up to date.
 [ERROR] (quickwikievoque) Could not extract data from this package. See below for details.
-"http://gizmojo.org/dist/QuickWikiEvoque-0.1.1.tar.gz" file could not be downloaded. See below for details.
+Could not extract tarball. See below for details.
 Traceback (most recent call last):
-  File "/usr/local/lib/python3.8/dist-packages/pypicontents/api/pypi.py", line 107, in download_tar
-    f.write(urlopen(url=urlesc(pkgurl), timeout=10).read())
-  File "/usr/lib/python3.8/urllib/request.py", line 222, in urlopen
-    return opener.open(url, data, timeout)
-  File "/usr/lib/python3.8/urllib/request.py", line 531, in open
-    response = meth(req, response)
-  File "/usr/lib/python3.8/urllib/request.py", line 640, in http_response
-    response = self.parent.error(
-  File "/usr/lib/python3.8/urllib/request.py", line 569, in error
-    return self._call_chain(*args)
-  File "/usr/lib/python3.8/urllib/request.py", line 502, in _call_chain
-    result = func(*args)
-  File "/usr/lib/python3.8/urllib/request.py", line 649, in http_error_default
-    raise HTTPError(req.full_url, code, msg, hdrs, fp)
-urllib.error.HTTPError: HTTP Error 403: Forbidden
+  File "/usr/lib/python3.8/tarfile.py", line 1670, in gzopen
+    t = cls.taropen(name, mode, fileobj, **kwargs)
+  File "/usr/lib/python3.8/tarfile.py", line 1647, in taropen
+    return cls(name, mode, fileobj, **kwargs)
+  File "/usr/lib/python3.8/tarfile.py", line 1510, in __init__
+    self.firstmember = self.next()
+  File "/usr/lib/python3.8/tarfile.py", line 2311, in next
+    tarinfo = self.tarinfo.fromtarfile(self)
+  File "/usr/lib/python3.8/tarfile.py", line 1102, in fromtarfile
+    buf = tarfile.fileobj.read(BLOCKSIZE)
+  File "/usr/lib/python3.8/gzip.py", line 292, in read
+    return self._buffer.read(size)
+  File "/usr/lib/python3.8/_compression.py", line 68, in readinto
+    data = self.read(len(byte_view))
+  File "/usr/lib/python3.8/gzip.py", line 479, in read
+    if not self._read_gzip_header():
+  File "/usr/lib/python3.8/gzip.py", line 427, in _read_gzip_header
+    raise BadGzipFile('Not a gzipped file (%r)' % magic)
+gzip.BadGzipFile: Not a gzipped file (b'<!')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/pypicontents/api/pypi.py", line 131, in get_tar_topdir
+    with closing(compressed(tarpath, tarmode)) as tar:
+  File "/usr/lib/python3.8/tarfile.py", line 1617, in open
+    return func(name, filemode, fileobj, **kwargs)
+  File "/usr/lib/python3.8/tarfile.py", line 1674, in gzopen
+    raise ReadError("not a gzip file")
+tarfile.ReadError: not a gzip file
 
 [INFO] (quickxorhash) This package is up to date.
 [INFO] (quicli) This package is up to date.
@@ -2193,7 +2209,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (quizlight) This package is up to date.
 [INFO] (quizmaker) This package is up to date.
 [INFO] (quizr-utilities) This package is up to date.
-[INFO] (quizstarr) Data has been updated for this package.
+[INFO] (quizstarr) This package is up to date.
 [INFO] (quizzer) This package is up to date.
 [INFO] (qujian1) This package is up to date.
 [INFO] (qul) This package is up to date.
@@ -2403,10 +2419,10 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (qzonesecret) This package is up to date.
 [INFO] 
 [INFO] 
-[INFO] Total packages: 1825
-[INFO]     Packages processed: 1825
-[INFO]         Packages updated: 10
-[INFO]         Packages up-to-date: 1734
+[INFO] Total packages: 1826
+[INFO]     Packages processed: 1826
+[INFO]         Packages updated: 4
+[INFO]         Packages up-to-date: 1741
 [INFO]         Packages without response: 26
 [INFO]         Packages without urls: 0
 [INFO]         Packages without downloads: 47
