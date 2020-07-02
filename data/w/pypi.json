@@ -8130,6 +8130,13 @@
         ],
         "version": "2.8.0"
     },
+    "wagyu": {
+        "cmdline": [],
+        "modules": [
+            "wagyu"
+        ],
+        "version": "0.0.0"
+    },
     "wah-cade": {
         "cmdline": [],
         "modules": [],
@@ -8158,163 +8165,208 @@
         "cmdline": [],
         "modules": [
             "wai.annotations",
-            "wai.annotations.adams",
-            "wai.annotations.adams._ADAMSFormatSpecifier",
-            "wai.annotations.adams._format",
-            "wai.annotations.adams.constants",
-            "wai.annotations.adams.convert",
-            "wai.annotations.adams.convert._FromADAMSReport",
-            "wai.annotations.adams.convert._ToADAMSReport",
-            "wai.annotations.adams.io",
-            "wai.annotations.adams.io._ADAMSReportReader",
-            "wai.annotations.adams.io._ADAMSReportWriter",
-            "wai.annotations.adams.utils",
-            "wai.annotations.adams.utils._prefixes",
-            "wai.annotations.coco",
-            "wai.annotations.coco._COCOFormatSpecifier",
-            "wai.annotations.coco._format",
-            "wai.annotations.coco.configuration",
-            "wai.annotations.coco.configuration._Annotation",
-            "wai.annotations.coco.configuration._COCOFile",
-            "wai.annotations.coco.configuration._Category",
-            "wai.annotations.coco.configuration._Image",
-            "wai.annotations.coco.configuration._Info",
-            "wai.annotations.coco.configuration._License",
-            "wai.annotations.coco.convert",
-            "wai.annotations.coco.convert._FromCOCO",
-            "wai.annotations.coco.convert._ToCOCO",
-            "wai.annotations.coco.io",
-            "wai.annotations.coco.io._COCOReader",
-            "wai.annotations.coco.io._COCOWriter",
             "wai.annotations.core",
-            "wai.annotations.core._DimensionDiscarder",
-            "wai.annotations.core._DuplicateImageNames",
-            "wai.annotations.core._FormatSpecifier",
-            "wai.annotations.core._ImageFormat",
-            "wai.annotations.core._ImageInfo",
-            "wai.annotations.core._InputChain",
-            "wai.annotations.core._InternalFormat",
-            "wai.annotations.core._LibrarySettings",
-            "wai.annotations.core._OutputChain",
-            "wai.annotations.core._typing",
-            "wai.annotations.core.cli.__gen-cli__",
-            "wai.annotations.core.coercions",
-            "wai.annotations.core.coercions._BoxBoundsCoercion",
-            "wai.annotations.core.coercions._Coercion",
-            "wai.annotations.core.coercions._MaskBoundsCoercion",
-            "wai.annotations.core.components",
-            "wai.annotations.core.components._ExternalFormatConverter",
-            "wai.annotations.core.components._InternalFormatConverter",
-            "wai.annotations.core.components._JSONWriter",
-            "wai.annotations.core.components._Reader",
-            "wai.annotations.core.components._SeparateImageWriter",
-            "wai.annotations.core.components._Writer",
+            "wai.annotations.core.chain",
+            "wai.annotations.core.chain._ConversionChain",
+            "wai.annotations.core.chain._InlineDomainValidator",
+            "wai.annotations.core.component",
+            "wai.annotations.core.component._CrossDomainConverter",
+            "wai.annotations.core.component._InlineStreamProcessor",
+            "wai.annotations.core.component._InputConverter",
+            "wai.annotations.core.component._JSONWriter",
+            "wai.annotations.core.component._OutputConverter",
+            "wai.annotations.core.component._Reader",
+            "wai.annotations.core.component._SeparateFileWriter",
+            "wai.annotations.core.component._Writer",
+            "wai.annotations.core.error",
+            "wai.annotations.core.error._BadDomain",
+            "wai.annotations.core.error._ConversionChainHasNoReader",
+            "wai.annotations.core.error._ConversionChainHasNoWriter",
+            "wai.annotations.core.error._InputStageNotFirst",
+            "wai.annotations.core.error._StageAfterOutput",
+            "wai.annotations.core.error._TooManyFormats",
+            "wai.annotations.core.help",
+            "wai.annotations.core.help._PluginUsageFormatter",
+            "wai.annotations.core.help._plugin_usage_formatter_with_default_start_indent",
+            "wai.annotations.core.instance",
+            "wai.annotations.core.instance._FileInfo",
+            "wai.annotations.core.instance._Instance",
             "wai.annotations.core.logging",
             "wai.annotations.core.logging._LoggingEnabled",
             "wai.annotations.core.logging._StreamLogger",
             "wai.annotations.core.logging._root_logger",
             "wai.annotations.core.plugin",
-            "wai.annotations.core.plugin._check_registry",
-            "wai.annotations.core.plugin._generate_factories",
-            "wai.annotations.core.plugin._util",
+            "wai.annotations.core.plugin._functions",
             "wai.annotations.core.plugin.constants",
             "wai.annotations.core.plugin.error",
-            "wai.annotations.core.plugin.error._BadFormatSpecifier",
-            "wai.annotations.core.plugin.error._MultiplyDefinedFormats",
-            "wai.annotations.core.plugin.registry",
-            "wai.annotations.core.plugin.registry._PluginRegistry",
-            "wai.annotations.core.plugin.registry._RegistryEntry",
+            "wai.annotations.core.plugin.error._BadPluginSpecifier",
+            "wai.annotations.core.plugin.error._BadPluginType",
+            "wai.annotations.core.plugin.error._MultiplyDefinedPlugins",
+            "wai.annotations.core.plugin.error._UnknownPluginName",
+            "wai.annotations.core.specifier",
+            "wai.annotations.core.specifier._DomainSpecifier",
+            "wai.annotations.core.specifier._ISPSpecifier",
+            "wai.annotations.core.specifier._InputFormatSpecifier",
+            "wai.annotations.core.specifier._OutputFormatSpecifier",
+            "wai.annotations.core.specifier._PluginSpecifier",
+            "wai.annotations.core.specifier._XDCSpecifier",
+            "wai.annotations.core.stage",
+            "wai.annotations.core.stage._InputStage",
+            "wai.annotations.core.stage._OutputStage",
             "wai.annotations.core.stream",
             "wai.annotations.core.stream._Converter",
             "wai.annotations.core.stream._InlineStreamProcessor",
             "wai.annotations.core.utils",
             "wai.annotations.core.utils._chain_map",
-            "wai.annotations.core.utils._convert_image_format",
             "wai.annotations.core.utils._extension_to_regex",
-            "wai.annotations.core.utils._get_associated_image",
             "wai.annotations.core.utils._get_files_from_directory",
-            "wai.annotations.core.utils._get_image_size",
-            "wai.annotations.core.utils._metadata",
-            "wai.annotations.core.utils._polygon_from_rectangle",
             "wai.annotations.core.utils._polygon_to_poly_array",
             "wai.annotations.core.utils._read_file_list",
             "wai.annotations.core.utils._recursive_iglob",
-            "wai.annotations.core.utils._render_annotations_onto_image",
+            "wai.annotations.domain",
+            "wai.annotations.domain.image",
+            "wai.annotations.domain.image._ImageFormat",
+            "wai.annotations.domain.image._ImageInfo",
+            "wai.annotations.domain.image.classification",
+            "wai.annotations.domain.image.classification._ImageClassificationDomainSpecifier",
+            "wai.annotations.domain.image.object_detection",
+            "wai.annotations.domain.image.object_detection._ImageObjectDetectionDomainSpecifier",
+            "wai.annotations.domain.image.object_detection._ImageObjectDetectionInputConverter",
+            "wai.annotations.domain.image.object_detection._ImageObjectDetectionOutputConverter",
+            "wai.annotations.domain.image.object_detection._ObjectDetectionInstance",
+            "wai.annotations.domain.image.object_detection.util",
+            "wai.annotations.domain.image.object_detection.util._metadata",
+            "wai.annotations.domain.image.object_detection.util._polygon_from_rectangle",
+            "wai.annotations.domain.image.object_detection.util._render_annotations_onto_image",
+            "wai.annotations.domain.image.util",
+            "wai.annotations.domain.image.util._convert_image_format",
+            "wai.annotations.domain.image.util._get_associated_image",
+            "wai.annotations.domain.image.util._get_image_size",
+            "wai.annotations.format",
+            "wai.annotations.format.adams",
+            "wai.annotations.format.adams._format",
+            "wai.annotations.format.adams.constants",
+            "wai.annotations.format.adams.convert",
+            "wai.annotations.format.adams.convert._FromADAMSReport",
+            "wai.annotations.format.adams.convert._ToADAMSReport",
+            "wai.annotations.format.adams.io",
+            "wai.annotations.format.adams.io._ADAMSReportReader",
+            "wai.annotations.format.adams.io._ADAMSReportWriter",
+            "wai.annotations.format.adams.utils",
+            "wai.annotations.format.adams.utils._prefixes",
+            "wai.annotations.format.coco",
+            "wai.annotations.format.coco._format",
+            "wai.annotations.format.coco.configuration",
+            "wai.annotations.format.coco.configuration._Annotation",
+            "wai.annotations.format.coco.configuration._COCOFile",
+            "wai.annotations.format.coco.configuration._Category",
+            "wai.annotations.format.coco.configuration._Image",
+            "wai.annotations.format.coco.configuration._Info",
+            "wai.annotations.format.coco.configuration._License",
+            "wai.annotations.format.coco.convert",
+            "wai.annotations.format.coco.convert._FromCOCO",
+            "wai.annotations.format.coco.convert._ToCOCO",
+            "wai.annotations.format.coco.io",
+            "wai.annotations.format.coco.io._COCOReader",
+            "wai.annotations.format.coco.io._COCOWriter",
+            "wai.annotations.format.roi",
+            "wai.annotations.format.roi._ROIObject",
+            "wai.annotations.format.roi._format",
+            "wai.annotations.format.roi.constants",
+            "wai.annotations.format.roi.convert",
+            "wai.annotations.format.roi.convert._FromROI",
+            "wai.annotations.format.roi.convert._ToROI",
+            "wai.annotations.format.roi.io",
+            "wai.annotations.format.roi.io._ROIReader",
+            "wai.annotations.format.roi.io._ROIWriter",
+            "wai.annotations.format.roi.utils",
+            "wai.annotations.format.roi.utils._combine_dicts",
+            "wai.annotations.format.roi.utils._filenames",
+            "wai.annotations.format.roi.utils._min_rect_from_roi_polygon",
+            "wai.annotations.format.roi.utils._normalisation",
+            "wai.annotations.format.roi.utils._roi_polygon",
+            "wai.annotations.format.specifiers",
+            "wai.annotations.format.specifiers._ADAMSInputFormatSpecifier",
+            "wai.annotations.format.specifiers._ADAMSOutputFormatSpecifier",
+            "wai.annotations.format.specifiers._COCOInputFormatSpecifier",
+            "wai.annotations.format.specifiers._COCOOutputFormatSpecifier",
+            "wai.annotations.format.specifiers._ROIInputFormatSpecifier",
+            "wai.annotations.format.specifiers._ROIOutputFormatSpecifier",
+            "wai.annotations.format.specifiers._TFRecordsInputFormatSpecifier",
+            "wai.annotations.format.specifiers._TFRecordsOutputFormatSpecifier",
+            "wai.annotations.format.specifiers._VGGInputFormatSpecifier",
+            "wai.annotations.format.specifiers._VGGOutputFormatSpecifier",
+            "wai.annotations.format.tf",
+            "wai.annotations.format.tf._ensure_available",
+            "wai.annotations.format.tf._format",
+            "wai.annotations.format.tf.compat",
+            "wai.annotations.format.tf.compat.v1",
+            "wai.annotations.format.tf.compat.v1._ensure_eager_execution",
+            "wai.annotations.format.tf.compat.v2",
+            "wai.annotations.format.tf.compat.v2._ensure_eager_execution",
+            "wai.annotations.format.tf.convert",
+            "wai.annotations.format.tf.convert._FromTensorflowExample",
+            "wai.annotations.format.tf.convert._ToTensorflowExample",
+            "wai.annotations.format.tf.io",
+            "wai.annotations.format.tf.io._TensorflowExampleReader",
+            "wai.annotations.format.tf.io._TensorflowExampleWriter",
+            "wai.annotations.format.tf.utils",
+            "wai.annotations.format.tf.utils._LabelMapAccumulator",
+            "wai.annotations.format.tf.utils._ShardCompactor",
+            "wai.annotations.format.tf.utils._extract_feature",
+            "wai.annotations.format.tf.utils._image_info_from_example",
+            "wai.annotations.format.tf.utils._make_feature",
+            "wai.annotations.format.tf.utils._mask_from_polygon",
+            "wai.annotations.format.tf.utils._negative_example",
+            "wai.annotations.format.tf.utils._open_sharded_output_tfrecords",
+            "wai.annotations.format.tf.utils._polygon_from_mask",
+            "wai.annotations.format.tf.utils._sharded_filenames",
+            "wai.annotations.format.vgg",
+            "wai.annotations.format.vgg._format",
+            "wai.annotations.format.vgg.configuration",
+            "wai.annotations.format.vgg.configuration._FileAttributes",
+            "wai.annotations.format.vgg.configuration._Image",
+            "wai.annotations.format.vgg.configuration._ImageQuality",
+            "wai.annotations.format.vgg.configuration._PolygonShapeAttributes",
+            "wai.annotations.format.vgg.configuration._RectShapeAttributes",
+            "wai.annotations.format.vgg.configuration._Region",
+            "wai.annotations.format.vgg.configuration._RegionAttributes",
+            "wai.annotations.format.vgg.configuration._VGGFile",
+            "wai.annotations.format.vgg.convert",
+            "wai.annotations.format.vgg.convert._FromVGG",
+            "wai.annotations.format.vgg.convert._ToVGG",
+            "wai.annotations.format.vgg.io",
+            "wai.annotations.format.vgg.io._VGGReader",
+            "wai.annotations.format.vgg.io._VGGWriter",
+            "wai.annotations.format.vgg.utils",
+            "wai.annotations.format.vgg.utils._shape_attributes",
             "wai.annotations.image_utils",
             "wai.annotations.image_utils._image",
             "wai.annotations.image_utils._masks",
+            "wai.annotations.isp",
+            "wai.annotations.isp.coercions",
+            "wai.annotations.isp.coercions._BoxBoundsCoercion",
+            "wai.annotations.isp.coercions._Coercion",
+            "wai.annotations.isp.coercions._MaskBoundsCoercion",
+            "wai.annotations.isp.dimension_discarder",
+            "wai.annotations.isp.dimension_discarder._DimensionDiscarder",
+            "wai.annotations.isp.duplicate_filenames",
+            "wai.annotations.isp.duplicate_filenames._DuplicateFileNameChecker",
+            "wai.annotations.isp.passthrough",
+            "wai.annotations.isp.passthrough._PassThrough",
+            "wai.annotations.isp.specifiers",
+            "wai.annotations.isp.specifiers._BoxBoundsCoercionISPSpecifier",
+            "wai.annotations.isp.specifiers._DimensionDiscarderISPSpecifier",
+            "wai.annotations.isp.specifiers._DuplicateFileNamesISPSpecifier",
+            "wai.annotations.isp.specifiers._MaskBoundsCoercionISPSpecifier",
+            "wai.annotations.isp.specifiers._PassThroughISPSpecifier",
             "wai.annotations.main",
             "wai.annotations.main._MainSettings",
+            "wai.annotations.main._list_plugins",
             "wai.annotations.main._main",
-            "wai.annotations.main.parsing",
-            "wai.annotations.main.parsing._InputSideParserConfigurer",
-            "wai.annotations.main.parsing._MainParserConfigurer",
-            "wai.annotations.main.parsing._OutputSideParserConfigurer",
-            "wai.annotations.roi",
-            "wai.annotations.roi._ROIFormatSpecifier",
-            "wai.annotations.roi._ROIObject",
-            "wai.annotations.roi._format",
-            "wai.annotations.roi.constants",
-            "wai.annotations.roi.convert",
-            "wai.annotations.roi.convert._FromROI",
-            "wai.annotations.roi.convert._ToROI",
-            "wai.annotations.roi.io",
-            "wai.annotations.roi.io._ROIReader",
-            "wai.annotations.roi.io._ROIWriter",
-            "wai.annotations.roi.utils",
-            "wai.annotations.roi.utils._combine_dicts",
-            "wai.annotations.roi.utils._filenames",
-            "wai.annotations.roi.utils._min_rect_from_roi_polygon",
-            "wai.annotations.roi.utils._normalisation",
-            "wai.annotations.roi.utils._roi_polygon",
-            "wai.annotations.tf",
-            "wai.annotations.tf._TFFormatSpecifier",
-            "wai.annotations.tf._ensure_available",
-            "wai.annotations.tf._format",
-            "wai.annotations.tf.compat",
-            "wai.annotations.tf.compat.v1",
-            "wai.annotations.tf.compat.v1._ensure_eager_execution",
-            "wai.annotations.tf.compat.v2",
-            "wai.annotations.tf.compat.v2._ensure_eager_execution",
-            "wai.annotations.tf.convert",
-            "wai.annotations.tf.convert._FromTensorflowExample",
-            "wai.annotations.tf.convert._ToTensorflowExample",
-            "wai.annotations.tf.io",
-            "wai.annotations.tf.io._TensorflowExampleReader",
-            "wai.annotations.tf.io._TensorflowExampleWriter",
-            "wai.annotations.tf.utils",
-            "wai.annotations.tf.utils._LabelMapAccumulator",
-            "wai.annotations.tf.utils._ShardCompactor",
-            "wai.annotations.tf.utils._extract_feature",
-            "wai.annotations.tf.utils._image_info_from_example",
-            "wai.annotations.tf.utils._make_feature",
-            "wai.annotations.tf.utils._mask_from_polygon",
-            "wai.annotations.tf.utils._negative_example",
-            "wai.annotations.tf.utils._open_sharded_output_tfrecords",
-            "wai.annotations.tf.utils._polygon_from_mask",
-            "wai.annotations.tf.utils._sharded_filenames",
-            "wai.annotations.vgg",
-            "wai.annotations.vgg._VGGFormatSpecifier",
-            "wai.annotations.vgg._format",
-            "wai.annotations.vgg.configuration",
-            "wai.annotations.vgg.configuration._FileAttributes",
-            "wai.annotations.vgg.configuration._Image",
-            "wai.annotations.vgg.configuration._ImageQuality",
-            "wai.annotations.vgg.configuration._PolygonShapeAttributes",
-            "wai.annotations.vgg.configuration._RectShapeAttributes",
-            "wai.annotations.vgg.configuration._Region",
-            "wai.annotations.vgg.configuration._RegionAttributes",
-            "wai.annotations.vgg.configuration._VGGFile",
-            "wai.annotations.vgg.convert",
-            "wai.annotations.vgg.convert._FromVGG",
-            "wai.annotations.vgg.convert._ToVGG",
-            "wai.annotations.vgg.io",
-            "wai.annotations.vgg.io._VGGReader",
-            "wai.annotations.vgg.io._VGGWriter",
-            "wai.annotations.vgg.utils",
-            "wai.annotations.vgg.utils._shape_attributes"
+            "wai.annotations.xdc"
         ],
-        "version": "0.3.6"
+        "version": "0.4.0"
     },
     "wai-bynning": {
         "cmdline": [],
@@ -14311,7 +14363,7 @@
             "wandb.wandb_torch",
             "wandb.wandb_types"
         ],
-        "version": "0.9.1"
+        "version": "0.9.2"
     },
     "wandb-allennlp": {
         "cmdline": [],
@@ -16671,6 +16723,32 @@
         ],
         "version": "1.3.0"
     },
+    "wasamole": {
+        "cmdline": [
+            "wasm-objdump"
+        ],
+        "modules": [
+            "wasamole",
+            "wasamole.core",
+            "wasamole.core.elem",
+            "wasamole.core.exports",
+            "wasamole.core.function",
+            "wasamole.core.globalvar",
+            "wasamole.core.imports",
+            "wasamole.core.instructions",
+            "wasamole.core.localvar",
+            "wasamole.core.module",
+            "wasamole.core.types",
+            "wasamole.io",
+            "wasamole.io.reader",
+            "wasamole.io.reader.binary_format",
+            "wasamole.io.writer",
+            "wasamole.io.writer.text_format",
+            "wasamole.util",
+            "wasamole.util.bytes_reader"
+        ],
+        "version": "0.5.0"
+    },
     "wasanbon": {
         "cmdline": [
             "wasanbon-admin.py"
@@ -18019,7 +18097,7 @@
     "watchmaker": {
         "cmdline": [],
         "modules": [],
-        "version": "0.20.1"
+        "version": "0.20.2"
     },
     "watchman": {
         "cmdline": [],
@@ -21701,6 +21779,28 @@
         "modules": [],
         "version": ""
     },
+    "waveletai": {
+        "cmdline": [],
+        "modules": [
+            "waveletai",
+            "waveletai.entities",
+            "waveletai.entities._base_object",
+            "waveletai.entities.minio_bucket",
+            "waveletai.entities.minio_repo",
+            "waveletai.entities.mqtt_repo",
+            "waveletai.entities.mqtt_topic",
+            "waveletai.env",
+            "waveletai.mqtt",
+            "waveletai.mqtt.client",
+            "waveletai.store",
+            "waveletai.store.minio",
+            "waveletai.store.minio.minio_repo",
+            "waveletai.store.minio.progress",
+            "waveletai.utils",
+            "waveletai.utils.async"
+        ],
+        "version": "0.1.1"
+    },
     "wavelets": {
         "cmdline": [],
         "modules": [],
@@ -23763,7 +23863,7 @@
             "vtool.trig",
             "vtool.util_math"
         ],
-        "version": "3.0.3"
+        "version": "3.1.5"
     },
     "wblib": {
         "cmdline": [],
@@ -26460,7 +26560,7 @@
             "weatherbitpypi.data_classes",
             "weatherbitpypi.errors"
         ],
-        "version": "0.24.3"
+        "version": "0.24.4"
     },
     "weatherbotskeleton": {
         "cmdline": [],
@@ -27878,7 +27978,7 @@
             "web2ldap.web.session",
             "web2ldap.wsgi"
         ],
-        "version": "1.5.91"
+        "version": "1.5.93"
     },
     "web2pandas": {
         "cmdline": [],
@@ -33073,6 +33173,11 @@
         ],
         "version": "0.1.30"
     },
+    "weblibinst": {
+        "cmdline": [],
+        "modules": [],
+        "version": "0.0.1"
+    },
     "weblibrary": {
         "cmdline": [],
         "modules": [
@@ -33108,9 +33213,14 @@
         "version": "2.0.0"
     },
     "webloc": {
-        "cmdline": [],
-        "modules": [],
-        "version": "2019.4.16"
+        "cmdline": [
+            ".webloc.sh",
+            "webloc"
+        ],
+        "modules": [
+            "webloc"
+        ],
+        "version": "2020.7.1"
     },
     "weblocker": {
         "cmdline": [
@@ -36554,7 +36664,7 @@
             "webspace.urls",
             "webspace.views"
         ],
-        "version": "2.7.57"
+        "version": "2.7.59"
     },
     "webspanner": {
         "cmdline": [],
@@ -38389,6 +38499,164 @@
         ],
         "version": "0.3"
     },
+    "wechat-utils": {
+        "cmdline": [],
+        "modules": [
+            "wechat_utils",
+            "wechat_utils.depends_database",
+            "wechat_utils.depends_database.auth",
+            "wechat_utils.depends_database.auth.miniapp",
+            "wechat_utils.depends_database.auth.miniapp.auth",
+            "wechat_utils.depends_database.auth.mpapp",
+            "wechat_utils.depends_database.auth.mpapp.auth",
+            "wechat_utils.depends_database.init",
+            "wechat_utils.depends_database.models",
+            "wechat_utils.depends_database.models.Mongoengine",
+            "wechat_utils.depends_database.models.Mongoengine._imports_",
+            "wechat_utils.depends_database.models.Mongoengine.configuration",
+            "wechat_utils.depends_database.models.Mongoengine.mixin",
+            "wechat_utils.depends_database.models.Mongoengine.payment",
+            "wechat_utils.depends_database.models.Mongoengine.user",
+            "wechat_utils.depends_database.models.Mongoengine.wechat_user",
+            "wechat_utils.depends_database.models.Sqlalchemy",
+            "wechat_utils.depends_database.models.Sqlalchemy.configuration",
+            "wechat_utils.depends_database.models.Sqlalchemy.user",
+            "wechat_utils.depends_database.models.Sqlalchemy.wechat_user",
+            "wechat_utils.depends_database.orm",
+            "wechat_utils.depends_database.orm.Mongoengine",
+            "wechat_utils.depends_database.orm.Sqlalchemy",
+            "wechat_utils.depends_database.orm.base",
+            "wechat_utils.depends_database.redis",
+            "wechat_utils.depends_database.redis.Redis",
+            "wechat_utils.depends_database.redis.miniapp",
+            "wechat_utils.depends_database.redis.miniapp.redis",
+            "wechat_utils.depends_database.redis.mpapp",
+            "wechat_utils.depends_database.redis.mpapp.redis",
+            "wechat_utils.depends_database.settings",
+            "wechat_utils.depends_database.settings.Mongoengine",
+            "wechat_utils.depends_database.settings.Sqlalchemy",
+            "wechat_utils.depends_framework",
+            "wechat_utils.depends_framework.django",
+            "wechat_utils.depends_framework.django.admin",
+            "wechat_utils.depends_framework.django.admin.configuration",
+            "wechat_utils.depends_framework.django.admins",
+            "wechat_utils.depends_framework.django.admins.configuration",
+            "wechat_utils.depends_framework.django.admins.user",
+            "wechat_utils.depends_framework.django.apis",
+            "wechat_utils.depends_framework.django.apis.miniapp",
+            "wechat_utils.depends_framework.django.apis.miniapp.user",
+            "wechat_utils.depends_framework.django.auth",
+            "wechat_utils.depends_framework.django.auth.miniapp",
+            "wechat_utils.depends_framework.django.auth.miniapp.auth",
+            "wechat_utils.depends_framework.django.auth.mpapp",
+            "wechat_utils.depends_framework.django.exceptions",
+            "wechat_utils.depends_framework.django.exceptions.auth",
+            "wechat_utils.depends_framework.django.exceptions.custom_exception_handler",
+            "wechat_utils.depends_framework.django.middleware",
+            "wechat_utils.depends_framework.django.middleware.middleware",
+            "wechat_utils.depends_framework.django.models",
+            "wechat_utils.depends_framework.django.models.configuration",
+            "wechat_utils.depends_framework.django.models.user",
+            "wechat_utils.depends_framework.django.schemas",
+            "wechat_utils.depends_framework.django.schemas.disserializers",
+            "wechat_utils.depends_framework.django.schemas.disserializers.user",
+            "wechat_utils.depends_framework.django.serializers",
+            "wechat_utils.depends_framework.django.serializers.user",
+            "wechat_utils.depends_framework.django.utils",
+            "wechat_utils.depends_framework.django.utils.auth",
+            "wechat_utils.depends_framework.django.utils.auth.miniapp",
+            "wechat_utils.depends_framework.django.utils.auth.miniapp.auth",
+            "wechat_utils.depends_framework.django.utils.auth.mpapp",
+            "wechat_utils.depends_framework.django.utils.common",
+            "wechat_utils.depends_framework.django.utils.parse",
+            "wechat_utils.depends_framework.django.views",
+            "wechat_utils.depends_framework.django.views.APIView",
+            "wechat_utils.depends_framework.flask",
+            "wechat_utils.depends_framework.flask.admins",
+            "wechat_utils.depends_framework.flask.admins._imports_",
+            "wechat_utils.depends_framework.flask.admins.configuration",
+            "wechat_utils.depends_framework.flask.admins.init",
+            "wechat_utils.depends_framework.flask.admins.user",
+            "wechat_utils.depends_framework.flask.apis",
+            "wechat_utils.depends_framework.flask.apis.miniapp",
+            "wechat_utils.depends_framework.flask.apis.miniapp._imports_",
+            "wechat_utils.depends_framework.flask.apis.miniapp.user",
+            "wechat_utils.depends_framework.flask.apis.mpapp",
+            "wechat_utils.depends_framework.flask.apis.mpapp._imports_",
+            "wechat_utils.depends_framework.flask.apis.mpapp.gateway",
+            "wechat_utils.depends_framework.flask.apis.mpapp.locator",
+            "wechat_utils.depends_framework.flask.apis.mpapp.oauth",
+            "wechat_utils.depends_framework.flask.auth",
+            "wechat_utils.depends_framework.flask.auth.miniapp",
+            "wechat_utils.depends_framework.flask.auth.miniapp.auth",
+            "wechat_utils.depends_framework.flask.auth.mpapp",
+            "wechat_utils.depends_framework.flask.auth.mpapp.auth",
+            "wechat_utils.depends_framework.flask.exceptions",
+            "wechat_utils.depends_framework.flask.exceptions.auth",
+            "wechat_utils.depends_framework.flask.exceptions.base",
+            "wechat_utils.depends_framework.flask.exceptions.forntend",
+            "wechat_utils.depends_framework.flask.exceptions.parse",
+            "wechat_utils.depends_framework.flask.schemas",
+            "wechat_utils.depends_framework.flask.schemas.marshals",
+            "wechat_utils.depends_framework.flask.schemas.marshals.miniapp",
+            "wechat_utils.depends_framework.flask.schemas.marshals.miniapp.user",
+            "wechat_utils.depends_framework.flask.schemas.marshals.mpapp",
+            "wechat_utils.depends_framework.flask.schemas.parsers",
+            "wechat_utils.depends_framework.flask.schemas.parsers.miniapp",
+            "wechat_utils.depends_framework.flask.schemas.parsers.miniapp.user",
+            "wechat_utils.depends_framework.flask.schemas.parsers.mpapp",
+            "wechat_utils.depends_framework.flask.schemas.parsers.mpapp.gateway",
+            "wechat_utils.depends_framework.flask.schemas.parsers.mpapp.oauth",
+            "wechat_utils.depends_framework.flask.utils",
+            "wechat_utils.depends_framework.flask.utils.auth",
+            "wechat_utils.depends_framework.flask.utils.auth.miniapp",
+            "wechat_utils.depends_framework.flask.utils.auth.miniapp.auth",
+            "wechat_utils.depends_framework.flask.utils.auth.mpapp",
+            "wechat_utils.depends_framework.flask.utils.auth.mpapp.auth",
+            "wechat_utils.depends_framework.flask.utils.exceptions",
+            "wechat_utils.depends_framework.flask.utils.exceptions.auth",
+            "wechat_utils.depends_framework.flask.utils.exceptions.base",
+            "wechat_utils.depends_framework.flask.utils.exceptions.forntend",
+            "wechat_utils.depends_framework.flask.utils.exceptions.parse",
+            "wechat_utils.depends_none",
+            "wechat_utils.depends_none.auth",
+            "wechat_utils.depends_none.auth.base",
+            "wechat_utils.depends_none.auth.miniapp",
+            "wechat_utils.depends_none.auth.miniapp.auth",
+            "wechat_utils.depends_none.auth.mpapp",
+            "wechat_utils.depends_none.auth.mpapp.auth",
+            "wechat_utils.depends_none.common",
+            "wechat_utils.depends_none.constans",
+            "wechat_utils.depends_none.exceptions",
+            "wechat_utils.depends_none.exceptions.auth",
+            "wechat_utils.depends_none.exceptions.base",
+            "wechat_utils.depends_none.exceptions.forntend",
+            "wechat_utils.depends_none.exceptions.parse",
+            "wechat_utils.depends_none.meta",
+            "wechat_utils.depends_none.mongoengine",
+            "wechat_utils.depends_none.parser",
+            "wechat_utils.depends_none.pay",
+            "wechat_utils.depends_none.pay.wechat_pay",
+            "wechat_utils.depends_none.pay.wechat_pay_helper",
+            "wechat_utils.depends_none.redis",
+            "wechat_utils.depends_none.redis.Redis",
+            "wechat_utils.depends_none.redis.RedisMixin",
+            "wechat_utils.depends_none.redis.miniapp",
+            "wechat_utils.depends_none.redis.mpapp",
+            "wechat_utils.depends_none.redis.mpapp.Redis",
+            "wechat_utils.depends_none.serialization",
+            "wechat_utils.depends_none.serialization.serializer",
+            "wechat_utils.depends_none.serialization.serializer.fields",
+            "wechat_utils.depends_none.sqlalchemy_engine_session",
+            "wechat_utils.depends_none.wx_api",
+            "wechat_utils.depends_none.wx_api.miniapp",
+            "wechat_utils.depends_none.wx_api.miniapp.access_token",
+            "wechat_utils.depends_none.wx_api.miniapp.security_msg_sec_check",
+            "wechat_utils.depends_none.wx_api.miniapp.userinfo",
+            "wechat_utils.depends_none.wx_api.mpapp"
+        ],
+        "version": "2020.7.2.2"
+    },
     "wechat-web-auth": {
         "cmdline": [],
         "modules": [
@@ -38438,7 +38706,7 @@
             "wechatarticles.ReadOutfile",
             "wechatarticles.tools"
         ],
-        "version": "0.3"
+        "version": "0.4"
     },
     "wechatbot": {
         "cmdline": [],
@@ -38798,9 +39066,11 @@
             "wechaty",
             "wechaty.accessory",
             "wechaty.config",
+            "wechaty.plugin",
             "wechaty.types",
             "wechaty.user",
             "wechaty.user.contact",
+            "wechaty.user.contact_self",
             "wechaty.user.favorite",
             "wechaty.user.friendship",
             "wechaty.user.image",
@@ -38814,9 +39084,15 @@
             "wechaty.utils.qr_code",
             "wechaty.utils.qrcode_terminal",
             "wechaty.utils.type_check",
-            "wechaty.wechaty"
+            "wechaty.version",
+            "wechaty.wechaty",
+            "wechaty_plugin_contrib",
+            "wechaty_plugin_contrib.daily_plugin",
+            "wechaty_plugin_contrib.ding_dong_plugin",
+            "wechaty_plugin_contrib.ding_dong_rank_plugin",
+            "wechaty_plugin_contrib.weather_plugin"
         ],
-        "version": "0.4.14"
+        "version": "0.6.1"
     },
     "wechaty-puppet": {
         "cmdline": [],
@@ -41749,13 +42025,13 @@
         "version": "1.0.0"
     },
     "weo": {
-        "cmdline": [
-            "weo.py"
-        ],
+        "cmdline": [],
         "modules": [
-            "weo"
+            "weo",
+            "weo.dataframe",
+            "weo.download"
         ],
-        "version": "0.1.2020"
+        "version": "0.3.0"
     },
     "weogeoapi": {
         "cmdline": [],
@@ -43366,6 +43642,11 @@
         ],
         "version": "0.4.0"
     },
+    "wf-datetime-conversion": {
+        "cmdline": [],
+        "modules": [],
+        "version": "0.0.1"
+    },
     "wf-geom-render": {
         "cmdline": [],
         "modules": [
@@ -43419,6 +43700,14 @@
             "pose_tracking_3d.core"
         ],
         "version": "0.1.0"
+    },
+    "wf-process-ble-data": {
+        "cmdline": [],
+        "modules": [
+            "process_ble_data",
+            "process_ble_data.honeycomb_io"
+        ],
+        "version": "0.0.1"
     },
     "wf-process-cuwb-data": {
         "cmdline": [],
@@ -43505,6 +43794,28 @@
             "smc_kalman"
         ],
         "version": "0.1.0"
+    },
+    "wf-smcmodel": {
+        "cmdline": [],
+        "modules": [
+            "smcmodel",
+            "smcmodel.core",
+            "smcmodel.data_pipes",
+            "smcmodel.shared_constants"
+        ],
+        "version": "0.0.1"
+    },
+    "wf-smcmodel-localize": {
+        "cmdline": [],
+        "modules": [
+            "smcmodel_localize",
+            "smcmodel_localize.data_pipes",
+            "smcmodel_localize.legacy_data_processing",
+            "smcmodel_localize.legacy_visualization",
+            "smcmodel_localize.model",
+            "smcmodel_localize.model_multilateration"
+        ],
+        "version": "0.0.1"
     },
     "wf-video-io": {
         "cmdline": [],
@@ -45729,10 +46040,12 @@
             "whatlies.transformers.addrandom",
             "whatlies.transformers.common",
             "whatlies.transformers.noise",
+            "whatlies.transformers.opentsne",
             "whatlies.transformers.pca",
+            "whatlies.transformers.tsne",
             "whatlies.transformers.umap"
         ],
-        "version": "0.4.0"
+        "version": "0.4.1"
     },
     "whatodo": {
         "cmdline": [],
@@ -49453,6 +49766,17 @@
         ],
         "version": "1.0.2"
     },
+    "whuapi": {
+        "cmdline": [],
+        "modules": [
+            "whuapi",
+            "whuapi.api",
+            "whuapi.api.login",
+            "whuapi.api.student",
+            "whuapi.config"
+        ],
+        "version": "0.0.1"
+    },
     "whuctrl": {
         "cmdline": [],
         "modules": [
@@ -53142,7 +53466,7 @@
             "wikitextparser._wikilist",
             "wikitextparser._wikitext"
         ],
-        "version": "0.37.7"
+        "version": "0.37.11"
     },
     "wikitoexcel": {
         "cmdline": [],
@@ -55306,7 +55630,7 @@
             "wincap",
             "wincap.__version__"
         ],
-        "version": "0.2.4"
+        "version": "0.2.5"
     },
     "wincast": {
         "cmdline": [],
@@ -55492,9 +55816,25 @@
             "windc_data.windc_2_0_1.parse.nass",
             "windc_data.windc_2_0_1.parse.sgf_table_sums",
             "windc_data.windc_2_0_1.parse.state_exim",
-            "windc_data.windc_2_0_1.xfrm"
+            "windc_data.windc_2_0_1.xfrm",
+            "windc_data.windc_2_1",
+            "windc_data.windc_2_1.join",
+            "windc_data.windc_2_1.parse",
+            "windc_data.windc_2_1.parse.bea_gsp",
+            "windc_data.windc_2_1.parse.bea_pce",
+            "windc_data.windc_2_1.parse.bea_supply",
+            "windc_data.windc_2_1.parse.bea_supply_det",
+            "windc_data.windc_2_1.parse.bea_use",
+            "windc_data.windc_2_1.parse.bea_use_det",
+            "windc_data.windc_2_1.parse.census_sgf",
+            "windc_data.windc_2_1.parse.cfs",
+            "windc_data.windc_2_1.parse.eia",
+            "windc_data.windc_2_1.parse.nass",
+            "windc_data.windc_2_1.parse.sgf_table_sums",
+            "windc_data.windc_2_1.parse.state_exim",
+            "windc_data.windc_2_1.xfrm"
         ],
-        "version": "0.1.0"
+        "version": "0.1.5"
     },
     "windeft": {
         "cmdline": [],
@@ -59040,6 +59380,19 @@
         ],
         "version": "0.1.0a2"
     },
+    "wireviz": {
+        "cmdline": [],
+        "modules": [
+            "wireviz",
+            "wireviz.DataClasses",
+            "wireviz.Harness",
+            "wireviz.build_examples",
+            "wireviz.wireviz",
+            "wireviz.wv_colors",
+            "wireviz.wv_helper"
+        ],
+        "version": "0.1"
+    },
     "wirewrapper": {
         "cmdline": [],
         "modules": [
@@ -60208,7 +60561,7 @@
             "witchcraft.upsert",
             "witchcraft.utils"
         ],
-        "version": "0.2.35"
+        "version": "0.2.36"
     },
     "witchhazel": {
         "cmdline": [],
@@ -62093,6 +62446,14 @@
         ],
         "version": "1.0.0"
     },
+    "wltr-ebct-finder": {
+        "cmdline": [],
+        "modules": [
+            "wltr_ebct_finder",
+            "wltr_ebct_finder.ebct_api"
+        ],
+        "version": "1.0.2"
+    },
     "wltr-phonetics": {
         "cmdline": [],
         "modules": [
@@ -62101,22 +62462,22 @@
             "tests.test_distances",
             "tests.test_phonetics",
             "tests.test_utils",
-            "wltrphonetics",
-            "wltrphonetics.distance_metrics",
-            "wltrphonetics.distance_metrics.hamming",
-            "wltrphonetics.distance_metrics.levenshtein",
-            "wltrphonetics.exceptions",
-            "wltrphonetics.phonetics",
-            "wltrphonetics.phonetics.fuzzy_soundex",
-            "wltrphonetics.phonetics.lein",
-            "wltrphonetics.phonetics.metaphone",
-            "wltrphonetics.phonetics.mra",
-            "wltrphonetics.phonetics.phonetic_algorithm",
-            "wltrphonetics.phonetics.refined_soundex",
-            "wltrphonetics.phonetics.soundex",
-            "wltrphonetics.utils"
+            "wltr_phonetics",
+            "wltr_phonetics.distance_metrics",
+            "wltr_phonetics.distance_metrics.hamming",
+            "wltr_phonetics.distance_metrics.levenshtein",
+            "wltr_phonetics.exceptions",
+            "wltr_phonetics.phonetics",
+            "wltr_phonetics.phonetics.fuzzy_soundex",
+            "wltr_phonetics.phonetics.lein",
+            "wltr_phonetics.phonetics.metaphone",
+            "wltr_phonetics.phonetics.mra",
+            "wltr_phonetics.phonetics.phonetic_algorithm",
+            "wltr_phonetics.phonetics.refined_soundex",
+            "wltr_phonetics.phonetics.soundex",
+            "wltr_phonetics.utils"
         ],
-        "version": "1.0.1"
+        "version": "1.0.2"
     },
     "wltrace": {
         "cmdline": [],
@@ -70237,6 +70598,13 @@
         ],
         "version": "0.0.2"
     },
+    "wordpressupdater": {
+        "cmdline": [],
+        "modules": [
+            "wordpressupdater"
+        ],
+        "version": "0.3"
+    },
     "wordprexit": {
         "cmdline": [],
         "modules": [
@@ -72285,7 +72653,7 @@
             "worklab.plots",
             "worklab.utils"
         ],
-        "version": "1.5.8"
+        "version": "1.5.9"
     },
     "worklib": {
         "cmdline": [],
@@ -73286,7 +73654,7 @@
     "wormpose": {
         "cmdline": [],
         "modules": [],
-        "version": "0.1.6"
+        "version": "0.1.7"
     },
     "worms": {
         "cmdline": [],
@@ -77401,13 +77769,17 @@
     },
     "writable-property": {
         "cmdline": [],
-        "modules": [],
-        "version": "2019.4.13"
+        "modules": [
+            "writable_property"
+        ],
+        "version": "2020.7.1"
     },
     "write": {
         "cmdline": [],
-        "modules": [],
-        "version": "2019.4.13"
+        "modules": [
+            "write"
+        ],
+        "version": "2020.7.1"
     },
     "write-about-code": {
         "cmdline": [],
@@ -83596,11 +83968,6 @@
             "wwu.box"
         ],
         "version": "0.0.2"
-    },
-    "wwu-autospec": {
-        "cmdline": [],
-        "modules": [],
-        "version": "0.1.19"
     },
     "wwu-tinker": {
         "cmdline": [],
