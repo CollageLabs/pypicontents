@@ -16386,6 +16386,7 @@
             "qsmcli.config",
             "qsmcli.cpld",
             "qsmcli.fan",
+            "qsmcli.host",
             "qsmcli.install",
             "qsmcli.interface",
             "qsmcli.ipmi",
@@ -16400,7 +16401,7 @@
             "qsmcli.subcmd",
             "qsmcli.version"
         ],
-        "version": "0.5.1"
+        "version": "0.5.2"
     },
     "qsml": {
         "cmdline": [],
@@ -18649,7 +18650,7 @@
             "qtoggleserver.web.handlers",
             "qtoggleserver.web.server"
         ],
-        "version": "0.21.2"
+        "version": "0.21.3"
     },
     "qtoggleserver-cmdline": {
         "cmdline": [],
@@ -19145,10 +19146,7 @@
         "cmdline": [],
         "modules": [
             "examples",
-            "examples.atc_test",
-            "examples.atc_test.atc_test",
-            "examples.atc_test.atc_test.mainwindow",
-            "examples.atc_test.setup",
+            "examples.actions",
             "examples.brender",
             "examples.brender.brender",
             "examples.mini",
@@ -19163,9 +19161,11 @@
             "qtpyvcp.actions.program_actions",
             "qtpyvcp.actions.spindle_actions",
             "qtpyvcp.actions.tool_actions",
-            "qtpyvcp.application",
-            "qtpyvcp.core",
-            "qtpyvcp.enums",
+            "qtpyvcp.app",
+            "qtpyvcp.app.application",
+            "qtpyvcp.app.enums",
+            "qtpyvcp.app.launcher",
+            "qtpyvcp.app.runtime_config",
             "qtpyvcp.hal",
             "qtpyvcp.hal.hal_qlib",
             "qtpyvcp.lib",
@@ -19176,6 +19176,8 @@
             "qtpyvcp.lib.types",
             "qtpyvcp.plugins",
             "qtpyvcp.plugins.clock",
+            "qtpyvcp.plugins.exported_hal",
+            "qtpyvcp.plugins.file_locations",
             "qtpyvcp.plugins.notifications",
             "qtpyvcp.plugins.offset_table",
             "qtpyvcp.plugins.persistent_data_manager",
@@ -19189,21 +19191,19 @@
             "qtpyvcp.tools.qcompile",
             "qtpyvcp.utilities",
             "qtpyvcp.utilities.config_loader",
-            "qtpyvcp.utilities.hal_comp",
-            "qtpyvcp.utilities.hal_qlib",
             "qtpyvcp.utilities.info",
             "qtpyvcp.utilities.logger",
             "qtpyvcp.utilities.misc",
             "qtpyvcp.utilities.obj_status",
             "qtpyvcp.utilities.opt_parser",
-            "qtpyvcp.utilities.prefs",
             "qtpyvcp.utilities.settings",
             "qtpyvcp.vcp_chooser",
             "qtpyvcp.vcp_chooser.vcp_chooser",
-            "qtpyvcp.vcp_launcher",
             "qtpyvcp.widgets",
             "qtpyvcp.widgets.base_widgets",
+            "qtpyvcp.widgets.base_widgets.bar_indicator",
             "qtpyvcp.widgets.base_widgets.base_widget",
+            "qtpyvcp.widgets.base_widgets.dro_base_widget",
             "qtpyvcp.widgets.base_widgets.led_widget",
             "qtpyvcp.widgets.button_widgets",
             "qtpyvcp.widgets.button_widgets.action_button",
@@ -19227,12 +19227,15 @@
             "qtpyvcp.widgets.dialogs.open_file_dialog",
             "qtpyvcp.widgets.dialogs.probesim_dialog",
             "qtpyvcp.widgets.display_widgets",
+            "qtpyvcp.widgets.display_widgets.active_gcodes_table",
             "qtpyvcp.widgets.display_widgets.atc_widget",
             "qtpyvcp.widgets.display_widgets.atc_widget.atc",
+            "qtpyvcp.widgets.display_widgets.bar_indicator",
             "qtpyvcp.widgets.display_widgets.camera",
             "qtpyvcp.widgets.display_widgets.camera.camera",
             "qtpyvcp.widgets.display_widgets.camera.settings",
             "qtpyvcp.widgets.display_widgets.designer_plugins",
+            "qtpyvcp.widgets.display_widgets.dro_label",
             "qtpyvcp.widgets.display_widgets.dro_widget",
             "qtpyvcp.widgets.display_widgets.gcode_backplot",
             "qtpyvcp.widgets.display_widgets.gcode_backplot.gcode_backplot",
@@ -19247,6 +19250,7 @@
             "qtpyvcp.widgets.display_widgets.vtk_backplot.base_backplot",
             "qtpyvcp.widgets.display_widgets.vtk_backplot.base_canon",
             "qtpyvcp.widgets.display_widgets.vtk_backplot.vtk_backplot",
+            "qtpyvcp.widgets.external_widgets",
             "qtpyvcp.widgets.form_widgets",
             "qtpyvcp.widgets.form_widgets.designer_plugins",
             "qtpyvcp.widgets.form_widgets.main_window",
@@ -19254,6 +19258,7 @@
             "qtpyvcp.widgets.form_widgets.probe_widget.probe",
             "qtpyvcp.widgets.hal_widgets",
             "qtpyvcp.widgets.hal_widgets.designer_plugins",
+            "qtpyvcp.widgets.hal_widgets.hal_bar_indicator",
             "qtpyvcp.widgets.hal_widgets.hal_button",
             "qtpyvcp.widgets.hal_widgets.hal_checkbox",
             "qtpyvcp.widgets.hal_widgets.hal_double_spinbox",
@@ -19270,11 +19275,13 @@
             "qtpyvcp.widgets.input_widgets.action_dial",
             "qtpyvcp.widgets.input_widgets.action_slider",
             "qtpyvcp.widgets.input_widgets.designer_plugins",
+            "qtpyvcp.widgets.input_widgets.dro_line_edit",
             "qtpyvcp.widgets.input_widgets.file_system",
             "qtpyvcp.widgets.input_widgets.gcode_editor",
             "qtpyvcp.widgets.input_widgets.jog_increment",
             "qtpyvcp.widgets.input_widgets.line_edit",
             "qtpyvcp.widgets.input_widgets.mdientry_widget",
+            "qtpyvcp.widgets.input_widgets.mdihistory_widget",
             "qtpyvcp.widgets.input_widgets.offset_table",
             "qtpyvcp.widgets.input_widgets.probesim_widget",
             "qtpyvcp.widgets.input_widgets.recent_file_combobox",
@@ -19285,8 +19292,10 @@
             "qtpyvcp.widgets.qtdesigner",
             "qtpyvcp.widgets.qtdesigner.designer_hooks",
             "qtpyvcp.widgets.qtdesigner.designer_plugin",
+            "qtpyvcp.widgets.qtdesigner.dro_editor",
             "qtpyvcp.widgets.qtdesigner.plugin_extension",
             "qtpyvcp.widgets.qtdesigner.rules_editor",
+            "qtpyvcp.widgets.qtdesigner.settings_selector",
             "qtpyvcp.widgets.qtdesigner.stylesheet",
             "qtpyvcp.widgets.qtdesigner_plugin",
             "qtpyvcp.widgets.recent_files_menu",
@@ -19298,7 +19307,7 @@
             "video_tests.vtk_test",
             "video_tests.vtk_test.mainwindow"
         ],
-        "version": "0.3.7"
+        "version": "0.3.8"
     },
     "qtrade": {
         "cmdline": [],
@@ -21284,7 +21293,7 @@
             "QualtricsAPI.tests",
             "QualtricsAPI.tests.test"
         ],
-        "version": "0.2.7"
+        "version": "0.2.8"
     },
     "qualysapi": {
         "cmdline": [],
@@ -30454,7 +30463,7 @@
             "QuickStart_Rhy.nettools",
             "QuickStart_Rhy.system"
         ],
-        "version": "0.2.17"
+        "version": "0.2.18"
     },
     "quickstartlog": {
         "cmdline": [],
