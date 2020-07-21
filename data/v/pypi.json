@@ -3350,6 +3350,7 @@
             "validator.rules_src.IPv6",
             "validator.rules_src.accepted",
             "validator.rules_src.alpha",
+            "validator.rules_src.base32",
             "validator.rules_src.between",
             "validator.rules_src.binary",
             "validator.rules_src.date",
@@ -3375,7 +3376,7 @@
             "validator.utils",
             "validator.validator"
         ],
-        "version": "0.4.2"
+        "version": "0.5.1"
     },
     "validator-collection": {
         "cmdline": [],
@@ -11642,7 +11643,7 @@
             "vcstool.streams",
             "vcstool.util"
         ],
-        "version": "0.2.11"
+        "version": "0.2.13"
     },
     "vcstools": {
         "cmdline": [],
@@ -13970,7 +13971,7 @@
             "vat.stix_taxii",
             "vat.vectra"
         ],
-        "version": "2.0rc1"
+        "version": "2.0rc3"
     },
     "vecvis": {
         "cmdline": [],
@@ -16956,6 +16957,13 @@
         ],
         "version": "1.2.0"
     },
+    "veraverto": {
+        "cmdline": [],
+        "modules": [
+            "veraverto"
+        ],
+        "version": "0.0.1"
+    },
     "verb-conjugate-fr": {
         "cmdline": [],
         "modules": [
@@ -17203,6 +17211,14 @@
             "VerdictCut.tool.normalize_position"
         ],
         "version": "0.1.0"
+    },
+    "verdictformat": {
+        "cmdline": [],
+        "modules": [
+            "VerdictFormat",
+            "VerdictFormat.VerdictFormat"
+        ],
+        "version": "1.3.3"
     },
     "verdigris-mu-splat": {
         "cmdline": [],
@@ -23018,7 +23034,7 @@
             "vfxnaming.serialize",
             "vfxnaming.tokens"
         ],
-        "version": "1.2.1b0"
+        "version": "1.2.2b0"
     },
     "vfxt": {
         "cmdline": [
@@ -23574,7 +23590,7 @@
             "vhlsrs.vivado_hls_tcl",
             "vhlsrs.vivado_report"
         ],
-        "version": "0.0.52"
+        "version": "0.0.59"
     },
     "vhm-agent": {
         "cmdline": [],
@@ -26616,6 +26632,13 @@
             "vidl.run"
         ],
         "version": "3.4.11"
+    },
+    "vidlist": {
+        "cmdline": [],
+        "modules": [
+            "vidlist"
+        ],
+        "version": "0.0.4"
     },
     "vidmaster": {
         "cmdline": [],
@@ -33063,7 +33086,7 @@
             "virustotal3.enterprise",
             "virustotal3.errors"
         ],
-        "version": "1.0.6"
+        "version": "1.0.7"
     },
     "virustotalapi3": {
         "cmdline": [],
@@ -42452,33 +42475,31 @@
         "version": "0.1.6"
     },
     "vmcenter": {
-        "cmdline": [],
+        "cmdline": [
+            "vmcctl"
+        ],
         "modules": [
             "vmc",
             "vmc.apps",
             "vmc.assets",
             "vmc.assets.apps",
             "vmc.assets.documents",
-            "vmc.assets.migrations",
             "vmc.assets.tests",
+            "vmc.branding",
             "vmc.common",
+            "vmc.common.admin",
             "vmc.common.apps",
-            "vmc.common.elastic",
-            "vmc.common.elastic.documents",
-            "vmc.common.elastic.registers",
-            "vmc.common.elastic.signals",
-            "vmc.common.elastic.tests",
             "vmc.common.enum",
             "vmc.common.management",
             "vmc.common.management.commands",
             "vmc.common.management.commands._common",
-            "vmc.common.management.commands.admin",
-            "vmc.common.management.commands.monitor",
-            "vmc.common.management.commands.scheduler",
             "vmc.common.management.commands.test_all",
-            "vmc.common.management.commands.worker",
+            "vmc.common.management.commands.wait_for_amqp",
+            "vmc.common.management.commands.wait_for_db",
+            "vmc.common.management.commands.wait_for_es",
             "vmc.common.migrations",
             "vmc.common.models",
+            "vmc.common.tasks",
             "vmc.common.tests",
             "vmc.common.utils",
             "vmc.common.xml",
@@ -42488,49 +42509,85 @@
             "vmc.config.test_settings",
             "vmc.config.urls",
             "vmc.config.wsgi",
+            "vmc.elasticsearch",
+            "vmc.elasticsearch.admin",
+            "vmc.elasticsearch.apps",
+            "vmc.elasticsearch.documents",
+            "vmc.elasticsearch.helpers",
+            "vmc.elasticsearch.management",
+            "vmc.elasticsearch.management.commands",
+            "vmc.elasticsearch.management.commands.create_index",
+            "vmc.elasticsearch.migrations",
+            "vmc.elasticsearch.migrations.0001_initial",
+            "vmc.elasticsearch.migrations.0002_auto_20200503_1549",
+            "vmc.elasticsearch.migrations.0003_auto_20200622_1352",
+            "vmc.elasticsearch.models",
+            "vmc.elasticsearch.registries",
+            "vmc.elasticsearch.signals",
+            "vmc.elasticsearch.tasks",
+            "vmc.elasticsearch.tests",
             "vmc.knowledge_base",
-            "vmc.knowledge_base.admin",
             "vmc.knowledge_base.apps",
             "vmc.knowledge_base.documents",
             "vmc.knowledge_base.factories",
             "vmc.knowledge_base.metrics",
             "vmc.knowledge_base.migrations",
-            "vmc.knowledge_base.migrations.0001_initial",
-            "vmc.knowledge_base.models",
-            "vmc.knowledge_base.signals",
             "vmc.knowledge_base.tasks",
             "vmc.knowledge_base.tests",
             "vmc.knowledge_base.utils",
-            "vmc.nessus",
-            "vmc.nessus.admin",
-            "vmc.nessus.api",
-            "vmc.nessus.apps",
-            "vmc.nessus.migrations",
-            "vmc.nessus.migrations.0001_initial",
-            "vmc.nessus.models",
-            "vmc.nessus.parsers",
-            "vmc.nessus.tasks",
-            "vmc.nessus.tests",
+            "vmc.knowledge_base.views",
+            "vmc.processing",
+            "vmc.processing.apps",
+            "vmc.processing.tasks",
+            "vmc.processing.tests",
             "vmc.ralph",
             "vmc.ralph.admin",
-            "vmc.ralph.api",
             "vmc.ralph.apps",
-            "vmc.ralph.factories",
+            "vmc.ralph.clients",
             "vmc.ralph.migrations",
             "vmc.ralph.migrations.0001_initial",
+            "vmc.ralph.migrations.0002_auto_20200523_1841",
+            "vmc.ralph.migrations.0003_auto_20200614_2000",
+            "vmc.ralph.migrations.0004_auto_20200622_1348",
             "vmc.ralph.models",
+            "vmc.ralph.parsers",
+            "vmc.ralph.serializers",
             "vmc.ralph.tasks",
             "vmc.ralph.tests",
+            "vmc.ralph.views",
+            "vmc.scanners",
+            "vmc.scanners.admin",
+            "vmc.scanners.apps",
+            "vmc.scanners.clients",
+            "vmc.scanners.migrations",
+            "vmc.scanners.migrations.0001_initial",
+            "vmc.scanners.migrations.0002_auto_20200614_2000",
+            "vmc.scanners.migrations.0003_auto_20200622_1348",
+            "vmc.scanners.migrations.0004_auto_20200630_1914",
+            "vmc.scanners.models",
+            "vmc.scanners.nessus",
+            "vmc.scanners.nessus.apps",
+            "vmc.scanners.nessus.clients",
+            "vmc.scanners.nessus.parsers",
+            "vmc.scanners.nessus.tests",
+            "vmc.scanners.openvas",
+            "vmc.scanners.openvas.apps",
+            "vmc.scanners.openvas.clients",
+            "vmc.scanners.openvas.parsers",
+            "vmc.scanners.openvas.tests",
+            "vmc.scanners.parsers",
+            "vmc.scanners.registries",
+            "vmc.scanners.tasks",
+            "vmc.scanners.tests",
             "vmc.tests",
             "vmc.vulnerabilities",
             "vmc.vulnerabilities.apps",
             "vmc.vulnerabilities.documents",
-            "vmc.vulnerabilities.migrations",
-            "vmc.vulnerabilities.signals",
+            "vmc.vulnerabilities.serializers",
             "vmc.vulnerabilities.tests",
-            "vmc.vulnerabilities.utils"
+            "vmc.vulnerabilities.views"
         ],
-        "version": "1.0.1a2"
+        "version": "1.1rc1"
     },
     "vmcloak": {
         "cmdline": [
@@ -44207,6 +44264,15 @@
             "vmwvro2.workflow"
         ],
         "version": "0.1.12"
+    },
+    "vmx-editor": {
+        "cmdline": [],
+        "modules": [
+            "vmx_editor",
+            "vmx_editor.editor",
+            "vmx_editor.variables"
+        ],
+        "version": "0.3.1"
     },
     "vmxparser": {
         "cmdline": [],
@@ -50993,6 +51059,16 @@
             "vpgtools"
         ],
         "version": "0.1"
+    },
+    "vphack": {
+        "cmdline": [
+            "vphackez",
+            "vphackez-a"
+        ],
+        "modules": [
+            "vphack.mainhack"
+        ],
+        "version": "0.0.3"
     },
     "vpicwrapper": {
         "cmdline": [],
@@ -59423,7 +59499,7 @@
             "vstutils.ws.routing",
             "vstutils.wsgi"
         ],
-        "version": "4.0.2"
+        "version": "4.0.3"
     },
     "vsucs4900": {
         "cmdline": [
