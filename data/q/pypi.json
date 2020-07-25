@@ -363,7 +363,7 @@
             "qaboard.utils",
             "qatools"
         ],
-        "version": "0.8.8"
+        "version": "0.8.9"
     },
     "qacaller": {
         "cmdline": [],
@@ -5662,7 +5662,7 @@
             "qctrl.static.services",
             "qctrl.utils"
         ],
-        "version": "7.3.5"
+        "version": "7.3.6"
     },
     "qctrl-api-client": {
         "cmdline": [],
@@ -9230,7 +9230,10 @@
             "qiling.arch.arch",
             "qiling.arch.arm",
             "qiling.arch.arm64",
-            "qiling.arch.mips32",
+            "qiling.arch.arm64_const",
+            "qiling.arch.arm_const",
+            "qiling.arch.mips",
+            "qiling.arch.mips_const",
             "qiling.arch.register",
             "qiling.arch.utils",
             "qiling.arch.x86",
@@ -9240,13 +9243,23 @@
             "qiling.core_hooks",
             "qiling.core_struct",
             "qiling.core_utils",
-            "qiling.debugger",
-            "qiling.debugger.debugger",
-            "qiling.debugger.gdbserver",
-            "qiling.debugger.gdbserver.gdbserver",
-            "qiling.debugger.gdbserver.qldbg",
-            "qiling.debugger.utils",
             "qiling.exception",
+            "qiling.extensions",
+            "qiling.extensions.coverage",
+            "qiling.extensions.coverage.formats",
+            "qiling.extensions.coverage.formats.base",
+            "qiling.extensions.coverage.formats.drcov",
+            "qiling.extensions.coverage.utils",
+            "qiling.extensions.debugger",
+            "qiling.extensions.debugger.debugger",
+            "qiling.extensions.debugger.gdbserver",
+            "qiling.extensions.debugger.gdbserver.gdbserver",
+            "qiling.extensions.debugger.gdbserver.qldbg",
+            "qiling.extensions.debugger.utils",
+            "qiling.extensions.sanitizers",
+            "qiling.extensions.sanitizers.heap",
+            "qiling.extensions.windows_sdk",
+            "qiling.extensions.windows_sdk.winsdk_dump",
             "qiling.loader",
             "qiling.loader.elf",
             "qiling.loader.loader",
@@ -9259,6 +9272,7 @@
             "qiling.loader.macho_parser.parser",
             "qiling.loader.macho_parser.utils",
             "qiling.loader.pe",
+            "qiling.loader.pe_uefi",
             "qiling.loader.utils",
             "qiling.os",
             "qiling.os.const",
@@ -9266,33 +9280,28 @@
             "qiling.os.freebsd",
             "qiling.os.freebsd.const",
             "qiling.os.freebsd.freebsd",
+            "qiling.os.freebsd.map_syscall",
             "qiling.os.freebsd.syscall",
-            "qiling.os.freebsd.x8664_syscall",
             "qiling.os.linux",
-            "qiling.os.linux.arm64_syscall",
-            "qiling.os.linux.arm_syscall",
             "qiling.os.linux.const",
             "qiling.os.linux.function_hook",
             "qiling.os.linux.futex",
             "qiling.os.linux.linux",
-            "qiling.os.linux.mips32_syscall",
+            "qiling.os.linux.map_syscall",
             "qiling.os.linux.syscall",
             "qiling.os.linux.thread",
             "qiling.os.linux.utils",
-            "qiling.os.linux.x8664_syscall",
-            "qiling.os.linux.x86_syscall",
             "qiling.os.macos",
-            "qiling.os.macos.arm64_syscall",
             "qiling.os.macos.const",
             "qiling.os.macos.kernel_func",
             "qiling.os.macos.mach_port",
             "qiling.os.macos.macos",
+            "qiling.os.macos.map_syscall",
             "qiling.os.macos.subsystems",
             "qiling.os.macos.syscall",
             "qiling.os.macos.task",
             "qiling.os.macos.thread",
             "qiling.os.macos.utils",
-            "qiling.os.macos.x8664_syscall",
             "qiling.os.memory",
             "qiling.os.os",
             "qiling.os.posix",
@@ -9308,6 +9317,7 @@
             "qiling.os.posix.syscall.net",
             "qiling.os.posix.syscall.prctl",
             "qiling.os.posix.syscall.ptrace",
+            "qiling.os.posix.syscall.random",
             "qiling.os.posix.syscall.resource",
             "qiling.os.posix.syscall.sched",
             "qiling.os.posix.syscall.select",
@@ -9324,6 +9334,25 @@
             "qiling.os.posix.syscall.utsname",
             "qiling.os.posix.syscall.wait",
             "qiling.os.thread",
+            "qiling.os.uefi",
+            "qiling.os.uefi.bootup",
+            "qiling.os.uefi.const",
+            "qiling.os.uefi.dxe_service",
+            "qiling.os.uefi.dxe_service_type64",
+            "qiling.os.uefi.fncc",
+            "qiling.os.uefi.mm_access_protocol",
+            "qiling.os.uefi.mm_access_type",
+            "qiling.os.uefi.mm_system_table_type",
+            "qiling.os.uefi.runtime",
+            "qiling.os.uefi.shutdown",
+            "qiling.os.uefi.smm_base2_protocol",
+            "qiling.os.uefi.smm_base2_type",
+            "qiling.os.uefi.smm_sw_dispatch2_protocol",
+            "qiling.os.uefi.smm_sw_dispatch2_type",
+            "qiling.os.uefi.type32",
+            "qiling.os.uefi.type64",
+            "qiling.os.uefi.uefi",
+            "qiling.os.uefi.utils",
             "qiling.os.utils",
             "qiling.os.windows",
             "qiling.os.windows.clipboard",
@@ -9363,6 +9392,7 @@
             "qiling.os.windows.dlls.ntdll",
             "qiling.os.windows.dlls.ntoskrnl",
             "qiling.os.windows.dlls.ole32",
+            "qiling.os.windows.dlls.oleaut32",
             "qiling.os.windows.dlls.shell32",
             "qiling.os.windows.dlls.shlwapi",
             "qiling.os.windows.dlls.ucrtbased",
@@ -9380,7 +9410,7 @@
             "qiling.os.windows.windows",
             "qiling.utils"
         ],
-        "version": "1.0"
+        "version": "1.1.post1"
     },
     "qilum": {
         "cmdline": [],
@@ -21609,7 +21639,7 @@
             "quandl.utils.request_type_util",
             "quandl.version"
         ],
-        "version": "3.5.1"
+        "version": "3.5.2"
     },
     "quandl-fund-xlsx": {
         "cmdline": [],
@@ -22458,7 +22488,7 @@
             "QUANTAXIS.QAUtil.QAcrypto",
             "QUANTAXIS.QAUtil.host"
         ],
-        "version": "1.9.26"
+        "version": "1.9.27"
     },
     "quantaxis-crawly": {
         "cmdline": [],
@@ -24625,6 +24655,27 @@
             "quantum_ciphers.Quantum_Ciphers"
         ],
         "version": "3.0.3"
+    },
+    "quantum-computer": {
+        "cmdline": [],
+        "modules": [
+            "qopt",
+            "qopt.amplitude_functions",
+            "qopt.analyser",
+            "qopt.cost_functions",
+            "qopt.data_container",
+            "qopt.energy_spectrum",
+            "qopt.matrix",
+            "qopt.noise",
+            "qopt.optimization_data",
+            "qopt.optimize",
+            "qopt.performance_statistics",
+            "qopt.simulator",
+            "qopt.solver_algorithms",
+            "qopt.transfer_function",
+            "qopt.util"
+        ],
+        "version": "0.1"
     },
     "quantum-dataset": {
         "cmdline": [],
@@ -27636,10 +27687,11 @@
             "queenbee_luigi.dag",
             "queenbee_luigi.luigi_util",
             "queenbee_luigi.recipe",
+            "queenbee_luigi.recipe_util",
             "queenbee_luigi.task",
             "queenbee_luigi.task_util"
         ],
-        "version": "0.3.0"
+        "version": "0.4.0"
     },
     "queenbee-pollination": {
         "cmdline": [],
