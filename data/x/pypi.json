@@ -64,7 +64,7 @@
             "x_sweetest.utility",
             "x_sweetest.windows"
         ],
-        "version": "0.3.0"
+        "version": "0.3.1"
     },
     "x-axis-lib": {
         "cmdline": [],
@@ -747,11 +747,13 @@
             "x2paddle.core.fluid_code",
             "x2paddle.core.graph",
             "x2paddle.core.op_mapper",
+            "x2paddle.core.program",
             "x2paddle.core.util",
             "x2paddle.decoder",
             "x2paddle.decoder.caffe_decoder",
             "x2paddle.decoder.caffe_pb2",
             "x2paddle.decoder.onnx_decoder",
+            "x2paddle.decoder.onnx_shape_inference",
             "x2paddle.decoder.paddle_decoder",
             "x2paddle.decoder.tf_decoder",
             "x2paddle.op_mapper",
@@ -763,20 +765,39 @@
             "x2paddle.op_mapper.caffe_custom_layer.permute",
             "x2paddle.op_mapper.caffe_custom_layer.priorbox",
             "x2paddle.op_mapper.caffe_custom_layer.register",
+            "x2paddle.op_mapper.caffe_custom_layer.relu6",
             "x2paddle.op_mapper.caffe_custom_layer.roipooling",
             "x2paddle.op_mapper.caffe_custom_layer.select",
             "x2paddle.op_mapper.caffe_custom_layer.shufflechannel",
+            "x2paddle.op_mapper.caffe_custom_layer.upsample",
             "x2paddle.op_mapper.caffe_op_mapper",
             "x2paddle.op_mapper.caffe_shape",
-            "x2paddle.op_mapper.onnx_custom_layer",
-            "x2paddle.op_mapper.onnx_custom_layer.InstanceNormalization",
-            "x2paddle.op_mapper.onnx_custom_layer.register",
-            "x2paddle.op_mapper.onnx_directly_map",
-            "x2paddle.op_mapper.onnx_op_mapper",
-            "x2paddle.op_mapper.paddle_custom_layer",
-            "x2paddle.op_mapper.paddle_custom_layer.multiclass_nms",
-            "x2paddle.op_mapper.paddle_custom_layer.yolo_box",
-            "x2paddle.op_mapper.paddle_op_mapper",
+            "x2paddle.op_mapper.onnx2paddle",
+            "x2paddle.op_mapper.onnx2paddle.onnx_op_mapper",
+            "x2paddle.op_mapper.onnx2paddle.opset9",
+            "x2paddle.op_mapper.onnx2paddle.opset9.custom_layer",
+            "x2paddle.op_mapper.onnx2paddle.opset9.custom_layer.register",
+            "x2paddle.op_mapper.onnx2paddle.opset9.opset",
+            "x2paddle.op_mapper.paddle2onnx",
+            "x2paddle.op_mapper.paddle2onnx.opset10",
+            "x2paddle.op_mapper.paddle2onnx.opset10.opset",
+            "x2paddle.op_mapper.paddle2onnx.opset10.paddle_custom_layer",
+            "x2paddle.op_mapper.paddle2onnx.opset10.paddle_custom_layer.im2sequence",
+            "x2paddle.op_mapper.paddle2onnx.opset10.paddle_custom_layer.multiclass_nms",
+            "x2paddle.op_mapper.paddle2onnx.opset10.paddle_custom_layer.yolo_box",
+            "x2paddle.op_mapper.paddle2onnx.opset11",
+            "x2paddle.op_mapper.paddle2onnx.opset11.opset",
+            "x2paddle.op_mapper.paddle2onnx.opset11.paddle_custom_layer",
+            "x2paddle.op_mapper.paddle2onnx.opset11.paddle_custom_layer.im2sequence",
+            "x2paddle.op_mapper.paddle2onnx.opset11.paddle_custom_layer.multiclass_nms",
+            "x2paddle.op_mapper.paddle2onnx.opset11.paddle_custom_layer.yolo_box",
+            "x2paddle.op_mapper.paddle2onnx.opset9",
+            "x2paddle.op_mapper.paddle2onnx.opset9.opset",
+            "x2paddle.op_mapper.paddle2onnx.opset9.paddle_custom_layer",
+            "x2paddle.op_mapper.paddle2onnx.opset9.paddle_custom_layer.im2sequence",
+            "x2paddle.op_mapper.paddle2onnx.opset9.paddle_custom_layer.multiclass_nms",
+            "x2paddle.op_mapper.paddle2onnx.opset9.paddle_custom_layer.yolo_box",
+            "x2paddle.op_mapper.paddle2onnx.paddle_op_mapper",
             "x2paddle.op_mapper.tf_op_mapper",
             "x2paddle.op_mapper.tf_op_mapper_nhwc",
             "x2paddle.optimizer",
@@ -785,7 +806,7 @@
             "x2paddle.optimizer.tf_optimizer",
             "x2paddle.tests"
         ],
-        "version": "0.7.4"
+        "version": "0.8.0"
     },
     "x2py": {
         "cmdline": [
@@ -3690,7 +3711,7 @@
             "workbench.views",
             "workbench.wsgi"
         ],
-        "version": "0.2.1"
+        "version": "0.2.2"
     },
     "xblock-utils": {
         "cmdline": [],
@@ -5864,7 +5885,7 @@
             "xchk_core.urls",
             "xchk_core.views"
         ],
-        "version": "0.1.1"
+        "version": "0.1.5"
     },
     "xchk-git-content": {
         "cmdline": [],
@@ -5880,7 +5901,7 @@
             "xchk_git_content.urls",
             "xchk_git_content.views"
         ],
-        "version": "0.1.4"
+        "version": "0.1.7"
     },
     "xchk-regex-strategies": {
         "cmdline": [],
@@ -8122,15 +8143,17 @@
             "tests.test_balance",
             "tests.test_ewallet",
             "tests.test_qrcodes",
+            "tests.test_virtual_accounts",
             "tests.test_xenditclient",
             "xenditclient",
             "xenditclient.balance",
             "xenditclient.client",
             "xenditclient.ewallets",
             "xenditclient.exceptions",
-            "xenditclient.qrcodes"
+            "xenditclient.qrcodes",
+            "xenditclient.virtual_accounts"
         ],
-        "version": "0.0.4"
+        "version": "0.0.5"
     },
     "xenia": {
         "cmdline": [],
@@ -8970,6 +8993,14 @@
             "xpython"
         ],
         "version": "0.8.3"
+    },
+    "xeuspython": {
+        "cmdline": [],
+        "modules": [
+            "xeuspython",
+            "xeuspython.cli"
+        ],
+        "version": "0.1.1"
     },
     "xevan-hash": {
         "cmdline": [],
@@ -10722,9 +10753,7 @@
             "xiaobaiauto2",
             "xiaobaiauto2.__version__",
             "xiaobaiauto2.config",
-            "xiaobaiauto2.config.appconftest",
             "xiaobaiauto2.config.config",
-            "xiaobaiauto2.config.webconftest",
             "xiaobaiauto2.data",
             "xiaobaiauto2.data.GLO_VARS",
             "xiaobaiauto2.test",
@@ -10732,18 +10761,26 @@
             "xiaobaiauto2.test.APITest.test_Xiaobai_api",
             "xiaobaiauto2.test.AppTest",
             "xiaobaiauto2.test.AppTest.conftest",
-            "xiaobaiauto2.test.AppTest.test_Manzhai_APP",
+            "xiaobaiauto2.test.AppTest.test_Manzhai_APP_Case1",
+            "xiaobaiauto2.test.AppTest.test_Manzhai_APP_Case2",
             "xiaobaiauto2.test.WebTest",
-            "xiaobaiauto2.test.WebTest.1",
             "xiaobaiauto2.test.WebTest.conftest",
             "xiaobaiauto2.test.WebTest.test_Jicai_WebUI",
+            "xiaobaiauto2.testCase_template",
+            "xiaobaiauto2.testCase_template.test01",
+            "xiaobaiauto2.testCase_template.test02",
+            "xiaobaiauto2.testCase_template.test03",
             "xiaobaiauto2.utils",
             "xiaobaiauto2.utils.chinese_chromedriver_installer",
+            "xiaobaiauto2.utils.help_ui",
             "xiaobaiauto2.utils.xiaobaiauto2Email",
+            "xiaobaiauto2.utils.xiaobaiauto2Help",
+            "xiaobaiauto2.utils.xiaobaiauto2Timer",
             "xiaobaiauto2.utils.xiaobaiauto2db",
-            "xiaobaiauto2.xiaobaiauto2"
+            "xiaobaiauto2.xiaobaiauto2",
+            "xiaobaiauto2.xiaobaiauto2Timer"
         ],
-        "version": "0.0.1.2"
+        "version": "0.1.0.1"
     },
     "xiaobaiinstaller": {
         "cmdline": [],
@@ -11420,6 +11457,37 @@
         ],
         "version": "1.0.0"
     },
+    "xicra": {
+        "cmdline": [
+            "XICRA"
+        ],
+        "modules": [
+            "XICRA",
+            "XICRA.config",
+            "XICRA.config.extern_progs",
+            "XICRA.config.set_config",
+            "XICRA.modules",
+            "XICRA.modules.biotype",
+            "XICRA.modules.citation",
+            "XICRA.modules.config",
+            "XICRA.modules.help_XICRA",
+            "XICRA.modules.join",
+            "XICRA.modules.miRNA",
+            "XICRA.modules.prep",
+            "XICRA.modules.qc",
+            "XICRA.modules.trimm",
+            "XICRA.scripts",
+            "XICRA.scripts.RNAbiotype",
+            "XICRA.scripts.fastqc_caller",
+            "XICRA.scripts.functions",
+            "XICRA.scripts.generate_DE",
+            "XICRA.scripts.generate_barplot_RNAbiotype",
+            "XICRA.scripts.multiQC_report",
+            "XICRA.scripts.reads2tabular",
+            "XICRA.scripts.sampleParser"
+        ],
+        "version": "0.9.0"
+    },
     "xict": {
         "cmdline": [],
         "modules": [
@@ -11834,8 +11902,24 @@
     },
     "xinet": {
         "cmdline": [],
-        "modules": [],
-        "version": "0.0.2"
+        "modules": [
+            "xinet",
+            "xinet.Qt",
+            "xinet.Qt.qt5",
+            "xinet.Qt.utils",
+            "xinet.Qt.widgets",
+            "xinet.Tk",
+            "xinet.Tk.utils",
+            "xinet.Tk.widgets",
+            "xinet.param",
+            "xinet.run_qt",
+            "xinet.tkinterx",
+            "xinet.tkinterx.graph",
+            "xinet.tkinterx.graph.canvas",
+            "xinet.tkinterx.graph.draw",
+            "xinet.tkinterx.graph.shape"
+        ],
+        "version": "0.0.5"
     },
     "xing-plus": {
         "cmdline": [],
@@ -14739,6 +14823,14 @@
         "cmdline": [],
         "modules": [],
         "version": ""
+    },
+    "xlwtfuture": {
+        "cmdline": [],
+        "modules": [
+            "xlwtfuture",
+            "xlwtfuture.cli"
+        ],
+        "version": "0.1.1"
     },
     "xlxlxl181-nester": {
         "cmdline": [],
@@ -21650,7 +21742,7 @@
             "xphyle.urls",
             "xphyle.utils"
         ],
-        "version": "4.2.2"
+        "version": "4.3.0"
     },
     "xpi": {
         "cmdline": [],
@@ -28186,6 +28278,11 @@
             "xtt.test.xtt_test"
         ],
         "version": "0.10.0.post0"
+    },
+    "xu": {
+        "cmdline": [],
+        "modules": [],
+        "version": "0.1.2"
     },
     "xu-jing-print-nested-list": {
         "cmdline": [],
