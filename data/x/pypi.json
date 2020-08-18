@@ -5175,15 +5175,42 @@
     "xbrief": {
         "cmdline": [],
         "modules": [
-            "src",
-            "src.fm",
-            "src.mapx",
-            "src.matx",
-            "src.strx",
-            "src.typ",
-            "src.vecx"
+            "xbrief",
+            "xbrief.bracket",
+            "xbrief.deco",
+            "xbrief.deco.deco_entries",
+            "xbrief.deco.deco_entries.deco_entries",
+            "xbrief.deco.deco_json",
+            "xbrief.deco.deco_matrix",
+            "xbrief.deco.deco_str",
+            "xbrief.deco.deco_vector",
+            "xbrief.deco.deco_vector.deco_vector",
+            "xbrief.enum",
+            "xbrief.enum.brackets",
+            "xbrief.formatter",
+            "xbrief.formatter.formatter",
+            "xbrief.lines",
+            "xbrief.logger",
+            "xbrief.logger.logger",
+            "xbrief.margin",
+            "xbrief.margin.entries_margin",
+            "xbrief.margin.matrix_margin",
+            "xbrief.margin.matrix_margin.matrix_margin",
+            "xbrief.margin.matrix_margin.sizing",
+            "xbrief.margin.utils",
+            "xbrief.margin.vector_margin",
+            "xbrief.margin.vector_margin.marginize",
+            "xbrief.margin.vector_margin.sizing",
+            "xbrief.margin.vector_margin.vector_margin",
+            "xbrief.padder",
+            "xbrief.padder.pad_entries",
+            "xbrief.padder.pad_keyed_column",
+            "xbrief.padder.pad_matrix",
+            "xbrief.padder.pad_string",
+            "xbrief.padder.pad_table",
+            "xbrief.padder.pad_vector"
         ],
-        "version": "0.0.4"
+        "version": "0.0.5"
     },
     "xbrl": {
         "cmdline": [],
@@ -5874,7 +5901,7 @@
             "xchg.download_sample",
             "xchg.main"
         ],
-        "version": "1.0.5"
+        "version": "1.0.6"
     },
     "xchk-core": {
         "cmdline": [],
@@ -6309,7 +6336,7 @@
             "xcompact3d_toolbox.parameters",
             "xcompact3d_toolbox.sandbox"
         ],
-        "version": "0.0.0"
+        "version": "0.1.3"
     },
     "xcomposite": {
         "cmdline": [],
@@ -7731,9 +7758,10 @@
             "majormode.xebus.client.service.education_service",
             "majormode.xebus.client.service.guardian_service",
             "majormode.xebus.client.service.school_service",
+            "majormode.xebus.client.service.upmd_service",
             "majormode.xebus.client.service.xebus_service"
         ],
-        "version": "1.5.4"
+        "version": "1.5.6"
     },
     "xecd-rates": {
         "cmdline": [],
@@ -12948,6 +12976,8 @@
     },
     "xkcd-bot": {
         "cmdline": [
+            "backup.sh",
+            "restore.sh",
             "xkcd-bot"
         ],
         "modules": [
@@ -12958,7 +12988,7 @@
             "xkcd_bot.db.Comic",
             "xkcd_bot.db.Subscription"
         ],
-        "version": "0.1.0"
+        "version": "0.2.1"
     },
     "xkcd-cli": {
         "cmdline": [],
@@ -13605,36 +13635,6 @@
         "cmdline": [],
         "modules": [
             "tests",
-            "tests.functions",
-            "tests.functions.abs_test",
-            "tests.functions.average_test",
-            "tests.functions.choose_test",
-            "tests.functions.concat_test",
-            "tests.functions.count_test",
-            "tests.functions.counta_test",
-            "tests.functions.date_test",
-            "tests.functions.irr_test",
-            "tests.functions.ln_test",
-            "tests.functions.max_test",
-            "tests.functions.mid_test",
-            "tests.functions.min_test",
-            "tests.functions.mod_test",
-            "tests.functions.npv_test",
-            "tests.functions.pmt_test",
-            "tests.functions.power_test",
-            "tests.functions.right_test",
-            "tests.functions.round_test",
-            "tests.functions.rounddown_test",
-            "tests.functions.roundup_test",
-            "tests.functions.sln_test",
-            "tests.functions.sqrt_test",
-            "tests.functions.sum_test",
-            "tests.functions.sumproduct_test",
-            "tests.functions.test_logical",
-            "tests.functions.vdb_test",
-            "tests.functions.vlookup_test",
-            "tests.functions.xnpv_test",
-            "tests.functions.yearfrac_test",
             "tests.test_ast_nodes",
             "tests.test_evaluator",
             "tests.test_model",
@@ -13643,6 +13643,49 @@
             "tests.test_tokenizer",
             "tests.test_xltypes",
             "tests.testing",
+            "tests.xlfunctions",
+            "tests.xlfunctions.test_date",
+            "tests.xlfunctions.test_financial",
+            "tests.xlfunctions.test_logical",
+            "tests.xlfunctions.test_lookup",
+            "tests.xlfunctions.test_math",
+            "tests.xlfunctions.test_operator",
+            "tests.xlfunctions.test_statistics",
+            "tests.xlfunctions.test_text",
+            "tests.xlfunctions.test_xl",
+            "tests.xlfunctions.test_xlcriteria",
+            "tests.xlfunctions.test_xlerrors",
+            "tests.xlfunctions.test_xltypes",
+            "tests.xlfunctions_vs_excel",
+            "tests.xlfunctions_vs_excel.abs_test",
+            "tests.xlfunctions_vs_excel.average_test",
+            "tests.xlfunctions_vs_excel.choose_test",
+            "tests.xlfunctions_vs_excel.concat_test",
+            "tests.xlfunctions_vs_excel.count_test",
+            "tests.xlfunctions_vs_excel.counta_test",
+            "tests.xlfunctions_vs_excel.date_test",
+            "tests.xlfunctions_vs_excel.irr_test",
+            "tests.xlfunctions_vs_excel.ln_test",
+            "tests.xlfunctions_vs_excel.max_test",
+            "tests.xlfunctions_vs_excel.mid_test",
+            "tests.xlfunctions_vs_excel.min_test",
+            "tests.xlfunctions_vs_excel.mod_test",
+            "tests.xlfunctions_vs_excel.npv_test",
+            "tests.xlfunctions_vs_excel.pmt_test",
+            "tests.xlfunctions_vs_excel.power_test",
+            "tests.xlfunctions_vs_excel.right_test",
+            "tests.xlfunctions_vs_excel.round_test",
+            "tests.xlfunctions_vs_excel.rounddown_test",
+            "tests.xlfunctions_vs_excel.roundup_test",
+            "tests.xlfunctions_vs_excel.sln_test",
+            "tests.xlfunctions_vs_excel.sqrt_test",
+            "tests.xlfunctions_vs_excel.sum_test",
+            "tests.xlfunctions_vs_excel.sumproduct_test",
+            "tests.xlfunctions_vs_excel.test_logical",
+            "tests.xlfunctions_vs_excel.vdb_test",
+            "tests.xlfunctions_vs_excel.vlookup_test",
+            "tests.xlfunctions_vs_excel.xnpv_test",
+            "tests.xlfunctions_vs_excel.yearfrac_test",
             "xlcalculator",
             "xlcalculator.ast_nodes",
             "xlcalculator.evaluator",
@@ -13654,7 +13697,7 @@
             "xlcalculator.utils",
             "xlcalculator.xltypes"
         ],
-        "version": "0.2.2"
+        "version": "0.2.3"
     },
     "xlcompose": {
         "cmdline": [],
@@ -14302,6 +14345,15 @@
             "xlref.process"
         ],
         "version": "1.0.0"
+    },
+    "xlrw": {
+        "cmdline": [],
+        "modules": [
+            "xlrw",
+            "xlrw.__version__",
+            "xlrw.xlrw"
+        ],
+        "version": "0.0.2"
     },
     "xls": {
         "cmdline": [
@@ -23159,7 +23211,7 @@
         "modules": [
             "xpress"
         ],
-        "version": "8.9.4"
+        "version": "8.10.0"
     },
     "xpressinsight": {
         "cmdline": [],
@@ -23186,9 +23238,10 @@
             "xpressinsight.rest.models.attachment_tag",
             "xpressinsight.rest.rest",
             "xpressinsight.sqlite_connector",
+            "xpressinsight.test_runner",
             "xpressinsight.types"
         ],
-        "version": "1.0.2.post1"
+        "version": "1.1.0"
     },
     "xpressplot": {
         "cmdline": [],
@@ -31559,7 +31612,7 @@
             "xyz_survey.receivers",
             "xyz_survey.serializers"
         ],
-        "version": "0.0.1"
+        "version": "0.0.2"
     },
     "xyz-system": {
         "cmdline": [],
