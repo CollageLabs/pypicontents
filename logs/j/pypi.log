@@ -96,17 +96,25 @@ Traceback (most recent call last):
     f.write(urlopen(url=urlesc(pkgurl), timeout=10).read())
   File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
     return opener.open(url, data, timeout)
-  File "/usr/lib/python3.7/urllib/request.py", line 531, in open
-    response = meth(req, response)
-  File "/usr/lib/python3.7/urllib/request.py", line 641, in http_response
-    'http', request, response, code, msg, hdrs)
-  File "/usr/lib/python3.7/urllib/request.py", line 569, in error
-    return self._call_chain(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 525, in open
+    response = self._open(req, data)
+  File "/usr/lib/python3.7/urllib/request.py", line 543, in _open
+    '_open', req)
   File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
     result = func(*args)
-  File "/usr/lib/python3.7/urllib/request.py", line 649, in http_error_default
-    raise HTTPError(req.full_url, code, msg, hdrs, fp)
-urllib.error.HTTPError: HTTP Error 500: Internal Server Error
+  File "/usr/lib/python3.7/urllib/request.py", line 1352, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "/usr/lib/python3.7/urllib/request.py", line 1327, in do_open
+    r = h.getresponse()
+  File "/usr/lib/python3.7/http/client.py", line 1336, in getresponse
+    response.begin()
+  File "/usr/lib/python3.7/http/client.py", line 306, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.7/http/client.py", line 267, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+socket.timeout: timed out
 
 [INFO] (jabba) This package is up to date.
 [INFO] (jabba-analysis) This package is up to date.
@@ -488,7 +496,7 @@ Traceback (most recent call last):
     raise HTTPError(req.full_url, code, msg, hdrs, fp)
 urllib.error.HTTPError: HTTP Error 410: Gone
 
-[INFO] (jamesbond) Data has been updated for this package.
+[INFO] (jamesbond) This package is up to date.
 [INFO] (jamesli123) This package is up to date.
 [ERROR] (jamespath) This package does not have downloadable releases.
 [INFO] (jamestesthorangi) This package is up to date.
@@ -501,7 +509,7 @@ urllib.error.HTTPError: HTTP Error 410: Gone
 [INFO] (jamos-toolkit) This package is up to date.
 [INFO] (jamotools) This package is up to date.
 [INFO] (jampack) This package is up to date.
-[INFO] (jampy) Data has been updated for this package.
+[INFO] (jampy) This package is up to date.
 [INFO] (jams) This package is up to date.
 [INFO] (jamspell) This package is up to date.
 [INFO] (jana-widget) This package is up to date.
@@ -807,7 +815,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (jasctpdf) This package is up to date.
 [INFO] (jasdistributions) This package is up to date.
 [INFO] (jase) This package is up to date.
-[INFO] (jashin) This package is up to date.
+[INFO] (jashin) Data has been updated for this package.
 [INFO] (jashu-prob-distributions) This package is up to date.
 [INFO] (jasily) This package is up to date.
 [INFO] (jasinja) This package is up to date.
@@ -1000,7 +1008,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (jax-fixedpoint-test-manueldelverme) This package is up to date.
 [INFO] (jax-flows) This package is up to date.
 [INFO] (jax-loss) This package is up to date.
-[INFO] (jax-md) Data has been updated for this package.
+[INFO] (jax-md) This package is up to date.
 [INFO] (jax-random-projections) This package is up to date.
 [ERROR] (jax-test) Could not get a response from API for this package. See below for details.
 Traceback (most recent call last):
@@ -1024,7 +1032,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (jaxlet) This package is up to date.
 [INFO] (jaxlib) This package is up to date.
 [INFO] (jaxml) This package is up to date.
-[INFO] (jaxnet) This package is up to date.
+[INFO] (jaxnet) Data has been updated for this package.
 [INFO] (jaxrk) This package is up to date.
 [INFO] (jay) This package is up to date.
 [INFO] (jayanti-distributions) This package is up to date.
@@ -1073,7 +1081,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (jbiot) This package is up to date.
 [INFO] (jblack) This package is up to date.
 [INFO] (jblib) This package is up to date.
-[INFO] (jblibaws) Data has been updated for this package.
+[INFO] (jblibaws) This package is up to date.
 [INFO] (jblibpandas) This package is up to date.
 [INFO] (jblite) This package is up to date.
 [INFO] (jbnester) This package is up to date.
@@ -1085,7 +1093,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 
 [INFO] (jbrela-jakubbrela) This package is up to date.
 [INFO] (jbs-utils) This package is up to date.
-[INFO] (jbtech-utils-package) This package is up to date.
+[INFO] (jbtech-utils-package) Data has been updated for this package.
 [INFO] (jbtools) This package is up to date.
 [INFO] (jbxapi) This package is up to date.
 [INFO] (jbzd-imgcat) This package is up to date.
@@ -1093,6 +1101,24 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (jc-distributions) This package is up to date.
 [INFO] (jc-dsnd-distributions) This package is up to date.
 [INFO] (jc-pytools) This package is up to date.
+[ERROR] (jc0b-yfinance) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.7/urllib/request.py", line 531, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.7/urllib/request.py", line 641, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.7/urllib/request.py", line 569, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 649, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+
 [INFO] (jcache) This package is up to date.
 [INFO] (jcake) This package is up to date.
 [INFO] (jcal) This package is up to date.
@@ -1106,7 +1132,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (jcc) This package is up to date.
 [INFO] (jcchess) This package is up to date.
 [INFO] (jccjmx) This package is up to date.
-[INFO] (jccli) Data has been updated for this package.
+[INFO] (jccli) This package is up to date.
 [INFO] (jcconv) This package is up to date.
 [INFO] (jcconv3) This package is up to date.
 [ERROR] (jcdfc) Could not get a response from API for this package. See below for details.
@@ -1218,34 +1244,6 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (jdate) This package is up to date.
 [INFO] (jdatetime) This package is up to date.
 [INFO] (jdauto) This package is up to date.
-[ERROR] (jdb) Could not get a response from API for this package. See below for details.
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
-    timeout=10).read()
-  File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
-    return opener.open(url, data, timeout)
-  File "/usr/lib/python3.7/urllib/request.py", line 531, in open
-    response = meth(req, response)
-  File "/usr/lib/python3.7/urllib/request.py", line 641, in http_response
-    'http', request, response, code, msg, hdrs)
-  File "/usr/lib/python3.7/urllib/request.py", line 563, in error
-    result = self._call_chain(*args)
-  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
-    result = func(*args)
-  File "/usr/lib/python3.7/urllib/request.py", line 755, in http_error_302
-    return self.parent.open(new, timeout=req.timeout)
-  File "/usr/lib/python3.7/urllib/request.py", line 531, in open
-    response = meth(req, response)
-  File "/usr/lib/python3.7/urllib/request.py", line 641, in http_response
-    'http', request, response, code, msg, hdrs)
-  File "/usr/lib/python3.7/urllib/request.py", line 569, in error
-    return self._call_chain(*args)
-  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
-    result = func(*args)
-  File "/usr/lib/python3.7/urllib/request.py", line 649, in http_error_default
-    raise HTTPError(req.full_url, code, msg, hdrs, fp)
-urllib.error.HTTPError: HTTP Error 404: Not Found
-
 [INFO] (jdb-nester) This package is up to date.
 [INFO] (jdb2) This package is up to date.
 [INFO] (jdbm) This package is up to date.
@@ -1337,7 +1335,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (jedha) This package is up to date.
 [INFO] (jedhy) This package is up to date.
 [INFO] (jedi) This package is up to date.
-[INFO] (jedi-language-server) This package is up to date.
+[INFO] (jedi-language-server) Data has been updated for this package.
 [INFO] (jedi-toolz) This package is up to date.
 [INFO] (jedopo-py) This package is up to date.
 [INFO] (jeecf-cli) This package is up to date.
@@ -1495,7 +1493,7 @@ tarfile.ReadError: not a gzip file
 [INFO] (jellyfin-apiclient-python) This package is up to date.
 [INFO] (jellyfin-build) This package is up to date.
 [INFO] (jellyfin-cli) This package is up to date.
-[INFO] (jellyfin-mpv-shim) This package is up to date.
+[INFO] (jellyfin-mpv-shim) Data has been updated for this package.
 [INFO] (jellyfish) This package is up to date.
 [INFO] (jellyfish-wheel) This package is up to date.
 [INFO] (jellypy-pycipapi) This package is up to date.
@@ -1539,7 +1537,7 @@ tarfile.ReadError: not a gzip file
 [INFO] (jenkins-job-builder-workflow) This package is up to date.
 [INFO] (jenkins-job-builder-xvnc) This package is up to date.
 [INFO] (jenkins-job-linter) This package is up to date.
-[INFO] (jenkins-job-manager) Data has been updated for this package.
+[INFO] (jenkins-job-manager) This package is up to date.
 [INFO] (jenkins-job-wrecker) This package is up to date.
 [INFO] (jenkins-jobs-fail-the-build) This package is up to date.
 [INFO] (jenkins-jobs-hidden-param) This package is up to date.
@@ -1680,7 +1678,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 
 [INFO] (jetblack-aiomysql) This package is up to date.
 [INFO] (jetblack-datemath) This package is up to date.
-[INFO] (jetblack-fixparser) Data has been updated for this package.
+[INFO] (jetblack-fixparser) This package is up to date.
 [INFO] (jetblack-graphene) This package is up to date.
 [INFO] (jetblack-lvm2) This package is up to date.
 [INFO] (jetblack-markdown) This package is up to date.
@@ -1859,7 +1857,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (jfx-bridge-jeb) This package is up to date.
 [INFO] (jfxsnester) This package is up to date.
 [INFO] (jg-distributions) This package is up to date.
-[INFO] (jgconfig) Data has been updated for this package.
+[INFO] (jgconfig) This package is up to date.
 [INFO] (jget) This package is up to date.
 [INFO] (jgf) This package is up to date.
 [INFO] (jgo) This package is up to date.
@@ -1914,7 +1912,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (jhproxy) This package is up to date.
 [INFO] (jhpy) This package is up to date.
 [ERROR] (jhrpython-nester) This package does not have downloadable releases.
-[INFO] (jhsingle-native-proxy) Data has been updated for this package.
+[INFO] (jhsingle-native-proxy) This package is up to date.
 [INFO] (jhsitemapgenerator) This package is up to date.
 [INFO] (jhtalib) This package is up to date.
 [INFO] (jhu-primitives) This package is up to date.
@@ -2360,6 +2358,24 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (jismesh) This package is up to date.
 [INFO] (jist) This package is up to date.
 [INFO] (jit) This package is up to date.
+[ERROR] (jit-jiton) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.7/urllib/request.py", line 531, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.7/urllib/request.py", line 641, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.7/urllib/request.py", line 569, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 649, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+
 [INFO] (jit-open) This package is up to date.
 [ERROR] (jitbit-helpdesk) Could not extract data from this package. See below for details.
 This package download URL does not point to a valid file: "https://www.jitbit.com/helpdesk/"
@@ -2371,6 +2387,34 @@ This package download URL does not point to a valid file: "https://www.jitbit.co
 [INFO] (jiten) This package is up to date.
 [INFO] (jithon) This package is up to date.
 [INFO] (jiti) This package is up to date.
+[ERROR] (jiton) Could not get a response from API for this package. See below for details.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
+  File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.7/urllib/request.py", line 531, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.7/urllib/request.py", line 641, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.7/urllib/request.py", line 563, in error
+    result = self._call_chain(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 755, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+  File "/usr/lib/python3.7/urllib/request.py", line 531, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.7/urllib/request.py", line 641, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.7/urllib/request.py", line 569, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 503, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.7/urllib/request.py", line 649, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+
 [INFO] (jitp) This package is up to date.
 [INFO] (jitpwn) This package is up to date.
 [INFO] (jitpy) This package is up to date.
@@ -2380,7 +2424,7 @@ This package download URL does not point to a valid file: "https://www.jitbit.co
 [INFO] (jitter) This package is up to date.
 [INFO] (jitterentropy) This package is up to date.
 [INFO] (jittermodel) This package is up to date.
-[INFO] (jittor) Data has been updated for this package.
+[INFO] (jittor) This package is up to date.
 [INFO] (jitu1) This package is up to date.
 [INFO] (jitu2) This package is up to date.
 [INFO] (jitviewer) This package is up to date.
@@ -2813,7 +2857,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (jnt-django-admin-tools) Data has been updated for this package.
 [INFO] (jnt-django-bitfield) This package is up to date.
 [INFO] (jnt-django-graphene-toolbox) This package is up to date.
-[INFO] (jnt-django-toolbox) Data has been updated for this package.
+[INFO] (jnt-django-toolbox) This package is up to date.
 [INFO] (jo-story) This package is up to date.
 [INFO] (joan-pypi) This package is up to date.
 [INFO] (joanjoanliu) This package is up to date.
@@ -3128,7 +3172,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (joseph-http-test) This package is up to date.
 [INFO] (joseph-web-hello-world) This package is up to date.
 [INFO] (josephine) This package is up to date.
-[INFO] (josepy) Data has been updated for this package.
+[INFO] (josepy) This package is up to date.
 [INFO] (josh) This package is up to date.
 [INFO] (joshbasiccalculator) This package is up to date.
 [INFO] (joshua-helloworld) This package is up to date.
@@ -3957,11 +4001,10 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (json-merger) This package is up to date.
 [INFO] (json-messenger-client) This package is up to date.
 [INFO] (json-messenger-server) This package is up to date.
-[ERROR] (json-metada) Could not extract data from this package. See below for details.
-"https://files.pythonhosted.org/packages/fe/7b/b7c16a32c97e77dcaa62f64905d4d9442b8243968ec511d178505df468df/json%20metada-1.1.0.tar.gz" file could not be downloaded. See below for details.
+[ERROR] (json-metada) Could not get a response from API for this package. See below for details.
 Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 107, in download_tar
-    f.write(urlopen(url=urlesc(pkgurl), timeout=10).read())
+  File "/usr/local/lib/python3.7/dist-packages/pypicontents/api/pypi.py", line 264, in get_pkgdata
+    timeout=10).read()
   File "/usr/lib/python3.7/urllib/request.py", line 222, in urlopen
     return opener.open(url, data, timeout)
   File "/usr/lib/python3.7/urllib/request.py", line 531, in open
@@ -3976,7 +4019,6 @@ Traceback (most recent call last):
     raise HTTPError(req.full_url, code, msg, hdrs, fp)
 urllib.error.HTTPError: HTTP Error 404: Not Found
 
-[INFO] (json-metadata) This package is up to date.
 [INFO] (json-mindiff) This package is up to date.
 [INFO] (json-minify) This package is up to date.
 [INFO] (json-model) This package is up to date.
@@ -3996,7 +4038,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (json-protobuf) This package is up to date.
 [INFO] (json-ptr) This package is up to date.
 [INFO] (json-pyformatter) This package is up to date.
-[INFO] (json-python-flatten) Data has been updated for this package.
+[INFO] (json-python-flatten) This package is up to date.
 [INFO] (json-python-module) This package is up to date.
 [INFO] (json-python-module-unknown) This package is up to date.
 [INFO] (json-query) This package is up to date.
@@ -4572,7 +4614,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (jsontoxml) This package is up to date.
 [INFO] (jsontree) This package is up to date.
 [INFO] (jsontricks) This package is up to date.
-[INFO] (jsontrips) This package is up to date.
+[INFO] (jsontrips) Data has been updated for this package.
 [INFO] (jsonty) This package is up to date.
 [INFO] (jsontyping) This package is up to date.
 [INFO] (jsonuri) This package is up to date.
@@ -4679,7 +4721,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (jt-ops) This package is up to date.
 [INFO] (jt-package-name) This package is up to date.
 [INFO] (jt-py-first-package) This package is up to date.
-[INFO] (jt-selenium) This package is up to date.
+[INFO] (jt-selenium) Data has been updated for this package.
 [INFO] (jt-techfield) This package is up to date.
 [INFO] (jt64common) This package is up to date.
 [INFO] (jt64config) This package is up to date.
@@ -4893,11 +4935,39 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 
 [INFO] (jugri) This package is up to date.
 [INFO] (juice) This package is up to date.
+[INFO] (juice-cli) Data has been updated for this package.
+[INFO] (juice-client-auth) Data has been updated for this package.
+[INFO] (juice-client-auth-async) Data has been updated for this package.
+[INFO] (juice-client-capacity) Data has been updated for this package.
+[INFO] (juice-client-capacity-async) Data has been updated for this package.
+[INFO] (juice-client-capacity-be) Data has been updated for this package.
+[INFO] (juice-client-capacity-be-login) Data has been updated for this package.
+[INFO] (juice-client-cloud) Data has been updated for this package.
+[INFO] (juice-client-cloud-async) Data has been updated for this package.
+[INFO] (juice-client-db) Data has been updated for this package.
+[INFO] (juice-client-db-async) Data has been updated for this package.
+[INFO] (juice-client-infra) Data has been updated for this package.
+[INFO] (juice-client-infra-async) Data has been updated for this package.
+[INFO] (juice-client-networks) Data has been updated for this package.
+[INFO] (juice-client-networks-async) Data has been updated for this package.
+[INFO] (juice-client-product) Data has been updated for this package.
+[INFO] (juice-client-product-async) Data has been updated for this package.
+[INFO] (juice-client-purge) Data has been updated for this package.
+[INFO] (juice-client-purge-async) Data has been updated for this package.
+[INFO] (juice-client-swift) Data has been updated for this package.
+[INFO] (juice-client-swift-async) Data has been updated for this package.
+[INFO] (juice-client-users) Data has been updated for this package.
+[INFO] (juice-client-users-async) Data has been updated for this package.
+[INFO] (juice-client-vnf) Data has been updated for this package.
+[INFO] (juice-client-vnf-async) Data has been updated for this package.
+[INFO] (juice-client-vpcn) Data has been updated for this package.
+[INFO] (juice-client-vpcn-async) Data has been updated for this package.
 [INFO] (juiceboss) This package is up to date.
 [INFO] (juicebox-cli) This package is up to date.
 [INFO] (juicenet) This package is up to date.
 [INFO] (juicepscheduler) This package is up to date.
 [INFO] (juicer) This package is up to date.
+[INFO] (juiceutils) Data has been updated for this package.
 [INFO] (juicy) This package is up to date.
 [INFO] (juicy-fruits) This package is up to date.
 [INFO] (juju) This package is up to date.
@@ -4948,7 +5018,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (juliopdf) This package is up to date.
 [INFO] (julpyter) This package is up to date.
 [INFO] (july3) This package is up to date.
-[INFO] (julynter) Data has been updated for this package.
+[INFO] (julynter) This package is up to date.
 [INFO] (julython-github) This package is up to date.
 [INFO] (julz) This package is up to date.
 [INFO] (jum) This package is up to date.
@@ -5061,7 +5131,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (junit-reports) This package is up to date.
 [INFO] (junit-xml) This package is up to date.
 [INFO] (junit-xml-output) This package is up to date.
-[INFO] (junit2html) Data has been updated for this package.
+[INFO] (junit2html) This package is up to date.
 [INFO] (junit2influx) This package is up to date.
 [INFO] (junitmgr) This package is up to date.
 [INFO] (junitparser) This package is up to date.
@@ -5214,7 +5284,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (jupyter-format) This package is up to date.
 [INFO] (jupyter-fortran-kernel) This package is up to date.
 [INFO] (jupyter-francy) This package is up to date.
-[INFO] (jupyter-fs) This package is up to date.
+[INFO] (jupyter-fs) Data has been updated for this package.
 [INFO] (jupyter-full-width) This package is up to date.
 [INFO] (jupyter-gauche) This package is up to date.
 [INFO] (jupyter-geppetto) This package is up to date.
@@ -5230,7 +5300,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (jupyter-homework) This package is up to date.
 [INFO] (jupyter-http-over-ws) This package is up to date.
 [INFO] (jupyter-images) This package is up to date.
-[INFO] (jupyter-innotater) This package is up to date.
+[INFO] (jupyter-innotater) Data has been updated for this package.
 [INFO] (jupyter-installer) This package is up to date.
 [INFO] (jupyter-instructortools) This package is up to date.
 [INFO] (jupyter-interval-widget) This package is up to date.
@@ -5240,7 +5310,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (jupyter-jsmol) This package is up to date.
 [INFO] (jupyter-kernel-chapel) This package is up to date.
 [INFO] (jupyter-kernel-gap) This package is up to date.
-[INFO] (jupyter-kernel-gateway) This package is up to date.
+[INFO] (jupyter-kernel-gateway) Data has been updated for this package.
 [INFO] (jupyter-kernel-gateway-bundlers) This package is up to date.
 [INFO] (jupyter-kernel-gateway-quarc-custom) This package is up to date.
 [INFO] (jupyter-kernel-gateway-quarc-custom-fix) This package is up to date.
@@ -5288,7 +5358,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (jupyter-openbis-integration-service) This package is up to date.
 [INFO] (jupyter-openbis-server) This package is up to date.
 [INFO] (jupyter-openscad-kernel) This package is up to date.
-[INFO] (jupyter-packaging) This package is up to date.
+[INFO] (jupyter-packaging) Data has been updated for this package.
 [INFO] (jupyter-panel-proxy) This package is up to date.
 [INFO] (jupyter-paperboy) This package is up to date.
 [INFO] (jupyter-parser) This package is up to date.
@@ -5456,7 +5526,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (jupyterhubutils) This package is up to date.
 [INFO] (jupyterhuck) This package is up to date.
 [INFO] (jupyterkernelgateway) This package is up to date.
-[INFO] (jupyterlab) Data has been updated for this package.
+[INFO] (jupyterlab) This package is up to date.
 [INFO] (jupyterlab-autoversion) This package is up to date.
 [INFO] (jupyterlab-black) This package is up to date.
 [INFO] (jupyterlab-bokeh-server) This package is up to date.
@@ -5493,7 +5563,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (jupyterlab-lsstquery) This package is up to date.
 [INFO] (jupyterlab-media-capture) This package is up to date.
 [INFO] (jupyterlab-nbconvert-nocode) This package is up to date.
-[INFO] (jupyterlab-nvdashboard) This package is up to date.
+[INFO] (jupyterlab-nvdashboard) Data has been updated for this package.
 [INFO] (jupyterlab-omnisci) This package is up to date.
 [INFO] (jupyterlab-powerpoint) This package is up to date.
 [INFO] (jupyterlab-proxy-gui) This package is up to date.
@@ -5581,7 +5651,7 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [INFO] (jupytoc) This package is up to date.
 [INFO] (jupytools) This package is up to date.
 [INFO] (jupyweave) This package is up to date.
-[INFO] (jupyxml) Data has been updated for this package.
+[INFO] (jupyxml) This package is up to date.
 [INFO] (jupyxplorer) This package is up to date.
 [INFO] (juq) This package is up to date.
 [INFO] (jurahp) This package is up to date.
@@ -5947,14 +6017,14 @@ Unsupported package directory structure.
 [INFO] (jzstock) This package is up to date.
 [INFO] 
 [INFO] 
-[INFO] Total packages: 4165
-[INFO]     Packages processed: 4165
-[INFO]         Packages updated: 20
-[INFO]         Packages up-to-date: 3924
-[INFO]         Packages without response: 73
+[INFO] Total packages: 4194
+[INFO]     Packages processed: 4194
+[INFO]         Packages updated: 43
+[INFO]         Packages up-to-date: 3928
+[INFO]         Packages without response: 76
 [INFO]         Packages without urls: 0
 [INFO]         Packages without downloads: 118
-[INFO]         Packages with data errors: 30
+[INFO]         Packages with data errors: 29
 [INFO]     Packages not processed: 0
 [INFO] 
 [INFO] 
