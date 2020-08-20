@@ -1108,7 +1108,7 @@
             "test.unit.test_utils",
             "test.unit.test_validate"
         ],
-        "version": "0.8.0"
+        "version": "0.9.0"
     },
     "label-studio": {
         "cmdline": [],
@@ -2069,7 +2069,7 @@
             "labext.widgets.icon",
             "labext.widgets.selection"
         ],
-        "version": "4.0.30"
+        "version": "4.0.31"
     },
     "labfis": {
         "cmdline": [],
@@ -3591,6 +3591,16 @@
             "labvision.mods.time"
         ],
         "version": "0.3.9"
+    },
+    "labware-domain-models": {
+        "cmdline": [],
+        "modules": [
+            "labware_domain_models",
+            "labware_domain_models.barcoded_sbs_labware",
+            "labware_domain_models.exceptions",
+            "labware_domain_models.labware_definitions"
+        ],
+        "version": "0.2"
     },
     "labyrinth": {
         "cmdline": [
@@ -17895,7 +17905,7 @@
             "launchpy.config",
             "launchpy.launchpy"
         ],
-        "version": "0.1.5"
+        "version": "0.2.0"
     },
     "launchr": {
         "cmdline": [],
@@ -22977,7 +22987,7 @@
     "lbt-dragonfly": {
         "cmdline": [],
         "modules": [],
-        "version": "0.4.136"
+        "version": "0.4.138"
     },
     "lbt-grasshopper": {
         "cmdline": [],
@@ -22987,7 +22997,7 @@
     "lbt-honeybee": {
         "cmdline": [],
         "modules": [],
-        "version": "0.2.90"
+        "version": "0.2.91"
     },
     "lbt-ladybug": {
         "cmdline": [],
@@ -25157,7 +25167,7 @@
             "lda11.lda",
             "lda11.util"
         ],
-        "version": "0.1.4.3"
+        "version": "0.2.0.1"
     },
     "lda2vec": {
         "cmdline": [],
@@ -44962,6 +44972,7 @@
         "cmdline": [],
         "modules": [
             "libcloudforensics",
+            "libcloudforensics.errors",
             "libcloudforensics.logging_utils",
             "libcloudforensics.providers",
             "libcloudforensics.providers.aws",
@@ -44971,6 +44982,7 @@
             "libcloudforensics.providers.aws.internal.common",
             "libcloudforensics.providers.aws.internal.ebs",
             "libcloudforensics.providers.aws.internal.ec2",
+            "libcloudforensics.providers.aws.internal.kms",
             "libcloudforensics.providers.aws.internal.log",
             "libcloudforensics.providers.azure",
             "libcloudforensics.providers.azure.forensics",
@@ -44978,7 +44990,11 @@
             "libcloudforensics.providers.azure.internal.account",
             "libcloudforensics.providers.azure.internal.common",
             "libcloudforensics.providers.azure.internal.compute",
+            "libcloudforensics.providers.azure.internal.compute_base_resource",
             "libcloudforensics.providers.azure.internal.monitoring",
+            "libcloudforensics.providers.azure.internal.network",
+            "libcloudforensics.providers.azure.internal.resource",
+            "libcloudforensics.providers.azure.internal.storage",
             "libcloudforensics.providers.gcp",
             "libcloudforensics.providers.gcp.forensics",
             "libcloudforensics.providers.gcp.internal",
@@ -44997,14 +45013,38 @@
             "tests",
             "tests.providers",
             "tests.providers.aws",
-            "tests.providers.aws.aws_e2e",
-            "tests.providers.aws.aws_test",
+            "tests.providers.aws.aws_mocks",
+            "tests.providers.aws.e2e",
+            "tests.providers.aws.internal",
+            "tests.providers.aws.internal.test_common",
+            "tests.providers.aws.internal.test_ebs",
+            "tests.providers.aws.internal.test_ec2",
+            "tests.providers.aws.internal.test_log",
+            "tests.providers.aws.test_forensics",
             "tests.providers.azure",
-            "tests.providers.azure.azure_e2e",
-            "tests.providers.azure.azure_test",
+            "tests.providers.azure.azure_mocks",
+            "tests.providers.azure.e2e",
+            "tests.providers.azure.internal",
+            "tests.providers.azure.internal.test_common",
+            "tests.providers.azure.internal.test_compute",
+            "tests.providers.azure.internal.test_monitoring",
+            "tests.providers.azure.internal.test_resource",
+            "tests.providers.azure.internal.test_storage",
+            "tests.providers.azure.test_forensics",
             "tests.providers.gcp",
-            "tests.providers.gcp.gcp_e2e",
-            "tests.providers.gcp.gcp_test",
+            "tests.providers.gcp.e2e",
+            "tests.providers.gcp.gcp_mocks",
+            "tests.providers.gcp.internal",
+            "tests.providers.gcp.internal.test_build",
+            "tests.providers.gcp.internal.test_common",
+            "tests.providers.gcp.internal.test_compute",
+            "tests.providers.gcp.internal.test_compute_base_resource",
+            "tests.providers.gcp.internal.test_gke",
+            "tests.providers.gcp.internal.test_log",
+            "tests.providers.gcp.internal.test_monitoring",
+            "tests.providers.gcp.internal.test_storage",
+            "tests.providers.gcp.test_forensics",
+            "tests.run_tests",
             "tests.scripts",
             "tests.scripts.utils",
             "tools",
@@ -45013,7 +45053,7 @@
             "tools.cli",
             "tools.gcp_cli"
         ],
-        "version": "20200803"
+        "version": "20200818"
     },
     "libcloudfs": {
         "cmdline": [],
@@ -46988,7 +47028,7 @@
     "libfsext-python": {
         "cmdline": [],
         "modules": [],
-        "version": "20200811"
+        "version": "20200819"
     },
     "libfsntfs-python": {
         "cmdline": [],
@@ -50078,6 +50118,14 @@
         ],
         "version": "0.2"
     },
+    "libpythonpro1994": {
+        "cmdline": [],
+        "modules": [
+            "libpythonpro1994",
+            "libpythonpro1994.github_api"
+        ],
+        "version": "0.5"
+    },
     "libpythonpro2": {
         "cmdline": [],
         "modules": [
@@ -52273,7 +52321,7 @@
             "libsast.scanner",
             "libsast.standards"
         ],
-        "version": "1.1.4"
+        "version": "1.1.6"
     },
     "libsbgnpy": {
         "cmdline": [],
@@ -56246,7 +56294,7 @@
             "licensing.methods",
             "licensing.models"
         ],
-        "version": "0.22"
+        "version": "0.23"
     },
     "licensize": {
         "cmdline": [],
@@ -66860,7 +66908,7 @@
             "linien.communication.utils",
             "linien.config"
         ],
-        "version": "0.2.1"
+        "version": "0.2.2"
     },
     "linien-influxdb": {
         "cmdline": [
@@ -66891,7 +66939,7 @@
             "optimization.general",
             "optimization.optimization"
         ],
-        "version": "0.2.1"
+        "version": "0.2.2"
     },
     "link": {
         "cmdline": [],
@@ -82284,6 +82332,17 @@
         ],
         "version": "0.5.3"
     },
+    "lls-pkg-gotodiela": {
+        "cmdline": [],
+        "modules": [
+            "lls_pkg",
+            "lls_pkg.CoordinateSystem",
+            "lls_pkg.LLS",
+            "lls_pkg.NCR",
+            "lls_pkg.RadioPropagation"
+        ],
+        "version": "0.0.1"
+    },
     "lls-trytond-sale-subscription-asset": {
         "cmdline": [],
         "modules": [
@@ -87757,7 +87816,7 @@
     "locust": {
         "cmdline": [],
         "modules": [],
-        "version": "1.1.1"
+        "version": "1.2"
     },
     "locust-fixed-interval": {
         "cmdline": [],
@@ -87810,7 +87869,7 @@
             "locust_plugins.utils",
             "locust_plugins.wait_time"
         ],
-        "version": "1.0.15"
+        "version": "1.0.16"
     },
     "locust-swarm": {
         "cmdline": [
@@ -87820,7 +87879,7 @@
             "locust_swarm",
             "locust_swarm.functions"
         ],
-        "version": "1.0.7"
+        "version": "1.0.9"
     },
     "locust-xmlrpc": {
         "cmdline": [],
@@ -97090,7 +97149,7 @@
             "lonny_flask_auth.jwt",
             "lonny_flask_auth.slack"
         ],
-        "version": "1.2"
+        "version": "1.3"
     },
     "lonny-flask-cache": {
         "cmdline": [],
@@ -97198,7 +97257,7 @@
             "lonny_pg_migrate.logger",
             "lonny_pg_migrate.runner"
         ],
-        "version": "1.5"
+        "version": "1.6"
     },
     "lonny-pg-queue": {
         "cmdline": [],
@@ -97377,6 +97436,89 @@
             "loopy.version"
         ],
         "version": "2017.2"
+    },
+    "loo-v2020": {
+        "cmdline": [
+            "loopy"
+        ],
+        "modules": [
+            "loopy",
+            "loopy._git_rev",
+            "loopy.auto_test",
+            "loopy.check",
+            "loopy.cli",
+            "loopy.codegen",
+            "loopy.codegen.bounds",
+            "loopy.codegen.control",
+            "loopy.codegen.instruction",
+            "loopy.codegen.loop",
+            "loopy.codegen.result",
+            "loopy.compiled",
+            "loopy.diagnostic",
+            "loopy.expression",
+            "loopy.frontend",
+            "loopy.frontend.fortran",
+            "loopy.frontend.fortran.diagnostic",
+            "loopy.frontend.fortran.expression",
+            "loopy.frontend.fortran.translator",
+            "loopy.frontend.fortran.tree",
+            "loopy.ipython_ext",
+            "loopy.isl_helpers",
+            "loopy.kernel",
+            "loopy.kernel.array",
+            "loopy.kernel.creation",
+            "loopy.kernel.data",
+            "loopy.kernel.instruction",
+            "loopy.kernel.tools",
+            "loopy.library",
+            "loopy.library.function",
+            "loopy.library.random123",
+            "loopy.library.reduction",
+            "loopy.loop",
+            "loopy.match",
+            "loopy.options",
+            "loopy.preprocess",
+            "loopy.schedule",
+            "loopy.schedule.device_mapping",
+            "loopy.schedule.tools",
+            "loopy.statistics",
+            "loopy.symbolic",
+            "loopy.target",
+            "loopy.target.c",
+            "loopy.target.c.c_execution",
+            "loopy.target.c.codegen",
+            "loopy.target.c.codegen.expression",
+            "loopy.target.cuda",
+            "loopy.target.execution",
+            "loopy.target.ispc",
+            "loopy.target.numba",
+            "loopy.target.opencl",
+            "loopy.target.pyopencl",
+            "loopy.target.pyopencl_execution",
+            "loopy.target.python",
+            "loopy.tools",
+            "loopy.transform",
+            "loopy.transform.add_barrier",
+            "loopy.transform.arithmetic",
+            "loopy.transform.array_buffer_map",
+            "loopy.transform.batch",
+            "loopy.transform.buffer",
+            "loopy.transform.data",
+            "loopy.transform.diff",
+            "loopy.transform.fusion",
+            "loopy.transform.iname",
+            "loopy.transform.instruction",
+            "loopy.transform.padding",
+            "loopy.transform.parameter",
+            "loopy.transform.precompute",
+            "loopy.transform.privatize",
+            "loopy.transform.save",
+            "loopy.transform.subst",
+            "loopy.type_inference",
+            "loopy.types",
+            "loopy.version"
+        ],
+        "version": "2020.2"
     },
     "loocius": {
         "cmdline": [],
@@ -98745,6 +98887,93 @@
             "looo"
         ],
         "version": "1.0.0"
+    },
+    "looo-py": {
+        "cmdline": [
+            "loopy"
+        ],
+        "modules": [
+            "loopy",
+            "loopy._git_rev",
+            "loopy.auto_test",
+            "loopy.check",
+            "loopy.cli",
+            "loopy.codegen",
+            "loopy.codegen.bounds",
+            "loopy.codegen.control",
+            "loopy.codegen.instruction",
+            "loopy.codegen.loop",
+            "loopy.codegen.result",
+            "loopy.compiled",
+            "loopy.diagnostic",
+            "loopy.expression",
+            "loopy.frontend",
+            "loopy.frontend.fortran",
+            "loopy.frontend.fortran.diagnostic",
+            "loopy.frontend.fortran.expression",
+            "loopy.frontend.fortran.translator",
+            "loopy.frontend.fortran.tree",
+            "loopy.ipython_ext",
+            "loopy.isl_helpers",
+            "loopy.kernel",
+            "loopy.kernel.array",
+            "loopy.kernel.creation",
+            "loopy.kernel.data",
+            "loopy.kernel.function_interface",
+            "loopy.kernel.instruction",
+            "loopy.kernel.tools",
+            "loopy.library",
+            "loopy.library.function",
+            "loopy.library.random123",
+            "loopy.library.reduction",
+            "loopy.loop",
+            "loopy.match",
+            "loopy.maxima",
+            "loopy.options",
+            "loopy.preprocess",
+            "loopy.schedule",
+            "loopy.schedule.device_mapping",
+            "loopy.schedule.tools",
+            "loopy.statistics",
+            "loopy.symbolic",
+            "loopy.target",
+            "loopy.target.c",
+            "loopy.target.c.c_execution",
+            "loopy.target.c.codegen",
+            "loopy.target.c.codegen.expression",
+            "loopy.target.cuda",
+            "loopy.target.execution",
+            "loopy.target.ispc",
+            "loopy.target.numba",
+            "loopy.target.opencl",
+            "loopy.target.pyopencl",
+            "loopy.target.pyopencl_execution",
+            "loopy.target.python",
+            "loopy.tools",
+            "loopy.transform",
+            "loopy.transform.add_barrier",
+            "loopy.transform.arithmetic",
+            "loopy.transform.array_buffer_map",
+            "loopy.transform.batch",
+            "loopy.transform.buffer",
+            "loopy.transform.data",
+            "loopy.transform.diff",
+            "loopy.transform.fusion",
+            "loopy.transform.iname",
+            "loopy.transform.instruction",
+            "loopy.transform.pack_and_unpack_args",
+            "loopy.transform.padding",
+            "loopy.transform.parameter",
+            "loopy.transform.precompute",
+            "loopy.transform.privatize",
+            "loopy.transform.register_callable",
+            "loopy.transform.save",
+            "loopy.transform.subst",
+            "loopy.type_inference",
+            "loopy.types",
+            "loopy.version"
+        ],
+        "version": "2018.1"
     },
     "loop": {
         "cmdline": [],
@@ -106536,7 +106765,7 @@
             "lti_consumer.tests.unit.test_utils",
             "lti_consumer.utils"
         ],
-        "version": "2.1.1"
+        "version": "2.2"
     },
     "lticonsumerxblock": {
         "cmdline": [],
@@ -106664,24 +106893,21 @@
         "cmdline": [],
         "modules": [
             "ltool",
+            "ltool.debug",
+            "ltool.debug.log_pack",
             "ltool.export",
-            "ltool.export.debug_layers",
             "ltool.export.export_nc",
             "ltool.export.update_scc_db",
-            "ltool.ltool",
             "ltool.readers",
             "ltool.readers.get_files",
             "ltool.readers.parse_config",
             "ltool.readers.read_config",
-            "ltool.readers.read_scc",
             "ltool.readers.read_scc_db",
-            "ltool.readers.st_info",
             "ltool.tools",
             "ltool.tools.geom_dtf",
-            "ltool.tools.stats",
             "ltool.tools.wavelet"
         ],
-        "version": "1.3.1"
+        "version": "1.4.3"
     },
     "ltp": {
         "cmdline": [],
@@ -108100,7 +108326,7 @@
             "lucterios.install.lucterios_gui",
             "lucterios.install.lucterios_qt"
         ],
-        "version": "2.5.0.20072911"
+        "version": "2.5.0.20081906"
     },
     "lucterios-contacts": {
         "cmdline": [],
@@ -110388,7 +110614,7 @@
             "lumigo_tracer.user_utils",
             "lumigo_tracer.utils"
         ],
-        "version": "1.1.115"
+        "version": "1.1.117"
     },
     "lumigotracer": {
         "cmdline": [],
@@ -110494,7 +110720,7 @@
             "luminaire.tests.test_hyper",
             "luminaire.tests.test_models"
         ],
-        "version": "0.1.0.dev7"
+        "version": "0.1.0.dev8"
     },
     "luminati": {
         "cmdline": [],
@@ -110742,7 +110968,7 @@
             "LumoPackage",
             "LumoPackage.RandomCube"
         ],
-        "version": "2.2020.8.19"
+        "version": "2.2020.8.20"
     },
     "lumos": {
         "cmdline": [],
@@ -111995,7 +112221,7 @@
             "lusid.utilities.proxy_config",
             "lusid.utilities.refreshing_token"
         ],
-        "version": "0.11.1796"
+        "version": "0.11.1805"
     },
     "lusid-sdk-preview": {
         "cmdline": [],
@@ -112377,7 +112603,7 @@
             "lusid.utilities.proxy_config",
             "lusid.utilities.refreshing_token"
         ],
-        "version": "0.11.1797"
+        "version": "0.11.1805"
     },
     "lusid-tr-sdk": {
         "cmdline": [],
@@ -115484,7 +115710,7 @@
             "test",
             "test.test_all"
         ],
-        "version": "0.1.3"
+        "version": "0.1.4"
     },
     "lyner": {
         "cmdline": [],
