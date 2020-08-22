@@ -8299,6 +8299,11 @@
         ],
         "version": "0.3.7.1"
     },
+    "jaspre": {
+        "cmdline": [],
+        "modules": [],
+        "version": "0.1"
+    },
     "jaspy": {
         "cmdline": [],
         "modules": [],
@@ -16660,6 +16665,14 @@
         ],
         "version": "11.0.7.1"
     },
+    "jdla-basic": {
+        "cmdline": [],
+        "modules": [
+            "jdla_basic",
+            "jdla_basic.basic_opeartions"
+        ],
+        "version": "1.0"
+    },
     "jdlangtranslator": {
         "cmdline": [],
         "modules": [
@@ -20732,7 +20745,7 @@
             "jettings",
             "jettings.jconfig"
         ],
-        "version": "0.1"
+        "version": "0.1.1"
     },
     "jetty": {
         "cmdline": [],
@@ -23128,6 +23141,7 @@
             "jig.visualizer.module_dependency.domain.model.master_graph",
             "jig.visualizer.module_dependency.domain.value",
             "jig.visualizer.module_dependency.domain.value.cluster",
+            "jig.visualizer.module_dependency.domain.value.color",
             "jig.visualizer.module_dependency.domain.value.module_edge",
             "jig.visualizer.module_dependency.domain.value.module_node",
             "jig.visualizer.module_dependency.domain.value.module_path",
@@ -23138,7 +23152,7 @@
             "jig.visualizer.module_dependency.presentation.renderer.cluster_renderer",
             "jig.visualizer.module_dependency.presentation.renderer.graph_renderer"
         ],
-        "version": "0.0.5"
+        "version": "0.0.6"
     },
     "jigbot": {
         "cmdline": [],
@@ -23815,6 +23829,10 @@
             "jina.clients.python.io",
             "jina.clients.python.request",
             "jina.counter",
+            "jina.docker",
+            "jina.docker.checker",
+            "jina.docker.helper",
+            "jina.docker.hubio",
             "jina.drivers",
             "jina.drivers.control",
             "jina.drivers.convert",
@@ -23841,81 +23859,171 @@
             "jina.executors.clients",
             "jina.executors.compound",
             "jina.executors.crafters",
-            "jina.executors.crafters.audio",
-            "jina.executors.crafters.audio.io",
-            "jina.executors.crafters.audio.monophone",
-            "jina.executors.crafters.audio.normalize",
-            "jina.executors.crafters.audio.split",
-            "jina.executors.crafters.image",
-            "jina.executors.crafters.image.crop",
-            "jina.executors.crafters.image.flip",
-            "jina.executors.crafters.image.helper",
-            "jina.executors.crafters.image.io",
-            "jina.executors.crafters.image.normalize",
-            "jina.executors.crafters.image.object_detection",
-            "jina.executors.crafters.image.resize",
-            "jina.executors.crafters.image.segmenter",
-            "jina.executors.crafters.nlp",
-            "jina.executors.crafters.nlp.split",
-            "jina.executors.crafters.numeric",
-            "jina.executors.crafters.numeric.io",
             "jina.executors.decorators",
             "jina.executors.devices",
             "jina.executors.encoders",
-            "jina.executors.encoders.audio",
-            "jina.executors.encoders.audio.fairseq",
-            "jina.executors.encoders.audio.spectral",
             "jina.executors.encoders.frameworks",
             "jina.executors.encoders.helper",
-            "jina.executors.encoders.image",
-            "jina.executors.encoders.image.bigtransfer",
-            "jina.executors.encoders.image.keras",
-            "jina.executors.encoders.image.onnx",
-            "jina.executors.encoders.image.paddlehub",
-            "jina.executors.encoders.image.torchvision",
-            "jina.executors.encoders.nlp",
-            "jina.executors.encoders.nlp.char",
-            "jina.executors.encoders.nlp.farm",
-            "jina.executors.encoders.nlp.flair",
-            "jina.executors.encoders.nlp.paddlehub",
-            "jina.executors.encoders.nlp.transformer",
-            "jina.executors.encoders.nlp.use",
-            "jina.executors.encoders.numeric",
-            "jina.executors.encoders.numeric.fit_transform",
-            "jina.executors.encoders.numeric.ica",
-            "jina.executors.encoders.numeric.pca",
             "jina.executors.encoders.tfserving",
-            "jina.executors.encoders.video",
-            "jina.executors.encoders.video.paddlehub",
-            "jina.executors.encoders.video.torchvision",
             "jina.executors.indexers",
             "jina.executors.indexers.keyvalue",
-            "jina.executors.indexers.keyvalue.leveldb",
-            "jina.executors.indexers.keyvalue.proto",
             "jina.executors.indexers.vector",
-            "jina.executors.indexers.vector.annoy",
-            "jina.executors.indexers.vector.faiss",
-            "jina.executors.indexers.vector.milvus",
-            "jina.executors.indexers.vector.milvusdb",
-            "jina.executors.indexers.vector.milvusdb.milvusdbhandler",
-            "jina.executors.indexers.vector.ngt",
-            "jina.executors.indexers.vector.nmslib",
-            "jina.executors.indexers.vector.numpy",
-            "jina.executors.indexers.vector.sptag",
             "jina.executors.metas",
             "jina.executors.rankers",
-            "jina.executors.rankers.bi_match",
-            "jina.executors.rankers.tfidf",
             "jina.executors.requests",
             "jina.flow",
             "jina.helloworld",
             "jina.helloworld.components",
             "jina.helloworld.helper",
             "jina.helper",
-            "jina.hubapi",
-            "jina.hubapi.checker",
-            "jina.hubapi.docker",
-            "jina.hubapi.helper",
+            "jina.hub",
+            "jina.hub.crafters",
+            "jina.hub.crafters.audio",
+            "jina.hub.crafters.audio.AudioMonophoner",
+            "jina.hub.crafters.audio.AudioMonophoner.tests",
+            "jina.hub.crafters.audio.AudioMonophoner.tests.test_audiomonophoner",
+            "jina.hub.crafters.audio.AudioNormalizer",
+            "jina.hub.crafters.audio.AudioNormalizer.tests",
+            "jina.hub.crafters.audio.AudioNormalizer.tests.test_audionormalizer",
+            "jina.hub.crafters.audio.AudioReader",
+            "jina.hub.crafters.audio.AudioReader.tests",
+            "jina.hub.crafters.audio.AudioReader.tests.test_1",
+            "jina.hub.crafters.audio.AudioSlicer",
+            "jina.hub.crafters.audio.AudioSlicer.tests",
+            "jina.hub.crafters.audio.AudioSlicer.tests.test_audiosegmenter",
+            "jina.hub.crafters.audio.SlidingWindowAudioSlicer",
+            "jina.hub.crafters.audio.SlidingWindowAudioSlicer.tests",
+            "jina.hub.crafters.audio.SlidingWindowAudioSlicer.tests.test_audiosegmenter",
+            "jina.hub.crafters.image",
+            "jina.hub.crafters.image.CenterImageCropper",
+            "jina.hub.crafters.image.CenterImageCropper.helper",
+            "jina.hub.crafters.image.CenterImageCropper.tests",
+            "jina.hub.crafters.image.CenterImageCropper.tests.test_centerimagecropper",
+            "jina.hub.crafters.image.FiveImageCropper",
+            "jina.hub.crafters.image.FiveImageCropper.helper",
+            "jina.hub.crafters.image.FiveImageCropper.tests",
+            "jina.hub.crafters.image.FiveImageCropper.tests.test_segmenter",
+            "jina.hub.crafters.image.ImageCropper",
+            "jina.hub.crafters.image.ImageCropper.helper",
+            "jina.hub.crafters.image.ImageCropper.tests",
+            "jina.hub.crafters.image.ImageCropper.tests.test_imagecropper",
+            "jina.hub.crafters.image.ImageFlipper",
+            "jina.hub.crafters.image.ImageFlipper.helper",
+            "jina.hub.crafters.image.ImageFlipper.tests",
+            "jina.hub.crafters.image.ImageFlipper.tests.test_imageflipper",
+            "jina.hub.crafters.image.ImageNormalizer",
+            "jina.hub.crafters.image.ImageNormalizer.helper",
+            "jina.hub.crafters.image.ImageNormalizer.tests",
+            "jina.hub.crafters.image.ImageNormalizer.tests.test_imagenormalizer",
+            "jina.hub.crafters.image.ImageReader",
+            "jina.hub.crafters.image.ImageReader.tests",
+            "jina.hub.crafters.image.ImageReader.tests.test_imagereader",
+            "jina.hub.crafters.image.ImageResizer",
+            "jina.hub.crafters.image.ImageResizer.helper",
+            "jina.hub.crafters.image.ImageResizer.tests",
+            "jina.hub.crafters.image.ImageResizer.tests.test_imageresizer",
+            "jina.hub.crafters.image.RandomImageCropper",
+            "jina.hub.crafters.image.RandomImageCropper.helper",
+            "jina.hub.crafters.image.RandomImageCropper.tests",
+            "jina.hub.crafters.image.RandomImageCropper.tests.test_segmenter",
+            "jina.hub.crafters.image.SlidingWindowImageCropper",
+            "jina.hub.crafters.image.SlidingWindowImageCropper.helper",
+            "jina.hub.crafters.image.SlidingWindowImageCropper.tests",
+            "jina.hub.crafters.image.SlidingWindowImageCropper.tests.test_segmenter",
+            "jina.hub.crafters.image.TorchObjectDetectionSegmenter",
+            "jina.hub.crafters.image.TorchObjectDetectionSegmenter.helper",
+            "jina.hub.crafters.image.TorchObjectDetectionSegmenter.tests",
+            "jina.hub.crafters.image.TorchObjectDetectionSegmenter.tests.test_torchobjectdetectionsegmenter",
+            "jina.hub.crafters.nlp",
+            "jina.hub.crafters.nlp.DeepSegmenter",
+            "jina.hub.crafters.nlp.DeepSegmenter.tests",
+            "jina.hub.crafters.nlp.DeepSegmenter.tests.test_deepsegmenter",
+            "jina.hub.crafters.nlp.JiebaSegmenter",
+            "jina.hub.crafters.nlp.JiebaSegmenter.tests",
+            "jina.hub.crafters.nlp.JiebaSegmenter.tests.test_jiebasegmenter",
+            "jina.hub.crafters.nlp.Sentencizer",
+            "jina.hub.crafters.nlp.Sentencizer.tests",
+            "jina.hub.crafters.nlp.Sentencizer.tests.test_sentencizer",
+            "jina.hub.crafters.nlp.SlidingWindowSegmenter",
+            "jina.hub.crafters.nlp.SlidingWindowSegmenter.tests",
+            "jina.hub.crafters.nlp.SlidingWindowSegmenter.tests.test_slidingwindowsegmenter",
+            "jina.hub.crafters.numeric",
+            "jina.hub.crafters.numeric.ArrayBytesReader",
+            "jina.hub.crafters.numeric.ArrayBytesReader.tests",
+            "jina.hub.crafters.numeric.ArrayBytesReader.tests.test_arraybytesreader",
+            "jina.hub.crafters.numeric.ArrayStringReader",
+            "jina.hub.crafters.numeric.ArrayStringReader.tests",
+            "jina.hub.crafters.numeric.ArrayStringReader.tests.test_arraystringreader",
+            "jina.hub.encoders",
+            "jina.hub.encoders.audio",
+            "jina.hub.encoders.audio.fairseq",
+            "jina.hub.encoders.audio.spectral",
+            "jina.hub.encoders.image",
+            "jina.hub.encoders.image.bigtransfer",
+            "jina.hub.encoders.image.keras",
+            "jina.hub.encoders.image.onnx",
+            "jina.hub.encoders.image.paddlehub",
+            "jina.hub.encoders.image.torchvision",
+            "jina.hub.encoders.nlp",
+            "jina.hub.encoders.nlp.OneHotTextEncoder",
+            "jina.hub.encoders.nlp.OneHotTextEncoder.tests",
+            "jina.hub.encoders.nlp.OneHotTextEncoder.tests.test_onehottextencoder",
+            "jina.hub.encoders.nlp.char",
+            "jina.hub.encoders.nlp.farm",
+            "jina.hub.encoders.nlp.flair",
+            "jina.hub.encoders.nlp.paddlehub",
+            "jina.hub.encoders.nlp.transformer",
+            "jina.hub.encoders.nlp.use",
+            "jina.hub.encoders.numeric",
+            "jina.hub.encoders.numeric.feature_agglomeration",
+            "jina.hub.encoders.numeric.ica",
+            "jina.hub.encoders.numeric.pca",
+            "jina.hub.encoders.numeric.random_gaussian",
+            "jina.hub.encoders.numeric.random_sparse",
+            "jina.hub.encoders.numeric.tsne",
+            "jina.hub.encoders.video",
+            "jina.hub.encoders.video.paddlehub",
+            "jina.hub.encoders.video.torchvision",
+            "jina.hub.indexers",
+            "jina.hub.indexers.keyvalue",
+            "jina.hub.indexers.keyvalue.LevelDBIndexer",
+            "jina.hub.indexers.keyvalue.LevelDBIndexer.tests",
+            "jina.hub.indexers.keyvalue.LevelDBIndexer.tests.test_leveldbindexer",
+            "jina.hub.indexers.vector",
+            "jina.hub.indexers.vector.AnnoyIndexer",
+            "jina.hub.indexers.vector.AnnoyIndexer.tests",
+            "jina.hub.indexers.vector.AnnoyIndexer.tests.test_annoyindexer",
+            "jina.hub.indexers.vector.FaissIndexer",
+            "jina.hub.indexers.vector.FaissIndexer.tests",
+            "jina.hub.indexers.vector.FaissIndexer.tests.test_faissindexer",
+            "jina.hub.indexers.vector.MilvusIndexer",
+            "jina.hub.indexers.vector.MilvusIndexer.MilvusDBHandler",
+            "jina.hub.indexers.vector.MilvusIndexer.tests",
+            "jina.hub.indexers.vector.MilvusIndexer.tests.test_integration",
+            "jina.hub.indexers.vector.MilvusIndexer.tests.test_milvusindexer",
+            "jina.hub.indexers.vector.NGTIndexer",
+            "jina.hub.indexers.vector.NGTIndexer.tests",
+            "jina.hub.indexers.vector.NGTIndexer.tests.test_ngtindexer",
+            "jina.hub.indexers.vector.NmsLibIndexer",
+            "jina.hub.indexers.vector.NmsLibIndexer.tests",
+            "jina.hub.indexers.vector.NmsLibIndexer.tests.test_nmslibindexer",
+            "jina.hub.indexers.vector.sptag",
+            "jina.hub.rankers",
+            "jina.hub.rankers.BM25Ranker",
+            "jina.hub.rankers.BM25Ranker.tests",
+            "jina.hub.rankers.BM25Ranker.tests.test_bm25ranker",
+            "jina.hub.rankers.BiMatchRanker",
+            "jina.hub.rankers.BiMatchRanker.tests",
+            "jina.hub.rankers.BiMatchRanker.tests.test_bimatchranker",
+            "jina.hub.rankers.MaxRanker",
+            "jina.hub.rankers.MaxRanker.tests",
+            "jina.hub.rankers.MaxRanker.tests.test_maxranker",
+            "jina.hub.rankers.MinRanker",
+            "jina.hub.rankers.MinRanker.tests",
+            "jina.hub.rankers.MinRanker.tests.test_minranker",
+            "jina.hub.rankers.TfIdfRanker",
+            "jina.hub.rankers.TfIdfRanker.tests",
+            "jina.hub.rankers.TfIdfRanker.tests.test_tfidfranker",
             "jina.logging",
             "jina.logging.base",
             "jina.logging.pipe",
@@ -23943,7 +24051,7 @@
             "jina.proto.jina_pb2",
             "jina.proto.jina_pb2_grpc"
         ],
-        "version": "0.4.9"
+        "version": "0.4.11"
     },
     "jinbotron": {
         "cmdline": [],
@@ -26197,7 +26305,7 @@
             "jirachlog.git",
             "jirachlog.ver"
         ],
-        "version": "1.3.0"
+        "version": "1.3.1"
     },
     "jiracli": {
         "cmdline": [],
@@ -33126,7 +33234,7 @@
             "jobrunner",
             "jobrunner.jobrunner"
         ],
-        "version": "1.3.1"
+        "version": "1.4.0"
     },
     "jobs": {
         "cmdline": [],
@@ -48872,7 +48980,7 @@
             "JsonToMarkdown.main",
             "JsonToMarkdown.preprocess"
         ],
-        "version": "1.2.0"
+        "version": "1.2.1"
     },
     "jsontoobject": {
         "cmdline": [],
@@ -51188,6 +51296,22 @@
             "jug_schedule.version"
         ],
         "version": "0.4.2"
+    },
+    "jugaad-data": {
+        "cmdline": [],
+        "modules": [
+            "jugaad_data",
+            "jugaad_data.cli",
+            "jugaad_data.nse",
+            "jugaad_data.nse.archives",
+            "jugaad_data.util",
+            "tests",
+            "tests.test_bhav",
+            "tests.test_cli",
+            "tests.test_nse",
+            "tests.test_util"
+        ],
+        "version": "0.14"
     },
     "jugaad-trader": {
         "cmdline": [],
@@ -54044,7 +54168,7 @@
             "junky.supplements",
             "junky.utils"
         ],
-        "version": "0.2.33"
+        "version": "0.2.35"
     },
     "junkyard": {
         "cmdline": [],
@@ -54190,7 +54314,7 @@
             "jnpr.junos.utils.util",
             "jnpr.junos.version"
         ],
-        "version": "2.5.1"
+        "version": "2.5.2"
     },
     "junos-multi-command": {
         "cmdline": [
@@ -57387,7 +57511,7 @@
             "jupyter_web_report",
             "jupyter_web_report.jupyter_web_report"
         ],
-        "version": "0.1.5"
+        "version": "0.2.0"
     },
     "jupyter-widget-d3-slider": {
         "cmdline": [],
@@ -57712,7 +57836,7 @@
             "jupyterhub_chameleon.spawner",
             "jupyterhub_chameleon.utils"
         ],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     "jupyterhub-client": {
         "cmdline": [],
@@ -58424,7 +58548,7 @@
             "jupyterlab_chameleon.package_artifact",
             "jupyterlab_chameleon.util"
         ],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     "jupyterlab-code-formatter": {
         "cmdline": [],
@@ -60788,7 +60912,7 @@
             "justnow",
             "justnow.parser"
         ],
-        "version": "0.1.2"
+        "version": "0.1.3"
     },
     "justo": {
         "cmdline": [],
