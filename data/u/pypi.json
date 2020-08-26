@@ -4890,8 +4890,8 @@
             "udata.linkchecker.tasks",
             "udata.mail",
             "udata.migrations",
-            "udata.migrations.2020-06-11-add-resource-fs-filename",
             "udata.migrations.2020-07-24-remove-s-from-scope-oauth",
+            "udata.migrations.2020-08-24-add-fs-filename",
             "udata.models",
             "udata.models.badges_field",
             "udata.models.datetime_fields",
@@ -5027,7 +5027,7 @@
             "udata.worker",
             "udata.wsgi"
         ],
-        "version": "2.2.0"
+        "version": "2.2.1"
     },
     "udata-ckan": {
         "cmdline": [],
@@ -5074,19 +5074,20 @@
         "cmdline": [],
         "modules": [
             "udata_gouvfr",
-            "udata_gouvfr.commands",
             "udata_gouvfr.harvesters",
             "udata_gouvfr.harvesters.maaf",
             "udata_gouvfr.harvesters.tests",
             "udata_gouvfr.models",
             "udata_gouvfr.settings",
+            "udata_gouvfr.tasks",
             "udata_gouvfr.tests",
             "udata_gouvfr.tests.test_static_pages",
+            "udata_gouvfr.tests.test_tasks",
             "udata_gouvfr.tests.tests",
             "udata_gouvfr.theme",
             "udata_gouvfr.views"
         ],
-        "version": "2.1.5"
+        "version": "2.2.0"
     },
     "udata-harvest": {
         "cmdline": [],
@@ -5158,12 +5159,14 @@
         "cmdline": [],
         "modules": [
             "tests",
-            "tests.test_commands",
+            "tests.test_tasks",
+            "tests.test_views",
             "udata_recommendations",
-            "udata_recommendations.commands",
+            "udata_recommendations.settings",
+            "udata_recommendations.tasks",
             "udata_recommendations.views"
         ],
-        "version": "2.0.0"
+        "version": "2.1.0"
     },
     "udata-schema-gouvfr": {
         "cmdline": [],
@@ -5172,9 +5175,10 @@
             "tests.test_views",
             "udata_schema_gouvfr",
             "udata_schema_gouvfr.settings",
+            "udata_schema_gouvfr.tasks",
             "udata_schema_gouvfr.views"
         ],
-        "version": "1.0.0"
+        "version": "1.1.0"
     },
     "udata-tabular-preview": {
         "cmdline": [],
@@ -5591,7 +5595,7 @@
             "udkanbun.spacy.udkanbun2spacy",
             "udkanbun.udkanbun"
         ],
-        "version": "2.3.2"
+        "version": "2.3.3"
     },
     "udkm1dsim": {
         "cmdline": [],
@@ -5626,7 +5630,7 @@
             "udkundoku.udkundoku",
             "udkundoku.verb"
         ],
-        "version": "1.3.8"
+        "version": "1.3.9"
     },
     "udl": {
         "cmdline": [],
@@ -6765,6 +6769,7 @@
             "ufit.data.merge",
             "ufit.data.nicos",
             "ufit.data.nicos_old",
+            "ufit.data.nist",
             "ufit.data.simple",
             "ufit.data.simple_csv",
             "ufit.data.taipan",
@@ -6792,7 +6797,6 @@
             "ufit.gui.scanitem",
             "ufit.gui.session",
             "ufit.gui.ui",
-            "ufit.guires_qt4",
             "ufit.guires_qt5",
             "ufit.lab",
             "ufit.models",
@@ -6812,7 +6816,7 @@
             "ufit.utils",
             "ufit.version"
         ],
-        "version": "1.2.7"
+        "version": "1.4.0"
     },
     "ufji": {
         "cmdline": [],
@@ -6970,7 +6974,7 @@
             "ufload.test_db",
             "ufload.webdav"
         ],
-        "version": "0.272"
+        "version": "0.273"
     },
     "ufma-scrapper": {
         "cmdline": [],
@@ -7309,6 +7313,19 @@
             "ufork.ufork"
         ],
         "version": "18.2.1"
+    },
+    "ufotest": {
+        "cmdline": [],
+        "modules": [
+            "ufotest",
+            "ufotest.capture",
+            "ufotest.cli",
+            "ufotest.config",
+            "ufotest.install",
+            "ufotest.logging",
+            "ufotest.util"
+        ],
+        "version": "0.3.1"
     },
     "ufp": {
         "cmdline": [],
@@ -8412,7 +8429,7 @@
     "uiautomator2": {
         "cmdline": [],
         "modules": [],
-        "version": "2.11.1"
+        "version": "2.11.2"
     },
     "uiautomatorplug": {
         "cmdline": [],
@@ -11353,7 +11370,7 @@
             "ultimapy.settings",
             "ultimapy.settings.settings"
         ],
-        "version": "0.0.19"
+        "version": "0.0.20"
     },
     "ultimate": {
         "cmdline": [],
@@ -16407,7 +16424,7 @@
             "unicon.trial.threading_issue_unicon",
             "unicon.trial.trackables"
         ],
-        "version": "20.7.2"
+        "version": "20.8"
     },
     "unicon-plugins": {
         "cmdline": [],
@@ -16545,6 +16562,13 @@
             "plugins.iosxe.csr1000v.vewlc",
             "plugins.iosxe.csr1000v.vewlc.service_implementation",
             "plugins.iosxe.patterns",
+            "plugins.iosxe.quad",
+            "plugins.iosxe.quad.patterns",
+            "plugins.iosxe.quad.service_implementation",
+            "plugins.iosxe.quad.service_statements",
+            "plugins.iosxe.quad.settings",
+            "plugins.iosxe.quad.statemachine",
+            "plugins.iosxe.quad.utils",
             "plugins.iosxe.sdwan",
             "plugins.iosxe.sdwan.service_implementation",
             "plugins.iosxe.sdwan.settings",
@@ -16552,11 +16576,22 @@
             "plugins.iosxe.service_implementation",
             "plugins.iosxe.service_statements",
             "plugins.iosxe.settings",
+            "plugins.iosxe.stack",
+            "plugins.iosxe.stack.patterns",
+            "plugins.iosxe.stack.service_implementation",
+            "plugins.iosxe.stack.service_patterns",
+            "plugins.iosxe.stack.service_statements",
+            "plugins.iosxe.stack.settings",
+            "plugins.iosxe.stack.statemachine",
+            "plugins.iosxe.stack.utils",
             "plugins.iosxe.statemachine",
             "plugins.iosxe.statements",
             "plugins.iosxr",
             "plugins.iosxr.asr9k",
             "plugins.iosxr.asr9k.patterns",
+            "plugins.iosxr.asr9k.service_implementation",
+            "plugins.iosxr.asr9k.service_patterns",
+            "plugins.iosxr.asr9k.service_statements",
             "plugins.iosxr.asr9k.settings",
             "plugins.iosxr.asr9k.statemachine",
             "plugins.iosxr.connection_provider",
@@ -16713,9 +16748,12 @@
             "plugins.tests.test_plugin_iosxe_cat3k_ewlc",
             "plugins.tests.test_plugin_iosxe_csr1000v_vewlc",
             "plugins.tests.test_plugin_iosxe_ha",
+            "plugins.tests.test_plugin_iosxe_quad",
+            "plugins.tests.test_plugin_iosxe_stack",
             "plugins.tests.test_plugin_iosxr",
             "plugins.tests.test_plugin_iosxr_asr9k",
             "plugins.tests.test_plugin_iosxr_ha",
+            "plugins.tests.test_plugin_iosxr_ha_asr9k",
             "plugins.tests.test_plugin_iosxr_iosxrv",
             "plugins.tests.test_plugin_iosxr_ncs5k",
             "plugins.tests.test_plugin_iosxr_spitfire",
@@ -16746,7 +16784,7 @@
             "plugins.windows.settings",
             "plugins.windows.statemachine"
         ],
-        "version": "20.7.3"
+        "version": "20.8.1"
     },
     "uniconfig": {
         "cmdline": [],
@@ -17487,7 +17525,7 @@
             "unidic2ud.spacy.unidic2spacy",
             "unidic2ud.unidic2ud"
         ],
-        "version": "2.4.1"
+        "version": "2.4.2"
     },
     "unidiclite": {
         "cmdline": [],
@@ -30951,7 +30989,7 @@
             "urlfinderlib.url",
             "urlfinderlib.urlfinderlib"
         ],
-        "version": "0.14.2"
+        "version": "0.14.3"
     },
     "urlfit": {
         "cmdline": [],
@@ -33632,7 +33670,7 @@
     "usefullibs": {
         "cmdline": [],
         "modules": [],
-        "version": "0.0.7"
+        "version": "0.0.9"
     },
     "usefulpy": {
         "cmdline": [],
@@ -33799,7 +33837,7 @@
         "modules": [
             "uselessapi"
         ],
-        "version": "1.0"
+        "version": "1.0.1"
     },
     "uselessfacts": {
         "cmdline": [],
@@ -40965,6 +41003,8 @@
             "uwg.UBLDef",
             "uwg.UCMDef",
             "uwg.building",
+            "uwg.cli",
+            "uwg.cli.validate",
             "uwg.element",
             "uwg.forcing",
             "uwg.infracalcs",
@@ -40980,7 +41020,7 @@
             "uwg.uwg",
             "uwg.weather"
         ],
-        "version": "5.3.4"
+        "version": "5.4.0"
     },
     "uwgeodynamics": {
         "cmdline": [],
