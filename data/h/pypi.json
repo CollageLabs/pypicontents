@@ -1354,7 +1354,7 @@
             "h2o_q.types",
             "h2o_q.ui"
         ],
-        "version": "0.3.0"
+        "version": "0.3.1"
     },
     "h2o4gpu": {
         "cmdline": [],
@@ -3327,6 +3327,14 @@
             "hac_img"
         ],
         "version": "0.0.1"
+    },
+    "haccrypto": {
+        "cmdline": [],
+        "modules": [
+            "haccrypto",
+            "haccrypto.crypto"
+        ],
+        "version": "0.1.0"
     },
     "hacheck": {
         "cmdline": [],
@@ -7951,6 +7959,44 @@
         ],
         "version": "0.11.102"
     },
+    "halo-cli": {
+        "cmdline": [],
+        "modules": [
+            "halocli",
+            "halocli.cli",
+            "halocli.exception",
+            "halocli.plugin",
+            "halocli.plugin.command",
+            "halocli.plugin.plugin_manager",
+            "halocli.plugin.plugins",
+            "halocli.plugin.plugins.bian",
+            "halocli.plugin.plugins.bian.code",
+            "halocli.plugin.plugins.bian.code.halo_bian_defs_plugin",
+            "halocli.plugin.plugins.bian.code.halo_bian_err_plugin",
+            "halocli.plugin.plugins.bian.code.halo_bian_mixin_plugin",
+            "halocli.plugin.plugins.bian.extend",
+            "halocli.plugin.plugins.bian.extend.extend_bian_plugin",
+            "halocli.plugin.plugins.bian.extend.extend_bian_plugin1",
+            "halocli.plugin.plugins.bian.segregate",
+            "halocli.plugin.plugins.bian.segregate.cqrs_bian_plugin",
+            "halocli.plugin.plugins.config",
+            "halocli.plugin.plugins.config.config_plugin",
+            "halocli.plugin.plugins.create",
+            "halocli.plugin.plugins.create.create_plugin",
+            "halocli.plugin.plugins.info",
+            "halocli.plugin.plugins.info.info_plugin",
+            "halocli.plugin.plugins.install",
+            "halocli.plugin.plugins.install.install_plugin",
+            "halocli.plugin.plugins.print",
+            "halocli.plugin.plugins.print.print_plugin",
+            "halocli.plugin.plugins.schema",
+            "halocli.plugin.plugins.schema.schema_plugin",
+            "halocli.plugin.plugins.valid",
+            "halocli.plugin.plugins.valid.valid_plugin",
+            "halocli.util"
+        ],
+        "version": "0.21"
+    },
     "halo-flask": {
         "cmdline": [],
         "modules": [
@@ -12530,7 +12576,7 @@
             "haohaninfo.MicroPlay",
             "haohaninfo.MicroTest"
         ],
-        "version": "0.2.4"
+        "version": "0.2.5"
     },
     "haohaninfo-scholar": {
         "cmdline": [],
@@ -13054,7 +13100,7 @@
             "hapic.type",
             "hapic.util"
         ],
-        "version": "0.83"
+        "version": "0.84"
     },
     "hapic-apispec": {
         "cmdline": [],
@@ -14046,7 +14092,7 @@
             "har2tree",
             "har2tree.parser"
         ],
-        "version": "1.2.3"
+        "version": "1.2.4"
     },
     "har2warc": {
         "cmdline": [],
@@ -14578,50 +14624,69 @@
         "cmdline": [],
         "modules": [
             "hardware_control",
-            "hardware_control.DelayGenerator",
-            "hardware_control.DelayGenerator.HC_DelayGenerator",
-            "hardware_control.DelayGenerator.SRSDG535Ctrl",
-            "hardware_control.FlowController",
-            "hardware_control.FlowController.AlicatMSeriesCtrl",
-            "hardware_control.FlowController.HC_FlowController",
-            "hardware_control.FunctionGenerator.HC_FunctionGenerator",
-            "hardware_control.FunctionGenerator.Key33500BCtrl",
-            "hardware_control.FunctionGenerator.SigSDGCtrl",
-            "hardware_control.HC_Backend",
-            "hardware_control.IOModule.ADAM6015Ctrl",
-            "hardware_control.IOModule.ADAM6024Ctrl",
-            "hardware_control.IOModule.HC_IOModule",
-            "hardware_control.IOModule.HC_Read",
-            "hardware_control.IOModule.NI9000Ctrl",
-            "hardware_control.Oscilloscope",
-            "hardware_control.Oscilloscope.HC_Oscilloscope",
-            "hardware_control.Oscilloscope.Key4000XCtrl",
-            "hardware_control.Oscilloscope.Pico6000Ctrl",
-            "hardware_control.Oscilloscope.RigDS1000ZCtrl",
-            "hardware_control.Oscilloscope.ZMQOscilloscopeCtrl",
-            "hardware_control.PowerSupply",
-            "hardware_control.PowerSupply.CAEN14xxETCtrl",
-            "hardware_control.PowerSupply.HC_MultiPowerSupply",
-            "hardware_control.PowerSupply.Key36300Ctrl",
-            "hardware_control.PowerSupply.NI_DaX_PowerSupplyController",
-            "hardware_control.PowerSupply.RigolDP832Ctrl",
-            "hardware_control.PowerSupply.TDKLGenHCtrl",
-            "hardware_control.TemplateDeviceType",
-            "hardware_control.TemplateDeviceType.DeviceBackend",
-            "hardware_control.TemplateDeviceType.HC_DeviceType",
-            "hardware_control.base",
-            "hardware_control.utility",
-            "hardware_control.widgets",
-            "hardware_control.widgets.connection_status",
-            "hardware_control.widgets.logger",
-            "hardware_control.widgets.macro_runner",
-            "hardware_control.widgets.monitor",
-            "hardware_control.widgets.plot",
-            "hardware_control.widgets.scan",
-            "hardware_control.widgets.variable_edit",
-            "hardware_control.widgets.zmq_connection"
+            "hardware_control.backends",
+            "hardware_control.backends.advantech",
+            "hardware_control.backends.advantech.Adam_6015",
+            "hardware_control.backends.advantech.Adam_6024",
+            "hardware_control.backends.alicat",
+            "hardware_control.backends.alicat.Alicat_M_Series",
+            "hardware_control.backends.base",
+            "hardware_control.backends.base.Backend",
+            "hardware_control.backends.caen",
+            "hardware_control.backends.caen.Caen_14xxET",
+            "hardware_control.backends.keysight",
+            "hardware_control.backends.keysight.Keysight_33500B",
+            "hardware_control.backends.keysight.Keysight_36300",
+            "hardware_control.backends.keysight.Keysight_4000X",
+            "hardware_control.backends.ni",
+            "hardware_control.backends.ni.Ni_9000",
+            "hardware_control.backends.picotech",
+            "hardware_control.backends.picotech.Picotech_6000",
+            "hardware_control.backends.picotech.picotech-remote-raspberry",
+            "hardware_control.backends.rigol",
+            "hardware_control.backends.rigol.Rigol_DP832",
+            "hardware_control.backends.rigol.Rigol_DS1000Z",
+            "hardware_control.backends.siglent",
+            "hardware_control.backends.siglent.Siglent_SDG",
+            "hardware_control.backends.srs",
+            "hardware_control.backends.srs.SRS_DG535",
+            "hardware_control.backends.tdkl",
+            "hardware_control.backends.tdkl.TDKL_GenH",
+            "hardware_control.backends.utility",
+            "hardware_control.backends.zmq",
+            "hardware_control.backends.zmq.ZMQ_Oscilloscope",
+            "hardware_control.gui",
+            "hardware_control.gui.base",
+            "hardware_control.gui.base.App",
+            "hardware_control.gui.base.Comm",
+            "hardware_control.gui.base.Dataset",
+            "hardware_control.gui.base.Instrument",
+            "hardware_control.gui.base.MainWindow",
+            "hardware_control.gui.base.MeasurementDirector",
+            "hardware_control.gui.base.MeasurementRequest",
+            "hardware_control.gui.base.logging",
+            "hardware_control.gui.controls",
+            "hardware_control.gui.controls.DelayGenerator",
+            "hardware_control.gui.controls.DeviceTemplate",
+            "hardware_control.gui.controls.FlowController",
+            "hardware_control.gui.controls.FunctionGenerator",
+            "hardware_control.gui.controls.IOModule",
+            "hardware_control.gui.controls.MultiPowerSupply",
+            "hardware_control.gui.controls.Oscilloscope",
+            "hardware_control.gui.controls.ReadModule",
+            "hardware_control.gui.widgets",
+            "hardware_control.gui.widgets.connection_status",
+            "hardware_control.gui.widgets.data_widget",
+            "hardware_control.gui.widgets.macro_runner",
+            "hardware_control.gui.widgets.on_off",
+            "hardware_control.gui.widgets.plot",
+            "hardware_control.gui.widgets.qtconsole",
+            "hardware_control.gui.widgets.scan_widget",
+            "hardware_control.gui.widgets.utility",
+            "hardware_control.gui.widgets.zmq_connection",
+            "hardware_control.utility"
         ],
-        "version": "0.0.2"
+        "version": "1.0.0"
     },
     "hardware-info": {
         "cmdline": [],
@@ -16568,7 +16633,7 @@
         "modules": [
             "hashable_df"
         ],
-        "version": "0.0.4"
+        "version": "0.0.5"
     },
     "hashable-lru-cache": {
         "cmdline": [],
@@ -17733,7 +17798,7 @@
             "hass_nabucasa.utils",
             "hass_nabucasa.voice"
         ],
-        "version": "0.36.1"
+        "version": "0.37.0"
     },
     "hass-smartthings-remove": {
         "cmdline": [],
@@ -19517,7 +19582,7 @@
             "hatasmota.switch",
             "hatasmota.utils"
         ],
-        "version": "0.0.5"
+        "version": "0.0.6"
     },
     "hatch": {
         "cmdline": [],
@@ -23689,7 +23754,7 @@
             "hcdk_utils.utils.hcdk_config",
             "hcdk_utils.utils.parameters"
         ],
-        "version": "1.60.11"
+        "version": "1.60.13"
     },
     "hcf-backend": {
         "cmdline": [],
@@ -27850,7 +27915,7 @@
         "modules": [
             "hearthstone_data"
         ],
-        "version": "58213.1"
+        "version": "58638.1"
     },
     "hearthstonearenalogwatcher": {
         "cmdline": [],
@@ -32094,6 +32159,11 @@
         "modules": [],
         "version": "1.0.2"
     },
+    "hello-package": {
+        "cmdline": [],
+        "modules": [],
+        "version": ""
+    },
     "hello-package-baymaxx": {
         "cmdline": [],
         "modules": [
@@ -32446,6 +32516,11 @@
             "hello_test_rinki"
         ],
         "version": "1.0.3"
+    },
+    "hello-testo1": {
+        "cmdline": [],
+        "modules": [],
+        "version": "0.0.2"
     },
     "hello-there-library": {
         "cmdline": [],
@@ -35215,7 +35290,7 @@
             "hemlock_cli.add_profile",
             "hemlock_cli.hlk"
         ],
-        "version": "0.0.16"
+        "version": "0.0.17"
     },
     "hemlock-cli-dsbowen": {
         "cmdline": [],
@@ -35311,7 +35386,7 @@
             "hemlock.tools.statics",
             "hemlock.tools.utils"
         ],
-        "version": "0.0.20"
+        "version": "0.0.21"
     },
     "hemnes": {
         "cmdline": [],
@@ -35610,7 +35685,7 @@
             "henry/modules.fetcher",
             "henry/modules.spinner"
         ],
-        "version": "0.2.2"
+        "version": "0.2.3"
     },
     "henry-test-tool": {
         "cmdline": [],
@@ -35979,7 +36054,7 @@
             "hepcrawl.utils",
             "hepcrawl.version"
         ],
-        "version": "13.0.10"
+        "version": "13.0.11"
     },
     "hepdata": {
         "cmdline": [],
@@ -39413,7 +39488,6 @@
             "hex_utils.asc",
             "hex_utils.asc2hasc",
             "hex_utils.csv2hasc",
-            "hex_utils.grid",
             "hex_utils.hasc",
             "hex_utils.hasc2geojson",
             "hex_utils.hasc2gml",
@@ -39422,7 +39496,6 @@
             "hex_utils.raster",
             "hex_utils.surface2asc",
             "hex_utils.surface2hasc",
-            "hex_utils.surfaceParser",
             "surfaces",
             "surfaces.channel",
             "surfaces.eat2",
@@ -39432,15 +39505,10 @@
             "surfaces.pitGaussian",
             "surfaces.pitHubbert",
             "surfaces.surface",
-            "surfaces.surfaceBase",
-            "surfaces.surfaceGaussian",
-            "surfaces.surfaceHubbert",
-            "surfaces.surfaceSimple",
             "tests",
-            "tests.emptyValues",
             "tests.test_optional_headers"
         ],
-        "version": "0.4.3"
+        "version": "0.4.4"
     },
     "hex2": {
         "cmdline": [],
@@ -41570,7 +41638,7 @@
             "hgext3rd.topic.stack",
             "hgext3rd.topic.topicmap"
         ],
-        "version": "10.0.1"
+        "version": "10.0.2"
     },
     "hg-fingerprint": {
         "cmdline": [],
@@ -48617,7 +48685,7 @@
             "tests.test_tcga",
             "tests.test_web_client"
         ],
-        "version": "1.0.0.dev80"
+        "version": "1.0.0.dev82"
     },
     "histoprint": {
         "cmdline": [],
@@ -53014,7 +53082,7 @@
             "hmt_escrow.storage",
             "hmt_escrow.test_manifest"
         ],
-        "version": "0.8.8"
+        "version": "0.8.9"
     },
     "hmtest": {
         "cmdline": [],
@@ -54498,7 +54566,7 @@
             "holger.sentry.utils.functions.validate_status",
             "holger.status"
         ],
-        "version": "0.7.0"
+        "version": "0.7.4"
     },
     "holi-distributions": {
         "cmdline": [],
@@ -55672,7 +55740,7 @@
         "modules": [
             "hass_frontend"
         ],
-        "version": "20200908.0"
+        "version": "20200909.0"
     },
     "home-bank-converter": {
         "cmdline": [],
@@ -60540,7 +60608,7 @@
             "homograph",
             "homograph.homograph"
         ],
-        "version": "0.13"
+        "version": "0.05"
     },
     "homography": {
         "cmdline": [],
@@ -60825,7 +60893,7 @@
             "honeybee.writer.room",
             "honeybee.writer.shade"
         ],
-        "version": "1.34.9"
+        "version": "1.35.0"
     },
     "honeybee-energy": {
         "cmdline": [],
@@ -60950,7 +61018,7 @@
             "honeybee_energy.ventcool.simulation",
             "honeybee_energy.writer"
         ],
-        "version": "1.55.15"
+        "version": "1.55.16"
     },
     "honeybee-energy-standards": {
         "cmdline": [],
@@ -61298,7 +61366,7 @@
             "honeybee_radiance.view",
             "honeybee_radiance.writer"
         ],
-        "version": "1.26.10"
+        "version": "1.26.12"
     },
     "honeybee-radiance-command": {
         "cmdline": [],
@@ -64977,6 +65045,17 @@
             "horus.views.admin"
         ],
         "version": "0.9.15"
+    },
+    "horus-media-client": {
+        "cmdline": [],
+        "modules": [
+            "horus_db",
+            "horus_gis",
+            "horus_media",
+            "horus_media_examples",
+            "horus_media_examples.example_strategy"
+        ],
+        "version": "0.3.3"
     },
     "horusdemodlib": {
         "cmdline": [],
@@ -68803,7 +68882,7 @@
             "hpogrid.utils.logger",
             "hpogrid.utils.stylus"
         ],
-        "version": "0.6.3"
+        "version": "0.6.4"
     },
     "hpolib2": {
         "cmdline": [],
@@ -70482,16 +70561,17 @@
         "cmdline": [],
         "modules": [
             "hsipl_algo",
-            "hsipl_algo.Anomaly_algorithm",
+            "hsipl_algo.Anomaly_Algorithm",
             "hsipl_algo.CEM_BS_Method",
             "hsipl_algo.CT_BS_Method",
             "hsipl_algo.Calc_Band",
             "hsipl_algo.Find_EndMember",
+            "hsipl_algo.Hierarchical_Algorithm",
             "hsipl_algo.Other_BS_Method",
-            "hsipl_algo.Target_algorithm",
+            "hsipl_algo.Target_Algorithm",
             "hsipl_algo.get_Threshold"
         ],
-        "version": "1.0.3"
+        "version": "1.0.4"
     },
     "hsize": {
         "cmdline": [],
@@ -70964,7 +71044,7 @@
         "modules": [
             "hstspreload"
         ],
-        "version": "2020.9.2"
+        "version": "2020.9.9"
     },
     "hsub": {
         "cmdline": [],
@@ -78489,7 +78569,7 @@
             "huaweicloudsdkapig.v2.model.vpc_base_info",
             "huaweicloudsdkapig.v2.model.vpc_info"
         ],
-        "version": "3.0.10b0"
+        "version": "3.0.11b0"
     },
     "huaweicloudsdkas": {
         "cmdline": [],
@@ -78629,7 +78709,7 @@
             "huaweicloudsdkas.v1.model.update_scaling_policy_request_body",
             "huaweicloudsdkas.v1.model.update_scaling_policy_response"
         ],
-        "version": "3.0.10b0"
+        "version": "3.0.11b0"
     },
     "huaweicloudsdkbss": {
         "cmdline": [],
@@ -78858,7 +78938,7 @@
             "huaweicloudsdkbss.v2.model.update_sub_enterprise_amount_request",
             "huaweicloudsdkbss.v2.model.update_sub_enterprise_amount_response"
         ],
-        "version": "3.0.10b0"
+        "version": "3.0.11b0"
     },
     "huaweicloudsdkbssintl": {
         "cmdline": [],
@@ -78964,7 +79044,7 @@
             "huaweicloudsdkbssintl.v2.model.show_refund_order_details_response",
             "huaweicloudsdkbssintl.v2.model.unsubscribe_resources_req"
         ],
-        "version": "3.0.10b0"
+        "version": "3.0.11b0"
     },
     "huaweicloudsdkcbr": {
         "cmdline": [],
@@ -78999,6 +79079,7 @@
             "huaweicloudsdkcbr.v1.model.billing_update",
             "huaweicloudsdkcbr.v1.model.checkpoint_create",
             "huaweicloudsdkcbr.v1.model.checkpoint_create_skipped_resource",
+            "huaweicloudsdkcbr.v1.model.checkpoint_extra_info_resp",
             "huaweicloudsdkcbr.v1.model.checkpoint_param",
             "huaweicloudsdkcbr.v1.model.checkpoint_plan_create",
             "huaweicloudsdkcbr.v1.model.checkpoint_replicate_param",
@@ -79118,7 +79199,7 @@
             "huaweicloudsdkcbr.v1.model.vault_update",
             "huaweicloudsdkcbr.v1.model.vault_update_req"
         ],
-        "version": "3.0.10b0"
+        "version": "3.0.11b0"
     },
     "huaweicloudsdkces": {
         "cmdline": [],
@@ -79173,7 +79254,7 @@
             "huaweicloudsdkces.v1.model.update_alarm_action_request",
             "huaweicloudsdkces.v1.model.update_alarm_action_response"
         ],
-        "version": "3.0.10b0"
+        "version": "3.0.11b0"
     },
     "huaweicloudsdkclassroom": {
         "cmdline": [],
@@ -79207,7 +79288,7 @@
             "huaweicloudsdkclassroom.v3.model.show_job_exercises_request",
             "huaweicloudsdkclassroom.v3.model.show_job_exercises_response"
         ],
-        "version": "3.0.10b0"
+        "version": "3.0.11b0"
     },
     "huaweicloudsdkcloudide": {
         "cmdline": [],
@@ -79261,7 +79342,7 @@
             "huaweicloudsdkcloudide.v2.model.update_instance_request",
             "huaweicloudsdkcloudide.v2.model.update_instance_response"
         ],
-        "version": "3.0.10b0"
+        "version": "3.0.11b0"
     },
     "huaweicloudsdkcloudpipeline": {
         "cmdline": [],
@@ -79314,7 +79395,7 @@
             "huaweicloudsdkcloudpipeline.v2.model.template_view",
             "huaweicloudsdkcloudpipeline.v2.model.workflow"
         ],
-        "version": "3.0.10b0"
+        "version": "3.0.11b0"
     },
     "huaweicloudsdkcore": {
         "cmdline": [],
@@ -79349,7 +79430,7 @@
             "tests.test_signer",
             "tests.test_upload_download"
         ],
-        "version": "3.0.10b0"
+        "version": "3.0.11b0"
     },
     "huaweicloudsdkcts": {
         "cmdline": [],
@@ -79382,7 +79463,7 @@
             "huaweicloudsdkcts.v3.model.update_tracker_response",
             "huaweicloudsdkcts.v3.model.user_info"
         ],
-        "version": "3.0.10b0"
+        "version": "3.0.11b0"
     },
     "huaweicloudsdkdcs": {
         "cmdline": [],
@@ -79515,7 +79596,7 @@
             "huaweicloudsdkdcs.v2.model.update_slave_priority_response",
             "huaweicloudsdkdcs.v2.model.whitelist"
         ],
-        "version": "3.0.10b0"
+        "version": "3.0.11b0"
     },
     "huaweicloudsdkdds": {
         "cmdline": [],
@@ -79606,7 +79687,7 @@
             "huaweicloudsdkdds.v3.model.show_backup_policy_response",
             "huaweicloudsdkdds.v3.model.show_backup_policy_result"
         ],
-        "version": "3.0.10b0"
+        "version": "3.0.11b0"
     },
     "huaweicloudsdkdevstar": {
         "cmdline": [],
@@ -79631,7 +79712,7 @@
             "huaweicloudsdkdevstar.v1.model.template_job_info",
             "huaweicloudsdkdevstar.v1.model.template_simple_info"
         ],
-        "version": "3.0.10b0"
+        "version": "3.0.11b0"
     },
     "huaweicloudsdkecs": {
         "cmdline": [],
@@ -79869,7 +79950,7 @@
             "huaweicloudsdkecs.v2.model.update_server_response",
             "huaweicloudsdkecs.v2.model.update_server_result"
         ],
-        "version": "3.0.10b0"
+        "version": "3.0.11b0"
     },
     "huaweicloudsdkeps": {
         "cmdline": [],
@@ -79915,7 +79996,7 @@
             "huaweicloudsdkeps.v1.model.show_resource_bind_ep_response",
             "huaweicloudsdkeps.v1.model.version_detail"
         ],
-        "version": "3.0.10b0"
+        "version": "3.0.11b0"
     },
     "huaweicloudsdkevs": {
         "cmdline": [],
@@ -80030,12 +80111,12 @@
             "huaweicloudsdkevs.v2.model.volume_type_extra_specs",
             "huaweicloudsdkevs.v2.model.zone_state"
         ],
-        "version": "3.0.10b0"
+        "version": "3.0.11b0"
     },
     "huaweicloudsdkexample": {
         "cmdline": [],
         "modules": [],
-        "version": "3.0.10b0"
+        "version": "3.0.11b0"
     },
     "huaweicloudsdkfgs": {
         "cmdline": [],
@@ -80177,7 +80258,7 @@
             "huaweicloudsdkfunctiongraph.v2.model.update_version_alias_request_body",
             "huaweicloudsdkfunctiongraph.v2.model.update_version_alias_response"
         ],
-        "version": "3.0.10b0"
+        "version": "3.0.11b0"
     },
     "huaweicloudsdkiam": {
         "cmdline": [],
@@ -80500,7 +80581,7 @@
             "huaweicloudsdkiam.v3.model.version_mediatypes",
             "huaweicloudsdkiam.v3.model.versions"
         ],
-        "version": "3.0.10b0"
+        "version": "3.0.11b0"
     },
     "huaweicloudsdkimage": {
         "cmdline": [],
@@ -80521,7 +80602,7 @@
             "huaweicloudsdkimage.v1.model.run_image_tagging_request",
             "huaweicloudsdkimage.v1.model.run_image_tagging_response"
         ],
-        "version": "3.0.10b0"
+        "version": "3.0.11b0"
     },
     "huaweicloudsdkims": {
         "cmdline": [],
@@ -80631,7 +80712,7 @@
             "huaweicloudsdkims.v2.model.update_image_request_body",
             "huaweicloudsdkims.v2.model.update_image_response"
         ],
-        "version": "3.0.10b0"
+        "version": "3.0.11b0"
     },
     "huaweicloudsdkiotda": {
         "cmdline": [],
@@ -80832,7 +80913,7 @@
             "huaweicloudsdkiotda.v5.model.update_subscription_response",
             "huaweicloudsdkiotda.v5.model.verify_certificate_dto"
         ],
-        "version": "3.0.10b0"
+        "version": "3.0.11b0"
     },
     "huaweicloudsdkkms": {
         "cmdline": [],
@@ -80955,7 +81036,7 @@
             "huaweicloudsdkkms.v1.model.update_key_rotation_interval_request_body",
             "huaweicloudsdkkms.v1.model.update_key_rotation_interval_response"
         ],
-        "version": "3.0.10b0"
+        "version": "3.0.11b0"
     },
     "huaweicloudsdklive": {
         "cmdline": [],
@@ -81004,7 +81085,7 @@
             "huaweicloudsdklive.v1.model.update_transcodings_template_response",
             "huaweicloudsdklive.v1.model.user_info"
         ],
-        "version": "3.0.10b0"
+        "version": "3.0.11b0"
     },
     "huaweicloudsdkmeeting": {
         "cmdline": [],
@@ -81114,6 +81195,8 @@
             "huaweicloudsdkmeeting.v1.model.id_mark_dto",
             "huaweicloudsdkmeeting.v1.model.invite_participant_request",
             "huaweicloudsdkmeeting.v1.model.invite_participant_response",
+            "huaweicloudsdkmeeting.v1.model.invite_with_pwd_request",
+            "huaweicloudsdkmeeting.v1.model.invite_with_pwd_response",
             "huaweicloudsdkmeeting.v1.model.list_meeting_file_response_dto",
             "huaweicloudsdkmeeting.v1.model.live_request",
             "huaweicloudsdkmeeting.v1.model.live_response",
@@ -81192,6 +81275,7 @@
             "huaweicloudsdkmeeting.v1.model.rest_conf_config_dto",
             "huaweicloudsdkmeeting.v1.model.rest_hands_up_req_body",
             "huaweicloudsdkmeeting.v1.model.rest_invite_req_body",
+            "huaweicloudsdkmeeting.v1.model.rest_invite_with_pwd_req_body",
             "huaweicloudsdkmeeting.v1.model.rest_lock_req_body",
             "huaweicloudsdkmeeting.v1.model.rest_lock_site_view_req_body",
             "huaweicloudsdkmeeting.v1.model.rest_mixed_picture_body",
@@ -81261,6 +81345,8 @@
             "huaweicloudsdkmeeting.v1.model.set_participant_view_response",
             "huaweicloudsdkmeeting.v1.model.set_role_request",
             "huaweicloudsdkmeeting.v1.model.set_role_response",
+            "huaweicloudsdkmeeting.v1.model.show_conf_org_request",
+            "huaweicloudsdkmeeting.v1.model.show_conf_org_response",
             "huaweicloudsdkmeeting.v1.model.show_corp_admin_request",
             "huaweicloudsdkmeeting.v1.model.show_corp_admin_response",
             "huaweicloudsdkmeeting.v1.model.show_corp_basic_info_request",
@@ -81299,6 +81385,8 @@
             "huaweicloudsdkmeeting.v1.model.show_recording_detail_response",
             "huaweicloudsdkmeeting.v1.model.show_region_info_of_meeting_request",
             "huaweicloudsdkmeeting.v1.model.show_region_info_of_meeting_response",
+            "huaweicloudsdkmeeting.v1.model.show_sp_res_request",
+            "huaweicloudsdkmeeting.v1.model.show_sp_res_response",
             "huaweicloudsdkmeeting.v1.model.show_user_detail_request",
             "huaweicloudsdkmeeting.v1.model.show_user_detail_response",
             "huaweicloudsdkmeeting.v1.model.slide_verify_code_check_dto",
@@ -81350,7 +81438,7 @@
             "huaweicloudsdkmeeting.v1.model.verify_code_check_dto",
             "huaweicloudsdkmeeting.v1.model.verify_code_send_dtov1"
         ],
-        "version": "3.0.10b0"
+        "version": "3.0.11b0"
     },
     "huaweicloudsdkmoderation": {
         "cmdline": [],
@@ -81389,7 +81477,7 @@
             "huaweicloudsdkmoderation.v1.moderation_async_client",
             "huaweicloudsdkmoderation.v1.moderation_client"
         ],
-        "version": "3.0.10b0"
+        "version": "3.0.11b0"
     },
     "huaweicloudsdkmpc": {
         "cmdline": [],
@@ -81543,7 +81631,7 @@
             "huaweicloudsdkmpc.v1.mpc_async_client",
             "huaweicloudsdkmpc.v1.mpc_client"
         ],
-        "version": "3.0.10b0"
+        "version": "3.0.11b0"
     },
     "huaweicloudsdkprojectman": {
         "cmdline": [],
@@ -81600,7 +81688,7 @@
             "huaweicloudsdkprojectman.v4.projectman_async_client",
             "huaweicloudsdkprojectman.v4.projectman_client"
         ],
-        "version": "3.0.10b0"
+        "version": "3.0.11b0"
     },
     "huaweicloudsdkservicestage": {
         "cmdline": [],
@@ -81785,7 +81873,7 @@
             "huaweicloudsdkservicestage.v2.servicestage_async_client",
             "huaweicloudsdkservicestage.v2.servicestage_client"
         ],
-        "version": "3.0.10b0"
+        "version": "3.0.11b0"
     },
     "huaweicloudsdktesthub": {
         "cmdline": [],
@@ -81842,7 +81930,7 @@
             "huaweicloudsdktesthub.v1.model.update_test_case_result_request_body",
             "huaweicloudsdktesthub.v1.model.update_test_case_result_response"
         ],
-        "version": "3.0.10b0"
+        "version": "3.0.11b0"
     },
     "huaweicloudsdktms": {
         "cmdline": [],
@@ -81872,7 +81960,7 @@
             "huaweicloudsdktms.v1.tms_async_client",
             "huaweicloudsdktms.v1.tms_client"
         ],
-        "version": "3.0.10b0"
+        "version": "3.0.11b0"
     },
     "huaweicloudsdkvpc": {
         "cmdline": [],
@@ -82061,7 +82149,7 @@
             "huaweicloudsdkvpc.v3.vpc_async_client",
             "huaweicloudsdkvpc.v3.vpc_client"
         ],
-        "version": "3.0.10b0"
+        "version": "3.0.11b0"
     },
     "huaweilteapi": {
         "cmdline": [],
@@ -88383,7 +88471,7 @@
             "getl.logging",
             "getl.manager"
         ],
-        "version": "1.1.0"
+        "version": "1.2.0"
     },
     "hussainpdf": {
         "cmdline": [],
@@ -88844,10 +88932,9 @@
             "hvoFuncs",
             "hvoFuncs.data_exporter",
             "hvoFuncs.misc",
-            "hvoFuncs.sharepoint",
-            "hvoFuncs.vars"
+            "hvoFuncs.sharepoint"
         ],
-        "version": "0.1.8"
+        "version": "0.1.9"
     },
     "hvplot": {
         "cmdline": [],
@@ -91601,7 +91688,7 @@
             "hydrafloods.timeseries",
             "hydrafloods.utils"
         ],
-        "version": "0.1.1"
+        "version": "0.1.4"
     },
     "hydragen": {
         "cmdline": [],
@@ -98963,7 +99050,7 @@
             "hypothesis.vendor.pretty",
             "hypothesis.version"
         ],
-        "version": "5.33.1"
+        "version": "5.33.2"
     },
     "hypothesis-auto": {
         "cmdline": [],
