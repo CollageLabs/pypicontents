@@ -311,7 +311,7 @@
     "qa4sm-reader": {
         "cmdline": [],
         "modules": [],
-        "version": "0.3.1"
+        "version": "0.3.2"
     },
     "qaamus": {
         "cmdline": [],
@@ -2258,12 +2258,13 @@
             "pulsar_qcm.pulsar_qcm",
             "pulsar_qcm.pulsar_qcm_ifc",
             "pulsar_qcm.pulsar_qcm_scpi_ifc",
+            "pulsar_qcm.pulsar_qcm_scpi_ifc_private",
             "pulsar_qrm",
             "pulsar_qrm.pulsar_qrm",
             "pulsar_qrm.pulsar_qrm_ifc",
             "pulsar_qrm.pulsar_qrm_scpi_ifc"
         ],
-        "version": "0.1.1"
+        "version": "0.1.2"
     },
     "qbo-db-connector": {
         "cmdline": [],
@@ -4845,6 +4846,7 @@
             "qcodes.dataset.database_fix_functions",
             "qcodes.dataset.descriptions",
             "qcodes.dataset.descriptions.dependencies",
+            "qcodes.dataset.descriptions.detect_shapes",
             "qcodes.dataset.descriptions.param_spec",
             "qcodes.dataset.descriptions.rundescriber",
             "qcodes.dataset.descriptions.versioning",
@@ -4895,6 +4897,7 @@
             "qcodes.instrument_drivers.AlazarTech.ATS",
             "qcodes.instrument_drivers.AlazarTech.ATS9360",
             "qcodes.instrument_drivers.AlazarTech.ATS9373",
+            "qcodes.instrument_drivers.AlazarTech.ATS9440",
             "qcodes.instrument_drivers.AlazarTech.ATS9870",
             "qcodes.instrument_drivers.AlazarTech.ATS_acquisition_controllers",
             "qcodes.instrument_drivers.AlazarTech.ats_api",
@@ -4912,13 +4915,9 @@
             "qcodes.instrument_drivers.Keysight.Infiniium",
             "qcodes.instrument_drivers.Keysight.KeysightAgilent_33XXX",
             "qcodes.instrument_drivers.Keysight.Keysight_34410A_submodules",
-            "qcodes.instrument_drivers.Keysight.Keysight_34460A",
             "qcodes.instrument_drivers.Keysight.Keysight_34460A_submodules",
-            "qcodes.instrument_drivers.Keysight.Keysight_34461A",
             "qcodes.instrument_drivers.Keysight.Keysight_34461A_submodules",
-            "qcodes.instrument_drivers.Keysight.Keysight_34465A",
             "qcodes.instrument_drivers.Keysight.Keysight_34465A_submodules",
-            "qcodes.instrument_drivers.Keysight.Keysight_34470A",
             "qcodes.instrument_drivers.Keysight.Keysight_34470A_submodules",
             "qcodes.instrument_drivers.Keysight.Keysight_B2962A",
             "qcodes.instrument_drivers.Keysight.Keysight_N5183B",
@@ -4939,13 +4938,13 @@
             "qcodes.instrument_drivers.Keysight.keysightb1500.KeysightB1500_base",
             "qcodes.instrument_drivers.Keysight.keysightb1500.KeysightB1500_module",
             "qcodes.instrument_drivers.Keysight.keysightb1500.KeysightB1500_sampling_measurement",
+            "qcodes.instrument_drivers.Keysight.keysightb1500.KeysightB1511B",
             "qcodes.instrument_drivers.Keysight.keysightb1500.KeysightB1517A",
             "qcodes.instrument_drivers.Keysight.keysightb1500.KeysightB1520A",
             "qcodes.instrument_drivers.Keysight.keysightb1500.KeysightB1530A",
             "qcodes.instrument_drivers.Keysight.keysightb1500.constants",
             "qcodes.instrument_drivers.Keysight.keysightb1500.message_builder",
             "qcodes.instrument_drivers.Keysight.private",
-            "qcodes.instrument_drivers.Keysight.private.Keysight_344xxA",
             "qcodes.instrument_drivers.Keysight.private.Keysight_344xxA_submodules",
             "qcodes.instrument_drivers.Keysight.private.error_handling",
             "qcodes.instrument_drivers.Lakeshore",
@@ -4961,7 +4960,6 @@
             "qcodes.instrument_drivers.Minicircuits.USBHIDMixin",
             "qcodes.instrument_drivers.Minicircuits.USB_SPDT",
             "qcodes.instrument_drivers.QDev",
-            "qcodes.instrument_drivers.QDev.QDac",
             "qcodes.instrument_drivers.QDev.QDac_channels",
             "qcodes.instrument_drivers.QDevil",
             "qcodes.instrument_drivers.QDevil.QDevil_QDAC",
@@ -5031,7 +5029,6 @@
             "qcodes.instrument_drivers.tektronix.Keithley_2000",
             "qcodes.instrument_drivers.tektronix.Keithley_2400",
             "qcodes.instrument_drivers.tektronix.Keithley_2450",
-            "qcodes.instrument_drivers.tektronix.Keithley_2600",
             "qcodes.instrument_drivers.tektronix.Keithley_2600_channels",
             "qcodes.instrument_drivers.tektronix.Keithley_3706A",
             "qcodes.instrument_drivers.tektronix.Keithley_6500",
@@ -5068,7 +5065,6 @@
             "qcodes.tests",
             "qcodes.tests.common",
             "qcodes.tests.conftest",
-            "qcodes.tests.data_mocks",
             "qcodes.tests.dataset",
             "qcodes.tests.dataset.conftest",
             "qcodes.tests.dataset.helper_functions",
@@ -5082,6 +5078,8 @@
             "qcodes.tests.dataset.test_dataset_loading",
             "qcodes.tests.dataset.test_dependencies",
             "qcodes.tests.dataset.test_descriptions",
+            "qcodes.tests.dataset.test_detect_shape",
+            "qcodes.tests.dataset.test_doNd",
             "qcodes.tests.dataset.test_experiment_container",
             "qcodes.tests.dataset.test_fix_functions",
             "qcodes.tests.dataset.test_guids",
@@ -5108,6 +5106,7 @@
             "qcodes.tests.drivers.keysight_b1500.b1500_driver_tests",
             "qcodes.tests.drivers.keysight_b1500.b1500_driver_tests.test_b1500",
             "qcodes.tests.drivers.keysight_b1500.b1500_driver_tests.test_b1500_module",
+            "qcodes.tests.drivers.keysight_b1500.b1500_driver_tests.test_b1511b_smu",
             "qcodes.tests.drivers.keysight_b1500.b1500_driver_tests.test_b1517a_smu",
             "qcodes.tests.drivers.keysight_b1500.b1500_driver_tests.test_b1520a_cmu",
             "qcodes.tests.drivers.keysight_b1500.b1500_driver_tests.test_sampling_measurement",
@@ -5142,7 +5141,35 @@
             "qcodes.tests.drivers.test_tektronix_AWG70000A",
             "qcodes.tests.drivers.test_tektronix_dpo7200xx",
             "qcodes.tests.drivers.test_weinchel",
+            "qcodes.tests.helpers",
+            "qcodes.tests.helpers.test_attributes_set_to_context_manager",
+            "qcodes.tests.helpers.test_class_strings",
+            "qcodes.tests.helpers.test_compare_dictionaries",
+            "qcodes.tests.helpers.test_delegate_attribues",
+            "qcodes.tests.helpers.test_isfunction",
+            "qcodes.tests.helpers.test_issequence",
+            "qcodes.tests.helpers.test_issequenceof",
+            "qcodes.tests.helpers.test_json_encoder",
+            "qcodes.tests.helpers.test_make_sweep",
+            "qcodes.tests.helpers.test_on_off_mapping",
+            "qcodes.tests.helpers.test_partial_with_docstring",
+            "qcodes.tests.helpers.test_permissive_range",
+            "qcodes.tests.helpers.test_strip_attrs",
+            "qcodes.tests.helpers.test_waitsecs",
             "qcodes.tests.instrument_mocks",
+            "qcodes.tests.legacy",
+            "qcodes.tests.legacy.data_mocks",
+            "qcodes.tests.legacy.test_combined_loop",
+            "qcodes.tests.legacy.test_data",
+            "qcodes.tests.legacy.test_format",
+            "qcodes.tests.legacy.test_generic_formatter",
+            "qcodes.tests.legacy.test_hdf5formatter",
+            "qcodes.tests.legacy.test_location_provider",
+            "qcodes.tests.legacy.test_loop",
+            "qcodes.tests.legacy.test_measure",
+            "qcodes.tests.legacy.test_plots",
+            "qcodes.tests.legacy.test_qcmatplotlib_functions",
+            "qcodes.tests.legacy.test_threading",
             "qcodes.tests.parameter",
             "qcodes.tests.parameter.conftest",
             "qcodes.tests.parameter.test_array_parameter",
@@ -5168,39 +5195,41 @@
             "qcodes.tests.parameter.test_val_mapping",
             "qcodes.tests.test_autoloadable_channels",
             "qcodes.tests.test_channels",
-            "qcodes.tests.test_combined_loop",
             "qcodes.tests.test_command",
             "qcodes.tests.test_config",
-            "qcodes.tests.test_data",
             "qcodes.tests.test_deprecate",
-            "qcodes.tests.test_doNd",
             "qcodes.tests.test_field_vector",
-            "qcodes.tests.test_format",
-            "qcodes.tests.test_generic_formatter",
-            "qcodes.tests.test_hdf5formatter",
-            "qcodes.tests.test_helpers",
             "qcodes.tests.test_installation_info",
             "qcodes.tests.test_instrument",
             "qcodes.tests.test_interactive_widget",
-            "qcodes.tests.test_json",
-            "qcodes.tests.test_location_provider",
             "qcodes.tests.test_logger",
-            "qcodes.tests.test_loop",
-            "qcodes.tests.test_measure",
             "qcodes.tests.test_metadata",
             "qcodes.tests.test_monitor",
             "qcodes.tests.test_plot_utils",
-            "qcodes.tests.test_plots",
-            "qcodes.tests.test_qcmatplotlib_functions",
             "qcodes.tests.test_slack",
             "qcodes.tests.test_snapshot",
             "qcodes.tests.test_station",
             "qcodes.tests.test_sweep_values",
             "qcodes.tests.test_testutils",
-            "qcodes.tests.test_threading",
-            "qcodes.tests.test_validators",
             "qcodes.tests.test_visa",
-            "qcodes.tests.test_wrong_address",
+            "qcodes.tests.validators",
+            "qcodes.tests.validators.conftest",
+            "qcodes.tests.validators.test_arrays",
+            "qcodes.tests.validators.test_basic",
+            "qcodes.tests.validators.test_bool",
+            "qcodes.tests.validators.test_callable",
+            "qcodes.tests.validators.test_complex",
+            "qcodes.tests.validators.test_dict",
+            "qcodes.tests.validators.test_enum",
+            "qcodes.tests.validators.test_ints",
+            "qcodes.tests.validators.test_lists",
+            "qcodes.tests.validators.test_multi_type",
+            "qcodes.tests.validators.test_multiples",
+            "qcodes.tests.validators.test_numbers",
+            "qcodes.tests.validators.test_permissive_ints",
+            "qcodes.tests.validators.test_permissive_multiples",
+            "qcodes.tests.validators.test_sequence",
+            "qcodes.tests.validators.test_string",
             "qcodes.utils",
             "qcodes.utils.command",
             "qcodes.utils.dataset",
@@ -5219,7 +5248,7 @@
             "qcodes.utils.validators",
             "qcodes.version"
         ],
-        "version": "0.18.0"
+        "version": "0.19.0"
     },
     "qcodes-contrib-drivers": {
         "cmdline": [],
@@ -6128,10 +6157,9 @@
             "qcware.util.transforms",
             "qcware.util.transforms.helpers",
             "qcware.util.transforms.transform_params",
-            "qcware.util.transforms.transform_results",
-            "qcware.version"
+            "qcware.util.transforms.transform_results"
         ],
-        "version": "2.2"
+        "version": "2.2.1"
     },
     "qcware-quasar": {
         "cmdline": [],
@@ -7343,7 +7371,7 @@
             "qforce.qm.qm",
             "qforce.qm.qm_base"
         ],
-        "version": "0.2.4"
+        "version": "0.2.5"
     },
     "qforestmath": {
         "cmdline": [],
@@ -14773,7 +14801,7 @@
             "qnorm.quantile_normalize",
             "qnorm.util"
         ],
-        "version": "0.6.1"
+        "version": "0.6.2"
     },
     "qnpct": {
         "cmdline": [],
@@ -15028,7 +15056,7 @@
             "qondor.svj",
             "qondor.utils"
         ],
-        "version": "1.6"
+        "version": "1.9"
     },
     "qonos": {
         "cmdline": [],
@@ -16861,6 +16889,11 @@
         ],
         "version": "1.6.0"
     },
+    "qrcodegenerator": {
+        "cmdline": [],
+        "modules": [],
+        "version": ""
+    },
     "qrcodes": {
         "cmdline": [],
         "modules": [
@@ -17440,9 +17473,10 @@
         "modules": [
             "qsAPI",
             "qsAPI._controller",
-            "qsAPI._interfaces"
+            "qsAPI._interfaces",
+            "qsAPI.qsAPI"
         ],
-        "version": "2.1.0"
+        "version": "2.2.0"
     },
     "qsar": {
         "cmdline": [],
@@ -18857,7 +18891,7 @@
             "tuia.wincontrols",
             "tuia.wintypes"
         ],
-        "version": "5.4.39"
+        "version": "5.4.40"
     },
     "qtalchemy": {
         "cmdline": [],
@@ -25023,6 +25057,28 @@
         ],
         "version": "1.0.17"
     },
+    "quantify-scheduler": {
+        "cmdline": [],
+        "modules": [
+            "quantify",
+            "quantify.scheduler",
+            "quantify.scheduler.backends",
+            "quantify.scheduler.backends.pulsar_backend",
+            "quantify.scheduler.backends.visualization",
+            "quantify.scheduler.compilation",
+            "quantify.scheduler.frontends",
+            "quantify.scheduler.gate_library",
+            "quantify.scheduler.pulse_library",
+            "quantify.scheduler.resources",
+            "quantify.scheduler.schemas",
+            "quantify.scheduler.types",
+            "quantify.scheduler.visualization",
+            "quantify.scheduler.visualization.circuit_diagram",
+            "quantify.scheduler.visualization.pulse_scheme",
+            "quantify.scheduler.waveforms"
+        ],
+        "version": "0.1.0"
+    },
     "quantile": {
         "cmdline": [],
         "modules": [
@@ -27095,9 +27151,10 @@
         "cmdline": [],
         "modules": [
             "quantumchempy",
+            "quantumchempy.gen_basis",
             "quantumchempy.utils"
         ],
-        "version": "0.1"
+        "version": "0.2"
     },
     "quantumcore-contenttypes": {
         "cmdline": [],
@@ -29032,6 +29089,16 @@
         ],
         "version": "5.0.2"
     },
+    "quastrado-check-type-wrapper": {
+        "cmdline": [],
+        "modules": [
+            "check_type_wrapper",
+            "check_type_wrapper.check_type",
+            "check_type_wrapper.discrepancy_item",
+            "check_type_wrapper.exception"
+        ],
+        "version": "0.1.3"
+    },
     "quat-to-euler": {
         "cmdline": [],
         "modules": [
@@ -30616,13 +30683,13 @@
             "cli.datatypes",
             "cli.groups",
             "cli.organization",
+            "cli.permissions",
             "cli.scheduler",
             "cli.settings",
             "cli.user",
             "cli.worker",
             "querylayer",
             "querylayer.authorization",
-            "querylayer.authorization.constants",
             "querylayer.authorization.dao",
             "querylayer.authorization.dto",
             "querylayer.authorization.exceptions",
@@ -30631,8 +30698,10 @@
             "querylayer.common",
             "querylayer.common.dao",
             "querylayer.common.dao.builtin_datatypes",
-            "querylayer.common.dao.int_enum",
+            "querylayer.common.dao.default_groups",
+            "querylayer.common.dao.default_permissions",
             "querylayer.common.dao.timestamp_mixin",
+            "querylayer.common.db_filter",
             "querylayer.common.decorators",
             "querylayer.common.decorators.check_authorization",
             "querylayer.common.decorators.run_transaction",
@@ -30643,6 +30712,8 @@
             "querylayer.common.repository.db_interface",
             "querylayer.common.repository.pg",
             "querylayer.common.repository.redis",
+            "querylayer.common.services",
+            "querylayer.common.services.base",
             "querylayer.configs",
             "querylayer.configs.env",
             "querylayer.constants",
@@ -30685,6 +30756,7 @@
             "querylayer.reports.dto",
             "querylayer.reports.dto.finding",
             "querylayer.reports.dto.finding_data_types",
+            "querylayer.reports.exceptions",
             "querylayer.reports.repository",
             "querylayer.reports.service",
             "querylayer.scheduler",
@@ -30703,7 +30775,7 @@
             "querylayer.users.repository",
             "querylayer.users.service"
         ],
-        "version": "0.0.2"
+        "version": "0.0.3"
     },
     "querylist": {
         "cmdline": [],
@@ -31892,7 +31964,7 @@
             "tests.unit",
             "tests.unit.test_consumer"
         ],
-        "version": "3.2.1"
+        "version": "3.2.2"
     },
     "queue-utilities": {
         "cmdline": [],
@@ -32211,7 +32283,7 @@
             "qui.web",
             "qui.web.tornado"
         ],
-        "version": "1.12.2"
+        "version": "1.13.0"
     },
     "quic": {
         "cmdline": [],
@@ -34761,6 +34833,20 @@
             "quilt3distribute.validation"
         ],
         "version": "0.1.3"
+    },
+    "quiltz": {
+        "cmdline": [],
+        "modules": [
+            "quiltz",
+            "quiltz.id",
+            "quiltz.id.id",
+            "quiltz.id.testbuilders",
+            "quiltz.parsers",
+            "quiltz.results",
+            "quiltz.validator",
+            "quiltz.version"
+        ],
+        "version": "0.1.7"
     },
     "quimb": {
         "cmdline": [
