@@ -451,7 +451,12 @@
             "hail.methods.family_methods",
             "hail.methods.impex",
             "hail.methods.misc",
+            "hail.methods.pca",
             "hail.methods.qc",
+            "hail.methods.relatedness",
+            "hail.methods.relatedness.identity_by_descent",
+            "hail.methods.relatedness.king",
+            "hail.methods.relatedness.pc_relate",
             "hail.methods.statgen",
             "hail.nd",
             "hail.nd.nd",
@@ -463,6 +468,7 @@
             "hail.typecheck",
             "hail.typecheck.check",
             "hail.utils",
+            "hail.utils.deduplicate",
             "hail.utils.hadoop_utils",
             "hail.utils.interval",
             "hail.utils.java",
@@ -479,10 +485,16 @@
             "hailtop.aiogoogle.auth.session",
             "hailtop.aiogoogle.client",
             "hailtop.aiogoogle.client.base_client",
+            "hailtop.aiogoogle.client.bigquery_client",
             "hailtop.aiogoogle.client.compute_client",
             "hailtop.aiogoogle.client.container_client",
             "hailtop.aiogoogle.client.iam_client",
             "hailtop.aiogoogle.client.logging_client",
+            "hailtop.aiogoogle.client.storage_client",
+            "hailtop.aiotools",
+            "hailtop.aiotools.fs",
+            "hailtop.aiotools.stream",
+            "hailtop.aiotools.utils",
             "hailtop.auth",
             "hailtop.auth.auth",
             "hailtop.auth.sql_config",
@@ -492,6 +504,11 @@
             "hailtop.batch.batch",
             "hailtop.batch.batch_pool_executor",
             "hailtop.batch.conftest",
+            "hailtop.batch.exceptions",
+            "hailtop.batch.genetics",
+            "hailtop.batch.genetics.regenie",
+            "hailtop.batch.genetics.regenie.regenie",
+            "hailtop.batch.globals",
             "hailtop.batch.job",
             "hailtop.batch.resource",
             "hailtop.batch.utils",
@@ -513,8 +530,13 @@
             "hailtop.hailctl.auth.copy_paste_login",
             "hailtop.hailctl.auth.login",
             "hailtop.hailctl.auth.logout",
+            "hailtop.hailctl.auth.user",
             "hailtop.hailctl.batch",
             "hailtop.hailctl.batch.batch_cli_utils",
+            "hailtop.hailctl.batch.billing",
+            "hailtop.hailctl.batch.billing.cli",
+            "hailtop.hailctl.batch.billing.get",
+            "hailtop.hailctl.batch.billing.list_billing_projects",
             "hailtop.hailctl.batch.cancel",
             "hailtop.hailctl.batch.cli",
             "hailtop.hailctl.batch.delete",
@@ -546,11 +568,14 @@
             "hailtop.hailctl.dev.config.cli",
             "hailtop.hailctl.dev.deploy",
             "hailtop.hailctl.dev.deploy.cli",
+            "hailtop.hailctl.dev.query",
+            "hailtop.hailctl.dev.query.cli",
             "hailtop.tls",
             "hailtop.utils",
             "hailtop.utils.process",
             "hailtop.utils.rate_limiter",
             "hailtop.utils.rates",
+            "hailtop.utils.serialization",
             "hailtop.utils.time",
             "hailtop.utils.tqdm",
             "hailtop.utils.utils",
@@ -583,9 +608,14 @@
             "test.hail.matrixtable.test_grouped_matrix_table",
             "test.hail.matrixtable.test_matrix_table",
             "test.hail.methods",
+            "test.hail.methods.relatedness",
+            "test.hail.methods.relatedness.test_identity_by_descent",
+            "test.hail.methods.relatedness.test_pc_relate",
             "test.hail.methods.test_family_methods",
             "test.hail.methods.test_impex",
+            "test.hail.methods.test_king",
             "test.hail.methods.test_misc",
+            "test.hail.methods.test_pca",
             "test.hail.methods.test_qc",
             "test.hail.methods.test_statgen",
             "test.hail.stats",
@@ -599,6 +629,7 @@
             "test.hail.typecheck",
             "test.hail.typecheck.test_typecheck",
             "test.hail.utils",
+            "test.hail.utils.test_deduplicate",
             "test.hail.utils.test_google_fs_utils",
             "test.hail.utils.test_placement_tree",
             "test.hail.utils.test_utils",
@@ -606,18 +637,23 @@
             "test.hailtop.batch",
             "test.hailtop.batch.test_batch",
             "test.hailtop.batch.test_batch_pool_executor",
-            "test.hailtop.gear",
-            "test.hailtop.gear.test_deploy_config",
+            "test.hailtop.batch.test_regenie",
+            "test.hailtop.config",
+            "test.hailtop.config.test_deploy_config",
+            "test.hailtop.conftest",
             "test.hailtop.hailctl",
             "test.hailtop.hailctl.dataproc",
             "test.hailtop.hailctl.dataproc.conftest",
+            "test.hailtop.hailctl.dataproc.test_cli",
+            "test.hailtop.hailctl.dataproc.test_connect",
             "test.hailtop.hailctl.dataproc.test_list_clusters",
             "test.hailtop.hailctl.dataproc.test_modify",
             "test.hailtop.hailctl.dataproc.test_start",
             "test.hailtop.hailctl.dataproc.test_stop",
-            "test.hailtop.hailctl.dataproc.test_submit"
+            "test.hailtop.hailctl.dataproc.test_submit",
+            "test.hailtop.test_aiogoogle"
         ],
-        "version": "0.2.53"
+        "version": "99.2.58"
     },
     "j1939": {
         "cmdline": [],
@@ -2391,7 +2427,7 @@
             "JAK.WebEngine",
             "JAK.Widgets"
         ],
-        "version": "3.5.3"
+        "version": "3.5.5"
     },
     "jadelesscoffee-middleware": {
         "cmdline": [],
@@ -3149,6 +3185,10 @@
             "jaitool.aug.augment_loader",
             "jaitool.draw",
             "jaitool.draw.drawing_utils",
+            "jaitool.evaluation",
+            "jaitool.evaluation.evaluator",
+            "jaitool.graph",
+            "jaitool.graph.plot",
             "jaitool.inference",
             "jaitool.inference.d2_infer",
             "jaitool.inference.models",
@@ -3165,7 +3205,7 @@
             "jaitool.training.train_multi_val_key_seg",
             "jaitool.training.training"
         ],
-        "version": "0.0.4"
+        "version": "0.0.5"
     },
     "jaja": {
         "cmdline": [],
@@ -8298,13 +8338,9 @@
             "jasmin.tools.singleton",
             "jasmin.tools.spread",
             "jasmin.tools.spread.pb",
-            "jasmin.tools.stats",
-            "jasmin.vendor",
-            "jasmin.vendor.messaging",
-            "jasmin.vendor.messaging.sms",
-            "jasmin.vendor.messaging.sms.gsm0338"
+            "jasmin.tools.stats"
         ],
-        "version": "0.10.4"
+        "version": "0.10.5"
     },
     "jasmin-cis": {
         "cmdline": [
@@ -10115,6 +10151,45 @@
         ],
         "version": "1.0.3"
     },
+    "jax-verify": {
+        "cmdline": [],
+        "modules": [
+            "docs.conf",
+            "examples.run_boundprop",
+            "examples.run_lp_solver",
+            "examples.run_sdp_verify",
+            "jax_verify",
+            "jax_verify.sdp_verify",
+            "jax_verify.src.bound_propagation",
+            "jax_verify.src.crown_ibp",
+            "jax_verify.src.cvxpy_relaxation_solver",
+            "jax_verify.src.fastlin",
+            "jax_verify.src.ibp",
+            "jax_verify.src.intersection",
+            "jax_verify.src.relaxation",
+            "jax_verify.src.sdp_verify.crown_boundprop",
+            "jax_verify.src.sdp_verify.cvxpy_verify",
+            "jax_verify.src.sdp_verify.eigenvector_utils",
+            "jax_verify.src.sdp_verify.sdp_verify",
+            "jax_verify.src.sdp_verify.utils",
+            "jax_verify.src.solve_relaxation",
+            "jax_verify.src.synthetic_primitives",
+            "jax_verify.src.utils",
+            "jax_verify.tests.bound_propagation_test",
+            "jax_verify.tests.crownibp_test",
+            "jax_verify.tests.cvxpy_relaxation_test",
+            "jax_verify.tests.fastlin_test",
+            "jax_verify.tests.ibp_test",
+            "jax_verify.tests.model_zoo",
+            "jax_verify.tests.model_zoo_test",
+            "jax_verify.tests.sdp_verify.crown_boundprop_test",
+            "jax_verify.tests.sdp_verify.cvxpy_verify_test",
+            "jax_verify.tests.sdp_verify.sdp_verify_test",
+            "jax_verify.tests.sdp_verify.test_utilfuns",
+            "jax_verify.tests.sdp_verify.test_utils"
+        ],
+        "version": "1.0"
+    },
     "jaxboard": {
         "cmdline": [],
         "modules": [
@@ -10795,7 +10870,7 @@
     "jbxapi": {
         "cmdline": [],
         "modules": [],
-        "version": "3.12.0"
+        "version": "3.13.0"
     },
     "jbzd-imgcat": {
         "cmdline": [],
@@ -18094,7 +18169,7 @@
             "jeefies/jeefies_sec.hashsec",
             "jeefies/jeefies_sec.hexsec"
         ],
-        "version": "0.0.3"
+        "version": "0.0.4"
     },
     "jeekdistance": {
         "cmdline": [],
@@ -21748,7 +21823,7 @@
             "RPi",
             "RPi.GPIO"
         ],
-        "version": "2.0.11"
+        "version": "2.0.12"
     },
     "jetson-stats": {
         "cmdline": [],
@@ -23194,6 +23269,23 @@
         ],
         "modules": [],
         "version": "0.1.4"
+    },
+    "jhsp": {
+        "cmdline": [],
+        "modules": [
+            "jhsp",
+            "jhsp.sann",
+            "jhsp.sann.bin",
+            "jhsp.sann.bin.config",
+            "jhsp.sann.bin.data_utils",
+            "jhsp.sann.bin.model_utils",
+            "jhsp.sann.bin.other_utils",
+            "jhsp.sann.model",
+            "jhsp.sann.model.ANN",
+            "jhsp.sann.model.SANN",
+            "jhsp.waitting"
+        ],
+        "version": "0.0.8"
     },
     "jhtalib": {
         "cmdline": [],
@@ -24769,6 +24861,7 @@
             "jijmodeling.expression.constraint",
             "jijmodeling.expression.expression",
             "jijmodeling.expression.from_serializable",
+            "jijmodeling.expression.mathfuncs",
             "jijmodeling.expression.sum",
             "jijmodeling.extracte_vars",
             "jijmodeling.problem",
@@ -24776,6 +24869,8 @@
             "jijmodeling.transpilers",
             "jijmodeling.transpilers.calc_value",
             "jijmodeling.transpilers.decode_from_sampleset",
+            "jijmodeling.transpilers.shape_check",
+            "jijmodeling.transpilers.to_pulp",
             "jijmodeling.transpilers.to_pyqubo",
             "jijmodeling.transpilers.utils",
             "jijmodeling.variables",
@@ -24784,7 +24879,7 @@
             "jijmodeling.variables.var_array",
             "jijmodeling.variables.variable"
         ],
-        "version": "0.2.1"
+        "version": "0.2.5"
     },
     "jikan": {
         "cmdline": [],
@@ -24969,6 +25064,7 @@
             "jiminy_py.meshcat",
             "jiminy_py.meshcat.recorder",
             "jiminy_py.meshcat.server",
+            "jiminy_py.meshcat.utilities",
             "jiminy_py.meshcat.wrapper",
             "jiminy_py.pinocchio",
             "jiminy_py.pinocchio.deprecated",
@@ -24989,7 +25085,7 @@
             "jiminy_py.state",
             "jiminy_py.viewer"
         ],
-        "version": "1.4.1"
+        "version": "1.4.4"
     },
     "jimit": {
         "cmdline": [],
@@ -26837,7 +26933,7 @@
             "textfile",
             "timestamp"
         ],
-        "version": "0.9.15"
+        "version": "0.9.16"
     },
     "jinjamodificado": {
         "cmdline": [],
@@ -31643,9 +31739,10 @@
     "jlua-basic-drsamse": {
         "cmdline": [],
         "modules": [
-            "JLua"
+            "JLua",
+            "JLua.TestSources"
         ],
-        "version": "0.1.1"
+        "version": "0.2.0"
     },
     "jlv": {
         "cmdline": [],
@@ -35826,7 +35923,7 @@
     "joeflow": {
         "cmdline": [],
         "modules": [],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     "joeji-helloworld-library": {
         "cmdline": [],
@@ -36185,7 +36282,7 @@
     "johnnycanencrypt": {
         "cmdline": [],
         "modules": [],
-        "version": "0.1.0"
+        "version": "0.3.0"
     },
     "johnnydep": {
         "cmdline": [],
@@ -39164,7 +39261,7 @@
             "jpkfile",
             "jpkfile.jpkfile"
         ],
-        "version": "1.6"
+        "version": "1.6.1"
     },
     "jpl": {
         "cmdline": [],
@@ -39937,7 +40034,7 @@
             "setupext.test_java",
             "setupext.utils"
         ],
-        "version": "1.1.1"
+        "version": "1.1.2"
     },
     "jpype1-py3": {
         "cmdline": [],
@@ -45605,6 +45702,15 @@
         ],
         "version": "0.2.11"
     },
+    "json-compare-deep": {
+        "cmdline": [],
+        "modules": [
+            "json_compare",
+            "json_compare.json_compare",
+            "json_compare.test_json_compare"
+        ],
+        "version": "2.0"
+    },
     "json-conf-autoref": {
         "cmdline": [],
         "modules": [
@@ -45663,9 +45769,10 @@
         "modules": [
             "json_database",
             "json_database.exceptions",
+            "json_database.search",
             "json_database.utils"
         ],
-        "version": "0.2.3"
+        "version": "0.2.6"
     },
     "json-dataclass-io-hooks": {
         "cmdline": [],
@@ -49325,7 +49432,7 @@
             "jsonify_html.template_manager",
             "jsonify_html.utils"
         ],
-        "version": "1.0.5"
+        "version": "1.0.7"
     },
     "jsonimport": {
         "cmdline": [],
@@ -51023,9 +51130,12 @@
         "cmdline": [],
         "modules": [
             "jsonschema2ddl",
-            "jsonschema2ddl.translators"
+            "jsonschema2ddl.models",
+            "jsonschema2ddl.translators",
+            "jsonschema2ddl.types",
+            "jsonschema2ddl.utils"
         ],
-        "version": "0.0.8"
+        "version": "0.0.10"
     },
     "jsonschema2md": {
         "cmdline": [],
@@ -52883,12 +52993,8 @@
     },
     "jtalkbot": {
         "cmdline": [],
-        "modules": [
-            "jtalkbot",
-            "jtalkbot.openjtalk",
-            "jtalkbot.version"
-        ],
-        "version": "0.5.0"
+        "modules": [],
+        "version": "0.6.0"
     },
     "jtalkpy": {
         "cmdline": [],
@@ -58788,6 +58894,15 @@
         ],
         "version": "0.1.0"
     },
+    "jupyter-forward": {
+        "cmdline": [],
+        "modules": [
+            "jupyter_forward",
+            "jupyter_forward.cli",
+            "jupyter_forward.core"
+        ],
+        "version": "2020.10.22.1"
+    },
     "jupyter-francy": {
         "cmdline": [],
         "modules": [
@@ -59236,7 +59351,7 @@
     "jupyter-kite": {
         "cmdline": [],
         "modules": [],
-        "version": "1.1.0"
+        "version": "1.2.0"
     },
     "jupyter-lab-serverless": {
         "cmdline": [],
@@ -60614,6 +60729,23 @@
         ],
         "version": "0.3.1.dev0"
     },
+    "jupyter-vvp": {
+        "cmdline": [],
+        "modules": [
+            "jupytervvp",
+            "jupytervvp.deploymentapiconstants",
+            "jupytervvp.deploymentoutput",
+            "jupytervvp.deployments",
+            "jupytervvp.flinksql",
+            "jupytervvp.flinksqlkernel",
+            "jupytervvp.httpsession",
+            "jupytervvp.jsonconversion",
+            "jupytervvp.variablesubstitution",
+            "jupytervvp.vvpmagics",
+            "jupytervvp.vvpsession"
+        ],
+        "version": "0.1.0"
+    },
     "jupyter-web-report": {
         "cmdline": [],
         "modules": [
@@ -61091,7 +61223,7 @@
             "kubespawner.traitlets",
             "kubespawner.utils"
         ],
-        "version": "0.14.0"
+        "version": "0.14.1"
     },
     "jupyterhub-kubespawner-dev": {
         "cmdline": [],
@@ -61579,7 +61711,7 @@
             "jupyterlab.tests.test_registry",
             "jupyterlab.utils"
         ],
-        "version": "2.2.8"
+        "version": "2.2.9"
     },
     "jupyterlab-apod": {
         "cmdline": [],
@@ -62076,7 +62208,7 @@
             "jupyterlab_proxy_gui._version",
             "jupyterlab_proxy_gui.handlers"
         ],
-        "version": "0.1.4"
+        "version": "0.1.8"
     },
     "jupyterlab-pullrequests": {
         "cmdline": [],
@@ -63744,7 +63876,7 @@
             "justengel_material.custom_template",
             "justengel_material.utils"
         ],
-        "version": "1.0.1"
+        "version": "1.0.2"
     },
     "justengel-theme": {
         "cmdline": [],
