@@ -1551,7 +1551,7 @@
             "wafec_wrapt_custom.utility",
             "wafec_wrapt_custom.wrappers"
         ],
-        "version": "1.0.13"
+        "version": "1.0.17"
     },
     "wafer": {
         "cmdline": [],
@@ -2503,6 +2503,7 @@
             "wagtail.admin.tests.benches",
             "wagtail.admin.tests.pages",
             "wagtail.admin.tests.pages.test_content_type_use_view",
+            "wagtail.admin.tests.pages.test_convert_alias",
             "wagtail.admin.tests.pages.test_copy_page",
             "wagtail.admin.tests.pages.test_create_page",
             "wagtail.admin.tests.pages.test_dashboard",
@@ -2531,6 +2532,7 @@
             "wagtail.admin.tests.test_filters",
             "wagtail.admin.tests.test_forms",
             "wagtail.admin.tests.test_html_ruleset",
+            "wagtail.admin.tests.test_icon_sprite",
             "wagtail.admin.tests.test_jinja2",
             "wagtail.admin.tests.test_messages",
             "wagtail.admin.tests.test_moderation_list",
@@ -2564,6 +2566,24 @@
             "wagtail.admin.views.mixins",
             "wagtail.admin.views.page_privacy",
             "wagtail.admin.views.pages",
+            "wagtail.admin.views.pages.convert_alias",
+            "wagtail.admin.views.pages.copy",
+            "wagtail.admin.views.pages.create",
+            "wagtail.admin.views.pages.delete",
+            "wagtail.admin.views.pages.edit",
+            "wagtail.admin.views.pages.history",
+            "wagtail.admin.views.pages.listing",
+            "wagtail.admin.views.pages.lock",
+            "wagtail.admin.views.pages.moderation",
+            "wagtail.admin.views.pages.move",
+            "wagtail.admin.views.pages.ordering",
+            "wagtail.admin.views.pages.preview",
+            "wagtail.admin.views.pages.revisions",
+            "wagtail.admin.views.pages.search",
+            "wagtail.admin.views.pages.unpublish",
+            "wagtail.admin.views.pages.usage",
+            "wagtail.admin.views.pages.utils",
+            "wagtail.admin.views.pages.workflow",
             "wagtail.admin.views.reports",
             "wagtail.admin.views.tags",
             "wagtail.admin.views.userbar",
@@ -2768,7 +2788,6 @@
             "wagtail.core.management.commands.purge_revisions",
             "wagtail.core.management.commands.replace_text",
             "wagtail.core.management.commands.set_url_paths",
-            "wagtail.core.middleware",
             "wagtail.core.migrations",
             "wagtail.core.migrations.0001_initial",
             "wagtail.core.migrations.0001_squashed_0016_change_page_url_path_to_text_field",
@@ -2824,6 +2843,13 @@
             "wagtail.core.migrations.0050_workflow_rejected_to_needs_changes",
             "wagtail.core.migrations.0051_taskstate_comment",
             "wagtail.core.migrations.0052_pagelogentry",
+            "wagtail.core.migrations.0053_locale_model",
+            "wagtail.core.migrations.0054_initial_locale",
+            "wagtail.core.migrations.0055_page_locale_fields",
+            "wagtail.core.migrations.0056_page_locale_fields_populate",
+            "wagtail.core.migrations.0057_page_locale_fields_notnull",
+            "wagtail.core.migrations.0058_page_alias_of",
+            "wagtail.core.migrations.0059_apply_collection_ordering",
             "wagtail.core.models",
             "wagtail.core.permission_policies",
             "wagtail.core.permission_policies.base",
@@ -2846,6 +2872,7 @@
             "wagtail.core.tests.test_collection_permission_policies",
             "wagtail.core.tests.test_hooks",
             "wagtail.core.tests.test_jinja2",
+            "wagtail.core.tests.test_locale_model",
             "wagtail.core.tests.test_management_commands",
             "wagtail.core.tests.test_migrations",
             "wagtail.core.tests.test_page_model",
@@ -2857,11 +2884,13 @@
             "wagtail.core.tests.test_sites",
             "wagtail.core.tests.test_streamfield",
             "wagtail.core.tests.test_tests",
+            "wagtail.core.tests.test_translatablemixin",
             "wagtail.core.tests.test_utils",
             "wagtail.core.tests.test_views",
             "wagtail.core.tests.test_whitelist",
             "wagtail.core.tests.test_workflow",
             "wagtail.core.tests.tests",
+            "wagtail.core.treebeard",
             "wagtail.core.url_routing",
             "wagtail.core.urls",
             "wagtail.core.utils",
@@ -3026,6 +3055,13 @@
             "wagtail.images.views.serve",
             "wagtail.images.wagtail_hooks",
             "wagtail.images.widgets",
+            "wagtail.locales",
+            "wagtail.locales.apps",
+            "wagtail.locales.forms",
+            "wagtail.locales.tests",
+            "wagtail.locales.utils",
+            "wagtail.locales.views",
+            "wagtail.locales.wagtail_hooks",
             "wagtail.search",
             "wagtail.search.apps",
             "wagtail.search.backends",
@@ -3077,11 +3113,14 @@
             "wagtail.sites.views",
             "wagtail.sites.wagtail_hooks",
             "wagtail.snippets",
+            "wagtail.snippets.action_menu",
             "wagtail.snippets.apps",
             "wagtail.snippets.blocks",
             "wagtail.snippets.edit_handlers",
             "wagtail.snippets.models",
             "wagtail.snippets.permissions",
+            "wagtail.snippets.templatetags",
+            "wagtail.snippets.templatetags.wagtailsnippets_admin_tags",
             "wagtail.snippets.tests",
             "wagtail.snippets.urls",
             "wagtail.snippets.views",
@@ -3097,6 +3136,7 @@
             "wagtail.tests.customuser.migrations",
             "wagtail.tests.customuser.migrations.0001_initial",
             "wagtail.tests.customuser.migrations.0002_added_file_field",
+            "wagtail.tests.customuser.migrations.0003_delete_emailuser",
             "wagtail.tests.customuser.models",
             "wagtail.tests.customuser.tests",
             "wagtail.tests.demosite",
@@ -3106,7 +3146,16 @@
             "wagtail.tests.demosite.models",
             "wagtail.tests.dummy_external_storage",
             "wagtail.tests.dummy_sendfile_backend",
+            "wagtail.tests.emailuser",
+            "wagtail.tests.emailuser.migrations",
+            "wagtail.tests.emailuser.migrations.0001_initial",
+            "wagtail.tests.emailuser.migrations.0002_emailuser_permissionsmixin",
+            "wagtail.tests.emailuser.models",
             "wagtail.tests.headless_urls",
+            "wagtail.tests.i18n",
+            "wagtail.tests.i18n.migrations",
+            "wagtail.tests.i18n.migrations.0001_initial",
+            "wagtail.tests.i18n.models",
             "wagtail.tests.middleware",
             "wagtail.tests.modeladmintest",
             "wagtail.tests.modeladmintest.apps",
@@ -3120,6 +3169,7 @@
             "wagtail.tests.modeladmintest.migrations.0006_contributor_person_visitor",
             "wagtail.tests.modeladmintest.migrations.0007_friend",
             "wagtail.tests.modeladmintest.migrations.0008_solobook",
+            "wagtail.tests.modeladmintest.migrations.0009_relatedlink",
             "wagtail.tests.modeladmintest.models",
             "wagtail.tests.modeladmintest.wagtail_hooks",
             "wagtail.tests.non_root_urls",
@@ -3145,6 +3195,7 @@
             "wagtail.tests.snippets.migrations.0004_fileuploadsnippet",
             "wagtail.tests.snippets.migrations.0005_multisectionrichtextsnippet_richtextsection",
             "wagtail.tests.snippets.migrations.0006_standarsnippetwithcustomprimarykey",
+            "wagtail.tests.snippets.migrations.0007_translatablesnippet",
             "wagtail.tests.snippets.models",
             "wagtail.tests.testapp",
             "wagtail.tests.testapp.apps",
@@ -3206,6 +3257,8 @@
             "wagtail.tests.testapp.migrations.0052_custom_doc_image_unique_together",
             "wagtail.tests.testapp.migrations.0053_formfield_clean_name",
             "wagtail.tests.testapp.migrations.0054_simpletask",
+            "wagtail.tests.testapp.migrations.0055_eventpage_childobject_i18n",
+            "wagtail.tests.testapp.migrations.0056_streampage_nested_streamblock",
             "wagtail.tests.testapp.models",
             "wagtail.tests.testapp.rich_text",
             "wagtail.tests.testapp.urls",
@@ -3255,7 +3308,7 @@
             "wagtail.utils.version",
             "wagtail.utils.widgets"
         ],
-        "version": "2.10.2"
+        "version": "2.11"
     },
     "wagtail-2fa": {
         "cmdline": [],
@@ -8775,7 +8828,7 @@
             "wai.annotations.core.builder.error._BadDomain",
             "wai.annotations.core.builder.error._InputStageNotFirst",
             "wai.annotations.core.builder.error._StageAfterOutput",
-            "wai.annotations.core.builder.error._StageInvalidForDomain",
+            "wai.annotations.core.builder.error._StageInvalidForDomains",
             "wai.annotations.core.component",
             "wai.annotations.core.component._Component",
             "wai.annotations.core.component._ProcessorComponent",
@@ -8785,7 +8838,6 @@
             "wai.annotations.core.component.util._AnnotationFileProcessor",
             "wai.annotations.core.component.util._Buffer",
             "wai.annotations.core.component.util._Enumerator",
-            "wai.annotations.core.component.util._GroupFilenames",
             "wai.annotations.core.component.util._JSONFileWriter",
             "wai.annotations.core.component.util._LocalFileWriter",
             "wai.annotations.core.component.util._LocalFilenameSource",
@@ -8894,8 +8946,10 @@
             "wai.annotations.domain.image.segmentation._ImageSegmentationDomainSpecifier",
             "wai.annotations.domain.image.segmentation._ImageSegmentationInstance",
             "wai.annotations.domain.image.segmentation.util",
-            "wai.annotations.domain.image.segmentation.util._ImageSegmentationReader",
-            "wai.annotations.domain.image.segmentation.util._UnlabelledInputConverter",
+            "wai.annotations.domain.image.segmentation.util._RelativeDataPathMixin",
+            "wai.annotations.domain.image.segmentation.util._UnlabelledInputMixin",
+            "wai.annotations.domain.image.segmentation.util._mask_from_polygon",
+            "wai.annotations.domain.image.segmentation.util._mask_from_rectangle",
             "wai.annotations.domain.image.util",
             "wai.annotations.domain.image.util._convert_image_format",
             "wai.annotations.domain.image.util._get_associated_image",
@@ -8983,6 +9037,17 @@
             "wai.annotations.format.indexed_png.specifier._IndexedPNGOutputFormatSpecifier",
             "wai.annotations.format.indexed_png.util",
             "wai.annotations.format.indexed_png.util._format",
+            "wai.annotations.format.layer_segments",
+            "wai.annotations.format.layer_segments.component",
+            "wai.annotations.format.layer_segments.component._FromLayerSegments",
+            "wai.annotations.format.layer_segments.component._LayerSegmentsWriter",
+            "wai.annotations.format.layer_segments.component._ToLayerSegments",
+            "wai.annotations.format.layer_segments.specifier",
+            "wai.annotations.format.layer_segments.specifier._LayerSegmentsSinkStateSpecifier",
+            "wai.annotations.format.layer_segments.specifier._LayerSegmentsSourceStageSpecifier",
+            "wai.annotations.format.layer_segments.util",
+            "wai.annotations.format.layer_segments.util._LabelSeparatorMixin",
+            "wai.annotations.format.layer_segments.util._format",
             "wai.annotations.format.roi",
             "wai.annotations.format.roi.component",
             "wai.annotations.format.roi.component._FromROI",
@@ -9031,7 +9096,6 @@
             "wai.annotations.format.tf.utils._format",
             "wai.annotations.format.tf.utils._image_info_from_example",
             "wai.annotations.format.tf.utils._make_feature",
-            "wai.annotations.format.tf.utils._mask_from_polygon",
             "wai.annotations.format.tf.utils._negative_example",
             "wai.annotations.format.tf.utils._png_from_mask",
             "wai.annotations.format.tf.utils._polygon_from_mask",
@@ -9117,9 +9181,15 @@
             "wai.annotations.main._MainSettings",
             "wai.annotations.main._help",
             "wai.annotations.main._macros",
-            "wai.annotations.main._main"
+            "wai.annotations.main._main",
+            "wai.annotations.xdc",
+            "wai.annotations.xdc.od_to_is",
+            "wai.annotations.xdc.od_to_is.component",
+            "wai.annotations.xdc.od_to_is.component._OD2ISXDC",
+            "wai.annotations.xdc.od_to_is.specifier",
+            "wai.annotations.xdc.od_to_is.specifier._OD2ISXDCSpecifier"
         ],
-        "version": "0.5.1"
+        "version": "0.5.3"
     },
     "wai-bynning": {
         "cmdline": [],
@@ -14355,10 +14425,11 @@
             "wallpy.file_types",
             "wallpy.image_download",
             "wallpy.main",
+            "wallpy.notification",
             "wallpy.url_query",
             "wallpy.wallpaper"
         ],
-        "version": "0.1.0"
+        "version": "0.2.0"
     },
     "wallpyper": {
         "cmdline": [],
@@ -18279,6 +18350,18 @@
             "wasmfun.util"
         ],
         "version": "0.1"
+    },
+    "wasmpy": {
+        "cmdline": [],
+        "modules": [
+            "wasmpy",
+            "wasmpy.instructions",
+            "wasmpy.module",
+            "wasmpy.sections",
+            "wasmpy.types",
+            "wasmpy.values"
+        ],
+        "version": "0.1.0a1"
     },
     "wasmtime": {
         "cmdline": [],
@@ -28059,7 +28142,7 @@
     "weasyprint": {
         "cmdline": [],
         "modules": [],
-        "version": "52"
+        "version": "52.1"
     },
     "weather": {
         "cmdline": [
@@ -30085,7 +30168,7 @@
             "web2ldap.web.session",
             "web2ldap.wsgi"
         ],
-        "version": "1.5.104"
+        "version": "1.5.105"
     },
     "web2pandas": {
         "cmdline": [],
@@ -38861,7 +38944,7 @@
             "webscrapbook.server",
             "webscrapbook.util"
         ],
-        "version": "0.30.1"
+        "version": "0.31.0"
     },
     "webscraper": {
         "cmdline": [],
@@ -44640,10 +44723,11 @@
         "cmdline": [],
         "modules": [
             "welford",
+            "welford.example",
             "welford.test_welford",
             "welford.welford"
         ],
-        "version": "0.1.3"
+        "version": "0.2.0"
     },
     "well-profile": {
         "cmdline": [],
@@ -44923,7 +45007,7 @@
             "welleng.survey",
             "welleng.utils"
         ],
-        "version": "0.1.3"
+        "version": "0.1.4"
     },
     "wellfare": {
         "cmdline": [
@@ -49863,6 +49947,7 @@
             "whatap.trace.mod.application_cherrypy",
             "whatap.trace.mod.application_django",
             "whatap.trace.mod.application_flask",
+            "whatap.trace.mod.application_graphql",
             "whatap.trace.mod.application_nameko",
             "whatap.trace.mod.application_tornado",
             "whatap.trace.mod.application_wsgi",
@@ -49926,7 +50011,7 @@
             "whatap.value.value",
             "whatap.value.value_enum"
         ],
-        "version": "1.0.3"
+        "version": "1.0.4"
     },
     "whatapi": {
         "cmdline": [],
@@ -53288,7 +53373,7 @@
             "whoare.zone_parsers.ar.news",
             "whoare.zone_parsers.ar.who"
         ],
-        "version": "0.1.37"
+        "version": "0.1.39"
     },
     "whocall": {
         "cmdline": [],
@@ -58119,7 +58204,7 @@
             "wikipya",
             "wikipya.core"
         ],
-        "version": "1.0.3"
+        "version": "1.0.4"
     },
     "wikipydia": {
         "cmdline": [],
@@ -61774,6 +61859,8 @@
             "windsor.config",
             "windsor.main",
             "windsor.services",
+            "windsor.services.apigw",
+            "windsor.services.apigw.restapi",
             "windsor.services.codepipeline",
             "windsor.services.codepipeline.react",
             "windsor.services.lambda_",
@@ -61781,7 +61868,7 @@
             "windsor.services.lambda_.runtime",
             "windsor.utils"
         ],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     "windspharm": {
         "cmdline": [],
@@ -67280,7 +67367,7 @@
             "wiz.utility",
             "wiz.validator"
         ],
-        "version": "3.5.2"
+        "version": "3.6.1"
     },
     "wiz-utils": {
         "cmdline": [],
@@ -67763,7 +67850,7 @@
             "wkcuber.vendor.dm3",
             "wkcuber.vendor.dm4"
         ],
-        "version": "0.3.0"
+        "version": "0.3.1"
     },
     "wkdfh": {
         "cmdline": [],
@@ -71834,9 +71921,10 @@
             "wmflib.config",
             "wmflib.dns",
             "wmflib.exceptions",
-            "wmflib.phabricator"
+            "wmflib.phabricator",
+            "wmflib.requests"
         ],
-        "version": "0.0.3"
+        "version": "0.0.4"
     },
     "wmg-tool": {
         "cmdline": [],
@@ -72248,7 +72336,7 @@
             "wntr.utils.ordered_set",
             "wntr.utils.polynomial_interpolation"
         ],
-        "version": "0.2.3"
+        "version": "0.3.0"
     },
     "wnutils": {
         "cmdline": [],
@@ -78958,7 +79046,7 @@
             "workflows.util",
             "workflows.util.test_util"
         ],
-        "version": "2.1"
+        "version": "2.2"
     },
     "workflowwebtools": {
         "cmdline": [
