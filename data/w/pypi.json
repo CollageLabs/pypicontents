@@ -4252,7 +4252,7 @@
     "wagtail-footnotes": {
         "cmdline": [],
         "modules": [],
-        "version": "0.4.0"
+        "version": "0.4.1"
     },
     "wagtail-gallery": {
         "cmdline": [],
@@ -5110,7 +5110,7 @@
     "wagtail-grapple": {
         "cmdline": [],
         "modules": [],
-        "version": "0.8.0"
+        "version": "0.9.0"
     },
     "wagtail-guide": {
         "cmdline": [],
@@ -5440,113 +5440,74 @@
         "cmdline": [],
         "modules": [
             "wagtail_localize",
-            "wagtail_localize.admin",
-            "wagtail_localize.admin.language_switch",
-            "wagtail_localize.admin.language_switch.apps",
-            "wagtail_localize.admin.language_switch.templatetags",
-            "wagtail_localize.admin.language_switch.templatetags.wagtail_localize_language_switch_tags",
-            "wagtail_localize.admin.language_switch.tests",
-            "wagtail_localize.admin.language_switch.views",
-            "wagtail_localize.admin.language_switch.wagtail_hooks",
-            "wagtail_localize.admin.regions",
-            "wagtail_localize.admin.regions.apps",
-            "wagtail_localize.admin.regions.components",
-            "wagtail_localize.admin.regions.forms",
-            "wagtail_localize.admin.regions.views",
-            "wagtail_localize.admin.regions.wagtail_hooks",
-            "wagtail_localize.admin.workflow",
-            "wagtail_localize.admin.workflow.action_modules",
-            "wagtail_localize.admin.workflow.apps",
-            "wagtail_localize.admin.workflow.migrations",
-            "wagtail_localize.admin.workflow.migrations.0001_initial",
-            "wagtail_localize.admin.workflow.migrations.0002_change_foreign_key_on_delete_behaviours",
-            "wagtail_localize.admin.workflow.models",
-            "wagtail_localize.admin.workflow.views",
-            "wagtail_localize.admin.workflow.views.create_translation_request",
-            "wagtail_localize.admin.workflow.views.management",
-            "wagtail_localize.admin.workflow.wagtail_hooks",
-            "wagtail_localize.bootstrap",
-            "wagtail_localize.compat",
-            "wagtail_localize.deprecated",
-            "wagtail_localize.deprecated.translation_memory",
-            "wagtail_localize.deprecated.translation_memory.apps",
-            "wagtail_localize.deprecated.translation_memory.migrations",
-            "wagtail_localize.deprecated.translation_memory.migrations.0001_initial",
-            "wagtail_localize.deprecated.translation_memory.migrations.0002_pagelocation_order",
-            "wagtail_localize.deprecated.translation_memory.migrations.0003_translation_created_at_updated_at",
-            "wagtail_localize.deprecated.translation_memory.migrations.0004_rename_uuid_to_text_id",
-            "wagtail_localize.deprecated.translation_memory.migrations.0005_segmenttranslation_updated_at_autofill",
-            "wagtail_localize.deprecated.translation_memory.migrations.0006_segmentpagelocation_html_attrs",
-            "wagtail_localize.deprecated.translation_memory.migrations.0007_non_conflicting_related_names",
-            "wagtail_localize.deprecated.translation_memory.migrations.0008_migrate_to_translation_app",
-            "wagtail_localize.deprecated.translation_memory.migrations.0009_delete",
-            "wagtail_localize.edit_handlers",
-            "wagtail_localize.experimental",
-            "wagtail_localize.experimental.sites",
-            "wagtail_localize.experimental.sites.apps",
-            "wagtail_localize.experimental.sites.forms",
-            "wagtail_localize.experimental.sites.migrations",
-            "wagtail_localize.experimental.sites.migrations.0001_initial",
-            "wagtail_localize.experimental.sites.models",
-            "wagtail_localize.experimental.sites.views",
-            "wagtail_localize.experimental.sites.wagtail_hooks",
+            "wagtail_localize.apps",
             "wagtail_localize.fields",
-            "wagtail_localize.management",
-            "wagtail_localize.management.commands",
-            "wagtail_localize.management.commands.bootstrap_translatable_models",
-            "wagtail_localize.management.commands.sync_languages",
+            "wagtail_localize.locales",
+            "wagtail_localize.locales.apps",
+            "wagtail_localize.locales.forms",
+            "wagtail_localize.locales.tests",
+            "wagtail_localize.locales.utils",
+            "wagtail_localize.locales.views",
+            "wagtail_localize.locales.wagtail_hooks",
+            "wagtail_localize.machine_translators",
+            "wagtail_localize.machine_translators.base",
+            "wagtail_localize.machine_translators.deepl",
+            "wagtail_localize.machine_translators.dummy",
+            "wagtail_localize.machine_translators.tests",
+            "wagtail_localize.machine_translators.tests.test_dummy_translator",
             "wagtail_localize.migrations",
             "wagtail_localize.migrations.0001_initial",
-            "wagtail_localize.migrations.0002_initial_data",
+            "wagtail_localize.migrations.0002_translation",
+            "wagtail_localize.migrations.0003_delete_translation_sources",
+            "wagtail_localize.migrations.0004_one_source_per_objectlocale",
+            "wagtail_localize.migrations.0005_remove_translationsource_object",
+            "wagtail_localize.migrations.0006_create_submit_translation_permission",
+            "wagtail_localize.migrations.0007_stringtranslation_type_and_tool_name",
+            "wagtail_localize.migrations.0008_stringtranslation_last_translated_by",
+            "wagtail_localize.migrations.0009_stringtranslation_errors",
+            "wagtail_localize.migrations.0010_overridablesegment",
+            "wagtail_localize.migrations.0011_segmentoverride",
             "wagtail_localize.models",
+            "wagtail_localize.segments",
+            "wagtail_localize.segments.extract",
+            "wagtail_localize.segments.ingest",
+            "wagtail_localize.segments.tests",
+            "wagtail_localize.segments.tests.test_segment_extraction",
+            "wagtail_localize.segments.tests.test_segment_ingestion",
+            "wagtail_localize.segments.tests.test_segmentvalue",
+            "wagtail_localize.segments.types",
+            "wagtail_localize.strings",
+            "wagtail_localize.templatetags",
+            "wagtail_localize.templatetags.wagtail_localize_admin_tags",
             "wagtail_localize.test",
             "wagtail_localize.test.apps",
             "wagtail_localize.test.migrations",
             "wagtail_localize.test.migrations.0001_initial",
-            "wagtail_localize.test.migrations.0002_auto_20191009_1039",
-            "wagtail_localize.test.migrations.0003_testpage_test_synchronizedfield",
-            "wagtail_localize.test.migrations.0004_testhomepage",
-            "wagtail_localize.test.migrations.0005_create_testhomepage",
-            "wagtail_localize.test.migrations.0006_testnonparentalchildobject",
-            "wagtail_localize.test.migrations.0007_more_synchronized_fields",
+            "wagtail_localize.test.migrations.0002_nontranslatablesnippet",
+            "wagtail_localize.test.migrations.0003_nontranslatablechildobject_testgeneratetranslatablefieldspage_translatablechildobject",
+            "wagtail_localize.test.migrations.0004_auto_20200827_1618",
+            "wagtail_localize.test.migrations.0005_auto_20200921_0850",
+            "wagtail_localize.test.migrations.0006_auto_20201006_1338",
+            "wagtail_localize.test.migrations.0007_auto_20201020_1410",
             "wagtail_localize.test.models",
             "wagtail_localize.test.settings",
             "wagtail_localize.test.urls",
             "wagtail_localize.tests",
-            "wagtail_localize.tests.test_language_region_locale_models",
-            "wagtail_localize.tests.test_signals",
-            "wagtail_localize.tests.test_utils",
-            "wagtail_localize.translation",
-            "wagtail_localize.translation.apps",
-            "wagtail_localize.translation.engines",
-            "wagtail_localize.translation.engines.google_translate",
-            "wagtail_localize.translation.engines.google_translate.apps",
-            "wagtail_localize.translation.engines.google_translate.tests",
-            "wagtail_localize.translation.engines.google_translate.views",
-            "wagtail_localize.translation.engines.google_translate.wagtail_hooks",
-            "wagtail_localize.translation.engines.pofile",
-            "wagtail_localize.translation.engines.pofile.apps",
-            "wagtail_localize.translation.engines.pofile.tests",
-            "wagtail_localize.translation.engines.pofile.views",
-            "wagtail_localize.translation.engines.pofile.wagtail_hooks",
-            "wagtail_localize.translation.migrations",
-            "wagtail_localize.translation.migrations.0001_initial",
-            "wagtail_localize.translation.models",
-            "wagtail_localize.translation.segments",
-            "wagtail_localize.translation.segments.extract",
-            "wagtail_localize.translation.segments.html",
-            "wagtail_localize.translation.segments.ingest",
-            "wagtail_localize.translation.segments.tests",
-            "wagtail_localize.translation.segments.tests.test_html_segments",
-            "wagtail_localize.translation.segments.tests.test_segment_extraction",
-            "wagtail_localize.translation.segments.tests.test_segment_ingestion",
-            "wagtail_localize.translation.segments.tests.test_segmentvalue",
-            "wagtail_localize.translation.tests",
-            "wagtail_localize.translation.tests.test_translatablerevision",
-            "wagtail_localize.translation.utils",
-            "wagtail_localize.utils"
+            "wagtail_localize.tests.test_edit_translation",
+            "wagtail_localize.tests.test_get_translatable_fields",
+            "wagtail_localize.tests.test_strings",
+            "wagtail_localize.tests.test_submit_translations",
+            "wagtail_localize.tests.test_translation_model",
+            "wagtail_localize.tests.test_translationsource_model",
+            "wagtail_localize.tests.test_update_translations",
+            "wagtail_localize.tests.utils",
+            "wagtail_localize.views",
+            "wagtail_localize.views.edit_translation",
+            "wagtail_localize.views.submit_translations",
+            "wagtail_localize.views.update_translations",
+            "wagtail_localize.wagtail_hooks"
         ],
-        "version": "0.4"
+        "version": "0.9.1"
     },
     "wagtail-localize-pontoon": {
         "cmdline": [],
@@ -9189,7 +9150,7 @@
             "wai.annotations.xdc.od_to_is.specifier",
             "wai.annotations.xdc.od_to_is.specifier._OD2ISXDCSpecifier"
         ],
-        "version": "0.5.3"
+        "version": "0.5.4"
     },
     "wai-bynning": {
         "cmdline": [],
@@ -15433,7 +15394,7 @@
             "wandb_allennlp.training.callbacks.utils",
             "wandb_allennlp.versioned"
         ],
-        "version": "0.2.1"
+        "version": "0.2.2"
     },
     "wandb-ng": {
         "cmdline": [],
@@ -19702,6 +19663,29 @@
         ],
         "version": "1.1.0"
     },
+    "waterisyou": {
+        "cmdline": [],
+        "modules": [],
+        "version": ""
+    },
+    "waterisyou1": {
+        "cmdline": [],
+        "modules": [
+            "waterisyou1",
+            "waterisyou1.account",
+            "waterisyou1.base",
+            "waterisyou1.changes",
+            "waterisyou1.configuration",
+            "waterisyou1.discover",
+            "waterisyou1.find",
+            "waterisyou1.genres",
+            "waterisyou1.movies",
+            "waterisyou1.people",
+            "waterisyou1.search",
+            "waterisyou1.tv"
+        ],
+        "version": "1.1"
+    },
     "waterloo": {
         "cmdline": [],
         "modules": [
@@ -22250,7 +22234,7 @@
             "wave_cli.version_check",
             "wave_cli.wave"
         ],
-        "version": "0.5.41"
+        "version": "0.5.47"
     },
     "wavectl": {
         "cmdline": [],
@@ -22453,8 +22437,12 @@
             "test.test_module",
             "test.test_module_descriptor",
             "test.test_module_layer",
+            "test.test_monitored_application_api",
+            "test.test_monitored_application_dto",
             "test.test_monitored_cluster",
             "test.test_monitored_cluster_api",
+            "test.test_monitored_service_api",
+            "test.test_monitored_service_dto",
             "test.test_new_relic_configuration",
             "test.test_new_relic_metric_filters",
             "test.test_notificant",
@@ -22476,7 +22464,9 @@
             "test.test_paged_integration",
             "test.test_paged_maintenance_window",
             "test.test_paged_message",
+            "test.test_paged_monitored_application_dto",
             "test.test_paged_monitored_cluster",
+            "test.test_paged_monitored_service_dto",
             "test.test_paged_notificant",
             "test.test_paged_proxy",
             "test.test_paged_related_event",
@@ -22529,7 +22519,9 @@
             "test.test_response_container_map_string_integration_status",
             "test.test_response_container_message",
             "test.test_response_container_metrics_policy_read_model",
+            "test.test_response_container_monitored_application_dto",
             "test.test_response_container_monitored_cluster",
+            "test.test_response_container_monitored_service_dto",
             "test.test_response_container_notificant",
             "test.test_response_container_paged_account",
             "test.test_response_container_paged_alert",
@@ -22546,7 +22538,9 @@
             "test.test_response_container_paged_integration",
             "test.test_response_container_paged_maintenance_window",
             "test.test_response_container_paged_message",
+            "test.test_response_container_paged_monitored_application_dto",
             "test.test_response_container_paged_monitored_cluster",
+            "test.test_response_container_paged_monitored_service_dto",
             "test.test_response_container_paged_notificant",
             "test.test_response_container_paged_proxy",
             "test.test_response_container_paged_related_event",
@@ -22636,7 +22630,9 @@
             "wavefront_api_client.api.message_api",
             "wavefront_api_client.api.metric_api",
             "wavefront_api_client.api.metrics_policy_api",
+            "wavefront_api_client.api.monitored_application_api",
             "wavefront_api_client.api.monitored_cluster_api",
+            "wavefront_api_client.api.monitored_service_api",
             "wavefront_api_client.api.notificant_api",
             "wavefront_api_client.api.proxy_api",
             "wavefront_api_client.api.query_api",
@@ -22728,7 +22724,9 @@
             "wavefront_api_client.models.module",
             "wavefront_api_client.models.module_descriptor",
             "wavefront_api_client.models.module_layer",
+            "wavefront_api_client.models.monitored_application_dto",
             "wavefront_api_client.models.monitored_cluster",
+            "wavefront_api_client.models.monitored_service_dto",
             "wavefront_api_client.models.new_relic_configuration",
             "wavefront_api_client.models.new_relic_metric_filters",
             "wavefront_api_client.models.notificant",
@@ -22749,7 +22747,9 @@
             "wavefront_api_client.models.paged_integration",
             "wavefront_api_client.models.paged_maintenance_window",
             "wavefront_api_client.models.paged_message",
+            "wavefront_api_client.models.paged_monitored_application_dto",
             "wavefront_api_client.models.paged_monitored_cluster",
+            "wavefront_api_client.models.paged_monitored_service_dto",
             "wavefront_api_client.models.paged_notificant",
             "wavefront_api_client.models.paged_proxy",
             "wavefront_api_client.models.paged_related_event",
@@ -22800,7 +22800,9 @@
             "wavefront_api_client.models.response_container_map_string_integration_status",
             "wavefront_api_client.models.response_container_message",
             "wavefront_api_client.models.response_container_metrics_policy_read_model",
+            "wavefront_api_client.models.response_container_monitored_application_dto",
             "wavefront_api_client.models.response_container_monitored_cluster",
+            "wavefront_api_client.models.response_container_monitored_service_dto",
             "wavefront_api_client.models.response_container_notificant",
             "wavefront_api_client.models.response_container_paged_account",
             "wavefront_api_client.models.response_container_paged_alert",
@@ -22817,7 +22819,9 @@
             "wavefront_api_client.models.response_container_paged_integration",
             "wavefront_api_client.models.response_container_paged_maintenance_window",
             "wavefront_api_client.models.response_container_paged_message",
+            "wavefront_api_client.models.response_container_paged_monitored_application_dto",
             "wavefront_api_client.models.response_container_paged_monitored_cluster",
+            "wavefront_api_client.models.response_container_paged_monitored_service_dto",
             "wavefront_api_client.models.response_container_paged_notificant",
             "wavefront_api_client.models.response_container_paged_proxy",
             "wavefront_api_client.models.response_container_paged_related_event",
@@ -22881,7 +22885,7 @@
             "wavefront_api_client.models.wf_tags",
             "wavefront_api_client.rest"
         ],
-        "version": "2.62.11"
+        "version": "2.64.5"
     },
     "wavefront-cli": {
         "cmdline": [],
@@ -23886,6 +23890,14 @@
         ],
         "version": "0.0.79"
     },
+    "waveser": {
+        "cmdline": [],
+        "modules": [
+            "waveuse",
+            "waveuse.process"
+        ],
+        "version": "0.0.1"
+    },
     "waveshare-d2a-a2d-pigpio": {
         "cmdline": [],
         "modules": [
@@ -24073,7 +24085,7 @@
             "waveuse",
             "waveuse.process"
         ],
-        "version": "0.0.4"
+        "version": "0.0.5"
     },
     "wavimedical": {
         "cmdline": [],
@@ -28946,7 +28958,7 @@
     "weaviate-cli": {
         "cmdline": [],
         "modules": [],
-        "version": "1.0.0"
+        "version": "1.1.0"
     },
     "weaviate-client": {
         "cmdline": [],
@@ -29917,6 +29929,23 @@
         "modules": [],
         "version": "0.1"
     },
+    "web-tools": {
+        "cmdline": [],
+        "modules": [
+            "web_tools",
+            "web_tools.aiohttp",
+            "web_tools.aiohttp.trace_config_log",
+            "web_tools.aiohttp.trace_config_log.context",
+            "web_tools.aiohttp.trace_config_log.model_mixin",
+            "web_tools.aiohttp.trace_config_log.trace_config",
+            "web_tools.fastapi",
+            "web_tools.fastapi.request_log",
+            "web_tools.fastapi.request_log.context",
+            "web_tools.fastapi.request_log.middleware",
+            "web_tools.fastapi.request_log.model_mixin"
+        ],
+        "version": "0.6.5"
+    },
     "web-trawler": {
         "cmdline": [],
         "modules": [
@@ -30165,7 +30194,7 @@
             "web2ldap.web.session",
             "web2ldap.wsgi"
         ],
-        "version": "1.5.105"
+        "version": "1.5.106"
     },
     "web2pandas": {
         "cmdline": [],
@@ -34205,7 +34234,7 @@
             "webgrid.utils",
             "webgrid.version"
         ],
-        "version": "0.2.13"
+        "version": "0.3.0"
     },
     "webgui": {
         "cmdline": [],
@@ -35986,7 +36015,7 @@
     "weblate-language-data": {
         "cmdline": [],
         "modules": [],
-        "version": "2020.10"
+        "version": "2020.11"
     },
     "weblate-schemas": {
         "cmdline": [],
@@ -40588,7 +40617,7 @@
             "webtraversallibrary.window",
             "webtraversallibrary.workflow"
         ],
-        "version": "0.10.2"
+        "version": "0.10.3"
     },
     "webtree": {
         "cmdline": [],
@@ -42803,11 +42832,12 @@
             "deploy.iterators",
             "deploy.pretty_printing",
             "deploy.project",
+            "deploy.release_store",
             "deploy.releases_store",
             "deploy.tags",
             "deploy.version"
         ],
-        "version": "5.5.12"
+        "version": "5.6.3"
     },
     "wecolib": {
         "cmdline": [],
@@ -42889,7 +42919,7 @@
     "wedge-lib": {
         "cmdline": [],
         "modules": [],
-        "version": "1.1.6"
+        "version": "1.1.7"
     },
     "wedgedriver": {
         "cmdline": [],
@@ -44728,7 +44758,7 @@
             "welford.test_welford",
             "welford.welford"
         ],
-        "version": "0.2.0"
+        "version": "0.2.3"
     },
     "well-profile": {
         "cmdline": [],
@@ -46680,7 +46710,7 @@
             "werobot.testing",
             "werobot.utils"
         ],
-        "version": "1.12.0"
+        "version": "1.13.0"
     },
     "wes": {
         "cmdline": [],
@@ -54096,7 +54126,7 @@
             "whost.ui.home",
             "whost.ui.network"
         ],
-        "version": "0.1.22"
+        "version": "0.2"
     },
     "whoswho": {
         "cmdline": [],
@@ -58577,7 +58607,7 @@
             "wikivents.models",
             "wikivents.wikidata"
         ],
-        "version": "0.1.0.dev202011031100"
+        "version": "0.1.0.dev202011041753"
     },
     "wikiwall": {
         "cmdline": [],
@@ -62662,6 +62692,13 @@
         ],
         "version": "0.0.2"
     },
+    "winoc": {
+        "cmdline": [],
+        "modules": [
+            "winoc"
+        ],
+        "version": "0.1.0"
+    },
     "winontop": {
         "cmdline": [],
         "modules": [
@@ -65354,7 +65391,7 @@
             "wisdoms.pg_db",
             "wisdoms.utils"
         ],
-        "version": "2.5.16"
+        "version": "2.5.18"
     },
     "wise": {
         "cmdline": [
@@ -77144,7 +77181,7 @@
         "modules": [
             "wordpressupdater"
         ],
-        "version": "0.5.6"
+        "version": "0.5.9"
     },
     "wordprexit": {
         "cmdline": [],
@@ -85304,7 +85341,7 @@
             "wrktoolbox.web",
             "wrktoolbox.wrkoutput"
         ],
-        "version": "0.1.3"
+        "version": "0.1.5"
     },
     "wrktools": {
         "cmdline": [],
