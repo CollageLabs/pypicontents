@@ -1909,6 +1909,7 @@
             "jackdaw.credentials.credentials",
             "jackdaw.cypher_test",
             "jackdaw.dbmodel",
+            "jackdaw.dbmodel.adallowedtoact",
             "jackdaw.dbmodel.adcomp",
             "jackdaw.dbmodel.adgplink",
             "jackdaw.dbmodel.adgpo",
@@ -1916,16 +1917,19 @@
             "jackdaw.dbmodel.adinfo",
             "jackdaw.dbmodel.adobjprops",
             "jackdaw.dbmodel.adou",
+            "jackdaw.dbmodel.adschemaentry",
             "jackdaw.dbmodel.adsd",
             "jackdaw.dbmodel.adspn",
             "jackdaw.dbmodel.adtrust",
             "jackdaw.dbmodel.aduser",
             "jackdaw.dbmodel.constrained",
             "jackdaw.dbmodel.credential",
+            "jackdaw.dbmodel.dnslookup",
             "jackdaw.dbmodel.edge",
             "jackdaw.dbmodel.edgelookup",
             "jackdaw.dbmodel.graphinfo",
             "jackdaw.dbmodel.hashentry",
+            "jackdaw.dbmodel.kerberoast",
             "jackdaw.dbmodel.localgroup",
             "jackdaw.dbmodel.lsasecrets",
             "jackdaw.dbmodel.netdacl",
@@ -1936,6 +1940,8 @@
             "jackdaw.dbmodel.netshare",
             "jackdaw.dbmodel.rdnslookup",
             "jackdaw.dbmodel.smbfinger",
+            "jackdaw.dbmodel.smbprotocols",
+            "jackdaw.dbmodel.smbvuln",
             "jackdaw.dbmodel.spnservice",
             "jackdaw.dbmodel.utils",
             "jackdaw.dbmodel.utils.addacl",
@@ -1943,9 +1949,17 @@
             "jackdaw.dbmodel.utils.serializer",
             "jackdaw.dbmodel.utils.tokengroup",
             "jackdaw.dbmodel.utils.uacflags",
+            "jackdaw.external",
+            "jackdaw.external.aiocmd",
+            "jackdaw.external.aiocmd.aiocmd",
+            "jackdaw.external.aiocmd.aiocmd.aiocmd",
+            "jackdaw.external.aiocmd.aiocmd.nested_completer",
+            "jackdaw.external.aiocmd.setup",
             "jackdaw.gatherer",
             "jackdaw.gatherer.edgecalc",
             "jackdaw.gatherer.gatherer",
+            "jackdaw.gatherer.kerberos",
+            "jackdaw.gatherer.kerberos.kerberos",
             "jackdaw.gatherer.ldap",
             "jackdaw.gatherer.ldap.agent",
             "jackdaw.gatherer.ldap.agent.agent",
@@ -1957,11 +1971,16 @@
             "jackdaw.gatherer.ldap.collectors.sd",
             "jackdaw.gatherer.progress",
             "jackdaw.gatherer.rdns",
+            "jackdaw.gatherer.rdns.dnsgatherer",
             "jackdaw.gatherer.rdns.dnstest",
             "jackdaw.gatherer.rdns.protocol",
             "jackdaw.gatherer.rdns.rdns",
             "jackdaw.gatherer.rdns.resolver",
             "jackdaw.gatherer.rdns.udpwrapper",
+            "jackdaw.gatherer.scanner",
+            "jackdaw.gatherer.scanner.native",
+            "jackdaw.gatherer.scanner.native.agent",
+            "jackdaw.gatherer.scanner.scanner",
             "jackdaw.gatherer.sdcalc",
             "jackdaw.gatherer.smb",
             "jackdaw.gatherer.smb.agent",
@@ -2008,6 +2027,36 @@
             "jackdaw.nest.utils",
             "jackdaw.nest.utils.encoder",
             "jackdaw.nest.wrapper",
+            "jackdaw.nest.ws",
+            "jackdaw.nest.ws.client",
+            "jackdaw.nest.ws.operator",
+            "jackdaw.nest.ws.operator.operator",
+            "jackdaw.nest.ws.protocol",
+            "jackdaw.nest.ws.protocol.changead",
+            "jackdaw.nest.ws.protocol.changegraph",
+            "jackdaw.nest.ws.protocol.cmdtypes",
+            "jackdaw.nest.ws.protocol.computer",
+            "jackdaw.nest.ws.protocol.error",
+            "jackdaw.nest.ws.protocol.gather",
+            "jackdaw.nest.ws.protocol.gatherstatus",
+            "jackdaw.nest.ws.protocol.getobjinfo",
+            "jackdaw.nest.ws.protocol.group",
+            "jackdaw.nest.ws.protocol.kerberoast",
+            "jackdaw.nest.ws.protocol.listad",
+            "jackdaw.nest.ws.protocol.listgraph",
+            "jackdaw.nest.ws.protocol.loadad",
+            "jackdaw.nest.ws.protocol.log",
+            "jackdaw.nest.ws.protocol.ok",
+            "jackdaw.nest.ws.protocol.pathda",
+            "jackdaw.nest.ws.protocol.pathres",
+            "jackdaw.nest.ws.protocol.pathshortest",
+            "jackdaw.nest.ws.protocol.smblocalgroupres",
+            "jackdaw.nest.ws.protocol.smbsessionres",
+            "jackdaw.nest.ws.protocol.smbsessions",
+            "jackdaw.nest.ws.protocol.smbshareres",
+            "jackdaw.nest.ws.protocol.tcpscan",
+            "jackdaw.nest.ws.protocol.user",
+            "jackdaw.nest.ws.server",
             "jackdaw.pwreportgen",
             "jackdaw.utils",
             "jackdaw.utils.argshelper",
@@ -2018,7 +2067,7 @@
             "jackdaw.wintypes.lookup_tables",
             "jackdaw.wintypes.well_known_sids"
         ],
-        "version": "0.2.22"
+        "version": "0.2.27"
     },
     "jacked": {
         "cmdline": [],
@@ -3312,7 +3361,7 @@
             "jake.types.results_decoder",
             "jake.types.vulnerabilities"
         ],
-        "version": "0.2.49"
+        "version": "0.2.50"
     },
     "jake-drivers": {
         "cmdline": [],
@@ -5443,8 +5492,33 @@
     },
     "jank": {
         "cmdline": [],
-        "modules": [],
-        "version": ""
+        "modules": [
+            "jank",
+            "jank.application",
+            "jank.camera",
+            "jank.colliders",
+            "jank.config",
+            "jank.entity",
+            "jank.globals",
+            "jank.load_animation_sheet",
+            "jank.networking",
+            "jank.networking.client",
+            "jank.networking.encoders",
+            "jank.networking.server",
+            "jank.renderer",
+            "jank.renderer.circle_renderer",
+            "jank.renderer.html_text_renderer",
+            "jank.renderer.rect_renderer",
+            "jank.renderer.renderer",
+            "jank.renderer.sprite_renderer",
+            "jank.renderer.text_renderer",
+            "jank.state_machine",
+            "jank.ui",
+            "jank.ui.base",
+            "jank.ui.button",
+            "jank.ui.ui_renderer"
+        ],
+        "version": "0.1.0"
     },
     "jankflix": {
         "cmdline": [
@@ -11148,7 +11222,7 @@
             "tests.test_junction",
             "tests.test_translate"
         ],
-        "version": "0.2.9"
+        "version": "0.3.1"
     },
     "jcat": {
         "cmdline": [
@@ -11225,13 +11299,14 @@
             "jccli.cli.group",
             "jccli.cli.sync",
             "jccli.cli.user",
+            "jccli.config",
             "jccli.errors",
             "jccli.helpers",
             "jccli.jc_api_v1",
             "jccli.jc_api_v2",
             "jccli.version"
         ],
-        "version": "0.0.14"
+        "version": "0.0.15"
     },
     "jcconv": {
         "cmdline": [],
@@ -25537,6 +25612,13 @@
             "jina.hub.encoders.video",
             "jina.hub.encoders.video.VideoPaddleEncoder",
             "jina.hub.encoders.video.VideoTorchEncoder",
+            "jina.hub.evaluators",
+            "jina.hub.evaluators.rank",
+            "jina.hub.evaluators.rank.AveragePrecision",
+            "jina.hub.evaluators.rank.MeanReciprocalRankEvaluator",
+            "jina.hub.evaluators.rank.NdcgEvaluator",
+            "jina.hub.evaluators.rank.ReciprocalRankEvaluator",
+            "jina.hub.evaluators.rank.f1ScoreEvaluator",
             "jina.hub.indexers",
             "jina.hub.indexers.keyvalue",
             "jina.hub.indexers.keyvalue.LevelDBIndexer",
@@ -25574,6 +25656,7 @@
             "jina.peapods.grpc",
             "jina.peapods.grpc_asyncio",
             "jina.peapods.head_pea",
+            "jina.peapods.jinad",
             "jina.peapods.pea",
             "jina.peapods.pod",
             "jina.peapods.remote",
@@ -25595,7 +25678,7 @@
             "jina.proto.ndarray.sparse.tensorflow",
             "jina.proto.uid"
         ],
-        "version": "0.7.4"
+        "version": "0.7.7"
     },
     "jina-search": {
         "cmdline": [],
@@ -38000,6 +38083,13 @@
         ],
         "version": "0.0.1"
     },
+    "joshbasiccalculators": {
+        "cmdline": [],
+        "modules": [
+            "joshbasiccalculators"
+        ],
+        "version": "0.0.1"
+    },
     "joshua-helloworld": {
         "cmdline": [],
         "modules": [
@@ -39028,6 +39118,13 @@
             "joystick.utils"
         ],
         "version": "0.1.1"
+    },
+    "joystickduino": {
+        "cmdline": [],
+        "modules": [
+            "joystickduino"
+        ],
+        "version": "0.0.4"
     },
     "joysticks": {
         "cmdline": [],
@@ -46164,7 +46261,7 @@
             "jet.jet",
             "jet.utils"
         ],
-        "version": "0.0.3"
+        "version": "0.0.5"
     },
     "json-environ": {
         "cmdline": [],
@@ -47018,7 +47115,7 @@
     "json-schema-for-humans": {
         "cmdline": [],
         "modules": [],
-        "version": "0.23.0"
+        "version": "0.24.1"
     },
     "json-schema-generator": {
         "cmdline": [
@@ -47080,7 +47177,7 @@
             "json_schema_to_dash_forms.forms",
             "json_schema_to_dash_forms.utils"
         ],
-        "version": "0.1.0"
+        "version": "0.1.1"
     },
     "json-schema-toolkit": {
         "cmdline": [],
@@ -47304,8 +47401,21 @@
     },
     "json-stream": {
         "cmdline": [],
-        "modules": [],
-        "version": ""
+        "modules": [
+            "json_stream",
+            "json_stream.base",
+            "json_stream.loader",
+            "json_stream.requests",
+            "json_stream.requests.tests",
+            "json_stream.requests.tests.test_requests",
+            "json_stream.tests",
+            "json_stream.tests.test_loader",
+            "json_stream.tests.test_tokenizer",
+            "json_stream.tests.test_visitor",
+            "json_stream.tokenizer",
+            "json_stream.visitor"
+        ],
+        "version": "1.0.0"
     },
     "json-stream-parser": {
         "cmdline": [],
@@ -51001,7 +51111,7 @@
             "jsonrpclib.threadpool",
             "jsonrpclib.utils"
         ],
-        "version": "0.4.1"
+        "version": "0.4.2"
     },
     "jsonrpclibpelix": {
         "cmdline": [],
@@ -51062,7 +51172,7 @@
             "jsonrpcserver.server",
             "jsonrpcserver.status"
         ],
-        "version": "4.1.3"
+        "version": "4.2.0"
     },
     "jsonrpctool": {
         "cmdline": [],
@@ -51263,10 +51373,8 @@
     },
     "jsonschema-rs": {
         "cmdline": [],
-        "modules": [
-            "jsonschema_rs"
-        ],
-        "version": "0.3.3"
+        "modules": [],
+        "version": "0.4.0"
     },
     "jsonschema-serialize-fork": {
         "cmdline": [],
@@ -58527,6 +58635,15 @@
         "cmdline": [],
         "modules": [
             "autograde",
+            "autograde.cli",
+            "autograde.cli.audit",
+            "autograde.cli.build",
+            "autograde.cli.patch",
+            "autograde.cli.report",
+            "autograde.cli.summary",
+            "autograde.cli.test",
+            "autograde.cli.util",
+            "autograde.cli.version",
             "autograde.helpers",
             "autograde.notebook_executor",
             "autograde.notebook_test",
@@ -58535,7 +58652,7 @@
             "autograde.static.inject_before",
             "autograde.util"
         ],
-        "version": "0.2.1"
+        "version": "0.2.2"
     },
     "jupyter-beeper": {
         "cmdline": [],
@@ -60047,7 +60164,7 @@
             "jupyter_packaging",
             "jupyter_packaging.setupbase"
         ],
-        "version": "0.7.5"
+        "version": "0.7.6"
     },
     "jupyter-panel-proxy": {
         "cmdline": [],
@@ -63783,7 +63900,7 @@
             "juriscraper.templates",
             "juriscraper.video"
         ],
-        "version": "2.1.1"
+        "version": "2.2.4"
     },
     "jurry-nester": {
         "cmdline": [],
@@ -65152,7 +65269,7 @@
     "jvm": {
         "cmdline": [],
         "modules": [],
-        "version": "0.4.0b3"
+        "version": "0.5.0b1"
     },
     "jvn": {
         "cmdline": [],
