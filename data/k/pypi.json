@@ -244,15 +244,18 @@
         "cmdline": [],
         "modules": [
             "k2",
-            "k2.dense_fsa",
+            "k2.autograd",
+            "k2.dense_fsa_vec",
             "k2.fsa",
             "k2.fsa_algo",
-            "k2.fsa_bak",
             "k2.fsa_properties",
+            "k2.ops",
+            "k2.ragged",
+            "k2.ragged.ops",
             "k2.symbol_table",
             "k2.utils"
         ],
-        "version": "0.0.7.dev20201028"
+        "version": "0.0.9.dev20201109"
     },
     "k2-compose": {
         "cmdline": [],
@@ -903,7 +906,7 @@
             "k8kat.utils.testing.simple_svc",
             "k8kat.utils.testing.test_helper"
         ],
-        "version": "0.0.212"
+        "version": "0.0.215"
     },
     "k8s": {
         "cmdline": [],
@@ -10817,7 +10820,7 @@
             "kaggle_environments.main",
             "kaggle_environments.utils"
         ],
-        "version": "1.3.14"
+        "version": "1.4.0"
     },
     "kaggle-fastai-custom-metrics": {
         "cmdline": [],
@@ -16578,7 +16581,7 @@
             "kaomi_client.globals",
             "kaomi_client.kaomi_client"
         ],
-        "version": "0.1.3"
+        "version": "0.1.4"
     },
     "kaomi-server": {
         "cmdline": [],
@@ -16595,7 +16598,7 @@
             "kaomi_server.views_alive",
             "kaomi_server.views_files"
         ],
-        "version": "0.1.3"
+        "version": "0.1.4"
     },
     "kaomoji": {
         "cmdline": [],
@@ -22543,7 +22546,7 @@
             "kvirt.web",
             "kvirt.web.main"
         ],
-        "version": "99.0.202011090108"
+        "version": "99.0.202011091258"
     },
     "kclient": {
         "cmdline": [],
@@ -29994,6 +29997,16 @@
         ],
         "version": "0.0.1"
     },
+    "keras-openmax": {
+        "cmdline": [],
+        "modules": [
+            "EVT_fitting",
+            "Openmax",
+            "compute_openmax",
+            "openmax_utils"
+        ],
+        "version": "1.0.2"
+    },
     "keras-ordered-neurons": {
         "cmdline": [],
         "modules": [
@@ -34681,7 +34694,7 @@
     "keynoteslidestopwatch": {
         "cmdline": [],
         "modules": [],
-        "version": "0.1.5"
+        "version": "0.1.6"
     },
     "keyor": {
         "cmdline": [],
@@ -35702,7 +35715,7 @@
             "kffmpeg.ffmpeg",
             "kffmpeg.ffprobe"
         ],
-        "version": "0.2.27"
+        "version": "0.2.29"
     },
     "kfg": {
         "cmdline": [],
@@ -36199,10 +36212,12 @@
             "kfp.cli.diagnose_me.utility_test",
             "kfp.cli.diagnose_me_cli",
             "kfp.cli.experiment",
+            "kfp.cli.output",
             "kfp.cli.pipeline",
             "kfp.cli.run",
             "kfp.compiler",
             "kfp.compiler._data_passing_rewriter",
+            "kfp.compiler._data_passing_using_volume",
             "kfp.compiler._default_transformers",
             "kfp.compiler._k8s_helper",
             "kfp.compiler._op_to_template",
@@ -36214,6 +36229,7 @@
             "kfp.components._components",
             "kfp.components._data_passing",
             "kfp.components._dynamic",
+            "kfp.components._key_value_store",
             "kfp.components._naming",
             "kfp.components._python_op",
             "kfp.components._python_to_graph_component",
@@ -36241,15 +36257,40 @@
             "kfp.dsl._resource_op",
             "kfp.dsl._volume_op",
             "kfp.dsl._volume_snapshot_op",
+            "kfp.dsl.data_passing_methods",
             "kfp.dsl.extensions",
             "kfp.dsl.extensions.kubernetes",
             "kfp.dsl.types",
             "kfp.gcp",
             "kfp.notebook",
             "kfp.notebook._magic",
-            "kfp.onprem"
+            "kfp.onprem",
+            "kfp.v2",
+            "kfp.v2.compiler",
+            "kfp.v2.compiler.compiler",
+            "kfp.v2.compiler.compiler_test",
+            "kfp.v2.compiler.compiler_utils",
+            "kfp.v2.compiler.compiler_utils_test",
+            "kfp.v2.compiler.main",
+            "kfp.v2.components",
+            "kfp.v2.components.components",
+            "kfp.v2.components.python_op",
+            "kfp.v2.components.structures",
+            "kfp.v2.dsl",
+            "kfp.v2.dsl._component",
+            "kfp.v2.dsl._ops_group",
+            "kfp.v2.dsl._pipeline",
+            "kfp.v2.dsl.component_bridge",
+            "kfp.v2.dsl.container_op",
+            "kfp.v2.dsl.container_op_test",
+            "kfp.v2.dsl.importer_node",
+            "kfp.v2.dsl.importer_node_test",
+            "kfp.v2.dsl.type_utils",
+            "kfp.v2.dsl.type_utils_test",
+            "kfp.v2.proto",
+            "kfp.v2.proto.pipeline_spec_pb2"
         ],
-        "version": "1.0.4"
+        "version": "1.1.0"
     },
     "kfp-command-line-tools": {
         "cmdline": [],
@@ -36568,7 +36609,7 @@
             "kg_grafana.tests",
             "kg_grafana.tests.test_builder"
         ],
-        "version": "0.7.7"
+        "version": "0.7.8"
     },
     "kg-ingressnginx": {
         "cmdline": [],
@@ -36615,6 +36656,18 @@
         "modules": [],
         "version": ""
     },
+    "kg-loki": {
+        "cmdline": [],
+        "modules": [
+            "kg_loki",
+            "kg_loki.builder",
+            "kg_loki.configfile",
+            "kg_loki.option",
+            "kg_loki.tests",
+            "kg_loki.tests.test_builder"
+        ],
+        "version": "0.7.9"
+    },
     "kg-lokistack": {
         "cmdline": [],
         "modules": [
@@ -36643,11 +36696,12 @@
             "kg_prometheus",
             "kg_prometheus.builder",
             "kg_prometheus.configfile",
+            "kg_prometheus.configfileext",
             "kg_prometheus.option",
             "kg_prometheus.tests",
             "kg_prometheus.tests.test_builder"
         ],
-        "version": "0.7.5"
+        "version": "0.7.6"
     },
     "kg-prometheusstack": {
         "cmdline": [],
@@ -36659,6 +36713,19 @@
             "kg_prometheusstack.tests.test_builder"
         ],
         "version": "0.7.7"
+    },
+    "kg-promtail": {
+        "cmdline": [],
+        "modules": [
+            "kg_promtail",
+            "kg_promtail.builder",
+            "kg_promtail.configfile",
+            "kg_promtail.configfileext",
+            "kg_promtail.option",
+            "kg_promtail.tests",
+            "kg_promtail.tests.test_builder"
+        ],
+        "version": "0.7.8"
     },
     "kg-rabbitmq": {
         "cmdline": [],
@@ -36701,11 +36768,12 @@
         "modules": [
             "kg_traefik2",
             "kg_traefik2.builder",
+            "kg_traefik2.configfile",
             "kg_traefik2.option",
             "kg_traefik2.tests",
             "kg_traefik2.tests.test_builder"
         ],
-        "version": "0.7.4"
+        "version": "0.7.5"
     },
     "kgame": {
         "cmdline": [],
@@ -37402,6 +37470,19 @@
             "kh_pypi_test"
         ],
         "version": "0.5"
+    },
+    "kh2lib": {
+        "cmdline": [],
+        "modules": [
+            "kh2lib",
+            "kh2lib.kh2fmtoolkit",
+            "kh2lib.kh2lib",
+            "kh2lib.memoryparser",
+            "kh2lib.openKH",
+            "kh2lib.pnachmaker",
+            "kh2lib.utils"
+        ],
+        "version": "0.1"
     },
     "khachhibhoya-distributions": {
         "cmdline": [],
@@ -42808,7 +42889,7 @@
     "kinto": {
         "cmdline": [],
         "modules": [],
-        "version": "14.1.1"
+        "version": "14.1.3"
     },
     "kinto-algolia": {
         "cmdline": [],
@@ -47308,7 +47389,7 @@
             "kivymd_extensions.filemanager.libs.plugins.contextmenu.ziparchive",
             "kivymd_extensions.filemanager.libs.tools"
         ],
-        "version": "0.1.2"
+        "version": "0.1.5"
     },
     "kivymd-extensions-sweetalert": {
         "cmdline": [],
@@ -47646,7 +47727,7 @@
             "kiwi_boxed_plugin.plugin_config_schema",
             "kiwi_boxed_plugin.version"
         ],
-        "version": "0.1.6"
+        "version": "0.1.11"
     },
     "kiwi-bruno": {
         "cmdline": [],
@@ -48851,7 +48932,7 @@
             "kk.handler",
             "kk.index"
         ],
-        "version": "0.5.4"
+        "version": "0.5.8"
     },
     "kk-flow-ocean-888": {
         "cmdline": [],
@@ -51927,6 +52008,18 @@
         ],
         "version": "0.1.2"
     },
+    "klpt": {
+        "cmdline": [],
+        "modules": [
+            "klpt",
+            "klpt.configuration",
+            "klpt.preprocess",
+            "klpt.stem",
+            "klpt.tokenize",
+            "klpt.transliterate"
+        ],
+        "version": "0.1.0"
+    },
     "kls-statistics": {
         "cmdline": [],
         "modules": [
@@ -53004,6 +53097,11 @@
             "kmltrack.template_strings"
         ],
         "version": "0.0.6"
+    },
+    "kmock": {
+        "cmdline": [],
+        "modules": [],
+        "version": ""
     },
     "kmod": {
         "cmdline": [],
@@ -56993,7 +57091,7 @@
             "kodexa.testing",
             "kodexa.testing.test_utils"
         ],
-        "version": "2.3.65"
+        "version": "2.3.69"
     },
     "kodexa-platform": {
         "cmdline": [],
@@ -58034,7 +58132,7 @@
             "nise.yaml_generators.ocp_on_cloud.generator",
             "nise.yaml_generators.utils"
         ],
-        "version": "2.2.2"
+        "version": "2.2.3"
     },
     "kokusai-pp-pack": {
         "cmdline": [],
@@ -60941,7 +61039,7 @@
             "koppeltaal.transport",
             "koppeltaal.utils"
         ],
-        "version": "1.3.5.7"
+        "version": "1.3.5.8"
     },
     "kopper": {
         "cmdline": [],
@@ -70190,6 +70288,11 @@
         ],
         "version": "0.0.7"
     },
+    "kube-exploit": {
+        "cmdline": [],
+        "modules": [],
+        "version": ""
+    },
     "kube-gcl": {
         "cmdline": [],
         "modules": [],
@@ -70427,7 +70530,7 @@
             "kubedev.utils.kubedev_config",
             "kubedev.utils.yaml_merger"
         ],
-        "version": "0.5.741588269"
+        "version": "0.5.742539626"
     },
     "kubediag": {
         "cmdline": [
@@ -75547,7 +75650,7 @@
             "kubragen.util",
             "kubragen.yaml"
         ],
-        "version": "0.7.17"
+        "version": "0.7.19"
     },
     "kubrick": {
         "cmdline": [],
@@ -77163,7 +77266,7 @@
             "kuti.model_helper",
             "kuti.tensor_ops"
         ],
-        "version": "0.9.1"
+        "version": "0.9.4"
     },
     "kutil": {
         "cmdline": [
@@ -79256,7 +79359,10 @@
             "kwola.components.proxy.ProxyProcess",
             "kwola.components.proxy.RewriteProxy",
             "kwola.components.utils",
+            "kwola.components.utils.asyncthreadfuture",
+            "kwola.components.utils.charts",
             "kwola.components.utils.debug_video",
+            "kwola.components.utils.file",
             "kwola.components.utils.retry",
             "kwola.components.utils.video",
             "kwola.config",
@@ -79305,7 +79411,7 @@
             "kwola.tests.test_end_to_end",
             "kwola.tests.test_training_loop"
         ],
-        "version": "0.1.42"
+        "version": "0.1.43"
     },
     "kwollect": {
         "cmdline": [],
@@ -80290,7 +80396,7 @@
     "kyoto-reader": {
         "cmdline": [],
         "modules": [],
-        "version": "1.2.0"
+        "version": "1.3.1"
     },
     "kyoukai": {
         "cmdline": [],
