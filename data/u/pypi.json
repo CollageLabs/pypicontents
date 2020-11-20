@@ -1190,6 +1190,16 @@
         ],
         "version": "0.0.1"
     },
+    "ubatch": {
+        "cmdline": [],
+        "modules": [
+            "ubatch",
+            "ubatch.data_request",
+            "ubatch.decorators",
+            "ubatch.ubatch"
+        ],
+        "version": "0.0.2"
+    },
     "ubc": {
         "cmdline": [],
         "modules": [
@@ -1951,47 +1961,37 @@
             "ubiops.models.attachments",
             "ubiops.models.attachments_create",
             "ubiops.models.attachments_list",
-            "ubiops.models.batch_model_request_create_response",
-            "ubiops.models.batch_model_request_list_response",
-            "ubiops.models.batch_model_request_result_list",
+            "ubiops.models.audit_list",
+            "ubiops.models.batch_deployment_request_create_response",
+            "ubiops.models.batch_deployment_request_detail",
+            "ubiops.models.batch_deployment_request_list",
+            "ubiops.models.batch_deployment_request_single_detail",
             "ubiops.models.batch_pipeline_request_create_response",
-            "ubiops.models.batch_pipeline_request_list_response",
-            "ubiops.models.batch_pipeline_request_model_request",
-            "ubiops.models.batch_pipeline_request_result_list",
+            "ubiops.models.batch_pipeline_request_deployment_request",
+            "ubiops.models.batch_pipeline_request_detail",
+            "ubiops.models.batch_pipeline_request_list",
+            "ubiops.models.batch_pipeline_request_single_detail",
             "ubiops.models.blob_list",
             "ubiops.models.blob_upload",
-            "ubiops.models.configuration_list",
-            "ubiops.models.connector_create",
-            "ubiops.models.connector_field_create",
-            "ubiops.models.connector_field_list",
-            "ubiops.models.connector_list",
-            "ubiops.models.connector_update",
-            "ubiops.models.credentials_create",
-            "ubiops.models.credentials_list",
-            "ubiops.models.credentials_list_with_config",
-            "ubiops.models.credentials_update",
+            "ubiops.models.deployment_create",
+            "ubiops.models.deployment_input_field_create",
+            "ubiops.models.deployment_input_field_list",
+            "ubiops.models.deployment_list",
+            "ubiops.models.deployment_output_field_create",
+            "ubiops.models.deployment_output_field_list",
+            "ubiops.models.deployment_request_create",
+            "ubiops.models.deployment_request_list",
+            "ubiops.models.deployment_update",
+            "ubiops.models.environment_variable_copy",
             "ubiops.models.environment_variable_create",
             "ubiops.models.environment_variable_list",
             "ubiops.models.inherited_environment_variable_list",
             "ubiops.models.logs",
             "ubiops.models.logs_create",
             "ubiops.models.metrics",
-            "ubiops.models.model_create",
-            "ubiops.models.model_input_field_create",
-            "ubiops.models.model_input_field_list",
-            "ubiops.models.model_list",
-            "ubiops.models.model_output_field_create",
-            "ubiops.models.model_output_field_list",
-            "ubiops.models.model_request_create",
-            "ubiops.models.model_request_list",
-            "ubiops.models.model_update",
-            "ubiops.models.model_version_create",
-            "ubiops.models.model_version_file_upload",
-            "ubiops.models.model_version_list",
             "ubiops.models.organization_create",
             "ubiops.models.organization_detail",
             "ubiops.models.organization_list",
-            "ubiops.models.organization_subscription_list",
             "ubiops.models.organization_update",
             "ubiops.models.organization_user_create",
             "ubiops.models.organization_user_detail",
@@ -2005,8 +2005,8 @@
             "ubiops.models.pipeline_object_list",
             "ubiops.models.pipeline_object_update",
             "ubiops.models.pipeline_request_create",
+            "ubiops.models.pipeline_request_deploment_request",
             "ubiops.models.pipeline_request_list",
-            "ubiops.models.pipeline_request_model_request",
             "ubiops.models.project_create",
             "ubiops.models.project_list",
             "ubiops.models.project_resource_usage",
@@ -2026,22 +2026,18 @@
             "ubiops.models.service_user_list",
             "ubiops.models.service_user_token_list",
             "ubiops.models.status",
-            "ubiops.models.subscription_create",
-            "ubiops.models.subscription_detail",
-            "ubiops.models.subscription_list",
-            "ubiops.models.subscription_update",
             "ubiops.models.success",
             "ubiops.models.usage_per_day",
             "ubiops.models.usage_per_day_metric",
             "ubiops.models.usage_per_month",
             "ubiops.models.usage_per_month_metric",
-            "ubiops.models.user_detail",
             "ubiops.models.user_pending_create",
             "ubiops.models.user_pending_detail",
-            "ubiops.models.user_update",
+            "ubiops.models.version_create",
+            "ubiops.models.version_list",
             "ubiops.rest"
         ],
-        "version": "2.1.0"
+        "version": "3.0.0"
     },
     "ubiops-cli": {
         "cmdline": [],
@@ -2057,21 +2053,22 @@
             "pkg.src.auth",
             "pkg.src.blobs",
             "pkg.src.config",
+            "pkg.src.deployment_versions",
+            "pkg.src.deployments",
             "pkg.src.environment_variables",
             "pkg.src.helpers",
+            "pkg.src.helpers.click_helpers",
             "pkg.src.helpers.formatting",
             "pkg.src.helpers.helpers",
             "pkg.src.helpers.options",
             "pkg.src.logs",
-            "pkg.src.model_versions",
-            "pkg.src.models",
             "pkg.src.pipelines",
             "pkg.src.projects",
-            "pkg.src.scheduled_requests",
+            "pkg.src.request_schedules",
             "pkg.utils",
             "pkg.version"
         ],
-        "version": "1.1.0"
+        "version": "2.0.0"
     },
     "ubiops-connector": {
         "cmdline": [],
@@ -9286,6 +9283,18 @@
         ],
         "version": "0.2.0.28"
     },
+    "uio-monty-hall-game": {
+        "cmdline": [
+            "play_monty_hall_cli.py",
+            "play_monty_hall_web.py"
+        ],
+        "modules": [
+            "monty_hall_game",
+            "monty_hall_game.game_exceptions",
+            "monty_hall_game.monty_hall_game"
+        ],
+        "version": "2020.11.1"
+    },
     "uiotedge-driver-link-sdk": {
         "cmdline": [],
         "modules": [
@@ -11001,9 +11010,11 @@
             "\u6728\u5170.\u529f\u7528.\u53cd\u9988\u4fe1\u606f",
             "\u6728\u5170.\u529f\u7528.\u5e38\u7528",
             "\u6728\u5170.\u529f\u7528.\u8c03\u8bd5\u8f85\u52a9",
-            "\u6728\u5170.\u73af\u5883"
+            "\u6728\u5170.\u73af\u5883",
+            "\u7f16\u8f91\u5668",
+            "\u7f16\u8f91\u5668.\u8fd0\u884c\u6728\u5170"
         ],
-        "version": "0.0.14.8"
+        "version": "0.0.15.0"
     },
     "ulangel": {
         "cmdline": [],
@@ -13200,6 +13211,11 @@
         ],
         "version": "1.0.1"
     },
+    "umb-zd-tools": {
+        "cmdline": [],
+        "modules": [],
+        "version": ""
+    },
     "umbr-api": {
         "cmdline": [],
         "modules": [
@@ -13655,7 +13671,7 @@
             "vae_lib.utils.plotting",
             "vae_lib.utils.visual_evaluation"
         ],
-        "version": "1.64"
+        "version": "1.68"
     },
     "umnomequalquer": {
         "cmdline": [],
@@ -28602,17 +28618,18 @@
         "cmdline": [],
         "modules": [
             "upldr_libs",
-            "upldr_libs.modules",
-            "upldr_libs.modules.libs",
-            "upldr_libs.modules.libs.main",
-            "upldr_libs.modules.put",
-            "upldr_libs.modules.put.main",
-            "upldr_libs.modules.serve",
-            "upldr_libs.modules.serve.main",
-            "upldr_libs.modules.setup",
-            "upldr_libs.modules.setup.main"
+            "upldr_libs.libs",
+            "upldr_libs.libs.main",
+            "upldr_libs.put",
+            "upldr_libs.put.main",
+            "upldr_libs.s3",
+            "upldr_libs.s3.main",
+            "upldr_libs.serve",
+            "upldr_libs.serve.main",
+            "upldr_libs.setup",
+            "upldr_libs.setup.main"
         ],
-        "version": "1.6.8"
+        "version": "1.7.0"
     },
     "uplift": {
         "cmdline": [],
@@ -41227,7 +41244,7 @@
             "ez_setup",
             "uttr"
         ],
-        "version": "0.1"
+        "version": "0.1.1"
     },
     "uttt": {
         "cmdline": [],
